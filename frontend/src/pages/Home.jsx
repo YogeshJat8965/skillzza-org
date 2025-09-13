@@ -1,33 +1,12 @@
 import { Link } from 'react-router-dom';
+import HeroCarousel from '../components/HeroCarousel';
+
 
 export default function Home() {
   return (
     <>
       {/* Hero Banner Section */}
-      <section className="bg-gradient-to-r from-red-600 to-red-800 text-white py-24 relative overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 tracking-wide">
-                Bolstering Students an Employability, Innovation & Creative Skills.
-              </h1>
-              <p className="text-lg md:text-xl mb-8">
-                An AI driven up-Skilling platform aligned with UN's Sustainable Development Goals (SDG)
-              </p>
-              <button className="bg-white text-red-700 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                Know more...The Skillzza Way!
-              </button>
-            </div>
-            <div className="md:w-1/2 flex justify-center md:justify-end">
-              <div className="w-full max-w-lg md:max-w-md">
-                <img src="/image_3d6bd5.jpg" alt="Smiling woman with thumbs up" className="w-full h-auto rounded-xl shadow-2xl" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-black opacity-30"></div>
-      </section>
-
+      <HeroCarousel />
       {/* The Challenge Section */}
       <section className="bg-white py-24">
         <div className="container mx-auto px-6">
