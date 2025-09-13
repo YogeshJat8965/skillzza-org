@@ -19,7 +19,7 @@ const Topbar = () => {
             Companies
           </a>
         </div>
-        <div className="flex items-center space-x-6 mr-36">
+        <div className="flex items-center space-x-6 mr-28">
           <a href="#" className="flex items-center space-x-2 text-md font-bold hover:text-black transition-colors">
             <FaSearch />
             <span>Log in</span>

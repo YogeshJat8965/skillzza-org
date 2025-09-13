@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
+
 const navItems = [
     {
     name: 'Products',
@@ -11,7 +12,7 @@ const navItems = [
             title: 'The Potential Meter',
             description: 'A comprehensive AI assessment engine that evaluates strengths, career readiness, and growth potential, giving you a clear path to success.',
             cta: 'Assess Your Potential',
-            image: 'https://placehold.co/600x400/00d4ff/333333?text=Potential+Meter'
+            image: '/unlock_your_potential.jpg'
           }
         },
         { 
@@ -20,7 +21,7 @@ const navItems = [
             title: 'Xperience Platform',
             description: 'Engage with AI-powered job simulations that offer role-based, industry-aligned learning experiences to enhance your practical skills and build a powerful portfolio.',
             cta: 'Start a Simulation',
-            image: 'https://placehold.co/600x400/ff7d49/ffffff?text=Xperience+Platform'
+            image: '/platformslide1.png'
           }
         },
         { 
@@ -29,7 +30,7 @@ const navItems = [
             title: 'Talent Intelligence Suite',
             description: 'A data-driven talent insight system enabling institutions and recruiters to match skill potential with evolving job roles, ensuring the right fit every time.',
             cta: 'Find Top Talent',
-            image: 'https://placehold.co/600x400/a259ff/ffffff?text=Talent+Intelligence'
+            image: '/transformskill_futureset.png'
           }
         },
         { 
@@ -38,7 +39,7 @@ const navItems = [
             title: 'AI HackNex',
             description: 'A high-impact AI competition environment where participants solve real-world challenges to showcase and sharpen their capabilities.',
             cta: 'Join a Competition',
-            image: 'https://placehold.co/600x400/50e3c2/ffffff?text=AI+HackNex'
+            image: '/step_slide_img.jpg'
           }
         },
         { 
@@ -47,7 +48,7 @@ const navItems = [
             title: 'Hirenest',
             description: 'An intelligent college-to-career recruitment platform that connects pre-assessed, high-potential candidates with top hiring organizations.',
             cta: 'Explore Hirenest',
-            image: 'https://placehold.co/600x400/ffc107/333333?text=Hirenest'
+            image: '/insight_roles.jpg'
           }
         },
       ]
@@ -284,13 +285,13 @@ const DropdownContent = ({ items }) => {
           </a>
         </div>
         <div className="w-1/2">
-          <img src={activeItem.detail.image} alt={activeItem.detail.title} className="w-full h-auto object-cover rounded-lg shadow-md" />
+          {/* FIX: Changed h-auto to h-64 to enforce a consistent height for all images */}
+          <img src={activeItem.detail.image} alt={activeItem.detail.title} className="w-full h-64 object-cover rounded-lg shadow-md" />
         </div>
       </div>
     </div>
   );
 };
-
 
 const Navbar = () => {
   return (
@@ -299,7 +300,7 @@ const Navbar = () => {
         <div className="flex-shrink-0">
           <a href="#"><img src="/skillzza-logo.png" alt="Skillzza Logo" className="h-10 w-auto ml-28" /></a>
         </div>
-        <nav className="hidden md:flex items-center space-x-10 mr-36">
+        <nav className="hidden md:flex items-center space-x-10 mr-28">
           {navItems.map((item) => (
             <div key={item.name} className="group static py-6 -my-6">
               <a href="#" className="flex items-center gap-1.5 font-medium text-gray-700 hover:text-red-600 transition-colors duration-300">

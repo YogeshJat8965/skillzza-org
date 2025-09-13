@@ -25,7 +25,7 @@ const ContactBar = () => {
             +91 9130901979
           </a>
         </div>
-        <div className="hidden md:flex items-center space-x-4 mr-36">
+        <div className="hidden md:flex items-center space-x-4 mr-28">
           <a href="#" className="text-red-600 font-bold hover:underline">
             Register For Free Internship!
           </a>
