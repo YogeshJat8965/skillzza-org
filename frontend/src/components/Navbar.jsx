@@ -64,7 +64,7 @@ const navItems = [
             title: 'Student Advantage Package: From Campus to Career Excellence',
             description: 'Utilize comprehensive career discovery tools, virtual internships, skill development, and portfolio verification to launch your career with confidence.',
             cta: 'Start Your Journey',
-            image: 'https://placehold.co/600x400/5f9ea0/ffffff?text=For+Students'
+            image: '/forstudentuse.jpg'
           }
         },
         { 
@@ -73,7 +73,7 @@ const navItems = [
             title: 'Campus Enablement Package: From Academic Excellence to Industry Readiness',
             description: 'Integrate Hirenest for campus recruitment, track performance with our student analytics dashboard, and set up your own innovation lab (PoC Hub).',
             cta: 'Partner With Us',
-            image: 'https://placehold.co/600x400/3cb371/ffffff?text=For+Institutions'
+            image: '/for_universities_banner.jpeg'
           }
         },
         { 
@@ -82,7 +82,7 @@ const navItems = [
             title: 'Enterprise Talent Solutions: Strategic Workforce Intelligence',
             description: 'Access a ready-to-hire pipeline of pre-assessed talent, implement custom workforce upskilling programs, and host innovation challenges.',
             cta: 'Build Your Team',
-            image: 'https://placehold.co/600x400/6a5acd/ffffff?text=For+Enterprises'
+            image: '/forproffession.jpg'
           }
         },
         { 
@@ -91,7 +91,7 @@ const navItems = [
             title: 'Government & CSR Impact: Scalable Workforce Transformation',
             description: 'Conduct large-scale skill assessments, enable employment in Tier 2/3 cities, and use data-driven intelligence for policy planning.',
             cta: 'Drive Social Impact',
-            image: 'https://placehold.co/600x400/ff69b4/ffffff?text=For+Government'
+            image: '/for_government_img_only.jpg'
           }
         },
       ]
@@ -107,7 +107,7 @@ const navItems = [
             title: 'ByteMinds – The School of AI & Data',
             description: 'Advancing AI and data science excellence through immersive training, industry-calibrated curricula, applied projects, and elite mentorship networks.',
             cta: 'Explore AI Courses',
-            image: 'https://placehold.co/600x400/1e90ff/ffffff?text=ByteMinds'
+            image: '/DataIntelligence_tile.png'
           }
         },
         { 
@@ -116,7 +116,7 @@ const navItems = [
             title: 'GSSCA – Global School of Sustainability & Climate Action',
             description: 'Catalyzing sustainable transformation via expert-led training in climate strategy, green innovation, technology adoption, and ESG leadership.',
             cta: 'Learn about GSSCA',
-            image: 'https://placehold.co/600x400/32cd32/ffffff?text=GSSCA'
+            image: '/SustainabilitySprint_img.jpg'
           }
         },
         { 
@@ -125,7 +125,7 @@ const navItems = [
             title: 'School of EV & E-Mobility',
             description: 'Driving the future of mobility with cutting-edge courses in EV technologies, sustainable transport solutions, battery systems, and intelligent infrastructure.',
             cta: 'View Mobility Programs',
-            image: 'https://placehold.co/600x400/8a2be2/ffffff?text=EV+School'
+            image: '/ev_mobility.jpg'
           }
         },
         {
@@ -134,7 +134,7 @@ const navItems = [
             title: 'Centre of Digital & Design Excellence',
             description: 'Redefining innovation through human-centered design, digital strategy, UX/UI mastery, and scalable transformation frameworks.',
             cta: 'Master Design Thinking',
-            image: 'https://placehold.co/600x400/ff4500/ffffff?text=Design+Excellence'
+            image: '/design_thinking.jpg'
           }
         },
         {
@@ -143,7 +143,7 @@ const navItems = [
             title: 'Udaan Aerial Intelligence',
             description: 'Pioneering aerospace and space frontiers through innovation programs, satellite applications, space analytics, and emerging aero-technologies.',
             cta: 'Explore Aerospace',
-            image: 'https://placehold.co/600x400/4682b4/ffffff?text=Udaan+Aerial'
+            image: '/precision_agriculture_tile.jpg'
           }
         }
       ]
@@ -159,7 +159,7 @@ const navItems = [
                     title: 'Immersive Job Simulations',
                     description: 'Gain industry-ready skills through real-world scenarios in high-impact domains like AI & Data, Banking, Software Development, and more. Build a portfolio that showcases your capabilities.',
                     cta: 'Explore Simulations',
-                    image: 'https://placehold.co/600x400/d2b48c/ffffff?text=Job+Simulations'
+                    image: '/xperience_img1.jpg'
                 }
             },
             {
@@ -168,7 +168,7 @@ const navItems = [
                     title: 'Chart Your Career Trajectory',
                     description: 'Bring together industry-relevant job simulations in a structured roadmap to help you secure your ideal entry-level role as an AI Engineer, Cybersecurity Analyst, and more.',
                     cta: 'Find Your Path',
-                    image: 'https://placehold.co/600x400/dda0dd/333333?text=Career+Trajectory'
+                    image: '/MeasuringS_gifuccess.gif'
                 }
             },
             {
@@ -177,7 +177,7 @@ const navItems = [
                     title: 'AI Role-Play Simulation',
                     description: 'Discover your unique strengths with interactive AI role-play simulations and map a personalized career path that aligns with your potential.',
                     cta: 'Discover Your Persona',
-                    image: 'https://placehold.co/600x400/98fb98/333333?text=AI+Persona'
+                    image: '/upskilling_forAi_tile_img.jpeg'
                 }
             }
         ]
@@ -193,7 +193,7 @@ const navItems = [
                     title: 'Skill Blueprint: Solutions & Case Studies',
                     description: 'Explore real-world success stories in skill development and see how our solutions are making an impact across industries.',
                     cta: 'Read Case Studies',
-                    image: 'https://placehold.co/600x400/f4a460/ffffff?text=Case+Studies'
+                    image: '/company_header_img.jpg'
                 }
             },
             {
@@ -202,7 +202,7 @@ const navItems = [
                     title: 'The Skillzza Digest Blog',
                     description: 'Stay updated with insights, trends, and game-changers that are shaping the future of skills and workforce development.',
                     cta: 'Go to Blog',
-                    image: 'https://placehold.co/600x400/add8e6/333333?text=Blog'
+                    image: '/digestbannerImg.jpeg'
                 }
             },
             {
@@ -211,7 +211,7 @@ const navItems = [
                     title: 'AI Talent Research Hub',
                     description: 'Access data-driven reports, whitepapers, and in-depth insights on AI and its transformative impact on the global workforce.',
                     cta: 'View Reports',
-                    image: 'https://placehold.co/600x400/e9967a/ffffff?text=Research'
+                    image: '/aIdataAnalyticsDecisions_tile.jpg'
                 }
             }
         ]
@@ -227,7 +227,7 @@ const navItems = [
                     title: 'Bridging the Gap Between Aspiration and Opportunity',
                     description: 'Learn about our mission to engineer an end-to-end career ecosystem and empower individuals to achieve their full potential.',
                     cta: 'Learn More',
-                    image: 'https://placehold.co/600x400/cd5c5c/ffffff?text=About+Us'
+                    image: '/aboutUsHeaeder_tilemg.png'
                 }
             },
             {
@@ -236,7 +236,7 @@ const navItems = [
                     title: 'The Science Behind Career Transformation',
                     description: 'Discover the data-driven approach and innovative frameworks we use to engineer successful career pathways from vision to global impact.',
                     cta: 'Discover Our Method',
-                    image: 'https://placehold.co/600x400/40e0d0/333333?text=Methodology'
+                    image: '/methodology_banner_img.png'
                 }
             },
             {
@@ -245,7 +245,7 @@ const navItems = [
                     title: 'Building the Future of Work Together',
                     description: 'We collaborate with industry leaders, academic institutions, and government bodies to build a robust and equitable future of work.',
                     cta: 'Become a Partner',
-                    image: 'https://placehold.co/600x400/ee82ee/333333?text=Partners'
+                    image: '/partner-bg.png'
                 }
             }
         ]
