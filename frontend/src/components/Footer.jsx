@@ -11,25 +11,31 @@ import { PiXLogoBold } from "react-icons/pi";
 
 const footerSections = [
   {
-    title: 'Platform',
-    links: ['Xperience Platform', 'Potential Meter', 'Skilledge Labs', 'AI HackNex', 'Job Simulation'],
+    title: 'Products',
+    links: ['The Potential Meter AI', 'Xperience Platform', 'Hirenest', 'Talent Transformation', 'AI HackNex'],
   },
   {
-    title: 'Skill Development',
-    links: ['SkillStratum', 'SkillSphere', 'SkillScape Innovation Hub'],
+    title: 'Use Cases',
+    links: ['Student Advantage Package', 'Campus Enablement Package', 'Enterprise Talent Solutions Package','Government and CSR Impact Package'],
   },
   {
-    title: 'Hackathon',
-    links: ['Organize Hackathon', 'Community Hackathon', 'Corporate Hackathon'],
+    title: 'Academy',
+    links: ['ByteMinds-The School of AI & Data', 'GSSCA-Global School of Sustainability & Climate Action', 'Centre of Digital & Design Excellence','School of EV & E- Mobility','Udaan Aerial Intelligence'],
   },
+{
+  title:'Explore',
+  links:['Job Simulations Master','Explore Domains','Career Trajectory','Skillzza Persona']
+},
+  {
+      title: 'Insights',
+      links: ['Skill Blueprint','Skillzza Digest', 'AI Talent Research Hub', 'The Skill Unplugged Podcast', 'Skillzza Live'],
+    },
   {
     title: 'Company',
-    links: ['About', 'Our Methodology', 'What We Do', 'Meet Our Sherpa', 'Our Pathway to SDG', 'Collaboration'],
+    links: ['About us', 'Our Methodology', 'What We Do', 'Our Pathway', 'Partner Collaboration', 'Responsible AI'],
   },
-  {
-    title: 'Insights',
-    links: ['The Skillzza Digest', 'Skill Xchange', 'Case Studies', 'The Skillzza Foundation', 'Impact@Skillzza'],
-  },
+
+
 ];
 
 const Footer = () => {
@@ -45,7 +51,7 @@ const Footer = () => {
   return (
     <footer className="bg-zinc-50 border-t-4 border-red-600 text-zinc-800">
       <div className="container mx-auto py-16 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 gap-8">
           <div className="lg:col-span-2 space-y-8">
             <div>
               <img src="/skillzza-logo.png" alt="Skillzza Logo" className="h-9 mb-6" />

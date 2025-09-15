@@ -160,7 +160,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About Skillzza</h2>
               <div className="h-1 w-16 bg-red-600 mb-6"></div>
               <p className="text-lg text-gray-600 mb-4">
-                Skillzza is a future-ready career transformation platform designed to bridge the global education-to-employment divide. Through adaptive assessments, role-based simulations, and AI-powered hiring, we ensure that individuals and organizations are not just skilled, but aligned with the dynamic demands of the modern workforce.
+                Skillzza is a next-generation career transformation platform built to close the education-to-employment gap worldwide Through adaptive assessments, role-based simulations, and AI-powered hiring, we ensure that individuals and organizations are not just skilled, but aligned with the dynamic demands of the modern workforce.
               </p>
               <p className="text-lg text-gray-600 mb-4">
                 Our ecosystem supports the entire talent lifecycle from career discovery and skill development to job ready empowering learners, professionals, and enterprises alike.
