@@ -111,40 +111,42 @@ export default function Home() {
         }}
       >
         <div className="absolute inset-0  opacity-40"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="w-full md:w-2/3 lg:w-1/2 text-left">
-            <h1 className="text-4xl text-yellow-400 md:text-5xl font-bold leading-tight mb-4">
-              The AI-Powered Career Engine<br/> for Tomorrow’s Talent…
-            </h1>
-            <p className="text-xl md:text-2xl mb-6 font-light">
-              <b>From Learning to Hiring: An End-to-End Career Intelligence Platform.</b>
-            </p>
-            <p className="text-md text-gray-200 mb-10 max-w-xl">
-              Our AI-driven platform transforms raw potential into market-ready expertise, connecting learners directly with opportunities through intelligent skill matching.
-            </p>
-            <div className="bg-black bg-opacity-25 backdrop-blur-md p-6 rounded-xl border border-white/20">
-              {/* ===== UPDATED LAYOUT FOR SINGLE LINE ===== */}
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
-                <div className="flex items-center gap-3 text-white whitespace-nowrap">
-                  <FaCrosshairs className="text-yellow-400 text-xl" />
-                  <span className="font-medium">Discover your strengths</span>
-                </div>
-                <div className="flex items-center gap-3 text-white whitespace-nowrap">
-                  <FaCogs className="text-yellow-400 text-xl" />
-                  <span className="font-medium">Develop skills</span>
-                </div>
-                <div className="flex items-center gap-3 text-white whitespace-nowrap">
-                  <FaRocket className="text-yellow-400 text-xl" />
-                  <span className="font-medium">Deploy your talents</span>
-                </div>
-                <div className="flex items-center gap-3 text-white whitespace-nowrap">
-                  <FaTrophy className="text-yellow-400 text-xl" />
-                  <span className="font-medium">Deliver results</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="w-full md:w-2/3 lg:w-1/2 text-left">
+            <h1 className="text-4xl text-yellow-400 md:text-5xl font-bold leading-tight mb-4">
+              The AI-Powered Career Engine<br/> for Tomorrow's Talent…
+            </h1>
+            <p className="text-xl md:text-2xl mb-6 font-light">
+              <b>From Learning to Hiring: An End-to-End Career Intelligence Platform.</b>
+            </p>
+            <p className="text-md text-gray-200 mb-10 max-w-xl">
+              Our AI-driven platform transforms raw potential into market-ready expertise, connecting learners directly with opportunities through intelligent skill matching.
+            </p>
+          </div>
+          <div className="w-full max-w-3xl mt-8">
+            <div className="bg-black bg-opacity-25 backdrop-blur-md p-6 rounded-xl border border-white/20">
+              {/* ===== UPDATED LAYOUT FOR SINGLE LINE ===== */}
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
+                <div className="flex items-center gap-3 text-white whitespace-nowrap">
+                  <FaCrosshairs className="text-yellow-400 text-xl" />
+                  <span className="font-medium">Discover your strengths</span>
+                </div>
+                <div className="flex items-center gap-3 text-white whitespace-nowrap">
+                  <FaCogs className="text-yellow-400 text-xl" />
+                  <span className="font-medium">Develop skills</span>
+                </div>
+                <div className="flex items-center gap-3 text-white whitespace-nowrap">
+                  <FaRocket className="text-yellow-400 text-xl" />
+                  <span className="font-medium">Deploy your talents</span>
+                </div>
+                <div className="flex items-center gap-3 text-white whitespace-nowrap">
+                  <FaTrophy className="text-yellow-400 text-xl" />
+                  <span className="font-medium">Deliver results</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* ===== About Section ===== */}
