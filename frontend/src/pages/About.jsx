@@ -1,7 +1,138 @@
-export default function About() {
+import React from 'react';
+
+const AboutUs = () => {
   return (
-    <main className="flex-1 container mx-auto px-4 py-12">
-      <h2 className="text-2xl font-semibold mb-6">About</h2>
-    </main>
-  )
-}
+    <>
+      {/* Hero Section */}
+      <section
+        className="relative py-24 md:py-32 flex items-center bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/about_us_banner.png')",
+          minHeight: '600px',
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="w-full md:w-2/3 lg:w-1/2 text-left text-white">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+              A pioneering Skill Development company dedicated to reshaping the future of career growth and talent enhancement.
+            </h1>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Intro Section */}
+      <section className="bg-white py-24">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+              <h3 className="text-sm font-bold uppercase text-red-500 mb-2 tracking-widest">
+                KNOW ABOUT
+              </h3>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                Witness the emergence of an organisation that will handhold you to unleash the true potential and achieve your career goals!
+              </h2>
+            </div>
+            <div>
+              <p className="text-lg text-gray-600 mb-6">
+                In an era defined by rapid technological disruption and evolving workforce requirements, Skillzza represents a paradigm shift in professional development. Our comprehensive talent transformation platform leverages cutting-edge artificial intelligence, experiential learning methodologies, and industry-specific simulations to address the critical skills gap between traditional education and contemporary market demands.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                Through scientifically-designed assessments and immersive learning environments, Skillzza delivers measurable competency development that directly translates to workplace performance. Our platform serves as a strategic bridge, connecting academic knowledge with practical application while ensuring learners develop the adaptive capabilities essential for sustained career success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* About Bottom Section with image */}
+      <section className="bg-gray-100 py-24">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="md:w-1/2 text-left text-gray-800">
+              <p className="text-lg mb-6">
+                With a strong focus on empowering individuals in tier 2 and tier 3 cities, we are committed to eliminating the geographical, social, and economic barriers that often impede access to education and skill development. We believe in creating equal opportunities for all, fostering a more inclusive, skilled, and globally prepared workforce.
+              </p>
+              <p className="text-lg">
+                Aligned with the United Nations Sustainable Development Goals (SDGs), particularly in promoting quality education, decent work, and reducing inequalities, Skillzza is on a mission to build a brighter, more equitable future for everyone.
+              </p>
+            </div>
+            <div className="md:w-1/2 flex justify-center">
+              <img src="/potentialMeter_tile_img.png" alt="Mentoring" className="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Call to Action Section */}
+      <section className="bg-red-700 text-white py-12 md:py-16 text-center">
+        <div className="container mx-auto px-6">
+          <h3 className="text-2xl md:text-3xl font-bold">
+            Join Skillzza Today And Gain The Skills You Need To Shape The Future You Aspire To.
+          </h3>
+          <button className="mt-8 bg-orange-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-orange-600 transition-colors">
+            Join
+          </button>
+        </div>
+      </section>
+
+
+      {/* Mission & Vision Section */}
+      <section className="bg-white py-24">
+  <div className="container mx-auto px-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      {/* Mission Card */}
+      <div className="relative bg-purple-600 text-white p-10 rounded-lg shadow-lg">
+        {/* Decorative Blue Block */}
+        <div className="absolute -top-4 left-4 w-12 h-12 bg-blue-500 rounded-lg shadow-md"></div>
+        {/* Decorative Yellow Block */}
+        <div className="absolute -bottom-4 right-4 w-12 h-12 bg-yellow-400 rounded-lg shadow-md"></div>
+
+        <h3 className="text-xl font-bold mb-2">Our MISSION</h3>
+        <div className="h-0.5 w-16 bg-white mb-4"></div>
+        <p className="text-lg">
+          To empower every student globally to realise their full potential, eliminating geographical, social, and economic barriers to skill development. We are committed to providing opportunities that enable individuals to advance their skills and achieve their aspirations, regardless of their starting point.
+        </p>
+      </div>
+
+      {/* Vision Card */}
+      <div className="relative bg-red-600 text-white p-10 rounded-lg shadow-lg">
+        {/* Decorative Blue Block */}
+        <div className="absolute -top-4 left-4 w-12 h-12 bg-blue-500 rounded-lg shadow-md"></div>
+        {/* Decorative Yellow Block */}
+        <div className="absolute -bottom-4 right-4 w-12 h-12 bg-yellow-400 rounded-lg shadow-md"></div>
+
+        <h3 className="text-xl font-bold mb-2">Our VISION</h3>
+        <div className="h-0.5 w-16 bg-white mb-4"></div>
+        <p className="text-lg">
+          To empower every individual and organization with the skills required to thrive in a dynamic world, creating a sustainable future of work where every learner is equipped with the knowledge, experience, and innovation to lead in their fields. We aspire to be a global leader in skill development, talent transformation, and sustainable education, driving a positive impact on industries and communities.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      {/* Core Values Section */}
+      <section
+  className="relative py-24 md:py-32 flex items-center bg-cover bg-center text-white"
+  style={{
+    backgroundImage: "url('/partnerwithbg.png')", // Using corevaluebg.png as the section background
+    minHeight: '500px', // Ensure enough height for the content
+  }}
+>
+  {/* No dark overlay needed if corevaluebg.png already provides enough contrast */}
+  
+  <div className="container mx-auto px-6 relative z-10 flex justify-center items-center">
+    {/* This image contains the "Core Values SPARK" text and the surrounding content */}
+    <img src="/corevalues_banner.png" alt="Core Values SPARK" className="w-full max-w-5xl h-auto" />
+  </div>
+</section>
+    </>
+  );
+};
+
+export default AboutUs;
