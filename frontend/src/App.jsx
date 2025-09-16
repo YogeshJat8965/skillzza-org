@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { ThemeProvider } from './context/ThemeContext'
 import Home from './pages/Home'
-import Dashboard from './pages/Dashboard'
+import DevelopersPage from './pages/DevelopersPage'
 import About from './pages/About'
 import ContactBar from './components/Contactbar'
 import Topbar from './components/Topbar'  
@@ -17,7 +17,7 @@ export default function App() {
 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/developers/team" element={<DevelopersPage />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </div>
