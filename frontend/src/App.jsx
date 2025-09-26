@@ -1,14 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useEffect } from 'react'
 import Lenis from 'lenis'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import { ThemeProvider } from './context/ThemeContext'
+// import Navbar from './components/Navbar'
+// import Footer from './components/Footer'
+// import { ThemeProvider } from './context/ThemeContext'
 import Home from './pages/Home'
 import DevelopersPage from './pages/DevelopersPage'
 import About from './pages/About'
-import ContactBar from './components/Contactbar'
-import Topbar from './components/Topbar'  
+import Methodology from './pages/Methodology'
+// import ContactBar from './components/Contactbar'
+// import Topbar from './components/Topbar'  
 
 
 export default function App() {
@@ -42,7 +43,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/developers/team" element={<DevelopersPage />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/company/about" element={<About />} />
+            <Route path="/company/methodology" element={<Methodology />} />
           </Routes>
         </div>
         

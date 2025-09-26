@@ -269,23 +269,23 @@ const navItems = [
         items: [
             {
                 name: 'About Us',
-                link: '/about',
+                link: '/company/about',
                 detail: {
                     title: 'Bridging the Gap Between Aspiration and Opportunity',
                     description: 'Learn about our mission to engineer an end-to-end career ecosystem and empower individuals to achieve their full potential.',
                     cta: 'Learn More',
-                    ctaLink: '/about',
+                    ctaLink: '/company/about',
                     image: '/aboutUsHeaeder_tilemg.png'
                 }
             },
             {
                 name: 'Our Methodology',
-                link: '/',
+                link: '/company/methodology',
                 detail: {
                     title: 'The Science Behind Career Transformation',
                     description: 'Discover the data-driven approach and innovative frameworks we use to engineer successful career pathways from vision to global impact.',
                     cta: 'Discover Our Method',
-                    ctaLink: '/',
+                    ctaLink: '/company/methodology',
                     image: '/methodology_banner_img.png'
                 }
             },
