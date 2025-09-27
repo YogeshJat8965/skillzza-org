@@ -8,6 +8,9 @@ import Home from './pages/Home'
 import DevelopersPage from './pages/DevelopersPage'
 import About from './pages/About'
 import Methodology from './pages/Methodology'
+import WhatWeDo from './pages/WhatWeDo'
+import SDGPathway from './pages/SDGPathway'
+import PartnerCollaboration from './pages/PartnerCollaboration'
 // import ContactBar from './components/Contactbar'
 // import Topbar from './components/Topbar'  
 
@@ -45,6 +48,9 @@ export default function App() {
             <Route path="/developers/team" element={<DevelopersPage />} />
             <Route path="/company/about" element={<About />} />
             <Route path="/company/methodology" element={<Methodology />} />
+            <Route path="/company/what-we-do" element={<WhatWeDo />} />
+            <Route path="/company/pathway" element={<SDGPathway />} />
+            <Route path="/company/partnerships" element={<PartnerCollaboration />} />
           </Routes>
         </div>
         

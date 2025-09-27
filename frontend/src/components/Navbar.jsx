@@ -279,6 +279,17 @@ const navItems = [
                 }
             },
             {
+                name: 'What We Do',
+                link: '/company/what-we-do',
+                detail: {
+                    title: 'Empowering Success Through Innovation',
+                    description: 'Explore our comprehensive approach combining AI-driven intelligence, immersive learning, and role-based simulations to create a future-ready workforce.',
+                    cta: 'Explore Services',
+                    ctaLink: '/company/what-we-do',
+                    image: '/what_we_do_banner.jpg'
+                }
+            },
+            {
                 name: 'Our Methodology',
                 link: '/company/methodology',
                 detail: {
@@ -290,13 +301,24 @@ const navItems = [
                 }
             },
             {
+                name: 'Our Pathway',
+                link: '/company/pathway',
+                detail: {
+                    title: 'Transforming Lives Through SDG-Aligned Skills Development',
+                    description: 'Join our inclusive, impact-driven skill development programs aligned with UN Sustainable Development Goals. Empowering communities while building futures.',
+                    cta: 'Start Your Journey',
+                    ctaLink: '/company/pathway',
+                    image: '/sdgs_banner.png'
+                }
+            },
+            {
                 name: 'Partner Collaboration',
-                link: '/',
+                link: '/company/partnerships',
                 detail: {
                     title: 'Building the Future of Work Together',
                     description: 'We collaborate with industry leaders, academic institutions, and government bodies to build a robust and equitable future of work.',
                     cta: 'Become a Partner',
-                    ctaLink: '/',
+                    ctaLink: '/company/partnerships',
                     image: '/partner-bg.png'
                 }
             }
