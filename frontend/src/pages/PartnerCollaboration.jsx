@@ -28,15 +28,6 @@ const PartnerCollaboration = () => {
             <p className="text-base md:text-lg text-gray-300 max-w-3xl leading-relaxed mb-8">
               Skillzza forges strategic alliances across sectors to drive meaningful skill development and innovation. Our collaborative approach delivers customized solutions that meet the unique needs of corporates, governments, and educational institutions—creating shared value and sustainable impact.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gradient-to-r from-red-600 to-orange-500 text-white font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                Become a Partner
-              </button>
-              <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Explore Partnerships
-              </button>
-            </div>
           </div>
         </div>
       </section>
@@ -339,7 +330,8 @@ const PartnerCollaboration = () => {
               Why Educational Institutions Choose Skillzza:
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* First row with 3 items */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
               {[
                 {
                   title: "Holistic Skill Development",
@@ -364,7 +356,25 @@ const PartnerCollaboration = () => {
                     "Hackathons and innovation challenges",
                     "Community problem-solving initiatives"
                   ]
-                },
+                }
+              ].map((area, index) => (
+                <div key={index} className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300">
+                  <h4 className="text-xl font-bold text-gray-900 mb-6">{area.title}</h4>
+                  <ul className="space-y-3 text-gray-700">
+                    {area.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            {/* Second row with 2 items centered */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {[
                 {
                   title: "Career & College Preparation",
                   items: [

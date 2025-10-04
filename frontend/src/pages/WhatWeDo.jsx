@@ -40,14 +40,16 @@ const WhatWeDo = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Pillar 1: AI-Driven Assessments */}
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-orange-500 font-bold">1</span>
-                </div>
+              <div className="w-20 h-20 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/AI_driven_customized_img.jpg" 
+                  alt="AI-Driven Assessments"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">SkillStratum</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">AI-Driven Assessments</h3>
               <p className="text-gray-700 text-center leading-relaxed mb-6">
-                The first Skillzza program that helps employees start their competency and career development journey. It is designed to analyze current skills, and bridge career aspirations.
+                We move beyond traditional testing with intelligent diagnostics that map strengths, identify gaps, and create personalized learning paths aligned with career goals and industry demands.
               </p>
               <div className="space-y-3">
                 <h4 className="font-semibold text-gray-900">Key Capabilities</h4>
@@ -62,14 +64,16 @@ const WhatWeDo = () => {
 
             {/* Pillar 2: Immersive Learning */}
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-orange-500 font-bold">2</span>
-                </div>
+              <div className="w-20 h-20 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/engaing_learning.jpg" 
+                  alt="Immersive Learning"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">SkillSphere</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Immersive Learning</h3>
               <p className="text-gray-700 text-center leading-relaxed mb-6">
-                SkillSphere is truly personalized learning at its best. Offering a 360-degree learning experience, it adapts to the unique learning style. Featuring programs, certifications, and assessments designed for real-world applications.
+                Our modules combine theory with simulations, case studies, and project-based learning that mirror real professional challenges.
               </p>
               <div className="space-y-3">
                 <h4 className="font-semibold text-gray-900">Learning Modalities</h4>
@@ -84,14 +88,16 @@ const WhatWeDo = () => {
 
             {/* Pillar 3: Role-Based Simulations */}
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-orange-500 font-bold">3</span>
-                </div>
+              <div className="w-20 h-20 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/Job Stimulation_header_img.png" 
+                  alt="Role-Based Simulations"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">SkillScape Innovation Hub</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Role-Based Simulations</h3>
               <p className="text-gray-700 text-center leading-relaxed mb-6">
-                A hub for innovation and knowledge sharing. SkillScape brings together industry needs and workforce skills, empowering organizations to bridge the gap between current skills and future demands.
+                Our simulations recreate authentic workplace scenarios, enabling safe decision-making, collaboration, and leadership practice.
               </p>
               <div className="space-y-3">
                 <h4 className="font-semibold text-gray-900">Simulation Categories</h4>
@@ -107,81 +113,6 @@ const WhatWeDo = () => {
         </div>
       </section>
 
-      {/* Our Focus Areas */}
-      <section className="bg-gradient-to-br from-purple-100 to-pink-100 py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Our Focus Areas
-            </h2>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-8">
-            {[
-              { title: "Digital AI", image: "/placeholder_img.jpg" },
-              { title: "Sustainable Climate Action", image: "/placeholder_img.jpg" },
-              { title: "Delivery Service", image: "/placeholder_img.jpg" },
-              { title: "Human Workplace", image: "/placeholder_img.jpg" },
-              { title: "EV & Mobility", image: "/placeholder_img.jpg" }
-            ].map((area, index) => (
-              <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 w-40">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
-                  <img 
-                    src={area.image} 
-                    alt={area.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-sm font-semibold text-gray-900 text-center">{area.title}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Approach Section */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-1/2">
-              <div className="relative">
-                <img 
-                  src="/placeholder_img_hori.jpg" 
-                  alt="Our Approach" 
-                  className="w-full h-96 object-cover rounded-2xl shadow-lg" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/20 to-transparent rounded-2xl"></div>
-                {/* Success badge overlay */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="bg-white rounded-full p-6 shadow-xl">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-orange-500 mb-2">SUCCESS</div>
-                      <div className="text-sm text-gray-600">2024</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-1/2 space-y-6">
-              <div className="inline-block px-6 py-2 bg-orange-100 rounded-full text-sm font-semibold text-orange-600 mb-4">
-                OUR APPROACH
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Our Approach
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Our approach focuses on practical, outcome-based learning that bridges the gap between academic knowledge and real-world applications. We leverage cutting-edge technology to deliver personalized, engaging experiences.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                By integrating data analytics and cognitive science, we can identify individual learning patterns and adapt our content delivery to maximize effectiveness and knowledge retention.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                We focus on effectiveness and measurable outcomes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Specialized Solutions Section */}
       <section className="bg-gray-50 py-20">
@@ -195,7 +126,14 @@ const WhatWeDo = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* For Individual Professionals */}
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500">
-              <h3 className="text-xl font-bold text-blue-600 mb-4">For Individual Professionals</h3>
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/forproffession.jpg" 
+                  alt="For Individual Professionals"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-blue-600 mb-4 text-center">For Individual Professionals</h3>
               <ul className="space-y-3 text-gray-700">
                 <li>• Personalized skill-building</li>
                 <li>• Career transition coaching</li>
@@ -206,7 +144,14 @@ const WhatWeDo = () => {
 
             {/* For Educational Institutions */}
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-green-500">
-              <h3 className="text-xl font-bold text-green-600 mb-4">For Educational Institutions</h3>
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/for_universities_only_img.jpg" 
+                  alt="For Educational Institutions"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-green-600 mb-4 text-center">For Educational Institutions</h3>
               <ul className="space-y-3 text-gray-700">
                 <li>• Curriculum enhancement</li>
                 <li>• Faculty training</li>
@@ -217,7 +162,14 @@ const WhatWeDo = () => {
 
             {/* For Enterprises */}
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-purple-500">
-              <h3 className="text-xl font-bold text-purple-600 mb-4">For Enterprises</h3>
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/for_corporate_only_img.jpg" 
+                  alt="For Enterprises"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-purple-600 mb-4 text-center">For Enterprises</h3>
               <ul className="space-y-3 text-gray-700">
                 <li>• Workforce diagnostics</li>
                 <li>• Custom training programs</li>
@@ -242,8 +194,12 @@ const WhatWeDo = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* AI Integration */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-200">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                <div className="w-8 h-8 bg-white rounded-lg"></div>
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/data_ai.jpg" 
+                  alt="Artificial Intelligence Integration"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Artificial Intelligence Integration</h3>
               <p className="text-gray-700 leading-relaxed">
@@ -253,8 +209,12 @@ const WhatWeDo = () => {
 
             {/* Analytics & Insights */}
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-200">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
-                <div className="w-8 h-8 bg-white rounded-lg"></div>
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/datadriveninsights_ico.png" 
+                  alt="Analytics & Insights"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Analytics & Insights</h3>
               <p className="text-gray-700 leading-relaxed">
@@ -264,8 +224,12 @@ const WhatWeDo = () => {
 
             {/* Mobile-First Accessibility */}
             <div className="bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl border border-purple-200">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-600 rounded-xl flex items-center justify-center mb-6">
-                <div className="w-8 h-8 bg-white rounded-lg"></div>
+              <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/flexible_acesible_ico.png" 
+                  alt="Mobile-First Accessibility"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Mobile-First Accessibility</h3>
               <p className="text-gray-700 leading-relaxed">
@@ -346,95 +310,29 @@ const WhatWeDo = () => {
         </div>
       </section>
 
-      {/* Key Features */}
-      <section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Key Features
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-8 rounded-2xl text-white">
-              <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-                <div className="w-8 h-8 bg-white rounded-lg"></div>
-              </div>
-              <h3 className="text-xl font-bold mb-4">Tailored Learning Paths</h3>
-              <p className="text-yellow-100 leading-relaxed">
-                Our programs are customized to meet the needs of learners at all levels, delivering targeted skill development and career advancement opportunities.
-              </p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-8 rounded-2xl text-white">
-              <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-                <div className="w-8 h-8 bg-white rounded-lg"></div>
-              </div>
-              <h3 className="text-xl font-bold mb-4">Industry Relevant Content</h3>
-              <p className="text-yellow-100 leading-relaxed">
-                Our curriculum is continuously updated to reflect the latest industry trends and requirements, ensuring learners gain practical, applicable skills.
-              </p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-8 rounded-2xl text-white">
-              <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-                <div className="w-8 h-8 bg-white rounded-lg"></div>
-              </div>
-              <h3 className="text-xl font-bold mb-4">Practical, Hands-On Training</h3>
-              <p className="text-yellow-100 leading-relaxed">
-                We prioritize experiential learning, our programs include hands-on exercises, projects, and practical training opportunities.
-              </p>
-            </div>
-
-            {/* Feature 4 */}
-            <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-8 rounded-2xl text-white">
-              <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-                <div className="w-8 h-8 bg-white rounded-lg"></div>
-              </div>
-              <h3 className="text-xl font-bold mb-4">Expert Guidance</h3>
-              <p className="text-yellow-100 leading-relaxed">
-                Our team is comprised of seasoned professionals and subject matter experts who bring real-world experience and deep knowledge.
-              </p>
-            </div>
-
-            {/* Feature 5 */}
-            <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-8 rounded-2xl text-white">
-              <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-                <div className="w-8 h-8 bg-white rounded-lg"></div>
-              </div>
-              <h3 className="text-xl font-bold mb-4">Continuous Assessment</h3>
-              <p className="text-yellow-100 leading-relaxed">
-                Learn continuously through programs, both tracking learner progress and providing real-time feedback and support.
-              </p>
-            </div>
-
-            {/* Feature 6 */}
-            <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-8 rounded-2xl text-white">
-              <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-                <div className="w-8 h-8 bg-white rounded-lg"></div>
-              </div>
-              <h3 className="text-xl font-bold mb-4">Global Network Access</h3>
-              <p className="text-yellow-100 leading-relaxed">
-                Gain access to opportunities worldwide. Our programs are designed to prepare learners for success in an increasingly connected global economy.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Our Commitment to Excellence */}
       <section className="bg-white py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-              Our Commitment to Excellence
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              By integrating academic rigor, industry alignment, and cognitive science, we ensure learning becomes a lifelong advantage, empowering individuals and organizations to thrive in a rapidly evolving world.
-            </p>
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/2">
+              <div className="relative">
+                <img 
+                  src="/our_impact_img.jpg" 
+                  alt="Our Commitment to Excellence" 
+                  className="w-full h-96 object-cover rounded-2xl shadow-lg" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/20 to-transparent rounded-2xl"></div>
+              </div>
+            </div>
+            <div className="lg:w-1/2 text-center lg:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                Our Commitment to Excellence
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                By integrating academic rigor, industry alignment, and cognitive science, we ensure learning becomes a lifelong advantage, empowering individuals and organizations to thrive in a rapidly evolving world.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -453,7 +351,7 @@ const WhatWeDo = () => {
             </div>
             <div className="lg:w-1/2">
               <img 
-                src="/placeholder_img.jpg" 
+                src="/career_readyness.jpg" 
                 alt="Career Success" 
                 className="w-full h-80 object-cover rounded-2xl shadow-lg" 
               />
