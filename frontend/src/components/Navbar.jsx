@@ -72,45 +72,45 @@ const navItems = [
       items: [
         { 
           name: 'For Students',
-          link: '/',
+          link: '/use-case/students',
           detail: {
             title: 'Student Advantage Package: From Campus to Career Excellence',
             description: 'Utilize comprehensive career discovery tools, virtual internships, skill development, and portfolio verification to launch your career with confidence.',
             cta: 'Start Your Journey',
-            ctaLink: '/',
+            ctaLink: '/use-case/students',
             image: '/forstudentuse.jpg'
           }
         },
         { 
           name: 'For Institutions',
-          link: '/',
+          link: '/use-case/institutions',
           detail: {
             title: 'Campus Enablement Package: From Academic Excellence to Industry Readiness',
             description: 'Integrate Hirenest for campus recruitment, track performance with our student analytics dashboard, and set up your own innovation lab (PoC Hub).',
             cta: 'Partner With Us',
-            ctaLink: '/',
+            ctaLink: '/use-case/institutions',
             image: '/for_universities_banner.jpeg'
           }
         },
         { 
           name: 'For Enterprises',
-          link: '/',
+          link: '/use-case/enterprises',
           detail: {
             title: 'Enterprise Talent Solutions: Strategic Workforce Intelligence',
             description: 'Access a ready-to-hire pipeline of pre-assessed talent, implement custom workforce upskilling programs, and host innovation challenges.',
             cta: 'Build Your Team',
-            ctaLink: '/',
+            ctaLink: '/use-case/enterprises',
             image: '/forproffession.jpg'
           }
         },
         { 
           name: 'For Government',
-          link: '/',
+          link: '/use-case/government',
           detail: {
             title: 'Government & CSR Impact: Scalable Workforce Transformation',
             description: 'Conduct large-scale skill assessments, enable employment in Tier 2/3 cities, and use data-driven intelligence for policy planning.',
             cta: 'Drive Social Impact',
-            ctaLink: '/',
+            ctaLink: '/use-case/government',
             image: '/for_government_img_only.jpg'
           }
         },

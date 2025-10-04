@@ -17,6 +17,10 @@ import AITalentResearchHub from './pages/AITalentResearchHub'
 import JobSimulations from './pages/JobSimulations'
 import CareerTrajectory from './pages/CareerTrajectory'
 import SkillzzaPersona from './pages/SkillzzaPersona'
+import StudentsUseCase from './pages/StudentsUseCase'
+import InstitutionsUseCase from './pages/InstitutionsUseCase'
+import EnterprisesUseCase from './pages/EnterprisesUseCase'
+import GovernmentUseCase from './pages/GovernmentUseCase'
 // import ContactBar from './components/Contactbar'
 // import Topbar from './components/Topbar'  
 
@@ -63,6 +67,10 @@ export default function App() {
             <Route path="/explore/job-simulations" element={<JobSimulations />} />
             <Route path="/explore/career-trajectory" element={<CareerTrajectory />} />
             <Route path="/explore/skillzza-persona" element={<SkillzzaPersona />} />
+            <Route path="/use-case/students" element={<StudentsUseCase />} />
+            <Route path="/use-case/institutions" element={<InstitutionsUseCase />} />
+            <Route path="/use-case/enterprises" element={<EnterprisesUseCase />} />
+            <Route path="/use-case/government" element={<GovernmentUseCase />} />
           </Routes>
         </div>
         
