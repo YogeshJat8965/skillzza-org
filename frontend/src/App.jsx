@@ -21,6 +21,7 @@ import StudentsUseCase from './pages/StudentsUseCase'
 import InstitutionsUseCase from './pages/InstitutionsUseCase'
 import EnterprisesUseCase from './pages/EnterprisesUseCase'
 import GovernmentUseCase from './pages/GovernmentUseCase'
+import Hirenest from './pages/Hirenest'
 // import ContactBar from './components/Contactbar'
 // import Topbar from './components/Topbar'  
 
@@ -71,6 +72,7 @@ export default function App() {
             <Route path="/use-case/institutions" element={<InstitutionsUseCase />} />
             <Route path="/use-case/enterprises" element={<EnterprisesUseCase />} />
             <Route path="/use-case/government" element={<GovernmentUseCase />} />
+            <Route path="/product/hirenest" element={<Hirenest />} />
           </Routes>
         </div>
         

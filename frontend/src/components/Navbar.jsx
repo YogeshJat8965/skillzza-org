@@ -53,12 +53,12 @@ const navItems = [
         },
         { 
           name: 'Hirenest',
-          link: '/',
+          link: '/product/hirenest',
           detail: {
             title: 'Hirenest',
             description: 'An intelligent college-to-career recruitment platform that connects pre-assessed, high-potential candidates with top hiring organizations.',
             cta: 'Explore Hirenest',
-            ctaLink: '/',
+            ctaLink: '/product/hirenest',
             image: '/insight_roles.jpg'
           }
         },
