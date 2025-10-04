@@ -22,6 +22,7 @@ import InstitutionsUseCase from './pages/InstitutionsUseCase'
 import EnterprisesUseCase from './pages/EnterprisesUseCase'
 import GovernmentUseCase from './pages/GovernmentUseCase'
 import Hirenest from './pages/Hirenest'
+import PotentialMeter from './pages/PotentialMeter'
 // import ContactBar from './components/Contactbar'
 // import Topbar from './components/Topbar'  
 
@@ -73,6 +74,7 @@ export default function App() {
             <Route path="/use-case/enterprises" element={<EnterprisesUseCase />} />
             <Route path="/use-case/government" element={<GovernmentUseCase />} />
             <Route path="/product/hirenest" element={<Hirenest />} />
+            <Route path="/product/potential-meter" element={<PotentialMeter />} />
           </Routes>
         </div>
         

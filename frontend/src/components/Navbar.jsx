@@ -9,12 +9,12 @@ const navItems = [
       items: [
         { 
           name: 'The Potential Meter',
-          link: '/',
+          link: '/product/potential-meter',
           detail: {
             title: 'The Potential Meter',
             description: 'A comprehensive AI assessment engine that evaluates strengths, career readiness, and growth potential, giving you a clear path to success.',
             cta: 'Assess Your Potential',
-            ctaLink: '/',
+            ctaLink: '/product/potential-meter',
             image: '/unlock_your_potential.jpg'
           }
         },
