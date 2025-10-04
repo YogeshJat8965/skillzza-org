@@ -14,6 +14,9 @@ import PartnerCollaboration from './pages/PartnerCollaboration'
 import SkillBlueprint from './pages/SkillBlueprint'
 import SkillDigest from './pages/SkillDigest'
 import AITalentResearchHub from './pages/AITalentResearchHub'
+import JobSimulations from './pages/JobSimulations'
+import CareerTrajectory from './pages/CareerTrajectory'
+import SkillzzaPersona from './pages/SkillzzaPersona'
 // import ContactBar from './components/Contactbar'
 // import Topbar from './components/Topbar'  
 
@@ -57,6 +60,9 @@ export default function App() {
             <Route path="/insights/skill-blueprint" element={<SkillBlueprint />} />
             <Route path="/insights/skill-digest" element={<SkillDigest />} />
             <Route path="/insights/ai-talent-research-hub" element={<AITalentResearchHub />} />
+            <Route path="/explore/job-simulations" element={<JobSimulations />} />
+            <Route path="/explore/career-trajectory" element={<CareerTrajectory />} />
+            <Route path="/explore/skillzza-persona" element={<SkillzzaPersona />} />
           </Routes>
         </div>
         

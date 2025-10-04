@@ -187,34 +187,34 @@ const navItems = [
         items: [
             {
                 name: 'Job Simulations',
-                link: '/',
+                link: '/explore/job-simulations',
                 detail: {
                     title: 'Immersive Job Simulations',
                     description: 'Gain industry-ready skills through real-world scenarios in high-impact domains like AI & Data, Banking, Software Development, and more. Build a portfolio that showcases your capabilities.',
                     cta: 'Explore Simulations',
-                    ctaLink: '/',
+                    ctaLink: '/explore/job-simulations',
                     image: '/xperience_img1.jpg'
                 }
             },
             {
                 name: 'Career Trajectory',
-                link: '/',
+                link: '/explore/career-trajectory',
                 detail: {
                     title: 'Chart Your Career Trajectory',
                     description: 'Bring together industry-relevant job simulations in a structured roadmap to help you secure your ideal entry-level role as an AI Engineer, Cybersecurity Analyst, and more.',
                     cta: 'Find Your Path',
-                    ctaLink: '/',
+                    ctaLink: '/explore/career-trajectory',
                     image: '/MeasuringS_gifuccess.gif'
                 }
             },
             {
                 name: 'Skillzza Persona',
-                link: '/',
+                link: '/explore/skillzza-persona',
                 detail: {
                     title: 'AI Role-Play Simulation',
                     description: 'Discover your unique strengths with interactive AI role-play simulations and map a personalized career path that aligns with your potential.',
                     cta: 'Discover Your Persona',
-                    ctaLink: '/',
+                    ctaLink: '/explore/skillzza-persona',
                     image: '/upskilling_forAi_tile_img.jpeg'
                 }
             }

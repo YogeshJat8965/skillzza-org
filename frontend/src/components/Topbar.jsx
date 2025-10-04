@@ -18,6 +18,9 @@ const Topbar = () => {
           <a href="https://ciosherpacouncil.com" className="text-md font-bold hover:text-black transition-colors duration-300">
             Companies
           </a>
+          <a href="https://playground.skillzza.com/" className="text-md font-bold hover:text-black transition-colors duration-300">
+            Playground
+          </a>
         </div>
         <div className="flex items-center space-x-6 mr-28">
           <a href="#" className="flex items-center space-x-2 text-md font-bold hover:text-black transition-colors">
