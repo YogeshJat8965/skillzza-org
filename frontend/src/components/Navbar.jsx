@@ -119,61 +119,61 @@ const navItems = [
   },
     {
     name: 'Academy',
-    link: '/',
+    link: '/academy',
     dropdown: {
       items: [
         { 
           name: 'ByteMinds – AI & Data',
-          link: '/',
+          link: '/academy/byteminds',
           detail: {
-            title: 'ByteMinds – The School of AI & Data',
-            description: 'Advancing AI and data science excellence through immersive training, industry-calibrated curricula, applied projects, and elite mentorship networks.',
-            cta: 'Explore AI Courses',
-            ctaLink: '/',
-            image: '/DataIntelligence_tile.png'
+            title: 'ByteMinds – The School of AI & Quantum Intelligence',
+            description: 'Master AI, machine learning, and quantum computing through hands-on labs, real-world projects, and mentorship from industry leaders.',
+            cta: 'Explore ByteMinds',
+            ctaLink: '/academy/byteminds',
+            image: '/data_ai.jpg'
           }
         },
         { 
-          name: 'GSSCA – Sustainability',
-          link: '/',
+          name: 'Global School of Sustainability',
+          link: '/academy/sustainability',
           detail: {
-            title: 'GSSCA – Global School of Sustainability & Climate Action',
-            description: 'Catalyzing sustainable transformation via expert-led training in climate strategy, green innovation, technology adoption, and ESG leadership.',
-            cta: 'Learn about GSSCA',
-            ctaLink: '/',
-            image: '/SustainabilitySprint_img.jpg'
+            title: 'Global School of Sustainability & Climate Action',
+            description: 'Lead the climate revolution with programs in renewable energy, circular economy, climate finance, and environmental innovation.',
+            cta: 'Join Sustainability School',
+            ctaLink: '/academy/sustainability',
+            image: '/future_proofing_img.jpg'
           }
         },
         { 
-          name: 'School of EV & E-Mobility',
-          link: '/',
-          detail: {
-            title: 'School of EV & E-Mobility',
-            description: 'Driving the future of mobility with cutting-edge courses in EV technologies, sustainable transport solutions, battery systems, and intelligent infrastructure.',
-            cta: 'View Mobility Programs',
-            ctaLink: '/',
-            image: '/ev_mobility.jpg'
-          }
-        },
-        {
           name: 'Digital & Design Excellence',
-          link: '/',
+          link: '/academy/digital-design',
           detail: {
             title: 'Centre of Digital & Design Excellence',
-            description: 'Redefining innovation through human-centered design, digital strategy, UX/UI mastery, and scalable transformation frameworks.',
-            cta: 'Master Design Thinking',
-            ctaLink: '/',
-            image: '/design_thinking.jpg'
+            description: 'Master Web 3.0, metaverse, UI/UX design, and human-centered innovation through immersive creative-tech programs.',
+            cta: 'Explore Digital Design',
+            ctaLink: '/academy/digital-design',
+            image: '/platformslide1.png'
           }
         },
         {
-          name: 'Udaan Aerial Intelligence',
-          link: '/',
+          name: 'School of EV & E-Mobility',
+          link: '/academy/ev-mobility',
           detail: {
-            title: 'Udaan Aerial Intelligence',
-            description: 'Pioneering aerospace and space frontiers through innovation programs, satellite applications, space analytics, and emerging aero-technologies.',
-            cta: 'Explore Aerospace',
-            ctaLink: '/',
+            title: 'School of EV & E-Mobility',
+            description: 'Drive the electric revolution with programs in battery technology, charging infrastructure, and sustainable transportation.',
+            cta: 'Join EV School',
+            ctaLink: '/academy/ev-mobility',
+            image: '/future_workspace.jpg'
+          }
+        },
+        {
+          name: 'Udan – Aerial Intelligence',
+          link: '/academy/udan',
+          detail: {
+            title: 'Udan – Aerial Intelligence School',
+            description: 'Master drone technology, aerial data intelligence, and aerospace innovation through hands-on labs and industry partnerships.',
+            cta: 'Explore Udan',
+            ctaLink: '/academy/udan',
             image: '/precision_agriculture_tile.jpg'
           }
         }
