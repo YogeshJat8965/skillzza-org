@@ -1,0 +1,401 @@
+import { React, useState } from 'react';
+import { IoIosArrowDown } from 'react-icons/io';
+
+const navItems = [
+    {
+    name: 'Products',
+    link: '/',
+    dropdown: {
+      items: [
+        { 
+          name: 'The Potential Meter',
+          link: '/product/potential-meter',
+          detail: {
+            title: 'The Potential Meter',
+            description: 'A comprehensive AI assessment engine that evaluates strengths, career readiness, and growth potential, giving you a clear path to success.',
+            cta: 'Assess Your Potential',
+            ctaLink: '/product/potential-meter',
+            image: '/unlock_your_potential.jpg'
+          }
+        },
+        { 
+          name: 'Xperience Platform',
+          link: '/',
+          detail: {
+            title: 'Xperience Platform',
+            description: 'Engage with AI-powered job simulations that offer role-based, industry-aligned learning experiences to enhance your practical skills and build a powerful portfolio.',
+            cta: 'Start a Simulation',
+            ctaLink: '/',
+            image: '/platformslide1.png'
+          }
+        },
+        { 
+          name: 'Talent Intelligence Suite',
+          link: '/',
+          detail: {
+            title: 'Talent Intelligence Suite',
+            description: 'A data-driven talent insight system enabling institutions and recruiters to match skill potential with evolving job roles, ensuring the right fit every time.',
+            cta: 'Find Top Talent',
+            ctaLink: '/',
+            image: '/transformskill_futureset.png'
+          }
+        },
+        { 
+          name: 'AI HackNex',
+          link: '/',
+          detail: {
+            title: 'AI HackNex',
+            description: 'A high-impact AI competition environment where participants solve real-world challenges to showcase and sharpen their capabilities.',
+            cta: 'Join a Competition',
+            ctaLink: '/',
+            image: '/step_slide_img.jpg'
+          }
+        },
+        { 
+          name: 'Hirenest',
+          link: '/product/hirenest',
+          detail: {
+            title: 'Hirenest',
+            description: 'An intelligent college-to-career recruitment platform that connects pre-assessed, high-potential candidates with top hiring organizations.',
+            cta: 'Explore Hirenest',
+            ctaLink: '/product/hirenest',
+            image: '/insight_roles.jpg'
+          }
+        },
+      ]
+    }
+  },
+  {
+    name: 'Use Case',
+    link: '',
+    dropdown: {
+      items: [
+        { 
+          name: 'For Students',
+          link: '/use-case/students',
+          detail: {
+            title: 'Student Advantage Package: From Campus to Career Excellence',
+            description: 'Utilize comprehensive career discovery tools, virtual internships, skill development, and portfolio verification to launch your career with confidence.',
+            cta: 'Start Your Journey',
+            ctaLink: '/use-case/students',
+            image: '/forstudentuse.jpg'
+          }
+        },
+        { 
+          name: 'For Institutions',
+          link: '/use-case/institutions',
+          detail: {
+            title: 'Campus Enablement Package: From Academic Excellence to Industry Readiness',
+            description: 'Integrate Hirenest for campus recruitment, track performance with our student analytics dashboard, and set up your own innovation lab (PoC Hub).',
+            cta: 'Partner With Us',
+            ctaLink: '/use-case/institutions',
+            image: '/for_universities_banner.jpeg'
+          }
+        },
+        { 
+          name: 'For Enterprises',
+          link: '/use-case/enterprises',
+          detail: {
+            title: 'Enterprise Talent Solutions: Strategic Workforce Intelligence',
+            description: 'Access a ready-to-hire pipeline of pre-assessed talent, implement custom workforce upskilling programs, and host innovation challenges.',
+            cta: 'Build Your Team',
+            ctaLink: '/use-case/enterprises',
+            image: '/forproffession.jpg'
+          }
+        },
+        { 
+          name: 'For Government',
+          link: '/use-case/government',
+          detail: {
+            title: 'Government & CSR Impact: Scalable Workforce Transformation',
+            description: 'Conduct large-scale skill assessments, enable employment in Tier 2/3 cities, and use data-driven intelligence for policy planning.',
+            cta: 'Drive Social Impact',
+            ctaLink: '/use-case/government',
+            image: '/for_government_img_only.jpg'
+          }
+        },
+      ]
+    }
+  },
+    {
+    name: 'Academy',
+    link: '/academy',
+    dropdown: {
+      items: [
+        { 
+          name: 'ByteMinds – AI & Data',
+          link: '/academy/byteminds',
+          detail: {
+            title: 'ByteMinds – The School of AI & Quantum Intelligence',
+            description: 'Master AI, machine learning, and quantum computing through hands-on labs, real-world projects, and mentorship from industry leaders.',
+            cta: 'Explore ByteMinds',
+            ctaLink: '/academy/byteminds',
+            image: '/data_ai.jpg'
+          }
+        },
+        { 
+          name: 'Global School of Sustainability',
+          link: '/academy/sustainability',
+          detail: {
+            title: 'Global School of Sustainability & Climate Action',
+            description: 'Lead the climate revolution with programs in renewable energy, circular economy, climate finance, and environmental innovation.',
+            cta: 'Join Sustainability School',
+            ctaLink: '/academy/sustainability',
+            image: '/future_proofing_img.jpg'
+          }
+        },
+        { 
+          name: 'Digital & Design Excellence',
+          link: '/academy/digital-design',
+          detail: {
+            title: 'Centre of Digital & Design Excellence',
+            description: 'Master Web 3.0, metaverse, UI/UX design, and human-centered innovation through immersive creative-tech programs.',
+            cta: 'Explore Digital Design',
+            ctaLink: '/academy/digital-design',
+            image: '/platformslide1.png'
+          }
+        },
+        {
+          name: 'School of EV & E-Mobility',
+          link: '/academy/ev-mobility',
+          detail: {
+            title: 'School of EV & E-Mobility',
+            description: 'Drive the electric revolution with programs in battery technology, charging infrastructure, and sustainable transportation.',
+            cta: 'Join EV School',
+            ctaLink: '/academy/ev-mobility',
+            image: '/future_workspace.jpg'
+          }
+        },
+        {
+          name: 'Udan – Aerial Intelligence',
+          link: '/academy/udan',
+          detail: {
+            title: 'Udan – Aerial Intelligence School',
+            description: 'Master drone technology, aerial data intelligence, and aerospace innovation through hands-on labs and industry partnerships.',
+            cta: 'Explore Udan',
+            ctaLink: '/academy/udan',
+            image: '/precision_agriculture_tile.jpg'
+          }
+        }
+      ]
+    }
+  },
+  {
+    name: 'Explore',
+    link: '/',
+    dropdown: {
+        items: [
+            {
+                name: 'Job Simulations',
+                link: '/explore/job-simulations',
+                detail: {
+                    title: 'Immersive Job Simulations',
+                    description: 'Gain industry-ready skills through real-world scenarios in high-impact domains like AI & Data, Banking, Software Development, and more. Build a portfolio that showcases your capabilities.',
+                    cta: 'Explore Simulations',
+                    ctaLink: '/explore/job-simulations',
+                    image: '/xperience_img1.jpg'
+                }
+            },
+            {
+                name: 'Career Trajectory',
+                link: '/explore/career-trajectory',
+                detail: {
+                    title: 'Chart Your Career Trajectory',
+                    description: 'Bring together industry-relevant job simulations in a structured roadmap to help you secure your ideal entry-level role as an AI Engineer, Cybersecurity Analyst, and more.',
+                    cta: 'Find Your Path',
+                    ctaLink: '/explore/career-trajectory',
+                    image: '/MeasuringS_gifuccess.gif'
+                }
+            },
+            {
+                name: 'Skillzza Persona',
+                link: '/explore/skillzza-persona',
+                detail: {
+                    title: 'AI Role-Play Simulation',
+                    description: 'Discover your unique strengths with interactive AI role-play simulations and map a personalized career path that aligns with your potential.',
+                    cta: 'Discover Your Persona',
+                    ctaLink: '/explore/skillzza-persona',
+                    image: '/upskilling_forAi_tile_img.jpeg'
+                }
+            }
+        ]
+    }
+  },
+  {
+    name: 'Insights',
+    link: '/',
+    dropdown: {
+        items: [
+            {
+                name: 'Skill Blueprint',
+                link: '/insights/skill-blueprint',
+                detail: {
+                    title: 'Skill Blueprint: Solutions & Case Studies',
+                    description: 'Explore real-world success stories in skill development and see how our solutions are making an impact across industries.',
+                    cta: 'Read Case Studies',
+                    ctaLink: '/insights/skill-blueprint',
+                    image: '/company_header_img.jpg'
+                }
+            },
+            {
+                name: 'The Skillzza Digest',
+                link: '/insights/skill-digest',
+                detail: {
+                    title: 'The Skillzza Digest Blog',
+                    description: 'Stay updated with insights, trends, and game-changers that are shaping the future of skills and workforce development.',
+                    cta: 'Go to Blog',
+                    ctaLink: '/insights/skill-digest',
+                    image: '/digestbannerImg.jpeg'
+                }
+            },
+            {
+                name: 'AI Talent Research Hub',
+                link: '/insights/ai-talent-research-hub',
+                detail: {
+                    title: 'AI Talent Research Hub',
+                    description: 'Access data-driven reports, whitepapers, and in-depth insights on AI and its transformative impact on the global workforce.',
+                    cta: 'View Reports',
+                    ctaLink: '/insights/ai-talent-research-hub',
+                    image: '/aIdataAnalyticsDecisions_tile.jpg'
+                }
+            }
+        ]
+    }
+  },
+  {
+    name: 'Company',
+    link: '/',
+    dropdown: {
+        items: [
+            {
+                name: 'About Us',
+                link: '/company/about',
+                detail: {
+                    title: 'Bridging the Gap Between Aspiration and Opportunity',
+                    description: 'Learn about our mission to engineer an end-to-end career ecosystem and empower individuals to achieve their full potential.',
+                    cta: 'Learn More',
+                    ctaLink: '/company/about',
+                    image: '/aboutUsHeaeder_tilemg.png'
+                }
+            },
+            {
+                name: 'What We Do',
+                link: '/company/what-we-do',
+                detail: {
+                    title: 'Empowering Success Through Innovation',
+                    description: 'Explore our comprehensive approach combining AI-driven intelligence, immersive learning, and role-based simulations to create a future-ready workforce.',
+                    cta: 'Explore Services',
+                    ctaLink: '/company/what-we-do',
+                    image: '/what_we_do_banner.jpg'
+                }
+            },
+            {
+                name: 'Our Methodology',
+                link: '/company/methodology',
+                detail: {
+                    title: 'The Science Behind Career Transformation',
+                    description: 'Discover the data-driven approach and innovative frameworks we use to engineer successful career pathways from vision to global impact.',
+                    cta: 'Discover Our Method',
+                    ctaLink: '/company/methodology',
+                    image: '/methodology_banner_img.png'
+                }
+            },
+            {
+                name: 'Our Pathway',
+                link: '/company/pathway',
+                detail: {
+                    title: 'Transforming Lives Through SDG-Aligned Skills Development',
+                    description: 'Join our inclusive, impact-driven skill development programs aligned with UN Sustainable Development Goals. Empowering communities while building futures.',
+                    cta: 'Start Your Journey',
+                    ctaLink: '/company/pathway',
+                    image: '/sdgs_banner.png'
+                }
+            },
+            {
+                name: 'Partner Collaboration',
+                link: '/company/partnerships',
+                detail: {
+                    title: 'Building the Future of Work Together',
+                    description: 'We collaborate with industry leaders, academic institutions, and government bodies to build a robust and equitable future of work.',
+                    cta: 'Become a Partner',
+                    ctaLink: '/company/partnerships',
+                    image: '/partner-bg.png'
+                }
+            }
+        ]
+    }
+  },
+];
+
+const DropdownContent = ({ items }) => {
+  const [activeItem, setActiveItem] = useState(items[0]);
+
+  return (
+    <div className="grid grid-cols-3">
+      <div className="col-span-1 p-6 border-r">
+        <ul className="space-y-1">
+          {items.map((item, index) => (
+            <li key={index}>
+              <a
+                href={item.link}
+                onMouseEnter={() => setActiveItem(item)}
+                className={`w-full text-left px-4 py-2 rounded-md text-sm font-medium transition-colors duration-150 block ${
+                  activeItem.name === item.name
+                    ? 'bg-purple-50 text-purple-600' 
+                    : 'text-gray-700 hover:bg-purple-50 hover:text-purple-600'
+                }`}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="col-span-2 p-8 flex items-center">
+        <div className="w-1/2 pr-8">
+          <h3 className="text-2xl font-bold text-gray-800 mb-3">{activeItem.detail.title}</h3>
+          <p className="text-gray-600 mb-6">{activeItem.detail.description}</p>
+          <a href={activeItem.detail.ctaLink} className="inline-block bg-purple-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-purple-700 transition-colors">
+            {activeItem.detail.cta}
+          </a>
+        </div>
+        <div className="w-1/2">
+          <img src={activeItem.detail.image} alt={activeItem.detail.title} className="w-full h-64 object-cover rounded-lg shadow-md" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Navbar = () => {
+  return (
+    <header className="bg-white text-gray-800 shadow-sm sticky top-0 z-50 relative">
+      <div className="container mx-auto flex items-center justify-between p-3">
+        <div className="flex-shrink-0">
+          <a href="/"><img src="/skillzza-logo.png" alt="Skillzza Logo" className="h-10 w-auto ml-28" /></a>
+        </div>
+        <nav className="hidden md:flex items-center space-x-10 mr-28">
+          {navItems.map((item) => (
+            <div key={item.name} className="group static py-6 -my-6">
+              <a href={item.link} className="flex items-center gap-1.5 font-medium text-gray-700 hover:text-red-600 transition-colors duration-300">
+                {item.name}
+                {item.dropdown && <IoIosArrowDown className="transition-transform duration-300 group-hover:rotate-180" />}
+              </a>
+              {item.dropdown && (
+                <div className="absolute top-full left-0 w-full opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                  <div className="bg-white shadow-lg border-t">
+                    <div className="max-w-7xl mx-auto">
+                       <DropdownContent items={item.dropdown.items} />
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;
