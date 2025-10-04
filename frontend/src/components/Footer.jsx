@@ -14,11 +14,11 @@ const footerSections = [
   {
     title: 'Products',
     links: [
-      { name: 'The Potential Meter AI', href: '/potential-meter' },
-      { name: 'Xperience Platform', href: '/xperience-platform' },
-      { name: 'Hirenest', href: '/hirenest' },
-      { name: 'Talent Transformation', href: '/talent-transformation' },
-      { name: 'AI HackNex', href: '/ai-hacknex' },
+      { name: 'The Potential Meter', href: '/product/potential-meter' },
+      { name: 'Xperience Platform', href: '/product/xperience-platform' },
+      { name: 'Talent Intelligence Suite', href: '/product/talent-intelligence' },
+      { name: 'AI HackNex', href: '/product/ai-hacknex' },
+      { name: 'Hirenest', href: '/product/hirenest' },
     ],
   },
   {
@@ -33,41 +33,38 @@ const footerSections = [
   {
     title: 'Academy',
     links: [
-      { name: 'ByteMinds-The School of AI & Data', href: '/academy/ai-data' },
-      { name: 'GSSCA-Global School of Sustainability', href: '/academy/sustainability' },
-      { name: 'Centre of Digital & Design Excellence', href: '/academy/digital-design' },
-      { name: 'School of EV & E- Mobility', href: '/academy/ev-mobility' },
-      { name: 'Udaan Aerial Intelligence', href: '/academy/aerial-intelligence' },
+      { name: 'Skillzza Learning Academy', href: '/academy' },
+      { name: 'ByteMinds – AI & Quantum Intelligence', href: '/academy/byteminds' },
+      { name: 'Global School of Sustainability', href: '/academy/sustainability' },
+      { name: 'Digital & Design Excellence', href: '/academy/digital-design' },
+      { name: 'School of EV & E-Mobility', href: '/academy/ev-mobility' },
+      { name: 'Udan – Aerial Intelligence', href: '/academy/udan' },
     ],
   },
   {
     title: 'Explore',
     links: [
-      { name: 'Job Simulations Master', href: '/explore/job-simulations' },
-      { name: 'Explore Domains', href: '/explore/domains' },
+      { name: 'Job Simulations', href: '/explore/job-simulations' },
       { name: 'Career Trajectory', href: '/explore/career-trajectory' },
-      { name: 'Skillzza Persona', href: '/explore/persona' }
+      { name: 'Skillzza Persona', href: '/explore/skillzza-persona' }
     ]
   },
   {
     title: 'Insights',
     links: [
       { name: 'Skill Blueprint', href: '/insights/skill-blueprint' },
-      { name: 'Skillzza Digest', href: '/insights/blog' },
-      { name: 'AI Talent Research Hub', href: '/insights/research' },
-      { name: 'The Skill Unplugged Podcast', href: '/insights/podcast' },
-      { name: 'Skillzza Live', href: '/insights/live' },
+      { name: 'The Skillzza Digest', href: '/insights/skill-digest' },
+      { name: 'AI Talent Research Hub', href: '/insights/ai-talent-research-hub' },
     ],
   },
   {
     title: 'Company',
     links: [
-      { name: 'About us', href: '/about' },
+      { name: 'About Us', href: '/company/about' },
       { name: 'Our Methodology', href: '/company/methodology' },
       { name: 'What We Do', href: '/company/what-we-do' },
-      { name: 'Our Pathway', href: '/company/pathway' },
-      { name: 'Partner Collaboration', href: '/company/collaboration' },
-      { name: 'Responsible AI', href: '/company/responsible-ai' },
+      { name: 'SDG Pathway', href: '/company/pathway' },
+      { name: 'Partner Collaboration', href: '/company/partnerships' },
     ],
   },
 ];

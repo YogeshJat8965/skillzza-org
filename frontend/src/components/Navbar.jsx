@@ -20,34 +20,34 @@ const navItems = [
         },
         { 
           name: 'Xperience Platform',
-          link: '/',
+          link: '/product/xperience-platform',
           detail: {
             title: 'Xperience Platform',
             description: 'Engage with AI-powered job simulations that offer role-based, industry-aligned learning experiences to enhance your practical skills and build a powerful portfolio.',
             cta: 'Start a Simulation',
-            ctaLink: '/',
+            ctaLink: '/product/xperience-platform',
             image: '/platformslide1.png'
           }
         },
         { 
           name: 'Talent Intelligence Suite',
-          link: '/',
+          link: '/product/talent-intelligence',
           detail: {
             title: 'Talent Intelligence Suite',
             description: 'A data-driven talent insight system enabling institutions and recruiters to match skill potential with evolving job roles, ensuring the right fit every time.',
             cta: 'Find Top Talent',
-            ctaLink: '/',
+            ctaLink: '/product/talent-intelligence',
             image: '/transformskill_futureset.png'
           }
         },
         { 
           name: 'AI HackNex',
-          link: '/',
+          link: '/product/ai-hacknex',
           detail: {
             title: 'AI HackNex',
             description: 'A high-impact AI competition environment where participants solve real-world challenges to showcase and sharpen their capabilities.',
             cta: 'Join a Competition',
-            ctaLink: '/',
+            ctaLink: '/product/ai-hacknex',
             image: '/step_slide_img.jpg'
           }
         },

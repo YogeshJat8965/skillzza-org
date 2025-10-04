@@ -29,6 +29,9 @@ import Sustainability from './pages/Sustainability'
 import DigitalDesign from './pages/DigitalDesign'
 import EVMobility from './pages/EVMobility'
 import Udan from './pages/Udan'
+import XperiencePlatform from './pages/XperiencePlatform'
+import TalentIntelligence from './pages/TalentIntelligence'
+import AIHackNex from './pages/AIHackNex'
 // import ContactBar from './components/Contactbar'
 // import Topbar from './components/Topbar'  
 
@@ -81,6 +84,9 @@ export default function App() {
             <Route path="/use-case/government" element={<GovernmentUseCase />} />
             <Route path="/product/hirenest" element={<Hirenest />} />
             <Route path="/product/potential-meter" element={<PotentialMeter />} />
+            <Route path="/product/xperience-platform" element={<XperiencePlatform />} />
+            <Route path="/product/talent-intelligence" element={<TalentIntelligence />} />
+            <Route path="/product/ai-hacknex" element={<AIHackNex />} />
             <Route path="/academy" element={<Academy />} />
             <Route path="/academy/byteminds" element={<ByteMinds />} />
             <Route path="/academy/sustainability" element={<Sustainability />} />
