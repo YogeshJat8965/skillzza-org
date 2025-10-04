@@ -11,6 +11,9 @@ import Methodology from './pages/Methodology'
 import WhatWeDo from './pages/WhatWeDo'
 import SDGPathway from './pages/SDGPathway'
 import PartnerCollaboration from './pages/PartnerCollaboration'
+import SkillBlueprint from './pages/SkillBlueprint'
+import SkillDigest from './pages/SkillDigest'
+import AITalentResearchHub from './pages/AITalentResearchHub'
 // import ContactBar from './components/Contactbar'
 // import Topbar from './components/Topbar'  
 
@@ -51,6 +54,9 @@ export default function App() {
             <Route path="/company/what-we-do" element={<WhatWeDo />} />
             <Route path="/company/pathway" element={<SDGPathway />} />
             <Route path="/company/partnerships" element={<PartnerCollaboration />} />
+            <Route path="/insights/skill-blueprint" element={<SkillBlueprint />} />
+            <Route path="/insights/skill-digest" element={<SkillDigest />} />
+            <Route path="/insights/ai-talent-research-hub" element={<AITalentResearchHub />} />
           </Routes>
         </div>
         

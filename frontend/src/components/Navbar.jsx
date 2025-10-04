@@ -228,34 +228,34 @@ const navItems = [
         items: [
             {
                 name: 'Skill Blueprint',
-                link: '/',
+                link: '/insights/skill-blueprint',
                 detail: {
                     title: 'Skill Blueprint: Solutions & Case Studies',
                     description: 'Explore real-world success stories in skill development and see how our solutions are making an impact across industries.',
                     cta: 'Read Case Studies',
-                    ctaLink: '/',
+                    ctaLink: '/insights/skill-blueprint',
                     image: '/company_header_img.jpg'
                 }
             },
             {
                 name: 'The Skillzza Digest',
-                link: '/',
+                link: '/insights/skill-digest',
                 detail: {
                     title: 'The Skillzza Digest Blog',
                     description: 'Stay updated with insights, trends, and game-changers that are shaping the future of skills and workforce development.',
                     cta: 'Go to Blog',
-                    ctaLink: '/',
+                    ctaLink: '/insights/skill-digest',
                     image: '/digestbannerImg.jpeg'
                 }
             },
             {
                 name: 'AI Talent Research Hub',
-                link: '/',
+                link: '/insights/ai-talent-research-hub',
                 detail: {
                     title: 'AI Talent Research Hub',
                     description: 'Access data-driven reports, whitepapers, and in-depth insights on AI and its transformative impact on the global workforce.',
                     cta: 'View Reports',
-                    ctaLink: '/',
+                    ctaLink: '/insights/ai-talent-research-hub',
                     image: '/aIdataAnalyticsDecisions_tile.jpg'
                 }
             }
