@@ -330,7 +330,7 @@ const navItems = [
                     description: 'Our commitment to ethical AI development and deployment ensures fairness, transparency, and accountability in everything we do.',
                     cta: 'Learn About Our Standards',
                     ctaLink: '/company/responsible-ai',
-                    image: '/responsible_ai_banner.jpg'
+                    image: '/AIEthics&fairnessConsultant_tile.png'
                 }
             },
             {
@@ -341,7 +341,7 @@ const navItems = [
                     description: 'Explore our comprehensive suite of AI-powered talent development solutions designed to transform careers and organizations.',
                     cta: 'View All Products',
                     ctaLink: '/company/product-catalog',
-                    image: '/product_catalog_banner.jpg'
+                    image: '/platformTile_for_left_img.jpeg'
                 }
             }
         ]
