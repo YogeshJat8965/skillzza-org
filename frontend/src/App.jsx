@@ -29,6 +29,8 @@ import Sustainability from './pages/Sustainability'
 import DigitalDesign from './pages/DigitalDesign'
 import EVMobility from './pages/EVMobility'
 import Udan from './pages/Udan'
+import ResponsibleAI from './pages/ResponsibleAI'
+import ProductCatalog from './pages/ProductCatalog'
 // import ContactBar from './components/Contactbar'
 // import Topbar from './components/Topbar'  
 
@@ -81,12 +83,17 @@ export default function App() {
             <Route path="/use-case/government" element={<GovernmentUseCase />} />
             <Route path="/product/hirenest" element={<Hirenest />} />
             <Route path="/product/potential-meter" element={<PotentialMeter />} />
+            <Route path="/product/xperience-platform" element={<ProductCatalog />} />
+            <Route path="/product/talent-intelligence" element={<ProductCatalog />} />
+            <Route path="/product/ai-hacknex" element={<ProductCatalog />} />
             <Route path="/academy" element={<Academy />} />
             <Route path="/academy/byteminds" element={<ByteMinds />} />
             <Route path="/academy/sustainability" element={<Sustainability />} />
             <Route path="/academy/digital-design" element={<DigitalDesign />} />
             <Route path="/academy/ev-mobility" element={<EVMobility />} />
             <Route path="/academy/udan" element={<Udan />} />
+            <Route path="/company/responsible-ai" element={<ResponsibleAI />} />
+            <Route path="/company/product-catalog" element={<ProductCatalog />} />
           </Routes>
         </div>
         

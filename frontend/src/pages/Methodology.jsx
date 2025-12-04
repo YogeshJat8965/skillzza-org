@@ -50,7 +50,8 @@ const OurMethodology = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-orange-500 mb-4">L - Learner-Centric Assessment</h3>
               <p className="text-gray-700 leading-relaxed">
-                Every journey begins with understanding. Our AI-powered diagnostic assessments map individual learning styles, skill gaps, and career aspirations to create personalized development pathways.
+                Every journey begins with understanding. Our AI-powered diagnostic assessments map individual learning styles, skill gaps, and career aspirations to create personalized development pathways. 
+
               </p>
               <p className="text-gray-700 leading-relaxed">
                 We analyze cognitive patterns, industry requirements, and performance metrics to ensure every learner receives a tailored experience that maximizes their potential.

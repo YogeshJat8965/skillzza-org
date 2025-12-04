@@ -53,10 +53,10 @@ const AboutUs = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="md:w-1/2 text-left text-gray-800">
               <p className="text-lg mb-6">
-                With a strong focus on empowering individuals in tier 2 and tier 3 cities, we are committed to eliminating the geographical, social, and economic barriers that often impede access to education and skill development. We believe in creating equal opportunities for all, fostering a more inclusive, skilled, and globally prepared workforce.
+                We champion democratized access to premium professional development, serving diverse stakeholders including individual professionals, educational institutions, and enterprise organizations. Our commitment extends beyond urban centers to Tier 2 and Tier 3 cities, addressing systemic barriers to quality education and creating pathways for economic mobility
               </p>
               <p className="text-lg">
-                Aligned with the United Nations Sustainable Development Goals (SDGs), particularly in promoting quality education, decent work, and reducing inequalities, Skillzza is on a mission to build a brighter, more equitable future for everyone.
+                Operating in alignment with the United Nations Sustainable Development Goals, Skillzza cultivates an inclusive learning ecosystem that transforms potential into performance. We are building tomorrow's workforce today,one that is not only globally competitive but also locally relevant, sustainable, and equipped to navigate the complexities of an interconnected world.
               </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
@@ -94,7 +94,7 @@ const AboutUs = () => {
         <h3 className="text-xl font-bold mb-2">Our MISSION</h3>
         <div className="h-0.5 w-16 bg-white mb-4"></div>
         <p className="text-lg">
-          To empower every student globally to realise their full potential, eliminating geographical, social, and economic barriers to skill development. We are committed to providing opportunities that enable individuals to advance their skills and achieve their aspirations, regardless of their starting point.
+          Our mission is to empower individuals through personalized, industry-aligned learning that drives real career growth, bridges skill gaps, and prepares every learner to lead in an ever-evolving world.
         </p>
       </div>
 
@@ -108,7 +108,8 @@ const AboutUs = () => {
         <h3 className="text-xl font-bold mb-2">Our VISION</h3>
         <div className="h-0.5 w-16 bg-white mb-4"></div>
         <p className="text-lg">
-          To empower every individual and organization with the skills required to thrive in a dynamic world, creating a sustainable future of work where every learner is equipped with the knowledge, experience, and innovation to lead in their fields. We aspire to be a global leader in skill development, talent transformation, and sustainable education, driving a positive impact on industries and communities.
+          Skillzza empowers individuals and organizations with the capabilities to thrive in an ever-evolving world, shaping a sustainable future of work where learning, innovation, and real-world experience converge. 
+          We aspire to be a global force in skill development, talent transformation, and equitable education driving meaningful impact across industries and communities.
         </p>
       </div>
     </div>

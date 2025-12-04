@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useInView, animate, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence, useInView, animate } from 'framer-motion';
 import { FaCrosshairs, FaCogs, FaRocket, FaTrophy, FaUserGraduate, FaUniversity, FaBuilding, FaGlobeAmericas } from 'react-icons/fa';
 
 const platformFeaturesData = [
@@ -100,25 +100,10 @@ function AnimatedCounter({ to }) {
 
 // Main Home Component
 export default function Home() {
-    const scrollRef = useRef(null);
-    const { scrollYProgress } = useScroll({ target: scrollRef });
+    const [activeTabId, setActiveTabId] = useState(platformFeaturesData[0].id);
 
-    // Determine the active feature based on scroll progress
-    const activeFeatureIndex = useTransform(
-        scrollYProgress,
-        [0, 0.2, 0.4, 0.6, 0.8, 1],
-        [0, 1, 2, 3, 4, 4]
-    );
-    const [activeFeature, setActiveFeature] = useState(platformFeaturesData[0]);
-
-    useEffect(() => {
-        return activeFeatureIndex.onChange((latest) => {
-            const newIndex = Math.floor(latest);
-            if (platformFeaturesData[newIndex]) {
-                setActiveFeature(platformFeaturesData[newIndex]);
-            }
-        });
-    }, [activeFeatureIndex]);
+    // Find the full object for the active feature based on its ID.
+    const activeFeature = platformFeaturesData.find((feature) => feature.id === activeTabId) || platformFeaturesData[0];
 
     return (
         <>
@@ -199,7 +184,7 @@ export default function Home() {
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-16 mb-20">
                         <div className="md:w-1/2">
-                            <img src="/learnimgwith.png" alt="Skill Gap concept" className="w-full h-auto rounded-xl " />
+                            <img src="/challangebg.png" alt="Skill Gap concept" className="w-full h-auto rounded-xl " />
                         </div>
                         <div className="md:w-1/2">
                             <h3 className="text-xs font-bold uppercase text-red-500 mb-2 tracking-widest">THE CHALLENGE</h3>
@@ -239,78 +224,83 @@ export default function Home() {
             </section>
 
             {/* ===== New Skill Studio Section (Wheel Based) ===== */}
-            <section ref={scrollRef} className="relative h-[500vh] bg-gray-50">
-                <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
-                    <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
-                        {/* Left Column: The Wheel / Stepper */}
-                        <div className="w-full lg:w-1/3">
-                            <div className="text-center lg:text-left mb-8">
-                                <h3 className="text-sm font-bold uppercase text-red-600 mb-2 tracking-widest">OUR SOLUTION</h3>
-                                <h2 className="text-3xl md:text-4xl font-bold text-gray-800">The Solution-Skill Studio</h2>
-                            </div>
-                            <div className="space-y-4">
-                                {platformFeaturesData.map((feature) => (
-                                    <div
-                                        key={feature.id}
-                                        className={`p-4 rounded-lg transition-all duration-300 cursor-pointer ${activeFeature.id === feature.id ? 'bg-red-600 text-white shadow-lg' : 'bg-white text-gray-700'
-                                            }`}
-                                    >
-                                        <h3 className="font-bold">{feature.title}</h3>
-                                        <p className={`text-sm transition-all duration-300 ${activeFeature.id === feature.id ? 'text-red-100' : 'text-gray-500'}`}>{feature.tagline}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Right Column: The Content */}
-                        <div className="w-full lg:w-2/3">
-                            <div className="bg-white p-8 md:p-12 rounded-lg shadow-xl relative h-[650px] overflow-hidden">
-                                <AnimatePresence mode="wait">
-                                    <motion.div
-                                        key={activeFeature.id}
-                                        initial={{ opacity: 0, x: 50 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        exit={{ opacity: 0, x: -50 }}
-                                        transition={{ duration: 0.5 }}
-                                        className="absolute inset-0 p-8 md:p-12"
-                                    >
-                                        <div className="flex flex-col md:flex-row items-center gap-8 h-full">
-                                            <div className="md:w-1/2 flex flex-col h-full">
-                                                <div className="flex-grow">
-                                                    <h3 className="text-xl font-bold text-red-600 mb-2">{activeFeature.title}</h3>
-                                                    <h4 className="text-2xl font-bold text-gray-800 mb-4">{activeFeature.tagline}</h4>
-                                                    <div className="h-1 w-16 bg-red-200 mb-6"></div>
-                                                    <p className="text-gray-600 mb-6 text-sm">{activeFeature.description}</p>
-                                                    <ul className="space-y-3 text-gray-600 text-sm">
-                                                        {activeFeature.points.map((point, index) => (
-                                                            <li key={index} className="flex items-start">
-                                                                <span className="text-red-500 mr-3 mt-1">&#10003;</span>
-                                                                {point}
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </div>
-                                                <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2">
-                                                    {activeFeature.cta.map((text, index) => (
-                                                        <button key={index} className="bg-red-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-700 transition-colors text-sm">
-                                                            {text}
-                                                        </button>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                            <div className="md:w-1/2 flex justify-center items-center h-full">
-                                                <div className="w-full h-full max-h-[400px] rounded-lg overflow-hidden flex justify-center items-center bg-gray-100">
-                                                    <img src={activeFeature.image} alt={activeFeature.title} className="w-full h-full object-cover" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                </AnimatePresence>
-                            </div>
-                        </div>
-                    </div>
+<section className="bg-gray-50 py-20 min-h-screen flex items-center">
+            <div className="container mx-auto px-6">
+                <div className="text-center mb-12">
+                    <h3 className="text-lg font-bold uppercase text-red-600 mb-2 tracking-widest">OUR SOLUTION</h3>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800">The Solution-Skill Studio</h2>
                 </div>
-            </section>
+
+                {/* 4. Horizontal Tab Navigation */}
+                <div className="flex justify-center border-b border-gray-200 mb-12">
+                    {platformFeaturesData.map((feature) => (
+                        <button
+                            key={feature.id}
+                            onClick={() => setActiveTabId(feature.id)}
+                            className={`py-3 px-6 text-md font-semibold transition-colors duration-300 relative focus:outline-none ${
+                                activeTabId === feature.id
+                                    ? 'text-red-600'
+                                    : 'text-gray-500 hover:text-gray-800'
+                            }`}
+                        >
+                            {feature.title}
+                            {/* Animated underline for the active tab */}
+                            {activeTabId === feature.id && (
+                                <motion.div
+                                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-600"
+                                    layoutId="underline"
+                                />
+                            )}
+                        </button>
+                    ))}
+                </div>
+
+                {/* 5. Content Display Area */}
+                <div className="bg-white p-8 md:p-12 rounded-lg shadow-xl relative min-h-[600px] overflow-hidden">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={activeFeature.id} // Animation triggers when this key changes
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -50 }}
+                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                            className="absolute inset-0 p-8 md:p-12"
+                        >
+                            <div className="flex flex-col lg:flex-row items-center gap-12 h-full">
+                                {/* Left: Text Content */}
+                                <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                                    <h3 className="text-2xl font-bold text-red-600 mb-2">{activeFeature.title}</h3>
+                                    <h4 className="text-3xl font-bold text-gray-800 mb-4">{activeFeature.tagline}</h4>
+                                    <div className="h-1 w-16 bg-red-200 mb-6"></div>
+                                    <p className="text-gray-600 mb-6 text-lg leading-relaxed">{activeFeature.description}</p>
+                                    <ul className="space-y-3 text-gray-600 text-lg mb-8">
+                                        {activeFeature.points.map((point, index) => (
+                                            <li key={index} className="flex items-start">
+                                                <span className="text-red-500 mr-3 mt-1">&#10003;</span>
+                                                {point}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <div className="flex flex-wrap gap-x-4 gap-y-2">
+                                        {activeFeature.cta.map((text, index) => (
+                                            <button key={index} className="bg-red-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-700 transition-colors text-md">
+                                                {text}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                                {/* Right: Image */}
+                                <div className="w-full lg:w-1/2 flex justify-center items-center h-full">
+                                    <div className="w-full max-w-md h-64 lg:h-80 rounded-lg overflow-hidden flex justify-center items-center bg-gray-100 shadow-md">
+                                        <img src={activeFeature.image} alt={activeFeature.title} className="w-full h-full object-cover" />
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+            </div>
+        </section>
 
             {/* ===== Transform & Academy Section ===== */}
             <section className="bg-white py-24">
