@@ -321,6 +321,28 @@ const navItems = [
                     ctaLink: '/company/partnerships',
                     image: '/partner-bg.png'
                 }
+            },
+            {
+                name: 'Responsible AI',
+                link: '/company/responsible-ai',
+                detail: {
+                    title: 'Building Trust Through Responsible AI',
+                    description: 'Our commitment to ethical AI development and deployment ensures fairness, transparency, and accountability in everything we do.',
+                    cta: 'Learn About Our Standards',
+                    ctaLink: '/company/responsible-ai',
+                    image: '/responsible_ai_banner.jpg'
+                }
+            },
+            {
+                name: 'Product Catalog Details',
+                link: '/company/product-catalog',
+                detail: {
+                    title: 'Complete Product Catalog',
+                    description: 'Explore our comprehensive suite of AI-powered talent development solutions designed to transform careers and organizations.',
+                    cta: 'View All Products',
+                    ctaLink: '/company/product-catalog',
+                    image: '/product_catalog_banner.jpg'
+                }
             }
         ]
     }
