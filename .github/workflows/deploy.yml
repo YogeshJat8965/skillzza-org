@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Deploy to Hostinger via FTP
 
 on:
   push:
@@ -10,48 +10,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main
+      - name: Checkout Code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           cd frontend
           npm install
 
-      - name: Build Vite
+      - name: Build Vite Project
         run: |
           cd frontend
           npm run build
 
-      - name: Move dist outside repo (CRITICAL FIX)
-        run: |
-          echo "Moving build to safe directory..."
-          rm -rf /home/runner/work/dist-push
-          mkdir /home/runner/work/dist-push
-          cp -r frontend/dist/* /home/runner/work/dist-push/
-          echo "Contents of safe dist-push:"
-          ls -R /home/runner/work/dist-push
-
-      - name: Deploy to production
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-
-          git fetch origin production || true
-          git checkout production || git checkout -b production
-
-          rm -rf ./*
-
-          echo "Copying from safe dist-push"
-          cp -r /home/runner/work/dist-push/* .
-
-          git add .
-          git commit -m "Deploy $(date)" || echo "No changes"
-          git push https://AILifeBOT:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} production --force
+      - name: Deploy dist to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          local-dir: frontend/dist/
+          server-dir: ${{ secrets.FTP_DIR }}
