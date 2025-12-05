@@ -236,6 +236,10 @@ const SkillzzaPersona = () => {
                       <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                       <span>Team Lead navigating performance conversations and conflict resolution</span>
                     </li>
+                    <li className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Client Success Manager handling escalations and relationship recovery</span>
+                    </li>
                   </ul>
                 </div>
                 <div className="lg:w-1/2">
@@ -312,12 +316,54 @@ const SkillzzaPersona = () => {
                       <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                       <span><strong>Strategic Thinking:</strong> How well do you connect tactics to outcomes?</span>
                     </li>
+                    <li className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span><strong>Adaptability:</strong> How gracefully do you pivot when circumstances change?</span>
+                    </li>
                   </ul>
                 </div>
                 <div className="lg:w-1/2">
                   <img 
                     src="/datadriveninsights_ico.png" 
                     alt="Behavioral Intelligence" 
+                    className="w-full h-80 object-cover rounded-2xl shadow-lg" 
+                  />
+                </div>
+              </div>
+
+              {/* Real-Time Performance Coaching */}
+              <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
+                <div className="lg:w-1/2">
+                  <div className="flex items-center mb-6">
+                    <span className="text-4xl mr-4">🔄</span>
+                    <h3 className="text-2xl font-bold text-gray-900">Real-Time Performance Coaching</h3>
+                  </div>
+                  <p className="text-lg text-gray-700 mb-6">
+                    Get immediate, actionable feedback that accelerates your growth:
+                  </p>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Moment-by-moment insights on your communication effectiveness</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Pattern recognition that identifies your natural strengths and blind spots</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Personalized development paths that target your specific growth areas</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Benchmarking against industry standards so you know where you stand</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="lg:w-1/2">
+                  <img 
+                    src="/feedback_mentor.jpg" 
+                    alt="Real-Time Performance Coaching" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
                 </div>

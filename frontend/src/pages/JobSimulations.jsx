@@ -19,10 +19,11 @@ const JobSimulations = () => {
               IMMERSIVE JOB SIMULATIONS
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
-              Your Career, Simulated.<br />Your Future, Accelerated.
+              Transforming Careers Through Simulation
             </h1>
             <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
-              In today's competitive job market, experience isn't just an advantage, it's a prerequisite. Skillzza's AI-Powered Job Simulation Program eliminates that barrier, offering a transformative journey from classroom learning to real-world application.
+              In today’s competitive job market, experience isn’t just an advantage, it's a prerequisite. Yet, gaining meaningful, industry-relevant experience before your first job remains a challenge for many. 
+Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering a transformative journey from classroom learning to real-world application.With our immersive, on-demand job simulations, you don’t just prepare for the workforce, you step directly into it.
             </p>
           </div>
         </div>
@@ -34,7 +35,8 @@ const JobSimulations = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Transforming Careers Through Simulation
+                Your Career, Simulated. Your Future, Accelerated.
+
               </h2>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 With our immersive, on-demand job simulations, you don't just prepare for the workforce, you step directly into it.
@@ -83,7 +85,7 @@ const JobSimulations = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
                   <img 
@@ -149,9 +151,9 @@ const JobSimulations = () => {
               </div>
 
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
                   <img 
-                    src="/mentorship_support_ico.png" 
+                    src="/career_mentoring_img.jpg" 
                     alt="Mentorship"
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
@@ -165,9 +167,9 @@ const JobSimulations = () => {
               </div>
 
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
                   <img 
-                    src="/certificate_ico.png" 
+                    src="/certificate_icobl.png" 
                     alt="Certification"
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
@@ -177,6 +179,38 @@ const JobSimulations = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Prestigious Certification</h3>
                 <p className="text-gray-700 text-center leading-relaxed">
                   Validate your skills and boost your resume with recognized certifications aligned with top-tier company standards.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                  <img 
+                    src="/showcaseyourexpertise.jpg" 
+                    alt="Visibility to Employers"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
+                  />
+                  <div className="hidden text-gray-500 text-xs">👁️</div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Visibility to Employers</h3>
+                <p className="text-gray-700 text-center leading-relaxed">
+                  Stand out by showcasing your simulation work and competencies to prospective employers actively scouting for emerging talent.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+                  <img 
+                    src="/design_thinking.jpg" 
+                    alt="Real-Time Role Play"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
+                  />
+                  <div className="hidden text-gray-500 text-xs">🎭</div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Real-Time Role Play & Situational Dynamics</h3>
+                <p className="text-gray-700 text-center leading-relaxed">
+                  Experience dynamic, role-specific simulations that replicate real job functions, team collaboration, and strategic decision-making delivering high-impact, experiential learning under real-world conditions.
                 </p>
               </div>
             </div>
@@ -392,20 +426,23 @@ const JobSimulations = () => {
         </div>
       </section>
 
-      {/* What Makes Skillzza Stand Out */}
+      {/* Ready to Accelerate Your Career */}
       <section className="bg-white py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                What Makes Skillzza Stand Out
+                Ready to Accelerate Your Career?
               </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                Let our AI career assistant help you identify the best simulation to match your aspirations. Just one click can move you one step closer to a future-ready profession.
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Showcase Your Expertise</h3>
-                <p className="text-gray-700 mb-6">Job simulations empower you to:</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Showcase Your Expertise</h3>
+                <p className="text-gray-700 mb-6 text-center">Job simulations empower you to:</p>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -426,8 +463,8 @@ const JobSimulations = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">The Skillzza Advantage</h3>
+              <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-2xl border border-orange-200">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">What Makes Skillzza Stand Out</h3>
                 <ul className="space-y-4 text-gray-700">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -457,10 +494,10 @@ const JobSimulations = () => {
         <div className="container mx-auto px-6">
           <div className="text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Accelerate Your Career?
+              Join Skillzza – Transcend Traditional Learning
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Let our AI career assistant help you identify the best simulation to match your aspirations. Just one click can move you one step closer to a future-ready profession.
+              Start your simulation today. Step confidently into the future with skills that matter.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
@@ -470,12 +507,6 @@ const JobSimulations = () => {
                 Explore All Programs
               </button>
             </div>
-            <p className="text-lg mt-8 font-semibold">
-              Join Skillzza – Transcend Traditional Learning
-            </p>
-            <p className="text-orange-100 mt-2">
-              Start your simulation today. Step confidently into the future with skills that matter.
-            </p>
           </div>
         </div>
       </section>
