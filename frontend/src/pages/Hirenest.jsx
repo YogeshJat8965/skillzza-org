@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const Hirenest = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const Hirenest = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-blue-400 to-purple-500"
         style={{ 
-          backgroundImage: 'url(/insight_roles.jpg)',
+          backgroundImage: getBackgroundImageUrl('/insight_roles.jpg'),
           minHeight: '70vh'
         }}
       >
@@ -172,7 +173,7 @@ const Hirenest = () => {
                 <div className="flex flex-col lg:flex-row items-center gap-8">
                   <div className="lg:w-1/2">
                     <img 
-                      src="/forstudentuse.jpg" 
+                      src={getAssetPath('/forstudentuse.jpg')} 
                       alt="For Students" 
                       className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                     />
@@ -212,7 +213,7 @@ const Hirenest = () => {
                 <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
                   <div className="lg:w-1/2">
                     <img 
-                      src="/for_corporate_only_img.jpg" 
+                      src={getAssetPath('/for_corporate_only_img.jpg')} 
                       alt="For Employers" 
                       className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                     />
@@ -252,7 +253,7 @@ const Hirenest = () => {
                 <div className="flex flex-col lg:flex-row items-center gap-8">
                   <div className="lg:w-1/2">
                     <img 
-                      src="/for_universities_banner.jpeg" 
+                      src={getAssetPath('/for_universities_banner.jpeg')} 
                       alt="For Institutions" 
                       className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                     />

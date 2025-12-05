@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const SkillDigest = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const SkillDigest = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/digestbannerImg.jpeg)',
+          backgroundImage: getBackgroundImageUrl('/digestbannerImg.jpeg'),
           minHeight: '70vh'
         }}
       >
@@ -46,7 +47,7 @@ const SkillDigest = () => {
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-1/2">
                   <img 
-                    src="/potential_meter_banner_img.png" 
+                    src={getAssetPath('/potential_meter_banner_img.png')} 
                     alt="AI-Powered Potential Meters" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
@@ -79,7 +80,7 @@ const SkillDigest = () => {
               <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
                 <div className="lg:w-1/2">
                   <img 
-                    src="/platformslide1.png" 
+                    src={getAssetPath('/platformslide1.png')} 
                     alt="AI-Powered Experience Platforms" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
@@ -112,7 +113,7 @@ const SkillDigest = () => {
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-1/2">
                   <img 
-                    src="/insight_roles.jpg" 
+                    src={getAssetPath('/insight_roles.jpg')} 
                     alt="AI Marketplaces for Campus Hiring" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
@@ -145,7 +146,7 @@ const SkillDigest = () => {
               <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
                 <div className="lg:w-1/2">
                   <img 
-                    src="/future_workspace.jpg" 
+                    src={getAssetPath('/future_workspace.jpg')} 
                     alt="Skillforce Transformation" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
@@ -178,7 +179,7 @@ const SkillDigest = () => {
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-1/2">
                   <img 
-                    src="/ai_hacknex_tile_img.png" 
+                    src={getAssetPath('/ai_hacknex_tile_img.png')} 
                     alt="AI Hackathons as Innovation Labs" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
@@ -258,25 +259,25 @@ const SkillDigest = () => {
                   title: "AI & Automation",
                   description: "How artificial intelligence is reshaping industries",
                   color: "from-blue-500 to-indigo-500",
-                  image: "/data_ai.jpg"
+                  image: getAssetPath('/data_ai.jpg')
                 },
                 {
                   title: "Future Skills",
                   description: "Essential capabilities for tomorrow's workforce",
                   color: "from-green-500 to-emerald-500",
-                  image: "/future_proofing_img.jpg"
+                  image: getAssetPath('/future_proofing_img.jpg')
                 },
                 {
                   title: "Digital Learning",
                   description: "Evolution of education in the digital age",
                   color: "from-purple-500 to-violet-500",
-                  image: "/engaing_learning.jpg"
+                  image: getAssetPath('/engaing_learning.jpg')
                 },
                 {
                   title: "Talent Analytics",
                   description: "Data-driven approaches to human capital",
                   color: "from-orange-500 to-red-500",
-                  image: "/datadriveninsights_ico.png"
+                  image: getAssetPath('/datadriveninsights_ico.png')
                 }
               ].map((topic, index) => (
                 <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">

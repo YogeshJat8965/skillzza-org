@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const EnterprisesUseCase = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const EnterprisesUseCase = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-purple-400 to-blue-500"
         style={{ 
-          backgroundImage: 'url(/for_corporate_only_img.jpg)',
+          backgroundImage: getBackgroundImageUrl('/for_corporate_only_img.jpg'),
           minHeight: '70vh'
         }}
       >
@@ -89,7 +90,7 @@ const EnterprisesUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/insight_roles.jpg" 
+                      src={getAssetPath('/insight_roles.jpg')} 
                       alt="Intelligent Talent Acquisition" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -129,7 +130,7 @@ const EnterprisesUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/transformskill_futureset.png" 
+                      src={getAssetPath('/transformskill_futureset.png')} 
                       alt="Strategic Workforce Development" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -169,7 +170,7 @@ const EnterprisesUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/Hackathons_header_img.png" 
+                      src={getAssetPath('/Hackathons_header_img.png')} 
                       alt="Innovation Engagement Platform" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -209,7 +210,7 @@ const EnterprisesUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/engaing_learning.jpg" 
+                      src={getAssetPath('/engaing_learning.jpg')} 
                       alt="Custom Learning Experiences" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -249,7 +250,7 @@ const EnterprisesUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/platformslide1.png" 
+                      src={getAssetPath('/platformslide1.png')} 
                       alt="Talent Pipeline Development" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -289,7 +290,7 @@ const EnterprisesUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/datadriveninsights_ico.png" 
+                      src={getAssetPath('/datadriveninsights_ico.png')} 
                       alt="Strategic Talent Intelligence" 
                       className="w-full h-full object-cover min-h-96" 
                     />

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const Udan = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const Udan = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-indigo-600 to-blue-700"
         style={{ 
-          backgroundImage: 'url(/precision_agriculture_tile.jpg)',
+          backgroundImage: getBackgroundImageUrl('/precision_agriculture_tile.jpg'),
           minHeight: '70vh'
         }}
       >
@@ -71,7 +72,7 @@ const Udan = () => {
                   </div>
                   <div>
                     <img 
-                      src="/future_workspace.jpg" 
+                      src={getAssetPath('/future_workspace.jpg')} 
                       alt="Drone Innovation Labs" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -107,7 +108,7 @@ const Udan = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/datadriveninsights_ico.png" 
+                      src={getAssetPath('/datadriveninsights_ico.png')} 
                       alt="Aerial Data Intelligence" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -143,7 +144,7 @@ const Udan = () => {
                   </div>
                   <div>
                     <img 
-                      src="/essential_soft_ico.png" 
+                      src={getAssetPath('/essential_soft_ico.png')} 
                       alt="Defense Disaster Response" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -179,7 +180,7 @@ const Udan = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/corporate_model_img.jpg" 
+                      src={getAssetPath('/corporate_model_img.jpg')} 
                       alt="Aerial Commerce Arena" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -215,7 +216,7 @@ const Udan = () => {
                   </div>
                   <div>
                     <img 
-                      src="/career_mentoring_img.jpg" 
+                      src={getAssetPath('/career_mentoring_img.jpg')} 
                       alt="Aviation Aerospace Connect" 
                       className="w-full rounded-2xl shadow-lg" 
                     />

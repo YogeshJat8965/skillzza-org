@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const EVMobility = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const EVMobility = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-orange-600 to-red-700"
         style={{ 
-          backgroundImage: 'url(/future_workspace.jpg)',
+          backgroundImage: getBackgroundImageUrl('/future_workspace.jpg'),
           minHeight: '70vh'
         }}
       >
@@ -71,7 +72,7 @@ const EVMobility = () => {
                   </div>
                   <div>
                     <img 
-                      src="/datadriveninsights_ico.png" 
+                      src={getAssetPath('/datadriveninsights_ico.png')} 
                       alt="EV Technology Labs" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -107,7 +108,7 @@ const EVMobility = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/global_imgs.png" 
+                      src={getAssetPath('/global_imgs.png')} 
                       alt="Mobility Innovation Arena" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -143,7 +144,7 @@ const EVMobility = () => {
                   </div>
                   <div>
                     <img 
-                      src="/engaing_learning.jpg" 
+                      src={getAssetPath('/engaing_learning.jpg')} 
                       alt="Sustainable Auto Hub" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -179,7 +180,7 @@ const EVMobility = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/corporate_model_img.jpg" 
+                      src={getAssetPath('/corporate_model_img.jpg')} 
                       alt="EV Policy Business Forum" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -215,7 +216,7 @@ const EVMobility = () => {
                   </div>
                   <div>
                     <img 
-                      src="/career_mentoring_img.jpg" 
+                      src={getAssetPath('/career_mentoring_img.jpg')} 
                       alt="Start-up Garage" 
                       className="w-full rounded-2xl shadow-lg" 
                     />

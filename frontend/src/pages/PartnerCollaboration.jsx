@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 
 const PartnerCollaboration = () => {
   return (
@@ -7,7 +8,7 @@ const PartnerCollaboration = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/partner-bg.png)',
+          backgroundImage: getBackgroundImageUrl('/partner-bg.png'),
           minHeight: '70vh'
         }}
       >

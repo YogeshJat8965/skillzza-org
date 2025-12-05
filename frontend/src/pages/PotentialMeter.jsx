@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const PotentialMeter = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const PotentialMeter = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-purple-400 to-blue-500"
         style={{ 
-          backgroundImage: 'url(/potential_meter_banner_img.png)',
+          backgroundImage: getBackgroundImageUrl('/potential_meter_banner_img.png'),
           minHeight: '70vh'
         }}
       >
@@ -137,7 +138,7 @@ const PotentialMeter = () => {
                 
                 <div className="text-center">
                   <img 
-                    src="/confused_person_banner.png" 
+                    src={getAssetPath('/confused_person_banner.png')} 
                     alt="Traditional vs Future Assessment" 
                     className="w-full max-w-md mx-auto rounded-2xl shadow-lg" 
                   />
@@ -485,7 +486,7 @@ const PotentialMeter = () => {
                   </div>
                   <div>
                     <img 
-                      src="/forstudentuse.jpg" 
+                      src={getAssetPath('/forstudentuse.jpg')} 
                       alt="Students Success" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -520,7 +521,7 @@ const PotentialMeter = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/career_readyness.jpg" 
+                      src={getAssetPath('/career_readyness.jpg')} 
                       alt="Young Professionals Success" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -555,7 +556,7 @@ const PotentialMeter = () => {
                   </div>
                   <div>
                     <img 
-                      src="/for_corporate_only_img.jpg" 
+                      src={getAssetPath('/for_corporate_only_img.jpg')} 
                       alt="Organizations Success" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -585,7 +586,7 @@ const PotentialMeter = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/future_workspace.jpg" 
+                      src={getAssetPath('/future_workspace.jpg')} 
                       alt="Career Changers Success" 
                       className="w-full rounded-2xl shadow-lg" 
                     />

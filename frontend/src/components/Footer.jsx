@@ -8,6 +8,7 @@ import {
   FaArrowUp
 } from 'react-icons/fa';
 import { PiXLogoBold } from "react-icons/pi";
+import { getAssetPath, getRoutePath } from '../utils/assets';
 
 // Updated data structure to include href for each link
 const footerSections = [
@@ -86,7 +87,7 @@ const Footer = () => {
           {/* Company Info Column */}
           <div className="lg:col-span-2 space-y-8">
             <div>
-              <img src="/skillzza-logo.png" alt="Skillzza Logo" className="h-9 mb-6" />
+              <img src={getAssetPath('/skillzza-logo.png')} alt="Skillzza Logo" className="h-9 mb-6" />
             </div>
             <div>
               <h3 className="font-bold mb-2 text-zinc-900">Registered Office</h3>
@@ -119,7 +120,7 @@ const Footer = () => {
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <a 
-                      href={link.href} // Use the href from the data object
+                      href={getRoutePath(link.href)} // Use the href from the data object
                       className="text-zinc-600 font-semibold hover:text-red-600 hover:font-semibold inline-block transform hover:-translate-y-px transition-all duration-200 text-sm"
                     >
                       {link.name} {/* Use the name for the display text */}
@@ -137,9 +138,9 @@ const Footer = () => {
         <div className="bg-red-800 text-white flex-grow">
           <div className="container mx-auto h-full flex items-center justify-between p-4 text-sm">
             <div className="flex items-center space-x-8 ml-8">
-                <a href="/terms" className="hover:text-gray-300 font-semibold transition-colors">Terms & Conditions</a>
-                <a href="/disclaimer" className="hover:text-gray-300 font-semibold transition-colors">Disclaimer</a>
-                <a href="/privacy-policy" className="hover:text-gray-300 font-semibold transition-colors">Privacy Policy</a>
+                <a href={getRoutePath('/terms')} className="hover:text-gray-300 font-semibold transition-colors">Terms & Conditions</a>
+                <a href={getRoutePath('/disclaimer')} className="hover:text-gray-300 font-semibold transition-colors">Disclaimer</a>
+                <a href={getRoutePath('/privacy-policy')} className="hover:text-gray-300 font-semibold transition-colors">Privacy Policy</a>
             </div>
             <p>&copy; {new Date().getFullYear()} Skillzza. All Rights Reserved.</p>
           </div>

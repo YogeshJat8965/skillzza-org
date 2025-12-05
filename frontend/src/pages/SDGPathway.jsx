@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 
 const SDGPathway = () => {
   const [activeTab, setActiveTab] = useState('individuals');
@@ -9,7 +10,7 @@ const SDGPathway = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/sdgs_banner.png)',
+          backgroundImage: getBackgroundImageUrl('/sdgs_banner.png'),
           minHeight: '70vh'
         }}
       >

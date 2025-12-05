@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const GovernmentUseCase = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const GovernmentUseCase = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-teal-400 to-green-500"
         style={{ 
-          backgroundImage: 'url(/government_banner_img.jpeg)',
+          backgroundImage: getBackgroundImageUrl('/government_banner_img.jpeg'),
           minHeight: '70vh'
         }}
       >
@@ -89,7 +90,7 @@ const GovernmentUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/global_imgs.png" 
+                      src={getAssetPath('/global_imgs.png')} 
                       alt="National Skill Development Programs" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -129,7 +130,7 @@ const GovernmentUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/industry_innovation_infra_img.jpg" 
+                      src={getAssetPath('/industry_innovation_infra_img.jpg')} 
                       alt="Regional Economic Development" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -169,7 +170,7 @@ const GovernmentUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/potential_meter_banner_img.png" 
+                      src={getAssetPath('/potential_meter_banner_img.png')} 
                       alt="Population-Scale Assessment" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -209,7 +210,7 @@ const GovernmentUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/explore_project.jpg" 
+                      src={getAssetPath('/explore_project.jpg')} 
                       alt="Innovation & Entrepreneurship Ecosystem" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -249,7 +250,7 @@ const GovernmentUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/partnerships_for_the_goals_img.jpg" 
+                      src={getAssetPath('/partnerships_for_the_goals_img.jpg')} 
                       alt="Public-Private Collaboration Framework" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -289,7 +290,7 @@ const GovernmentUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/datadriveninsights_ico.png" 
+                      src={getAssetPath('/datadriveninsights_ico.png')} 
                       alt="National Skill Intelligence" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -353,7 +354,7 @@ const GovernmentUseCase = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
               <div className="text-center">
                 <img 
-                  src="/E_SDG_Icons-04.jpg" 
+                  src={getAssetPath('/E_SDG_Icons-04.jpg')} 
                   alt="Quality Education" 
                   className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
                 />
@@ -361,7 +362,7 @@ const GovernmentUseCase = () => {
               </div>
               <div className="text-center">
                 <img 
-                  src="/E_SDG_Icons-08.jpg" 
+                  src={getAssetPath('/E_SDG_Icons-08.jpg')} 
                   alt="Decent Work" 
                   className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
                 />
@@ -369,7 +370,7 @@ const GovernmentUseCase = () => {
               </div>
               <div className="text-center">
                 <img 
-                  src="/E_SDG_Icons-09.jpg" 
+                  src={getAssetPath('/E_SDG_Icons-09.jpg')} 
                   alt="Industry Innovation" 
                   className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
                 />
@@ -377,7 +378,7 @@ const GovernmentUseCase = () => {
               </div>
               <div className="text-center">
                 <img 
-                  src="/E_SDG_Icons-10.jpg" 
+                  src={getAssetPath('/E_SDG_Icons-10.jpg')} 
                   alt="Reduced Inequalities" 
                   className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
                 />
@@ -385,7 +386,7 @@ const GovernmentUseCase = () => {
               </div>
               <div className="text-center">
                 <img 
-                  src="/E_SDG_Icons-13.jpg" 
+                  src={getAssetPath('/E_SDG_Icons-13.jpg')} 
                   alt="Climate Action" 
                   className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
                 />
@@ -393,7 +394,7 @@ const GovernmentUseCase = () => {
               </div>
               <div className="text-center">
                 <img 
-                  src="/E_SDG_Icons-17.jpg" 
+                  src={getAssetPath('/E_SDG_Icons-17.jpg')} 
                   alt="Partnerships" 
                   className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
                 />

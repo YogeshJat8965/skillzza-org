@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const JobSimulations = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const JobSimulations = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-orange-400 to-yellow-500"
         style={{ 
-          backgroundImage: 'url(/xperience_img1.jpg)',
+          backgroundImage: getBackgroundImageUrl('/xperience_img1.jpg'),
           minHeight: '70vh'
         }}
       >
@@ -89,7 +90,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
                   <img 
-                    src="/global_imgs.png" 
+                    src={getAssetPath('/global_imgs.png')} 
                     alt="Global Readiness"
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
@@ -105,7 +106,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
                   <img 
-                    src="/career_readyness.jpg" 
+                    src={getAssetPath('/career_readyness.jpg')} 
                     alt="Career Clarity"
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
@@ -121,7 +122,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
                   <img 
-                    src="/flexible_acesible_ico.png" 
+                    src={getAssetPath('/flexible_acesible_ico.png')} 
                     alt="Flexible Learning"
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
@@ -137,7 +138,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center">
                   <img 
-                    src="/explore_project.jpg" 
+                    src={getAssetPath('/explore_project.jpg')} 
                     alt="Problem Solving"
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
@@ -226,7 +227,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
               <div className="lg:w-1/2">
                 <div className="relative w-full h-96 bg-gray-100 rounded-2xl shadow-lg overflow-hidden flex items-center justify-center">
                   <img 
-                    src="/jobsimulation_img_bg_hero.png" 
+                    src={getAssetPath('/jobsimulation_img_bg_hero.png')} 
                     alt="Real-Time Role Play" 
                     className="w-full h-full object-cover" 
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='flex'}}

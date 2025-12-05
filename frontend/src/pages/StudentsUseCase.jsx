@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const StudentsUseCase = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const StudentsUseCase = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-blue-400 to-purple-500"
         style={{ 
-          backgroundImage: 'url(/forstudentuse.jpg)',
+          backgroundImage: getBackgroundImageUrl('/forstudentuse.jpg'),
           minHeight: '70vh'
         }}
       >
@@ -89,7 +90,7 @@ const StudentsUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/ai_hacknex_tile_img.png" 
+                      src={getAssetPath('/ai_hacknex_tile_img.png')} 
                       alt="Skillzza Persona" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -129,7 +130,7 @@ const StudentsUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/platformslide1.png" 
+                      src={getAssetPath('/platformslide1.png')} 
                       alt="Xperience Platform" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -169,7 +170,7 @@ const StudentsUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/potential_meter_banner_img.png" 
+                      src={getAssetPath('/potential_meter_banner_img.png')} 
                       alt="The Potential Meter" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -209,7 +210,7 @@ const StudentsUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/Hackathons_header_img.png" 
+                      src={getAssetPath('/Hackathons_header_img.png')} 
                       alt="Hackathon Arena" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -249,7 +250,7 @@ const StudentsUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/transformskill_futureset.png" 
+                      src={getAssetPath('/transformskill_futureset.png')} 
                       alt="Talent Intelligence Suite" 
                       className="w-full h-full object-cover min-h-96" 
                     />
@@ -289,7 +290,7 @@ const StudentsUseCase = () => {
                   </div>
                   <div className="lg:w-1/2">
                     <img 
-                      src="/insight_roles.jpg" 
+                      src={getAssetPath('/insight_roles.jpg')} 
                       alt="Skillzza Marketplace" 
                       className="w-full h-full object-cover min-h-96" 
                     />
