@@ -14,6 +14,8 @@ import PartnerCollaboration from './pages/PartnerCollaboration'
 import SkillBlueprint from './pages/SkillBlueprint'
 import SkillDigest from './pages/SkillDigest'
 import AITalentResearchHub from './pages/AITalentResearchHub'
+import SkillUnpluggedPodcast from './pages/SkillUnpluggedPodcast'
+import SkillzzaLive from './pages/SkillzzaLive'
 import JobSimulations from './pages/JobSimulations'
 import CareerTrajectory from './pages/CareerTrajectory'
 import SkillzzaPersona from './pages/SkillzzaPersona'
@@ -23,6 +25,9 @@ import EnterprisesUseCase from './pages/EnterprisesUseCase'
 import GovernmentUseCase from './pages/GovernmentUseCase'
 import Hirenest from './pages/Hirenest'
 import PotentialMeter from './pages/PotentialMeter'
+import XperiencePlatform from './pages/XperiencePlatform'
+import TalentIntelligence from './pages/TalentIntelligence'
+import AIHackNex from './pages/AIHackNex'
 import Academy from './pages/Academy'
 import ByteMinds from './pages/ByteMinds'
 import Sustainability from './pages/Sustainability'
@@ -74,6 +79,8 @@ export default function App() {
             <Route path="/insights/skill-blueprint" element={<SkillBlueprint />} />
             <Route path="/insights/skill-digest" element={<SkillDigest />} />
             <Route path="/insights/ai-talent-research-hub" element={<AITalentResearchHub />} />
+            <Route path="/insights/skill-unplugged-podcast" element={<SkillUnpluggedPodcast />} />
+            <Route path="/insights/skillzza-live" element={<SkillzzaLive />} />
             <Route path="/explore/job-simulations" element={<JobSimulations />} />
             <Route path="/explore/career-trajectory" element={<CareerTrajectory />} />
             <Route path="/explore/skillzza-persona" element={<SkillzzaPersona />} />
@@ -83,9 +90,9 @@ export default function App() {
             <Route path="/use-case/government" element={<GovernmentUseCase />} />
             <Route path="/product/hirenest" element={<Hirenest />} />
             <Route path="/product/potential-meter" element={<PotentialMeter />} />
-            <Route path="/product/xperience-platform" element={<ProductCatalog />} />
-            <Route path="/product/talent-intelligence" element={<ProductCatalog />} />
-            <Route path="/product/ai-hacknex" element={<ProductCatalog />} />
+            <Route path="/product/xperience-platform" element={<XperiencePlatform />} />
+            <Route path="/product/talent-intelligence" element={<TalentIntelligence />} />
+            <Route path="/product/ai-hacknex" element={<AIHackNex />} />
             <Route path="/academy" element={<Academy />} />
             <Route path="/academy/byteminds" element={<ByteMinds />} />
             <Route path="/academy/sustainability" element={<Sustainability />} />

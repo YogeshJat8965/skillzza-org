@@ -230,8 +230,8 @@ const navItems = [
                 name: 'Skill Blueprint',
                 link: '/insights/skill-blueprint',
                 detail: {
-                    title: 'Skill Blueprint: Solutions & Case Studies',
-                    description: 'Explore real-world success stories in skill development and see how our solutions are making an impact across industries.',
+                    title: 'Skill Blueprint – Solutions & Case Studies',
+                    description: 'Real-World Success Stories in Skill Development',
                     cta: 'Read Case Studies',
                     ctaLink: '/insights/skill-blueprint',
                     image: '/company_header_img.jpg'
@@ -241,8 +241,8 @@ const navItems = [
                 name: 'The Skillzza Digest',
                 link: '/insights/skill-digest',
                 detail: {
-                    title: 'The Skillzza Digest Blog',
-                    description: 'Stay updated with insights, trends, and game-changers that are shaping the future of skills and workforce development.',
+                    title: 'Blog – The Skill Digest',
+                    description: 'Insights, Trends & Game-changers shaping the Future of Skills',
                     cta: 'Go to Blog',
                     ctaLink: '/insights/skill-digest',
                     image: '/digestbannerImg.jpeg'
@@ -252,11 +252,33 @@ const navItems = [
                 name: 'AI Talent Research Hub',
                 link: '/insights/ai-talent-research-hub',
                 detail: {
-                    title: 'AI Talent Research Hub',
-                    description: 'Access data-driven reports, whitepapers, and in-depth insights on AI and its transformative impact on the global workforce.',
+                    title: 'AI Talent Research Hub – Reports & Whitepapers',
+                    description: 'Data-Driven Insights on AI & Workforce Transformation.',
                     cta: 'View Reports',
                     ctaLink: '/insights/ai-talent-research-hub',
                     image: '/aIdataAnalyticsDecisions_tile.jpg'
+                }
+            },
+            {
+                name: 'The Skill Unplugged Podcast',
+                link: '/insights/skill-unplugged-podcast',
+                detail: {
+                    title: 'The Skill Unplugged Podcast Series (3R)',
+                    description: 'Raw, Real & Revolutionary Talks on the Future of Skills.',
+                    cta: 'Listen to Podcasts',
+                    ctaLink: '/insights/skill-unplugged-podcast',
+                    image: '/digital_bugiess_growthBlog_img.jpg'
+                }
+            },
+            {
+                name: 'Skillzza Live',
+                link: '/insights/skillzza-live',
+                detail: {
+                    title: 'Skillzza Live: Knowledge in Action',
+                    description: 'Interactive Sessions Bringing Learning to Life.',
+                    cta: 'Join a Session',
+                    ctaLink: '/insights/skillzza-live',
+                    image: '/hackathonsbootcamps_img.jpg'
                 }
             }
         ]
