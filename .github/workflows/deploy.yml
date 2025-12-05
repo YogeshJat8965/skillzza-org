@@ -18,11 +18,15 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install Dependencies (inside frontend/)
+        run: |
+          cd frontend
+          npm install
 
-      - name: Build Vite App
-        run: npm run build
+      - name: Build Vite App (inside frontend/)
+        run: |
+          cd frontend
+          npm run build
 
       - name: Deploy dist/ via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -32,5 +36,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: "ftp"
           port: 21
-          local-dir: "dist"
+          local-dir: "frontend/dist"
           server-dir: ${{ secrets.FTP_DIR }}
