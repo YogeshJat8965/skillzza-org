@@ -1,4 +1,4 @@
-name: DEBUG Build and Publish
+name: Build and Deploy to Production Branch
 
 on:
   push:
@@ -6,55 +6,49 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
-
-      - name: List repo structure
-        run: |
-          echo "🟦 ROOT DIR CONTENTS:"
-          ls -R .
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install deps
+      - name: Install frontend dependencies
         run: |
-          echo "🟦 Checking frontend folder:"
-          ls -R frontend || echo "❌ NO frontend folder"
-          
-          echo "🟧 Installing dependencies inside frontend"
           cd frontend
           npm install
-          echo "🟩 FINISHED installing dependencies"
 
-      - name: Build project
+      - name: Build Vite project
         run: |
-          echo "🟧 Running build"
           cd frontend
-          npm run build || (echo "❌ BUILD FAILED" && exit 1)
-          echo "🟩 BUILD COMPLETED"
-          
-          echo "🟦 Checking dist folder:"
-          ls -R dist || echo "❌ NO dist folder generated"
+          npm run build
 
-      - name: Copy dist
+      - name: Prepare dist folder
         run: |
           rm -rf dist-push
           mkdir dist-push
-          
-          echo "🟦 Copying frontend/dist → dist-push"
-          cp -r frontend/dist/* dist-push/ || (echo "❌ COPY FAILED — DIST DOES NOT EXIST" && exit 1)
+          cp -r frontend/dist/* dist-push/
 
-          echo "🟩 dist-push contains:"
-          ls -R dist-push
-
-      - name: Exit for now (we only debug)
+      - name: Push dist to production branch
         run: |
-          echo "🟩 DEBUG COMPLETE — DO NOT DEPLOY YET"
-          exit 0
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+          git fetch origin production || true
+          git checkout production || git checkout -b production
+
+          rm -rf ./*
+          cp -r ../dist-push/* .
+
+          git add .
+          git commit -m "Production build: $(date)" || echo "No changes"
+
+          # MUST include GitHub username for classic PAT
+          git push https://AILifeBOT:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} production --force
