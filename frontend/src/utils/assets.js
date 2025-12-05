@@ -18,3 +18,23 @@ export const getAssetPath = (path) => {
 export const getBackgroundImageUrl = (path) => {
   return `url('${getAssetPath(path)}')`;
 };
+
+/**
+ * Helper function to get the correct route path with base URL
+ * Used for navigation links in the app
+ * @param {string} path - The route path (e.g., '/about', '/product/hirenest')
+ * @returns {string} - The full path with base URL
+ */
+export const getRoutePath = (path) => {
+  // If path is empty or just '/', handle specially
+  if (!path || path === '/') {
+    return import.meta.env.BASE_URL;
+  }
+  // Remove leading slash if present
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  // Add base URL (empty string in dev, '/newsite/' in production)
+  const basePath = import.meta.env.BASE_URL.endsWith('/') 
+    ? import.meta.env.BASE_URL 
+    : `${import.meta.env.BASE_URL}/`;
+  return `${basePath}${cleanPath}`;
+};

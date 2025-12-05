@@ -9,9 +9,12 @@ import Footer from './components/Footer'
 
 import { BrowserRouter } from 'react-router-dom'
 
+// Get the base URL from Vite's environment (removes trailing slash if present)
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/newsite">
+    <BrowserRouter basename={basename}>
       <Topbar />
       <Navbar />
       <App />

@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
-import { getAssetPath } from '../utils/assets';
+import { getAssetPath, getRoutePath } from '../utils/assets';
 
 const navItems = [
     {
@@ -382,7 +382,7 @@ const DropdownContent = ({ items }) => {
           {items.map((item, index) => (
             <li key={index}>
               <a
-                href={item.link}
+                href={getRoutePath(item.link)}
                 onMouseEnter={() => setActiveItem(item)}
                 className={`w-full text-left px-4 py-2 rounded-md text-sm font-medium transition-colors duration-150 block ${
                   activeItem.name === item.name
@@ -400,7 +400,7 @@ const DropdownContent = ({ items }) => {
         <div className="w-1/2 pr-8">
           <h3 className="text-2xl font-bold text-gray-800 mb-3">{activeItem.detail.title}</h3>
           <p className="text-gray-600 mb-6">{activeItem.detail.description}</p>
-          <a href={activeItem.detail.ctaLink} className="inline-block bg-purple-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-purple-700 transition-colors">
+          <a href={getRoutePath(activeItem.detail.ctaLink)} className="inline-block bg-purple-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-purple-700 transition-colors">
             {activeItem.detail.cta}
           </a>
         </div>
@@ -417,12 +417,12 @@ const Navbar = () => {
     <header className="bg-white text-gray-800 shadow-sm sticky top-0 z-50 relative">
       <div className="container mx-auto flex items-center justify-between p-3">
         <div className="flex-shrink-0">
-          <a href="/"><img src={getAssetPath('/skillzza-logo.png')} alt="Skillzza Logo" className="h-10 w-auto ml-28" /></a>
+          <a href={getRoutePath('/')}><img src={getAssetPath('/skillzza-logo.png')} alt="Skillzza Logo" className="h-10 w-auto ml-28" /></a>
         </div>
         <nav className="hidden md:flex items-center space-x-10 mr-28">
           {navItems.map((item) => (
             <div key={item.name} className="group static py-6 -my-6">
-              <a href={item.link} className="flex items-center gap-1.5 font-medium text-gray-700 hover:text-red-600 transition-colors duration-300">
+              <a href={getRoutePath(item.link)} className="flex items-center gap-1.5 font-medium text-gray-700 hover:text-red-600 transition-colors duration-300">
                 {item.name}
                 {item.dropdown && <IoIosArrowDown className="transition-transform duration-300 group-hover:rotate-180" />}
               </a>
