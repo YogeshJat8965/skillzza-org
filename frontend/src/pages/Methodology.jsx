@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const OurMethodology = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const OurMethodology = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/methodology_banner_img.png)',
+          backgroundImage: getBackgroundImageUrl('/methodology_banner_img.png'),
           minHeight: '60vh'
         }}
       >
@@ -42,7 +43,7 @@ const OurMethodology = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative">
               <img 
-                src="/engaing_learning.jpg" 
+                src={getAssetPath('/engaing_learning.jpg')} 
                 alt="Learner-Centric Assessment" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
@@ -72,7 +73,7 @@ const OurMethodology = () => {
               </div>
             <div className="relative">
               <img 
-                src="/explore_project.jpg" 
+                src={getAssetPath('/explore_project.jpg')} 
                 alt="Experiential Learning Design" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
@@ -83,7 +84,7 @@ const OurMethodology = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative">
               <img 
-                src="/AIDataEngineergooglecloud.png"
+                src={getAssetPath('/AIDataEngineergooglecloud.png')}
                 alt="Adaptive Intelligence" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
@@ -106,7 +107,7 @@ const OurMethodology = () => {
               </div>
             <div className="relative">
               <img 
-                src="/insight_roles.jpg" 
+                src={getAssetPath('/insight_roles.jpg')} 
                 alt="Role-Based Simulations" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
@@ -117,7 +118,7 @@ const OurMethodology = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative">
               <img 
-                src="/Hackathons_header_img.png" 
+                src={getAssetPath('/Hackathons_header_img.png')} 
                 alt="Network Integration" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
@@ -232,7 +233,7 @@ const OurMethodology = () => {
               <div className="lg:w-1/2">
                 <div className="relative">
                   <img 
-                    src="/skill_mapping_vertical.jpg" 
+                    src={getAssetPath('/skill_mapping_vertical.jpg')} 
                     alt="Discovery and Mapping" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
@@ -271,7 +272,7 @@ const OurMethodology = () => {
               <div className="lg:w-1/2">
                 <div className="relative">
                   <img 
-                    src="/mirroing_img.png" 
+                    src={getAssetPath('/mirroing_img.png')} 
                     alt="Personalized Learning Path Creation" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
@@ -311,7 +312,7 @@ const OurMethodology = () => {
               <div className="lg:w-1/2">
                 <div className="relative">
                   <img 
-                    src="/one-and-ond-mentoring-img.jpg"  
+                    src={getAssetPath('/one-and-ond-mentoring-img.jpg')}  
                     alt="Active Learning Engagement" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
@@ -351,7 +352,7 @@ const OurMethodology = () => {
               <div className="lg:w-1/2">
                 <div className="relative">
                   <img 
-                    src="/RiskAssessmentStrategist_tile_img.png" 
+                    src={getAssetPath('/RiskAssessmentStrategist_tile_img.png')} 
                     alt="Application and Validation" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
@@ -391,7 +392,7 @@ const OurMethodology = () => {
               <div className="lg:w-1/2">
                 <div className="relative">
                   <img 
-                    src="/digital_bugiess_growthBlog_img.jpg" 
+                    src={getAssetPath('/digital_bugiess_growthBlog_img.jpg')} 
                     alt="Continuous Growth and Adaptation" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />

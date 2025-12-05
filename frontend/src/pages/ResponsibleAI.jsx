@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const ResponsibleAI = () => {
   return (
     <div className="min-h-screen">
@@ -7,7 +8,7 @@ const ResponsibleAI = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/AIDataEngineergooglecloud.png)',
+          backgroundImage: getBackgroundImageUrl('/AIDataEngineergooglecloud.png'),
           minHeight: '60vh'
         }}
       >
@@ -99,7 +100,7 @@ const ResponsibleAI = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative">
               <img 
-                src="/aIdataAnalyticsDecisions_tile.jpg" 
+                src={getAssetPath('/aIdataAnalyticsDecisions_tile.jpg')} 
                 alt="Explainability & Interpretability" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
@@ -122,7 +123,7 @@ const ResponsibleAI = () => {
             </div>
             <div className="relative">
               <img 
-                src="/transformskill_futureset.png" 
+                src={getAssetPath('/transformskill_futureset.png')} 
                 alt="Fairness by Design" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
@@ -133,7 +134,7 @@ const ResponsibleAI = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative">
               <img 
-                src="/data_ai.jpg"
+                src={getAssetPath('/data_ai.jpg')}
                 alt="Model Robustness" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
@@ -156,7 +157,7 @@ const ResponsibleAI = () => {
             </div>
             <div className="relative">
               <img 
-                src="/citizen_data_privacy_tile.png" 
+                src={getAssetPath('/citizen_data_privacy_tile.png')} 
                 alt="Data Rights & Privacy" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
@@ -167,7 +168,7 @@ const ResponsibleAI = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative">
               <img 
-                src="/regulatorycompliance_tile.png" 
+                src={getAssetPath('/regulatorycompliance_tile.png')} 
                 alt="Accountability & Governance" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
@@ -197,7 +198,7 @@ const ResponsibleAI = () => {
             <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <div className="mb-6">
                 <img 
-                  src="/forstudentuse.jpg" 
+                  src={getAssetPath('/forstudentuse.jpg')} 
                   alt="For Candidates" 
                   className="w-full h-64 object-contain rounded-lg" 
                 />
@@ -212,7 +213,7 @@ const ResponsibleAI = () => {
             <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <div className="mb-6">
                 <img 
-                  src="/forproffession.jpg" 
+                  src={getAssetPath('/forproffession.jpg')} 
                   alt="For Employers" 
                   className="w-full h-64 object-contain rounded-lg" 
                 />
@@ -227,7 +228,7 @@ const ResponsibleAI = () => {
             <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <div className="mb-6">
                 <img 
-                  src="/upskilling_forAi_tile_img.jpeg" 
+                  src={getAssetPath('/upskilling_forAi_tile_img.jpeg')} 
                   alt="For Employees" 
                   className="w-full h-64 object-contain rounded-lg" 
                 />
@@ -247,7 +248,7 @@ const ResponsibleAI = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img 
-                src="/company_header_img.jpg" 
+                src={getAssetPath('/company_header_img.jpg')} 
                 alt="Responsible Workforce Ecosystem" 
                 className="w-full h-96 object-cover rounded-lg shadow-lg" 
               />
@@ -266,7 +267,7 @@ const ResponsibleAI = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 bg-cover bg-center" style={{ backgroundImage: 'url(/cta_banner.png)' }}>
+      <section className="relative py-16 bg-cover bg-center" style={{ backgroundImage: getBackgroundImageUrl('/cta_banner.png') }}>
         <div className="absolute inset-0 bg-orange-500/90"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

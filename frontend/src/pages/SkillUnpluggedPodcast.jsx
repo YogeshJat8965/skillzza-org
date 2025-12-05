@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 
 const SkillUnpluggedPodcast = () => {
   return (
@@ -7,7 +8,7 @@ const SkillUnpluggedPodcast = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/digital_bugiess_growthBlog_img.jpg)',
+          backgroundImage: getBackgroundImageUrl('/digital_bugiess_growthBlog_img.jpg'),
           minHeight: '70vh'
         }}
       >

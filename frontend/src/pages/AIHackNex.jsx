@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const AIHackNex = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const AIHackNex = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-orange-500 to-yellow-600"
         style={{ 
-          backgroundImage: 'url(/ai_hacknex_tile_img.png)',
+          backgroundImage: getBackgroundImageUrl('/ai_hacknex_tile_img.png'),
           minHeight: '70vh'
         }}
       >
@@ -97,7 +98,7 @@ const AIHackNex = () => {
                   </div>
                   <div>
                     <img 
-                      src="/global_imgs.png" 
+                      src={getAssetPath('/global_imgs.png')} 
                       alt="Global AI Challenges" 
                       className="w-full rounded-2xl shadow-lg" 
                       onError={(e) => {
@@ -140,7 +141,7 @@ const AIHackNex = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/future_workspace.jpg" 
+                      src={getAssetPath('/future_workspace.jpg')} 
                       alt="Real-world Problems" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -176,7 +177,7 @@ const AIHackNex = () => {
                   </div>
                   <div>
                     <img 
-                      src="/proven_impact.gif" 
+                      src={getAssetPath('/proven_impact.gif')} 
                       alt="Recognition & Awards" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -212,7 +213,7 @@ const AIHackNex = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/career_readyness.jpg" 
+                      src={getAssetPath('/career_readyness.jpg')} 
                       alt="Skill Showcase" 
                       className="w-full rounded-2xl shadow-lg" 
                     />

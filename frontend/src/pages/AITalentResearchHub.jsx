@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 
 const AITalentResearchHub = () => {
   return (
@@ -7,7 +8,7 @@ const AITalentResearchHub = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/aIdataAnalyticsDecisions_tile.jpg)',
+          backgroundImage: getBackgroundImageUrl('/aIdataAnalyticsDecisions_tile.jpg'),
           minHeight: '70vh'
         }}
       >

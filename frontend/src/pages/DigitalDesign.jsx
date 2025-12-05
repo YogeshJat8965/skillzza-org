@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const DigitalDesign = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const DigitalDesign = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-purple-600 to-pink-700"
         style={{ 
-          backgroundImage: 'url(/platformslide1.png)',
+          backgroundImage: getBackgroundImageUrl('/platformslide1.png'),
           minHeight: '70vh'
         }}
       >
@@ -71,7 +72,7 @@ const DigitalDesign = () => {
                   </div>
                   <div>
                     <img 
-                      src="/future_workspace.jpg" 
+                      src={getAssetPath('/future_workspace.jpg')} 
                       alt="Digital Fluency Tracks" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -107,7 +108,7 @@ const DigitalDesign = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/personalizedpearningpaths_ico.png" 
+                      src={getAssetPath('/personalizedpearningpaths_ico.png')} 
                       alt="Design Innovation Lab" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -143,7 +144,7 @@ const DigitalDesign = () => {
                   </div>
                   <div>
                     <img 
-                      src="/corporate_model_img.jpg" 
+                      src={getAssetPath('/corporate_model_img.jpg')} 
                       alt="Smart Industry Pods" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -179,7 +180,7 @@ const DigitalDesign = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/career_mentoring_img.jpg" 
+                      src={getAssetPath('/career_mentoring_img.jpg')} 
                       alt="Human-Centered Design Hub" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -215,7 +216,7 @@ const DigitalDesign = () => {
                   </div>
                   <div>
                     <img 
-                      src="/global_imgs.png" 
+                      src={getAssetPath('/global_imgs.png')} 
                       alt="Digital Storytelling Studio" 
                       className="w-full rounded-2xl shadow-lg" 
                     />

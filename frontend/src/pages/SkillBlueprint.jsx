@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const SkillBlueprint = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const SkillBlueprint = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/data_ai.jpg)',
+          backgroundImage: getBackgroundImageUrl('/data_ai.jpg'),
           minHeight: '70vh'
         }}
       >
@@ -55,7 +56,7 @@ const SkillBlueprint = () => {
                 </div>
                 <div className="lg:w-1/3">
                   <img 
-                    src="/confused_person_banner.png" 
+                    src={getAssetPath('/confused_person_banner.png')} 
                     alt="Workforce Challenges" 
                     className="w-full h-48 object-cover rounded-xl shadow-lg" 
                   />
@@ -82,7 +83,7 @@ const SkillBlueprint = () => {
                   </div>
                   <div className="lg:w-1/3">
                     <img 
-                      src="/corporate_model_img.jpg" 
+                      src={getAssetPath('/corporate_model_img.jpg')} 
                       alt="TechCorp Digital Transformation" 
                       className="w-full h-48 object-cover rounded-xl shadow-lg" 
                     />
@@ -94,7 +95,7 @@ const SkillBlueprint = () => {
                   <div className="bg-white p-6 rounded-xl shadow-lg">
                     <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                       <img 
-                        src="/AI_driven_customized_img.jpg" 
+                        src={getAssetPath('/AI_driven_customized_img.jpg')} 
                         alt="Skills Intelligence Engine"
                         className="w-full h-full object-cover"
                       />
@@ -110,7 +111,7 @@ const SkillBlueprint = () => {
                   <div className="bg-white p-6 rounded-xl shadow-lg">
                     <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                       <img 
-                        src="/datadriveninsights_ico.png" 
+                        src={getAssetPath('/datadriveninsights_ico.png')} 
                         alt="Gap Detection Algorithm"
                         className="w-full h-full object-cover"
                       />
@@ -126,7 +127,7 @@ const SkillBlueprint = () => {
                   <div className="bg-white p-6 rounded-xl shadow-lg">
                     <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                       <img 
-                        src="/engaing_learning.jpg" 
+                        src={getAssetPath('/engaing_learning.jpg')} 
                         alt="Dynamic Learning System"
                         className="w-full h-full object-cover"
                       />
@@ -246,7 +247,7 @@ const SkillBlueprint = () => {
                 </div>
                 <div className="lg:w-1/3">
                   <img 
-                    src="/personalizedpearningpaths_ico.png" 
+                    src={getAssetPath('/personalizedpearningpaths_ico.png')} 
                     alt="Personalized Learning Revolution" 
                     className="w-full h-48 object-cover rounded-xl shadow-lg" 
                   />
@@ -267,7 +268,7 @@ const SkillBlueprint = () => {
                 </div>
                 <div className="lg:w-1/3">
                   <img 
-                    src="/career_mentoring_img.jpg" 
+                    src={getAssetPath('/career_mentoring_img.jpg')} 
                     alt="FinanceForward Career Development" 
                     className="w-full h-48 object-cover rounded-xl shadow-lg" 
                   />
@@ -280,7 +281,7 @@ const SkillBlueprint = () => {
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                     <img 
-                      src="/potential_meter.png" 
+                      src={getAssetPath('/potential_meter.png')} 
                       alt="Individual Learning Profile"
                       className="w-full h-full object-cover"
                     />
@@ -297,7 +298,7 @@ const SkillBlueprint = () => {
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                     <img 
-                      src="/industry_courses_img.png" 
+                      src={getAssetPath('/industry_courses_img.png')} 
                       alt="Dynamic Content Curation"
                       className="w-full h-full object-cover"
                     />
@@ -314,7 +315,7 @@ const SkillBlueprint = () => {
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                     <img 
-                      src="/career_readyness.jpg" 
+                      src={getAssetPath('/career_readyness.jpg')} 
                       alt="Adaptive Learning Pathways"
                       className="w-full h-full object-cover"
                     />
@@ -472,7 +473,7 @@ const SkillBlueprint = () => {
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-200">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/future_proofing_img.jpg" 
+                    src={getAssetPath('/future_proofing_img.jpg')} 
                     alt="Predictive Skill Forecasting"
                     className="w-full h-full object-cover"
                   />
@@ -487,7 +488,7 @@ const SkillBlueprint = () => {
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-200">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/future_workspace.jpg" 
+                    src={getAssetPath('/future_workspace.jpg')} 
                     alt="Immersive Learning Experiences"
                     className="w-full h-full object-cover"
                   />
@@ -502,7 +503,7 @@ const SkillBlueprint = () => {
               <div className="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-2xl border border-purple-200">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/global_imgs.png" 
+                    src={getAssetPath('/global_imgs.png')} 
                     alt="Collaborative Intelligence Networks"
                     className="w-full h-full object-cover"
                   />
@@ -517,7 +518,7 @@ const SkillBlueprint = () => {
               <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-2xl border border-orange-200">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/essential_soft_ico.png" 
+                    src={getAssetPath('/essential_soft_ico.png')} 
                     alt="Emotional Intelligence Integration"
                     className="w-full h-full object-cover"
                   />
@@ -606,7 +607,7 @@ const SkillBlueprint = () => {
               <div className="bg-gray-800 p-8 rounded-2xl">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/data_ai.jpg" 
+                    src={getAssetPath('/data_ai.jpg')} 
                     alt="AI Enables Precision at Scale"
                     className="w-full h-full object-cover"
                   />
@@ -618,7 +619,7 @@ const SkillBlueprint = () => {
               <div className="bg-gray-800 p-8 rounded-2xl">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/personalizedpearningpaths_ico.png" 
+                    src={getAssetPath('/personalizedpearningpaths_ico.png')} 
                     alt="Personalization Drives Engagement"
                     className="w-full h-full object-cover"
                   />
@@ -630,7 +631,7 @@ const SkillBlueprint = () => {
               <div className="bg-gray-800 p-8 rounded-2xl">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/flexible_acesible_ico.png" 
+                    src={getAssetPath('/flexible_acesible_ico.png')} 
                     alt="Continuous Adaptation is Crucial"
                     className="w-full h-full object-cover"
                   />
@@ -642,7 +643,7 @@ const SkillBlueprint = () => {
               <div className="bg-gray-800 p-8 rounded-2xl">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/datadriveninsights_ico.png" 
+                    src={getAssetPath('/datadriveninsights_ico.png')} 
                     alt="Data Quality Determines Success"
                     className="w-full h-full object-cover"
                   />
@@ -654,7 +655,7 @@ const SkillBlueprint = () => {
               <div className="bg-gray-800 p-8 rounded-2xl">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/global_imgs.png" 
+                    src={getAssetPath('/global_imgs.png')} 
                     alt="Human-AI Collaboration"
                     className="w-full h-full object-cover"
                   />
@@ -666,7 +667,7 @@ const SkillBlueprint = () => {
               <div className="bg-gray-800 p-8 rounded-2xl">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/proven_impact.gif" 
+                    src={getAssetPath('/proven_impact.gif')} 
                     alt="ROI Extends Beyond Cost Savings"
                     className="w-full h-full object-cover"
                   />

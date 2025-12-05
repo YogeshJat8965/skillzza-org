@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const Academy = () => {
   return (
     <>
@@ -8,7 +9,7 @@ const Academy = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-blue-600 to-purple-700"
         style={{ 
-          backgroundImage: 'url(/for_universities_banner.jpeg)',
+          backgroundImage: getBackgroundImageUrl('/for_universities_banner.jpeg'),
           minHeight: '70vh'
         }}
       >
@@ -114,7 +115,7 @@ const Academy = () => {
                     </div>
                     <div>
                       <img 
-                        src="/data_ai.jpg" 
+                        src={getAssetPath('/data_ai.jpg')} 
                         alt="ByteMinds AI School" 
                         className="w-full rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300" 
                       />
@@ -150,7 +151,7 @@ const Academy = () => {
                     </div>
                     <div className="lg:order-1">
                       <img 
-                        src="/future_proofing_img.jpg" 
+                        src={getAssetPath('/future_proofing_img.jpg')} 
                         alt="Sustainability School" 
                         className="w-full rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300" 
                       />
@@ -186,7 +187,7 @@ const Academy = () => {
                     </div>
                     <div>
                       <img 
-                        src="/platformslide1.png" 
+                        src={getAssetPath('/platformslide1.png')} 
                         alt="Digital Design School" 
                         className="w-full rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300" 
                       />
@@ -222,7 +223,7 @@ const Academy = () => {
                     </div>
                     <div className="lg:order-1">
                       <img 
-                        src="/future_workspace.jpg" 
+                        src={getAssetPath('/future_workspace.jpg')} 
                         alt="EV Mobility School" 
                         className="w-full rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300" 
                       />
@@ -258,7 +259,7 @@ const Academy = () => {
                     </div>
                     <div>
                       <img 
-                        src="/global_imgs.png" 
+                        src={getAssetPath('/global_imgs.png')} 
                         alt="Udan Aerial Intelligence" 
                         className="w-full rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300" 
                       />

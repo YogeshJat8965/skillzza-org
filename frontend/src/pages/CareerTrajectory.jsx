@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const CareerTrajectory = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const CareerTrajectory = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/career_readyness.jpg)',
+          backgroundImage: getBackgroundImageUrl('/career_readyness.jpg'),
           minHeight: '70vh'
         }}
       >
@@ -94,7 +95,7 @@ const CareerTrajectory = () => {
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
                   <img 
-                    src="/AI_driven_customized_img.jpg" 
+                    src={getAssetPath('/AI_driven_customized_img.jpg')} 
                     alt="Technology Career" 
                     className="w-full h-full object-cover"
                   />
@@ -132,7 +133,7 @@ const CareerTrajectory = () => {
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
                   <img 
-                    src="/for_corporate_only_img.jpg" 
+                    src={getAssetPath('/for_corporate_only_img.jpg')} 
                     alt="Business Career" 
                     className="w-full h-full object-cover"
                   />
@@ -170,7 +171,7 @@ const CareerTrajectory = () => {
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="h-48 bg-gradient-to-br from-pink-400 to-red-500 flex items-center justify-center">
                   <img 
-                    src="/engaing_learning.jpg" 
+                    src={getAssetPath('/engaing_learning.jpg')} 
                     alt="Design Career" 
                     className="w-full h-full object-cover"
                   />
@@ -208,7 +209,7 @@ const CareerTrajectory = () => {
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
                   <img 
-                    src="/career_mentoring_img.jpg" 
+                    src={getAssetPath('/career_mentoring_img.jpg')} 
                     alt="Finance Career" 
                     className="w-full h-full object-cover"
                   />
@@ -246,7 +247,7 @@ const CareerTrajectory = () => {
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="h-48 bg-gradient-to-br from-teal-400 to-green-500 flex items-center justify-center">
                   <img 
-                    src="/industry_courses_img.png" 
+                    src={getAssetPath('/industry_courses_img.png')} 
                     alt="Healthcare Career" 
                     className="w-full h-full object-cover"
                   />
@@ -284,7 +285,7 @@ const CareerTrajectory = () => {
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
                   <img 
-                    src="/explore_project.jpg" 
+                    src={getAssetPath('/explore_project.jpg')} 
                     alt="Entrepreneurship Career" 
                     className="w-full h-full object-cover"
                   />

@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
+import { getAssetPath } from '../utils/assets';
 
 const navItems = [
     {
@@ -15,7 +16,7 @@ const navItems = [
             description: 'A comprehensive AI assessment engine that evaluates strengths, career readiness, and growth potential, giving you a clear path to success.',
             cta: 'Assess Your Potential',
             ctaLink: '/product/potential-meter',
-            image: '/unlock_your_potential.jpg'
+            image: getAssetPath('/unlock_your_potential.jpg')
           }
         },
         { 
@@ -26,7 +27,7 @@ const navItems = [
             description: 'Engage with AI-powered job simulations that offer role-based, industry-aligned learning experiences to enhance your practical skills and build a powerful portfolio.',
             cta: 'Start a Simulation',
             ctaLink: '/product/xperience-platform',
-            image: '/platformslide1.png'
+            image: getAssetPath('/platformslide1.png')
           }
         },
         { 
@@ -37,7 +38,7 @@ const navItems = [
             description: 'A data-driven talent insight system enabling institutions and recruiters to match skill potential with evolving job roles, ensuring the right fit every time.',
             cta: 'Find Top Talent',
             ctaLink: '/product/talent-intelligence',
-            image: '/transformskill_futureset.png'
+            image: getAssetPath('/transformskill_futureset.png')
           }
         },
         { 
@@ -48,7 +49,7 @@ const navItems = [
             description: 'A high-impact AI competition environment where participants solve real-world challenges to showcase and sharpen their capabilities.',
             cta: 'Join a Competition',
             ctaLink: '/product/ai-hacknex',
-            image: '/step_slide_img.jpg'
+            image: getAssetPath('/step_slide_img.jpg')
           }
         },
         { 
@@ -59,7 +60,7 @@ const navItems = [
             description: 'An intelligent college-to-career recruitment platform that connects pre-assessed, high-potential candidates with top hiring organizations.',
             cta: 'Explore Hirenest',
             ctaLink: '/product/hirenest',
-            image: '/insight_roles.jpg'
+            image: getAssetPath('/insight_roles.jpg')
           }
         },
       ]
@@ -78,7 +79,7 @@ const navItems = [
             description: 'Utilize comprehensive career discovery tools, virtual internships, skill development, and portfolio verification to launch your career with confidence.',
             cta: 'Start Your Journey',
             ctaLink: '/use-case/students',
-            image: '/forstudentuse.jpg'
+            image: getAssetPath('/forstudentuse.jpg')
           }
         },
         { 
@@ -89,7 +90,7 @@ const navItems = [
             description: 'Integrate Hirenest for campus recruitment, track performance with our student analytics dashboard, and set up your own innovation lab (PoC Hub).',
             cta: 'Partner With Us',
             ctaLink: '/use-case/institutions',
-            image: '/for_universities_banner.jpeg'
+            image: getAssetPath('/for_universities_banner.jpeg')
           }
         },
         { 
@@ -100,7 +101,7 @@ const navItems = [
             description: 'Access a ready-to-hire pipeline of pre-assessed talent, implement custom workforce upskilling programs, and host innovation challenges.',
             cta: 'Build Your Team',
             ctaLink: '/use-case/enterprises',
-            image: '/forproffession.jpg'
+            image: getAssetPath('/forproffession.jpg')
           }
         },
         { 
@@ -111,7 +112,7 @@ const navItems = [
             description: 'Conduct large-scale skill assessments, enable employment in Tier 2/3 cities, and use data-driven intelligence for policy planning.',
             cta: 'Drive Social Impact',
             ctaLink: '/use-case/government',
-            image: '/for_government_img_only.jpg'
+            image: getAssetPath('/for_government_img_only.jpg')
           }
         },
       ]
@@ -130,7 +131,7 @@ const navItems = [
             description: 'Master AI, machine learning, and quantum computing through hands-on labs, real-world projects, and mentorship from industry leaders.',
             cta: 'Explore ByteMinds',
             ctaLink: '/academy/byteminds',
-            image: '/data_ai.jpg'
+            image: getAssetPath('/data_ai.jpg')
           }
         },
         { 
@@ -141,7 +142,7 @@ const navItems = [
             description: 'Lead the climate revolution with programs in renewable energy, circular economy, climate finance, and environmental innovation.',
             cta: 'Join Sustainability School',
             ctaLink: '/academy/sustainability',
-            image: '/future_proofing_img.jpg'
+            image: getAssetPath('/future_proofing_img.jpg')
           }
         },
         { 
@@ -152,7 +153,7 @@ const navItems = [
             description: 'Master Web 3.0, metaverse, UI/UX design, and human-centered innovation through immersive creative-tech programs.',
             cta: 'Explore Digital Design',
             ctaLink: '/academy/digital-design',
-            image: '/platformslide1.png'
+            image: getAssetPath('/platformslide1.png')
           }
         },
         {
@@ -163,7 +164,7 @@ const navItems = [
             description: 'Drive the electric revolution with programs in battery technology, charging infrastructure, and sustainable transportation.',
             cta: 'Join EV School',
             ctaLink: '/academy/ev-mobility',
-            image: '/future_workspace.jpg'
+            image: getAssetPath('/future_workspace.jpg')
           }
         },
         {
@@ -174,7 +175,7 @@ const navItems = [
             description: 'Master drone technology, aerial data intelligence, and aerospace innovation through hands-on labs and industry partnerships.',
             cta: 'Explore Udan',
             ctaLink: '/academy/udan',
-            image: '/precision_agriculture_tile.jpg'
+            image: getAssetPath('/precision_agriculture_tile.jpg')
           }
         }
       ]
@@ -193,7 +194,7 @@ const navItems = [
                     description: 'Gain industry-ready skills through real-world scenarios in high-impact domains like AI & Data, Banking, Software Development, and more. Build a portfolio that showcases your capabilities.',
                     cta: 'Explore Simulations',
                     ctaLink: '/explore/job-simulations',
-                    image: '/xperience_img1.jpg'
+                    image: getAssetPath('/xperience_img1.jpg')
                 }
             },
             {
@@ -204,7 +205,7 @@ const navItems = [
                     description: 'Bring together industry-relevant job simulations in a structured roadmap to help you secure your ideal entry-level role as an AI Engineer, Cybersecurity Analyst, and more.',
                     cta: 'Find Your Path',
                     ctaLink: '/explore/career-trajectory',
-                    image: '/MeasuringS_gifuccess.gif'
+                    image: getAssetPath('/MeasuringS_gifuccess.gif')
                 }
             },
             {
@@ -215,7 +216,7 @@ const navItems = [
                     description: 'Discover your unique strengths with interactive AI role-play simulations and map a personalized career path that aligns with your potential.',
                     cta: 'Discover Your Persona',
                     ctaLink: '/explore/skillzza-persona',
-                    image: '/upskilling_forAi_tile_img.jpeg'
+                    image: getAssetPath('/upskilling_forAi_tile_img.jpeg')
                 }
             }
         ]
@@ -234,7 +235,7 @@ const navItems = [
                     description: 'Real-World Success Stories in Skill Development',
                     cta: 'Read Case Studies',
                     ctaLink: '/insights/skill-blueprint',
-                    image: '/company_header_img.jpg'
+                    image: getAssetPath('/company_header_img.jpg')
                 }
             },
             {
@@ -245,7 +246,7 @@ const navItems = [
                     description: 'Insights, Trends & Game-changers shaping the Future of Skills',
                     cta: 'Go to Blog',
                     ctaLink: '/insights/skill-digest',
-                    image: '/digestbannerImg.jpeg'
+                    image: getAssetPath('/digestbannerImg.jpeg')
                 }
             },
             {
@@ -256,7 +257,7 @@ const navItems = [
                     description: 'Data-Driven Insights on AI & Workforce Transformation.',
                     cta: 'View Reports',
                     ctaLink: '/insights/ai-talent-research-hub',
-                    image: '/aIdataAnalyticsDecisions_tile.jpg'
+                    image: getAssetPath('/aIdataAnalyticsDecisions_tile.jpg')
                 }
             },
             {
@@ -267,7 +268,7 @@ const navItems = [
                     description: 'Raw, Real & Revolutionary Talks on the Future of Skills.',
                     cta: 'Listen to Podcasts',
                     ctaLink: '/insights/skill-unplugged-podcast',
-                    image: '/digital_bugiess_growthBlog_img.jpg'
+                    image: getAssetPath('/digital_bugiess_growthBlog_img.jpg')
                 }
             },
             {
@@ -278,7 +279,7 @@ const navItems = [
                     description: 'Interactive Sessions Bringing Learning to Life.',
                     cta: 'Join a Session',
                     ctaLink: '/insights/skillzza-live',
-                    image: '/hackathonsbootcamps_img.jpg'
+                    image: getAssetPath('/hackathonsbootcamps_img.jpg')
                 }
             }
         ]
@@ -297,7 +298,7 @@ const navItems = [
                     description: 'Learn about our mission to engineer an end-to-end career ecosystem and empower individuals to achieve their full potential.',
                     cta: 'Learn More',
                     ctaLink: '/company/about',
-                    image: '/aboutUsHeaeder_tilemg.png'
+                    image: getAssetPath('/aboutUsHeaeder_tilemg.png')
                 }
             },
             {
@@ -308,7 +309,7 @@ const navItems = [
                     description: 'Explore our comprehensive approach combining AI-driven intelligence, immersive learning, and role-based simulations to create a future-ready workforce.',
                     cta: 'Explore Services',
                     ctaLink: '/company/what-we-do',
-                    image: '/what_we_do_banner.jpg'
+                    image: getAssetPath('/what_we_do_banner.jpg')
                 }
             },
             {
@@ -319,7 +320,7 @@ const navItems = [
                     description: 'Discover the data-driven approach and innovative frameworks we use to engineer successful career pathways from vision to global impact.',
                     cta: 'Discover Our Method',
                     ctaLink: '/company/methodology',
-                    image: '/methodology_banner_img.png'
+                    image: getAssetPath('/methodology_banner_img.png')
                 }
             },
             {
@@ -330,7 +331,7 @@ const navItems = [
                     description: 'Join our inclusive, impact-driven skill development programs aligned with UN Sustainable Development Goals. Empowering communities while building futures.',
                     cta: 'Start Your Journey',
                     ctaLink: '/company/pathway',
-                    image: '/sdgs_banner.png'
+                    image: getAssetPath('/sdgs_banner.png')
                 }
             },
             {
@@ -341,7 +342,7 @@ const navItems = [
                     description: 'We collaborate with industry leaders, academic institutions, and government bodies to build a robust and equitable future of work.',
                     cta: 'Become a Partner',
                     ctaLink: '/company/partnerships',
-                    image: '/partner-bg.png'
+                    image: getAssetPath('/partner-bg.png')
                 }
             },
             {
@@ -363,7 +364,7 @@ const navItems = [
                     description: 'Explore our comprehensive suite of AI-powered talent development solutions designed to transform careers and organizations.',
                     cta: 'View All Products',
                     ctaLink: '/company/product-catalog',
-                    image: '/platformTile_for_left_img.jpeg'
+                    image: getAssetPath('/platformTile_for_left_img.jpeg')
                 }
             }
         ]
@@ -416,7 +417,7 @@ const Navbar = () => {
     <header className="bg-white text-gray-800 shadow-sm sticky top-0 z-50 relative">
       <div className="container mx-auto flex items-center justify-between p-3">
         <div className="flex-shrink-0">
-          <a href="/"><img src="/skillzza-logo.png" alt="Skillzza Logo" className="h-10 w-auto ml-28" /></a>
+          <a href="/"><img src={getAssetPath('/skillzza-logo.png')} alt="Skillzza Logo" className="h-10 w-auto ml-28" /></a>
         </div>
         <nav className="hidden md:flex items-center space-x-10 mr-28">
           {navItems.map((item) => (

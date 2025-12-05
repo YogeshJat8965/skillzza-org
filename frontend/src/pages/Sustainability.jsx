@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const Sustainability = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const Sustainability = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-green-600 to-teal-700"
         style={{ 
-          backgroundImage: 'url(/future_proofing_img.jpg)',
+          backgroundImage: getBackgroundImageUrl('/future_proofing_img.jpg'),
           minHeight: '70vh'
         }}
       >
@@ -71,7 +72,7 @@ const Sustainability = () => {
                   </div>
                   <div>
                     <img 
-                      src="/future_workspace.jpg" 
+                      src={getAssetPath('/future_workspace.jpg')} 
                       alt="Green Skills Curriculum" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -107,7 +108,7 @@ const Sustainability = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/engaing_learning.jpg" 
+                      src={getAssetPath('/engaing_learning.jpg')} 
                       alt="Sustainability Labs" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -143,7 +144,7 @@ const Sustainability = () => {
                   </div>
                   <div>
                     <img 
-                      src="/corporate_model_img.jpg" 
+                      src={getAssetPath('/corporate_model_img.jpg')} 
                       alt="Climate Action Incubator" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -179,7 +180,7 @@ const Sustainability = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/global_imgs.png" 
+                      src={getAssetPath('/global_imgs.png')} 
                       alt="Policy Impact Forum" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -215,7 +216,7 @@ const Sustainability = () => {
                   </div>
                   <div>
                     <img 
-                      src="/datadriveninsights_ico.png" 
+                      src={getAssetPath('/datadriveninsights_ico.png')} 
                       alt="Carbon Innovation Hub" 
                       className="w-full rounded-2xl shadow-lg" 
                     />

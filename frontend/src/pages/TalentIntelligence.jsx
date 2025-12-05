@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const TalentIntelligence = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const TalentIntelligence = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-orange-500 to-yellow-600"
         style={{ 
-          backgroundImage: 'url(/transformskill_futureset.png)',
+          backgroundImage: getBackgroundImageUrl('/transformskill_futureset.png'),
           minHeight: '70vh'
         }}
       >
@@ -97,7 +98,7 @@ const TalentIntelligence = () => {
                   </div>
                   <div>
                     <img 
-                      src="/data_ai.jpg" 
+                      src={getAssetPath('/data_ai.jpg')} 
                       alt="Workforce Skill Mapping" 
                       className="w-full rounded-2xl shadow-lg" 
                       onError={(e) => {
@@ -140,7 +141,7 @@ const TalentIntelligence = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/personalizedpearningpaths_ico.png" 
+                      src={getAssetPath('/personalizedpearningpaths_ico.png')} 
                       alt="Upskilling Pathways" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -176,7 +177,7 @@ const TalentIntelligence = () => {
                   </div>
                   <div>
                     <img 
-                      src="/future_proofing_img.jpg" 
+                      src={getAssetPath('/future_proofing_img.jpg')} 
                       alt="Predictive Analytics" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -212,7 +213,7 @@ const TalentIntelligence = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/corporate_model_img.jpg" 
+                      src={getAssetPath('/corporate_model_img.jpg')} 
                       alt="Behavioral Intelligence" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -248,7 +249,7 @@ const TalentIntelligence = () => {
                   </div>
                   <div>
                     <img 
-                      src="/flexible_acesible_ico.png" 
+                      src={getAssetPath('/flexible_acesible_ico.png')} 
                       alt="Real-time Dashboard" 
                       className="w-full rounded-2xl shadow-lg" 
                     />

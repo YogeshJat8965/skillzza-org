@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const ByteMinds = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const ByteMinds = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-blue-600 to-indigo-700"
         style={{ 
-          backgroundImage: 'url(/data_ai.jpg)',
+          backgroundImage: getBackgroundImageUrl('/data_ai.jpg'),
           minHeight: '70vh'
         }}
       >
@@ -71,7 +72,7 @@ const ByteMinds = () => {
                   </div>
                   <div>
                     <img 
-                      src="/AI_driven_customized_img.jpg" 
+                      src={getAssetPath('/AI_driven_customized_img.jpg')} 
                       alt="AI Mastery Tracks" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -107,7 +108,7 @@ const ByteMinds = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/future_proofing_img.jpg" 
+                      src={getAssetPath('/future_proofing_img.jpg')} 
                       alt="Quantum Computing Labs" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -143,7 +144,7 @@ const ByteMinds = () => {
                   </div>
                   <div>
                     <img 
-                      src="/engaing_learning.jpg" 
+                      src={getAssetPath('/engaing_learning.jpg')} 
                       alt="AI Playground Projects" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -179,7 +180,7 @@ const ByteMinds = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/essential_soft_ico.png" 
+                      src={getAssetPath('/essential_soft_ico.png')} 
                       alt="Ethical AI Hub" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -215,7 +216,7 @@ const ByteMinds = () => {
                   </div>
                   <div>
                     <img 
-                      src="/career_mentoring_img.jpg" 
+                      src={getAssetPath('/career_mentoring_img.jpg')} 
                       alt="Future Tech Mentorship" 
                       className="w-full rounded-2xl shadow-lg" 
                     />

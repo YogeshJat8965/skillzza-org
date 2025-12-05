@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useInView, animate } from 'framer-motion';
 import { FaCrosshairs, FaCogs, FaRocket, FaTrophy, FaUserGraduate, FaUniversity, FaBuilding, FaGlobeAmericas } from 'react-icons/fa';
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 
 const platformFeaturesData = [
     {
@@ -16,7 +17,7 @@ const platformFeaturesData = [
             'Data-driven mentoring insights powered by our proprietary 4M framework',
         ],
         cta: ['Discover Your Potential', 'Get Your Skill Report'],
-        image: '/unlock_your_potential.jpg'
+        image: getAssetPath('/unlock_your_potential.jpg')
     },
     {
         id: 2,
@@ -30,7 +31,7 @@ const platformFeaturesData = [
             'Sharpened workplace readiness through applied learning',
         ],
         cta: ['Start Your Simulation Journey'],
-        image: '/platformslide1.png'
+        image: getAssetPath('/platformslide1.png')
     },
     {
         id: 3,
@@ -45,7 +46,7 @@ const platformFeaturesData = [
             'Real-time dashboard for HR and L&D decision-making',
         ],
         cta: ['Book Your Demo', 'Download TIS Overview'],
-        image: '/transformskill_futureset.png'
+        image: getAssetPath('/transformskill_futureset.png')
     },
     {
         id: 4,
@@ -59,7 +60,7 @@ const platformFeaturesData = [
             'Showcase your AI, data, and coding skills on leading platforms',
         ],
         cta: ['Join the Next Challenge', 'See Winner Showcases'],
-        image: '/step_slide_img.jpg'
+        image: getAssetPath('/step_slide_img.jpg')
     },
     {
         id: 5,
@@ -73,7 +74,7 @@ const platformFeaturesData = [
             'AI-powered matching that eliminates guesswork',
         ],
         cta: ['Access Talent Pool', 'Partner with Us'],
-        image: '/insight_roles.jpg'
+        image: getAssetPath('/insight_roles.jpg')
     },
 ];
 
@@ -111,7 +112,7 @@ export default function Home() {
             <section
                 className="text-white py-24 relative overflow-hidden bg-no-repeat flex items-center"
                 style={{
-                    backgroundImage: "url('/banner_1.png')",
+                    backgroundImage: getBackgroundImageUrl('/banner_1.png'),
                     backgroundSize: 'cover',
                     backgroundPosition: 'center center',
                     minHeight: '700px',
@@ -160,7 +161,7 @@ export default function Home() {
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-16">
                         <div className="md:w-1/3">
-                            <img src="/skillzza-logo.png" alt="Skillzza Logo" className="w-full h-auto" />
+                            <img src={getAssetPath('/skillzza-logo.png')} alt="Skillzza Logo" className="w-full h-auto" />
                         </div>
                         <div className="md:w-1/2">
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About us</h2>
@@ -184,7 +185,7 @@ export default function Home() {
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-16 mb-20">
                         <div className="md:w-1/2">
-                            <img src="/challangebg.png" alt="Skill Gap concept" className="w-full h-auto rounded-xl " />
+                            <img src={getAssetPath('/challangebg.png')} alt="Skill Gap concept" className="w-full h-auto rounded-xl " />
                         </div>
                         <div className="md:w-1/2">
                             <h3 className="text-xs font-bold uppercase text-red-500 mb-2 tracking-widest">THE CHALLENGE</h3>
@@ -363,22 +364,22 @@ export default function Home() {
                         </div>
                         <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
                             <div className="bg-red-600 p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                                <img src="/scholluniversity.png" alt="Schools / Universities Icon" className="w-16 h-16 mb-4" />
+                                <img src={getAssetPath('/scholluniversity.png')} alt="Schools / Universities Icon" className="w-16 h-16 mb-4" />
                                 <h3 className="text-lg font-bold text-white">Schools / Universities</h3>
                                 <p className="text-sm text-white mt-2">Partnering to Cultivate the Next Generation of Leaders</p>
                             </div>
                             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                                <img src="/corporate.png" alt="Corporates Icon" className="w-16 h-16 mb-4" />
+                                <img src={getAssetPath('/corporate.png')} alt="Corporates Icon" className="w-16 h-16 mb-4" />
                                 <h3 className="text-lg font-bold text-gray-800">Corporates</h3>
                                 <p className="text-sm text-gray-500 mt-2">Driving Business Success through Workforce Excellence</p>
                             </div>
                             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                                <img src="/government.png" alt="Government Icon" className="w-16 h-16 mb-4" />
+                                <img src={getAssetPath('/government.png')} alt="Government Icon" className="w-16 h-16 mb-4" />
                                 <h3 className="text-lg font-bold text-gray-800">Government</h3>
                                 <p className="text-sm text-gray-500 mt-2">Building a Skilled Workforce for a Stronger Economy</p>
                             </div>
                             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                                <img src="/becomepartner.png" alt="Upskilling Partner Icon" className="w-16 h-16 mb-4" />
+                                <img src={getAssetPath('/becomepartner.png')} alt="Upskilling Partner Icon" className="w-16 h-16 mb-4" />
                                 <h3 className="text-lg font-bold text-gray-800">Become our upskilling partner</h3>
                                 <p className="text-sm text-gray-500 mt-2">Join Us in Shaping the Future of Work</p>
                             </div>
@@ -390,7 +391,7 @@ export default function Home() {
             {/* ===== Partner with Us Section ===== */}
             <section
                 className="relative py-16 md:py-24 overflow-hidden bg-cover bg-center"
-                style={{ backgroundImage: "url('/partnerwithbg.png')" }}
+                style={{ backgroundImage: getBackgroundImageUrl('/partnerwithbg.png') }}
             >
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-24">
@@ -429,22 +430,22 @@ export default function Home() {
                     <div className="relative w-full overflow-hidden">
                         <div className="flex w-[200%] animate-slide-logos gap-8">
                             <div className="flex items-center gap-8">
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/redhat_logo.jpeg" alt="Red Hat" className="h-10 w-auto" /></div>
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/Google_logo.svg.png" alt="Google" className="h-12 w-auto" /></div>
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/greengold_animation_logo.png" alt="Green Gold" className="h-16 w-auto" /></div>
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/MidlandMicroFinance_logo.png" alt="Midland" className="h-16 w-auto" /></div>
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/meta_logo.png" alt="Meta" className="h-12 w-auto" /></div>
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/ai_lifebot_logo.jpeg" alt="AI LifeBot" className="h-8 w-auto" /></div>
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/microsoft_logo.png" alt="Microsoft" className="h-17 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/redhat_logo.jpeg')} alt="Red Hat" className="h-10 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/Google_logo.svg.png')} alt="Google" className="h-12 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/greengold_animation_logo.png')} alt="Green Gold" className="h-16 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/MidlandMicroFinance_logo.png')} alt="Midland" className="h-16 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/meta_logo.png')} alt="Meta" className="h-12 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/ai_lifebot_logo.jpeg')} alt="AI LifeBot" className="h-8 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/microsoft_logo.png')} alt="Microsoft" className="h-17 w-auto" /></div>
                             </div>
                             <div className="flex items-center gap-8">
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/redhat_logo.jpeg" alt="Red Hat" className="h-10 w-auto" /></div>
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/Google_logo.svg.png" alt="Google" className="h-12 w-auto" /></div>
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/greengold_animation_logo.png" alt="Green Gold" className="h-16 w-auto" /></div>
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/MidlandMicroFinance_logo.png" alt="Midland" className="h-16 w-auto" /></div>
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/meta_logo.png" alt="Meta" className="h-12 w-auto" /></div>
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/ai_lifebot_logo.jpeg" alt="AI LifeBot" className="h-8 w-auto" /></div>
-                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src="/microsoft_logo.png" alt="Microsoft" className="h-17 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/redhat_logo.jpeg')} alt="Red Hat" className="h-10 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/Google_logo.svg.png')} alt="Google" className="h-12 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/greengold_animation_logo.png')} alt="Green Gold" className="h-16 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/MidlandMicroFinance_logo.png')} alt="Midland" className="h-16 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/meta_logo.png')} alt="Meta" className="h-12 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/ai_lifebot_logo.jpeg')} alt="AI LifeBot" className="h-8 w-auto" /></div>
+                                <div className="flex-shrink-0 w-48 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 border"><img src={getAssetPath('/microsoft_logo.png')} alt="Microsoft" className="h-17 w-auto" /></div>
                             </div>
                         </div>
                     </div>
@@ -457,7 +458,7 @@ export default function Home() {
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">The Skill Digest</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform flex flex-col">
-                            <img src="/startYourjourney_tile_img.jpeg" alt="Blog" className="w-full h-48 object-cover flex-shrink-0" />
+                            <img src={getAssetPath('/startYourjourney_tile_img.jpeg')} alt="Blog" className="w-full h-48 object-cover flex-shrink-0" />
                             <div className="p-6 text-left flex flex-col flex-grow">
                                 <div className="flex-grow">
                                     <h3 className="text-lg font-bold text-gray-800 mb-2">Blog</h3>
@@ -469,7 +470,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform flex flex-col">
-                            <img src="/upskilling_forAi_tile_img.jpeg" alt="Research Hub" className="w-full h-48 object-cover flex-shrink-0" />
+                            <img src={getAssetPath('/upskilling_forAi_tile_img.jpeg')} alt="Research Hub" className="w-full h-48 object-cover flex-shrink-0" />
                             <div className="p-6 text-left flex flex-col flex-grow">
                                 <div className="flex-grow">
                                     <h3 className="text-lg font-bold text-gray-800 mb-2">Research Hub</h3>
@@ -481,7 +482,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform flex flex-col">
-                            <img src="/UnlockingSkillsIntelligenceSuccessTodayWorld.jpeg" alt="The Skill Blueprint" className="w-full h-48 object-cover flex-shrink-0" />
+                            <img src={getAssetPath('/UnlockingSkillsIntelligenceSuccessTodayWorld.jpeg')} alt="The Skill Blueprint" className="w-full h-48 object-cover flex-shrink-0" />
                             <div className="p-6 text-left flex flex-col flex-grow">
                                 <div className="flex-grow">
                                     <h3 className="text-lg font-bold text-gray-800 mb-2">The Skill Blueprint</h3>
@@ -493,7 +494,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform flex flex-col">
-                            <img src="/TalentintheDigitalEraNavigatingtheFutureWork.jpeg" alt="Podcast" className="w-full h-48 object-cover flex-shrink-0" />
+                            <img src={getAssetPath('/TalentintheDigitalEraNavigatingtheFutureWork.jpeg')} alt="Podcast" className="w-full h-48 object-cover flex-shrink-0" />
                             <div className="p-6 text-left flex flex-col flex-grow">
                                 <div className="flex-grow">
                                     <h3 className="text-lg font-bold text-gray-800 mb-2">Podcast</h3>

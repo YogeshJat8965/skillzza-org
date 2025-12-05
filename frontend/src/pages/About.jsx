@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const AboutUs = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const AboutUs = () => {
       <section
         className="relative py-24 md:py-32 flex items-center bg-cover bg-center"
         style={{
-          backgroundImage: "url('/about_us_banner.png')",
+          backgroundImage: getBackgroundImageUrl('/about_us_banner.png'),
           minHeight: '600px',
         }}
       >
@@ -60,7 +61,7 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <img src="/potentialMeter_tile_img.png" alt="Mentoring" className="w-full h-auto rounded-lg shadow-lg" />
+              <img src={getAssetPath('/potentialMeter_tile_img.png')} alt="Mentoring" className="w-full h-auto rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
@@ -121,7 +122,7 @@ const AboutUs = () => {
       <section
   className="relative py-24 md:py-32 flex items-center bg-cover bg-center text-white"
   style={{
-    backgroundImage: "url('/partnerwithbg.png')", // Using corevaluebg.png as the section background
+    backgroundImage: getBackgroundImageUrl('/partnerwithbg.png'), // Using corevaluebg.png as the section background
     minHeight: '500px', // Ensure enough height for the content
   }}
 >
@@ -129,7 +130,7 @@ const AboutUs = () => {
   
   <div className="container mx-auto px-6 relative z-10 flex justify-center items-center">
     {/* This image contains the "Core Values SPARK" text and the surrounding content */}
-    <img src="/corevalues_banner.png" alt="Core Values SPARK" className="w-full max-w-5xl h-auto" />
+    <img src={getAssetPath('/corevalues_banner.png')} alt="Core Values SPARK" className="w-full max-w-5xl h-auto" />
   </div>
 </section>
     </>

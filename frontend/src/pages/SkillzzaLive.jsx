@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 
 const SkillzzaLive = () => {
   return (
@@ -7,7 +8,7 @@ const SkillzzaLive = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/hackathonsbootcamps_img.jpg)',
+          backgroundImage: getBackgroundImageUrl('/hackathonsbootcamps_img.jpg'),
           minHeight: '60vh'
         }}
       >

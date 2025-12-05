@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const ProductCatalog = () => {
   return (
     <div className="min-h-screen">
@@ -7,7 +8,7 @@ const ProductCatalog = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/transformskill_futureset.png)',
+          backgroundImage: getBackgroundImageUrl('/transformskill_futureset.png'),
           minHeight: '60vh'
         }}
       >
@@ -35,7 +36,7 @@ const ProductCatalog = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-center">
             {/* Image - Left */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src="/transformskill_futureset.png" alt="Xperience Platform" className="w-full h-full object-cover" />
+              <img src={getAssetPath('/transformskill_futureset.png')} alt="Xperience Platform" className="w-full h-full object-cover" />
             </div>
             
             {/* Content - Right */}
@@ -147,7 +148,7 @@ const ProductCatalog = () => {
             
             {/* Image - Right */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src="/potential_meter_right_img.png" alt="Potential Meter" className="w-full h-96 object-cover" />
+              <img src={getAssetPath('/potential_meter_right_img.png')} alt="Potential Meter" className="w-full h-96 object-cover" />
             </div>
           </div>
 
@@ -231,7 +232,7 @@ const ProductCatalog = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-center">
             {/* Image - Left */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src="/DataIntelligence_tile.png" alt="Talent Intelligence Suite" className="w-full h-96 object-cover" />
+              <img src={getAssetPath('/DataIntelligence_tile.png')} alt="Talent Intelligence Suite" className="w-full h-96 object-cover" />
             </div>
             
             {/* Content - Right */}
@@ -343,7 +344,7 @@ const ProductCatalog = () => {
             
             {/* Image - Right */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src="/career_mentoring_img.jpg" alt="Hirenest" className="w-full h-96 object-cover" />
+              <img src={getAssetPath('/career_mentoring_img.jpg')} alt="Hirenest" className="w-full h-96 object-cover" />
             </div>
           </div>
 
@@ -427,7 +428,7 @@ const ProductCatalog = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-center">
             {/* Image - Left */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src="/step_slide_img.jpg" alt="AI HackNex" className="w-full h-96 object-cover" />
+              <img src={getAssetPath('/step_slide_img.jpg')} alt="AI HackNex" className="w-full h-96 object-cover" />
             </div>
             
             {/* Content - Right */}
@@ -539,7 +540,7 @@ const ProductCatalog = () => {
             
             {/* Image - Right */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src="/innovations_data_tile.jpg" alt="POC Hub" className="w-full h-96 object-cover" />
+              <img src={getAssetPath('/innovations_data_tile.jpg')} alt="POC Hub" className="w-full h-96 object-cover" />
             </div>
           </div>
 
@@ -623,7 +624,7 @@ const ProductCatalog = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-center">
             {/* Image - Left */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src="/startuplaunchpad_img.jpg" alt="DeepTech Studio" className="w-full h-full object-cover" />
+              <img src={getAssetPath('/startuplaunchpad_img.jpg')} alt="DeepTech Studio" className="w-full h-full object-cover" />
             </div>
             
             {/* Content - Right */}

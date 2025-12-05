@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const SkillzzaPersona = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const SkillzzaPersona = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/ai_hacknex_tile_img.png)',
+          backgroundImage: getBackgroundImageUrl('/ai_hacknex_tile_img.png'),
           minHeight: '70vh'
         }}
       >
@@ -52,7 +53,7 @@ const SkillzzaPersona = () => {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/AI_driven_customized_img.jpg" 
+                    src={getAssetPath('/AI_driven_customized_img.jpg')} 
                     alt="AI Powered"
                     className="w-full h-full object-cover"
                   />
@@ -66,7 +67,7 @@ const SkillzzaPersona = () => {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/personalizedpearningpaths_ico.png" 
+                    src={getAssetPath('/personalizedpearningpaths_ico.png')} 
                     alt="Personalized Learning"
                     className="w-full h-full object-cover"
                   />
@@ -80,7 +81,7 @@ const SkillzzaPersona = () => {
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/datadriveninsights_ico.png" 
+                    src={getAssetPath('/datadriveninsights_ico.png')} 
                     alt="Real-time Feedback"
                     className="w-full h-full object-cover"
                   />
@@ -102,7 +103,7 @@ const SkillzzaPersona = () => {
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
                 <img 
-                  src="/future_workspace.jpg" 
+                  src={getAssetPath('/future_workspace.jpg')} 
                   alt="Human Intelligence Revolution" 
                   className="w-full h-96 object-cover rounded-2xl shadow-lg" 
                 />
@@ -143,7 +144,7 @@ const SkillzzaPersona = () => {
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-200 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/Job Stimulation_header_img.png" 
+                    src={getAssetPath('/Job Stimulation_header_img.png')} 
                     alt="Core Simulations"
                     className="w-full h-full object-cover"
                   />
@@ -155,7 +156,7 @@ const SkillzzaPersona = () => {
               <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-6 rounded-2xl border border-orange-200 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/ai_hacknex_tile_img.png" 
+                    src={getAssetPath('/ai_hacknex_tile_img.png')} 
                     alt="Persona"
                     className="w-full h-full object-cover"
                   />
@@ -167,7 +168,7 @@ const SkillzzaPersona = () => {
               <div className="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-2xl border border-green-200 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/potential_meter.png" 
+                    src={getAssetPath('/potential_meter.png')} 
                     alt="Assessment Engine"
                     className="w-full h-full object-cover"
                   />
@@ -179,7 +180,7 @@ const SkillzzaPersona = () => {
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-200 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/career_readyness.jpg" 
+                    src={getAssetPath('/career_readyness.jpg')} 
                     alt="Career Intelligence"
                     className="w-full h-full object-cover"
                   />
@@ -240,7 +241,7 @@ const SkillzzaPersona = () => {
                 </div>
                 <div className="lg:w-1/2">
                   <img 
-                    src="/corporate_model_img.jpg" 
+                    src={getAssetPath('/corporate_model_img.jpg')} 
                     alt="Dynamic Role Immersion" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
@@ -278,7 +279,7 @@ const SkillzzaPersona = () => {
                 </div>
                 <div className="lg:w-1/2">
                   <img 
-                    src="/data_ai.jpg" 
+                    src={getAssetPath('/data_ai.jpg')} 
                     alt="Adaptive AI Intelligence" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
@@ -316,7 +317,7 @@ const SkillzzaPersona = () => {
                 </div>
                 <div className="lg:w-1/2">
                   <img 
-                    src="/datadriveninsights_ico.png" 
+                    src={getAssetPath('/datadriveninsights_ico.png')} 
                     alt="Behavioral Intelligence" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />

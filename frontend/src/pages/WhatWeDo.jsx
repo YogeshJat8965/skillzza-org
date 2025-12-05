@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const WhatWeDo = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const WhatWeDo = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(/what_we_do_banner.jpg)',
+          backgroundImage: getBackgroundImageUrl('/what_we_do_banner.jpg'),
           minHeight: '70vh'
         }}
       >
@@ -42,7 +43,7 @@ const WhatWeDo = () => {
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300">
               <div className="w-20 h-20 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/AI_driven_customized_img.jpg" 
+                  src={getAssetPath('/AI_driven_customized_img.jpg')} 
                   alt="AI-Driven Assessments"
                   className="w-full h-full object-cover"
                 />
@@ -66,7 +67,7 @@ const WhatWeDo = () => {
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300">
               <div className="w-20 h-20 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/engaing_learning.jpg" 
+                  src={getAssetPath('/engaing_learning.jpg')} 
                   alt="Immersive Learning"
                   className="w-full h-full object-cover"
                 />
@@ -90,7 +91,7 @@ const WhatWeDo = () => {
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300">
               <div className="w-20 h-20 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/Job Stimulation_header_img.png" 
+                  src={getAssetPath('/Job Stimulation_header_img.png')} 
                   alt="Role-Based Simulations"
                   className="w-full h-full object-cover"
                 />
@@ -128,7 +129,7 @@ const WhatWeDo = () => {
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500">
               <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/forproffession.jpg" 
+                  src={getAssetPath('/forproffession.jpg')} 
                   alt="For Individual Professionals"
                   className="w-full h-full object-cover"
                 />
@@ -146,7 +147,7 @@ const WhatWeDo = () => {
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-green-500">
               <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/for_universities_only_img.jpg" 
+                  src={getAssetPath('/for_universities_only_img.jpg')} 
                   alt="For Educational Institutions"
                   className="w-full h-full object-cover"
                 />
@@ -164,7 +165,7 @@ const WhatWeDo = () => {
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-purple-500">
               <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/for_corporate_only_img.jpg" 
+                  src={getAssetPath('/for_corporate_only_img.jpg')} 
                   alt="For Enterprises"
                   className="w-full h-full object-cover"
                 />
@@ -196,7 +197,7 @@ const WhatWeDo = () => {
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-200">
               <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/data_ai.jpg" 
+                  src={getAssetPath('/data_ai.jpg')} 
                   alt="Artificial Intelligence Integration"
                   className="w-full h-full object-cover"
                 />
@@ -211,7 +212,7 @@ const WhatWeDo = () => {
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-200">
               <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/datadriveninsights_ico.png" 
+                  src={getAssetPath('/datadriveninsights_ico.png')} 
                   alt="Analytics & Insights"
                   className="w-full h-full object-cover"
                 />
@@ -226,7 +227,7 @@ const WhatWeDo = () => {
             <div className="bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl border border-purple-200">
               <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/flexible_acesible_ico.png" 
+                  src={getAssetPath('/flexible_acesible_ico.png')} 
                   alt="Mobile-First Accessibility"
                   className="w-full h-full object-cover"
                 />
@@ -318,7 +319,7 @@ const WhatWeDo = () => {
             <div className="lg:w-1/2">
               <div className="relative">
                 <img 
-                  src="/our_impact_img.jpg" 
+                  src={getAssetPath('/our_impact_img.jpg')} 
                   alt="Our Commitment to Excellence" 
                   className="w-full h-96 object-cover rounded-2xl shadow-lg" 
                 />
@@ -351,7 +352,7 @@ const WhatWeDo = () => {
             </div>
             <div className="lg:w-1/2">
               <img 
-                src="/career_readyness.jpg" 
+                src={getAssetPath('/career_readyness.jpg')} 
                 alt="Career Success" 
                 className="w-full h-80 object-cover rounded-2xl shadow-lg" 
               />

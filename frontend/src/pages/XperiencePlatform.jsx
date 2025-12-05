@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const XperiencePlatform = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const XperiencePlatform = () => {
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-orange-500 to-yellow-600"
         style={{ 
-          backgroundImage: 'url(/platformslide1.png)',
+          backgroundImage: getBackgroundImageUrl('/platformslide1.png'),
           minHeight: '70vh'
         }}
       >
@@ -97,7 +98,7 @@ const XperiencePlatform = () => {
                   </div>
                   <div>
                     <img 
-                      src="/jobsimulation_img_bg_hero.png" 
+                      src={getAssetPath('/jobsimulation_img_bg_hero.png')} 
                       alt="Job Simulations" 
                       className="w-full rounded-2xl shadow-lg" 
                       onError={(e) => {
@@ -140,7 +141,7 @@ const XperiencePlatform = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/engaing_learning.jpg" 
+                      src={getAssetPath('/engaing_learning.jpg')} 
                       alt="Challenge-based Learning" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -176,7 +177,7 @@ const XperiencePlatform = () => {
                   </div>
                   <div>
                     <img 
-                      src="/career_readyness.jpg" 
+                      src={getAssetPath('/career_readyness.jpg')} 
                       alt="Digital Portfolios" 
                       className="w-full rounded-2xl shadow-lg" 
                     />
@@ -212,7 +213,7 @@ const XperiencePlatform = () => {
                   </div>
                   <div className="lg:order-1">
                     <img 
-                      src="/potential_meter.png" 
+                      src={getAssetPath('/potential_meter.png')} 
                       alt="Workplace Readiness" 
                       className="w-full rounded-2xl shadow-lg" 
                     />

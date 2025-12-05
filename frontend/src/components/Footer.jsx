@@ -8,6 +8,7 @@ import {
   FaArrowUp
 } from 'react-icons/fa';
 import { PiXLogoBold } from "react-icons/pi";
+import { getAssetPath } from '../utils/assets';
 
 // Updated data structure to include href for each link
 const footerSections = [
@@ -86,7 +87,7 @@ const Footer = () => {
           {/* Company Info Column */}
           <div className="lg:col-span-2 space-y-8">
             <div>
-              <img src="/skillzza-logo.png" alt="Skillzza Logo" className="h-9 mb-6" />
+              <img src={getAssetPath('/skillzza-logo.png')} alt="Skillzza Logo" className="h-9 mb-6" />
             </div>
             <div>
               <h3 className="font-bold mb-2 text-zinc-900">Registered Office</h3>
