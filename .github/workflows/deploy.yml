@@ -1,0 +1,57 @@
+name: Build and Publish Dist to Production Branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm install
+
+      - name: Build Vite project
+        run: |
+          cd frontend
+          npm run build
+
+      - name: Prepare dist folder
+        run: |
+          rm -rf dist-push
+          mkdir dist-push
+          cp -r frontend/dist/* dist-push/
+
+      - name: Push dist to production branch
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+          # Switch to production branch (create if missing)
+          git fetch origin production || true
+          git checkout production || git checkout -b production
+
+          # Clear old files
+          rm -rf ./*
+
+          # Copy new dist files
+          cp -r ../dist-push/* .
+
+          # Commit and force push to production branch
+          git add .
+          git commit -m "Production build: $(date)" || echo "No changes"
+          git push https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} production --force
