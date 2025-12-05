@@ -22,36 +22,53 @@ jobs:
 
       - name: Install dependencies
         run: |
+          echo "🔍 Listing repository root"
+          ls -R .
+          echo "🔧 Installing frontend dependencies"
           cd frontend
           npm install
 
       - name: Build Vite project
         run: |
+          echo "🚀 Running frontend build"
           cd frontend
           npm run build
 
       - name: Prepare dist folder
         run: |
+          echo "🔍 Checking dist folder..."
+          ls -R frontend || echo "❌ frontend folder missing"
+          ls -R frontend/dist || echo "❌ dist folder missing or build failed"
+
+          echo "🗂 Creating dist-push folder"
           rm -rf dist-push
           mkdir dist-push
-          cp -r frontend/dist/* dist-push/
+
+          echo "📦 Copying build files"
+          cp -r frontend/dist/* dist-push/ || echo "⚠️ WARNING: No files copied!"
+
+          echo "📁 Listing dist-push"
+          ls -R dist-push || echo "❌ dist-push is empty!"
 
       - name: Push dist to production branch
         run: |
+          echo "🔧 Setting up Git user"
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-          # Switch to production branch (create if missing)
+          echo "🔀 Switching to production branch"
           git fetch origin production || true
           git checkout production || git checkout -b production
 
-          # Clear old files
+          echo "🧹 Clearing old production files"
           rm -rf ./*
 
-          # Copy new dist files
-          cp -r ../dist-push/* .
+          echo "📥 Copying new dist files into production branch"
+          cp -r ../dist-push/* . || echo "⚠️ Nothing copied to production branch"
 
-          # Commit and force push to production branch
+          echo "📝 Committing updated production branch"
           git add .
-          git commit -m "Production build: $(date)" || echo "No changes"
+          git commit -m "Production build: $(date)" || echo "⚠️ No changes to commit"
+
+          echo "⬆️ Pushing to production branch"
           git push https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} production --force
