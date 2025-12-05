@@ -1,4 +1,4 @@
-name: Build and Publish Dist to Production Branch
+name: DEBUG Build and Publish
 
 on:
   push:
@@ -10,77 +10,51 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+
+      - name: List repo structure
+        run: |
+          echo "🟦 ROOT DIR CONTENTS:"
+          ls -R .
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Show repo structure
+      - name: Install deps
         run: |
-          echo "🔍 Listing repo structure..."
-          ls -R .
+          echo "🟦 Checking frontend folder:"
+          ls -R frontend || echo "❌ NO frontend folder"
+          
+          echo "🟧 Installing dependencies inside frontend"
+          cd frontend
+          npm install
+          echo "🟩 FINISHED installing dependencies"
 
-      - name: Install dependencies (AUTO DETECT)
+      - name: Build project
         run: |
-          echo "🔍 Detecting Vite project location..."
-          if [ -f "./frontend/package.json" ]; then
-            echo "📁 Vite project found in /frontend"
-            cd frontend && npm install
-          elif [ -f "./package.json" ]; then
-            echo "📁 Vite project found in root"
-            npm install
-          else
-            echo "❌ No package.json found. Cannot install deps."
-            exit 1
-          fi
+          echo "🟧 Running build"
+          cd frontend
+          npm run build || (echo "❌ BUILD FAILED" && exit 1)
+          echo "🟩 BUILD COMPLETED"
+          
+          echo "🟦 Checking dist folder:"
+          ls -R dist || echo "❌ NO dist folder generated"
 
-      - name: Build Vite project (AUTO DETECT)
-        run: |
-          if [ -f "./frontend/package.json" ]; then
-            echo "🚀 Building Vite project in /frontend"
-            cd frontend && npm run build
-          else
-            echo "🚀 Building Vite project in root"
-            npm run build
-          fi
-
-      - name: Prepare dist folder (AUTO DETECT)
+      - name: Copy dist
         run: |
           rm -rf dist-push
           mkdir dist-push
           
-          if [ -d "./frontend/dist" ]; then
-            echo "📦 Copying frontend/dist"
-            cp -r frontend/dist/* dist-push/
-          elif [ -d "./dist" ]; then
-            echo "📦 Copying root dist"
-            cp -r dist/* dist-push/
-          else
-            echo "❌ No dist folder found — build failed"
-            exit 1
-          fi
+          echo "🟦 Copying frontend/dist → dist-push"
+          cp -r frontend/dist/* dist-push/ || (echo "❌ COPY FAILED — DIST DOES NOT EXIST" && exit 1)
 
-          echo "📁 Final dist-push contents:"
+          echo "🟩 dist-push contains:"
           ls -R dist-push
 
-      - name: Push dist to production branch
+      - name: Exit for now (we only debug)
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-
-          git fetch origin production || true
-          git checkout production || git checkout -b production
-
-          rm -rf ./*
-          cp -r ../dist-push/* .
-
-          git add .
-          git commit -m "Production build: $(date)" || echo "⚠️ No changes"
-          
-          # FIX: Must include GitHub username in push URL
-          git push https://AILifeBOT:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} production --force
+          echo "🟩 DEBUG COMPLETE — DO NOT DEPLOY YET"
+          exit 0
