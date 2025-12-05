@@ -41,6 +41,9 @@ const EnterprisesUseCase = () => {
             <div className="inline-block px-8 py-3 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-full text-white font-semibold mb-8">
               Precision-Engineered Career Solutions
             </div>
+            <p className="text-lg text-gray-500 font-medium mb-6">
+              For Students | Universities | Enterprises | Governments
+            </p>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Skillzza delivers AI-powered career transformation through immersive simulations, strategic skill development, and data-driven talent intelligence. From individual career acceleration to organizational workforce evolution, we create pathways that turn ambition into achievement.
             </p>

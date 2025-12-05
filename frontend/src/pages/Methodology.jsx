@@ -246,8 +246,7 @@ const OurMethodology = () => {
               <div className="lg:w-1/2 group">
                 <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-blue-100">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg mr-4">
-                      2
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg mr-4">2
                     </div>
                     <div>
                       <div className="text-sm text-blue-500 font-semibold mb-1">PHASE 2</div>
