@@ -25,19 +25,20 @@ jobs:
           cd frontend
           npm install
 
-      - name: Build project
+      - name: Build Vite
         run: |
           cd frontend
           npm run build
-          
-      - name: Prepare dist folder
+
+      - name: Prepare dist
         run: |
           rm -rf dist-push
           mkdir dist-push
           cp -r frontend/dist/* dist-push/
+          echo "❇️ dist-push contents:"
           ls -R dist-push
 
-      - name: Deploy to production branch
+      - name: Deploy to production
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
@@ -45,8 +46,11 @@ jobs:
           git fetch origin production || true
           git checkout production || git checkout -b production
 
+          echo "🧹 Clearing old production files"
           rm -rf ./*
-          cp -r ../dist-push/* .
+
+          echo "📦 Copying new build files"
+          cp -r dist-push/* .   # << FIXED (NO ../) !!!
 
           git add .
           git commit -m "Deploy $(date)" || echo "No changes"
