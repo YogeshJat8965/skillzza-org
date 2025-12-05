@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main branch
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -20,55 +20,67 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Show repo structure
         run: |
-          echo "🔍 Listing repository root"
+          echo "🔍 Listing repo structure..."
           ls -R .
-          echo "🔧 Installing frontend dependencies"
-          cd frontend
-          npm install
 
-      - name: Build Vite project
+      - name: Install dependencies (AUTO DETECT)
         run: |
-          echo "🚀 Running frontend build"
-          cd frontend
-          npm run build
+          echo "🔍 Detecting Vite project location..."
+          if [ -f "./frontend/package.json" ]; then
+            echo "📁 Vite project found in /frontend"
+            cd frontend && npm install
+          elif [ -f "./package.json" ]; then
+            echo "📁 Vite project found in root"
+            npm install
+          else
+            echo "❌ No package.json found. Cannot install deps."
+            exit 1
+          fi
 
-      - name: Prepare dist folder
+      - name: Build Vite project (AUTO DETECT)
         run: |
-          echo "🔍 Checking dist folder..."
-          ls -R frontend || echo "❌ frontend folder missing"
-          ls -R frontend/dist || echo "❌ dist folder missing or build failed"
+          if [ -f "./frontend/package.json" ]; then
+            echo "🚀 Building Vite project in /frontend"
+            cd frontend && npm run build
+          else
+            echo "🚀 Building Vite project in root"
+            npm run build
+          fi
 
-          echo "🗂 Creating dist-push folder"
+      - name: Prepare dist folder (AUTO DETECT)
+        run: |
           rm -rf dist-push
           mkdir dist-push
+          
+          if [ -d "./frontend/dist" ]; then
+            echo "📦 Copying frontend/dist"
+            cp -r frontend/dist/* dist-push/
+          elif [ -d "./dist" ]; then
+            echo "📦 Copying root dist"
+            cp -r dist/* dist-push/
+          else
+            echo "❌ No dist folder found — build failed"
+            exit 1
+          fi
 
-          echo "📦 Copying build files"
-          cp -r frontend/dist/* dist-push/ || echo "⚠️ WARNING: No files copied!"
-
-          echo "📁 Listing dist-push"
-          ls -R dist-push || echo "❌ dist-push is empty!"
+          echo "📁 Final dist-push contents:"
+          ls -R dist-push
 
       - name: Push dist to production branch
         run: |
-          echo "🔧 Setting up Git user"
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-          echo "🔀 Switching to production branch"
           git fetch origin production || true
           git checkout production || git checkout -b production
 
-          echo "🧹 Clearing old production files"
           rm -rf ./*
+          cp -r ../dist-push/* .
 
-          echo "📥 Copying new dist files into production branch"
-          cp -r ../dist-push/* . || echo "⚠️ Nothing copied to production branch"
-
-          echo "📝 Committing updated production branch"
           git add .
-          git commit -m "Production build: $(date)" || echo "⚠️ No changes to commit"
-
-          echo "⬆️ Pushing to production branch"
-          git push https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} production --force
+          git commit -m "Production build: $(date)" || echo "⚠️ No changes"
+          
+          # FIX: Must include GitHub username in push URL
+          git push https://AILifeBOT:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} production --force
