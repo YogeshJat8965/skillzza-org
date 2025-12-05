@@ -1,4 +1,4 @@
-name: Build and Deploy to Production Branch
+name: Build and Deploy
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -20,23 +20,24 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install frontend dependencies
+      - name: Install dependencies
         run: |
           cd frontend
           npm install
 
-      - name: Build Vite project
+      - name: Build project
         run: |
           cd frontend
           npm run build
-
+          
       - name: Prepare dist folder
         run: |
           rm -rf dist-push
           mkdir dist-push
           cp -r frontend/dist/* dist-push/
+          ls -R dist-push
 
-      - name: Push dist to production branch
+      - name: Deploy to production branch
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
@@ -48,7 +49,5 @@ jobs:
           cp -r ../dist-push/* .
 
           git add .
-          git commit -m "Production build: $(date)" || echo "No changes"
-
-          # MUST include GitHub username for classic PAT
+          git commit -m "Deploy $(date)" || echo "No changes"
           git push https://AILifeBOT:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} production --force
