@@ -74,7 +74,7 @@ export default function App() {
         <Route path="/insights/skill-digest" element={<SkillDigest />} />
         <Route path="/insights/ai-talent-research-hub" element={<AITalentResearchHub />} />
         <Route path="/insights/skill-unplugged-podcast" element={<SkillUnpluggedPodcast />} />
-        <Route path="/explore/skillzza-live" element={<SkillzzaLive />} />
+        <Route path="/insights/skillzza-live" element={<SkillzzaLive />} />
         <Route path="/explore/job-simulations" element={<JobSimulations />} />
         <Route path="/explore/career-trajectory" element={<CareerTrajectory />} />
         <Route path="/explore/skillzza-persona" element={<SkillzzaPersona />} />
