@@ -154,7 +154,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
                   <img 
-                    src="/career_mentoring_img.jpg" 
+                    src={getAssetPath('/career_mentoring_img.jpg')} 
                     alt="Mentorship"
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
@@ -170,7 +170,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
                   <img 
-                    src="/certificate_icobl.png" 
+                    src={getAssetPath('/certificate_icobl.png')} 
                     alt="Certification"
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
@@ -186,7 +186,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
                   <img 
-                    src="/showcaseyourexpertise.jpg" 
+                    src={getAssetPath('/showcaseyourexpertise.jpg')} 
                     alt="Visibility to Employers"
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
@@ -202,7 +202,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
                   <img 
-                    src="/design_thinking.jpg" 
+                    src={getAssetPath('/design_thinking.jpg')} 
                     alt="Real-Time Role Play"
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}

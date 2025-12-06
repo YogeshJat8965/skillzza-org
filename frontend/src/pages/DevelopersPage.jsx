@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaCode, FaLightbulb, FaRocket, FaCoffee, FaGamepad, FaBrain } from 'react-icons/fa';
+import { getBackgroundImageUrl } from '../utils/assets';
 
 const developersData = [
     {
@@ -154,7 +155,7 @@ export default function DevelopersPage() {
             <section
                 className="text-white py-24 relative overflow-hidden bg-no-repeat flex items-center"
                 style={{
-                    backgroundImage: "linear-gradient(135deg, rgba(220, 38, 38, 0.9), rgba(147, 51, 234, 0.8)), url('/banner_1.png')",
+                    backgroundImage: `linear-gradient(135deg, rgba(220, 38, 38, 0.9), rgba(147, 51, 234, 0.8)), ${getBackgroundImageUrl('/banner_1.png')}`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center center',
                     minHeight: '500px',

@@ -363,7 +363,7 @@ const SkillzzaPersona = () => {
                 </div>
                 <div className="lg:w-1/2">
                   <img 
-                    src="/feedback_mentor.jpg" 
+                    src={getAssetPath('/feedback_mentor.jpg')} 
                     alt="Real-Time Performance Coaching" 
                     className="w-full h-80 object-cover rounded-2xl shadow-lg" 
                   />
