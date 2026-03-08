@@ -1,37 +1,41 @@
 import React from 'react';
-import { FaSearch } from 'react-icons/fa';
 
 const Topbar = () => {
   return (
-    <header className="bg-[#d93a3e] text-white shadow-md">
-      <nav className="container mx-auto flex items-center justify-between p-3">
-        <div className="hidden md:flex items-center space-x-8 ml-28">
-          <a href="#" className="text-md font-bold hover:text-black transition-colors duration-300">
-            Interns
-          </a>
-          <a href="https://cognify.skillzza.com" className="text-md font-bold hover:text-black transition-colors duration-300">
-            K-12
-          </a>
-          <a href="https://portal.skillzza.com" className="text-md font-bold hover:text-black transition-colors duration-300">
-            Universities
-          </a>
-          <a href="https://ciosherpacouncil.com" className="text-md font-bold hover:text-black transition-colors duration-300">
-            Companies
-          </a>
-          <a href="https://playground.skillzza.com/" className="text-md font-bold hover:text-black transition-colors duration-300">
-            Playground
+    <header style={{ background: "#111", color: "#fff", width: "100%", borderBottom: "1px solid #222" }}>
+      <nav style={{ maxWidth: 1400, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 48px" }}>
+
+        {/* Left - Nav Links */}
+        <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
+          {[
+            { label: "Interns", href: "#" },
+            { label: "K - 12", href: "https://cognify.skillzza.com" },
+            { label: "Universities", href: "https://portal.skillzza.com" },
+            { label: "Companies", href: "https://ciosherpacouncil.com" },
+          ].map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              style={{ color: "#fff", textDecoration: "none", fontSize: 13, fontWeight: 500, letterSpacing: 0.2, opacity: 0.9, transition: "opacity 0.2s" }}
+              onMouseEnter={e => e.target.style.opacity = 1}
+              onMouseLeave={e => e.target.style.opacity = 0.9}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+
+        {/* Right - Log in */}
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <a href="#" style={{ color: "#fff", textDecoration: "none", fontSize: 13, fontWeight: 500, opacity: 0.9 }}>
+            Log in
           </a>
         </div>
-        <div className="flex items-center space-x-6 mr-28">
-          <a href="#" className="flex items-center space-x-2 text-md font-bold hover:text-black transition-colors">
-            <FaSearch />
-            <span>Log in</span>
-          </a>
-          <button className="bg-white text-zinc-800 font-bold py-1 px-6 rounded-full hover:bg-gray-100 transition-colors shadow">
-            Sign up
-          </button>
-        </div>
-        
+
       </nav>
     </header>
   );
