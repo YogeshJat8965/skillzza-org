@@ -921,7 +921,7 @@ export default function SkillzzaHome() {
               <div style={{ position: "absolute", left: 20, top: "15%", width: "55%", height: "65%", background: "#f5a623", borderRadius: 12, zIndex: 1 }} />
               {/* Girl image */}
               <img
-                src="/school-girl.png"
+                src={getAssetPath("/school-girl.png")}
                 alt="School of Technology"
                 style={{ position: "relative", zIndex: 2, width: "100%", height: "100%", objectFit: "contain", objectPosition: "bottom" }}
               />
@@ -983,11 +983,11 @@ export default function SkillzzaHome() {
           {/* Left - Image starts from middle, flush to bottom */}
           <div style={{ flex: "0 0 480px", alignSelf: "flex-end", marginLeft: 48 }}>
             <img
-              src="/partner-cta.png"
+              src={getAssetPath("/partner-cta.png")}
               alt="Partner with us"
               style={{ width: "100%", height: 420, objectFit: "cover", objectPosition: "center top", display: "block", borderRadius: "8px 8px 0 0" }}
             />
-          </div>
+          </div> 
 
           {/* Right - Text + Form, vertically centered */}
           <div style={{ flex: 1, padding: "60px 60px 60px 64px", position: "relative", zIndex: 2 }}>
