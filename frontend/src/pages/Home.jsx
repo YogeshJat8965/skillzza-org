@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 
 // ─── MARQUEE CSS ──────────────────────────────────────────────────────────────
 const MARQUEE_CSS = `
@@ -85,15 +86,15 @@ const studioTabs = [
 ];
 
 const partnerLogos = [
-  { img: "/logo-nsdc.png", name: "NSDC" },
-  { img: "/logo-adobe.png", name: "Adobe" },
-  { img: "/logo-meta.png", name: "Meta" },
-  { img: "/logo-microsoft.png", name: "Microsoft" },
-  { img: "/logo-google.png", name: "Google" },
-  { img: "/logo-startupindia.png", name: "Startup India" },
-  { img: "/logo-msme.png", name: "MSME" },
-  { img: "/logo-hp.png", name: "HP" },
-  { img: "/logo-aws.png", name: "AWS" },
+  { img: getAssetPath("/logo-nsdc.png"), name: "NSDC" },
+  { img: getAssetPath("/logo-adobe.png"), name: "Adobe" },
+  { img: getAssetPath("/logo-meta.png"), name: "Meta" },
+  { img: getAssetPath("/logo-microsoft.png"), name: "Microsoft" },
+  { img: getAssetPath("/logo-google.png"), name: "Google" },
+  { img: getAssetPath("/logo-startupindia.png"), name: "Startup India" },
+  { img: getAssetPath("/logo-msme.png"), name: "MSME" },
+  { img: getAssetPath("/logo-hp.png"), name: "HP" },
+  { img: getAssetPath("/logo-aws.png"), name: "AWS" },
 ];
 
 // ── HOW TO ADD LOGOS ──
@@ -708,7 +709,7 @@ export default function SkillzzaHome() {
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
-        backgroundImage: "url('/hero-background.png')",
+        backgroundImage: getBackgroundImageUrl('/hero-background.png'),
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -718,7 +719,7 @@ export default function SkillzzaHome() {
           {/* Red block behind */}
           <div style={{ position: "absolute", right: 0, top: "10%", width: "55%", height: "80%", background: "#e02020", borderRadius: "16px 0 0 16px", zIndex: 1 }} />
           <img
-            src="/hero-girl.jpeg"
+            src={getAssetPath("/hero-girl.jpeg")}
             alt="Hero"
             style={{ position: "relative", zIndex: 2, height: "95%", maxHeight: 620, objectFit: "contain", objectPosition: "bottom", filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.15))" }}
           />
@@ -851,7 +852,7 @@ export default function SkillzzaHome() {
           </div>
           <div style={{ display: "flex", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 24px rgba(0,0,0,.08)" }}>
             <div style={{ flex: 1, minHeight: 360, background: "linear-gradient(135deg,#f5f0e8,#ede0c8)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 32 }}>
-              <img src="/skill-gap-image.png" alt="Skill Gap" style={{ width: "500px", height: "500px", objectFit: "cover", borderRadius: 8 }} />
+              <img src={getAssetPath("/skill-gap-image.png")} alt="Skill Gap" style={{ width: "500px", height: "500px", objectFit: "cover", borderRadius: 8 }} />
             </div>
             <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "1fr 1fr", gap: 16, padding: 16 }}>
               {[
@@ -1028,7 +1029,7 @@ export default function SkillzzaHome() {
               {/* Blog Card - stretches to fill remaining height */}
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#ede9fe", display: "flex", flexDirection: "column", flex: 1 }}>
                 <div style={{ height: 200, background: "#1a1a2e", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", position: "relative", flexShrink: 0 }}>
-                  <img src="/insight-blog.png" alt="Blog" style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  <img src={getAssetPath("/insight-blog.png")} alt="Blog" style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     onError={e => { e.target.style.display = "none"; }} />
                   <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.15)", backdropFilter: "blur(4px)", borderRadius: 6, padding: "4px 10px", fontSize: 10, fontWeight: 700, color: "#fff" }}>AI Assistant</div>
                 </div>
@@ -1046,7 +1047,7 @@ export default function SkillzzaHome() {
               {/* Card 2 - AI Talent Report */}
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#fef3e2", display: "flex", flexDirection: "column" }}>
                 <div style={{ height: 180, overflow: "hidden", background: "#e5d5c0" }}>
-                  <img src="/insight-robot.png" alt="AI Robot" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  <img src={getAssetPath("/insight-robot.png")} alt="AI Robot" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </div>
                 <div style={{ padding: "16px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
                   <span style={{ display: "inline-block", padding: "5px 12px", borderRadius: 20, fontSize: 11, fontWeight: 700, background: "#f5a623", color: "#fff", marginBottom: 12, alignSelf: "flex-start" }}>Research & Insights</span>
@@ -1058,7 +1059,7 @@ export default function SkillzzaHome() {
               {/* Card 3 - Skill Blueprint */}
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#fce7f3", display: "flex", flexDirection: "column" }}>
                 <div style={{ height: 180, overflow: "hidden", background: "#d0b0c0" }}>
-                  <img src="/insight-future.png" alt="Future of Work" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  <img src={getAssetPath("/insight-future.png")} alt="Future of Work" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </div>
                 <div style={{ padding: "16px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
                   <span style={{ display: "inline-block", padding: "5px 12px", borderRadius: 20, fontSize: 11, fontWeight: 700, background: "#e02020", color: "#fff", marginBottom: 12, alignSelf: "flex-start" }}>Research & Insights</span>
