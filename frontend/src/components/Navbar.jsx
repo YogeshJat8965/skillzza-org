@@ -3,7 +3,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { getAssetPath, getRoutePath } from '../utils/assets';
 
 const navItems = [
-    {
+  {
     name: 'Products',
     link: '/',
     dropdown: {
@@ -67,7 +67,7 @@ const navItems = [
     }
   },
   {
-    name: 'Use Case',
+    name: 'Use Cases',
     link: '',
     dropdown: {
       items: [
@@ -118,8 +118,8 @@ const navItems = [
       ]
     }
   },
-    {
-    name: 'Academy',
+  {
+    name: 'School of Technology',
     link: '/academy',
     dropdown: {
       items: [
@@ -185,189 +185,178 @@ const navItems = [
     name: 'Explore',
     link: '/',
     dropdown: {
-        items: [
-            {
-                name: 'Job Simulations',
-                link: '/explore/job-simulations',
-                detail: {
-                    title: 'Immersive Job Simulations',
-                    description: 'Gain industry-ready skills through real-world scenarios in high-impact domains like AI & Data, Banking, Software Development, and more. Build a portfolio that showcases your capabilities.',
-                    cta: 'Explore Simulations',
-                    ctaLink: '/explore/job-simulations',
-                    image: getAssetPath('/xperience_img1.jpg')
-                }
-            },
-            {
-                name: 'Career Trajectory',
-                link: '/explore/career-trajectory',
-                detail: {
-                    title: 'Chart Your Career Trajectory',
-                    description: 'Bring together industry-relevant job simulations in a structured roadmap to help you secure your ideal entry-level role as an AI Engineer, Cybersecurity Analyst, and more.',
-                    cta: 'Find Your Path',
-                    ctaLink: '/explore/career-trajectory',
-                    image: getAssetPath('/MeasuringS_gifuccess.gif')
-                }
-            },
-            {
-                name: 'Skillzza Persona',
-                link: '/explore/skillzza-persona',
-                detail: {
-                    title: 'AI Role-Play Simulation',
-                    description: 'Discover your unique strengths with interactive AI role-play simulations and map a personalized career path that aligns with your potential.',
-                    cta: 'Discover Your Persona',
-                    ctaLink: '/explore/skillzza-persona',
-                    image: getAssetPath('/upskilling_forAi_tile_img.jpeg')
-                }
-            }
-        ]
+      items: [
+        {
+          name: 'Job Simulations',
+          link: '/explore/job-simulations',
+          detail: {
+            title: 'Immersive Job Simulations',
+            description: 'Gain industry-ready skills through real-world scenarios in high-impact domains like AI & Data, Banking, Software Development, and more.',
+            cta: 'Explore Simulations',
+            ctaLink: '/explore/job-simulations',
+            image: getAssetPath('/xperience_img1.jpg')
+          }
+        },
+        {
+          name: 'Career Trajectory',
+          link: '/explore/career-trajectory',
+          detail: {
+            title: 'Chart Your Career Trajectory',
+            description: 'Bring together industry-relevant job simulations in a structured roadmap to help you secure your ideal entry-level role.',
+            cta: 'Find Your Path',
+            ctaLink: '/explore/career-trajectory',
+            image: getAssetPath('/MeasuringS_gifuccess.gif')
+          }
+        },
+        {
+          name: 'Skillzza Persona',
+          link: '/explore/skillzza-persona',
+          detail: {
+            title: 'AI Role-Play Simulation',
+            description: 'Discover your unique strengths with interactive AI role-play simulations and map a personalized career path.',
+            cta: 'Discover Your Persona',
+            ctaLink: '/explore/skillzza-persona',
+            image: getAssetPath('/upskilling_forAi_tile_img.jpeg')
+          }
+        }
+      ]
     }
   },
   {
     name: 'Insights',
     link: '/',
     dropdown: {
-        items: [
-            {
-                name: 'Skill Blueprint',
-                link: '/insights/skill-blueprint',
-                detail: {
-                    title: 'Skill Blueprint – Solutions & Case Studies',
-                    description: 'Real-World Success Stories in Skill Development',
-                    cta: 'Read Case Studies',
-                    ctaLink: '/insights/skill-blueprint',
-                    image: getAssetPath('/company_header_img.jpg')
-                }
-            },
-            {
-                name: 'The Skillzza Digest',
-                link: '/insights/skill-digest',
-                detail: {
-                    title: 'Blog – The Skill Digest',
-                    description: 'Insights, Trends & Game-changers shaping the Future of Skills',
-                    cta: 'Go to Blog',
-                    ctaLink: '/insights/skill-digest',
-                    image: getAssetPath('/digestbannerImg.jpeg')
-                }
-            },
-            {
-                name: 'AI Talent Research Hub',
-                link: '/insights/ai-talent-research-hub',
-                detail: {
-                    title: 'AI Talent Research Hub – Reports & Whitepapers',
-                    description: 'Data-Driven Insights on AI & Workforce Transformation.',
-                    cta: 'View Reports',
-                    ctaLink: '/insights/ai-talent-research-hub',
-                    image: getAssetPath('/aIdataAnalyticsDecisions_tile.jpg')
-                }
-            },
-            {
-                name: 'The Skill Unplugged Podcast',
-                link: '/insights/skill-unplugged-podcast',
-                detail: {
-                    title: 'The Skill Unplugged Podcast Series (3R)',
-                    description: 'Raw, Real & Revolutionary Talks on the Future of Skills.',
-                    cta: 'Listen to Podcasts',
-                    ctaLink: '/insights/skill-unplugged-podcast',
-                    image: getAssetPath('/digital_bugiess_growthBlog_img.jpg')
-                }
-            },
-            {
-                name: 'Skillzza Live',
-                link: '/insights/skillzza-live',
-                detail: {
-                    title: 'Skillzza Live: Knowledge in Action',
-                    description: 'Interactive Sessions Bringing Learning to Life.',
-                    cta: 'Join a Session',
-                    ctaLink: '/insights/skillzza-live',
-                    image: getAssetPath('/hackathonsbootcamps_img.jpg')
-                }
-            }
-        ]
+      items: [
+        {
+          name: 'Skill Blueprint',
+          link: '/insights/skill-blueprint',
+          detail: {
+            title: 'Skill Blueprint – Solutions & Case Studies',
+            description: 'Real-World Success Stories in Skill Development',
+            cta: 'Read Case Studies',
+            ctaLink: '/insights/skill-blueprint',
+            image: getAssetPath('/company_header_img.jpg')
+          }
+        },
+        {
+          name: 'The Skillzza Digest',
+          link: '/insights/skill-digest',
+          detail: {
+            title: 'Blog – The Skill Digest',
+            description: 'Insights, Trends & Game-changers shaping the Future of Skills',
+            cta: 'Go to Blog',
+            ctaLink: '/insights/skill-digest',
+            image: getAssetPath('/digestbannerImg.jpeg')
+          }
+        },
+        {
+          name: 'AI Talent Research Hub',
+          link: '/insights/ai-talent-research-hub',
+          detail: {
+            title: 'AI Talent Research Hub – Reports & Whitepapers',
+            description: 'Data-Driven Insights on AI & Workforce Transformation.',
+            cta: 'View Reports',
+            ctaLink: '/insights/ai-talent-research-hub',
+            image: getAssetPath('/aIdataAnalyticsDecisions_tile.jpg')
+          }
+        },
+        {
+          name: 'The Skill Unplugged Podcast',
+          link: '/insights/skill-unplugged-podcast',
+          detail: {
+            title: 'The Skill Unplugged Podcast Series (3R)',
+            description: 'Raw, Real & Revolutionary Talks on the Future of Skills.',
+            cta: 'Listen to Podcasts',
+            ctaLink: '/insights/skill-unplugged-podcast',
+            image: getAssetPath('/digital_bugiess_growthBlog_img.jpg')
+          }
+        },
+        {
+          name: 'Skillzza Live',
+          link: '/insights/skillzza-live',
+          detail: {
+            title: 'Skillzza Live: Knowledge in Action',
+            description: 'Interactive Sessions Bringing Learning to Life.',
+            cta: 'Join a Session',
+            ctaLink: '/insights/skillzza-live',
+            image: getAssetPath('/hackathonsbootcamps_img.jpg')
+          }
+        }
+      ]
     }
   },
   {
     name: 'Company',
     link: '/',
     dropdown: {
-        items: [
-            {
-                name: 'About Us',
-                link: '/company/about',
-                detail: {
-                    title: 'Bridging the Gap Between Aspiration and Opportunity',
-                    description: 'Learn about our mission to engineer an end-to-end career ecosystem and empower individuals to achieve their full potential.',
-                    cta: 'Learn More',
-                    ctaLink: '/company/about',
-                    image: getAssetPath('/aboutUsHeaeder_tilemg.png')
-                }
-            },
-            {
-                name: 'What We Do',
-                link: '/company/what-we-do',
-                detail: {
-                    title: 'Empowering Success Through Innovation',
-                    description: 'Explore our comprehensive approach combining AI-driven intelligence, immersive learning, and role-based simulations to create a future-ready workforce.',
-                    cta: 'Explore Services',
-                    ctaLink: '/company/what-we-do',
-                    image: getAssetPath('/what_we_do_banner.jpg')
-                }
-            },
-            {
-                name: 'Our Methodology',
-                link: '/company/methodology',
-                detail: {
-                    title: 'The Science Behind Career Transformation',
-                    description: 'Discover the data-driven approach and innovative frameworks we use to engineer successful career pathways from vision to global impact.',
-                    cta: 'Discover Our Method',
-                    ctaLink: '/company/methodology',
-                    image: getAssetPath('/methodology_banner_img.png')
-                }
-            },
-            {
-                name: 'Our Pathway',
-                link: '/company/pathway',
-                detail: {
-                    title: 'Transforming Lives Through SDG-Aligned Skills Development',
-                    description: 'Join our inclusive, impact-driven skill development programs aligned with UN Sustainable Development Goals. Empowering communities while building futures.',
-                    cta: 'Start Your Journey',
-                    ctaLink: '/company/pathway',
-                    image: getAssetPath('/sdgs_banner.png')
-                }
-            },
-            {
-                name: 'Partner Collaboration',
-                link: '/company/partnerships',
-                detail: {
-                    title: 'Building the Future of Work Together',
-                    description: 'We collaborate with industry leaders, academic institutions, and government bodies to build a robust and equitable future of work.',
-                    cta: 'Become a Partner',
-                    ctaLink: '/company/partnerships',
-                    image: getAssetPath('/partner-bg.png')
-                }
-            },
-            {
-                name: 'Responsible AI',
-                link: '/company/responsible-ai',
-                detail: {
-                    title: 'Building Trust Through Responsible AI',
-                    description: 'Our commitment to ethical AI development and deployment ensures fairness, transparency, and accountability in everything we do.',
-                    cta: 'Learn About Our Standards',
-                    ctaLink: '/company/responsible-ai',
-                    image: '/AIEthics&fairnessConsultant_tile.png'
-                }
-            },
-            {
-                name: 'Product Catalog Details',
-                link: '/company/product-catalog',
-                detail: {
-                    title: 'Complete Product Catalog',
-                    description: 'Explore our comprehensive suite of AI-powered talent development solutions designed to transform careers and organizations.',
-                    cta: 'View All Products',
-                    ctaLink: '/company/product-catalog',
-                    image: getAssetPath('/platformTile_for_left_img.jpeg')
-                }
-            }
-        ]
+      items: [
+        {
+          name: 'About Us',
+          link: '/company/about',
+          detail: {
+            title: 'Bridging the Gap Between Aspiration and Opportunity',
+            description: 'Learn about our mission to engineer an end-to-end career ecosystem and empower individuals to achieve their full potential.',
+            cta: 'Learn More',
+            ctaLink: '/company/about',
+            image: getAssetPath('/aboutUsHeaeder_tilemg.png')
+          }
+        },
+        {
+          name: 'What We Do',
+          link: '/company/what-we-do',
+          detail: {
+            title: 'Empowering Success Through Innovation',
+            description: 'Explore our comprehensive approach combining AI-driven intelligence, immersive learning, and role-based simulations.',
+            cta: 'Explore Services',
+            ctaLink: '/company/what-we-do',
+            image: getAssetPath('/what_we_do_banner.jpg')
+          }
+        },
+        {
+          name: 'Our Methodology',
+          link: '/company/methodology',
+          detail: {
+            title: 'The Science Behind Career Transformation',
+            description: 'Discover the data-driven approach and innovative frameworks we use to engineer successful career pathways.',
+            cta: 'Discover Our Method',
+            ctaLink: '/company/methodology',
+            image: getAssetPath('/methodology_banner_img.png')
+          }
+        },
+        {
+          name: 'Our Pathway',
+          link: '/company/pathway',
+          detail: {
+            title: 'Transforming Lives Through SDG-Aligned Skills Development',
+            description: 'Join our inclusive, impact-driven skill development programs aligned with UN Sustainable Development Goals.',
+            cta: 'Start Your Journey',
+            ctaLink: '/company/pathway',
+            image: getAssetPath('/sdgs_banner.png')
+          }
+        },
+        {
+          name: 'Partner Collaboration',
+          link: '/company/partnerships',
+          detail: {
+            title: 'Building the Future of Work Together',
+            description: 'We collaborate with industry leaders, academic institutions, and government bodies to build a robust and equitable future of work.',
+            cta: 'Become a Partner',
+            ctaLink: '/company/partnerships',
+            image: getAssetPath('/partner-bg.png')
+          }
+        },
+        {
+          name: 'Responsible AI',
+          link: '/company/responsible-ai',
+          detail: {
+            title: 'Building Trust Through Responsible AI',
+            description: 'Our commitment to ethical AI development and deployment ensures fairness, transparency, and accountability.',
+            cta: 'Learn About Our Standards',
+            ctaLink: '/company/responsible-ai',
+            image: '/AIEthics&fairnessConsultant_tile.png'
+          }
+        },
+      ]
     }
   },
 ];
@@ -386,7 +375,7 @@ const DropdownContent = ({ items }) => {
                 onMouseEnter={() => setActiveItem(item)}
                 className={`w-full text-left px-4 py-2 rounded-md text-sm font-medium transition-colors duration-150 block ${
                   activeItem.name === item.name
-                    ? 'bg-purple-50 text-purple-600' 
+                    ? 'bg-purple-50 text-purple-600'
                     : 'text-gray-700 hover:bg-purple-50 hover:text-purple-600'
                 }`}
               >
@@ -414,23 +403,39 @@ const DropdownContent = ({ items }) => {
 
 const Navbar = () => {
   return (
-    <header className="bg-white text-gray-800 shadow-sm sticky top-0 z-50 relative">
-      <div className="container mx-auto flex items-center justify-between p-3">
-        <div className="flex-shrink-0">
-          <a href={getRoutePath('/')}><img src={getAssetPath('/skillzza-logo.png')} alt="Skillzza Logo" className="h-10 w-auto ml-28" /></a>
+    <header className="bg-white text-gray-800 shadow-sm sticky top-0 z-50 relative" style={{ borderBottom: '1px solid #f0f0f0' }}>
+      <div style={{ maxWidth: 1400, margin: '0 auto', padding: '0 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64 }}>
+
+        {/* Logo */}
+        <div style={{ flexShrink: 0 }}>
+          <a href={getRoutePath('/')}>
+            <img src={getAssetPath('/skillzza-logo.png')} alt="Skillzza Logo" style={{ height: 40, width: 'auto' }} />
+          </a>
         </div>
-        <nav className="hidden md:flex items-center space-x-10 mr-28">
+
+        {/* Nav Items - Center */}
+        <nav style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           {navItems.map((item) => (
-            <div key={item.name} className="group static py-6 -my-6">
-              <a href={getRoutePath(item.link)} className="flex items-center gap-1.5 font-medium text-gray-700 hover:text-red-600 transition-colors duration-300">
+            <div key={item.name} className="group" style={{ position: 'relative', padding: '20px 0', margin: '-20px 0' }}>
+              <a
+                href={getRoutePath(item.link)}
+                style={{ display: 'flex', alignItems: 'center', gap: 4, padding: '8px 12px', fontSize: 14, fontWeight: 500, color: '#374151', textDecoration: 'none', borderRadius: 6, transition: 'color 0.2s', whiteSpace: 'nowrap' }}
+                className="hover:text-red-600"
+              >
                 {item.name}
-                {item.dropdown && <IoIosArrowDown className="transition-transform duration-300 group-hover:rotate-180" />}
+                {item.dropdown && (
+                  <IoIosArrowDown style={{ fontSize: 14, transition: 'transform 0.3s' }} className="group-hover:rotate-180" />
+                )}
               </a>
+
               {item.dropdown && (
-                <div className="absolute top-full left-0 w-full opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
-                  <div className="bg-white shadow-lg border-t">
-                    <div className="max-w-7xl mx-auto">
-                       <DropdownContent items={item.dropdown.items} />
+                <div
+                  className="opacity-0 group-hover:opacity-100 invisible group-hover:visible pointer-events-none group-hover:pointer-events-auto"
+                  style={{ position: 'fixed', top: 64, left: 0, width: '100vw', transition: 'all 0.2s', zIndex: 9999 }}
+                >
+                  <div style={{ background: '#fff', boxShadow: '0 8px 32px rgba(0,0,0,0.12)', borderTop: '1px solid #e5e7eb' }}>
+                    <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+                      <DropdownContent items={item.dropdown.items} />
                     </div>
                   </div>
                 </div>
@@ -438,6 +443,45 @@ const Navbar = () => {
             </div>
           ))}
         </nav>
+
+        {/* Right Buttons */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
+          <a
+            href="/book-demo"
+            style={{
+              background: 'linear-gradient(90deg, #e02020 0%, #f5a623 100%)',
+              color: '#fff',
+              padding: '10px 24px',
+              borderRadius: 8,
+              fontSize: 14,
+              fontWeight: 700,
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+              boxShadow: '0 2px 8px rgba(224,32,32,0.25)',
+              transition: 'opacity 0.2s',
+            }}
+          >
+            Book a Demo
+          </a>
+          <a
+            href="/product-tour"
+            style={{
+              background: '#fff',
+              color: '#e02020',
+              padding: '10px 24px',
+              borderRadius: 8,
+              fontSize: 14,
+              fontWeight: 700,
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+              border: '1.5px solid #f5c6c6',
+              transition: 'all 0.2s',
+            }}
+          >
+            Product Tour
+          </a>
+        </div>
+
       </div>
     </header>
   );

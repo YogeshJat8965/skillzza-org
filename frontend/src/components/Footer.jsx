@@ -5,125 +5,128 @@ import {
   FaInstagram,
   FaYoutube,
   FaPinterest,
-  FaArrowUp
 } from 'react-icons/fa';
 import { PiXLogoBold } from "react-icons/pi";
 import { getAssetPath, getRoutePath } from '../utils/assets';
 
-// Updated data structure to include href for each link
 const footerSections = [
   {
     title: 'Products',
     links: [
-      { name: 'The Potential Meter', href: '/product/potential-meter' },
+      { name: 'The Potential Meter AI', href: '/product/potential-meter' },
       { name: 'Xperience Platform', href: '/product/xperience-platform' },
-      { name: 'Talent Intelligence Suite', href: '/product/talent-intelligence' },
-      { name: 'AI HackNex', href: '/product/ai-hacknex' },
       { name: 'Hirenest', href: '/product/hirenest' },
+      { name: 'Talent Transformation', href: '/product/talent-intelligence' },
+      { name: 'AI Hacknex', href: '/product/ai-hacknex' },
     ],
   },
   {
-    title: 'Use Cases',
+    title: 'Use Case',
     links: [
       { name: 'Student Advantage Package', href: '/use-case/students' },
       { name: 'Campus Enablement Package', href: '/use-case/institutions' },
-      { name: 'Enterprise Talent Solutions', href: '/use-case/enterprises' },
-      { name: 'Government and CSR Impact', href: '/use-case/government' },
+      { name: 'Enterprise Talent Solutions Package', href: '/use-case/enterprises' },
+      { name: 'Government & Csr Impact Package', href: '/use-case/government' },
     ],
   },
   {
-    title: 'Academy',
+    title: 'School of Technology',
     links: [
-      { name: 'Skillzza Learning Academy', href: '/academy' },
-      { name: 'ByteMinds – AI & Quantum Intelligence', href: '/academy/byteminds' },
-      { name: 'Global School of Sustainability', href: '/academy/sustainability' },
-      { name: 'Digital & Design Excellence', href: '/academy/digital-design' },
-      { name: 'School of EV & E-Mobility', href: '/academy/ev-mobility' },
-      { name: 'Udan – Aerial Intelligence', href: '/academy/udan' },
+      { name: 'ByteMinds–The School of AI & Data', href: '/academy/byteminds' },
+      { name: 'Gssca–Global School Of Sustainability & Climate Action', href: '/academy/sustainability' },
+      { name: 'Centre Of Digital & Design Excellence', href: '/academy/digital-design' },
+      { name: 'School Of Ev & E- Mobility', href: '/academy/ev-mobility' },
+      { name: 'Udaan Aerial Intelligence', href: '/academy/udan' },
     ],
   },
   {
     title: 'Explore',
     links: [
-      { name: 'Job Simulations', href: '/explore/job-simulations' },
+      { name: 'Job Simulations Master', href: '/explore/job-simulations' },
+      { name: 'Explore Domains', href: '/explore/domains' },
       { name: 'Career Trajectory', href: '/explore/career-trajectory' },
-      { name: 'Skillzza Persona', href: '/explore/skillzza-persona' }
-    ]
+      { name: 'Skillzza Persona', href: '/explore/skillzza-persona' },
+    ],
   },
   {
     title: 'Insights',
     links: [
       { name: 'Skill Blueprint', href: '/insights/skill-blueprint' },
-      { name: 'The Skillzza Digest', href: '/insights/skill-digest' },
-      { name: 'AI Talent Research Hub', href: '/insights/ai-talent-research-hub' },
+      { name: 'The Skill Digest', href: '/insights/skill-digest' },
+      { name: 'Ai Talent Research Hub', href: '/insights/ai-talent-research-hub' },
+      { name: 'The Skill Unplugged Podcast', href: '/insights/skill-unplugged-podcast' },
+      { name: 'Skillzza Live', href: '/insights/skillzza-live' },
     ],
   },
   {
     title: 'Company',
     links: [
-      { name: 'About Us', href: '/company/about' },
+      { name: 'About us', href: '/company/about' },
       { name: 'Our Methodology', href: '/company/methodology' },
       { name: 'What We Do', href: '/company/what-we-do' },
-      { name: 'SDG Pathway', href: '/company/pathway' },
+      { name: 'Our Pathway', href: '/company/pathway' },
       { name: 'Partner Collaboration', href: '/company/partnerships' },
+      { name: 'Responsible Ai', href: '/company/responsible-ai' },
     ],
   },
 ];
 
+const socialLinks = [
+  { icon: <FaFacebookF />, label: 'Facebook', hover: '#1877f2' },
+  { icon: <FaLinkedinIn />, label: 'LinkedIn', hover: '#0a66c2' },
+  { icon: <FaInstagram />, label: 'Instagram', hover: '#e1306c' },
+  { icon: <PiXLogoBold />, label: 'Twitter', hover: '#000' },
+  { icon: <FaYoutube />, label: 'YouTube', hover: '#ff0000' },
+  { icon: <FaPinterest />, label: 'Pinterest', hover: '#e60023' },
+];
+
 const Footer = () => {
-
-  // Function to handle scrolling to the top
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-
   return (
-    <footer className="bg-zinc-50 border-t-4 border-red-600 text-zinc-800">
-      <div className="container mx-auto py-16 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 gap-8">
-          {/* Company Info Column */}
-          <div className="lg:col-span-2 space-y-8">
+    <footer style={{ background: '#f0f0f0', fontFamily: "'Inter','Segoe UI',sans-serif" }}>
+
+      {/* Main Footer Body */}
+      <div style={{ maxWidth: 1400, margin: '0 auto', padding: '56px 32px 48px' }}>
+
+        {/* Top grid: left info + 6 link columns */}
+        <div style={{ display: 'grid', gridTemplateColumns: '240px 1fr 1fr 1.4fr 0.9fr 1fr 1fr', gap: '0 24px', alignItems: 'start' }}>
+
+          {/* Left: Logo + Address */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 28, paddingRight: 8 }}>
+            <img
+              src={getAssetPath('/skillzza-logo.png')}
+              alt="Skillzza Logo"
+              style={{ height: 52, width: 'auto', objectFit: 'contain', marginBottom: 4, display: 'block', marginLeft: 0, alignSelf: 'flex-start' }}
+            />
             <div>
-              <img src={getAssetPath('/skillzza-logo.png')} alt="Skillzza Logo" className="h-9 mb-6" />
-            </div>
-            <div>
-              <h3 className="font-bold mb-2 text-zinc-900">Registered Office</h3>
-              <p className="font-semibold text-zinc-600 text-sm leading-relaxed">
-                WeWork India, Chromium, Cts. No. 106/1-5, <br />Jogesh Wari-Vikhroli link Road, Milind Nagar, <br /> Powai, Mumbai - 400076
+              <h3 style={{ fontWeight: 700, fontSize: 14, color: '#1a1a1a', marginBottom: 8, marginTop: 0 }}>Registered Office</h3>
+              <p style={{ fontSize: 13, color: '#555', lineHeight: 1.75, margin: 0 }}>
+                Skillzza, WeWork India, Chromium, CTS No. 106/1–5<br />
+                Jogeshwari–Vikhroli Link Road, Milind Nagar,<br />
+                Powai, Mumbai – 400076
               </p>
             </div>
             <div>
-              <h3 className="font-bold mb-2 text-zinc-900">Our Presence</h3>
-              <p className="text-zinc-600 font-semibold text-sm">Mumbai | Thane | Raipur | Delhi</p>
-            </div>
-            <div>
-              <h3 className="font-bold mb-2 text-zinc-900">Stay Connected</h3>
-              <div className="flex space-x-4 text-zinc-600 text-xl">
-                <a href="#" aria-label="Facebook" className="hover:text-blue-600 transition-colors"><FaFacebookF /></a>
-                <a href="#" aria-label="LinkedIn" className="hover:text-blue-600 transition-colors"><FaLinkedinIn /></a>
-                <a href="#" aria-label="Instagram" className="hover:text-pink-600 transition-colors"><FaInstagram /></a>
-                <a href="#" aria-label="Twitter" className="hover:text-black transition-colors"><PiXLogoBold /></a>
-                <a href="#" aria-label="YouTube" className="hover:text-red-600 transition-colors"><FaYoutube /></a>
-                <a href="#" aria-label="Pinterest" className="hover:text-red-600 transition-colors"><FaPinterest /></a>
-              </div>
+              <h3 style={{ fontWeight: 700, fontSize: 14, color: '#1a1a1a', marginBottom: 6, marginTop: 0 }}>Our Presence</h3>
+              <p style={{ fontSize: 13, color: '#555', margin: 0 }}>Mumbai | Thane | Raipur | Delhi</p>
             </div>
           </div>
-          
-          {/* Dynamic Link Columns */}
+
+          {/* 6 link columns */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h3 className="font-bold text-red-600 mb-5">{section.title}</h3>
-              <ul className="space-y-3">
+              <h3 style={{ fontWeight: 700, fontSize: 14, color: '#1a1a1a', marginBottom: 20, marginTop: 0 }}>
+                {section.title}
+              </h3>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 11 }}>
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={getRoutePath(link.href)} // Use the href from the data object
-                      className="text-zinc-600 font-semibold hover:text-red-600 hover:font-semibold inline-block transform hover:-translate-y-px transition-all duration-200 text-sm"
+                    <a
+                      href={getRoutePath(link.href)}
+                      style={{ fontSize: 13, color: '#aaa', textDecoration: 'none', lineHeight: 1.5, display: 'block', transition: 'color 0.2s' }}
+                      onMouseEnter={e => e.target.style.color = '#c0150a'}
+                      onMouseLeave={e => e.target.style.color = '#aaa'}
                     >
-                      {link.name} {/* Use the name for the display text */}
+                      {link.name}
                     </a>
                   </li>
                 ))}
@@ -131,28 +134,53 @@ const Footer = () => {
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Sub-Footer Section */}
-      <div className="w-full flex">
-        <div className="bg-red-800 text-white flex-grow">
-          <div className="container mx-auto h-full flex items-center justify-between p-4 text-sm">
-            <div className="flex items-center space-x-8 ml-8">
-                <a href={getRoutePath('/terms')} className="hover:text-gray-300 font-semibold transition-colors">Terms & Conditions</a>
-                <a href={getRoutePath('/disclaimer')} className="hover:text-gray-300 font-semibold transition-colors">Disclaimer</a>
-                <a href={getRoutePath('/privacy-policy')} className="hover:text-gray-300 font-semibold transition-colors">Privacy Policy</a>
+        {/* Stay Connected — bottom right */}
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 48 }}>
+          <div style={{ textAlign: 'center' }}>
+            <h3 style={{ fontWeight: 700, fontSize: 15, color: '#1a1a1a', marginBottom: 16 }}>Stay Connected</h3>
+            <div style={{ display: 'flex', gap: 18, alignItems: 'center', justifyContent: 'center' }}>
+              {socialLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href="#"
+                  aria-label={s.label}
+                  style={{ fontSize: 22, color: '#6b7280', transition: 'color 0.2s', display: 'flex' }}
+                  onMouseEnter={e => e.currentTarget.style.color = s.hover}
+                  onMouseLeave={e => e.currentTarget.style.color = '#6b7280'}
+                >
+                  {s.icon}
+                </a>
+              ))}
             </div>
-            <p>&copy; {new Date().getFullYear()} Skillzza. All Rights Reserved.</p>
           </div>
         </div>
-        <button 
-            onClick={scrollToTop} 
-            className="bg-red-600 text-white px-5 flex items-center hover:bg-red-700 transition-colors"
-            aria-label="Back to top"
-        >
-            <FaArrowUp className="text-xl"/>
-        </button>
       </div>
+
+      {/* Bottom Dark Red Bar */}
+      <div style={{ background: '#8b1a1a', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '18px 80px' }}>
+        <div style={{ display: 'flex', gap: 56 }}>
+          {[
+            { name: 'Terms & Conditions', href: '/terms' },
+            { name: 'Disclaimer', href: '/disclaimer' },
+            { name: 'Privacy Policy', href: '/privacy-policy' },
+          ].map((link) => (
+            <a
+              key={link.name}
+              href={getRoutePath(link.href)}
+              style={{ color: '#fff', fontSize: 13, fontWeight: 400, textDecoration: 'none', opacity: 0.9, transition: 'opacity 0.2s' }}
+              onMouseEnter={e => e.target.style.opacity = 1}
+              onMouseLeave={e => e.target.style.opacity = 0.9}
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+        <p style={{ color: '#fff', fontSize: 13, fontWeight: 400, margin: 0, opacity: 0.9 }}>
+          Edgespark IT Ventures Pvt.
+        </p>
+      </div>
+
     </footer>
   );
 };
