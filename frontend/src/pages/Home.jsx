@@ -787,7 +787,7 @@ export default function SkillzzaHome() {
           <div style={{ display: "flex", gap: 64, alignItems: "center" }}>
             {/* Left Text */}
             <div style={{ flex: 1 }}>
-              <h2 style={{ fontSize: 32, fontWeight: 600, lineHeight: 1.25, marginBottom: 24, color: "#1a1a2e", fontFamily: "'Inter','Segoe UI',sans-serif", letterSpacing: "-0.2px" }}>Partnerships For<br />Impact</h2>
+              <h2 style={{ fontSize: 32, fontWeight: 900, lineHeight: 1.25, marginBottom: 24, color: "#1a1a2e", fontFamily: "'Inter','Segoe UI',sans-serif", letterSpacing: "-0.2px" }}>Partnerships For<br />Impact</h2>
               <p style={{ color: "#4b5563", fontSize: 14, lineHeight: 1.8, marginBottom: 16 }}>At Skillzza, we believe that collaboration is the cornerstone of impactful change. By joining forces, we aim to bridge skill gaps and create a future-ready workforce.</p>
               <p style={{ color: "#4b5563", fontSize: 14, lineHeight: 1.8 }}>Together, we can shape a world where education and skills are accessible to all, fostering innovation and sustainable growth.</p>
             </div>
