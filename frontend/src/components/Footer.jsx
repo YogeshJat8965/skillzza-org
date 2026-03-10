@@ -100,8 +100,8 @@ const Footer = () => {
             <div>
               <h3 style={{ fontWeight: 700, fontSize: 14, color: '#1a1a1a', marginBottom: 8, marginTop: 0 }}>Registered Office</h3>
               <p style={{ fontSize: 13, color: '#555', lineHeight: 1.75, margin: 0 }}>
-                Skillzza, WeWork India, Chromium, CTS No. 106/1–5<br />
-                Jogeshwari–Vikhroli Link Road, Milind Nagar,<br />
+                Skillzza, WeWork India, Chromium, CTS No. 106/1–5
+                Jogeshwari–Vikhroli Link Road, Milind Nagar,
                 Powai, Mumbai – 400076
               </p>
             </div>
@@ -158,7 +158,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Dark Red Bar */}
-      <div style={{ background: '#8b1a1a', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '18px 80px' }}>
+      <div style={{ background: '#CF2C2E', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '18px 80px' }}>
         <div style={{ display: 'flex', gap: 56 }}>
           {[
             { name: 'Terms & Conditions', href: '/terms' },

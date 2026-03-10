@@ -13,6 +13,16 @@ const MARQUEE_CSS = `
   animation: marqueeScroll 24s linear infinite;
 }
 .marquee-track:hover { animation-play-state: paused; }
+@keyframes featureScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.feature-track {
+  display: flex;
+  width: max-content;
+  animation: featureScroll 20s linear infinite;
+}
+.feature-track:hover { animation-play-state: paused; }
 * {
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
@@ -86,46 +96,16 @@ const studioTabs = [
 ];
 
 const partnerLogos = [
-  { img: getAssetPath("/logo-nsdc.png"), name: "NSDC" },
-  { img: getAssetPath("/logo-adobe.png"), name: "Adobe" },
-  { img: getAssetPath("/logo-meta.png"), name: "Meta" },
-  { img: getAssetPath("/logo-microsoft.png"), name: "Microsoft" },
-  { img: getAssetPath("/logo-google.png"), name: "Google" },
-  { img: getAssetPath("/logo-startupindia.png"), name: "Startup India" },
-  { img: getAssetPath("/logo-msme.png"), name: "MSME" },
-  { img: getAssetPath("/logo-hp.png"), name: "HP" },
-  { img: getAssetPath("/logo-aws.png"), name: "AWS" },
+  { img: "/logo-nsdc.png", name: "NSDC" },
+  { img: "/logo-adobe.png", name: "Adobe" },
+  { img: "/logo-meta.png", name: "Meta" },
+  { img: "/logo-microsoft.png", name: "Microsoft" },
+  { img: "/logo-google.png", name: "Google" },
+  { img: "/logo-startupindia.png", name: "Startup India" },
+  { img: "/logo-msme.png", name: "MSME" },
+  { img: "/logo-hp.png", name: "HP" },
+  { img: "/logo-aws.png", name: "AWS" },
 ];
-
-// ── HOW TO ADD LOGOS ──
-// Download each logo and save in your /public folder with these exact names:
-//
-// NSDC       → /public/logo-nsdc.png
-//   Source: https://nsdc.in  (NSDC official logo)
-//
-// Adobe      → /public/logo-adobe.png
-//   Source: https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg
-//
-// Meta       → /public/logo-meta.png
-//   Source: https://about.meta.com/brand/resources/meta/logo/
-//
-// Microsoft  → /public/logo-microsoft.png
-//   Source: https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b
-//
-// Google     → /public/logo-google.png
-//   Source: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
-//
-// Startup India → /public/logo-startupindia.png
-//   Source: https://www.startupindia.gov.in  (download from their brand kit)
-//
-// MSME       → /public/logo-msme.png
-//   Source: https://msme.gov.in  (ministry official logo)
-//
-// HP         → /public/logo-hp.png
-//   Source: https://www.hp.com/us-en/shop/cv/images/hp-logo.png
-//
-// AWS        → /public/logo-aws.png
-//   Source: https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg
 
 const partnerCards = [
   { icon: "🏫", title: "Schools / Universities", desc: "Partnering to Cultivate the Next Generation of Leaders", highlighted: true },
@@ -147,13 +127,12 @@ const footerCols = [
 function AnimatedCounter({ to, suffix = "" }) {
   const [val, setVal] = useState(0);
   const ref = useRef(null);
-  const started = useRef(false);
   
   useEffect(() => {
     const obs = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting && !started.current) {
-        started.current = true;
-        let start = 0;
+      if (entry.isIntersecting) {
+        setVal(0);
+        let start = null;
         const step = (ts) => {
           if (!start) start = ts;
           const prog = Math.min((ts - start) / 1500, 1);
@@ -345,344 +324,190 @@ function PartnerLogoCard({ p }) {
 }
 
 // ─── PARTNERSHIP CARDS ───────────────────────────────────────────────────────
-function PartnerCard({ title, desc, svgFn }) {
+function PartnerCard({ title, desc, iconSrc }) {
   const [hovered, setHovered] = useState(false);
-  const stroke = hovered ? "#fff" : "#6b7280";
   return (
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "#7c3aed" : "#f3f4f6",
-        borderRadius: 16, padding: "28px 24px", cursor: "pointer",
-        transition: "background .25s, transform .2s",
+        background: hovered ? "#9268A8" : "rgba(0,0,0,0.16)",
+        borderRadius: 10,
+        padding: "28px 20px",
+        cursor: "pointer",
+        transition: "background .25s, transform .2s, box-shadow .2s",
         transform: hovered ? "translateY(-3px)" : "translateY(0)",
+        boxShadow: hovered ? "0 8px 24px rgba(124,58,237,0.3)" : "none",
       }}>
-      {svgFn(stroke)}
-      <h4 style={{ fontSize: 17, fontWeight: 800, color: hovered ? "#fff" : "#1f2937", marginBottom: 10, lineHeight: 1.3 }}>{title}</h4>
-      <p style={{ fontSize: 13, color: hovered ? "rgba(255,255,255,0.85)" : "#6b7280", lineHeight: 1.6 }}>{desc}</p>
+      <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 10 }}>
+        <img src={getAssetPath(iconSrc)} alt="" style={{ width: 36, height: 36, objectFit: "contain", flexShrink: 0, marginTop: 2, mixBlendMode: "screen", filter: hovered ? "brightness(10)" : "brightness(0.3) invert(0)" }} />
+        <h4 style={{ fontSize: 15, fontWeight: 700, color: hovered ? "#fff" : "#1f2937", lineHeight: 1.35, margin: 0 }}>{title}</h4>
+      </div>
+      <p style={{ fontSize: 12.5, color: hovered ? "rgba(255,255,255,0.8)" : "#6b7280", lineHeight: 1.6, margin: 0 }}>{desc}</p>
     </div>
   );
 }
 
 function PartnershipCards() {
   const cards = [
-    {
-      title: <>Schools /<br />Universities</>,
-      desc: "Partnering to Cultivate the Next Generation of Leaders",
-      svgFn: (s) => (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style={{ marginBottom: 14 }}>
-          <rect x="8" y="20" width="32" height="22" rx="2" stroke={s} strokeWidth="2" fill="none"/>
-          <path d="M4 22L24 8l20 14" stroke={s} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-          <rect x="18" y="30" width="12" height="12" rx="1" stroke={s} strokeWidth="2" fill="none"/>
-          <rect x="14" y="24" width="6" height="6" rx="1" stroke={s} strokeWidth="1.5" fill="none"/>
-          <rect x="28" y="24" width="6" height="6" rx="1" stroke={s} strokeWidth="1.5" fill="none"/>
-        </svg>
-      ),
-    },
-    {
-      title: "Corporates",
-      desc: "Driving Business Success through Workforce Excellence",
-      svgFn: (s) => (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style={{ marginBottom: 14 }}>
-          <rect x="6" y="14" width="36" height="28" rx="2" stroke={s} strokeWidth="2" fill="none"/>
-          <path d="M16 14V10a2 2 0 012-2h12a2 2 0 012 2v4" stroke={s} strokeWidth="2" fill="none"/>
-          <line x1="6" y1="26" x2="42" y2="26" stroke={s} strokeWidth="2"/>
-          <rect x="20" y="26" width="8" height="8" rx="1" stroke={s} strokeWidth="1.5" fill="none"/>
-          <rect x="12" y="18" width="5" height="5" rx="1" stroke={s} strokeWidth="1.5" fill="none"/>
-          <rect x="31" y="18" width="5" height="5" rx="1" stroke={s} strokeWidth="1.5" fill="none"/>
-        </svg>
-      ),
-    },
-    {
-      title: "Government",
-      desc: "Building a Skilled Workforce for a Stronger Economy",
-      svgFn: (s) => (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style={{ marginBottom: 14 }}>
-          <rect x="6" y="20" width="36" height="22" rx="2" stroke={s} strokeWidth="2" fill="none"/>
-          <path d="M4 22L24 6l20 16" stroke={s} strokeWidth="2" strokeLinecap="round" fill="none"/>
-          <rect x="10" y="26" width="6" height="10" rx="1" stroke={s} strokeWidth="1.5" fill="none"/>
-          <rect x="21" y="26" width="6" height="10" rx="1" stroke={s} strokeWidth="1.5" fill="none"/>
-          <rect x="32" y="26" width="6" height="10" rx="1" stroke={s} strokeWidth="1.5" fill="none"/>
-          <rect x="18" y="10" width="12" height="6" rx="1" stroke={s} strokeWidth="1.5" fill="none"/>
-          <line x1="24" y1="10" x2="24" y2="6" stroke={s} strokeWidth="1.5"/>
-        </svg>
-      ),
-    },
-    {
-      title: <>Become our<br />upskilling partner</>,
-      desc: "Join Us in Shaping the Future of Work",
-      svgFn: (s) => (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style={{ marginBottom: 14 }}>
-          <path d="M16 20c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8" stroke={s} strokeWidth="2" strokeLinecap="round" fill="none"/>
-          <path d="M8 40c0-6.6 7.2-12 16-12" stroke={s} strokeWidth="2" strokeLinecap="round" fill="none"/>
-          <path d="M30 34l4 4 8-8" stroke={s} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-        </svg>
-      ),
-    },
+    { title: <>Schools /<br />Universities</>, desc: "Partnering to Cultivate the Next Generation of Leaders", iconSrc: "/g2475.svg" },
+    { title: "Corporates", desc: "Driving Business Success through Workforce Excellence", iconSrc: "/corporation.svg" },
+    { title: "Government", desc: "Building a Skilled Workforce for a Stronger Economy", iconSrc: "/government.svg" },
+    { title: <>Become our<br />upskilling partner</>, desc: "Join Us in Shaping the Future of Work", iconSrc: "/Group 23779.svg" },
   ];
 
   return (
-    <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-      {cards.map((c, i) => <PartnerCard key={i} {...c} />)}
+    <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, alignItems: "start" }}>
+      {/* Left col */}
+      <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+        <PartnerCard {...cards[0]} />
+        <PartnerCard {...cards[2]} />
+      </div>
+      {/* Right col — shifted down */}
+      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginTop: 40 }}>
+        <PartnerCard {...cards[1]} />
+        <PartnerCard {...cards[3]} />
+      </div>
     </div>
   );
 }
 
 // ─── ECOSYSTEM SECTION ────────────────────────────────────────────────────────
 function EcosystemSection() {
-  const containerRef = useRef(null);
-  const leftCircleRef = useRef(null);
-  const rightCircleRef = useRef(null);
-  const barRef = useRef(null);
-  const leftCardRef = useRef(null);
-  const centerCardRef = useRef(null);
-  const rightCardRef = useRef(null);
-  const [lines, setLines] = useState(null);
-
-  useEffect(() => {
-    function calc() {
-      const c = containerRef.current?.getBoundingClientRect();
-      if (!c) return;
-      const get = (ref) => ref.current?.getBoundingClientRect();
-      const lc = get(leftCircleRef);
-      const rc = get(rightCircleRef);
-      const bar = get(barRef);
-      const lCard = get(leftCardRef);
-      const mCard = get(centerCardRef);
-      const rCard = get(rightCardRef);
-      if (!lc || !rc || !bar || !lCard || !mCard || !rCard) return;
-
-      const barY = bar.top - c.top + bar.height / 2;
-
-      const d1x = bar.left - c.left;
-      const d2x = bar.left - c.left + bar.width * 0.25;
-      const d3x = bar.left - c.left + bar.width * 0.5;
-      const d4x = bar.left - c.left + bar.width * 0.75;
-      const d5x = bar.left - c.left + bar.width;
-
-      const lcX = lc.right - c.left;
-      const lcY = lc.top - c.top + lc.height / 2;
-
-      const rcX = rc.left - c.left;
-      const rcY = rc.top - c.top + rc.height / 2;
-
-      const lCardX = lCard.left - c.left + lCard.width / 2;
-      const lCardY = lCard.top - c.top;
-      const mCardX = mCard.left - c.left + mCard.width / 2;
-      const mCardY = mCard.top - c.top;
-      const rCardX = rCard.left - c.left + rCard.width / 2;
-      const rCardY = rCard.top - c.top;
-
-      setLines({ barY, d1x, d2x, d3x, d4x, d5x, lcX, lcY, rcX, rcY, lCardX, lCardY, mCardX, mCardY, rCardX, rCardY });
-    }
-    
-    calc();
-    window.addEventListener("resize", calc);
-    return () => window.removeEventListener("resize", calc);
-  }, []);
-
   return (
     <section style={{ background: "linear-gradient(160deg,#f8f4ff 0%,#ede8fb 60%,#e4dcf8 100%)", padding: "80px 0 0" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
 
+        {/* Heading - kept as is */}
         <div style={{ textAlign: "center", marginBottom: 48 }}>
           <h2 style={{ fontSize: 36, fontWeight: 800, color: "#1a1a2e" }}>Skillzza Ecosystem</h2>
           <p style={{ color: "#6b7280", marginTop: 8, fontSize: 15 }}>Empowering Every Learner, Every Step of the Way</p>
         </div>
 
-        <div ref={containerRef} style={{ position: "relative" }}>
+        {/* SVG image + Talent Marketplace button overlay */}
+        <div style={{ position: "relative", width: "100%", marginBottom: "75.6px" }}>
+          <img
+            src={getAssetPath("/ecosystem.svg")}
+            alt="Skillzza Ecosystem"
+            style={{ width: "100%", height: "auto", display: "block", marginTop: "-3.78px", paddingTop: "3.78px", marginBottom: "-3.78px", paddingBottom: "3.78px" }}
+          />
 
-          {lines && (
-            <svg style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none", overflow: "visible", zIndex: 1 }}>
-              <path
-                d={`M ${lines.d1x} ${lines.barY} C ${lines.d1x - 80} ${lines.barY}, ${lines.lcX + 60} ${lines.lcY}, ${lines.lcX} ${lines.lcY}`}
-                stroke="#c4b5fd" strokeWidth="2.5" fill="none"
-              />
-              <path
-                d={`M ${lines.d2x} ${lines.barY} C ${lines.d2x} ${lines.barY + 100}, ${lines.lCardX} ${lines.lCardY - 80}, ${lines.lCardX} ${lines.lCardY}`}
-                stroke="#c4b5fd" strokeWidth="2.5" fill="none"
-              />
-              <line x1={lines.d3x} y1={lines.barY} x2={lines.mCardX} y2={lines.mCardY} stroke="#c4b5fd" strokeWidth="2.5" />
-              <path
-                d={`M ${lines.d4x} ${lines.barY} C ${lines.d4x} ${lines.barY + 100}, ${lines.rCardX} ${lines.rCardY - 80}, ${lines.rCardX} ${lines.rCardY}`}
-                stroke="#c4b5fd" strokeWidth="2.5" fill="none"
-              />
-              <path
-                d={`M ${lines.d5x} ${lines.barY} C ${lines.d5x + 80} ${lines.barY}, ${lines.rcX - 60} ${lines.rcY}, ${lines.rcX} ${lines.rcY}`}
-                stroke="#c4b5fd" strokeWidth="2.5" fill="none"
-              />
-              {[lines.d1x, lines.d2x, lines.d3x, lines.d4x, lines.d5x].map((x, i) => (
-                <circle key={i} cx={x} cy={lines.barY} r="5" fill="#c4b5fd" />
-              ))}
-            </svg>
-          )}
-
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 24 }}>
-
-            <div ref={leftCircleRef} style={{
-              width: 240, height: 240, borderRadius: "50%",
-              background: "linear-gradient(135deg, rgba(220,200,255,0.95) 0%, rgba(180,140,245,0.9) 100%)",
-              border: "2px solid rgba(170,130,240,0.5)",
-              display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
-              textAlign: "center", padding: 28, flexShrink: 0, position: "relative", zIndex: 2,
-              boxShadow: "0 8px 32px rgba(107,33,168,0.18)",
-            }}>
-              <svg width="40" height="40" viewBox="0 0 36 36" fill="none" style={{ marginBottom: 10 }}>
-                <circle cx="18" cy="18" r="16" stroke="#6d28d9" strokeWidth="2" fill="none"/>
-                <circle cx="18" cy="18" r="10" stroke="#6d28d9" strokeWidth="2" fill="none"/>
-                <circle cx="18" cy="18" r="4" fill="#6d28d9"/>
-                <line x1="18" y1="2" x2="18" y2="8" stroke="#e02020" strokeWidth="2.5" strokeLinecap="round"/>
-                <line x1="26" y1="4" x2="22" y2="10" stroke="#e02020" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-              <div style={{ fontSize: 14, fontWeight: 700, color: "#2d1b4e", marginBottom: 8 }}>The Potential Meter</div>
-              <div style={{ fontSize: 10, color: "#4b3080", lineHeight: 1.7, marginBottom: 10 }}>
-                • Multi-dimensional AI skill profiling<br/>
-                • Workplace simulation assessments<br/>
-                • Career pathway recommendations<br/>
-                • Guided mentoring via 4M Framework
-              </div>
-              <span style={{ background: "rgba(107,33,168,0.2)", color: "#5b21b6", fontSize: 9, fontWeight: 700, padding: "4px 14px", borderRadius: 20, border: "1px solid rgba(107,33,168,0.3)" }}>AI Skill Engine</span>
-            </div>
-
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flexShrink: 0, position: "relative", zIndex: 3 }}>
-              <div style={{
-                width: 160, height: 130, background: "#fff",
-                border: "2.5px solid #d0c0f0", borderRadius: 8,
-                display: "flex", alignItems: "center", justifyContent: "center",
-                boxShadow: "0 4px 20px rgba(107,33,168,0.12)",
-              }}>
-                <span style={{ fontSize: 70 }}>🎓</span>
-              </div>
-              <div ref={barRef} style={{ width: 160, height: 3, background: "#b0a0d0", borderRadius: 2, marginTop: 8 }} />
-            </div>
-
-            <div ref={rightCircleRef} style={{
-              width: 240, height: 240, borderRadius: "50%",
-              background: "linear-gradient(135deg, rgba(220,200,255,0.95) 0%, rgba(180,140,245,0.9) 100%)",
-              border: "2px solid rgba(170,130,240,0.5)",
-              display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
-              textAlign: "center", padding: 28, flexShrink: 0, position: "relative", zIndex: 2,
-              boxShadow: "0 8px 32px rgba(107,33,168,0.18)",
-            }}>
-              <svg width="40" height="40" viewBox="0 0 36 36" fill="none" style={{ marginBottom: 10 }}>
-                <rect x="4" y="12" width="28" height="20" rx="3" stroke="#6d28d9" strokeWidth="2" fill="none"/>
-                <path d="M13 12V9a2 2 0 012-2h6a2 2 0 012 2v3" stroke="#6d28d9" strokeWidth="2" fill="none"/>
-                <line x1="4" y1="22" x2="32" y2="22" stroke="#6d28d9" strokeWidth="2"/>
-              </svg>
-              <div style={{ fontSize: 14, fontWeight: 700, color: "#2d1b4e", marginBottom: 8 }}>Xperience Platform</div>
-              <div style={{ fontSize: 10, color: "#4b3080", lineHeight: 1.7, marginBottom: 10 }}>
-                • Real-world job simulations<br/>
-                • Challenge-based learning journeys<br/>
-                • Digital, verifiable portfolios<br/>
-                • Applied learning for job readiness
-              </div>
-              <span style={{ background: "rgba(107,33,168,0.2)", color: "#5b21b6", fontSize: 9, fontWeight: 700, padding: "4px 14px", borderRadius: 20, border: "1px solid rgba(107,33,168,0.3)" }}>Immersive Learning Labs</span>
-            </div>
-
-          </div>
-
-          <div style={{ display: "flex", justifyContent: "center", gap: 28, marginTop: 90, marginBottom: 60, position: "relative", zIndex: 2 }}>
-
-            <div ref={leftCardRef} style={{
-              flex: "0 1 300px", background: "linear-gradient(135deg,#a855f7 0%,#7c3aed 100%)",
-              borderRadius: 24, padding: "36px 28px", color: "#fff",
-              boxShadow: "0 12px 32px rgba(168,85,247,0.32)",
-            }}>
-              <div style={{ width: 56, height: 56, background: "rgba(255,255,255,0.25)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>
-                <svg width="30" height="30" viewBox="0 0 26 26" fill="none">
-                  <circle cx="10" cy="8" r="4" stroke="#fff" strokeWidth="1.8" fill="none"/>
-                  <path d="M2 22c0-4.4 3.6-8 8-8" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
-                  <circle cx="19" cy="17" r="3.5" stroke="#fff" strokeWidth="1.5" fill="none"/>
-                  <path d="M19 13.5v1M19 20.5v1M15.5 17h1M22.5 17h-1M16.5 14.5l.7.7M21.5 19.5l-.7-.7M16.5 19.5l.7-.7M21.5 14.5l-.7.7" stroke="#fff" strokeWidth="1.3" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <div style={{ fontSize: 17, fontWeight: 800, marginBottom: 14 }}>Talent Transformation</div>
-              <div style={{ fontSize: 11, lineHeight: 1.8, opacity: 0.95, marginBottom: 20 }}>
-                • Workforce skill mapping & gap analysis<br/>
-                • Role-specific upskilling programs<br/>
-                • Succession & talent planning analytics<br/>
-                • Behavioral matching for team performance
-              </div>
-              <span style={{ display: "inline-block", background: "rgba(255,255,255,0.25)", border: "1.5px solid rgba(255,255,255,0.4)", color: "#fff", fontSize: 10, fontWeight: 600, padding: "6px 16px", borderRadius: 24 }}>Career Mobility Pipeline</span>
-            </div>
-
-            <div ref={centerCardRef} style={{
-              flex: "0 1 300px", background: "linear-gradient(135deg,#8b5cf6 0%,#6d28d9 100%)",
-              borderRadius: 24, padding: "36px 28px", color: "#fff",
-              boxShadow: "0 16px 40px rgba(109,40,217,0.45)",
-            }}>
-              <div style={{ width: 56, height: 56, background: "rgba(255,255,255,0.25)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>
-                <svg width="30" height="30" viewBox="0 0 26 26" fill="none">
-                  <path d="M13 3a7 7 0 0 1 4 12.7V18H9v-2.3A7 7 0 0 1 13 3z" stroke="#fff" strokeWidth="1.8" fill="none"/>
-                  <line x1="9" y1="20" x2="17" y2="20" stroke="#fff" strokeWidth="1.8" strokeLinecap="round"/>
-                  <line x1="11" y1="22.5" x2="15" y2="22.5" stroke="#fff" strokeWidth="1.8" strokeLinecap="round"/>
-                  <circle cx="19" cy="9" r="2" stroke="#fff" strokeWidth="1.3" fill="none"/>
-                  <line x1="17" y1="9" x2="15" y2="9" stroke="#fff" strokeWidth="1.3"/>
-                </svg>
-              </div>
-              <div style={{ fontSize: 17, fontWeight: 800, marginBottom: 14 }}>AI HackNex</div>
-              <div style={{ fontSize: 11, lineHeight: 1.8, opacity: 0.95, marginBottom: 20 }}>
-                • Global AI challenges & innovation sprints<br/>
-                • Real-world enterprise problem-solving<br/>
-                • Recognition from industry leaders<br/>
-                • Skill showcase on top platforms
-              </div>
-              <span style={{ display: "inline-block", background: "rgba(255,255,255,0.25)", border: "1.5px solid rgba(255,255,255,0.4)", color: "#fff", fontSize: 10, fontWeight: 600, padding: "6px 16px", borderRadius: 24 }}>Innovation Hub</span>
-            </div>
-
-            <div ref={rightCardRef} style={{
-              flex: "0 1 300px", background: "linear-gradient(135deg,#a855f7 0%,#7c3aed 100%)",
-              borderRadius: 24, padding: "36px 28px", color: "#fff",
-              boxShadow: "0 12px 32px rgba(168,85,247,0.32)",
-            }}>
-              <div style={{ width: 56, height: 56, background: "rgba(255,255,255,0.25)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>
-                <svg width="30" height="30" viewBox="0 0 26 26" fill="none">
-                  <path d="M2 14l5-5 3 2 4-4 4 4 3-2 3 5" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                  <path d="M10 11l3 3 3-3" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" fill="none"/>
-                  <path d="M7 17c1.5 2 4 3 6 3s4.5-1 6-3" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
-                </svg>
-              </div>
-              <div style={{ fontSize: 17, fontWeight: 800, marginBottom: 14 }}>Hirenest</div>
-              <div style={{ fontSize: 11, lineHeight: 1.8, opacity: 0.95, marginBottom: 20 }}>
-                • AI-matched, skill-verified talent pools<br/>
-                • Live portfolios & performance metrics<br/>
-                • Reduced hiring time, better retention
-              </div>
-              <span style={{ display: "inline-block", background: "rgba(255,255,255,0.25)", border: "1.5px solid rgba(255,255,255,0.4)", color: "#fff", fontSize: 10, fontWeight: 600, padding: "6px 16px", borderRadius: 24 }}>Smart Hiring</span>
-            </div>
-
-          </div>
-
-          <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
+          {/* Talent Marketplace button — pixel-perfect over SVG rect */}
+          <div style={{
+            position: "absolute",
+            top: "81.087%",
+            left: "38.626%",
+            zIndex: 10,
+            width: "22.306%",
+            height: "4.617%",
+          }}>
             <button style={{
+              width: "100%",
+              height: "100%",
               background: "linear-gradient(90deg,#f5a623 0%,#f0c040 100%)",
-              color: "#1a1a1a", border: "none", borderRadius: 30,
-              padding: "13px 52px", fontSize: 16, fontWeight: 700,
-              cursor: "pointer", boxShadow: "0 4px 16px rgba(245,166,35,0.5)",
-            }}>Talent Marketplace</button>
+              color: "#101114",
+              border: "none",
+              borderRadius: "18px",
+              fontSize: "clamp(11px, 1.1vw, 18px)",
+              fontWeight: 600,
+              cursor: "pointer",
+              boxShadow: "0 4px 16px rgba(245,166,35,0.5)",
+              whiteSpace: "nowrap",
+              fontFamily: "DM Sans, sans-serif",
+              letterSpacing: "-0.025em",
+            }}>
+              Talent Marketplace
+            </button>
           </div>
-
         </div>
+
       </div>
 
-      <div style={{ marginTop: 40, background: "linear-gradient(90deg,#8b5cf6 0%,#7c3aed 50%,#6d28d9 100%)", padding: "28px 0" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px", display: "flex", justifyContent: "space-around", alignItems: "center" }}>
-          {[
-            { icon: <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="6" y="4" width="24" height="28" rx="3" stroke="#fff" strokeWidth="2" fill="none"/><line x1="11" y1="12" x2="25" y2="12" stroke="#fff" strokeWidth="1.8" strokeLinecap="round"/><line x1="11" y1="17" x2="25" y2="17" stroke="#fff" strokeWidth="1.8" strokeLinecap="round"/><line x1="11" y1="22" x2="19" y2="22" stroke="#fff" strokeWidth="1.8" strokeLinecap="round"/><circle cx="27" cy="27" r="6" fill="#7c3aed" stroke="#fff" strokeWidth="1.5"/><path d="M24.5 27l1.5 1.5 2.5-2.5" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>, label: "Assessment" },
-            { icon: <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="13" cy="12" r="5" stroke="#fff" strokeWidth="2" fill="none"/><circle cx="26" cy="10" r="4" stroke="#fff" strokeWidth="2" fill="none"/><path d="M4 28c0-5 4-9 9-9" stroke="#fff" strokeWidth="2" strokeLinecap="round" fill="none"/><path d="M20 22c2-1 4-1.5 6-1.5 3.3 0 6 1.5 6 4.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" fill="none"/><line x1="26" y1="16" x2="26" y2="20" stroke="#fff" strokeWidth="2" strokeLinecap="round"/></svg>, label: "Mentoring" },
-            { icon: <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="6" width="28" height="20" rx="3" stroke="#fff" strokeWidth="2" fill="none"/><line x1="18" y1="26" x2="18" y2="32" stroke="#fff" strokeWidth="2"/><line x1="12" y1="32" x2="24" y2="32" stroke="#fff" strokeWidth="2" strokeLinecap="round"/><polygon points="14,11 14,21 24,16" fill="#fff"/></svg>, label: "Simulations" },
-            { icon: <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="8" width="28" height="20" rx="3" stroke="#fff" strokeWidth="2" fill="none"/><path d="M10 22l5-6 4 4 3-4 4 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/><circle cx="13" cy="14" r="2.5" fill="#fff"/></svg>, label: "Project Showcase" },
-            { icon: <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="12" r="5" stroke="#fff" strokeWidth="2" fill="none"/><circle cx="28" cy="11" r="4" stroke="#fff" strokeWidth="2" fill="none"/><path d="M6 28c0-5.5 5.4-10 12-10s12 4.5 12 10" stroke="#fff" strokeWidth="2" strokeLinecap="round" fill="none"/></svg>, label: "Get Hired" },
-          ].map((item) => (
-            <div key={item.label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, color: "#fff" }}>
-              {item.icon}
-              <span style={{ fontSize: 14, fontWeight: 600, letterSpacing: 0.2 }}>{item.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
+  );
+}
+
+// ─── STAT CARD ────────────────────────────────────────────────────────────────
+function StatCard({ num, suffix, title, desc }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        background: hovered ? "#9b0000" : "#e02020",
+        color: "#fff",
+        padding: "20px 22px",
+        borderRadius: 12,
+        boxShadow: "0 2px 8px rgba(0,0,0,.12)",
+        cursor: "pointer",
+        transition: "background 0.25s ease, transform 0.2s ease",
+        transform: hovered ? "translateY(-2px)" : "translateY(0)",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+    >
+      <div style={{ fontSize: 46, fontWeight: 900, lineHeight: 1 }}><AnimatedCounter to={num} suffix={suffix} /></div>
+      <div style={{ fontSize: 15, fontWeight: 700, margin: "6px 0 8px" }}>{title}</div>
+      <div style={{ fontSize: 11.5, lineHeight: 1.6, opacity: 0.9 }}>{desc}</div>
+    </div>
+  );
+}
+
+// ─── FEATURE STRIP ───────────────────────────────────────────────────────────
+function FeatureStrip() {
+  const features = [
+    { icon: "📋", bg: "#dbeafe", tc: "#1d4ed8", text: "Discover your strengths through smart assessments" },
+    { icon: "👥", bg: "#ede9fe", tc: "#6b21a8", text: "Simulate real-world roles to sharpen your edge" },
+    { icon: "💼", bg: "#fef3c7", tc: "#d97706", text: "Build a portfolio that proves your potential" },
+    { icon: "📊", bg: "#fee2e2", tc: "#e02020", text: "Get matched with the right opportunities" },
+    { icon: "🎯", bg: "#dcfce7", tc: "#16a34a", text: "Track your progress with real-time analytics" },
+    { icon: "🚀", bg: "#fce7f3", tc: "#db2777", text: "Launch your career with verified skill badges" },
+  ];
+  return (
+    <div style={{
+      position: "absolute",
+      bottom: 0, left: 0, right: 0,
+      zIndex: 10,
+      background: "rgba(255,255,255,0.96)",
+      backdropFilter: "blur(12px)",
+      borderTop: "1px solid rgba(226,226,226,0.6)",
+      overflow: "hidden",
+      boxShadow: "0 -4px 20px rgba(0,0,0,.06)",
+      padding: "8px 0",
+    }}>
+      <div className="marquee-track">
+        {[...features, ...features].map((f, i) => (
+          <div key={i} style={{
+            flexShrink: 0,
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            background: "#fff",
+            border: "1px solid #e5e7eb",
+            borderRadius: 12,
+            padding: "10px 18px",
+            margin: "0 10px",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+            fontSize: 13,
+            fontWeight: 500,
+            color: "#374151",
+            whiteSpace: "nowrap",
+          }}>
+            <div style={{
+              width: 34, height: 34, borderRadius: 8,
+              background: f.bg, color: f.tc,
+              display: "flex", alignItems: "center", justifyContent: "center",
+              flexShrink: 0, fontSize: 17,
+            }}>
+              {f.icon}
+            </div>
+            {f.text}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -709,23 +534,21 @@ export default function SkillzzaHome() {
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
-        backgroundImage: getBackgroundImageUrl('/hero-background.png'),
+        backgroundImage: "url('/hero-background.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: "scroll",
       }}>
-        {/* Hero Girl Image */}
+        {/* Hero Girl Image — touches bottom border */}
         <div style={{ position: "absolute", right: 0, bottom: 0, top: 0, width: "50%", zIndex: 5, display: "flex", alignItems: "flex-end", justifyContent: "center", pointerEvents: "none" }}>
-          {/* Red block behind */}
-          <div style={{ position: "absolute", right: 0, top: "10%", width: "55%", height: "80%", background: "#e02020", borderRadius: "16px 0 0 16px", zIndex: 1 }} />
           <img
-            src={getAssetPath("/hero-girl.jpeg")}
+            src={getAssetPath("/hero-girl.png")}
             alt="Hero"
-            style={{ position: "relative", zIndex: 2, height: "95%", maxHeight: 620, objectFit: "contain", objectPosition: "bottom", filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.15))" }}
+            style={{ position: "relative", zIndex: 2, height: "108%", maxHeight: 720, objectFit: "contain", objectPosition: "bottom", filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.15))", marginBottom: 0, marginTop: "38px" }}
           />
         </div>
 
-        <div style={{ position: "relative", zIndex: 10, maxWidth: 1200, margin: "0 auto", padding: "60px 60px", width: "100%" }}>
+        <div style={{ position: "relative", zIndex: 10, maxWidth: 1200, margin: "0 auto", padding: "0px 60px 180px", width: "100%", marginTop: "-38px" }}>
           <div style={{ maxWidth: 550 }}>
             <h1 style={{
               fontSize: 56,
@@ -792,80 +615,69 @@ export default function SkillzzaHome() {
           </div>
         </div>
 
-        {/* Bottom feature strip */}
-        <div style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          zIndex: 10,
-          background: "rgba(255,255,255,0.95)",
-          backdropFilter: "blur(10px)",
-          borderTop: "1px solid rgba(226,226,226,0.5)",
-          display: "flex",
-          boxShadow: "0 -4px 16px rgba(0,0,0,.04)",
-        }}>
-          {[
-            { icon: "📋", bg: "#dbeafe", tc: "#1d4ed8", text: "Discover your strengths through smart assessments" },
-            { icon: "👥", bg: "#ede9fe", tc: "#6b21a8", text: "Simulate real-world roles to sharpen your edge" },
-            { icon: "💼", bg: "#fef3c7", tc: "#d97706", text: "Build a portfolio that proves your potential" },
-            { icon: "📊", bg: "#fee2e2", tc: "#e02020", text: "Get matched with the right opportunities" },
-          ].map((f, i, arr) => (
-            <div key={i} style={{
-              flex: 1,
-              padding: "18px 16px",
-              display: "flex",
-              alignItems: "center",
-              gap: 12,
-              borderRight: i < arr.length - 1 ? "1px solid #e5e7eb" : "none",
-              fontSize: 13,
-              fontWeight: 500,
-              color: "#4b5563",
-            }}>
-              <div style={{
-                width: 40,
-                height: 40,
-                borderRadius: 8,
-                background: f.bg,
-                color: f.tc,
+        {/* Feature strip — absolute, 3cm (48px) above bottom border, above girl (zIndex 6) */}
+        <div style={{ position: "absolute", bottom: 48, left: 0, right: 0, zIndex: 6, overflow: "hidden" }}>
+          <div className="marquee-track">
+            {[
+              { icon: "📋", bg: "#dbeafe", tc: "#1d4ed8", text: "Discover your strengths through smart assessments" },
+              { icon: "👥", bg: "#ede9fe", tc: "#6b21a8", text: "Simulate real-world roles to sharpen your edge" },
+              { icon: "💼", bg: "#fef3c7", tc: "#d97706", text: "Build a portfolio that proves your potential" },
+              { icon: "📊", bg: "#fee2e2", tc: "#e02020", text: "Get matched with the right opportunities" },
+              { icon: "🎯", bg: "#dcfce7", tc: "#16a34a", text: "Track your progress with real-time analytics" },
+              { icon: "🚀", bg: "#fce7f3", tc: "#db2777", text: "Launch your career with verified skill badges" },
+              { icon: "📋", bg: "#dbeafe", tc: "#1d4ed8", text: "Discover your strengths through smart assessments" },
+              { icon: "👥", bg: "#ede9fe", tc: "#6b21a8", text: "Simulate real-world roles to sharpen your edge" },
+              { icon: "💼", bg: "#fef3c7", tc: "#d97706", text: "Build a portfolio that proves your potential" },
+              { icon: "📊", bg: "#fee2e2", tc: "#e02020", text: "Get matched with the right opportunities" },
+              { icon: "🎯", bg: "#dcfce7", tc: "#16a34a", text: "Track your progress with real-time analytics" },
+              { icon: "🚀", bg: "#fce7f3", tc: "#db2777", text: "Launch your career with verified skill badges" },
+            ].map((f, i) => (
+              <div key={i} style={{
+                flexShrink: 0,
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-                fontSize: 18,
-                fontWeight: 600,
+                gap: 10,
+                background: "rgba(255,255,255,0.95)",
+                border: "1px solid #e5e7eb",
+                borderRadius: 12,
+                padding: "10px 18px",
+                margin: "0 8px",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                fontSize: 13,
+                fontWeight: 500,
+                color: "#374151",
+                whiteSpace: "nowrap",
               }}>
-                {f.icon}
+                <div style={{ width: 32, height: 32, borderRadius: 8, background: f.bg, color: f.tc, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: 16 }}>
+                  {f.icon}
+                </div>
+                {f.text}
               </div>
-              <span style={{ lineHeight: 1.4 }}>{f.text}</span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
       </section>
 
       {/* CHALLENGE SECTION */}
-      <section style={{ background: "#fff", padding: "80px 0" }}>
+      <section style={{ background: "#fff", padding: "48px 0" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-          <div style={{ textAlign: "center", maxWidth: 680, margin: "0 auto 56px" }}>
+          <div style={{ textAlign: "center", maxWidth: 680, margin: "0 auto 36px" }}>
             <h2 style={{ fontSize: 38, fontWeight: 800 }}>The Challenge<br />A Widening Skill Gap</h2>
             <p style={{ color: "#4b5563", fontSize: 15, lineHeight: 1.7, marginTop: 12 }}>As industries rapidly transform, the gap between workforce skills and employer demands continues to widen. This growing disparity limits career progress, restricts opportunities, and creates major obstacles for individuals worldwide leaving many struggling to keep pace with the fast-evolving job market.</p>
           </div>
-          <div style={{ display: "flex", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 24px rgba(0,0,0,.08)" }}>
-            <div style={{ flex: 1, minHeight: 360, background: "linear-gradient(135deg,#f5f0e8,#ede0c8)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 32 }}>
-              <img src={getAssetPath("/skill-gap-image.png")} alt="Skill Gap" style={{ width: "500px", height: "500px", objectFit: "cover", borderRadius: 8 }} />
+          <div style={{ display: "flex", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 24px rgba(0,0,0,.08)", height: 420 }}>
+            <div style={{ flex: 1, background: "#f1f2f4", overflow: "hidden" }}>
+              <img src={getAssetPath("/skill-gap-image.png")} alt="Skill Gap" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center bottom", display: "block" }} />
             </div>
-            <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "1fr 1fr", gap: 16, padding: 16 }}>
+            <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "1fr 1fr", gap: 10, padding: 10, background: "#fff" }}>
               {[
-                { num: 69, suffix: "%", title: "The Recruitment Crisis", desc: "Nearly 69% of organizations report ongoing difficulties recruiting for full-time roles reflecting persistent hiring challenges across sectors.", bg: "#e02020" },
-                { num: 74, suffix: "%", title: "The AI Training Gap", desc: "Although 74% of employees use AI tools at work, only 33% have received formal training to use them effectively and safely.", bg: "#c0150a" },
-                { num: 59, suffix: "%", title: "The Reskilling Imperative", desc: "By 2030, an estimated 59% of employees will need reskilling or upskilling, marking a continued upward trend from the 50% forecast for 2025.", bg: "#b01208" },
-                { num: 63, suffix: "%", title: "Skills Are the Biggest Barrier", desc: "With 63% of employers citing skill gaps as the top barrier to transformation, 85% plan to prioritize workforce upskilling.", bg: "#e02020" },
+                { num: 69, suffix: "%", title: "The Recruitment Crisis", desc: "Nearly 69% of organizations report ongoing difficulties recruiting for full-time roles reflecting persistent hiring challenges across sectors." },
+                { num: 74, suffix: "%", title: "The AI Training Gap", desc: "Although 74% of employees use AI tools at work, only 33% have received formal training to use them effectively and safely." },
+                { num: 59, suffix: "%", title: "The Reskilling Imperative", desc: "By 2030, an estimated 59% of employees will need reskilling or upskilling, marking a continued upward trend from the 50% forecast for 2025." },
+                { num: 63, suffix: "%", title: "Skills Are the Biggest Barrier", desc: "With 63% of employers citing skill gaps as the top barrier to transformation, 85% plan to prioritize workforce upskilling." },
               ].map((s) => (
-                <div key={s.title} style={{ background: s.bg, color: "#fff", padding: "36px 28px", borderRadius: 12, boxShadow: "0 2px 8px rgba(0,0,0,.12)" }}>
-                  <div style={{ fontSize: 52, fontWeight: 900, lineHeight: 1 }}><AnimatedCounter to={s.num} suffix={s.suffix} /></div>
-                  <div style={{ fontSize: 16, fontWeight: 700, margin: "8px 0 10px" }}>{s.title}</div>
-                  <div style={{ fontSize: 12, lineHeight: 1.6, opacity: 0.9 }}>{s.desc}</div>
-                </div>
+                <StatCard key={s.title} {...s} />
               ))}
             </div>
           </div>
@@ -876,21 +688,49 @@ export default function SkillzzaHome() {
       <EcosystemSection />
 
       {/* SKILL STUDIO SECTION */}
-      <section style={{ background: "#f9fafb", padding: "80px 0" }}>
+      <section style={{ background: "#fff", padding: "48px 0 0" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-          <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#e02020", marginBottom: 8 }}></div>
+          <div style={{ textAlign: "center", marginBottom: 28 }}>
             <h2 style={{ fontSize: 36, fontWeight: 800 }}>The Solution-Skill Studio</h2>
           </div>
-          <div className="tabs-row" style={{ display: "flex", borderBottom: "2px solid #e5e7eb", overflowX: "auto", scrollbarWidth: "none", msOverflowStyle: "none" }}>
-            {studioTabs.map((t) => (
-              <button key={t.id} onClick={() => setActiveTab(t.id)}
-                style={{ padding: "14px 22px", fontSize: 14, fontWeight: 600, border: "none", background: "none", cursor: "pointer", whiteSpace: "nowrap", color: activeTab === t.id ? "#6b21a8" : "#6b7280", borderBottom: activeTab === t.id ? "3px solid #6b21a8" : "3px solid transparent", marginBottom: -2, transition: "color .2s" }}>
-                {t.label}
-              </button>
-            ))}
+
+          {/* Pill Tabs */}
+          <div className="tabs-row" style={{ display: "flex", gap: 12, overflowX: "auto", scrollbarWidth: "none", msOverflowStyle: "none", marginBottom: 28, justifyContent: "flex-start", flexWrap: "wrap" }}>
+            {studioTabs.map((t, idx) => {
+              const isActive = activeTab === t.id;
+              const tabColors = [
+                { bg: "#9b6fd4", hover: "#8a5ec7", text: "#000" },
+                { bg: "#f7bb5f", hover: "#f0a832", text: "#000" },
+                { bg: "#7d8796", hover: "#6b7280", text: "#000" },
+                { bg: "#f07070", hover: "#e05050", text: "#000" },
+                { bg: "#60a5fa", hover: "#3b82f6", text: "#000" },
+              ];
+              const c = tabColors[idx] || tabColors[0];
+              return (
+                <button key={t.id} onClick={() => setActiveTab(t.id)}
+                  onMouseEnter={e => { e.currentTarget.style.background = c.hover; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.background = c.bg; e.currentTarget.style.transform = "translateY(0)"; }}
+                  style={{
+                    padding: "10px 24px",
+                    fontSize: 14,
+                    fontWeight: 600,
+                    border: "none",
+                    borderRadius: 10,
+                    cursor: "pointer",
+                    whiteSpace: "nowrap",
+                    transition: "all .2s",
+                    background: isActive ? c.bg : c.bg,
+                    color: isActive ? "#fff" : c.text,
+                    boxShadow: isActive ? `0 4px 12px rgba(124,58,237,0.35)` : "none",
+                    outline: "none",
+                  }}>
+                  {t.label}
+                </button>
+              );
+            })}
           </div>
-          <div style={{ background: "#fff", borderRadius: "0 0 16px 16px", boxShadow: "0 4px 24px rgba(0,0,0,.06)", padding: "48px", display: "flex", gap: 48, alignItems: "center", minHeight: 420, overflow: "hidden" }}>
+
+          <div style={{ background: "#fff", borderRadius: "16px 16px 0 0", boxShadow: "0 4px 24px rgba(0,0,0,.06)", padding: "48px", display: "flex", gap: 48, alignItems: "center", minHeight: 420, overflow: "hidden" }}>
             <div style={{ flex: 1 }}>
               <h3 style={{ fontSize: 28, fontWeight: 800, color: "#6b21a8", marginBottom: 8 }}>{tab.title}</h3>
               <p style={{ fontSize: 16, color: "#4b5563", marginBottom: 20, lineHeight: 1.5 }}>{tab.tagline}</p>
@@ -907,7 +747,9 @@ export default function SkillzzaHome() {
                 ))}
               </div>
             </div>
-            <div style={{ flex: 1, maxWidth: 440 }}><MockDashboard /></div>
+            <div style={{ flex: 1, maxWidth: 440 }}>
+              <img src={getAssetPath("/mockdashboard.png")} alt="Dashboard" style={{ width: "100%", borderRadius: 16, boxShadow: "0 8px 32px rgba(0,0,0,0.10)" }} />
+            </div>
           </div>
         </div>
       </section>
@@ -917,9 +759,6 @@ export default function SkillzzaHome() {
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
           <div style={{ display: "flex", alignItems: "center", border: "1px solid #f3f4f6", borderRadius: 16, overflow: "hidden" }}>
             <div style={{ position: "relative", flexShrink: 0, width: 380, minHeight: 400, display: "flex", alignItems: "flex-end", justifyContent: "center", overflow: "hidden" }}>
-              {/* Orange block behind */}
-              <div style={{ position: "absolute", left: 20, top: "15%", width: "55%", height: "65%", background: "#f5a623", borderRadius: 12, zIndex: 1 }} />
-              {/* Girl image */}
               <img
                 src={getAssetPath("/school-girl.png")}
                 alt="School of Technology"
@@ -942,13 +781,13 @@ export default function SkillzzaHome() {
       </section>
 
       {/* PARTNERSHIPS SECTION */}
-      <section style={{ background: "#f9fafb", padding: "80px 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+      <section style={{ backgroundImage: `url(${getAssetPath('/school-background.png')})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", padding: "80px 0", position: "relative" }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(241,242,244,0.82)", zIndex: 0 }} />
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px", position: "relative", zIndex: 1 }}>
           <div style={{ display: "flex", gap: 64, alignItems: "center" }}>
-
             {/* Left Text */}
             <div style={{ flex: 1 }}>
-              <h2 style={{ fontSize: 42, fontWeight: 900, lineHeight: 1.15, marginBottom: 24, color: "#1a1a2e" }}>Partnerships For<br />Impact</h2>
+              <h2 style={{ fontSize: 32, fontWeight: 600, lineHeight: 1.25, marginBottom: 24, color: "#1a1a2e", fontFamily: "'Inter','Segoe UI',sans-serif", letterSpacing: "-0.2px" }}>Partnerships For<br />Impact</h2>
               <p style={{ color: "#4b5563", fontSize: 14, lineHeight: 1.8, marginBottom: 16 }}>At Skillzza, we believe that collaboration is the cornerstone of impactful change. By joining forces, we aim to bridge skill gaps and create a future-ready workforce.</p>
               <p style={{ color: "#4b5563", fontSize: 14, lineHeight: 1.8 }}>Together, we can shape a world where education and skills are accessible to all, fostering innovation and sustainable growth.</p>
             </div>
@@ -974,69 +813,78 @@ export default function SkillzzaHome() {
       </section>
 
       {/* PARTNER CTA SECTION */}
-      <section style={{ background: "#f5a623", padding: "0", overflow: "hidden", position: "relative", minHeight: 520 }}>
-        {/* Faint watermark icon */}
-        <div style={{ position: "absolute", right: "5%", top: "50%", transform: "translateY(-50%)", fontSize: 280, opacity: 0.08, pointerEvents: "none", userSelect: "none" }}>🤝</div>
+      <section style={{
+        backgroundImage: `url(${getAssetPath('/background-partner.png')})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        padding: "0",
+        overflow: "hidden",
+        position: "relative",
+        width: "100%",
+      }}>
+        <div style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", width: "100%", paddingTop: 40 }}>
 
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "flex-end", minHeight: 520 }}>
-
-          {/* Left - Image starts from middle, flush to bottom */}
-          <div style={{ flex: "0 0 480px", alignSelf: "flex-end", marginLeft: 48 }}>
+          {/* Left — "Partner with us" above image, flush extreme left */}
+          <div style={{ flex: "0 0 46%", position: "relative" }}>
             <img
-              src={getAssetPath("/partner-cta.png")}
+              src={getAssetPath('/businesspeople-having-discussion-office@2x.png')}
               alt="Partner with us"
-              style={{ width: "100%", height: 420, objectFit: "cover", objectPosition: "center top", display: "block", borderRadius: "8px 8px 0 0" }}
+              style={{ width: "100%", height: "auto", minHeight: 340, objectFit: "cover", objectPosition: "center", display: "block" }}
             />
-          </div> 
+            {/* Bottom yellow strip */}
+            <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 12, background: "#FDB913" }} />
+          </div>
 
-          {/* Right - Text + Form, vertically centered */}
-          <div style={{ flex: 1, padding: "60px 60px 60px 64px", position: "relative", zIndex: 2 }}>
-            <h2 style={{ fontSize: 42, fontWeight: 900, lineHeight: 1.2, marginBottom: 16, color: "#1a1a1a" }}>
+          {/* Right — both headings + form */}
+          <div style={{ flex: 1, display: "flex", flexDirection: "column", padding: "0px 64px 48px 64px" }}>
+            <h2 style={{ fontSize: 36, fontWeight: 700, color: "#1f2937", lineHeight: 1.25, marginBottom: 16, fontFamily: "Inter, sans-serif" }}>
               Partner with us<br />To make a Difference
             </h2>
-            <p style={{ fontSize: 14, color: "#374151", marginBottom: 32, lineHeight: 1.7, maxWidth: 420 }}>
+            <p style={{ fontSize: 15, color: "#4b5563", marginBottom: 28, lineHeight: 1.6, maxWidth: 400, fontFamily: "Inter, sans-serif" }}>
               Connect with our industry experts for a personalised consultation. Let's explore how our solutions can revolutionise your growth.
             </p>
-
-            <input placeholder="Name*" style={{ width: "100%", padding: "16px 20px", border: "none", borderRadius: 8, fontSize: 14, marginBottom: 16, background: "#fff", outline: "none", fontFamily: "inherit", boxSizing: "border-box" }} />
-            <input placeholder="Email*" style={{ width: "100%", padding: "16px 20px", border: "none", borderRadius: 8, fontSize: 14, marginBottom: 16, background: "#fff", outline: "none", fontFamily: "inherit", boxSizing: "border-box" }} />
-
-            <div style={{ display: "flex", gap: 12, marginBottom: 20 }}>
-              <div style={{ background: "#fff", borderRadius: 8, padding: "16px 16px", fontSize: 13, fontWeight: 600, color: "#374151", whiteSpace: "nowrap", display: "flex", alignItems: "center" }}>
-                India &nbsp;+91
+            <div style={{ display: "flex", flexDirection: "column", gap: 14, maxWidth: 420 }}>
+              <input placeholder="Name*" style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }} />
+              <input placeholder="Email*" style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }} />
+              <div style={{ display: "flex", gap: 12 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 4, padding: "13px 16px", borderRadius: 6, background: "#fff", color: "#1f2937", fontSize: 14, minWidth: 100, fontFamily: "Inter, sans-serif" }}>
+                  <span>India</span><span style={{ color: "#9ca3af", marginLeft: 4 }}>+91</span>
+                </div>
+                <input placeholder="Mobile Number*" style={{ flex: 1, padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif" }} />
               </div>
-              <input placeholder="Mobile Number*" style={{ flex: 1, padding: "16px 20px", border: "none", borderRadius: 8, fontSize: 14, background: "#fff", outline: "none", fontFamily: "inherit" }} />
+              <button
+                onMouseEnter={e => e.currentTarget.style.opacity = "0.9"}
+                onMouseLeave={e => e.currentTarget.style.opacity = "1"}
+                style={{ width: "100%", padding: "14px", borderRadius: 6, background: "#1f2937", color: "#fff", border: "none", fontSize: 16, fontWeight: 600, cursor: "pointer", fontFamily: "Inter, sans-serif", marginTop: 4, transition: "opacity 0.2s" }}>
+                Get Started
+              </button>
             </div>
-
-            <button style={{ width: "100%", padding: "18px", background: "#111", color: "#fff", border: "none", borderRadius: 8, fontSize: 16, fontWeight: 700, cursor: "pointer", fontFamily: "inherit", letterSpacing: 0.3 }}>
-              Get Started
-            </button>
           </div>
 
         </div>
       </section>
 
       {/* INSIGHTS SECTION */}
-      <section style={{ background: "#fff", padding: "80px 0" }}>
+      <section style={{ background: "#fff", padding: "80px 0", fontFamily: "Inter, sans-serif" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
           <div style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
 
             {/* Left Column */}
             <div style={{ display: "flex", flexDirection: "column", width: 280, flexShrink: 0, alignSelf: "stretch" }}>
-              <h2 style={{ fontSize: 40, fontWeight: 900, marginBottom: 16, color: "#1a1a2e" }}>Insights</h2>
-              <button style={{ border: "1.5px solid #d1d5db", background: "#fff", padding: "10px 20px", borderRadius: 8, fontSize: 13, fontWeight: 600, color: "#374151", cursor: "pointer", alignSelf: "flex-start", marginBottom: 24 }}>View all the resources</button>
+              <h2 style={{ fontSize: 42, fontWeight: 800, marginBottom: 20, color: "#111827", fontFamily: "Inter, sans-serif", letterSpacing: "-0.5px" }}>Insights</h2>
+              <button style={{ border: "1.5px solid #d1d5db", background: "#fff", padding: "10px 20px", borderRadius: 8, fontSize: 14, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", marginBottom: 24, fontFamily: "Inter, sans-serif" }}>View all the resources</button>
 
-              {/* Blog Card - stretches to fill remaining height */}
+              {/* Blog Card */}
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#ede9fe", display: "flex", flexDirection: "column", flex: 1 }}>
-                <div style={{ height: 200, background: "#1a1a2e", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", position: "relative", flexShrink: 0 }}>
-                  <img src={getAssetPath("/insight-blog.png")} alt="Blog" style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                <div style={{ background: "#1a1a2e", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", position: "relative", flexShrink: 0 }}>
+                  <img src={getAssetPath("/insight-blog.png")} alt="Blog" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
                     onError={e => { e.target.style.display = "none"; }} />
-                  <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.15)", backdropFilter: "blur(4px)", borderRadius: 6, padding: "4px 10px", fontSize: 10, fontWeight: 700, color: "#fff" }}>AI Assistant</div>
+                  <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.15)", backdropFilter: "blur(4px)", borderRadius: 6, padding: "4px 10px", fontSize: 11, fontWeight: 700, color: "#fff", fontFamily: "Inter, sans-serif" }}>AI Assistant</div>
                 </div>
                 <div style={{ padding: "20px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <div style={{ fontSize: 28, color: "#7c3aed", marginBottom: 12 }}>✏️</div>
-                  <h4 style={{ fontSize: 15, fontWeight: 700, color: "#1f2937", marginBottom: 16, lineHeight: 1.5, flex: 1 }}>Skill Gaps to Skill Maps: The Future of Adaptive Career Assessment with AI</h4>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "8px 16px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start" }}>Read the Blog</button>
+                  <img src={getAssetPath("/pen.svg")} alt="Blog" style={{ width: 40, height: 40, marginBottom: 12 }} />
+                  <h4 style={{ fontSize: 16, fontWeight: 700, color: "#111827", marginBottom: 16, lineHeight: 1.5, flex: 1, fontFamily: "Inter, sans-serif" }}>Skill Gaps to Skill Maps: The Future of Adaptive Career Assessment with AI</h4>
+                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Read the Blog</button>
                 </div>
               </div>
             </div>
@@ -1046,38 +894,38 @@ export default function SkillzzaHome() {
 
               {/* Card 2 - AI Talent Report */}
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#fef3e2", display: "flex", flexDirection: "column" }}>
-                <div style={{ height: 180, overflow: "hidden", background: "#e5d5c0" }}>
-                  <img src={getAssetPath("/insight-robot.png")} alt="AI Robot" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <div style={{ overflow: "hidden", background: "#e5d5c0" }}>
+                  <img src={getAssetPath("/insight-robot.png")} alt="AI Robot" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
                 </div>
-                <div style={{ padding: "16px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <span style={{ display: "inline-block", padding: "5px 12px", borderRadius: 20, fontSize: 11, fontWeight: 700, background: "#f5a623", color: "#fff", marginBottom: 12, alignSelf: "flex-start" }}>Research & Insights</span>
-                  <h4 style={{ fontSize: 16, fontWeight: 700, color: "#1f2937", marginBottom: 16, flex: 1, lineHeight: 1.4 }}>2025 AI Talent & Salary Benchmark Report</h4>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "8px 16px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start" }}>Read the reports</button>
+                <div style={{ padding: "18px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
+                  <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, background: "#f5a623", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
+                  <h4 style={{ fontSize: 17, fontWeight: 700, color: "#111827", marginBottom: 16, flex: 1, lineHeight: 1.4, fontFamily: "Inter, sans-serif" }}>2025 AI Talent & Salary Benchmark Report</h4>
+                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Read the reports</button>
                 </div>
               </div>
 
               {/* Card 3 - Skill Blueprint */}
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#fce7f3", display: "flex", flexDirection: "column" }}>
-                <div style={{ height: 180, overflow: "hidden", background: "#d0b0c0" }}>
-                  <img src={getAssetPath("/insight-future.png")} alt="Future of Work" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <div style={{ overflow: "hidden", background: "#d0b0c0" }}>
+                  <img src={getAssetPath("/insight-future.png")} alt="Future of Work" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
                 </div>
-                <div style={{ padding: "16px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <span style={{ display: "inline-block", padding: "5px 12px", borderRadius: 20, fontSize: 11, fontWeight: 700, background: "#e02020", color: "#fff", marginBottom: 12, alignSelf: "flex-start" }}>Research & Insights</span>
-                  <h4 style={{ fontSize: 16, fontWeight: 700, color: "#1f2937", marginBottom: 16, flex: 1, lineHeight: 1.4 }}>The Skill Blueprint AI & The Future of Work</h4>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "8px 16px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start" }}>Explore the Case studies</button>
+                <div style={{ padding: "18px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
+                  <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, background: "#e02020", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
+                  <h4 style={{ fontSize: 17, fontWeight: 700, color: "#111827", marginBottom: 16, flex: 1, lineHeight: 1.4, fontFamily: "Inter, sans-serif" }}>The Skill Blueprint AI & The Future of Work</h4>
+                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Explore the Case studies</button>
                 </div>
               </div>
 
               {/* Card 4 - Podcast (spans full width) */}
               <div style={{ gridColumn: "1 / -1", borderRadius: 16, background: "#cffafe", padding: "28px 32px", display: "flex", alignItems: "center", gap: 24 }}>
                 <div style={{ flex: 1 }}>
-                  <span style={{ display: "inline-block", background: "#22d3ee", color: "#fff", fontSize: 11, fontWeight: 700, padding: "5px 14px", borderRadius: 20, marginBottom: 14 }}>Podcast</span>
-                  <h4 style={{ fontSize: 20, fontWeight: 700, marginBottom: 10, color: "#1a1a2e", lineHeight: 1.3 }}>Skills DECODED:<br />Conversations that matter.</h4>
-                  <p style={{ fontSize: 13, color: "#4b5563", lineHeight: 1.6, marginBottom: 0, maxWidth: 480 }}>Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.</p>
+                  <span style={{ display: "inline-block", background: "#22d3ee", color: "#fff", fontSize: 12, fontWeight: 600, padding: "5px 14px", borderRadius: 20, marginBottom: 14, fontFamily: "Inter, sans-serif" }}>Podcast</span>
+                  <h4 style={{ fontSize: 22, fontWeight: 700, marginBottom: 10, color: "#111827", lineHeight: 1.3, fontFamily: "Inter, sans-serif" }}>Skills DECODED:<br />Conversations that matter.</h4>
+                  <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.6, marginBottom: 0, maxWidth: 480, fontFamily: "Inter, sans-serif" }}>Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.</p>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, flexShrink: 0 }}>
-                  <div style={{ fontSize: 64, color: "#0891b2" }}>🎙️</div>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 600, color: "#374151", cursor: "pointer", whiteSpace: "nowrap" }}>Listen now</button>
+                  <img src={getAssetPath("/mic.svg")} alt="Podcast" style={{ width: 72, height: 72 }} />
+                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", whiteSpace: "nowrap", fontFamily: "Inter, sans-serif" }}>Listen now</button>
                 </div>
               </div>
 
