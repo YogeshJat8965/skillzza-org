@@ -23,17 +23,71 @@ const MARQUEE_CSS = `
   animation: featureScroll 20s linear infinite;
 }
 .feature-track:hover { animation-play-state: paused; }
-* {
-  scrollbar-width: none !important;
-  -ms-overflow-style: none !important;
+* { scrollbar-width: none !important; -ms-overflow-style: none !important; box-sizing: border-box; }
+*::-webkit-scrollbar { display: none !important; }
+.tabs-row::-webkit-scrollbar { display: none !important; }
+
+/* ── GLOBAL RESPONSIVE ── */
+@media (max-width: 768px) {
+  /* Hero */
+  .hero-section { min-height: unset !important; }
+  .hero-img-col { position: relative !important; width: 100% !important; top: unset !important; right: unset !important; bottom: unset !important; height: 280px !important; justify-content: center !important; }
+  .hero-img-col img { height: 100% !important; max-height: 280px !important; margin-top: 0 !important; }
+  .hero-text-col { padding: 32px 20px 24px !important; margin-top: 0 !important; text-align: center !important; }
+  .hero-text-col h1 { font-size: 28px !important; margin-bottom: 14px !important; }
+  .hero-text-col p { font-size: 14px !important; margin-bottom: 20px !important; }
+  .hero-btns { justify-content: center !important; }
+  .feature-strip { position: relative !important; bottom: unset !important; margin-top: 16px; }
+  .hero-section { display: flex !important; flex-direction: column-reverse !important; }
+
+  /* Challenge */
+  .challenge-row { flex-direction: column !important; height: auto !important; }
+  .challenge-img { width: 100% !important; height: 200px !important; min-height: unset !important; }
+  .challenge-stats { padding: 20px 16px !important; }
+  .challenge-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* Studio */
+  .studio-content-row { flex-direction: column !important; padding: 24px !important; }
+  .studio-right-img { width: 100% !important; flex: unset !important; max-width: 100% !important; }
+
+  /* Partnerships */
+  .partnerships-row { flex-direction: column !important; gap: 24px !important; }
+  .partner-cards { grid-template-columns: 1fr 1fr !important; }
+
+  /* Partner CTA */
+  .partner-cta-main { flex-direction: column !important; padding-top: 0 !important; }
+  .partner-cta-img-col { width: 100% !important; flex: unset !important; }
+  .partner-cta-img-col img { height: 200px !important; border-radius: 0 !important; }
+  .partner-cta-form-col { padding: 24px 20px 40px !important; }
+
+  /* Insights */
+  .insights-row { flex-direction: column !important; }
+  .insights-left-col { width: 100% !important; }
+  .insights-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* General padding */
+  .section-inner { padding: 0 16px !important; }
 }
-*::-webkit-scrollbar {
-  display: none !important;
+
+@media (max-width: 480px) {
+  .hero-text-col h1 { font-size: 22px !important; }
+  .challenge-grid { grid-template-columns: 1fr !important; }
+  .partner-cards { grid-template-columns: 1fr !important; }
+  .insights-grid { grid-template-columns: 1fr !important; }
+  .partner-cta-form-col { padding: 16px !important; }
 }
-.tabs-row::-webkit-scrollbar {
-  display: none !important;
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-text-col h1 { font-size: 40px !important; }
+  .hero-text-col { padding: 0px 40px 120px !important; }
+  .hero-img-col { width: 42% !important; }
+  .partner-cta-form-col { padding: 0px 32px 40px 32px !important; }
+  .studio-content-row { gap: 24px !important; }
+  .studio-right-img { max-width: 320px !important; }
 }
 `;
+
+// ─── DATA
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 const studioTabs = [
@@ -357,7 +411,7 @@ function PartnershipCards() {
   ];
 
   return (
-    <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, alignItems: "start" }}>
+    <div className="partner-cards" style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, alignItems: "start" }}>
       {/* Left col */}
       <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
         <PartnerCard {...cards[0]} />
@@ -376,7 +430,7 @@ function PartnershipCards() {
 function EcosystemSection() {
   return (
     <section style={{ background: "linear-gradient(160deg,#f8f4ff 0%,#ede8fb 60%,#e4dcf8 100%)", padding: "80px 0 0" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
+      <div className="section-inner" style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
 
         {/* Heading - kept as is */}
         <div style={{ textAlign: "center", marginBottom: 48 }}>
@@ -385,7 +439,7 @@ function EcosystemSection() {
         </div>
 
         {/* SVG image + Talent Marketplace button overlay */}
-        <div style={{ position: "relative", width: "100%", marginBottom: "75.6px" }}>
+        <div className="ecosystem-wrap" style={{ position: "relative", width: "100%", marginBottom: "75.6px" }}>
           <img
             src={getAssetPath("/ecosystem.svg")}
             alt="Skillzza Ecosystem"
@@ -538,9 +592,9 @@ export default function SkillzzaHome() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "scroll",
-      }}>
+      }} className="hero-section">
         {/* Hero Girl Image — touches bottom border */}
-        <div style={{ position: "absolute", right: 0, bottom: 0, top: 0, width: "50%", zIndex: 5, display: "flex", alignItems: "flex-end", justifyContent: "center", pointerEvents: "none" }}>
+        <div className="hero-img-col" style={{ position: "absolute", right: 0, bottom: 0, top: 0, width: "50%", zIndex: 5, display: "flex", alignItems: "flex-end", justifyContent: "center", pointerEvents: "none" }}>
           <img
             src={getAssetPath("/hero-girl.png")}
             alt="Hero"
@@ -548,7 +602,7 @@ export default function SkillzzaHome() {
           />
         </div>
 
-        <div style={{ position: "relative", zIndex: 10, maxWidth: 1200, margin: "0 auto", padding: "0px 60px 180px", width: "100%", marginTop: "-38px" }}>
+        <div className="hero-text-col" style={{ position: "relative", zIndex: 10, maxWidth: 1200, margin: "0 auto", padding: "0px 60px 180px", width: "100%", marginTop: "-38px" }}>
           <div style={{ maxWidth: 550 }}>
             <h1 style={{
               fontSize: 56,
@@ -571,7 +625,7 @@ export default function SkillzzaHome() {
             }}>
               From Learning to Hiring – One Seamless Journey of Skill Discovery, Simulation & Transformation
             </p>
-            <div style={{ display: "flex", gap: 16, marginBottom: 0, flexWrap: "wrap" }}>
+            <div className="hero-btns" style={{ display: "flex", gap: 16, marginBottom: 0, flexWrap: "wrap" }}>
               <button style={{
                 background: "linear-gradient(90deg, #e02020 0%, #f5a623 100%)",
                 color: "#fff",
@@ -615,8 +669,8 @@ export default function SkillzzaHome() {
           </div>
         </div>
 
-        {/* Feature strip — absolute, 3cm (48px) above bottom border, above girl (zIndex 6) */}
-        <div style={{ position: "absolute", bottom: 48, left: 0, right: 0, zIndex: 6, overflow: "hidden" }}>
+        {/* Feature strip */}
+        <div className="feature-strip" style={{ position: "absolute", bottom: 48, left: 0, right: 0, zIndex: 6, overflow: "hidden" }}>
           <div className="marquee-track">
             {[
               { icon: "📋", bg: "#dbeafe", tc: "#1d4ed8", text: "Discover your strengths through smart assessments" },
@@ -660,17 +714,17 @@ export default function SkillzzaHome() {
       </section>
 
       {/* CHALLENGE SECTION */}
-      <section style={{ background: "#fff", padding: "48px 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+      <section className="challenge-section" style={{ background: "#fff", padding: "48px 0" }}>
+        <div className="section-inner" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
           <div style={{ textAlign: "center", maxWidth: 680, margin: "0 auto 36px" }}>
             <h2 style={{ fontSize: 38, fontWeight: 800 }}>The Challenge<br />A Widening Skill Gap</h2>
             <p style={{ color: "#4b5563", fontSize: 15, lineHeight: 1.7, marginTop: 12 }}>As industries rapidly transform, the gap between workforce skills and employer demands continues to widen. This growing disparity limits career progress, restricts opportunities, and creates major obstacles for individuals worldwide leaving many struggling to keep pace with the fast-evolving job market.</p>
           </div>
-          <div style={{ display: "flex", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 24px rgba(0,0,0,.08)", height: 420 }}>
-            <div style={{ flex: 1, background: "#f1f2f4", overflow: "hidden" }}>
+          <div className="challenge-row" style={{ display: "flex", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 24px rgba(0,0,0,.08)", height: 420 }}>
+            <div className="challenge-img" style={{ flex: 1, background: "#f1f2f4", overflow: "hidden" }}>
               <img src={getAssetPath("/skill-gap-image.png")} alt="Skill Gap" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center bottom", display: "block" }} />
             </div>
-            <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "1fr 1fr", gap: 10, padding: 10, background: "#fff" }}>
+            <div className="challenge-stats challenge-grid" style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "1fr 1fr", gap: 10, padding: 10, background: "#fff" }}>
               {[
                 { num: 69, suffix: "%", title: "The Recruitment Crisis", desc: "Nearly 69% of organizations report ongoing difficulties recruiting for full-time roles reflecting persistent hiring challenges across sectors." },
                 { num: 74, suffix: "%", title: "The AI Training Gap", desc: "Although 74% of employees use AI tools at work, only 33% have received formal training to use them effectively and safely." },
@@ -689,7 +743,7 @@ export default function SkillzzaHome() {
 
       {/* SKILL STUDIO SECTION */}
       <section style={{ background: "#fff", padding: "48px 0 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+        <div className="section-inner" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
           <div style={{ textAlign: "center", marginBottom: 28 }}>
             <h2 style={{ fontSize: 36, fontWeight: 800 }}>The Solution-Skill Studio</h2>
           </div>
@@ -730,7 +784,7 @@ export default function SkillzzaHome() {
             })}
           </div>
 
-          <div style={{ background: "#fff", borderRadius: "16px 16px 0 0", boxShadow: "0 4px 24px rgba(0,0,0,.06)", padding: "48px", display: "flex", gap: 48, alignItems: "center", minHeight: 420, overflow: "hidden" }}>
+          <div className="studio-content-row" style={{ background: "#fff", borderRadius: "16px 16px 0 0", boxShadow: "0 4px 24px rgba(0,0,0,.06)", padding: "48px", display: "flex", gap: 48, alignItems: "center", minHeight: 420, overflow: "hidden" }}>
             <div style={{ flex: 1 }}>
               <h3 style={{ fontSize: 28, fontWeight: 800, color: "#6b21a8", marginBottom: 8 }}>{tab.title}</h3>
               <p style={{ fontSize: 16, color: "#4b5563", marginBottom: 20, lineHeight: 1.5 }}>{tab.tagline}</p>
@@ -747,7 +801,7 @@ export default function SkillzzaHome() {
                 ))}
               </div>
             </div>
-            <div style={{ flex: 1, maxWidth: 440 }}>
+            <div className="studio-right-img" style={{ flex: 1, maxWidth: 440 }}>
               <img src={getAssetPath("/mockdashboard.png")} alt="Dashboard" style={{ width: "100%", borderRadius: 16, boxShadow: "0 8px 32px rgba(0,0,0,0.10)" }} />
             </div>
           </div>
@@ -756,7 +810,7 @@ export default function SkillzzaHome() {
 
       {/* SCHOOL OF TECHNOLOGY SECTION */}
       <section style={{ background: "#fff", padding: "80px 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+        <div className="section-inner" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
           <div style={{ display: "flex", alignItems: "center", border: "1px solid #f3f4f6", borderRadius: 16, overflow: "hidden" }}>
             <div style={{ position: "relative", flexShrink: 0, width: 380, minHeight: 400, display: "flex", alignItems: "flex-end", justifyContent: "center", overflow: "hidden" }}>
               <img
@@ -784,9 +838,9 @@ export default function SkillzzaHome() {
       <section style={{ backgroundImage: `url(${getAssetPath('/school-background.png')})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", padding: "80px 0", position: "relative" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(241,242,244,0.82)", zIndex: 0 }} />
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px", position: "relative", zIndex: 1 }}>
-          <div style={{ display: "flex", gap: 64, alignItems: "center" }}>
+          <div className="partnerships-row" style={{ display: "flex", gap: 64, alignItems: "center" }}>
             {/* Left Text */}
-            <div style={{ flex: 1 }}>
+            <div className="partnerships-left-col" style={{ flex: 1 }}>
               <h2 style={{ fontSize: 32, fontWeight: 900, lineHeight: 1.25, marginBottom: 24, color: "#1a1a2e", fontFamily: "'Inter','Segoe UI',sans-serif", letterSpacing: "-0.2px" }}>Partnerships For<br />Impact</h2>
               <p style={{ color: "#4b5563", fontSize: 14, lineHeight: 1.8, marginBottom: 16 }}>At Skillzza, we believe that collaboration is the cornerstone of impactful change. By joining forces, we aim to bridge skill gaps and create a future-ready workforce.</p>
               <p style={{ color: "#4b5563", fontSize: 14, lineHeight: 1.8 }}>Together, we can shape a world where education and skills are accessible to all, fostering innovation and sustainable growth.</p>
@@ -800,7 +854,7 @@ export default function SkillzzaHome() {
 
       {/* OUR PARTNERS MARQUEE */}
       <section style={{ background: "#fff", padding: "64px 0", overflow: "hidden" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+        <div className="section-inner" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
           <h2 style={{ fontSize: 32, fontWeight: 800, textAlign: "center" }}>Our Partners</h2>
           <p style={{ textAlign: "center", color: "#4b5563", margin: "8px auto 40px", fontSize: 15 }}>Take your skill transformation to the next level.</p>
         </div>
@@ -822,7 +876,7 @@ export default function SkillzzaHome() {
         position: "relative",
         width: "100%",
       }}>
-        <div style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", width: "100%", paddingTop: 40 }}>
+        <div className="partner-cta-main" style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", width: "100%", paddingTop: 40 }}>
 
           {/* Left — "Partner with us" above image, flush extreme left */}
           <div style={{ flex: "0 0 46%", position: "relative" }}>
@@ -836,7 +890,7 @@ export default function SkillzzaHome() {
           </div>
 
           {/* Right — both headings + form */}
-          <div style={{ flex: 1, display: "flex", flexDirection: "column", padding: "0px 64px 48px 64px" }}>
+          <div className="partner-cta-form-col" style={{ flex: 1, display: "flex", flexDirection: "column", padding: "0px 64px 48px 64px" }}>
             <h2 style={{ fontSize: 36, fontWeight: 700, color: "#1f2937", lineHeight: 1.25, marginBottom: 16, fontFamily: "Inter, sans-serif" }}>
               Partner with us<br />To make a Difference
             </h2>
@@ -866,11 +920,11 @@ export default function SkillzzaHome() {
 
       {/* INSIGHTS SECTION */}
       <section style={{ background: "#fff", padding: "80px 0", fontFamily: "Inter, sans-serif" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-          <div style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
+        <div className="section-inner" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+          <div className="insights-row" style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
 
             {/* Left Column */}
-            <div style={{ display: "flex", flexDirection: "column", width: 280, flexShrink: 0, alignSelf: "stretch" }}>
+            <div className="insights-left-col" style={{ display: "flex", flexDirection: "column", width: 280, flexShrink: 0, alignSelf: "stretch" }}>
               <h2 style={{ fontSize: 42, fontWeight: 800, marginBottom: 20, color: "#111827", fontFamily: "Inter, sans-serif", letterSpacing: "-0.5px" }}>Insights</h2>
               <button style={{ border: "1.5px solid #d1d5db", background: "#fff", padding: "10px 20px", borderRadius: 8, fontSize: 14, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", marginBottom: 24, fontFamily: "Inter, sans-serif" }}>View all the resources</button>
 
@@ -890,7 +944,7 @@ export default function SkillzzaHome() {
             </div>
 
             {/* Right Grid */}
-            <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "auto auto", gap: 16 }}>
+            <div className="insights-grid" style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "auto auto", gap: 16 }}>
 
               {/* Card 2 - AI Talent Report */}
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#fef3e2", display: "flex", flexDirection: "column" }}>
