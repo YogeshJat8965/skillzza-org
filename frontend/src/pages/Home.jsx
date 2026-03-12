@@ -588,7 +588,7 @@ export default function SkillzzaHome() {
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
-        backgroundImage: "url('/hero-background.png')",
+        backgroundImage: getBackgroundImageUrl('/hero-background.png'),
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "scroll",
