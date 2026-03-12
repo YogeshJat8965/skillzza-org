@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
+import { HiMenu, HiX } from 'react-icons/hi';
 import { getAssetPath, getRoutePath } from '../utils/assets';
 
 const navItems = [
@@ -401,10 +402,55 @@ const DropdownContent = ({ items }) => {
   );
 };
 
+// Mobile Accordion Item
+const MobileNavItem = ({ item, onClose }) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="border-b border-gray-100">
+      {item.dropdown ? (
+        <>
+          <button
+            onClick={() => setOpen(!open)}
+            className="w-full flex items-center justify-between px-5 py-3.5 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+          >
+            {item.name}
+            <IoIosArrowDown
+              style={{ fontSize: 14, transition: 'transform 0.3s', transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}
+            />
+          </button>
+          {open && (
+            <div className="bg-gray-50 px-4 pb-2">
+              {item.dropdown.items.map((sub) => (
+                <a
+                  key={sub.name}
+                  href={getRoutePath(sub.link)}
+                  onClick={onClose}
+                  className="block px-4 py-2.5 text-sm text-gray-600 hover:text-purple-600 hover:bg-white rounded-md transition-colors"
+                >
+                  {sub.name}
+                </a>
+              ))}
+            </div>
+          )}
+        </>
+      ) : (
+        <a
+          href={getRoutePath(item.link)}
+          onClick={onClose}
+          className="block px-5 py-3.5 text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:text-red-600 transition-colors"
+        >
+          {item.name}
+        </a>
+      )}
+    </div>
+  );
+};
+
 const Navbar = () => {
   return (
     <header className="bg-white text-gray-800 shadow-sm sticky top-0 z-50 relative" style={{ borderBottom: '1px solid #f0f0f0' }}>
-      <div style={{ maxWidth: 1400, margin: '0 auto', padding: '0 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64 }}>
+      <div className="navbar-desktop" style={{ maxWidth: 1400, margin: '0 auto', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', minHeight: 64, flexWrap: 'wrap', gap: 16 }}>
 
         {/* Logo */}
         <div style={{ flexShrink: 0 }}>
@@ -414,12 +460,12 @@ const Navbar = () => {
         </div>
 
         {/* Nav Items - Center */}
-        <nav style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+        <nav className="nav-center-container" style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', justifyContent: 'center', flex: 1 }}>
           {navItems.map((item) => (
-            <div key={item.name} className="group" style={{ position: 'relative', padding: '20px 0', margin: '-20px 0' }}>
+            <div key={item.name} className="group nav-item-wrapper" style={{ position: 'relative', padding: '20px 0', margin: '-20px 0' }}>
               <a
                 href={getRoutePath(item.link)}
-                style={{ display: 'flex', alignItems: 'center', gap: 4, padding: '8px 12px', fontSize: 14, fontWeight: 500, color: '#374151', textDecoration: 'none', borderRadius: 6, transition: 'color 0.2s', whiteSpace: 'nowrap' }}
+                style={{ display: 'flex', alignItems: 'center', gap: 4, padding: '8px 12px', fontSize: 13, fontWeight: 500, color: '#374151', textDecoration: 'none', borderRadius: 6, transition: 'color 0.2s', whiteSpace: 'nowrap' }}
                 className="hover:text-red-600"
               >
                 {item.name}
@@ -445,7 +491,7 @@ const Navbar = () => {
         </nav>
 
         {/* Right Buttons */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0, flexWrap: 'wrap', justifyContent: 'center' }}>
           <a
             href="/book-demo"
             style={{
@@ -483,6 +529,30 @@ const Navbar = () => {
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 1023px) {
+          .nav-center-container {
+            flex-direction: column !important;
+            width: 100% !important;
+            gap: 16px !important;
+            padding: 16px 0 !important;
+          }
+          .nav-item-wrapper {
+            width: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            display: flex !important;
+            justify-content: center !important;
+          }
+          .nav-item-wrapper > a {
+            width: 100%;
+            justify-content: center;
+            font-size: 16px !important;
+            padding: 12px !important;
+          }
+        }
+      `}</style>
     </header>
   );
 };

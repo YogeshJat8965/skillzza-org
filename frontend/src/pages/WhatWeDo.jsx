@@ -12,6 +12,7 @@ const WhatWeDo = () => {
     }, 50);
   };
 
+
   const pillars = [
     {
       tab: 'AI-Driven Assessments',
@@ -91,6 +92,26 @@ const WhatWeDo = () => {
 
   return (
     <>
+      <style>{`
+        @media (max-width: 768px) {
+          .pillar-row {
+            flex-direction: column !important;
+            gap: 32px !important;
+            padding: 40px 0 !important;
+          }
+          .pillar-row > div:nth-child(2) {
+            margin-left: 0 !important;
+          }
+          .pillar-tabs {
+            justify-content: flex-start !important;
+            flex-wrap: nowrap !important;
+            overflow-x: auto !important;
+            padding-bottom: 8px !important;
+            -webkit-overflow-scrolling: touch;
+          }
+          .pillar-tabs::-webkit-scrollbar { display: none; }
+        }
+      `}</style>
       {/* ── Hero Section ── */}
       <section style={{
         backgroundColor: '#e8eef7',
@@ -177,6 +198,7 @@ const WhatWeDo = () => {
           {pillars.map((pillar, i) => (
             <div
               key={i}
+              className="pillar-row"
               ref={sectionRefs[i]}
               style={{
                 display: 'flex',
@@ -272,8 +294,8 @@ const WhatWeDo = () => {
         position: "relative",
         width: "100%",
       }}>
-        <div style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", width: "100%", paddingTop: 40 }}>
-          <div style={{ flex: "0 0 46%", position: "relative" }}>
+        <div className="partner-cta-main" style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", width: "100%", paddingTop: 40 }}>
+          <div className="partner-cta-img-col" style={{ flex: "0 0 46%", position: "relative" }}>
             <img
               src={getAssetPath('/businesspeople-having-discussion-office@2x.png')}
               alt="Partner with us"
@@ -281,7 +303,7 @@ const WhatWeDo = () => {
             />
             <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 12, background: "#FDB913" }} />
           </div>
-          <div style={{ flex: 1, display: "flex", flexDirection: "column", padding: "0px 64px 48px 64px" }}>
+          <div className="partner-cta-form-col" style={{ flex: 1, display: "flex", flexDirection: "column", padding: "0px 64px 48px 64px" }}>
             <h2 style={{ fontSize: 36, fontWeight: 700, color: "#1f2937", lineHeight: 1.25, marginBottom: 16, fontFamily: "Inter, sans-serif" }}>
               Partner with us<br />To make a Difference
             </h2>
@@ -311,8 +333,8 @@ const WhatWeDo = () => {
       {/* ── Skill Digest Section ── */}
       <section style={{ background: "#fff", padding: "80px 0", fontFamily: "Inter, sans-serif" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-          <div style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
-            <div style={{ display: "flex", flexDirection: "column", width: 280, flexShrink: 0, alignSelf: "stretch" }}>
+          <div className="insights-row" style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
+            <div className="insights-left-col" style={{ display: "flex", flexDirection: "column", width: 280, flexShrink: 0, alignSelf: "stretch" }}>
               <h2 style={{ fontSize: 42, fontWeight: 800, marginBottom: 20, color: "#111827", fontFamily: "Inter, sans-serif", letterSpacing: "-0.5px" }}>The Skill Digest</h2>
               <button style={{ border: "1.5px solid #d1d5db", background: "#fff", padding: "10px 20px", borderRadius: 8, fontSize: 14, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", marginBottom: 24, fontFamily: "Inter, sans-serif" }}>View all the resources</button>
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#ede9fe", display: "flex", flexDirection: "column", flex: 1 }}>
@@ -327,7 +349,7 @@ const WhatWeDo = () => {
                 </div>
               </div>
             </div>
-            <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "auto auto", gap: 16 }}>
+            <div className="insights-grid" style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "auto auto", gap: 16 }}>
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#fef3e2", display: "flex", flexDirection: "column" }}>
                 <div style={{ overflow: "hidden", background: "#e5d5c0" }}>
                   <img src={getAssetPath("/insight-robot.png")} alt="AI Robot" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />

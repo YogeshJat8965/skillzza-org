@@ -87,15 +87,15 @@ const Footer = () => {
       {/* Main Footer Body */}
       <div style={{ maxWidth: 1400, margin: '0 auto', padding: '56px 32px 48px' }}>
 
-        {/* Top grid: left info + 6 link columns */}
-        <div style={{ display: 'grid', gridTemplateColumns: '240px 1fr 1fr 1.4fr 0.9fr 1fr 1fr', gap: '0 24px', alignItems: 'start' }}>
+        {/* Top grid: responsive — stacks on mobile */}
+        <div className="footer-grid">
 
           {/* Left: Logo + Address */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 28, paddingRight: 8 }}>
+          <div className="footer-brand" style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
             <img
               src={getAssetPath('/skillzza-logo.png')}
               alt="Skillzza Logo"
-              style={{ height: 52, width: 'auto', objectFit: 'contain', marginBottom: 4, display: 'block', marginLeft: 0, alignSelf: 'flex-start' }}
+              style={{ height: 52, width: 'auto', objectFit: 'contain', marginBottom: 4, display: 'block', alignSelf: 'flex-start' }}
             />
             <div>
               <h3 style={{ fontWeight: 700, fontSize: 14, color: '#1a1a1a', marginBottom: 8, marginTop: 0 }}>Registered Office</h3>
@@ -112,34 +112,36 @@ const Footer = () => {
           </div>
 
           {/* 6 link columns */}
-          {footerSections.map((section) => (
-            <div key={section.title}>
-              <h3 style={{ fontWeight: 700, fontSize: 14, color: '#1a1a1a', marginBottom: 20, marginTop: 0 }}>
-                {section.title}
-              </h3>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 11 }}>
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={getRoutePath(link.href)}
-                      style={{ fontSize: 13, color: '#aaa', textDecoration: 'none', lineHeight: 1.5, display: 'block', transition: 'color 0.2s' }}
-                      onMouseEnter={e => e.target.style.color = '#c0150a'}
-                      onMouseLeave={e => e.target.style.color = '#aaa'}
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="footer-links-grid">
+            {footerSections.map((section) => (
+              <div key={section.title}>
+                <h3 style={{ fontWeight: 700, fontSize: 14, color: '#1a1a1a', marginBottom: 20, marginTop: 0 }}>
+                  {section.title}
+                </h3>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 11 }}>
+                  {section.links.map((link) => (
+                    <li key={link.name}>
+                      <a
+                        href={getRoutePath(link.href)}
+                        style={{ fontSize: 13, color: '#aaa', textDecoration: 'none', lineHeight: 1.5, display: 'block', transition: 'color 0.2s' }}
+                        onMouseEnter={e => e.target.style.color = '#c0150a'}
+                        onMouseLeave={e => e.target.style.color = '#aaa'}
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Stay Connected — bottom right */}
+        {/* Stay Connected */}
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 48 }}>
           <div style={{ textAlign: 'center' }}>
             <h3 style={{ fontWeight: 700, fontSize: 15, color: '#1a1a1a', marginBottom: 16 }}>Stay Connected</h3>
-            <div style={{ display: 'flex', gap: 18, alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', gap: 18, alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
               {socialLinks.map((s) => (
                 <a
                   key={s.label}
@@ -158,8 +160,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom Dark Red Bar */}
-      <div style={{ background: '#CF2C2E', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '18px 80px' }}>
-        <div style={{ display: 'flex', gap: 56 }}>
+      <div className="footer-bottom" style={{ background: '#CF2C2E', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '18px 32px', flexWrap: 'wrap', gap: 12 }}>
+        <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
           {[
             { name: 'Terms & Conditions', href: '/terms' },
             { name: 'Disclaimer', href: '/disclaimer' },
@@ -168,7 +170,7 @@ const Footer = () => {
             <a
               key={link.name}
               href={getRoutePath(link.href)}
-              style={{ color: '#fff', fontSize: 13, fontWeight: 400, textDecoration: 'none', opacity: 0.9, transition: 'opacity 0.2s' }}
+              style={{ color: '#fff', fontSize: 13, fontWeight: 400, textDecoration: 'none', opacity: 0.9, transition: 'opacity 0.2s', whiteSpace: 'nowrap' }}
               onMouseEnter={e => e.target.style.opacity = 1}
               onMouseLeave={e => e.target.style.opacity = 0.9}
             >
@@ -180,6 +182,51 @@ const Footer = () => {
           Edgespark IT Ventures Pvt.
         </p>
       </div>
+
+      <style>{`
+        /* ── Footer responsive layout ── */
+        .footer-grid {
+          display: grid;
+          grid-template-columns: 240px 1fr;
+          gap: 40px 24px;
+          align-items: start;
+        }
+        .footer-links-grid {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          gap: 24px 16px;
+        }
+
+        @media (max-width: 1199px) {
+          .footer-links-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        @media (max-width: 899px) {
+          .footer-grid {
+            grid-template-columns: 1fr;
+          }
+          .footer-links-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 599px) {
+          .footer-links-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+          .footer-grid {
+            padding-bottom: 8px;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .footer-links-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+      `}</style>
 
     </footer>
   );

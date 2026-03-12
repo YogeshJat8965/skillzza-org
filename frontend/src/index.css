@@ -30,3 +30,264 @@ html {
 body {
   overflow-x: hidden;
 }
+
+/* ── GLOBAL RESPONSIVE UTILITIES ─────────────────────────────────── */
+
+/* Prevent any element from exceeding viewport width */
+img, video, iframe, embed, object {
+  max-width: 100%;
+}
+
+/* ── SECTION INNER CONTAINER ── */
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── RESPONSIVE SECTION PADDING ── */
+@media (max-width: 1024px) {
+  .section-inner {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-inner {
+    padding: 0 16px !important;
+  }
+}
+
+/* ── HOME PAGE HERO ── */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: unset !important;
+    flex-direction: column-reverse !important;
+    display: flex !important;
+  }
+  .hero-img-col {
+    position: relative !important;
+    width: 100% !important;
+    top: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    height: 260px !important;
+    justify-content: center !important;
+  }
+  .hero-img-col img {
+    height: 100% !important;
+    max-height: 260px !important;
+    margin-top: 0 !important;
+  }
+  .hero-text-col {
+    padding: 32px 20px 140px !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+  }
+  .hero-text-col h1 {
+    font-size: 28px !important;
+    margin-bottom: 14px !important;
+  }
+  .hero-text-col p {
+    font-size: 14px !important;
+    margin-bottom: 20px !important;
+  }
+  .hero-btns {
+    justify-content: center !important;
+  }
+  .feature-strip {
+    position: relative !important;
+    bottom: unset !important;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text-col h1 {
+    font-size: 22px !important;
+  }
+  .hero-text-col {
+    padding: 24px 16px 140px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-text-col h1 {
+    font-size: 40px !important;
+  }
+  .hero-text-col {
+    padding: 0px 40px 120px !important;
+  }
+  .hero-img-col {
+    width: 42% !important;
+  }
+}
+
+/* ── HOME PAGE CHALLENGE SECTION ── */
+@media (max-width: 768px) {
+  .challenge-row {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  .challenge-img {
+    width: 100% !important;
+    height: 200px !important;
+    min-height: unset !important;
+  }
+  .challenge-stats {
+    padding: 20px 16px !important;
+  }
+  .challenge-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .challenge-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── HOME PAGE SKILL STUDIO ── */
+@media (max-width: 768px) {
+  .studio-content-row {
+    flex-direction: column !important;
+    padding: 24px !important;
+    gap: 24px !important;
+  }
+  .studio-right-img {
+    width: 100% !important;
+    flex: unset !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .studio-content-row {
+    gap: 24px !important;
+  }
+  .studio-right-img {
+    max-width: 320px !important;
+  }
+}
+
+/* ── HOME PAGE SCHOOL OF TECHNOLOGY ── */
+@media (max-width: 768px) {
+  .school-row {
+    flex-direction: column !important;
+  }
+  .school-img-col {
+    width: 100% !important;
+    min-height: 200px !important;
+    height: 220px !important;
+  }
+  .school-text-col {
+    padding: 24px 20px !important;
+  }
+}
+
+/* ── HOME PAGE PARTNERSHIPS ── */
+@media (max-width: 768px) {
+  .partnerships-row {
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 0 16px !important;
+  }
+  .partner-cards {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-cards {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── HOME PAGE PARTNER CTA ── */
+@media (max-width: 768px) {
+  .partner-cta-main {
+    flex-direction: column !important;
+    padding-top: 0 !important;
+  }
+  .partner-cta-img-col {
+    width: 100% !important;
+    flex: unset !important;
+  }
+  .partner-cta-img-col img {
+    height: 220px !important;
+    border-radius: 0 !important;
+  }
+  .partner-cta-form-col {
+    padding: 24px 20px 40px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .partner-cta-form-col {
+    padding: 0px 32px 40px 32px !important;
+  }
+}
+
+/* ── HOME PAGE INSIGHTS ── */
+@media (max-width: 768px) {
+  .insights-row {
+    flex-direction: column !important;
+  }
+  .insights-left-col {
+    width: 100% !important;
+  }
+  .insights-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .insights-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── ECOSYSTEM SECTION ── */
+@media (max-width: 768px) {
+  .ecosystem-wrap button {
+    font-size: 10px !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* ── GENERAL PAGE HERO SECTIONS (Tailwind-based pages) ── */
+@media (max-width: 640px) {
+  /* Reduce hero min-height on very small screens */
+  section[style*="minHeight: '70vh'"],
+  section[style*="minHeight: '600px'"] {
+    min-height: 50vh !important;
+  }
+}
+
+/* ── PREVENT HORIZONTAL SCROLL from fixed-width inline elements ── */
+@media (max-width: 768px) {
+  /* Ensure all direct children of body can't cause overflow */
+  #root > div {
+    overflow-x: hidden;
+  }
+  /* Studio tabs should scroll horizontally */
+  .tabs-row {
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+}
+
+/* ── SCROLLBAR HIDE UTILITIES ─────────────────────────────────── */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
