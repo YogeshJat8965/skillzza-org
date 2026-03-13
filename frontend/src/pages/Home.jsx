@@ -89,15 +89,15 @@ const studioTabs = [
 ];
 
 const partnerLogos = [
-  { img: "/logo-nsdc.png", name: "NSDC" },
-  { img: "/logo-adobe.png", name: "Adobe" },
-  { img: "/logo-meta.png", name: "Meta" },
-  { img: "/logo-microsoft.png", name: "Microsoft" },
-  { img: "/logo-google.png", name: "Google" },
-  { img: "/logo-startupindia.png", name: "Startup India" },
-  { img: "/logo-msme.png", name: "MSME" },
-  { img: "/logo-hp.png", name: "HP" },
-  { img: "/logo-aws.png", name: "AWS" },
+  { img: getAssetPath("/logo-nsdc.png"), name: "NSDC" },
+  { img: getAssetPath("/logo-adobe.png"), name: "Adobe" },
+  { img: getAssetPath("/logo-meta.png"), name: "Meta" },
+  { img: getAssetPath("/logo-microsoft.png"), name: "Microsoft" },
+  { img: getAssetPath("/logo-google.png"), name: "Google" },
+  { img: getAssetPath("/logo-startupindia.png"), name: "Startup India" },
+  { img: getAssetPath("/logo-msme.png"), name: "MSME" },
+  { img: getAssetPath("/logo-hp.png"), name: "HP" },
+  { img: getAssetPath("/logo-aws.png"), name: "AWS" },
 ];
 
 const partnerCards = [
@@ -527,7 +527,7 @@ export default function SkillzzaHome() {
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
-        backgroundImage: "url('/hero-background.png')",
+        backgroundImage: getBackgroundImageUrl('/hero-background.png'),
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "scroll",
