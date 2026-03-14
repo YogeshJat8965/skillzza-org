@@ -363,42 +363,36 @@ const navItems = [
 ];
 
 const DropdownContent = ({ items }) => {
-  const [activeItem, setActiveItem] = useState(items[0]);
-
   return (
-    <div className="grid grid-cols-3">
-      <div className="col-span-1 p-6 border-r">
-        <ul className="space-y-1">
-          {items.map((item, index) => (
-            <li key={index}>
-              <a
-                href={getRoutePath(item.link)}
-                onMouseEnter={() => setActiveItem(item)}
-                className={`w-full text-left px-4 py-2 rounded-md text-sm font-medium transition-colors duration-150 block ${
-                  activeItem.name === item.name
-                    ? 'bg-purple-50 text-purple-600'
-                    : 'text-gray-700 hover:bg-purple-50 hover:text-purple-600'
-                }`}
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="col-span-2 p-8 flex items-center">
-        <div className="w-1/2 pr-8">
-          <h3 className="text-2xl font-bold text-gray-800 mb-3">{activeItem.detail.title}</h3>
-          <p className="text-gray-600 mb-6">{activeItem.detail.description}</p>
-          <a href={getRoutePath(activeItem.detail.ctaLink)} className="inline-block bg-purple-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-purple-700 transition-colors">
-            {activeItem.detail.cta}
+    <ul style={{ listStyle: 'none', margin: 0, padding: '6px 0' }}>
+      {items.map((item, index) => (
+        <li key={index}>
+          <a
+            href={getRoutePath(item.link)}
+            style={{
+              display: 'block',
+              padding: '10px 20px',
+              fontSize: 14,
+              fontWeight: 500,
+              color: '#374151',
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+              transition: 'background 0.15s, color 0.15s',
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.background = '#f5f3ff';
+              e.currentTarget.style.color = '#7c3aed';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.background = 'transparent';
+              e.currentTarget.style.color = '#374151';
+            }}
+          >
+            {item.name}
           </a>
-        </div>
-        <div className="w-1/2">
-          <img src={activeItem.detail.image} alt={activeItem.detail.title} className="w-full h-64 object-cover rounded-lg shadow-md" />
-        </div>
-      </div>
-    </div>
+        </li>
+      ))}
+    </ul>
   );
 };
 
@@ -477,12 +471,10 @@ const Navbar = () => {
               {item.dropdown && (
                 <div
                   className="opacity-0 group-hover:opacity-100 invisible group-hover:visible pointer-events-none group-hover:pointer-events-auto"
-                  style={{ position: 'fixed', top: 64, left: 0, width: '100vw', transition: 'all 0.2s', zIndex: 9999 }}
+                  style={{ position: 'absolute', top: '100%', left: 0, transition: 'all 0.2s', zIndex: 9999, paddingTop: 8 }}
                 >
-                  <div style={{ background: '#fff', boxShadow: '0 8px 32px rgba(0,0,0,0.12)', borderTop: '1px solid #e5e7eb' }}>
-                    <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-                      <DropdownContent items={item.dropdown.items} />
-                    </div>
+                  <div style={{ background: '#fff', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', borderRadius: 8, border: '1px solid #e5e7eb', minWidth: 200, overflow: 'hidden' }}>
+                    <DropdownContent items={item.dropdown.items} />
                   </div>
                 </div>
               )}

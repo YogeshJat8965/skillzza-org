@@ -6,7 +6,7 @@ import {
   FaYoutube,
   FaPinterest,
 } from 'react-icons/fa';
-import { PiXLogoBold } from "react-icons/pi";
+import { PiXLogoBold } from 'react-icons/pi';
 import { getAssetPath, getRoutePath } from '../utils/assets';
 
 const footerSections = [
@@ -82,50 +82,120 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer style={{ background: '#f0f0f0', fontFamily: "'Inter','Segoe UI',sans-serif" }}>
+    <footer style={{ background: '#f0f0f0', fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
 
-      {/* Main Footer Body */}
-      <div style={{ maxWidth: 1400, margin: '0 auto', padding: '56px 32px 48px' }}>
+      {/* ── Main Body ── */}
+      <div style={{ maxWidth: 1440, margin: '0 auto', padding: '48px 48px 44px' }}>
 
-        {/* Top grid: responsive — stacks on mobile */}
-        <div className="footer-grid">
+        {/* Outer grid: brand (left) + links (right) */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '280px 1fr',
+          columnGap: 40,
+          alignItems: 'start',
+        }}>
 
-          {/* Left: Logo + Address */}
-          <div className="footer-brand" style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
+          {/* ── LEFT: Brand / Address ── */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+
+            {/* Logo */}
             <img
               src={getAssetPath('/skillzza-logo.png')}
-              alt="Skillzza Logo"
-              style={{ height: 52, width: 'auto', objectFit: 'contain', marginBottom: 4, display: 'block', alignSelf: 'flex-start' }}
+              alt="Skillzza"
+              style={{
+                height: 60,
+                width: 'auto',
+                objectFit: 'contain',
+                display: 'block',
+                alignSelf: 'flex-start',
+                marginBottom: 8,
+              }}
             />
+
+            {/* Registered Office */}
             <div>
-              <h3 style={{ fontWeight: 700, fontSize: 14, color: '#1a1a1a', marginBottom: 8, marginTop: 0 }}>Registered Office</h3>
-              <p style={{ fontSize: 13, color: '#555', lineHeight: 1.75, margin: 0 }}>
-                Skillzza, WeWork India, Chromium, CTS No. 106/1–5
-                Jogeshwari–Vikhroli Link Road, Milind Nagar,
+              <p style={{
+                fontWeight: 700,
+                fontSize: 13,
+                color: '#1a1a1a',
+                margin: '0 0 6px 0',
+                lineHeight: 1.4,
+              }}>
+                Registered Office
+              </p>
+              <p style={{
+                fontSize: 12,
+                color: '#1a1a1a',
+                lineHeight: 1.7,
+                margin: 0,
+              }}>
+                Skillzza, WeWork India, Chromium, CTS No.&nbsp;106/1–5<br />
+                Jogeshwari–Vikhroli Link Road, Milind Nagar,<br />
                 Powai, Mumbai – 400076
               </p>
             </div>
+
+            {/* Our Presence */}
             <div>
-              <h3 style={{ fontWeight: 700, fontSize: 14, color: '#1a1a1a', marginBottom: 6, marginTop: 0 }}>Our Presence</h3>
-              <p style={{ fontSize: 13, color: '#555', margin: 0 }}>Mumbai | Thane | Raipur | Delhi</p>
+              <p style={{
+                fontWeight: 700,
+                fontSize: 13,
+                color: '#1a1a1a',
+                margin: '0 0 6px 0',
+                lineHeight: 1.4,
+              }}>
+                Our Presence
+              </p>
+              <p style={{ fontSize: 12, color: '#1a1a1a', margin: 0, lineHeight: 1.7 }}>
+                Mumbai | Thane | Raipur | Delhi
+              </p>
             </div>
           </div>
 
-          {/* 6 link columns */}
-          <div className="footer-links-grid">
+          {/* ── RIGHT: 6 link columns ── */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(6, 1fr)',
+            columnGap: 16,
+            rowGap: 0,
+            alignItems: 'start',
+          }}>
             {footerSections.map((section) => (
               <div key={section.title}>
-                <h3 style={{ fontWeight: 700, fontSize: 14, color: '#1a1a1a', marginBottom: 20, marginTop: 0 }}>
+                {/* Section heading */}
+                <p style={{
+                  fontWeight: 700,
+                  fontSize: 13,
+                  color: '#1a1a1a',
+                  margin: '0 0 16px 0',
+                  lineHeight: 1.35,
+                }}>
                   {section.title}
-                </h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 11 }}>
+                </p>
+
+                {/* Links list */}
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 10,
+                }}>
                   {section.links.map((link) => (
                     <li key={link.name}>
                       <a
                         href={getRoutePath(link.href)}
-                        style={{ fontSize: 13, color: '#aaa', textDecoration: 'none', lineHeight: 1.5, display: 'block', transition: 'color 0.2s' }}
-                        onMouseEnter={e => e.target.style.color = '#c0150a'}
-                        onMouseLeave={e => e.target.style.color = '#aaa'}
+                        style={{
+                          fontSize: 12,
+                          color: '#1a1a1a',
+                          textDecoration: 'none',
+                          lineHeight: 1.5,
+                          display: 'block',
+                          transition: 'color 0.2s',
+                        }}
+                        onMouseEnter={(e) => (e.currentTarget.style.color = '#c0150a')}
+                        onMouseLeave={(e) => (e.currentTarget.style.color = '#1a1a1a')}
                       >
                         {link.name}
                       </a>
@@ -134,34 +204,54 @@ const Footer = () => {
                 </ul>
               </div>
             ))}
-          </div>
-        </div>
 
-        {/* Stay Connected */}
-        <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 48 }}>
-          <div style={{ textAlign: 'center' }}>
-            <h3 style={{ fontWeight: 700, fontSize: 15, color: '#1a1a1a', marginBottom: 16 }}>Stay Connected</h3>
-            <div style={{ display: 'flex', gap: 18, alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
-              {socialLinks.map((s) => (
-                <a
-                  key={s.label}
-                  href="#"
-                  aria-label={s.label}
-                  style={{ fontSize: 22, color: '#6b7280', transition: 'color 0.2s', display: 'flex' }}
-                  onMouseEnter={e => e.currentTarget.style.color = s.hover}
-                  onMouseLeave={e => e.currentTarget.style.color = '#6b7280'}
-                >
-                  {s.icon}
-                </a>
-              ))}
+            {/* ── Stay Connected — spans cols 5–6 (Insights + Company) ── */}
+            <div style={{ gridColumn: '5 / 7', marginTop: 36 }}>
+              <p style={{
+                fontWeight: 700,
+                fontSize: 13,
+                color: '#1a1a1a',
+                margin: '0 0 14px 0',
+                lineHeight: 1.35,
+              }}>
+                Stay Connected
+              </p>
+              <div style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
+                {socialLinks.map((s) => (
+                  <a
+                    key={s.label}
+                    href="#"
+                    aria-label={s.label}
+                    style={{
+                      fontSize: 28,
+                      color: '#6b7280',
+                      display: 'flex',
+                      alignItems: 'center',
+                      transition: 'color 0.2s',
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = s.hover)}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#6b7280')}
+                  >
+                    {s.icon}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Dark Red Bar */}
-      <div className="footer-bottom" style={{ background: '#CF2C2E', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '18px 32px', flexWrap: 'wrap', gap: 12 }}>
-        <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+      {/* ── Bottom red bar ── */}
+      <div style={{
+        background: '#CF2C2E',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '16px 48px',
+        flexWrap: 'wrap',
+        gap: 12,
+      }}>
+        <div style={{ display: 'flex', gap: 36, flexWrap: 'wrap' }}>
           {[
             { name: 'Terms & Conditions', href: '/terms' },
             { name: 'Disclaimer', href: '/disclaimer' },
@@ -170,61 +260,41 @@ const Footer = () => {
             <a
               key={link.name}
               href={getRoutePath(link.href)}
-              style={{ color: '#fff', fontSize: 13, fontWeight: 400, textDecoration: 'none', opacity: 0.9, transition: 'opacity 0.2s', whiteSpace: 'nowrap' }}
-              onMouseEnter={e => e.target.style.opacity = 1}
-              onMouseLeave={e => e.target.style.opacity = 0.9}
+              style={{
+                color: '#fff',
+                fontSize: 12.5,
+                fontWeight: 400,
+                textDecoration: 'none',
+                opacity: 0.92,
+                whiteSpace: 'nowrap',
+                transition: 'opacity 0.2s',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.92')}
             >
               {link.name}
             </a>
           ))}
         </div>
-        <p style={{ color: '#fff', fontSize: 13, fontWeight: 400, margin: 0, opacity: 0.9 }}>
+        <p style={{ color: '#fff', fontSize: 12.5, fontWeight: 400, margin: 0, opacity: 0.92 }}>
           Edgespark IT Ventures Pvt.
         </p>
       </div>
 
+      {/* ── Responsive styles ── */}
       <style>{`
-        /* ── Footer responsive layout ── */
-        .footer-grid {
-          display: grid;
-          grid-template-columns: 240px 1fr;
-          gap: 40px 24px;
-          align-items: start;
-        }
-        .footer-links-grid {
-          display: grid;
-          grid-template-columns: repeat(6, 1fr);
-          gap: 24px 16px;
-        }
-
         @media (max-width: 1199px) {
-          .footer-links-grid {
-            grid-template-columns: repeat(3, 1fr);
-          }
+          .footer-links-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 24px !important; }
         }
-
         @media (max-width: 899px) {
-          .footer-grid {
-            grid-template-columns: 1fr;
-          }
-          .footer-links-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
+          .footer-outer { grid-template-columns: 1fr !important; }
+          .footer-links-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
-
         @media (max-width: 599px) {
-          .footer-links-grid {
-            grid-template-columns: 1fr 1fr;
-          }
-          .footer-grid {
-            padding-bottom: 8px;
-          }
+          .footer-links-grid { grid-template-columns: 1fr 1fr !important; }
         }
-
         @media (max-width: 400px) {
-          .footer-links-grid {
-            grid-template-columns: 1fr;
-          }
+          .footer-links-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
 

@@ -26,8 +26,6 @@ const MARQUEE_CSS = `
 .tabs-row::-webkit-scrollbar { display: none !important; }
 `;
 
-// ─── DATA
-
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 const studioTabs = [
   {
@@ -120,7 +118,7 @@ const footerCols = [
 function AnimatedCounter({ to, suffix = "" }) {
   const [val, setVal] = useState(0);
   const ref = useRef(null);
-  
+
   useEffect(() => {
     const obs = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -135,11 +133,11 @@ function AnimatedCounter({ to, suffix = "" }) {
         requestAnimationFrame(step);
       }
     }, { threshold: 0.3 });
-    
+
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
   }, [to]);
-  
+
   return <span ref={ref}>{val}{suffix}</span>;
 }
 
@@ -577,8 +575,8 @@ export default function SkillzzaHome() {
                 boxShadow: "0 2px 8px rgba(224,32,32,0.3)",
                 transition: "transform 0.2s",
               }}
-              onMouseEnter={(e) => e.target.style.transform = "translateY(-2px)"}
-              onMouseLeave={(e) => e.target.style.transform = "translateY(0)"}
+                onMouseEnter={(e) => e.target.style.transform = "translateY(-2px)"}
+                onMouseLeave={(e) => e.target.style.transform = "translateY(0)"}
               >
                 Start Your Journey
               </button>
@@ -593,14 +591,14 @@ export default function SkillzzaHome() {
                 cursor: "pointer",
                 transition: "all 0.2s",
               }}
-              onMouseEnter={(e) => {
-                e.target.style.background = "#f9fafb";
-                e.target.style.borderColor = "#9ca3af";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.background = "#fff";
-                e.target.style.borderColor = "#d1d5db";
-              }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = "#f9fafb";
+                  e.target.style.borderColor = "#9ca3af";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = "#fff";
+                  e.target.style.borderColor = "#d1d5db";
+                }}
               >
                 How It Works
               </button>
@@ -747,10 +745,12 @@ export default function SkillzzaHome() {
         </div>
       </section>
 
-      {/* SCHOOL OF TECHNOLOGY SECTION */}
+      {/* ─── SCHOOL OF TECHNOLOGY SECTION ─────────────────────────────────────── */}
+      {/* ONLY CHANGE: removed padding from section-inner (was "0 48px", now "0")  */}
+      {/* and set maxWidth to "100%" + borderRadius to 0 on school-row             */}
       <section style={{ background: "#fff", padding: "80px 0" }}>
-        <div className="section-inner" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-          <div className="school-row" style={{ display: 'flex', alignItems: 'center', border: '1px solid #f3f4f6', borderRadius: 16, overflow: 'hidden', flexWrap: 'wrap' }}>
+        <div className="section-inner" style={{ maxWidth: "100%", margin: "0 auto", padding: "0" }}>
+          <div className="school-row" style={{ display: 'flex', alignItems: 'center', border: '1px solid #f3f4f6', borderRadius: 0, overflow: 'hidden', flexWrap: 'wrap' }}>
             <div className="school-img-col" style={{ position: 'relative', flexShrink: 0, width: 380, minHeight: 400, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'hidden' }}>
               <img
                 src={getAssetPath("/school-girl.png")}
@@ -829,7 +829,7 @@ export default function SkillzzaHome() {
           </div>
 
           {/* Right — both headings + form */}
-          <div className="partner-cta-form-col" style={{ flex: 1, display: "flex", flexDirection: "column", padding: "0px 64px 48px 64px" }}>
+          <div className="partner-cta-form-col" style={{ flex: 1, display: "flex", flexDirection: "column", padding: "0px 64px 48px 180px" }}>
             <h2 style={{ fontSize: 36, fontWeight: 700, color: "#1f2937", lineHeight: 1.25, marginBottom: 16, fontFamily: "Inter, sans-serif" }}>
               Partner with us<br />To make a Difference
             </h2>
@@ -913,7 +913,7 @@ export default function SkillzzaHome() {
               <div style={{ gridColumn: "1 / -1", borderRadius: 16, background: "#cffafe", padding: "28px 32px", display: "flex", alignItems: "center", gap: 24 }}>
                 <div style={{ flex: 1 }}>
                   <span style={{ display: "inline-block", background: "#22d3ee", color: "#fff", fontSize: 12, fontWeight: 600, padding: "5px 14px", borderRadius: 20, marginBottom: 14, fontFamily: "Inter, sans-serif" }}>Podcast</span>
-                  <h4 style={{ fontSize: 22, fontWeight: 700, marginBottom: 10, color: "#111827", lineHeight: 1.3, fontFamily: "Inter, sans-serif" }}>Skills DECODED:<br />Conversations that matter.</h4>
+                  <h4 style={{ fontSize: 22, fontWeight: 700, marginBottom: 10, color: "#111827", lineHeight: 1.3, fontFamily: "Inter, sans-serif" }}>Skills DECODED<br />Conversations that matter.</h4>
                   <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.6, marginBottom: 0, maxWidth: 480, fontFamily: "Inter, sans-serif" }}>Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.</p>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, flexShrink: 0 }}>
