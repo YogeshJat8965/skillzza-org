@@ -23,71 +23,8 @@ const MARQUEE_CSS = `
   animation: featureScroll 20s linear infinite;
 }
 .feature-track:hover { animation-play-state: paused; }
-* { scrollbar-width: none !important; -ms-overflow-style: none !important; box-sizing: border-box; }
-*::-webkit-scrollbar { display: none !important; }
 .tabs-row::-webkit-scrollbar { display: none !important; }
-
-/* ── GLOBAL RESPONSIVE ── */
-@media (max-width: 768px) {
-  /* Hero */
-  .hero-section { min-height: unset !important; }
-  .hero-img-col { position: relative !important; width: 100% !important; top: unset !important; right: unset !important; bottom: unset !important; height: 280px !important; justify-content: center !important; }
-  .hero-img-col img { height: 100% !important; max-height: 280px !important; margin-top: 0 !important; }
-  .hero-text-col { padding: 32px 20px 24px !important; margin-top: 0 !important; text-align: center !important; }
-  .hero-text-col h1 { font-size: 28px !important; margin-bottom: 14px !important; }
-  .hero-text-col p { font-size: 14px !important; margin-bottom: 20px !important; }
-  .hero-btns { justify-content: center !important; }
-  .feature-strip { position: relative !important; bottom: unset !important; margin-top: 16px; }
-  .hero-section { display: flex !important; flex-direction: column-reverse !important; }
-
-  /* Challenge */
-  .challenge-row { flex-direction: column !important; height: auto !important; }
-  .challenge-img { width: 100% !important; height: 200px !important; min-height: unset !important; }
-  .challenge-stats { padding: 20px 16px !important; }
-  .challenge-grid { grid-template-columns: 1fr 1fr !important; }
-
-  /* Studio */
-  .studio-content-row { flex-direction: column !important; padding: 24px !important; }
-  .studio-right-img { width: 100% !important; flex: unset !important; max-width: 100% !important; }
-
-  /* Partnerships */
-  .partnerships-row { flex-direction: column !important; gap: 24px !important; }
-  .partner-cards { grid-template-columns: 1fr 1fr !important; }
-
-  /* Partner CTA */
-  .partner-cta-main { flex-direction: column !important; padding-top: 0 !important; }
-  .partner-cta-img-col { width: 100% !important; flex: unset !important; }
-  .partner-cta-img-col img { height: 200px !important; border-radius: 0 !important; }
-  .partner-cta-form-col { padding: 24px 20px 40px !important; }
-
-  /* Insights */
-  .insights-row { flex-direction: column !important; }
-  .insights-left-col { width: 100% !important; }
-  .insights-grid { grid-template-columns: 1fr 1fr !important; }
-
-  /* General padding */
-  .section-inner { padding: 0 16px !important; }
-}
-
-@media (max-width: 480px) {
-  .hero-text-col h1 { font-size: 22px !important; }
-  .challenge-grid { grid-template-columns: 1fr !important; }
-  .partner-cards { grid-template-columns: 1fr !important; }
-  .insights-grid { grid-template-columns: 1fr !important; }
-  .partner-cta-form-col { padding: 16px !important; }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .hero-text-col h1 { font-size: 40px !important; }
-  .hero-text-col { padding: 0px 40px 120px !important; }
-  .hero-img-col { width: 42% !important; }
-  .partner-cta-form-col { padding: 0px 32px 40px 32px !important; }
-  .studio-content-row { gap: 24px !important; }
-  .studio-right-img { max-width: 320px !important; }
-}
 `;
-
-// ─── DATA
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 const studioTabs = [
@@ -181,7 +118,7 @@ const footerCols = [
 function AnimatedCounter({ to, suffix = "" }) {
   const [val, setVal] = useState(0);
   const ref = useRef(null);
-  
+
   useEffect(() => {
     const obs = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -196,11 +133,11 @@ function AnimatedCounter({ to, suffix = "" }) {
         requestAnimationFrame(step);
       }
     }, { threshold: 0.3 });
-    
+
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
   }, [to]);
-  
+
   return <span ref={ref}>{val}{suffix}</span>;
 }
 
@@ -638,8 +575,8 @@ export default function SkillzzaHome() {
                 boxShadow: "0 2px 8px rgba(224,32,32,0.3)",
                 transition: "transform 0.2s",
               }}
-              onMouseEnter={(e) => e.target.style.transform = "translateY(-2px)"}
-              onMouseLeave={(e) => e.target.style.transform = "translateY(0)"}
+                onMouseEnter={(e) => e.target.style.transform = "translateY(-2px)"}
+                onMouseLeave={(e) => e.target.style.transform = "translateY(0)"}
               >
                 Start Your Journey
               </button>
@@ -654,14 +591,14 @@ export default function SkillzzaHome() {
                 cursor: "pointer",
                 transition: "all 0.2s",
               }}
-              onMouseEnter={(e) => {
-                e.target.style.background = "#f9fafb";
-                e.target.style.borderColor = "#9ca3af";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.background = "#fff";
-                e.target.style.borderColor = "#d1d5db";
-              }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = "#f9fafb";
+                  e.target.style.borderColor = "#9ca3af";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = "#fff";
+                  e.target.style.borderColor = "#d1d5db";
+                }}
               >
                 How It Works
               </button>
@@ -808,18 +745,20 @@ export default function SkillzzaHome() {
         </div>
       </section>
 
-      {/* SCHOOL OF TECHNOLOGY SECTION */}
+      {/* ─── SCHOOL OF TECHNOLOGY SECTION ─────────────────────────────────────── */}
+      {/* ONLY CHANGE: removed padding from section-inner (was "0 48px", now "0")  */}
+      {/* and set maxWidth to "100%" + borderRadius to 0 on school-row             */}
       <section style={{ background: "#fff", padding: "80px 0" }}>
-        <div className="section-inner" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-          <div style={{ display: "flex", alignItems: "center", border: "1px solid #f3f4f6", borderRadius: 16, overflow: "hidden" }}>
-            <div style={{ position: "relative", flexShrink: 0, width: 380, minHeight: 400, display: "flex", alignItems: "flex-end", justifyContent: "center", overflow: "hidden" }}>
+        <div className="section-inner" style={{ maxWidth: "100%", margin: "0 auto", padding: "0" }}>
+          <div className="school-row" style={{ display: 'flex', alignItems: 'center', border: '1px solid #f3f4f6', borderRadius: 0, overflow: 'hidden', flexWrap: 'wrap' }}>
+            <div className="school-img-col" style={{ position: 'relative', flexShrink: 0, width: 380, minHeight: 400, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'hidden' }}>
               <img
                 src={getAssetPath("/school-girl.png")}
                 alt="School of Technology"
                 style={{ position: "relative", zIndex: 2, width: "100%", height: "100%", objectFit: "contain", objectPosition: "bottom" }}
               />
             </div>
-            <div style={{ flex: 1, padding: "48px 48px 48px 40px" }}>
+            <div className="school-text-col" style={{ flex: 1, padding: '48px 48px 48px 40px', minWidth: 0 }}>
               <h2 style={{ fontSize: 34, fontWeight: 800, marginBottom: 8 }}>School of Technology</h2>
               <p style={{ fontWeight: 600, color: "#374151", marginBottom: 16 }}>Elevate Your Expertise with Future-Ready Skills</p>
               <p style={{ color: "#4b5563", fontSize: 14, lineHeight: 1.7, marginBottom: 24 }}>Experience the perfect blend of theoretical knowledge and practical application. Our programs don't just teach you to adapt to change, they position you to lead transformation in your field.</p>
@@ -879,7 +818,7 @@ export default function SkillzzaHome() {
         <div className="partner-cta-main" style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", width: "100%", paddingTop: 40 }}>
 
           {/* Left — "Partner with us" above image, flush extreme left */}
-          <div style={{ flex: "0 0 46%", position: "relative" }}>
+          <div className="partner-cta-img-col" style={{ flex: '0 0 46%', position: 'relative' }}>
             <img
               src={getAssetPath('/businesspeople-having-discussion-office@2x.png')}
               alt="Partner with us"
@@ -890,7 +829,7 @@ export default function SkillzzaHome() {
           </div>
 
           {/* Right — both headings + form */}
-          <div className="partner-cta-form-col" style={{ flex: 1, display: "flex", flexDirection: "column", padding: "0px 64px 48px 64px" }}>
+          <div className="partner-cta-form-col" style={{ flex: 1, display: "flex", flexDirection: "column", padding: "0px 64px 48px 180px" }}>
             <h2 style={{ fontSize: 36, fontWeight: 700, color: "#1f2937", lineHeight: 1.25, marginBottom: 16, fontFamily: "Inter, sans-serif" }}>
               Partner with us<br />To make a Difference
             </h2>
@@ -974,7 +913,7 @@ export default function SkillzzaHome() {
               <div style={{ gridColumn: "1 / -1", borderRadius: 16, background: "#cffafe", padding: "28px 32px", display: "flex", alignItems: "center", gap: 24 }}>
                 <div style={{ flex: 1 }}>
                   <span style={{ display: "inline-block", background: "#22d3ee", color: "#fff", fontSize: 12, fontWeight: 600, padding: "5px 14px", borderRadius: 20, marginBottom: 14, fontFamily: "Inter, sans-serif" }}>Podcast</span>
-                  <h4 style={{ fontSize: 22, fontWeight: 700, marginBottom: 10, color: "#111827", lineHeight: 1.3, fontFamily: "Inter, sans-serif" }}>Skills DECODED:<br />Conversations that matter.</h4>
+                  <h4 style={{ fontSize: 22, fontWeight: 700, marginBottom: 10, color: "#111827", lineHeight: 1.3, fontFamily: "Inter, sans-serif" }}>Skills DECODED<br />Conversations that matter.</h4>
                   <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.6, marginBottom: 0, maxWidth: 480, fontFamily: "Inter, sans-serif" }}>Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.</p>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, flexShrink: 0 }}>
