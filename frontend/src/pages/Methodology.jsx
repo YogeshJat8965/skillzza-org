@@ -64,10 +64,10 @@ const MethodologyStats = () => {
   }, []);
 
   const stats = [
-    { target: 85, suffix: '%+', bold: 'skill acquisition rates',  light: ' across all programs.',                    delay: 0   },
-    { target: 90, suffix: '%+', bold: 'learner satisfaction',      light: ' with learning experience quality.',       delay: 120 },
-    { target: 75, suffix: '%+', bold: 'career advancement',        light: ' within 12 months of program completion',  delay: 240 },
-    { target: 95, suffix: '%+', bold: 'employer satisfaction',     light: ' with graduate competencies',              delay: 360 },
+    { target: 85, suffix: '%+', bold: 'skill acquisition rates', light: ' across all programs.', delay: 0 },
+    { target: 90, suffix: '%+', bold: 'learner satisfaction', light: ' with learning experience quality.', delay: 120 },
+    { target: 75, suffix: '%+', bold: 'career advancement', light: ' within 12 months of program completion', delay: 240 },
+    { target: 95, suffix: '%+', bold: 'employer satisfaction', light: ' with graduate competencies', delay: 360 },
   ];
 
   return (
@@ -121,31 +121,31 @@ const phases = [
   {
     label: 'Discovery and\nMapping',
     title: 'Discovery and Mapping',
-    bullets: ['Comprehensive skill gap analysis','Learning preference identification','Career trajectory planning','Baseline competency establishment'],
+    bullets: ['Comprehensive skill gap analysis', 'Learning preference identification', 'Career trajectory planning', 'Baseline competency establishment'],
     image: '/skill_mapping_vertical.jpg',
   },
   {
     label: 'Personalized\nLearning Path\nCreation',
     title: 'Personalized Learning Path Creation',
-    bullets: ['AI-generated curriculum customization','Resource allocation and scheduling','Milestone and checkpoint definition','Success metrics establishment'],
+    bullets: ['AI-generated curriculum customization', 'Resource allocation and scheduling', 'Milestone and checkpoint definition', 'Success metrics establishment'],
     image: '/mirroing_img.png',
   },
   {
     label: 'Active Learning\nEngagement',
     title: 'Active Learning Engagement',
-    bullets: ['Interactive content delivery','Real-time performance monitoring','Adaptive difficulty adjustment','Peer and mentor integration'],
+    bullets: ['Interactive content delivery', 'Real-time performance monitoring', 'Adaptive difficulty adjustment', 'Peer and mentor integration'],
     image: '/one-and-ond-mentoring-img.jpg',
   },
   {
     label: 'Application\nand Validation',
     title: 'Application and Validation',
-    bullets: ['Project-based assessments','Industry simulation participation','Competency certification','Portfolio development'],
+    bullets: ['Project-based assessments', 'Industry simulation participation', 'Competency certification', 'Portfolio development'],
     image: '/RiskAssessmentStrategist_tile_img.png',
   },
   {
     label: 'Continuous\nGrowth and\nAdaptation',
     title: 'Continuous Growth and Adaptation',
-    bullets: ['Ongoing skill maintenance','Emerging technology integration','Career advancement planning','Lifelong learning pathway creation'],
+    bullets: ['Ongoing skill maintenance', 'Emerging technology integration', 'Career advancement planning', 'Lifelong learning pathway creation'],
     image: '/digital_bugiess_growthBlog_img.jpg',
   },
 ];
@@ -157,7 +157,8 @@ const ImplementationStepper = () => {
   return (
     <section style={{ background: '#f0eeff', fontFamily: "'Inter', sans-serif", padding: '64px 0 72px' }}>
       <style>{`
-        .imp-wrap { max-width: 960px; margin: 0 auto; padding: 0 32px; }
+        /* ── FIX: increased max-width from 960px to 1200px ── */
+        .imp-wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
 
         /* Title */
         .imp-title { text-align: center; font-size: 36px; font-weight: 700; color: #111827; margin: 0 0 48px; }
@@ -251,12 +252,12 @@ const ImplementationStepper = () => {
 
         /* Responsive */
         @media (max-width: 768px) {
+          .imp-wrap { padding: 0 24px; }
           .imp-panel { flex-direction: column; padding: 28px 24px; }
           .imp-panel-right { flex: unset; width: 100%; }
           .imp-panel-img { height: 200px; }
           .imp-panel-heading { font-size: 24px; }
           .imp-title { font-size: 26px; }
-          .imp-wrap { padding: 0 16px; }
           .imp-step-name { font-size: 10px; }
           .imp-phase-tag { font-size: 8px; }
         }
@@ -281,7 +282,7 @@ const ImplementationStepper = () => {
                 {active === i ? (
                   /* checkmark */
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M3 8l3.5 3.5L13 5" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M3 8l3.5 3.5L13 5" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 ) : (
                   /* empty circle dot */
@@ -383,14 +384,12 @@ const LearnFramework = () => {
   const [active, setActive] = useState(0);
   const item = learnData[active];
 
-  // Each segment click zone: percent-based positions over the 320x320 image
-  // Order: L(top-left), E(top-right), A(right), R(bottom), N(left)
   const zones = [
-    { index: 0, label: 'L', top: '8%',  left: '10%', width: '35%', height: '38%' },
-    { index: 1, label: 'E', top: '5%',  left: '52%', width: '38%', height: '38%' },
+    { index: 0, label: 'L', top: '8%', left: '10%', width: '35%', height: '38%' },
+    { index: 1, label: 'E', top: '5%', left: '52%', width: '38%', height: '38%' },
     { index: 2, label: 'A', top: '42%', left: '58%', width: '36%', height: '35%' },
     { index: 3, label: 'R', top: '62%', left: '28%', width: '38%', height: '32%' },
-    { index: 4, label: 'N', top: '42%', left: '5%',  width: '36%', height: '35%' },
+    { index: 4, label: 'N', top: '42%', left: '5%', width: '36%', height: '35%' },
   ];
 
   return (
@@ -403,7 +402,8 @@ const LearnFramework = () => {
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600&display=swap');
-        .lf-wrap { max-width: 1080px; margin: 0 auto; padding: 0 48px; }
+        /* ── FIX: increased max-width from 1080px to 1200px ── */
+        .lf-wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
         .lf-title-box { border-radius: 6px; padding: 22px 56px; text-align: center; margin: 0 auto 60px; display: table; }
         .lf-title { font-family: 'Playfair Display', Georgia, serif; font-size: 34px; font-weight: 800; color: #0f0f1a; line-height: 1.25; margin: 0; letter-spacing: -0.3px; }
         .lf-body { display: flex; gap: 64px; align-items: center; }
@@ -432,7 +432,6 @@ const LearnFramework = () => {
               alt="LEARN Framework Wheel"
               style={{ width: '100%', height: 'auto', display: 'block' }}
             />
-            {/* Invisible clickable zones mapped over each segment */}
             {zones.map((z) => (
               <div
                 key={z.index}
@@ -488,15 +487,16 @@ const OurMethodology = () => {
       </div>
 
       {/* Below image: white section with centered text + stat pills */}
-      <section style={{ backgroundColor: '#fff', padding: '64px 24px 72px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
-        <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#111', lineHeight: '1.25', margin: '0 auto 20px', maxWidth: '700px' }}>
+      {/* ── FIX: increased maxWidth for heading, paragraph and pills ── */}
+      <section style={{ backgroundColor: '#fff', padding: '64px 48px 72px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
+        <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#111', lineHeight: '1.25', margin: '0 auto 20px', maxWidth: '100%' }}>
           Transforming Potential Through<br />Science-Backed Learning
         </h2>
-        <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.75', maxWidth: '660px', margin: '0 auto 40px' }}>
+        <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.75', maxWidth: '100%', margin: '0 auto 40px' }}>
           At Skillzza, we believe that effective skill development requires more than traditional training approaches. Our methodology integrates cognitive science, industry insights, and adaptive technology to create learning experiences that deliver measurable, lasting results.
         </p>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', justifyContent: 'center', maxWidth: '560px', margin: '0 auto' }}>
-          {['85%+ Skill Acquisition','90%+ Learner Satisfaction','75%+ Career Advancement','95%+ Employer Satisfaction'].map((stat, i) => (
+        <div style={{ display: 'flex', flexWrap: 'nowrap', gap: '14px', justifyContent: 'center', width: '100%', margin: '0 auto' }}>
+          {['85%+ Skill Acquisition', '90%+ Learner Satisfaction', '75%+ Career Advancement', '95%+ Employer Satisfaction'].map((stat, i) => (
             <div key={i} style={{
               padding: '10px 24px', borderRadius: '50px',
               backgroundColor: '#e8f4fd', color: '#2c6fad',
@@ -540,19 +540,19 @@ const OurMethodology = () => {
           Our Core Principles
         </h2>
 
-        {/* Card grid — centered, takes up most of the width */}
+        {/* ── FIX: increased maxWidth from 920px to 1100px, fixed asymmetric padding ── */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gap: '14px',
-          maxWidth: '920px',
+          maxWidth: '1100px',
           margin: '0 auto',
-          padding: '0 48px 0 80px',
+          padding: '0 48px',
           position: 'relative',
           zIndex: 2,
         }}>
 
-          {/* Card 1 – Competency-Based Progression (top left) — badge.svg */}
+          {/* Card 1 – Competency-Based Progression */}
           <div style={{
             backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
@@ -563,7 +563,7 @@ const OurMethodology = () => {
             </p>
           </div>
 
-          {/* Card 2 – Industry-Academic Convergence (top right) — bag.svg */}
+          {/* Card 2 – Industry-Academic Convergence */}
           <div style={{
             backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
@@ -574,7 +574,7 @@ const OurMethodology = () => {
             </p>
           </div>
 
-          {/* Card 3 – Cognitive Load Optimization (bottom left) — brain.svg */}
+          {/* Card 3 – Cognitive Load Optimization */}
           <div style={{
             backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
@@ -585,7 +585,7 @@ const OurMethodology = () => {
             </p>
           </div>
 
-          {/* Card 4 – Cultural and Contextual Relevance (bottom right) — world.svg */}
+          {/* Card 4 – Cultural and Contextual Relevance */}
           <div style={{
             backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
@@ -658,7 +658,7 @@ const OurMethodology = () => {
 
             {/* Left Column */}
             <div className="insights-left-col" style={{ display: "flex", flexDirection: "column", width: 280, flexShrink: 0, alignSelf: "stretch" }}>
-              <h2 style={{ fontSize: 42, fontWeight: 800, marginBottom: 20, color: "#111827", fontFamily: "Inter, sans-serif", letterSpacing: "-0.5px" }}>The Skill Digest</h2>
+              <h2 style={{ fontSize: 42, fontWeight: 800, marginBottom: 20, color: "#111827", fontFamily: "Inter, sans-serif", letterSpacing: "-0.5px" }}>Insights</h2>
               <button style={{ border: "1.5px solid #d1d5db", background: "#fff", padding: "10px 20px", borderRadius: 8, fontSize: 14, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", marginBottom: 24, fontFamily: "Inter, sans-serif" }}>View all the resources</button>
 
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#ede9fe", display: "flex", flexDirection: "column", flex: 1 }}>
