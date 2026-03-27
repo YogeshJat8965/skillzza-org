@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { getAssetPath, getRoutePath } from '../utils/assets';
@@ -9,7 +9,7 @@ const navItems = [
     link: '/',
     dropdown: {
       items: [
-        { 
+        {
           name: 'The Potential Meter',
           link: '/product/potential-meter',
           detail: {
@@ -17,10 +17,10 @@ const navItems = [
             description: 'A comprehensive AI assessment engine that evaluates strengths, career readiness, and growth potential, giving you a clear path to success.',
             cta: 'Assess Your Potential',
             ctaLink: '/product/potential-meter',
-            image: getAssetPath('/unlock_your_potential.jpg')
-          }
+            image: getAssetPath('/unlock_your_potential.jpg'),
+          },
         },
-        { 
+        {
           name: 'Xperience Platform',
           link: '/product/xperience-platform',
           detail: {
@@ -28,10 +28,10 @@ const navItems = [
             description: 'Engage with AI-powered job simulations that offer role-based, industry-aligned learning experiences to enhance your practical skills and build a powerful portfolio.',
             cta: 'Start a Simulation',
             ctaLink: '/product/xperience-platform',
-            image: getAssetPath('/platformslide1.png')
-          }
+            image: getAssetPath('/platformslide1.png'),
+          },
         },
-        { 
+        {
           name: 'Talent Intelligence Suite',
           link: '/product/talent-intelligence',
           detail: {
@@ -39,10 +39,10 @@ const navItems = [
             description: 'A data-driven talent insight system enabling institutions and recruiters to match skill potential with evolving job roles, ensuring the right fit every time.',
             cta: 'Find Top Talent',
             ctaLink: '/product/talent-intelligence',
-            image: getAssetPath('/transformskill_futureset.png')
-          }
+            image: getAssetPath('/transformskill_futureset.png'),
+          },
         },
-        { 
+        {
           name: 'AI HackNex',
           link: '/product/ai-hacknex',
           detail: {
@@ -50,10 +50,10 @@ const navItems = [
             description: 'A high-impact AI competition environment where participants solve real-world challenges to showcase and sharpen their capabilities.',
             cta: 'Join a Competition',
             ctaLink: '/product/ai-hacknex',
-            image: getAssetPath('/step_slide_img.jpg')
-          }
+            image: getAssetPath('/step_slide_img.jpg'),
+          },
         },
-        { 
+        {
           name: 'Hirenest',
           link: '/product/hirenest',
           detail: {
@@ -61,18 +61,18 @@ const navItems = [
             description: 'An intelligent college-to-career recruitment platform that connects pre-assessed, high-potential candidates with top hiring organizations.',
             cta: 'Explore Hirenest',
             ctaLink: '/product/hirenest',
-            image: getAssetPath('/insight_roles.jpg')
-          }
+            image: getAssetPath('/insight_roles.jpg'),
+          },
         },
-      ]
-    }
+      ],
+    },
   },
   {
     name: 'Use Cases',
     link: '',
     dropdown: {
       items: [
-        { 
+        {
           name: 'For Students',
           link: '/use-case/students',
           detail: {
@@ -80,10 +80,10 @@ const navItems = [
             description: 'Utilize comprehensive career discovery tools, virtual internships, skill development, and portfolio verification to launch your career with confidence.',
             cta: 'Start Your Journey',
             ctaLink: '/use-case/students',
-            image: getAssetPath('/forstudentuse.jpg')
-          }
+            image: getAssetPath('/forstudentuse.jpg'),
+          },
         },
-        { 
+        {
           name: 'For Institutions',
           link: '/use-case/institutions',
           detail: {
@@ -91,10 +91,10 @@ const navItems = [
             description: 'Integrate Hirenest for campus recruitment, track performance with our student analytics dashboard, and set up your own innovation lab (PoC Hub).',
             cta: 'Partner With Us',
             ctaLink: '/use-case/institutions',
-            image: getAssetPath('/for_universities_banner.jpeg')
-          }
+            image: getAssetPath('/for_universities_banner.jpeg'),
+          },
         },
-        { 
+        {
           name: 'For Enterprises',
           link: '/use-case/enterprises',
           detail: {
@@ -102,10 +102,10 @@ const navItems = [
             description: 'Access a ready-to-hire pipeline of pre-assessed talent, implement custom workforce upskilling programs, and host innovation challenges.',
             cta: 'Build Your Team',
             ctaLink: '/use-case/enterprises',
-            image: getAssetPath('/forproffession.jpg')
-          }
+            image: getAssetPath('/forproffession.jpg'),
+          },
         },
-        { 
+        {
           name: 'For Government',
           link: '/use-case/government',
           detail: {
@@ -113,18 +113,18 @@ const navItems = [
             description: 'Conduct large-scale skill assessments, enable employment in Tier 2/3 cities, and use data-driven intelligence for policy planning.',
             cta: 'Drive Social Impact',
             ctaLink: '/use-case/government',
-            image: getAssetPath('/for_government_img_only.jpg')
-          }
+            image: getAssetPath('/for_government_img_only.jpg'),
+          },
         },
-      ]
-    }
+      ],
+    },
   },
   {
     name: 'School of Technology',
     link: '/academy',
     dropdown: {
       items: [
-        { 
+        {
           name: 'ByteMinds – AI & Data',
           link: '/academy/byteminds',
           detail: {
@@ -132,10 +132,10 @@ const navItems = [
             description: 'Master AI, machine learning, and quantum computing through hands-on labs, real-world projects, and mentorship from industry leaders.',
             cta: 'Explore ByteMinds',
             ctaLink: '/academy/byteminds',
-            image: getAssetPath('/data_ai.jpg')
-          }
+            image: getAssetPath('/data_ai.jpg'),
+          },
         },
-        { 
+        {
           name: 'Global School of Sustainability',
           link: '/academy/sustainability',
           detail: {
@@ -143,10 +143,10 @@ const navItems = [
             description: 'Lead the climate revolution with programs in renewable energy, circular economy, climate finance, and environmental innovation.',
             cta: 'Join Sustainability School',
             ctaLink: '/academy/sustainability',
-            image: getAssetPath('/future_proofing_img.jpg')
-          }
+            image: getAssetPath('/future_proofing_img.jpg'),
+          },
         },
-        { 
+        {
           name: 'Digital & Design Excellence',
           link: '/academy/digital-design',
           detail: {
@@ -154,8 +154,8 @@ const navItems = [
             description: 'Master Web 3.0, metaverse, UI/UX design, and human-centered innovation through immersive creative-tech programs.',
             cta: 'Explore Digital Design',
             ctaLink: '/academy/digital-design',
-            image: getAssetPath('/platformslide1.png')
-          }
+            image: getAssetPath('/platformslide1.png'),
+          },
         },
         {
           name: 'School of EV & E-Mobility',
@@ -165,8 +165,8 @@ const navItems = [
             description: 'Drive the electric revolution with programs in battery technology, charging infrastructure, and sustainable transportation.',
             cta: 'Join EV School',
             ctaLink: '/academy/ev-mobility',
-            image: getAssetPath('/future_workspace.jpg')
-          }
+            image: getAssetPath('/future_workspace.jpg'),
+          },
         },
         {
           name: 'Udan – Aerial Intelligence',
@@ -176,11 +176,11 @@ const navItems = [
             description: 'Master drone technology, aerial data intelligence, and aerospace innovation through hands-on labs and industry partnerships.',
             cta: 'Explore Udan',
             ctaLink: '/academy/udan',
-            image: getAssetPath('/precision_agriculture_tile.jpg')
-          }
-        }
-      ]
-    }
+            image: getAssetPath('/precision_agriculture_tile.jpg'),
+          },
+        },
+      ],
+    },
   },
   {
     name: 'Explore',
@@ -195,8 +195,8 @@ const navItems = [
             description: 'Gain industry-ready skills through real-world scenarios in high-impact domains like AI & Data, Banking, Software Development, and more.',
             cta: 'Explore Simulations',
             ctaLink: '/explore/job-simulations',
-            image: getAssetPath('/xperience_img1.jpg')
-          }
+            image: getAssetPath('/xperience_img1.jpg'),
+          },
         },
         {
           name: 'Career Trajectory',
@@ -206,8 +206,8 @@ const navItems = [
             description: 'Bring together industry-relevant job simulations in a structured roadmap to help you secure your ideal entry-level role.',
             cta: 'Find Your Path',
             ctaLink: '/explore/career-trajectory',
-            image: getAssetPath('/MeasuringS_gifuccess.gif')
-          }
+            image: getAssetPath('/MeasuringS_gifuccess.gif'),
+          },
         },
         {
           name: 'Skillzza Persona',
@@ -217,11 +217,11 @@ const navItems = [
             description: 'Discover your unique strengths with interactive AI role-play simulations and map a personalized career path.',
             cta: 'Discover Your Persona',
             ctaLink: '/explore/skillzza-persona',
-            image: getAssetPath('/upskilling_forAi_tile_img.jpeg')
-          }
-        }
-      ]
-    }
+            image: getAssetPath('/upskilling_forAi_tile_img.jpeg'),
+          },
+        },
+      ],
+    },
   },
   {
     name: 'Insights',
@@ -233,58 +233,58 @@ const navItems = [
           link: '/insights/skill-blueprint',
           detail: {
             title: 'Skill Blueprint – Solutions & Case Studies',
-            description: 'Real-World Success Stories in Skill Development',
+            description: 'Real-world success stories in skill development across industries.',
             cta: 'Read Case Studies',
             ctaLink: '/insights/skill-blueprint',
-            image: getAssetPath('/company_header_img.jpg')
-          }
+            image: getAssetPath('/company_header_img.jpg'),
+          },
         },
         {
           name: 'The Skillzza Digest',
           link: '/insights/skill-digest',
           detail: {
             title: 'Blog – The Skill Digest',
-            description: 'Insights, Trends & Game-changers shaping the Future of Skills',
+            description: 'Insights, trends & game-changers shaping the future of skills.',
             cta: 'Go to Blog',
             ctaLink: '/insights/skill-digest',
-            image: getAssetPath('/digestbannerImg.jpeg')
-          }
+            image: getAssetPath('/digestbannerImg.jpeg'),
+          },
         },
         {
           name: 'AI Talent Research Hub',
           link: '/insights/ai-talent-research-hub',
           detail: {
             title: 'AI Talent Research Hub – Reports & Whitepapers',
-            description: 'Data-Driven Insights on AI & Workforce Transformation.',
+            description: 'Data-driven insights on AI & workforce transformation.',
             cta: 'View Reports',
             ctaLink: '/insights/ai-talent-research-hub',
-            image: getAssetPath('/aIdataAnalyticsDecisions_tile.jpg')
-          }
+            image: getAssetPath('/aIdataAnalyticsDecisions_tile.jpg'),
+          },
         },
         {
           name: 'The Skill Unplugged Podcast',
           link: '/insights/skill-unplugged-podcast',
           detail: {
             title: 'The Skill Unplugged Podcast Series (3R)',
-            description: 'Raw, Real & Revolutionary Talks on the Future of Skills.',
+            description: 'Raw, real & revolutionary talks on the future of skills.',
             cta: 'Listen to Podcasts',
             ctaLink: '/insights/skill-unplugged-podcast',
-            image: getAssetPath('/digital_bugiess_growthBlog_img.jpg')
-          }
+            image: getAssetPath('/digital_bugiess_growthBlog_img.jpg'),
+          },
         },
         {
           name: 'Skillzza Live',
           link: '/insights/skillzza-live',
           detail: {
             title: 'Skillzza Live: Knowledge in Action',
-            description: 'Interactive Sessions Bringing Learning to Life.',
+            description: 'Interactive sessions bringing learning to life.',
             cta: 'Join a Session',
             ctaLink: '/insights/skillzza-live',
-            image: getAssetPath('/hackathonsbootcamps_img.jpg')
-          }
-        }
-      ]
-    }
+            image: getAssetPath('/hackathonsbootcamps_img.jpg'),
+          },
+        },
+      ],
+    },
   },
   {
     name: 'Company',
@@ -299,8 +299,8 @@ const navItems = [
             description: 'Learn about our mission to engineer an end-to-end career ecosystem and empower individuals to achieve their full potential.',
             cta: 'Learn More',
             ctaLink: '/company/about',
-            image: getAssetPath('/aboutUsHeaeder_tilemg.png')
-          }
+            image: getAssetPath('/aboutUsHeaeder_tilemg.png'),
+          },
         },
         {
           name: 'What We Do',
@@ -310,8 +310,8 @@ const navItems = [
             description: 'Explore our comprehensive approach combining AI-driven intelligence, immersive learning, and role-based simulations.',
             cta: 'Explore Services',
             ctaLink: '/company/what-we-do',
-            image: getAssetPath('/what_we_do_banner.jpg')
-          }
+            image: getAssetPath('/what_we_do_banner.jpg'),
+          },
         },
         {
           name: 'Our Methodology',
@@ -321,8 +321,8 @@ const navItems = [
             description: 'Discover the data-driven approach and innovative frameworks we use to engineer successful career pathways.',
             cta: 'Discover Our Method',
             ctaLink: '/company/methodology',
-            image: getAssetPath('/methodology_banner_img.png')
-          }
+            image: getAssetPath('/methodology_banner_img.png'),
+          },
         },
         {
           name: 'Our Pathway',
@@ -332,8 +332,8 @@ const navItems = [
             description: 'Join our inclusive, impact-driven skill development programs aligned with UN Sustainable Development Goals.',
             cta: 'Start Your Journey',
             ctaLink: '/company/pathway',
-            image: getAssetPath('/sdgs_banner.png')
-          }
+            image: getAssetPath('/sdgs_banner.png'),
+          },
         },
         {
           name: 'Partner Collaboration',
@@ -343,8 +343,8 @@ const navItems = [
             description: 'We collaborate with industry leaders, academic institutions, and government bodies to build a robust and equitable future of work.',
             cta: 'Become a Partner',
             ctaLink: '/company/partnerships',
-            image: getAssetPath('/partner-bg.png')
-          }
+            image: getAssetPath('/partner-bg.png'),
+          },
         },
         {
           name: 'Responsible AI',
@@ -354,73 +354,247 @@ const navItems = [
             description: 'Our commitment to ethical AI development and deployment ensures fairness, transparency, and accountability.',
             cta: 'Learn About Our Standards',
             ctaLink: '/company/responsible-ai',
-            image: '/AIEthics&fairnessConsultant_tile.png'
-          }
+            image: '/AIEthics&fairnessConsultant_tile.png',
+          },
         },
-      ]
-    }
+      ],
+    },
   },
 ];
 
-const DropdownContent = ({ items }) => {
+/* ─────────────────────────────────────────────────────────────
+   MegaDropdown
+   Left: scrollable item list   Right: live detail + image
+───────────────────────────────────────────────────────────── */
+const MegaDropdown = ({ dropdown }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const detail = dropdown.items[activeIndex]?.detail;
+
   return (
-    <ul style={{ listStyle: 'none', margin: 0, padding: '6px 0' }}>
-      {items.map((item, index) => (
-        <li key={index}>
+    <div
+      style={{
+        display: 'flex',
+        background: '#fff',
+        borderTop: '1px solid #e5e7eb',
+        borderBottom: '1px solid #e5e7eb',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.10)',
+        minHeight: 200,
+      }}
+    >
+      {/* Left column */}
+      <div
+        style={{
+          width: 240,
+          flexShrink: 0,
+          background: '#f9f9f9',
+          borderRight: '1px solid #f0f0f0',
+          padding: '12px 0',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        {dropdown.items.map((item, i) => (
           <a
+            key={item.name}
             href={getRoutePath(item.link)}
+            onMouseEnter={() => setActiveIndex(i)}
             style={{
               display: 'block',
-              padding: '10px 20px',
+              padding: '13px 24px',
               fontSize: 14,
               fontWeight: 500,
-              color: '#374151',
+              color: i === activeIndex ? '#e02020' : '#374151',
               textDecoration: 'none',
+              borderLeft: `3px solid ${i === activeIndex ? '#e02020' : 'transparent'}`,
+              background: i === activeIndex ? '#fff' : 'transparent',
+              transition: 'background 0.15s, color 0.15s, border-color 0.15s',
               whiteSpace: 'nowrap',
-              transition: 'background 0.15s, color 0.15s',
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.background = '#f5f3ff';
-              e.currentTarget.style.color = '#7c3aed';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.background = 'transparent';
-              e.currentTarget.style.color = '#374151';
             }}
           >
             {item.name}
           </a>
-        </li>
-      ))}
-    </ul>
+        ))}
+      </div>
+
+      {/* Right panel */}
+      {detail && (
+        <div
+          style={{
+            flex: 1,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 48,
+            padding: '36px 56px',
+          }}
+        >
+          {/* Text */}
+          <div style={{ flex: 1 }}>
+            <p
+              style={{
+                fontSize: 20,
+                fontWeight: 700,
+                color: '#111827',
+                lineHeight: 1.35,
+                marginBottom: 12,
+              }}
+            >
+              {detail.title}
+            </p>
+            <p
+              style={{
+                fontSize: 14,
+                color: '#6b7280',
+                lineHeight: 1.75,
+                marginBottom: 24,
+              }}
+            >
+              {detail.description}
+            </p>
+            <a
+              href={getRoutePath(detail.ctaLink)}
+              style={{
+                display: 'inline-block',
+                padding: '11px 28px',
+                borderRadius: 8,
+                fontSize: 14,
+                fontWeight: 700,
+                textDecoration: 'none',
+                background: 'linear-gradient(90deg, #e02020 0%, #f5a623 100%)',
+                color: '#fff',
+                boxShadow: '0 2px 8px rgba(224,32,32,0.22)',
+              }}
+            >
+              {detail.cta}
+            </a>
+          </div>
+
+          {/* Image */}
+          <div
+            style={{
+              width: 280,
+              height: 170,
+              flexShrink: 0,
+              borderRadius: 10,
+              overflow: 'hidden',
+              background: '#f3f4f6',
+            }}
+          >
+            <img
+              src={detail.image}
+              alt={detail.title}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            />
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
-// Mobile Accordion Item
+/* ─────────────────────────────────────────────────────────────
+   DesktopNavItem
+───────────────────────────────────────────────────────────── */
+const DesktopNavItem = ({ item }) => {
+  const [open, setOpen] = useState(false);
+  const timeoutRef = useRef(null);
+
+  const show = () => { clearTimeout(timeoutRef.current); setOpen(true); };
+  const hide = () => { timeoutRef.current = setTimeout(() => setOpen(false), 120); };
+
+  useEffect(() => () => clearTimeout(timeoutRef.current), []);
+
+  return (
+    <div onMouseEnter={show} onMouseLeave={hide} style={{ position: 'relative' }}>
+      <a
+        href={item.link ? getRoutePath(item.link) : undefined}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 3,
+          padding: '8px 12px',
+          fontSize: 13,
+          fontWeight: 500,
+          color: open ? '#e02020' : '#374151',
+          textDecoration: 'none',
+          borderRadius: 6,
+          whiteSpace: 'nowrap',
+          transition: 'color 0.2s',
+          cursor: 'pointer',
+        }}
+      >
+        {item.name}
+        {item.dropdown && (
+          <IoIosArrowDown
+            style={{
+              fontSize: 13,
+              marginLeft: 2,
+              transition: 'transform 0.25s',
+              transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
+            }}
+          />
+        )}
+      </a>
+
+      {/* Full-viewport-width mega panel */}
+      {item.dropdown && open && (
+        <div style={{ position: 'fixed', top: 64, left: 0, right: 0, zIndex: 9999 }}>
+          <MegaDropdown dropdown={item.dropdown} />
+        </div>
+      )}
+    </div>
+  );
+};
+
+/* ─────────────────────────────────────────────────────────────
+   MobileNavItem — accordion
+───────────────────────────────────────────────────────────── */
 const MobileNavItem = ({ item, onClose }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-100">
+    <div style={{ borderBottom: '1px solid #f3f4f6' }}>
       {item.dropdown ? (
         <>
           <button
             onClick={() => setOpen(!open)}
-            className="w-full flex items-center justify-between px-5 py-3.5 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+            style={{
+              width: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              padding: '14px 20px',
+              fontSize: 14,
+              fontWeight: 600,
+              color: '#374151',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              textAlign: 'left',
+            }}
           >
-            {item.name}
+            <span>{item.name}</span>
             <IoIosArrowDown
-              style={{ fontSize: 14, transition: 'transform 0.3s', transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}
+              style={{
+                fontSize: 14,
+                transition: 'transform 0.3s',
+                transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
+              }}
             />
           </button>
           {open && (
-            <div className="bg-gray-50 px-4 pb-2">
+            <div style={{ background: '#f9fafb', padding: '6px 0 10px' }}>
               {item.dropdown.items.map((sub) => (
                 <a
                   key={sub.name}
                   href={getRoutePath(sub.link)}
                   onClick={onClose}
-                  className="block px-4 py-2.5 text-sm text-gray-600 hover:text-purple-600 hover:bg-white rounded-md transition-colors"
+                  style={{
+                    display: 'block',
+                    padding: '10px 32px',
+                    fontSize: 13,
+                    color: '#4b5563',
+                    textDecoration: 'none',
+                  }}
                 >
                   {sub.name}
                 </a>
@@ -432,7 +606,14 @@ const MobileNavItem = ({ item, onClose }) => {
         <a
           href={getRoutePath(item.link)}
           onClick={onClose}
-          className="block px-5 py-3.5 text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:text-red-600 transition-colors"
+          style={{
+            display: 'block',
+            padding: '14px 20px',
+            fontSize: 14,
+            fontWeight: 600,
+            color: '#374151',
+            textDecoration: 'none',
+          }}
         >
           {item.name}
         </a>
@@ -441,111 +622,192 @@ const MobileNavItem = ({ item, onClose }) => {
   );
 };
 
+/* ─────────────────────────────────────────────────────────────
+   Navbar
+───────────────────────────────────────────────────────────── */
 const Navbar = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
-    <header className="bg-white text-gray-800 shadow-sm sticky top-0 z-50 relative" style={{ borderBottom: '1px solid #f0f0f0' }}>
-      <div className="navbar-desktop" style={{ maxWidth: 1400, margin: '0 auto', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', minHeight: 64, flexWrap: 'wrap', gap: 16 }}>
+    <>
+      <header
+        style={{
+          background: '#fff',
+          borderBottom: '1px solid #f0f0f0',
+          boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+          position: 'sticky',
+          top: 0,
+          zIndex: 50,
+        }}
+      >
+        {/* Main bar */}
+        <div
+          style={{
+            maxWidth: 1400,
+            margin: '0 auto',
+            padding: '0 24px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            height: 64,
+            gap: 16,
+          }}
+        >
+          {/* Logo */}
+          <div style={{ flexShrink: 0 }}>
+            <a href={getRoutePath('/')}>
+              <img
+                src={getAssetPath('/skillzza-logo.png')}
+                alt="Skillzza Logo"
+                style={{ height: 40, width: 'auto' }}
+              />
+            </a>
+          </div>
 
-        {/* Logo */}
-        <div style={{ flexShrink: 0 }}>
-          <a href={getRoutePath('/')}>
-            <img src={getAssetPath('/skillzza-logo.png')} alt="Skillzza Logo" style={{ height: 40, width: 'auto' }} />
-          </a>
-        </div>
-
-        {/* Nav Items - Center */}
-        <nav className="nav-center-container" style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', justifyContent: 'center', flex: 1 }}>
-          {navItems.map((item) => (
-            <div key={item.name} className="group nav-item-wrapper" style={{ position: 'relative', padding: '20px 0', margin: '-20px 0' }}>
-              <a
-                href={getRoutePath(item.link)}
-                style={{ display: 'flex', alignItems: 'center', gap: 4, padding: '8px 12px', fontSize: 13, fontWeight: 500, color: '#374151', textDecoration: 'none', borderRadius: 6, transition: 'color 0.2s', whiteSpace: 'nowrap' }}
-                className="hover:text-red-600"
-              >
-                {item.name}
-                {item.dropdown && (
-                  <IoIosArrowDown style={{ fontSize: 14, transition: 'transform 0.3s' }} className="group-hover:rotate-180" />
-                )}
-              </a>
-
-              {item.dropdown && (
-                <div
-                  className="opacity-0 group-hover:opacity-100 invisible group-hover:visible pointer-events-none group-hover:pointer-events-auto"
-                  style={{ position: 'absolute', top: '100%', left: 0, transition: 'all 0.2s', zIndex: 9999, paddingTop: 8 }}
-                >
-                  <div style={{ background: '#fff', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', borderRadius: 8, border: '1px solid #e5e7eb', minWidth: 200, overflow: 'hidden' }}>
-                    <DropdownContent items={item.dropdown.items} />
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </nav>
-
-        {/* Right Buttons */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0, flexWrap: 'wrap', justifyContent: 'center' }}>
-          <a
-            href="/book-demo"
+          {/* Desktop nav */}
+          <nav
+            className="sz-desktop-nav"
             style={{
-              background: 'linear-gradient(90deg, #e02020 0%, #f5a623 100%)',
-              color: '#fff',
-              padding: '10px 24px',
-              borderRadius: 8,
-              fontSize: 14,
-              fontWeight: 700,
-              textDecoration: 'none',
-              whiteSpace: 'nowrap',
-              boxShadow: '0 2px 8px rgba(224,32,32,0.25)',
-              transition: 'opacity 0.2s',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 2,
+              flex: 1,
+              justifyContent: 'center',
+              flexWrap: 'wrap',
             }}
           >
-            Book a Demo
-          </a>
-          <a
-            href="/product-tour"
+            {navItems.map((item) => (
+              <DesktopNavItem key={item.name} item={item} />
+            ))}
+          </nav>
+
+          {/* CTA buttons */}
+          <div
+            className="sz-cta-group"
+            style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}
+          >
+            <a
+              href={getRoutePath('/book-demo')}
+              style={{
+                background: 'linear-gradient(90deg, #e02020 0%, #f5a623 100%)',
+                color: '#fff',
+                padding: '9px 22px',
+                borderRadius: 8,
+                fontSize: 13,
+                fontWeight: 700,
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+                boxShadow: '0 2px 8px rgba(224,32,32,0.20)',
+              }}
+            >
+              Book a Demo
+            </a>
+            <a
+              href={getRoutePath('/product-tour')}
+              style={{
+                background: '#fff',
+                color: '#e02020',
+                padding: '9px 22px',
+                borderRadius: 8,
+                fontSize: 13,
+                fontWeight: 700,
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+                border: '1.5px solid #fca5a5',
+              }}
+            >
+              Product Tour
+            </a>
+          </div>
+
+          {/* Hamburger */}
+          <button
+            className="sz-hamburger"
+            onClick={() => setMobileOpen(!mobileOpen)}
             style={{
+              display: 'none',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              color: '#374151',
+              padding: 6,
+              borderRadius: 6,
+            }}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <HiX size={22} /> : <HiMenu size={22} />}
+          </button>
+        </div>
+
+        {/* Mobile menu */}
+        {mobileOpen && (
+          <div
+            style={{
+              borderTop: '1px solid #f3f4f6',
               background: '#fff',
-              color: '#e02020',
-              padding: '10px 24px',
-              borderRadius: 8,
-              fontSize: 14,
-              fontWeight: 700,
-              textDecoration: 'none',
-              whiteSpace: 'nowrap',
-              border: '1.5px solid #f5c6c6',
-              transition: 'all 0.2s',
+              maxHeight: 'calc(100vh - 64px)',
+              overflowY: 'auto',
             }}
           >
-            Product Tour
-          </a>
-        </div>
+            {navItems.map((item) => (
+              <MobileNavItem
+                key={item.name}
+                item={item}
+                onClose={() => setMobileOpen(false)}
+              />
+            ))}
+            <div style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <a
+                href={getRoutePath('/book-demo')}
+                style={{
+                  background: 'linear-gradient(90deg, #e02020 0%, #f5a623 100%)',
+                  color: '#fff',
+                  padding: '11px 22px',
+                  borderRadius: 8,
+                  fontSize: 14,
+                  fontWeight: 700,
+                  textDecoration: 'none',
+                  textAlign: 'center',
+                }}
+              >
+                Book a Demo
+              </a>
+              <a
+                href={getRoutePath('/product-tour')}
+                style={{
+                  background: '#fff',
+                  color: '#e02020',
+                  padding: '11px 22px',
+                  borderRadius: 8,
+                  fontSize: 14,
+                  fontWeight: 700,
+                  textDecoration: 'none',
+                  textAlign: 'center',
+                  border: '1.5px solid #fca5a5',
+                }}
+              >
+                Product Tour
+              </a>
+            </div>
+          </div>
+        )}
+      </header>
 
-      </div>
-
+      {/* Responsive rules */}
       <style>{`
+        .sz-desktop-nav { display: flex !important; }
+        .sz-cta-group   { display: flex !important; }
+        .sz-hamburger   { display: none  !important; }
+
         @media (max-width: 1023px) {
-          .nav-center-container {
-            flex-direction: column !important;
-            width: 100% !important;
-            gap: 16px !important;
-            padding: 16px 0 !important;
-          }
-          .nav-item-wrapper {
-            width: 100% !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            display: flex !important;
-            justify-content: center !important;
-          }
-          .nav-item-wrapper > a {
-            width: 100%;
-            justify-content: center;
-            font-size: 16px !important;
-            padding: 12px !important;
-          }
+          .sz-desktop-nav { display: none  !important; }
+          .sz-cta-group   { display: none  !important; }
+          .sz-hamburger   { display: flex  !important; }
         }
       `}</style>
-    </header>
+    </>
   );
 };
 
