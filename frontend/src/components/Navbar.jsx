@@ -384,7 +384,7 @@ const MegaDropdown = ({ dropdown }) => {
       {/* Left column */}
       <div
         style={{
-          width: 240,
+          width: 300,
           flexShrink: 0,
           background: '#f9f9f9',
           borderRight: '1px solid #f0f0f0',
@@ -400,8 +400,8 @@ const MegaDropdown = ({ dropdown }) => {
             onMouseEnter={() => setActiveIndex(i)}
             style={{
               display: 'block',
-              padding: '13px 24px',
-              fontSize: 14,
+              padding: '13px 24px 13px 113px', // ← 113px ≈ 3cm left gap
+              fontSize: 12,
               fontWeight: 500,
               color: i === activeIndex ? '#e02020' : '#374151',
               textDecoration: 'none',
@@ -416,19 +416,23 @@ const MegaDropdown = ({ dropdown }) => {
         ))}
       </div>
 
-      {/* Right panel */}
+      {/* Right panel — fixed equal padding both sides */}
       {detail && (
         <div
           style={{
             flex: 1,
             display: 'flex',
             alignItems: 'center',
+            paddingTop: 32,
+            paddingBottom: 32,
+            paddingLeft: 120,
+            paddingRight: 120,
             gap: 48,
-            padding: '36px 56px',
+            boxSizing: 'border-box',
           }}
         >
           {/* Text */}
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
             <p
               style={{
                 fontSize: 20,
@@ -471,7 +475,7 @@ const MegaDropdown = ({ dropdown }) => {
           {/* Image */}
           <div
             style={{
-              width: 280,
+              width: 260,
               height: 170,
               flexShrink: 0,
               borderRadius: 10,
