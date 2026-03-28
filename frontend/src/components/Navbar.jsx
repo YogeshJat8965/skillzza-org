@@ -354,7 +354,7 @@ const navItems = [
             description: 'Our commitment to ethical AI development and deployment ensures fairness, transparency, and accountability.',
             cta: 'Learn About Our Standards',
             ctaLink: '/company/responsible-ai',
-            image: '/AIEthics&fairnessConsultant_tile.png',
+            image: getAssetPath('/AIEthics&fairnessConsultant_tile.png'),
           },
         },
       ],
