@@ -453,22 +453,20 @@ function EcosystemSection() {
             width: "22.306%",
             height: "4.617%",
           }}>
-            <button style={{
-              width: "100%",
-              height: "100%",
-              background: "linear-gradient(90deg,#f5a623 0%,#f0c040 100%)",
-              color: "#101114",
-              border: "none",
-              borderRadius: "18px",
-              fontSize: "clamp(11px, 1.1vw, 18px)",
-              fontWeight: 600,
-              cursor: "pointer",
-              boxShadow: "0 4px 16px rgba(245,166,35,0.5)",
-              whiteSpace: "nowrap",
-              fontFamily: "DM Sans, sans-serif",
-              letterSpacing: "-0.025em",
-            }}>
-              Talent Marketplace
+            <button
+              style={{
+                width: "100%",
+                height: "100%",
+                background: "transparent",
+                color: "transparent",
+                border: "none",
+                borderRadius: "18px",
+                cursor: "pointer",
+                transition: "background 0.2s",
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = "rgba(245,166,35,0.35)"}
+              onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+            >
             </button>
           </div>
         </div>
