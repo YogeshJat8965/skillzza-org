@@ -384,7 +384,7 @@ const MegaDropdown = ({ dropdown }) => {
       {/* Left column */}
       <div
         style={{
-          width: 300,
+          width: 500,
           flexShrink: 0,
           background: '#f9f9f9',
           borderRight: '1px solid #f0f0f0',
@@ -400,7 +400,7 @@ const MegaDropdown = ({ dropdown }) => {
             onMouseEnter={() => setActiveIndex(i)}
             style={{
               display: 'block',
-              padding: '13px 24px 13px 113px', // ← 113px ≈ 3cm left gap
+              padding: '13px 40px 13px 265px', // ← 113px ≈ 3cm left gap
               fontSize: 12,
               fontWeight: 500,
               color: i === activeIndex ? '#e02020' : '#374151',
@@ -425,8 +425,8 @@ const MegaDropdown = ({ dropdown }) => {
             alignItems: 'center',
             paddingTop: 32,
             paddingBottom: 32,
-            paddingLeft: 120,
-            paddingRight: 120,
+            paddingLeft: 48,
+            paddingRight: 265,
             gap: 48,
             boxSizing: 'border-box',
           }}
