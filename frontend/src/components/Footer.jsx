@@ -85,10 +85,10 @@ const Footer = () => {
     <footer style={{ background: '#f0f0f0', fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
 
       {/* ── Main Body ── */}
-      <div style={{ maxWidth: 1440, margin: '0 auto', padding: '48px 48px 44px' }}>
+      <div className="footer-main-wrap" style={{ maxWidth: 1440, margin: '0 auto', padding: '48px 48px 44px' }}>
 
         {/* Outer grid: brand (left) + links (right) */}
-        <div style={{
+        <div className="footer-outer" style={{
           display: 'grid',
           gridTemplateColumns: '280px 1fr',
           columnGap: 40,
@@ -153,7 +153,7 @@ const Footer = () => {
           </div>
 
           {/* ── RIGHT: 6 link columns ── */}
-          <div style={{
+          <div className="footer-links-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(6, 1fr)',
             columnGap: 16,
@@ -206,7 +206,7 @@ const Footer = () => {
             ))}
 
             {/* ── Stay Connected — spans cols 5–6 (Insights + Company) ── */}
-            <div style={{ gridColumn: '5 / 7', marginTop: 36 }}>
+            <div className="footer-social-col" style={{ gridColumn: '5 / 7', marginTop: 36 }}>
               <p style={{
                 fontWeight: 700,
                 fontSize: 13,
@@ -242,7 +242,7 @@ const Footer = () => {
       </div>
 
       {/* ── Bottom red bar ── */}
-      <div style={{
+      <div className="footer-bottom-bar" style={{
         background: '#CF2C2E',
         display: 'flex',
         alignItems: 'center',
@@ -251,7 +251,7 @@ const Footer = () => {
         flexWrap: 'wrap',
         gap: 12,
       }}>
-        <div style={{ display: 'flex', gap: 36, flexWrap: 'wrap' }}>
+        <div className="footer-bottom-links" style={{ display: 'flex', gap: 36, flexWrap: 'wrap' }}>
           {[
             { name: 'Terms & Conditions', href: '/terms' },
             { name: 'Disclaimer', href: '/disclaimer' },
@@ -284,14 +284,24 @@ const Footer = () => {
       {/* ── Responsive styles ── */}
       <style>{`
         @media (max-width: 1199px) {
+          .footer-main-wrap { padding: 40px 28px 36px !important; }
           .footer-links-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 24px !important; }
+          .footer-social-col { grid-column: 1 / -1 !important; margin-top: 12px !important; }
         }
         @media (max-width: 899px) {
           .footer-outer { grid-template-columns: 1fr !important; }
           .footer-links-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          .footer-bottom-bar {
+            padding: 14px 20px !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 8px !important;
+          }
         }
         @media (max-width: 599px) {
+          .footer-main-wrap { padding: 32px 16px 28px !important; }
           .footer-links-grid { grid-template-columns: 1fr 1fr !important; }
+          .footer-bottom-links { gap: 16px !important; }
         }
         @media (max-width: 400px) {
           .footer-links-grid { grid-template-columns: 1fr !important; }

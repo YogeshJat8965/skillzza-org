@@ -478,24 +478,25 @@ const OurMethodology = () => {
       </section>
 
       {/* Full-width banner image — no overlay */}
-      <div style={{ width: '100%', lineHeight: 0 }}>
+      <div className="method-hero-image-wrap" style={{ width: '100%', lineHeight: 0 }}>
         <img
           src={getAssetPath('/speaker.png')}
           alt="The Skillzza Learning Framework"
+          className="method-hero-image"
           style={{ width: '100%', height: '520px', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
         />
       </div>
 
       {/* Below image: white section with centered text + stat pills */}
       {/* ── FIX: increased maxWidth for heading, paragraph and pills ── */}
-      <section style={{ backgroundColor: '#fff', padding: '64px 48px 72px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
+      <section className="method-intro-section" style={{ backgroundColor: '#fff', padding: '64px 48px 72px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
         <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#111', lineHeight: '1.25', margin: '0 auto 20px', maxWidth: '100%' }}>
           Transforming Potential Through<br />Science-Backed Learning
         </h2>
         <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.75', maxWidth: '100%', margin: '0 auto 40px' }}>
           At Skillzza, we believe that effective skill development requires more than traditional training approaches. Our methodology integrates cognitive science, industry insights, and adaptive technology to create learning experiences that deliver measurable, lasting results.
         </p>
-        <div style={{ display: 'flex', flexWrap: 'nowrap', gap: '14px', justifyContent: 'center', width: '100%', margin: '0 auto' }}>
+        <div className="method-stat-pills" style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', justifyContent: 'center', width: '100%', margin: '0 auto' }}>
           {['85%+ Skill Acquisition', '90%+ Learner Satisfaction', '75%+ Career Advancement', '95%+ Employer Satisfaction'].map((stat, i) => (
             <div key={i} style={{
               padding: '10px 24px', borderRadius: '50px',
@@ -507,6 +508,19 @@ const OurMethodology = () => {
           ))}
         </div>
       </section>
+      <style>{`
+        @media (max-width: 768px) {
+          .method-intro-section { padding: 40px 16px 48px !important; }
+          .method-hero-image { height: 320px !important; }
+          .method-stat-pills > div {
+            width: 100%;
+            max-width: 320px;
+          }
+        }
+        @media (max-width: 480px) {
+          .method-hero-image { height: 240px !important; }
+        }
+      `}</style>
 
       {/* LEARN Framework Section */}
       <LearnFramework />
@@ -699,13 +713,13 @@ const OurMethodology = () => {
                 </div>
               </div>
 
-              <div style={{ gridColumn: "1 / -1", borderRadius: 16, background: "#cffafe", padding: "28px 32px", display: "flex", alignItems: "center", gap: 24 }}>
+              <div className="insights-podcast-card" style={{ gridColumn: "1 / -1", borderRadius: 16, background: "#cffafe", padding: "28px 32px", display: "flex", alignItems: "center", gap: 24 }}>
                 <div style={{ flex: 1 }}>
                   <span style={{ display: "inline-block", background: "#22d3ee", color: "#fff", fontSize: 12, fontWeight: 600, padding: "5px 14px", borderRadius: 20, marginBottom: 14, fontFamily: "Inter, sans-serif" }}>Podcast</span>
                   <h4 style={{ fontSize: 22, fontWeight: 700, marginBottom: 10, color: "#111827", lineHeight: 1.3, fontFamily: "Inter, sans-serif" }}>Skills DECODED:<br />Conversations that matter.</h4>
                   <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.6, marginBottom: 0, maxWidth: 480, fontFamily: "Inter, sans-serif" }}>Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.</p>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, flexShrink: 0 }}>
+                <div className="insights-podcast-action" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, flexShrink: 0 }}>
                   <img src={getAssetPath("/mic.svg")} alt="Podcast" style={{ width: 72, height: 72 }} />
                   <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", whiteSpace: "nowrap", fontFamily: "Inter, sans-serif" }}>Listen now</button>
                 </div>

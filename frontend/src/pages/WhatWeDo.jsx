@@ -103,13 +103,24 @@ const WhatWeDo = () => {
             margin-left: 0 !important;
           }
           .pillar-tabs {
-            justify-content: flex-start !important;
-            flex-wrap: nowrap !important;
-            overflow-x: auto !important;
-            padding-bottom: 8px !important;
-            -webkit-overflow-scrolling: touch;
+            justify-content: center !important;
+            flex-wrap: wrap !important;
+            overflow-x: visible !important;
+            padding: 12px 0 !important;
+            gap: 10px !important;
           }
-          .pillar-tabs::-webkit-scrollbar { display: none; }
+          .pillar-tabs > button {
+            flex: 1 1 calc(50% - 10px) !important;
+            max-width: calc(50% - 10px) !important;
+            min-width: 150px !important;
+            text-align: center !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .pillar-tabs > button {
+            flex-basis: 100% !important;
+            max-width: 100% !important;
+          }
         }
       `}</style>
       {/* ── Hero Section ── */}
@@ -158,7 +169,7 @@ const WhatWeDo = () => {
           </div>
 
           {/* Sticky Tab Bar */}
-          <div style={{
+          <div className="pillar-tabs" style={{
             position: 'sticky',
             top: 0,
             zIndex: 50,
@@ -370,13 +381,13 @@ const WhatWeDo = () => {
                   <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Explore the Case studies</button>
                 </div>
               </div>
-              <div style={{ gridColumn: "1 / -1", borderRadius: 16, background: "#cffafe", padding: "28px 32px", display: "flex", alignItems: "center", gap: 24 }}>
+              <div className="insights-podcast-card" style={{ gridColumn: "1 / -1", borderRadius: 16, background: "#cffafe", padding: "28px 32px", display: "flex", alignItems: "center", gap: 24 }}>
                 <div style={{ flex: 1 }}>
                   <span style={{ display: "inline-block", background: "#22d3ee", color: "#fff", fontSize: 12, fontWeight: 600, padding: "5px 14px", borderRadius: 20, marginBottom: 14, fontFamily: "Inter, sans-serif" }}>Podcast</span>
                   <h4 style={{ fontSize: 22, fontWeight: 700, marginBottom: 10, color: "#111827", lineHeight: 1.3, fontFamily: "Inter, sans-serif" }}>Skills DECODED:<br />Conversations that matter.</h4>
                   <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.6, marginBottom: 0, maxWidth: 480, fontFamily: "Inter, sans-serif" }}>Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.</p>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, flexShrink: 0 }}>
+                <div className="insights-podcast-action" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, flexShrink: 0 }}>
                   <img src={getAssetPath("/mic.svg")} alt="Podcast" style={{ width: 72, height: 72 }} />
                   <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", whiteSpace: "nowrap", fontFamily: "Inter, sans-serif" }}>Listen now</button>
                 </div>
