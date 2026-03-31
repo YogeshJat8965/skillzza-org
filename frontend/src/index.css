@@ -73,16 +73,16 @@ img, video, iframe, embed, object {
     top: unset !important;
     right: unset !important;
     bottom: unset !important;
-    height: 260px !important;
+    height: 380px !important;
     justify-content: center !important;
   }
   .hero-img-col img {
     height: 100% !important;
-    max-height: 260px !important;
+    max-height: 380px !important;
     margin-top: 0 !important;
   }
   .hero-text-col {
-    padding: 32px 20px 140px !important;
+    padding: 32px 20px 40px !important;
     margin-top: 0 !important;
     text-align: center !important;
   }
@@ -109,7 +109,13 @@ img, video, iframe, embed, object {
     font-size: 22px !important;
   }
   .hero-text-col {
-    padding: 24px 16px 140px !important;
+    padding: 24px 16px 36px !important;
+  }
+  .hero-img-col {
+    height: 340px !important;
+  }
+  .hero-img-col img {
+    max-height: 340px !important;
   }
 }
 
