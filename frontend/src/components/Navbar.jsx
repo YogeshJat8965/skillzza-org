@@ -73,10 +73,10 @@ const navItems = [
     dropdown: {
       items: [
         {
-          name: 'For Students',
+          name: 'Students',
           link: '/use-case/students',
           detail: {
-            title: 'Student Advantage Package: From Campus to Career Excellence',
+            title: 'Student Advantage Package',
             description: 'Utilize comprehensive career discovery tools, virtual internships, skill development, and portfolio verification to launch your career with confidence.',
             cta: 'Start Your Journey',
             ctaLink: '/use-case/students',
@@ -84,10 +84,10 @@ const navItems = [
           },
         },
         {
-          name: 'For Institutions',
+          name: 'Institutions',
           link: '/use-case/institutions',
           detail: {
-            title: 'Campus Enablement Package: From Academic Excellence to Industry Readiness',
+            title: 'Campus Enablement Package',
             description: 'Integrate Hirenest for campus recruitment, track performance with our student analytics dashboard, and set up your own innovation lab (PoC Hub).',
             cta: 'Partner With Us',
             ctaLink: '/use-case/institutions',
@@ -95,10 +95,10 @@ const navItems = [
           },
         },
         {
-          name: 'For Enterprises',
+          name: 'Enterprises',
           link: '/use-case/enterprises',
           detail: {
-            title: 'Enterprise Talent Solutions: Strategic Workforce Intelligence',
+            title: 'Enterprise Talent Solutions',
             description: 'Access a ready-to-hire pipeline of pre-assessed talent, implement custom workforce upskilling programs, and host innovation challenges.',
             cta: 'Build Your Team',
             ctaLink: '/use-case/enterprises',
@@ -106,10 +106,10 @@ const navItems = [
           },
         },
         {
-          name: 'For Government',
+          name: 'Government',
           link: '/use-case/government',
           detail: {
-            title: 'Government & CSR Impact: Scalable Workforce Transformation',
+            title: 'Government & CSR Impact',
             description: 'Conduct large-scale skill assessments, enable employment in Tier 2/3 cities, and use data-driven intelligence for policy planning.',
             cta: 'Drive Social Impact',
             ctaLink: '/use-case/government',
@@ -128,7 +128,7 @@ const navItems = [
           name: 'ByteMinds – AI & Data',
           link: '/academy/byteminds',
           detail: {
-            title: 'ByteMinds – The School of AI & Quantum Intelligence',
+            title: 'ByteMinds',
             description: 'Master AI, machine learning, and quantum computing through hands-on labs, real-world projects, and mentorship from industry leaders.',
             cta: 'Explore ByteMinds',
             ctaLink: '/academy/byteminds',
@@ -139,7 +139,7 @@ const navItems = [
           name: 'Global School of Sustainability',
           link: '/academy/sustainability',
           detail: {
-            title: 'Global School of Sustainability & Climate Action',
+            title: 'Global School of Sustainability',
             description: 'Lead the climate revolution with programs in renewable energy, circular economy, climate finance, and environmental innovation.',
             cta: 'Join Sustainability School',
             ctaLink: '/academy/sustainability',
@@ -191,8 +191,8 @@ const navItems = [
           name: 'Job Simulations',
           link: '/explore/job-simulations',
           detail: {
-            title: 'Immersive Job Simulations',
-            description: 'Gain industry-ready skills through real-world scenarios in high-impact domains like AI & Data, Banking, Software Development, and more.',
+            title: 'Explore High-Impact Domains:',
+            description: 'AI & Data | Banking | Software Development \n Entrepreneurship | Cybersecurity | Quantum Computing',
             cta: 'Explore Simulations',
             ctaLink: '/explore/job-simulations',
             image: getAssetPath('/xperience_img1.jpg'),
@@ -202,8 +202,10 @@ const navItems = [
           name: 'Career Trajectory',
           link: '/explore/career-trajectory',
           detail: {
-            title: 'Chart Your Career Trajectory',
-            description: 'Bring together industry-relevant job simulations in a structured roadmap to help you secure your ideal entry-level role.',
+            title: 'Career Trajectory',
+            description: `Bring together industry-relevant job simulations, providing a structured roadmap to help you secure your ideal entry-level role.
+
+AI Engineer  | Cybersecurity Analyst | ChatBOT Developer | VFX Designer  | Agentic AI Engineer`,
             cta: 'Find Your Path',
             ctaLink: '/explore/career-trajectory',
             image: getAssetPath('/MeasuringS_gifuccess.gif'),
@@ -213,9 +215,11 @@ const navItems = [
           name: 'Skillzza Persona',
           link: '/explore/skillzza-persona',
           detail: {
-            title: 'AI Role-Play Simulation',
-            description: 'Discover your unique strengths with interactive AI role-play simulations and map a personalized career path.',
-            cta: 'Discover Your Persona',
+            title: 'Ready to unlock your true potential?',
+            description: `Let our Skill assessment Engine help you discover your strengths and take the next step towards your dream job.
+
+One click away – Start your journey today! |`,
+            cta: 'One click away – Start your journey today!',
             ctaLink: '/explore/skillzza-persona',
             image: getAssetPath('/upskilling_forAi_tile_img.jpeg'),
           },
@@ -232,7 +236,7 @@ const navItems = [
           name: 'Skill Blueprint',
           link: '/insights/skill-blueprint',
           detail: {
-            title: 'Skill Blueprint – Solutions & Case Studies',
+            title: 'Skill Blueprint',
             description: 'Real-world success stories in skill development across industries.',
             cta: 'Read Case Studies',
             ctaLink: '/insights/skill-blueprint',
@@ -243,7 +247,7 @@ const navItems = [
           name: 'The Skillzza Digest',
           link: '/insights/skill-digest',
           detail: {
-            title: 'Blog – The Skill Digest',
+            title: 'The Skill Digest',
             description: 'Insights, trends & game-changers shaping the future of skills.',
             cta: 'Go to Blog',
             ctaLink: '/insights/skill-digest',
@@ -254,7 +258,7 @@ const navItems = [
           name: 'AI Talent Research Hub',
           link: '/insights/ai-talent-research-hub',
           detail: {
-            title: 'AI Talent Research Hub – Reports & Whitepapers',
+            title: 'AI Talent Research Hub',
             description: 'Data-driven insights on AI & workforce transformation.',
             cta: 'View Reports',
             ctaLink: '/insights/ai-talent-research-hub',
@@ -265,7 +269,7 @@ const navItems = [
           name: 'The Skill Unplugged Podcast',
           link: '/insights/skill-unplugged-podcast',
           detail: {
-            title: 'The Skill Unplugged Podcast Series (3R)',
+            title: 'The Skill Unplugged',
             description: 'Raw, real & revolutionary talks on the future of skills.',
             cta: 'Listen to Podcasts',
             ctaLink: '/insights/skill-unplugged-podcast',
@@ -276,7 +280,7 @@ const navItems = [
           name: 'Skillzza Live',
           link: '/insights/skillzza-live',
           detail: {
-            title: 'Skillzza Live: Knowledge in Action',
+            title: 'Skillzza Live',
             description: 'Interactive sessions bringing learning to life.',
             cta: 'Join a Session',
             ctaLink: '/insights/skillzza-live',
@@ -363,6 +367,52 @@ const navItems = [
 ];
 
 /* ─────────────────────────────────────────────────────────────
+   InteractiveDescription — renders text with pipe-separated items
+───────────────────────────────────────────────────────────── */
+const InteractiveDescription = ({ text }) => {
+  if (!text) return null;
+  const blocks = text.split('\n');
+  return (
+    <>
+      {blocks.map((block, i) => (
+        <div key={i} style={{ lineHeight: 1.5, whiteSpace: 'pre-line', minHeight: block === '' ? '1em' : 'auto' }}>
+          {block.includes('|') ? (
+            block.split('|').map((item, j, arr) => (
+              <span key={j}>
+                <span
+                  style={{
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    display: 'inline-block',
+                    color: '#6b7280',
+                    fontSize: 14,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = '#2563eb';
+                    e.currentTarget.style.fontSize = '15.5px';
+                    e.currentTarget.style.fontWeight = '600';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = '#6b7280';
+                    e.currentTarget.style.fontSize = '14px';
+                    e.currentTarget.style.fontWeight = '400';
+                  }}
+                >
+                  {item.trim()}
+                </span>
+                {j < arr.length - 1 && arr[j+1].trim() !=='' && <span style={{ margin: '0 10px', color: '#e5e7eb', fontWeight: 300 }}>|</span>}
+              </span>
+            ))
+          ) : (
+            <span style={{ fontSize: 14, color: '#6b7280', lineHeight: 1.75 }}>{block}</span>
+          )}
+        </div>
+      ))}
+    </>
+  );
+};
+
+/* ─────────────────────────────────────────────────────────────
    MegaDropdown
    Left: scrollable item list   Right: live detail + image
 ───────────────────────────────────────────────────────────── */
@@ -375,16 +425,17 @@ const MegaDropdown = ({ dropdown }) => {
       style={{
         display: 'flex',
         background: '#fff',
-        borderTop: '1px solid #e5e7eb',
-        borderBottom: '1px solid #e5e7eb',
+        border: '1px solid #e5e7eb',
+        borderRadius: 12,
         boxShadow: '0 8px 32px rgba(0,0,0,0.10)',
         minHeight: 200,
+        overflow: 'hidden',
       }}
     >
       {/* Left column */}
       <div
         style={{
-          width: 500,
+          width: 260,
           flexShrink: 0,
           background: '#f9f9f9',
           borderRight: '1px solid #f0f0f0',
@@ -400,7 +451,7 @@ const MegaDropdown = ({ dropdown }) => {
             onMouseEnter={() => setActiveIndex(i)}
             style={{
               display: 'block',
-              padding: '13px 40px 13px 265px', // ← 113px ≈ 3cm left gap
+              padding: '12px 24px',
               fontSize: 12,
               fontWeight: 500,
               color: i === activeIndex ? '#e02020' : '#374151',
@@ -423,11 +474,11 @@ const MegaDropdown = ({ dropdown }) => {
             flex: 1,
             display: 'flex',
             alignItems: 'center',
-            paddingTop: 32,
-            paddingBottom: 32,
-            paddingLeft: 48,
-            paddingRight: 265,
-            gap: 48,
+            paddingTop: 24,
+            paddingBottom: 24,
+            paddingLeft: 32,
+            paddingRight: 32,
+            gap: 32,
             boxSizing: 'border-box',
           }}
         >
@@ -444,39 +495,17 @@ const MegaDropdown = ({ dropdown }) => {
             >
               {detail.title}
             </p>
-            <p
-              style={{
-                fontSize: 14,
-                color: '#6b7280',
-                lineHeight: 1.75,
-                marginBottom: 24,
-              }}
-            >
-              {detail.description}
-            </p>
-            <a
-              href={getRoutePath(detail.ctaLink)}
-              style={{
-                display: 'inline-block',
-                padding: '11px 28px',
-                borderRadius: 8,
-                fontSize: 14,
-                fontWeight: 700,
-                textDecoration: 'none',
-                background: 'linear-gradient(90deg, #e02020 0%, #f5a623 100%)',
-                color: '#fff',
-                boxShadow: '0 2px 8px rgba(224,32,32,0.22)',
-              }}
-            >
-              {detail.cta}
-            </a>
+            <div style={{ marginBottom: 24 }}>
+              <InteractiveDescription text={detail.description} />
+            </div>
+
           </div>
 
           {/* Image */}
           <div
             style={{
-              width: 260,
-              height: 170,
+              width: 220,
+              height: 140,
               flexShrink: 0,
               borderRadius: 10,
               overflow: 'hidden',
@@ -539,9 +568,9 @@ const DesktopNavItem = ({ item }) => {
         )}
       </a>
 
-      {/* Full-viewport-width mega panel */}
+      {/* Full-viewport-width mega panel shrunk with offsets */}
       {item.dropdown && open && (
-        <div style={{ position: 'fixed', top: 64, left: 0, right: 0, zIndex: 9999 }}>
+        <div style={{ position: 'fixed', top: 64, left: 260, right: 260, zIndex: 9999, paddingTop: 27 }}>
           <MegaDropdown dropdown={item.dropdown} />
         </div>
       )}
