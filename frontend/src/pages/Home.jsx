@@ -898,11 +898,11 @@ export default function SkillzzaHome() {
             <div style={{ display: "flex", flexDirection: "column", gap: 14, maxWidth: 420 }}>
               <input placeholder="Name*" style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }} />
               <input placeholder="Email*" style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }} />
-              <div style={{ display: "flex", gap: 12 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 4, padding: "13px 16px", borderRadius: 6, background: "#fff", color: "#1f2937", fontSize: 14, minWidth: 100, fontFamily: "Inter, sans-serif" }}>
+              <div className="partner-phone-row" style={{ display: "flex", gap: 12 }}>
+                <div className="partner-country-code" style={{ display: "flex", alignItems: "center", gap: 4, padding: "13px 16px", borderRadius: 6, background: "#fff", color: "#1f2937", fontSize: 14, minWidth: 100, fontFamily: "Inter, sans-serif" }}>
                   <span>India</span><span style={{ color: "#9ca3af", marginLeft: 4 }}>+91</span>
                 </div>
-                <input placeholder="Mobile Number*" style={{ flex: 1, padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif" }} />
+                <input className="partner-mobile-input" placeholder="Mobile Number*" style={{ flex: 1, padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif" }} />
               </div>
               <button
                 onMouseEnter={e => e.currentTarget.style.opacity = "0.9"}
