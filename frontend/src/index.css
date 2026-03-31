@@ -301,6 +301,19 @@ img, video, iframe, embed, object {
   .partner-cta-img-col img {
     max-height: 260px !important;
   }
+  .partner-phone-row {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .partner-country-code {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+  .partner-mobile-input {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
 }
 
 /* ── GENERAL PAGE HERO SECTIONS (Tailwind-based pages) ── */
