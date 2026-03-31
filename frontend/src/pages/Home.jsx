@@ -427,7 +427,7 @@ function PartnershipCards() {
 // ─── ECOSYSTEM SECTION ────────────────────────────────────────────────────────
 function EcosystemSection() {
   return (
-    <section style={{ background: "linear-gradient(160deg,#f8f4ff 0%,#ede8fb 60%,#e4dcf8 100%)", padding: "80px 0 0" }}>
+    <section style={{ background: "linear-gradient(160deg,#f8f4ff 0%,#ede8fb 60%,#e4dcf8 100%)", padding: "80px 0 32px" }}>
       <div className="section-inner" style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
 
         {/* Heading - kept as is */}
@@ -437,7 +437,7 @@ function EcosystemSection() {
         </div>
 
         {/* SVG image + Talent Marketplace button overlay */}
-        <div className="ecosystem-wrap" style={{ position: "relative", width: "100%", marginBottom: "75.6px" }}>
+        <div className="ecosystem-wrap" style={{ position: "relative", width: "100%", marginBottom: "16px" }}>
           <img
             src={getAssetPath("/ecosystem.svg")}
             alt="Skillzza Ecosystem"
