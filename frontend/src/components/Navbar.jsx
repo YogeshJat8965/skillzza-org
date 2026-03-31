@@ -17,7 +17,7 @@ const navItems = [
             description: 'A comprehensive AI assessment engine that evaluates strengths, career readiness, and growth potential, giving you a clear path to success.',
             cta: 'Assess Your Potential',
             ctaLink: '/product/potential-meter',
-            image: getAssetPath('/unlock_your_potential.jpg'),
+            image: getAssetPath('/image.png'),
           },
         },
         {
@@ -28,7 +28,7 @@ const navItems = [
             description: 'Engage with AI-powered job simulations that offer role-based, industry-aligned learning experiences to enhance your practical skills and build a powerful portfolio.',
             cta: 'Start a Simulation',
             ctaLink: '/product/xperience-platform',
-            image: getAssetPath('/platformslide1.png'),
+            image: getAssetPath('/people-office-analyzing-checking-finance-graphs_23-2150377147.jpg'),
           },
         },
         {
@@ -39,7 +39,7 @@ const navItems = [
             description: 'A data-driven talent insight system enabling institutions and recruiters to match skill potential with evolving job roles, ensuring the right fit every time.',
             cta: 'Find Top Talent',
             ctaLink: '/product/talent-intelligence',
-            image: getAssetPath('/transformskill_futureset.png'),
+            image: getAssetPath('/image copy 2.png'),
           },
         },
         {
@@ -50,7 +50,7 @@ const navItems = [
             description: 'A high-impact AI competition environment where participants solve real-world challenges to showcase and sharpen their capabilities.',
             cta: 'Join a Competition',
             ctaLink: '/product/ai-hacknex',
-            image: getAssetPath('/step_slide_img.jpg'),
+            image: getAssetPath('/image copy 3.png'),
           },
         },
         {
@@ -61,7 +61,7 @@ const navItems = [
             description: 'An intelligent college-to-career recruitment platform that connects pre-assessed, high-potential candidates with top hiring organizations.',
             cta: 'Explore Hirenest',
             ctaLink: '/product/hirenest',
-            image: getAssetPath('/insight_roles.jpg'),
+            image: getAssetPath('/image copy.png'),
           },
         },
       ],
@@ -80,7 +80,8 @@ const navItems = [
             description: 'Utilize comprehensive career discovery tools, virtual internships, skill development, and portfolio verification to launch your career with confidence.',
             cta: 'Start Your Journey',
             ctaLink: '/use-case/students',
-            image: getAssetPath('/forstudentuse.jpg'),
+            image: getAssetPath('/image copy 4.png'),
+            imagePosition: 'top',
           },
         },
         {
@@ -91,7 +92,7 @@ const navItems = [
             description: 'Integrate Hirenest for campus recruitment, track performance with our student analytics dashboard, and set up your own innovation lab (PoC Hub).',
             cta: 'Partner With Us',
             ctaLink: '/use-case/institutions',
-            image: getAssetPath('/for_universities_banner.jpeg'),
+            image: getAssetPath('/image copy 5.png'),
           },
         },
         {
@@ -102,7 +103,7 @@ const navItems = [
             description: 'Access a ready-to-hire pipeline of pre-assessed talent, implement custom workforce upskilling programs, and host innovation challenges.',
             cta: 'Build Your Team',
             ctaLink: '/use-case/enterprises',
-            image: getAssetPath('/forproffession.jpg'),
+            image: getAssetPath('/image copy 6.png'),
           },
         },
         {
@@ -113,7 +114,7 @@ const navItems = [
             description: 'Conduct large-scale skill assessments, enable employment in Tier 2/3 cities, and use data-driven intelligence for policy planning.',
             cta: 'Drive Social Impact',
             ctaLink: '/use-case/government',
-            image: getAssetPath('/for_government_img_only.jpg'),
+            image: getAssetPath('/image copy 7.png'),
           },
         },
       ],
@@ -132,7 +133,9 @@ const navItems = [
             description: 'Master AI, machine learning, and quantum computing through hands-on labs, real-world projects, and mentorship from industry leaders.',
             cta: 'Explore ByteMinds',
             ctaLink: '/academy/byteminds',
-            image: getAssetPath('/data_ai.jpg'),
+            image: getAssetPath('/image copy 10.png'),
+            imageFit: 'contain',
+            imageBackground: '#fffcf5',
           },
         },
         {
@@ -143,7 +146,9 @@ const navItems = [
             description: 'Lead the climate revolution with programs in renewable energy, circular economy, climate finance, and environmental innovation.',
             cta: 'Join Sustainability School',
             ctaLink: '/academy/sustainability',
-            image: getAssetPath('/future_proofing_img.jpg'),
+            image: getAssetPath('/image copy 9.png'),
+            imageFit: 'contain',
+            imageBackground: '#ffffff',
           },
         },
         {
@@ -154,7 +159,9 @@ const navItems = [
             description: 'Master Web 3.0, metaverse, UI/UX design, and human-centered innovation through immersive creative-tech programs.',
             cta: 'Explore Digital Design',
             ctaLink: '/academy/digital-design',
-            image: getAssetPath('/platformslide1.png'),
+            image: getAssetPath('/Centre of Digital & Design Excellence.png'),
+            imageFit: 'contain',
+            imageBackground: '#05021a',
           },
         },
         {
@@ -165,7 +172,9 @@ const navItems = [
             description: 'Drive the electric revolution with programs in battery technology, charging infrastructure, and sustainable transportation.',
             cta: 'Join EV School',
             ctaLink: '/academy/ev-mobility',
-            image: getAssetPath('/future_workspace.jpg'),
+            image: getAssetPath('/School of EV & E- Mobility.png'),
+            imageFit: 'contain',
+            imageBackground: '#d9d9d9',
           },
         },
         {
@@ -176,7 +185,7 @@ const navItems = [
             description: 'Master drone technology, aerial data intelligence, and aerospace innovation through hands-on labs and industry partnerships.',
             cta: 'Explore Udan',
             ctaLink: '/academy/udan',
-            image: getAssetPath('/precision_agriculture_tile.jpg'),
+            image: getAssetPath('/Udan Aerial Intelligence.png'),
           },
         },
       ],
@@ -195,7 +204,7 @@ const navItems = [
             description: 'AI & Data | Banking | Software Development \n Entrepreneurship | Cybersecurity | Quantum Computing',
             cta: 'Explore Simulations',
             ctaLink: '/explore/job-simulations',
-            image: getAssetPath('/xperience_img1.jpg'),
+            image: getAssetPath('/image copy 11.png'),
           },
         },
         {
@@ -208,7 +217,7 @@ const navItems = [
 AI Engineer  | Cybersecurity Analyst | ChatBOT Developer | VFX Designer  | Agentic AI Engineer`,
             cta: 'Find Your Path',
             ctaLink: '/explore/career-trajectory',
-            image: getAssetPath('/MeasuringS_gifuccess.gif'),
+            image: getAssetPath('/image copy 12.png'),
           },
         },
         {
@@ -400,7 +409,7 @@ const InteractiveDescription = ({ text }) => {
                 >
                   {item.trim()}
                 </span>
-                {j < arr.length - 1 && arr[j+1].trim() !=='' && <span style={{ margin: '0 10px', color: '#e5e7eb', fontWeight: 300 }}>|</span>}
+                {j < arr.length - 1 && arr[j + 1].trim() !== '' && <span style={{ margin: '0 10px', color: '#e5e7eb', fontWeight: 300 }}>|</span>}
               </span>
             ))
           ) : (
@@ -509,13 +518,19 @@ const MegaDropdown = ({ dropdown }) => {
               flexShrink: 0,
               borderRadius: 10,
               overflow: 'hidden',
-              background: '#f3f4f6',
+              background: detail.imageBackground || '#f3f4f6',
             }}
           >
             <img
               src={detail.image}
               alt={detail.title}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: detail.imageFit || 'cover',
+                objectPosition: detail.imagePosition || 'center',
+                display: 'block'
+              }}
             />
           </div>
         </div>
