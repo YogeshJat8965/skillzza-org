@@ -229,6 +229,7 @@ const WhatWeDo = () => {
                 <img
                   src={getAssetPath('/core.svg')}
                   alt=""
+                  loading="lazy"
                   style={{
                     position: 'absolute',
                     left: -40,
@@ -258,6 +259,7 @@ const WhatWeDo = () => {
                 <img
                   src={pillar.image}
                   alt={pillar.title}
+                  loading="lazy"
                   style={{ width: '100%', height: 'auto', objectFit: 'contain', display: 'block', borderRadius: 10 }}
                   onError={e => { e.target.style.display = 'none'; }}
                 />
@@ -310,6 +312,7 @@ const WhatWeDo = () => {
             <img
               src={getAssetPath('/businesspeople-having-discussion-office@2x.png')}
               alt="Partner with us"
+              loading="lazy"
               style={{ width: "100%", height: "auto", minHeight: 340, objectFit: "cover", objectPosition: "center", display: "block" }}
             />
             <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 12, background: "#FDB913" }} />
@@ -350,11 +353,11 @@ const WhatWeDo = () => {
               <button style={{ border: "1.5px solid #d1d5db", background: "#fff", padding: "10px 20px", borderRadius: 8, fontSize: 14, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", marginBottom: 24, fontFamily: "Inter, sans-serif" }}>View all the resources</button>
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#ede9fe", display: "flex", flexDirection: "column", flex: 1 }}>
                 <div style={{ background: "#1a1a2e", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", position: "relative", flexShrink: 0 }}>
-                  <img src={getAssetPath("/insight-blog.png")} alt="Blog" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} onError={e => { e.target.style.display = "none"; }} />
+                  <img src={getAssetPath("/insight-blog.png")} alt="Blog" loading="lazy" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} onError={e => { e.target.style.display = "none"; }} />
                   <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.15)", backdropFilter: "blur(4px)", borderRadius: 6, padding: "4px 10px", fontSize: 11, fontWeight: 700, color: "#fff", fontFamily: "Inter, sans-serif" }}>AI Assistant</div>
                 </div>
                 <div style={{ padding: "20px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <img src={getAssetPath("/pen.svg")} alt="Blog" style={{ width: 40, height: 40, marginBottom: 12 }} />
+                  <img src={getAssetPath("/pen.svg")} alt="Blog" loading="lazy" style={{ width: 40, height: 40, marginBottom: 12 }} />
                   <h4 style={{ fontSize: 16, fontWeight: 700, color: "#111827", marginBottom: 16, lineHeight: 1.5, flex: 1, fontFamily: "Inter, sans-serif" }}>Skill Gaps to Skill Maps: The Future of Adaptive Career Assessment with AI</h4>
                   <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Read the Blog</button>
                 </div>
@@ -363,7 +366,7 @@ const WhatWeDo = () => {
             <div className="insights-grid" style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "auto auto", gap: 16 }}>
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#fef3e2", display: "flex", flexDirection: "column" }}>
                 <div style={{ overflow: "hidden", background: "#e5d5c0" }}>
-                  <img src={getAssetPath("/insight-robot.png")} alt="AI Robot" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
+                  <img src={getAssetPath("/insight-robot.png")} alt="AI Robot" loading="lazy" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
                 </div>
                 <div style={{ padding: "18px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
                   <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, background: "#f5a623", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
@@ -373,7 +376,7 @@ const WhatWeDo = () => {
               </div>
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#fce7f3", display: "flex", flexDirection: "column" }}>
                 <div style={{ overflow: "hidden", background: "#d0b0c0" }}>
-                  <img src={getAssetPath("/insight-future.png")} alt="Future of Work" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
+                  <img src={getAssetPath("/insight-future.png")} alt="Future of Work" loading="lazy" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
                 </div>
                 <div style={{ padding: "18px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
                   <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, background: "#e02020", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
@@ -388,7 +391,7 @@ const WhatWeDo = () => {
                   <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.6, marginBottom: 0, maxWidth: 480, fontFamily: "Inter, sans-serif" }}>Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.</p>
                 </div>
                 <div className="insights-podcast-action" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, flexShrink: 0 }}>
-                  <img src={getAssetPath("/mic.svg")} alt="Podcast" style={{ width: 72, height: 72 }} />
+                  <img src={getAssetPath("/mic.svg")} alt="Podcast" loading="lazy" style={{ width: 72, height: 72 }} />
                   <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", whiteSpace: "nowrap", fontFamily: "Inter, sans-serif" }}>Listen now</button>
                 </div>
               </div>
