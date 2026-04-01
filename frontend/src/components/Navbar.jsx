@@ -392,36 +392,42 @@ const InteractiveDescription = ({ text }) => {
   return (
     <>
       {blocks.map((block, i) => (
-        <div key={i} style={{ lineHeight: 1.5, whiteSpace: 'pre-line', minHeight: block === '' ? '1em' : 'auto' }}>
+        <div key={i} style={{ minHeight: block === '' ? '0.75em' : 'auto', marginBottom: block === '' ? 0 : 4 }}>
           {block.includes('|') ? (
-            block.split('|').map((item, j, arr) => (
-              <span key={j}>
-                <span
-                  style={{
-                    cursor: 'pointer',
-                    transition: 'all 0.2s ease',
-                    display: 'inline-block',
-                    color: '#6b7280',
-                    fontSize: 14,
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.color = '#2563eb';
-                    e.currentTarget.style.fontSize = '15.5px';
-                    e.currentTarget.style.fontWeight = '600';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.color = '#6b7280';
-                    e.currentTarget.style.fontSize = '14px';
-                    e.currentTarget.style.fontWeight = '400';
-                  }}
-                >
-                  {item.trim()}
-                </span>
-                {j < arr.length - 1 && arr[j + 1].trim() !== '' && <span style={{ margin: '0 10px', color: '#e5e7eb', fontWeight: 300 }}>|</span>}
-              </span>
-            ))
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '4px 0', rowGap: 6 }}>
+              {block.split('|').map((item, j, arr) => {
+                const trimmed = item.trim();
+                if (!trimmed) return null;
+                return (
+                  <span key={j} style={{ display: 'flex', alignItems: 'center' }}>
+                    <span
+                      style={{
+                        cursor: 'pointer',
+                        transition: 'all 0.2s ease',
+                        color: '#6b7280',
+                        fontSize: 13,
+                        whiteSpace: 'nowrap',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.color = '#2563eb';
+                        e.currentTarget.style.fontWeight = '600';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.color = '#6b7280';
+                        e.currentTarget.style.fontWeight = '400';
+                      }}
+                    >
+                      {trimmed}
+                    </span>
+                    {j < arr.length - 1 && arr[j + 1].trim() !== '' && (
+                      <span style={{ margin: '0 8px', color: '#d1d5db', fontWeight: 300 }}>|</span>
+                    )}
+                  </span>
+                );
+              })}
+            </div>
           ) : (
-            <span style={{ fontSize: 14, color: '#6b7280', lineHeight: 1.75 }}>{block}</span>
+            <span style={{ fontSize: 13, color: '#6b7280', lineHeight: 1.7 }}>{block}</span>
           )}
         </div>
       ))}
@@ -451,12 +457,13 @@ const MegaDropdown = ({ dropdown }) => {
     >
       {/* Left column */}
       <div
+        className="sz-dropdown-left"
         style={{
-          width: 260,
+          width: 220,
           flexShrink: 0,
           background: '#f9f9f9',
           borderRight: '1px solid #f0f0f0',
-          padding: '12px 0',
+          padding: '10px 0',
           display: 'flex',
           flexDirection: 'column',
         }}
@@ -468,7 +475,7 @@ const MegaDropdown = ({ dropdown }) => {
             onMouseEnter={() => setActiveIndex(i)}
             style={{
               display: 'block',
-              padding: '12px 24px',
+              padding: '10px 18px',
               fontSize: 12,
               fontWeight: 500,
               color: i === activeIndex ? '#e02020' : '#374151',
@@ -484,45 +491,45 @@ const MegaDropdown = ({ dropdown }) => {
         ))}
       </div>
 
-      {/* Right panel — fixed equal padding both sides */}
+      {/* Right panel */}
       {detail && (
         <div
+          className="sz-dropdown-right"
           style={{
             flex: 1,
+            minWidth: 0,
             display: 'flex',
             alignItems: 'center',
-            paddingTop: 24,
-            paddingBottom: 24,
-            paddingLeft: 32,
-            paddingRight: 32,
-            gap: 32,
+            padding: '20px 24px',
+            gap: 20,
             boxSizing: 'border-box',
+            overflow: 'hidden',
           }}
         >
           {/* Text */}
           <div style={{ flex: 1, minWidth: 0 }}>
             <p
               style={{
-                fontSize: 20,
+                fontSize: 17,
                 fontWeight: 700,
                 color: '#111827',
                 lineHeight: 1.35,
-                marginBottom: 12,
+                marginBottom: 10,
               }}
             >
               {detail.title}
             </p>
-            <div style={{ marginBottom: 24 }}>
+            <div style={{ marginBottom: 16 }}>
               <InteractiveDescription text={detail.description} />
             </div>
-
           </div>
 
           {/* Image */}
           <div
+            className="sz-dropdown-img"
             style={{
-              width: detail.imageWidth || 255,
-              height: detail.imageHeight || 160,
+              width: detail.imageWidth || 220,
+              height: detail.imageHeight || 150,
               flexShrink: 0,
               borderRadius: 10,
               overflow: 'hidden',
@@ -593,7 +600,7 @@ const DesktopNavItem = ({ item }) => {
 
       {/* Full-viewport-width mega panel shrunk with offsets */}
       {item.dropdown && open && (
-        <div style={{ position: 'fixed', top: 64, left: 260, right: 260, zIndex: 9999, paddingTop: 27 }}>
+        <div className="sz-mega-panel" style={{ position: 'fixed', top: 64, left: 260, right: 260, zIndex: 9999, paddingTop: 27 }}>
           <MegaDropdown dropdown={item.dropdown} />
         </div>
       )}
@@ -861,6 +868,17 @@ const Navbar = () => {
           .sz-desktop-nav { display: none  !important; }
           .sz-cta-group   { display: none  !important; }
           .sz-hamburger   { display: flex  !important; }
+        }
+
+        /* Dropdown responsive adjustments for mid-sized screens */
+        @media (max-width: 1280px) {
+          .sz-mega-panel { left: 80px !important; right: 80px !important; }
+        }
+        @media (max-width: 1100px) {
+          .sz-mega-panel { left: 20px !important; right: 20px !important; }
+          .sz-dropdown-left { width: 180px !important; }
+          .sz-dropdown-img { width: 160px !important; height: 120px !important; }
+          .sz-dropdown-right { padding: 16px 16px !important; gap: 14px !important; }
         }
       `}</style>
     </>
