@@ -370,7 +370,7 @@ function MockDashboard() {
 function PartnerLogoCard({ p }) {
   return (
     <div style={{ flexShrink: 0, width: 180, height: 100, border: "1px solid #e5e7eb", borderRadius: 10, padding: "12px 18px", display: "flex", alignItems: "center", justifyContent: "center", background: "#fff", margin: "0 8px" }}>
-      <img src={p.img} alt={p.name} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+      <img src={p.img} alt={p.name} loading="lazy" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
     </div>
   );
 }
@@ -392,7 +392,7 @@ function PartnerCard({ title, desc, iconSrc }) {
         boxShadow: hovered ? "0 8px 24px rgba(124,58,237,0.3)" : "none",
       }}>
       <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 10 }}>
-        <img src={getAssetPath(iconSrc)} alt="" style={{ width: 36, height: 36, objectFit: "contain", flexShrink: 0, marginTop: 2, mixBlendMode: "screen", filter: hovered ? "brightness(10)" : "brightness(0.3) invert(0)" }} />
+        <img src={getAssetPath(iconSrc)} alt="" loading="lazy" style={{ width: 36, height: 36, objectFit: "contain", flexShrink: 0, marginTop: 2, mixBlendMode: "screen", filter: hovered ? "brightness(10)" : "brightness(0.3) invert(0)" }} />
         <h4 style={{ fontSize: 15, fontWeight: 700, color: hovered ? "#fff" : "#1f2937", lineHeight: 1.35, margin: 0 }}>{title}</h4>
       </div>
       <p style={{ fontSize: 12.5, color: hovered ? "rgba(255,255,255,0.8)" : "#6b7280", lineHeight: 1.6, margin: 0 }}>{desc}</p>
@@ -441,6 +441,7 @@ function EcosystemSection() {
           <img
             src={getAssetPath("/ecosystem.svg")}
             alt="Skillzza Ecosystem"
+            loading="lazy"
             style={{ width: "100%", height: "auto", display: "block", marginTop: "-3.78px", paddingTop: "3.78px", marginBottom: "-3.78px", paddingBottom: "3.78px" }}
           />
 
@@ -594,6 +595,7 @@ export default function SkillzzaHome() {
           <img
             src={getAssetPath("/hero-girl.png")}
             alt="Hero"
+            fetchpriority="high"
             style={{ position: "relative", zIndex: 2, height: "108%", maxHeight: 720, objectFit: "contain", objectPosition: "bottom", filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.15))", marginBottom: 0, marginTop: "38px" }}
           />
         </div>
@@ -718,7 +720,7 @@ export default function SkillzzaHome() {
           </div>
           <div className="challenge-row" style={{ display: "flex", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 24px rgba(0,0,0,.08)", height: 420 }}>
             <div className="challenge-img" style={{ flex: 1, background: "#f1f2f4", overflow: "hidden" }}>
-              <img src={getAssetPath("/skill-gap-image.png")} alt="Skill Gap" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center bottom", display: "block" }} />
+              <img src={getAssetPath("/skill-gap-image.png")} alt="Skill Gap" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center bottom", display: "block" }} />
             </div>
             <div className="challenge-stats challenge-grid" style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "1fr 1fr", gap: 10, padding: 10, background: "#fff" }}>
               {[
@@ -798,7 +800,7 @@ export default function SkillzzaHome() {
               </div>
             </div>
             <div className="studio-right-img" style={{ flex: 1, maxWidth: 440 }}>
-              <img src={getAssetPath("/mockdashboard.png")} alt="Dashboard" style={{ width: "100%", borderRadius: 16, boxShadow: "0 8px 32px rgba(0,0,0,0.10)" }} />
+              <img src={getAssetPath("/mockdashboard.png")} alt="Dashboard" loading="lazy" style={{ width: "100%", borderRadius: 16, boxShadow: "0 8px 32px rgba(0,0,0,0.10)" }} />
             </div>
           </div>
         </div>
@@ -814,6 +816,7 @@ export default function SkillzzaHome() {
               <img
                 src={getAssetPath("/school-girl.png")}
                 alt="School of Technology"
+                loading="lazy"
                 style={{ position: "relative", zIndex: 2, width: "100%", height: "100%", objectFit: "contain", objectPosition: "bottom" }}
               />
             </div>
@@ -881,6 +884,7 @@ export default function SkillzzaHome() {
             <img
               src={getAssetPath('/businesspeople-having-discussion-office@2x.png')}
               alt="Partner with us"
+              loading="lazy"
               style={{ width: "100%", height: "auto", minHeight: 340, objectFit: "cover", objectPosition: "center", display: "block" }}
             />
             {/* Bottom yellow strip */}
@@ -929,12 +933,12 @@ export default function SkillzzaHome() {
               {/* Blog Card */}
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#ede9fe", display: "flex", flexDirection: "column", flex: 1 }}>
                 <div style={{ background: "#1a1a2e", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", position: "relative", flexShrink: 0 }}>
-                  <img src={getAssetPath("/insight-blog.png")} alt="Blog" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
+                  <img src={getAssetPath("/insight-blog.png")} alt="Blog" loading="lazy" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
                     onError={e => { e.target.style.display = "none"; }} />
                   <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.15)", backdropFilter: "blur(4px)", borderRadius: 6, padding: "4px 10px", fontSize: 11, fontWeight: 700, color: "#fff", fontFamily: "Inter, sans-serif" }}>AI Assistant</div>
                 </div>
                 <div style={{ padding: "20px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <img src={getAssetPath("/pen.svg")} alt="Blog" style={{ width: 40, height: 40, marginBottom: 12 }} />
+                  <img src={getAssetPath("/pen.svg")} alt="Blog" loading="lazy" style={{ width: 40, height: 40, marginBottom: 12 }} />
                   <h4 style={{ fontSize: 16, fontWeight: 700, color: "#111827", marginBottom: 16, lineHeight: 1.5, flex: 1, fontFamily: "Inter, sans-serif" }}>Skill Gaps to Skill Maps: The Future of Adaptive Career Assessment with AI</h4>
                   <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Read the Blog</button>
                 </div>
@@ -947,7 +951,7 @@ export default function SkillzzaHome() {
               {/* Card 2 - AI Talent Report */}
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#fef3e2", display: "flex", flexDirection: "column" }}>
                 <div style={{ overflow: "hidden", background: "#e5d5c0" }}>
-                  <img src={getAssetPath("/insight-robot.png")} alt="AI Robot" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
+                  <img src={getAssetPath("/insight-robot.png")} alt="AI Robot" loading="lazy" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
                 </div>
                 <div style={{ padding: "18px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
                   <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, background: "#f5a623", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
@@ -959,7 +963,7 @@ export default function SkillzzaHome() {
               {/* Card 3 - Skill Blueprint */}
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#fce7f3", display: "flex", flexDirection: "column" }}>
                 <div style={{ overflow: "hidden", background: "#d0b0c0" }}>
-                  <img src={getAssetPath("/insight-future.png")} alt="Future of Work" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
+                  <img src={getAssetPath("/insight-future.png")} alt="Future of Work" loading="lazy" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
                 </div>
                 <div style={{ padding: "18px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
                   <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, background: "#e02020", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
@@ -976,7 +980,7 @@ export default function SkillzzaHome() {
                   <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.6, marginBottom: 0, maxWidth: 480, fontFamily: "Inter, sans-serif" }}>Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.</p>
                 </div>
                 <div className="insights-podcast-action" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, flexShrink: 0 }}>
-                  <img src={getAssetPath("/mic.svg")} alt="Podcast" style={{ width: 72, height: 72 }} />
+                  <img src={getAssetPath("/mic.svg")} alt="Podcast" loading="lazy" style={{ width: 72, height: 72 }} />
                   <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", whiteSpace: "nowrap", fontFamily: "Inter, sans-serif" }}>Listen now</button>
                 </div>
               </div>
