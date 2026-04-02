@@ -35,6 +35,15 @@ import Udan from './pages/Udan'
 import ResponsibleAI from './pages/ResponsibleAI'
 import ProductCatalog from './pages/ProductCatalog'
 
+// ── Yogesh's pages ──
+import OurPathwayPage from './pages/OurPathwayPage'
+import AboutPage from './pages/AboutPage'
+import PartnerCollaborationPage from './pages/PartnerCollaborationPage'
+import InsightsPage from './pages/InsightsPage'
+import JobSimulationPage from './pages/JobSimulationPage'
+import XperiencePlatformPage from './pages/XperiencePlatformPage'
+import AIHackNexPage from './pages/AIHackNexPage'
+
 export default function App() {
 
   // smooth scrolling
@@ -64,18 +73,19 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/developers/team" element={<DevelopersPage />} />
-        <Route path="/company/about" element={<About />} />
+        <Route path="/company/about" element={<AboutPage />} />
         <Route path="/company/methodology" element={<Methodology />} />
         <Route path="/company/what-we-do" element={<WhatWeDo />} />
-        <Route path="/company/pathway" element={<SDGPathway />} />
-        <Route path="/company/partnerships" element={<PartnerCollaboration />} />
+        <Route path="/company/pathway" element={<OurPathwayPage />} />
+        <Route path="/company/partnerships" element={<PartnerCollaborationPage />} />
 
+        <Route path="/insights" element={<InsightsPage />} />
         <Route path="/insights/skill-blueprint" element={<SkillBlueprint />} />
         <Route path="/insights/skill-digest" element={<SkillDigest />} />
         <Route path="/insights/ai-talent-research-hub" element={<AITalentResearchHub />} />
         <Route path="/insights/skill-unplugged-podcast" element={<SkillUnpluggedPodcast />} />
         <Route path="/insights/skillzza-live" element={<SkillzzaLive />} />
-        <Route path="/explore/job-simulations" element={<JobSimulations />} />
+        <Route path="/explore/job-simulations" element={<JobSimulationPage />} />
         <Route path="/explore/career-trajectory" element={<CareerTrajectory />} />
         <Route path="/explore/skillzza-persona" element={<SkillzzaPersona />} />
         <Route path="/use-case/students" element={<StudentsUseCase />} />
@@ -85,9 +95,9 @@ export default function App() {
 
         <Route path="/product/hirenest" element={<Hirenest />} />
         <Route path="/product/potential-meter" element={<PotentialMeter />} />
-        <Route path="/product/xperience-platform" element={<XperiencePlatform />} />
+        <Route path="/product/xperience-platform" element={<XperiencePlatformPage />} />
         <Route path="/product/talent-intelligence" element={<TalentIntelligence />} />
-        <Route path="/product/ai-hacknex" element={<AIHackNex />} />
+        <Route path="/product/ai-hacknex" element={<AIHackNexPage />} />
         <Route path="/academy" element={<Academy />} />
         <Route path="/academy/byteminds" element={<ByteMinds />} />
         <Route path="/academy/sustainability" element={<Sustainability />} />
