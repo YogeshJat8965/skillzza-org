@@ -567,7 +567,7 @@ const DesktopNavItem = ({ item }) => {
   useEffect(() => () => clearTimeout(timeoutRef.current), []);
 
   return (
-    <div onMouseEnter={show} onMouseLeave={hide} style={{ position: 'relative' }}>
+    <div onMouseEnter={show} onMouseLeave={hide}>
       <a
         href={item.link ? getRoutePath(item.link) : undefined}
         style={{
@@ -600,7 +600,7 @@ const DesktopNavItem = ({ item }) => {
 
       {/* Full-viewport-width mega panel shrunk with offsets */}
       {item.dropdown && open && (
-        <div className="sz-mega-panel" style={{ position: 'fixed', top: 64, left: 260, right: 260, zIndex: 9999, paddingTop: 27 }}>
+        <div className="sz-mega-panel" style={{ position: 'absolute', top: '100%', left: 260, right: 260, zIndex: 9999, paddingTop: 2 }}>
           <MegaDropdown dropdown={item.dropdown} />
         </div>
       )}
