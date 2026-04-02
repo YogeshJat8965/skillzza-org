@@ -1334,17 +1334,18 @@ function OurPathwayPage() {
           className="pathway-cta-inner"
           style={{
             width: '100%',
-            maxWidth: '1200px',
+            maxWidth: '1320px',
             margin: '0 auto',
             backgroundColor: '#FFFFFF',
-            borderRadius: '16px 16px 0 0',
-            padding: '0 0 0 52px',
+            borderRadius: '24px',
+            padding: '0 0 0 80px',
             display: 'flex',
             gap: '32px',
             alignItems: 'center',
-            minHeight: '380px',
+            minHeight: '400px',
             position: 'relative',
             overflow: 'hidden',
+            boxShadow: '0px 20px 40px rgba(0,0,0,0.06)'
           }}
         >
           <div

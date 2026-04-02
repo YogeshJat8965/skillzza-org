@@ -485,7 +485,7 @@ function PartnerCollaborationPage() {
 
         .collab-cta__inner {
           position: relative;
-          max-width: 820px;
+          max-width: 1140px;
           margin: 0 auto;
           display: flex;
           flex-direction: column;

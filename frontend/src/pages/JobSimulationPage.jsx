@@ -812,9 +812,45 @@ const newDesignCards = [
 
 function JobSimulationPage() {
   const [showAll, setShowAll] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCompany, setSelectedCompany] = useState("all");
+  const [selectedLevel, setSelectedLevel] = useState("all");
+
+  const normalizedCategory = (cat) => {
+      if (!cat) return "";
+      cat = cat.toLowerCase();
+      if (cat.includes("cybersecurity")) return "security";
+      if (cat.includes("data science")) return "ai-data";
+      if (cat.includes("ai & data")) return "ai-data";
+      if (cat.includes("sustainability")) return "sustainability";
+      return cat;
+  };
+
+  const normalizedCompany = (card) => {
+      if (card.company) return card.company.toLowerCase().replace(/[^a-z0-9]/g, '');
+      if (!card.logo) return 'other';
+      const logo = card.logo.toLowerCase();
+      if (logo.includes('ailifebot')) return 'ailifebot';
+      if (logo.includes('aws') || logo.includes('amazon')) return 'aws';
+      if (logo.includes('google')) return 'google';
+      if (logo.includes('apple')) return 'apple';
+      if (logo.includes('microsoft') || logo.includes('as-removebg')) return 'microsoft';
+      if (logo.includes('meta')) return 'meta';
+      if (logo.includes('ibm')) return 'ibm';
+      if (logo.includes('nvidia')) return 'nvidia';
+      if (logo.includes('salesforce')) return 'salesforce';
+      return 'other';
+  };
+
+  const filteredCards = newDesignCards.filter(card => {
+      const catMatch = selectedCategory === "all" || normalizedCategory(card.category) === selectedCategory;
+      const lvlMatch = selectedLevel === "all" || (card.level && card.level.toLowerCase() === selectedLevel);
+      const compMatch = selectedCompany === "all" || normalizedCompany(card) === selectedCompany.replace(/[^a-z0-9]/g, '');
+      return catMatch && lvlMatch && compMatch;
+  });
 
   // Default to showing 2 rows (8 items if 4 columns)
-  const visibleCards = showAll ? newDesignCards : newDesignCards.slice(0, 8);
+  const visibleCards = showAll ? filteredCards : filteredCards.slice(0, 8);
 
   return (
     <>
@@ -1883,8 +1919,9 @@ function JobSimulationPage() {
           </ScrollReveal>
 
           <ScrollReveal delay={150} className="discover-filters">
-            <select className="discover-select">
+            <select className="discover-select" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
               <optgroup label="CAREER FIELDS">
+                <option value="all">All Fields</option>
                 <option value="ai-data">AI & Data</option>
                 <option value="banking">Banking</option>
                 <option value="sustainability">Sustainability & Climate Action</option>
@@ -1899,8 +1936,9 @@ function JobSimulationPage() {
                 <option value="law">Law</option>
               </optgroup>
             </select>
-            <select className="discover-select" defaultValue="microsoft">
+            <select className="discover-select" value={selectedCompany} onChange={(e) => setSelectedCompany(e.target.value)}>
               <optgroup label="COMPANIES">
+                <option value="all">All Companies</option>
                 <option value="appsolutely-ai">Appsolutely.ai</option>
                 <option value="builder-ai">Builder.AI</option>
                 <option value="ai-lifebot">AI LifeBOT</option>
@@ -1929,10 +1967,14 @@ function JobSimulationPage() {
                 <option value="aws">AWS</option>
                 <option value="newgen-software">Newgen Software</option>
                 <option value="twinzo">twinzo</option>
+                <option value="nvidia">Nvidia</option>
+                <option value="salesforce">Salesforce</option>
+                <option value="ibm">IBM</option>
               </optgroup>
             </select>
-            <select className="discover-select" defaultValue="beginner">
+            <select className="discover-select" value={selectedLevel} onChange={(e) => setSelectedLevel(e.target.value)}>
               <optgroup label="DIFFICULTY">
+                <option value="all">All Levels</option>
                 <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
                 <option value="advanced">Advanced</option>
@@ -1942,7 +1984,7 @@ function JobSimulationPage() {
 
           {/* Job Simulation Cards */}
           <div className="sim-cards-grid">
-            {visibleCards.map((card, index) => (
+            {visibleCards.length > 0 ? visibleCards.map((card, index) => (
               <ScrollReveal key={index} delay={(index % 4) * 100} className="sim-card">
                 <div className="sim-card-image-wrap">
                   <img src={card.image} alt={card.title} className="sim-card-image" />
@@ -1976,7 +2018,11 @@ function JobSimulationPage() {
                   </div>
                 </div>
               </ScrollReveal>
-            ))}
+            )) : (
+              <div style={{ padding: '40px', width: '100%', textAlign: 'center', gridColumn: '1 / -1', color: '#555b6e', fontFamily: 'Inter', fontSize: '18px' }}>
+                No simulations found matching your criteria. Let's try adjusting the filters!
+              </div>
+            )}
           </div>
 
           <ScrollReveal delay={200} className="explore-btn-container">
