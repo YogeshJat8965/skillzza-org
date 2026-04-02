@@ -101,8 +101,8 @@ function InsightsPage() {
             </div>
           </div>
           
-          <div className="mt-6 text-center transistion-all duration-300">
-            <p className="font-['DM_Sans',sans-serif] text-[18px] md:text-[20px] font-medium text-[#475569] px-4">
+          <div className="mt-6 text-left transistion-all duration-300 w-full max-w-[1440px] px-4">
+            <p className="font-['DM_Sans',sans-serif] text-[18px] md:text-[20px] font-bold text-[#475569]">
               {tabDescriptions[activeTab]}
             </p>
           </div>
