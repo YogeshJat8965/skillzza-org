@@ -1,12 +1,40 @@
 import React, { useEffect, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import Insights from '../components/Insights'
 
 function InsightsPage() {
-  const [activeTab, setActiveTab] = useState('Skill Blueprint');
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const getTabFromPath = () => {
+    switch (location.pathname) {
+      case '/insights/skill-blueprint': return "Skill Blueprint";
+      case '/insights/skill-digest': return "The Skill Digest";
+      case '/insights/ai-talent-research-hub': return "AI Talent Research Hub";
+      case '/insights/skill-unplugged-podcast': return "The Skill Unplugged Podcast Series (3R )";
+      case '/insights/skillzza-live': return "Skillzza Live";
+      default: return "Skill Blueprint";
+    }
+  };
+
+  const [activeTab, setActiveTab] = useState(getTabFromPath());
 
   useEffect(() => {
+    setActiveTab(getTabFromPath());
     window.scrollTo(0, 0);
-  }, []);
+  }, [location.pathname]);
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+    switch (tab) {
+      case "Skill Blueprint": navigate('/insights/skill-blueprint', { replace: false }); break;
+      case "The Skill Digest": navigate('/insights/skill-digest', { replace: false }); break;
+      case "AI Talent Research Hub": navigate('/insights/ai-talent-research-hub', { replace: false }); break;
+      case "The Skill Unplugged Podcast Series (3R )": navigate('/insights/skill-unplugged-podcast', { replace: false }); break;
+      case "Skillzza Live": navigate('/insights/skillzza-live', { replace: false }); break;
+      default: navigate('/insights');
+    }
+  };
 
   const insightTabs = [
     "Skill Blueprint",
@@ -46,7 +74,7 @@ function InsightsPage() {
                 return (
                   <button
                     key={tab}
-                    onClick={() => setActiveTab(tab)}
+                    onClick={() => handleTabClick(tab)}
                     className={`insight-category-btn whitespace-normal md:whitespace-nowrap text-[14px] md:text-[17px] px-[16px] md:px-[36px] py-[10px] md:py-[18px] ${isActive ? 'active' : ''}`}
                     style={{
                       fontFamily: "'DM Sans', sans-serif",

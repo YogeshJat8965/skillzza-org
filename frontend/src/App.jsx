@@ -9,11 +9,11 @@ import Methodology from './pages/Methodology'
 import WhatWeDo from './pages/WhatWeDo'
 import SDGPathway from './pages/SDGPathway'
 import PartnerCollaboration from './pages/PartnerCollaboration'
-import SkillBlueprint from './pages/SkillBlueprint'
-import SkillDigest from './pages/SkillDigest'
-import AITalentResearchHub from './pages/AITalentResearchHub'
-import SkillUnpluggedPodcast from './pages/SkillUnpluggedPodcast'
-import SkillzzaLive from './pages/SkillzzaLive'
+// import SkillBlueprint from './pages/SkillBlueprint'
+// import SkillDigest from './pages/SkillDigest'
+// import AITalentResearchHub from './pages/AITalentResearchHub'
+// import SkillUnpluggedPodcast from './pages/SkillUnpluggedPodcast'
+// import SkillzzaLive from './pages/SkillzzaLive'
 import JobSimulations from './pages/JobSimulations'
 import CareerTrajectory from './pages/CareerTrajectory'
 import SkillzzaPersona from './pages/SkillzzaPersona'
@@ -80,11 +80,11 @@ export default function App() {
         <Route path="/company/partnerships" element={<PartnerCollaborationPage />} />
 
         <Route path="/insights" element={<InsightsPage />} />
-        <Route path="/insights/skill-blueprint" element={<SkillBlueprint />} />
-        <Route path="/insights/skill-digest" element={<SkillDigest />} />
-        <Route path="/insights/ai-talent-research-hub" element={<AITalentResearchHub />} />
-        <Route path="/insights/skill-unplugged-podcast" element={<SkillUnpluggedPodcast />} />
-        <Route path="/insights/skillzza-live" element={<SkillzzaLive />} />
+        <Route path="/insights/skill-blueprint" element={<InsightsPage />} />
+        <Route path="/insights/skill-digest" element={<InsightsPage />} />
+        <Route path="/insights/ai-talent-research-hub" element={<InsightsPage />} />
+        <Route path="/insights/skill-unplugged-podcast" element={<InsightsPage />} />
+        <Route path="/insights/skillzza-live" element={<InsightsPage />} />
         <Route path="/explore/job-simulations" element={<JobSimulationPage />} />
         <Route path="/explore/career-trajectory" element={<CareerTrajectory />} />
         <Route path="/explore/skillzza-persona" element={<SkillzzaPersona />} />
