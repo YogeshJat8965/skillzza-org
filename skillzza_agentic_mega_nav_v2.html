@@ -1,0 +1,623 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+--nb:#07091a;--nb2:#0c0f24;--ac:#7c6fff;--ac2:#00e5b0;--ac3:#ff6b9d;--ac4:#f5a623;--ac5:#38d9f5;
+--tm:#8892a4;--tw:#e8eaf0;--cb:#111827;--ch:#141e30;--brd:rgba(124,111,255,0.18);
+--brd2:rgba(255,255,255,0.06);--dd:#0b0d20;--lh:#1a1f38
+}
+body{background:#06081a;font-family:'DM Sans',system-ui,sans-serif;min-height:100vh}
+
+.navbar{background:var(--nb);border-bottom:1px solid rgba(255,255,255,0.06);padding:0 28px;display:flex;align-items:center;height:58px;position:relative;z-index:200}
+.logo{font-family:'Sora',system-ui,sans-serif;font-size:17px;font-weight:700;color:#fff;margin-right:32px;flex-shrink:0;letter-spacing:-.5px}
+.logo span{color:var(--ac)}
+.logo sub{font-size:9px;color:var(--ac2);font-weight:500;letter-spacing:.5px;vertical-align:super;margin-left:2px}
+
+.nav-items{display:flex;align-items:center;gap:1px;flex:1}
+.nav-item{position:relative}
+.nav-btn{background:none;border:none;color:var(--tm);font-family:inherit;font-size:13px;font-weight:400;padding:7px 12px;border-radius:8px;cursor:pointer;display:flex;align-items:center;gap:4px;transition:color .15s,background .15s;white-space:nowrap}
+.nav-btn .arr{transition:transform .2s;font-size:9px;opacity:.6}
+.nav-item.open .nav-btn .arr{transform:rotate(180deg)}
+.nav-item.open .nav-btn,.nav-btn:hover{color:#fff;background:rgba(255,255,255,0.05)}
+.nav-btn .badge{font-size:9px;font-weight:600;background:var(--ac3);color:#fff;padding:1px 5px;border-radius:4px;margin-left:3px;letter-spacing:.3px}
+.nav-btn .badge.g{background:var(--ac2);color:#042C53}
+.nav-btn .badge.a{background:var(--ac4);color:#412402}
+
+.nav-right{display:flex;align-items:center;gap:8px;margin-left:auto}
+.btn-g{background:none;border:1px solid rgba(255,255,255,0.1);color:var(--tm);font-family:inherit;font-size:12.5px;padding:6px 14px;border-radius:8px;cursor:pointer;transition:all .15s}
+.btn-g:hover{border-color:rgba(255,255,255,0.25);color:#fff}
+.btn-p{background:var(--ac);border:none;color:#fff;font-family:inherit;font-size:12.5px;font-weight:500;padding:6px 16px;border-radius:8px;cursor:pointer;transition:opacity .15s}
+.btn-p:hover{opacity:.85}
+
+.dropdown{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-8px);background:var(--dd);border:1px solid var(--brd);border-radius:18px;padding:0;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:300;box-shadow:0 48px 120px rgba(0,0,0,.92),0 16px 48px rgba(0,0,0,.6),0 0 0 1px rgba(124,111,255,.14),inset 0 1px 0 rgba(255,255,255,.06)}
+.nav-item.open .dropdown{opacity:1;pointer-events:all;transform:translateX(-50%) translateY(0)}
+
+.dd-inner{padding:20px 20px 16px}
+.dd-w-platform{width:900px}
+.dd-w-agentic{width:820px}
+.dd-w-k12{width:780px}
+.dd-w-schools{width:660px}
+.dd-w-services{width:740px}
+.dd-w-insights{width:540px}
+.dd-w-company{width:460px}
+
+.dd-eyebrow{font-size:9.5px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:8px}
+.dd-eyebrow .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+
+.pcard{background:linear-gradient(155deg,#131926 0%,#111827 100%);border:1px solid rgba(255,255,255,0.07);border-radius:13px;padding:16px;cursor:pointer;transition:background .2s,border-color .2s,transform .2s,box-shadow .2s;box-shadow:0 2px 10px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.05)}
+.pcard:hover{background:linear-gradient(155deg,#181f38 0%,#141e30 100%);border-color:rgba(124,111,255,.5);transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.6),0 0 28px rgba(124,111,255,.14),inset 0 1px 0 rgba(255,255,255,.08)}
+.pcard.featured{border-color:rgba(124,111,255,.5);background:linear-gradient(155deg,#18213a 0%,#13182e 100%);box-shadow:0 6px 20px rgba(0,0,0,.5),0 0 32px rgba(124,111,255,.15),inset 0 1px 0 rgba(255,255,255,.07)}
+
+.pcard-ico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:13px;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.ip{background:rgba(124,111,255,.15)}
+.it{background:rgba(0,229,176,.12)}
+.io{background:rgba(245,166,35,.12)}
+.ir{background:rgba(255,107,157,.12)}
+.ib{background:rgba(56,217,245,.12)}
+.ig{background:rgba(100,220,100,.12)}
+.iy{background:rgba(255,220,60,.1)}
+
+.ct{font-family:'Sora',system-ui,sans-serif;font-size:13.5px;font-weight:700;color:#eceef6;margin-bottom:6px;line-height:1.3;letter-spacing:-.2px}
+.cd{font-size:11.5px;color:#9aa3b8;line-height:1.65}
+
+.pill{display:inline-flex;align-items:center;font-size:9.5px;font-weight:600;padding:2px 7px;border-radius:20px;margin-top:7px}
+.pill-p{background:rgba(124,111,255,.12);color:#a09cf7}
+.pill-t{background:rgba(0,229,176,.12);color:#00e5b0}
+.pill-o{background:rgba(245,166,35,.12);color:#f5a623}
+.pill-r{background:rgba(255,107,157,.12);color:#ff6b9d}
+.pill-b{background:rgba(56,217,245,.12);color:#38d9f5}
+.pill-g{background:rgba(100,220,100,.12);color:#64dc64}
+
+.hcard{display:flex;align-items:flex-start;gap:12px}
+.hcard .pcard-ico{flex-shrink:0;margin-bottom:0}
+
+.sec-label{font-size:9.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.32);margin:16px 0 9px;text-shadow:0 0 12px rgba(255,255,255,.08)}
+.sec-label:first-child{margin-top:0}
+
+.arow{display:flex;flex-direction:column;gap:5px}
+.aitem{display:flex;align-items:center;gap:12px;padding:10px 13px;border-radius:11px;border:1px solid transparent;cursor:pointer;transition:background .15s,border-color .15s,box-shadow .15s}
+.aitem:hover{background:var(--ch);border-color:rgba(124,111,255,.25);box-shadow:0 4px 18px rgba(0,0,0,.4),0 0 16px rgba(124,111,255,.08)}
+.aitem-ico{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.aitem-title{font-size:13px;font-weight:600;color:#e4e6f0}
+.aitem-sub{font-size:11px;color:#9099ae;line-height:1.5}
+.aitem-tag{margin-left:auto;flex-shrink:0}
+
+.agent-flow{background:#0d1020;border:1px solid rgba(124,111,255,.2);border-radius:12px;padding:14px;margin-bottom:12px}
+.agent-flow-title{font-size:11px;font-weight:600;color:rgba(124,111,255,.9);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.agent-nodes{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.anode{background:#151a30;border:1px solid rgba(124,111,255,.2);border-radius:8px;padding:5px 10px;font-size:10px;color:#b0b8d0;display:flex;align-items:center;gap:5px}
+.anode-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.anode-arrow{color:rgba(124,111,255,.5);font-size:12px}
+
+.k12-banner{background:#0d1020;border:1px solid rgba(0,229,176,.2);border-radius:12px;padding:14px 16px;margin-bottom:14px;display:flex;align-items:center;gap:14px}
+.k12-badge{background:rgba(0,229,176,.12);border:1px solid rgba(0,229,176,.25);border-radius:8px;padding:6px 12px;font-size:10.5px;font-weight:600;color:#00e5b0;white-space:nowrap}
+.k12-text{font-size:11.5px;color:var(--tm);line-height:1.5}
+.k12-text strong{color:#d8dae8}
+
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.svc-card{background:linear-gradient(155deg,#131926 0%,#111827 100%);border:1px solid rgba(255,255,255,0.07);border-radius:11px;padding:14px;cursor:pointer;transition:background .2s,border-color .2s,box-shadow .2s;box-shadow:0 2px 10px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.04)}
+.svc-card:hover{background:linear-gradient(155deg,#181f38 0%,#141e30 100%);border-color:rgba(124,111,255,.35);box-shadow:0 8px 24px rgba(0,0,0,.5),0 0 20px rgba(124,111,255,.1),inset 0 1px 0 rgba(255,255,255,.07)}
+.svc-icon{font-size:18px;margin-bottom:9px}
+.svc-title{font-size:12.5px;font-weight:700;color:#e4e6f0;margin-bottom:4px;letter-spacing:-.1px}
+.svc-desc{font-size:11px;color:#9aa3b8;line-height:1.55}
+
+.ins-list{display:flex;flex-direction:column;gap:4px}
+.ins-item{display:flex;align-items:center;gap:12px;padding:10px 13px;border-radius:11px;border:1px solid transparent;cursor:pointer;transition:background .15s,border-color .15s,box-shadow .15s}
+.ins-item:hover{background:var(--ch);border-color:rgba(124,111,255,.25);box-shadow:0 4px 16px rgba(0,0,0,.35),0 0 14px rgba(124,111,255,.07)}
+.ins-ico{font-size:18px;flex-shrink:0}
+.ins-title{font-size:13px;font-weight:600;color:#e4e6f0;letter-spacing:-.1px}
+.ins-sub{font-size:11px;color:#9099ae}
+.ins-arrow{margin-left:auto;color:rgba(255,255,255,.28);font-size:13px;flex-shrink:0}
+
+.co-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.co-item{background:linear-gradient(155deg,#131926 0%,#111827 100%);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px 14px;cursor:pointer;transition:background .15s,border-color .15s,box-shadow .15s;box-shadow:0 2px 8px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.04)}
+.co-item:hover{background:linear-gradient(155deg,#181f38 0%,#141e30 100%);border-color:rgba(124,111,255,.3);box-shadow:0 6px 20px rgba(0,0,0,.45),0 0 16px rgba(124,111,255,.09),inset 0 1px 0 rgba(255,255,255,.07)}
+.co-title{font-size:13px;font-weight:600;color:#e4e6f0;letter-spacing:-.1px}
+.co-sub{font-size:11px;color:#9099ae;margin-top:3px}
+
+.cta-bar{margin-top:14px;background:#10142a;border:1px solid rgba(124,111,255,.2);border-radius:12px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:border-color .15s}
+.cta-bar:hover{border-color:rgba(124,111,255,.45)}
+.cta-l{font-size:11.5px;color:#b0b8d0;line-height:1.5}
+.cta-l strong{color:#e8eaf0;font-weight:500}
+.cta-ico{width:28px;height:28px;border-radius:50%;background:rgba(124,111,255,.18);display:flex;align-items:center;justify-content:center;color:var(--ac);font-size:13px;flex-shrink:0}
+
+.seg-tabs{display:flex;gap:5px;margin-bottom:14px}
+.stab{padding:4px 11px;border-radius:20px;font-size:11px;font-weight:500;cursor:pointer;border:1px solid transparent;color:var(--tm);transition:all .15s}
+.stab.on{background:rgba(124,111,255,.14);border-color:rgba(124,111,255,.3);color:var(--ac)}
+.stab:not(.on):hover{background:rgba(255,255,255,.04);color:#ccc}
+
+.back{position:fixed;inset:0;z-index:100;display:none}
+.back.on{display:block}
+
+.hero{padding:52px 32px 44px;text-align:center}
+.h1{font-family:'Sora',system-ui,sans-serif;font-size:38px;font-weight:700;color:#fff;line-height:1.12;margin-bottom:14px;letter-spacing:-1.2px}
+.h1 em{color:var(--ac);font-style:normal}
+.h1 span{color:var(--ac2)}
+.hsub{font-size:15px;color:var(--tm);max-width:560px;margin:0 auto 28px;line-height:1.65}
+.agent-badge{display:inline-flex;align-items:center;gap:8px;background:#0d1020;border:1px solid rgba(124,111,255,.3);border-radius:20px;padding:6px 14px;font-size:11.5px;color:#a09cf7;margin-bottom:22px}
+.agent-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--ac2)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-bottom:36px}
+.chip{padding:6px 14px;border-radius:20px;font-size:11.5px;font-weight:500;border:1px solid rgba(255,255,255,.08);color:var(--tm);cursor:pointer;transition:all .15s}
+.chip:hover{border-color:rgba(124,111,255,.4);color:var(--ac)}
+.hbtns{display:flex;justify-content:center;gap:10px}
+.hbtn1{background:var(--ac);border:none;color:#fff;font-family:inherit;font-size:13px;font-weight:500;padding:10px 24px;border-radius:9px;cursor:pointer;transition:opacity .15s}
+.hbtn1:hover{opacity:.85}
+.hbtn2{background:none;border:1px solid rgba(255,255,255,.12);color:var(--tm);font-family:inherit;font-size:13px;padding:10px 20px;border-radius:9px;cursor:pointer;transition:all .15s}
+.hbtn2:hover{border-color:rgba(255,255,255,.3);color:#fff}
+
+.stat-row{display:flex;justify-content:center;gap:32px;margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.05)}
+.stat-item{text-align:center}
+.stat-n{font-family:'Sora',system-ui,sans-serif;font-size:22px;font-weight:700;color:#fff}
+.stat-n em{color:var(--ac2);font-style:normal}
+.stat-l{font-size:11px;color:var(--tm);margin-top:3px}
+</style>
+
+<div class="back" id="back"></div>
+
+<div class="navbar">
+  <div class="logo">Skill<span>zza</span><sub>AGI</sub></div>
+  <div class="nav-items">
+
+    <!-- PLATFORM -->
+    <div class="nav-item" id="ni-platform">
+      <button class="nav-btn" onclick="tog('platform')">Platform <span class="arr">▾</span></button>
+      <div class="dropdown dd-w-platform" id="dd-platform">
+        <div class="dd-inner">
+          <div class="dd-eyebrow"><span class="dot" style="background:var(--ac)"></span>Products &amp; platform</div>
+          <div class="seg-tabs">
+            <div class="stab on" onclick="seg(this,'all')">All</div>
+            <div class="stab" onclick="seg(this,'student')">Student</div>
+            <div class="stab" onclick="seg(this,'campus')">Campus</div>
+            <div class="stab" onclick="seg(this,'enterprise')">Enterprise</div>
+            <div class="stab" onclick="seg(this,'gov')">Govt &amp; CSR</div>
+          </div>
+          <div class="four-col" id="pcards">
+            <div class="pcard" data-s="student,enterprise">
+              <div class="pcard-ico ip">🎯</div>
+              <div class="ct">Potential Meter</div>
+              <div class="cd">AI skill assessment engine — strengths, career readiness, growth gaps.</div>
+              <div class="pill pill-p">AI-powered</div>
+            </div>
+            <div class="pcard" data-s="student,campus">
+              <div class="pcard-ico it">🌐</div>
+              <div class="ct">Xperience Platform</div>
+              <div class="cd">Immersive job simulations across domains to build real skills and portfolios.</div>
+              <div class="pill pill-t">New</div>
+            </div>
+            <div class="pcard" data-s="campus,enterprise">
+              <div class="pcard-ico io">🤝</div>
+              <div class="ct">Hirenest Recruit</div>
+              <div class="cd">College-to-campus hiring marketplace with pre-assessed student profiles.</div>
+              <div class="pill pill-o">Marketplace</div>
+            </div>
+            <div class="pcard" data-s="enterprise,gov">
+              <div class="pcard-ico ib">📊</div>
+              <div class="ct">Talent Transformation</div>
+              <div class="cd">End-to-end talent insights engine matching potential to job roles at scale.</div>
+              <div class="pill pill-b">Beta</div>
+            </div>
+            <div class="pcard" data-s="student,campus,enterprise">
+              <div class="pcard-ico ir">⚡</div>
+              <div class="ct">AI HackNex</div>
+              <div class="cd">Competitive AI hackathon platform for students and institutions.</div>
+              <div class="pill pill-r">Soon</div>
+            </div>
+            <div class="pcard featured" data-s="student">
+              <div class="pcard-ico ip">🎭</div>
+              <div class="ct">Skillzza Persona</div>
+              <div class="cd">AI roleplay simulation — interviews, workplace scenarios, confidence building.</div>
+              <div class="pill pill-p">AI Agent</div>
+            </div>
+            <div class="pcard" data-s="enterprise,campus">
+              <div class="pcard-ico ig">🔍</div>
+              <div class="ct">Skill DNA Engine</div>
+              <div class="cd">Deep behavioural profiling that maps hidden competencies beyond resumes.</div>
+              <div class="pill pill-g">New</div>
+            </div>
+            <div class="pcard" data-s="enterprise,gov">
+              <div class="pcard-ico iy">🤖</div>
+              <div class="ct">AgentMatch AI</div>
+              <div class="cd">Agentic recruiter that autonomously screens, ranks and shortlists talent.</div>
+              <div class="pill pill-o">Agentic</div>
+            </div>
+          </div>
+          <div class="cta-bar">
+            <div class="cta-l"><strong>Start your free skill assessment</strong> — discover your strengths in under 10 minutes.</div>
+            <div class="cta-ico">→</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AGENTIC AI -->
+    <div class="nav-item" id="ni-agentic">
+      <button class="nav-btn" onclick="tog('agentic')">Agentic AI <span class="badge">New</span> <span class="arr">▾</span></button>
+      <div class="dropdown dd-w-agentic" id="dd-agentic">
+        <div class="dd-inner">
+          <div class="dd-eyebrow"><span class="dot" style="background:var(--ac2)"></span>Agentic AI — autonomous skill &amp; talent intelligence</div>
+          <div class="agent-flow">
+            <div class="agent-flow-title">&#9679; Skillzza agentic pipeline</div>
+            <div class="agent-nodes">
+              <div class="anode"><span class="anode-dot" style="background:var(--ac)"></span>Assess</div>
+              <div class="anode-arrow">→</div>
+              <div class="anode"><span class="anode-dot" style="background:var(--ac2)"></span>Simulate</div>
+              <div class="anode-arrow">→</div>
+              <div class="anode"><span class="anode-dot" style="background:var(--ac4)"></span>Coach</div>
+              <div class="anode-arrow">→</div>
+              <div class="anode"><span class="anode-dot" style="background:var(--ac3)"></span>Match</div>
+              <div class="anode-arrow">→</div>
+              <div class="anode"><span class="anode-dot" style="background:var(--ac5)"></span>Hire</div>
+              <div class="anode-arrow">→</div>
+              <div class="anode"><span class="anode-dot" style="background:#a09cf7"></span>Upskill Loop</div>
+            </div>
+          </div>
+          <div class="two-col">
+            <div>
+              <div class="sec-label">AI agents — learner</div>
+              <div class="arow">
+                <div class="aitem">
+                  <div class="aitem-ico ip">🤖</div>
+                  <div>
+                    <div class="aitem-title">Career Navigator Agent</div>
+                    <div class="aitem-sub">Proactively maps your skill gaps against live job market signals.</div>
+                  </div>
+                  <div class="aitem-tag"><span class="pill pill-p" style="margin:0">Agent</span></div>
+                </div>
+                <div class="aitem">
+                  <div class="aitem-ico it">🧠</div>
+                  <div>
+                    <div class="aitem-title">AI Learning Coach</div>
+                    <div class="aitem-sub">Personalised micro-learning paths, adapted in real time.</div>
+                  </div>
+                  <div class="aitem-tag"><span class="pill pill-t" style="margin:0">Adaptive</span></div>
+                </div>
+                <div class="aitem">
+                  <div class="aitem-ico ir">🎯</div>
+                  <div>
+                    <div class="aitem-title">Interview Simulation Agent</div>
+                    <div class="aitem-sub">Live AI interviewer with instant feedback and scoring.</div>
+                  </div>
+                  <div class="aitem-tag"><span class="pill pill-r" style="margin:0">Real-time</span></div>
+                </div>
+                <div class="aitem">
+                  <div class="aitem-ico ib">📋</div>
+                  <div>
+                    <div class="aitem-title">Portfolio Builder Agent</div>
+                    <div class="aitem-sub">Auto-generates a verified portfolio from simulations and projects.</div>
+                  </div>
+                  <div class="aitem-tag"><span class="pill pill-b" style="margin:0">New</span></div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="sec-label">AI agents — enterprise &amp; campus</div>
+              <div class="arow">
+                <div class="aitem">
+                  <div class="aitem-ico io">⚙️</div>
+                  <div>
+                    <div class="aitem-title">AgentMatch Recruiter</div>
+                    <div class="aitem-sub">Autonomous screening, ranking and shortlisting at scale.</div>
+                  </div>
+                  <div class="aitem-tag"><span class="pill pill-o" style="margin:0">Agentic</span></div>
+                </div>
+                <div class="aitem">
+                  <div class="aitem-ico ig">🔬</div>
+                  <div>
+                    <div class="aitem-title">Workforce Intelligence Agent</div>
+                    <div class="aitem-sub">Real-time skill mapping across departments and campuses.</div>
+                  </div>
+                  <div class="aitem-tag"><span class="pill pill-g" style="margin:0">Beta</span></div>
+                </div>
+                <div class="aitem">
+                  <div class="aitem-ico iy">🌐</div>
+                  <div>
+                    <div class="aitem-title">Multi-Agent Talent Orchestrator</div>
+                    <div class="aitem-sub">Coordinates assess → match → hire → upskill as one agentic flow.</div>
+                  </div>
+                  <div class="aitem-tag"><span class="pill pill-o" style="margin:0">Soon</span></div>
+                </div>
+                <div class="aitem">
+                  <div class="aitem-ico ip">📡</div>
+                  <div>
+                    <div class="aitem-title">Skill Market Pulse</div>
+                    <div class="aitem-sub">Live labour market signal agent — trends, demand spikes, salary shifts.</div>
+                  </div>
+                  <div class="aitem-tag"><span class="pill pill-p" style="margin:0">Live</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- K-12 VIDYA -->
+    <div class="nav-item" id="ni-k12">
+      <button class="nav-btn" onclick="tog('k12')">K-12 Vidya <span class="badge" style="background:var(--ac2);color:#042C53">Studio</span> <span class="arr">▾</span></button>
+      <div class="dropdown dd-w-k12" id="dd-k12">
+        <div class="dd-inner">
+          <div class="dd-eyebrow"><span class="dot" style="background:var(--ac2)"></span>K-12 Vidya AI — school intelligence ecosystem</div>
+          <div class="k12-banner">
+            <div class="k12-badge">&#9679; Vidya AI Studio</div>
+            <div class="k12-text"><strong>AI-native learning for students &amp; teachers.</strong> From virtual internships to school-wide AI maturity — Skillzza's K-12 ecosystem prepares the next generation for an agentic world.</div>
+          </div>
+          <div class="three-col" style="margin-bottom:12px">
+            <div class="pcard">
+              <div class="pcard-ico it">🏫</div>
+              <div class="ct">Vidya AI Virtual Internship</div>
+              <div class="cd">Real-world AI, coding and deeptech internship simulations designed for school students aged 13–18.</div>
+              <div class="pill pill-t">Flagship</div>
+            </div>
+            <div class="pcard">
+              <div class="pcard-ico ip">🎓</div>
+              <div class="ct">Skill Studio for Students</div>
+              <div class="cd">Gamified AI-powered skill tracks — ML basics, robotics, sustainability, drone tech, quantum intro.</div>
+              <div class="pill pill-p">Grades 6–12</div>
+            </div>
+            <div class="pcard">
+              <div class="pcard-ico io">👩‍🏫</div>
+              <div class="ct">Teacher AI Upskill Lab</div>
+              <div class="cd">Structured AI literacy programme for educators — pedagogy, tools, classroom integration, assessments.</div>
+              <div class="pill pill-o">CPD certified</div>
+            </div>
+            <div class="pcard featured">
+              <div class="pcard-ico ib">📊</div>
+              <div class="ct">CCMM — AI Maturity for Schools</div>
+              <div class="cd">Continuous Capability &amp; Maturity Model — benchmarks school AI readiness across 5 dimensions.</div>
+              <div class="pill pill-b">Assessment</div>
+            </div>
+            <div class="pcard">
+              <div class="pcard-ico ir">🤝</div>
+              <div class="ct">Campus Connect — K12</div>
+              <div class="cd">Links top-performing school students directly to university and early internship pipelines.</div>
+              <div class="pill pill-r">Bridge</div>
+            </div>
+            <div class="pcard">
+              <div class="pcard-ico ig">🌱</div>
+              <div class="ct">Future Founders Track</div>
+              <div class="cd">Entrepreneurship &amp; innovation bootcamp — problem-solving, pitching, and startup thinking for teens.</div>
+              <div class="pill pill-g">New</div>
+            </div>
+          </div>
+          <div style="background:#0d1020;border:1px solid rgba(0,229,176,.18);border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:12px">
+            <div style="font-size:14px">📋</div>
+            <div style="font-size:11px;color:var(--tm);line-height:1.5"><strong style="color:#d8dae8">CCMM School Assessment</strong> — Is your school AI-ready? Get a free maturity report across curriculum, infrastructure, teacher readiness, ethics &amp; governance.</div>
+            <div style="margin-left:auto;background:rgba(0,229,176,.12);border:1px solid rgba(0,229,176,.25);border-radius:7px;padding:5px 12px;font-size:11px;font-weight:600;color:#00e5b0;white-space:nowrap;cursor:pointer">Get report →</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCHOOLS OF TECH -->
+    <div class="nav-item" id="ni-schools">
+      <button class="nav-btn" onclick="tog('schools')">Deeptech Schools <span class="arr">▾</span></button>
+      <div class="dropdown dd-w-schools" id="dd-schools">
+        <div class="dd-inner">
+          <div class="dd-eyebrow"><span class="dot" style="background:var(--ac4)"></span>The Deeptech Studio — specialisations</div>
+          <div class="arow">
+            <div class="aitem">
+              <div class="aitem-ico ip">🧠</div>
+              <div>
+                <div class="aitem-title">School of AI &amp; Quantum Intelligence</div>
+                <div class="aitem-sub">ML, neural architectures, quantum algorithms, agentic AI systems</div>
+              </div>
+              <span class="pill pill-p" style="margin:0 0 0 auto">AI + Quantum</span>
+            </div>
+            <div class="aitem">
+              <div class="aitem-ico it">🌍</div>
+              <div>
+                <div class="aitem-title">Global School of Sustainability &amp; Climate Action</div>
+                <div class="aitem-sub">Green tech, carbon markets, ESG frameworks, climate data science</div>
+              </div>
+              <span class="pill pill-t" style="margin:0 0 0 auto">New</span>
+            </div>
+            <div class="aitem">
+              <div class="aitem-ico io">🎨</div>
+              <div>
+                <div class="aitem-title">Centre of Digital &amp; Design Excellence</div>
+                <div class="aitem-sub">UX/UI, VFX, generative AI art, immersive media, spatial design</div>
+              </div>
+            </div>
+            <div class="aitem">
+              <div class="aitem-ico ib">⚡</div>
+              <div>
+                <div class="aitem-title">School of EV &amp; E-Mobility</div>
+                <div class="aitem-sub">Electric vehicles, battery systems, smart transport, grid tech</div>
+              </div>
+              <span class="pill pill-b" style="margin:0 0 0 auto">Beta</span>
+            </div>
+            <div class="aitem">
+              <div class="aitem-ico ir">🚁</div>
+              <div>
+                <div class="aitem-title">Institute of Aerial Intelligence</div>
+                <div class="aitem-sub">Drone systems, UAV operations, aerial data &amp; AI navigation</div>
+              </div>
+              <span class="pill pill-r" style="margin:0 0 0 auto">New</span>
+            </div>
+            <div class="aitem">
+              <div class="aitem-ico ig">🔐</div>
+              <div>
+                <div class="aitem-title">Cybersecurity &amp; Ethical AI School</div>
+                <div class="aitem-sub">Threat intelligence, AI safety, responsible automation, governance</div>
+              </div>
+              <span class="pill pill-g" style="margin:0 0 0 auto">New</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="nav-item" id="ni-services">
+      <button class="nav-btn" onclick="tog('services')">Services <span class="arr">▾</span></button>
+      <div class="dropdown dd-w-services" id="dd-services">
+        <div class="dd-inner">
+          <div class="dd-eyebrow"><span class="dot" style="background:var(--ac3)"></span>Skillzza as a service — consulting &amp; transformation</div>
+          <div class="svc-grid">
+            <div class="svc-card">
+              <div class="svc-icon">🏛️</div>
+              <div class="svc-title">Institution Transformation</div>
+              <div class="svc-desc">End-to-end curriculum redesign and AI integration for universities and colleges.</div>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon">🏢</div>
+              <div class="svc-title">Enterprise Skill Audit</div>
+              <div class="svc-desc">Workforce capability mapping, gap analysis and a 90-day upskilling roadmap.</div>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon">🏛️</div>
+              <div class="svc-title">Govt &amp; CSR Programmes</div>
+              <div class="svc-desc">National skill missions, youth employment schemes and impact reporting.</div>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon">🎓</div>
+              <div class="svc-title">Assessment-as-a-Service</div>
+              <div class="svc-desc">White-label Potential Meter and CCMM for partners, boards and accreditors.</div>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon">🔗</div>
+              <div class="svc-title">API &amp; Platform Licensing</div>
+              <div class="svc-desc">Embed Skillzza's assessment, simulation and matching engine into your platform.</div>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon">📡</div>
+              <div class="svc-title">Talent Intelligence Reports</div>
+              <div class="svc-desc">Bespoke workforce analytics, labour market signals and sector skill reports.</div>
+            </div>
+          </div>
+          <div class="cta-bar" style="margin-top:12px">
+            <div class="cta-l"><strong>Partner with Skillzza</strong> — universities, enterprises and governments building future-ready talent.</div>
+            <div class="cta-ico">→</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INSIGHTS -->
+    <div class="nav-item" id="ni-insights">
+      <button class="nav-btn" onclick="tog('insights')">Insights <span class="arr">▾</span></button>
+      <div class="dropdown dd-w-insights" id="dd-insights">
+        <div class="dd-inner">
+          <div class="dd-eyebrow"><span class="dot" style="background:var(--ac5)"></span>Resources &amp; knowledge</div>
+          <div class="ins-list">
+            <div class="ins-item">
+              <div class="ins-ico">📘</div>
+              <div><div class="ins-title">Skill Blueprint — Case Studies</div><div class="ins-sub">Real-world success stories in skill development</div></div>
+              <div class="ins-arrow">↗</div>
+            </div>
+            <div class="ins-item">
+              <div class="ins-ico">✍️</div>
+              <div><div class="ins-title">The Skillzza Digest</div><div class="ins-sub">Insights, trends &amp; game-changers shaping future skills</div></div>
+              <div class="ins-arrow">↗</div>
+            </div>
+            <div class="ins-item">
+              <div class="ins-ico">🔬</div>
+              <div><div class="ins-title">AI Talent Research Hub</div><div class="ins-sub">Reports &amp; whitepapers on AI &amp; workforce transformation</div></div>
+              <div class="ins-arrow">↗</div>
+            </div>
+            <div class="ins-item">
+              <div class="ins-ico">🎙️</div>
+              <div><div class="ins-title">Skill Unplugged Podcast</div><div class="ins-sub">Raw, Real &amp; Revolutionary talks on the future of skills</div></div>
+              <div class="ins-arrow">↗</div>
+            </div>
+            <div class="ins-item">
+              <div class="ins-ico">🎯</div>
+              <div><div class="ins-title">Skillzza Live — Knowledge in Action</div><div class="ins-sub">Interactive sessions bringing learning to life</div></div>
+              <div class="ins-arrow">↗</div>
+            </div>
+            <div class="ins-item">
+              <div class="ins-ico">📊</div>
+              <div><div class="ins-title">Agentic Workforce Index 2026</div><div class="ins-sub">Annual report on AI agent adoption across industries</div></div>
+              <span class="pill pill-b" style="margin:0 0 0 auto">New</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPANY -->
+    <div class="nav-item" id="ni-company">
+      <button class="nav-btn" onclick="tog('company')">Company <span class="arr">▾</span></button>
+      <div class="dropdown dd-w-company" id="dd-company">
+        <div class="dd-inner">
+          <div class="dd-eyebrow"><span class="dot" style="background:var(--tm)"></span>About Skillzza</div>
+          <div class="co-grid">
+            <div class="co-item"><div class="co-title">About us</div><div class="co-sub">Our story, mission &amp; vision</div></div>
+            <div class="co-item"><div class="co-title">Our Methodology</div><div class="co-sub">How we build skill frameworks</div></div>
+            <div class="co-item"><div class="co-title">What We Do</div><div class="co-sub">Products, programmes &amp; impact</div></div>
+            <div class="co-item"><div class="co-title">Our Pathway</div><div class="co-sub">Roadmap for learners &amp; partners</div></div>
+            <div class="co-item" style="grid-column:span 2"><div class="co-title">Partner Collaboration</div><div class="co-sub">Universities, enterprises, government &amp; CSR partnerships</div></div>
+            <div class="co-item"><div class="co-title">Careers at Skillzza</div><div class="co-sub">Join the team building the future of skills</div></div>
+            <div class="co-item"><div class="co-title">Press &amp; Media</div><div class="co-sub">News, features &amp; brand resources</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="nav-right">
+    <button class="btn-g">Sign in</button>
+    <button class="btn-p">Start free →</button>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="agent-badge"><span class="agent-badge-dot"></span> Powered by Agentic AI — assess, simulate, match &amp; hire autonomously</div>
+  <div class="h1">Your career,<br><em>AI-engineered.</em><br><span>School to boardroom.</span></div>
+  <div class="hsub">Skillzza is both a product and a service — the intelligence layer that transforms how students learn, institutions teach, and enterprises hire.</div>
+  <div class="chips">
+    <div class="chip">AI Engineer</div>
+    <div class="chip">Cybersecurity Analyst</div>
+    <div class="chip">Agentic AI Developer</div>
+    <div class="chip">VFX Designer</div>
+    <div class="chip">Quantum Computing</div>
+    <div class="chip">EV Engineer</div>
+    <div class="chip">Climate Tech</div>
+  </div>
+  <div class="hbtns">
+    <button class="hbtn1">Start your assessment →</button>
+    <button class="hbtn2">Explore for schools</button>
+  </div>
+  <div class="stat-row">
+    <div class="stat-item"><div class="stat-n">50<em>K+</em></div><div class="stat-l">Learners assessed</div></div>
+    <div class="stat-item"><div class="stat-n">200<em>+</em></div><div class="stat-l">Partner institutions</div></div>
+    <div class="stat-item"><div class="stat-n">8</div><div class="stat-l">Deeptech schools</div></div>
+    <div class="stat-item"><div class="stat-n">6</div><div class="stat-l">Agentic AI products</div></div>
+    <div class="stat-item"><div class="stat-n">K-12<em> →</em></div><div class="stat-l">to enterprise coverage</div></div>
+  </div>
+</div>
+
+<script>
+var open=null;
+function tog(id){
+  var was=open===id;
+  closeAll();
+  if(!was){
+    document.getElementById('ni-'+id).classList.add('open');
+    document.getElementById('back').classList.add('on');
+    open=id;
+  }
+}
+function closeAll(){
+  document.querySelectorAll('.nav-item').forEach(function(e){e.classList.remove('open')});
+  document.getElementById('back').classList.remove('on');
+  open=null;
+}
+document.getElementById('back').addEventListener('click',closeAll);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll()});
+function seg(tab,s){
+  tab.closest('.seg-tabs').querySelectorAll('.stab').forEach(function(t){t.classList.remove('on')});
+  tab.classList.add('on');
+  document.querySelectorAll('#pcards .pcard').forEach(function(c){
+    if(s==='all'){c.style.display='';}
+    else{
+      var segs=(c.dataset.s||'').split(',');
+      c.style.display=segs.indexOf(s)>=0?'':'none';
+    }
+  });
+}
+</script>

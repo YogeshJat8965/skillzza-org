@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import { useEffect } from 'react'
 import Lenis from 'lenis'
 
+import WelcomePopup from './components/WelcomePopup'
 import Home from './pages/Home'
 import DevelopersPage from './pages/DevelopersPage'
 import About from './pages/About'
@@ -70,6 +71,7 @@ export default function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors">
+      <WelcomePopup />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/developers/team" element={<DevelopersPage />} />
