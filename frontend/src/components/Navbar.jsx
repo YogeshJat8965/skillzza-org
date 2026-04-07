@@ -1135,31 +1135,31 @@ const DesktopNavItem = ({ item }) => {
           onMouseEnter={show}
           onMouseLeave={hide}
         >
+          <div
+            className="sz-mega-dropdown"
+            style={{
+              background: '#ffffff',
+              borderRadius: 20,
+              padding: 0,
+              boxShadow:
+                '0 32px 80px rgba(0,0,0,0.14), 0 12px 36px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05), 0 0 0 1px rgba(0,0,0,0.04)',
+              overflow: 'hidden',
+              animation: 'szDdIn 0.28s cubic-bezier(0.16, 1, 0.3, 1)',
+            }}
+          >
+            {/* Top gradient accent bar */}
             <div
-              className="sz-mega-dropdown"
               style={{
-                background: '#ffffff',
-                borderRadius: 20,
-                padding: 0,
-                boxShadow:
-                  '0 32px 80px rgba(0,0,0,0.14), 0 12px 36px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05), 0 0 0 1px rgba(0,0,0,0.04)',
-                overflow: 'hidden',
-                animation: 'szDdIn 0.28s cubic-bezier(0.16, 1, 0.3, 1)',
+                height: 3,
+                background: item.accentGradient || 'linear-gradient(135deg, #e02020, #f5a623)',
+                borderRadius: '20px 20px 0 0',
               }}
-            >
-              {/* Top gradient accent bar */}
-              <div
-                style={{
-                  height: 3,
-                  background: item.accentGradient || 'linear-gradient(135deg, #e02020, #f5a623)',
-                  borderRadius: '20px 20px 0 0',
-                }}
-              />
-              {/* Content */}
-              <div style={{ padding: '22px 24px 20px' }}>
-                <MegaDropdown navItem={item} />
-              </div>
+            />
+            {/* Content */}
+            <div style={{ padding: '22px 24px 20px' }}>
+              <MegaDropdown navItem={item} />
             </div>
+          </div>
         </div>
       )}
     </div>
