@@ -12,8 +12,8 @@ const navItems = [
   {
     name: 'Products',
     layout: 'card-grid',
-    columns: 3,
-    width: 860,
+    columns: 4,
+    width: 900,
     eyebrow: 'Products & Platform',
     dotColor: '#e02020',
     accentGradient: 'linear-gradient(135deg, #e02020, #f5a623)',
@@ -224,12 +224,12 @@ const navItems = [
 ═══════════════════════════════════════════════════════════════ */
 
 const pillColors = {
-  red:    { bg: 'linear-gradient(135deg, #fef2f2, #fee2e2)', color: '#dc2626', border: 'rgba(239,68,68,0.20)' },
-  teal:   { bg: 'linear-gradient(135deg, #f0fdfa, #ccfbf1)', color: '#0d9488', border: 'rgba(20,184,166,0.20)' },
-  blue:   { bg: 'linear-gradient(135deg, #eff6ff, #dbeafe)', color: '#2563eb', border: 'rgba(59,130,246,0.20)' },
+  red: { bg: 'linear-gradient(135deg, #fef2f2, #fee2e2)', color: '#dc2626', border: 'rgba(239,68,68,0.20)' },
+  teal: { bg: 'linear-gradient(135deg, #f0fdfa, #ccfbf1)', color: '#0d9488', border: 'rgba(20,184,166,0.20)' },
+  blue: { bg: 'linear-gradient(135deg, #eff6ff, #dbeafe)', color: '#2563eb', border: 'rgba(59,130,246,0.20)' },
   orange: { bg: 'linear-gradient(135deg, #fffbeb, #fef3c7)', color: '#d97706', border: 'rgba(245,158,11,0.20)' },
-  pink:   { bg: 'linear-gradient(135deg, #fdf2f8, #fce7f3)', color: '#db2777', border: 'rgba(236,72,153,0.20)' },
-  green:  { bg: 'linear-gradient(135deg, #f0fdf4, #dcfce7)', color: '#16a34a', border: 'rgba(34,197,94,0.20)' },
+  pink: { bg: 'linear-gradient(135deg, #fdf2f8, #fce7f3)', color: '#db2777', border: 'rgba(236,72,153,0.20)' },
+  green: { bg: 'linear-gradient(135deg, #f0fdf4, #dcfce7)', color: '#16a34a', border: 'rgba(34,197,94,0.20)' },
   purple: { bg: 'linear-gradient(135deg, #faf5ff, #f3e8ff)', color: '#7c3aed', border: 'rgba(124,58,237,0.20)' },
 };
 
@@ -389,7 +389,7 @@ const CardGridDropdown = ({ navItem }) => (
       style={{
         display: 'grid',
         gridTemplateColumns: `repeat(${navItem.columns}, 1fr)`,
-        gap: 14,
+        gap: 10,
       }}
     >
       {navItem.items.map((item, i) => (
@@ -416,81 +416,86 @@ const CardItem = ({ item, index }) => {
           ? 'linear-gradient(145deg, #fff 0%, #fefcfb 50%, #fdf8f6 100%)'
           : 'linear-gradient(145deg, #ffffff 0%, #fafbfc 100%)',
         border: `1.5px solid ${hovered ? 'transparent' : '#f0f2f5'}`,
-        borderRadius: 16,
-        padding: '22px 20px',
+        borderRadius: 14,
+        padding: '14px 14px 12px',
         cursor: 'pointer',
         transition: 'all 0.35s cubic-bezier(0.4,0,0.2,1)',
         textDecoration: 'none',
         display: 'block',
-        transform: hovered ? 'translateY(-4px) scale(1.01)' : 'translateY(0) scale(1)',
+        transform: hovered ? 'translateY(-3px) scale(1.01)' : 'translateY(0) scale(1)',
         boxShadow: hovered
-          ? '0 16px 48px rgba(0,0,0,0.10), 0 6px 18px rgba(0,0,0,0.06), 0 0 0 1px rgba(224,32,32,0.06), inset 0 1px 0 rgba(255,255,255,0.9)'
+          ? '0 12px 36px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.9)'
           : '0 2px 8px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.8)',
         overflow: 'hidden',
         animationDelay: `${index * 40}ms`,
       }}
     >
-      {/* Gradient border overlay on hover */}
+      {/* Gradient border ring — z:0 stays behind text */}
       <div
         style={{
           position: 'absolute',
           inset: -1.5,
           borderRadius: 17,
           padding: 1.5,
+          zIndex: 0,
           background: item.iconGradient || 'linear-gradient(135deg, #e02020, #f5a623)',
           WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
           WebkitMaskComposite: 'xor',
           maskComposite: 'exclude',
           pointerEvents: 'none',
-          opacity: hovered ? 0.7 : 0,
+          opacity: hovered ? 0.65 : 0,
           transition: 'opacity 0.35s ease',
         }}
       />
-      {/* Shimmer glow on hover */}
+      {/* Shimmer — fixed geometry so white center stays off-screen when idle */}
       <div
         className={hovered ? 'sz-shimmer-active' : ''}
         style={{
           position: 'absolute',
-          top: 0,
-          left: '-100%',
-          width: '100%',
-          height: '100%',
-          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
+          top: 0, left: '-75%',
+          width: '65%', height: '100%',
+          zIndex: 0,
+          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.38), transparent)',
           pointerEvents: 'none',
           borderRadius: 16,
+          transform: 'skewX(-8deg)',
         }}
       />
 
-      <GradientIcon
-        icon={item.icon}
-        gradient={item.iconGradient}
-        shadow={hovered ? item.iconShadow : 'none'}
-      />
-
-      <div
-        style={{
-          fontSize: 15,
-          fontWeight: 700,
-          color: '#0f172a',
-          marginTop: 14,
-          marginBottom: 7,
-          lineHeight: 1.3,
-          letterSpacing: -0.3,
-        }}
-      >
-        {item.name}
+      {/* All real content above overlays */}
+      <div style={{ position: 'relative' }}>
+        <GradientIcon
+          icon={item.icon}
+          gradient={item.iconGradient}
+          shadow={hovered ? item.iconShadow : 'none'}
+          size={36}
+          fontSize={17}
+        />
+        <div
+          style={{
+            fontSize: 13,
+            fontWeight: 700,
+            color: '#0f172a',
+            marginTop: 9,
+            marginBottom: 5,
+            lineHeight: 1.25,
+            letterSpacing: -0.2,
+          }}
+        >
+          {item.name}
+        </div>
+        <div
+          style={{
+            fontSize: 11.5,
+            color: '#4b6280',
+            lineHeight: 1.55,
+            letterSpacing: 0,
+          }}
+        >
+          {item.desc}
+        </div>
+        {item.pill && <Pill text={item.pill} color={item.pillColor} />}
       </div>
-      <div
-        style={{
-          fontSize: 12.5,
-          color: '#4b6280',
-          lineHeight: 1.65,
-          letterSpacing: 0.1,
-        }}
-      >
-        {item.desc}
-      </div>
-      {item.pill && <Pill text={item.pill} color={item.pillColor} />}
     </a>
   );
 };
@@ -512,6 +517,10 @@ const ListRowsDropdown = ({ navItem }) => (
 
 const ListRowItem = ({ item, index }) => {
   const [hovered, setHovered] = useState(false);
+  const glowRaw = item.iconShadow?.match(/rgba\([^)]+\)/)?.[0] || 'rgba(99,102,241,0.15)';
+  const bgWash = glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.05)');
+  const glowMid = glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.18)');
+
   return (
     <a
       href={item.link ? getRoutePath(item.link) : undefined}
@@ -520,80 +529,82 @@ const ListRowItem = ({ item, index }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 14,
-        padding: '13px 15px',
+        display: 'flex', alignItems: 'center', gap: 14,
+        padding: '12px 15px',
         borderRadius: 13,
-        border: '1px solid transparent',
+        border: `1px solid ${hovered ? glowMid : 'transparent'}`,
         background: hovered
-          ? 'linear-gradient(135deg, #ffffff, #f6f9fc)'
+          ? `linear-gradient(135deg, #ffffff, ${bgWash})`
           : 'transparent',
         cursor: item.link ? 'pointer' : 'default',
-        transition: 'all 0.25s cubic-bezier(0.4,0,0.2,1)',
+        transition: 'all 0.28s cubic-bezier(0.34,1.2,0.64,1)',
         textDecoration: 'none',
         position: 'relative',
-        borderColor: hovered ? '#e8eef5' : 'transparent',
-        boxShadow: hovered ? '0 4px 18px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04)' : 'none',
+        transform: hovered ? 'translateX(5px)' : 'translateX(0)',
+        boxShadow: hovered
+          ? `0 4px 20px ${glowMid}, 0 1px 4px rgba(0,0,0,0.04)`
+          : 'none',
         animationDelay: `${index * 30}ms`,
       }}
     >
-      {/* Left accent bar on hover */}
+      {/* Left accent bar */}
+      <div style={{
+        position: 'absolute', left: 0, top: '15%', bottom: '15%',
+        width: 3, borderRadius: 3, zIndex: 0,
+        background: item.iconGradient || 'linear-gradient(135deg,#e02020,#f5a623)',
+        opacity: hovered ? 1 : 0,
+        transform: hovered ? 'scaleY(1)' : 'scaleY(0)',
+        transformOrigin: 'center',
+        transition: 'opacity 0.22s ease, transform 0.28s cubic-bezier(0.34,1.56,0.64,1)',
+      }} />
+
+      {/* Shimmer — fixed geometry */}
       <div
+        className={hovered ? 'sz-shimmer-active' : ''}
         style={{
           position: 'absolute',
-          left: 0,
-          top: '20%',
-          bottom: '20%',
-          width: 3,
-          borderRadius: 2,
-          background: item.iconGradient || 'linear-gradient(135deg, #e02020, #f5a623)',
-          opacity: hovered ? 1 : 0,
-          transition: 'opacity 0.25s ease',
+          top: 0, left: '-75%',
+          width: '60%', height: '100%',
+          zIndex: 0,
+          background: 'linear-gradient(90deg,transparent,rgba(255,255,255,0.42),transparent)',
+          pointerEvents: 'none',
+          transform: 'skewX(-8deg)',
+          borderRadius: 13,
         }}
       />
 
       <GradientIcon
         icon={item.icon}
         gradient={item.iconGradient}
-        shadow={hovered ? item.iconShadow : 'none'}
+        shadow={hovered ? `0 6px 20px ${glowMid}` : 'none'}
         size={38}
         fontSize={17}
       />
 
       <div style={{ flex: 1, minWidth: 0 }}>
-        <div
-          style={{
-            fontSize: 14,
-            fontWeight: 700,
-            color: hovered ? '#0f172a' : '#1e293b',
-            letterSpacing: -0.2,
-            transition: 'color 0.2s ease',
-          }}
-        >
+        <div style={{
+          fontSize: 14, fontWeight: 700,
+          color: hovered ? '#0f172a' : '#1e293b',
+          letterSpacing: -0.2,
+          transition: 'color 0.2s ease',
+        }}>
           {item.name}
         </div>
-        <div style={{ fontSize: 12, color: '#5a7394', lineHeight: 1.6, marginTop: 3 }}>
+        <div style={{ fontSize: 12, color: hovered ? '#374f6b' : '#5a7394', lineHeight: 1.6, marginTop: 3, transition: 'color 0.2s ease' }}>
           {item.desc}
         </div>
       </div>
 
       {item.pill ? (
-        <div style={{ flexShrink: 0 }}>
-          <Pill text={item.pill} color={item.pillColor} />
-        </div>
+        <div style={{ flexShrink: 0 }}><Pill text={item.pill} color={item.pillColor} /></div>
       ) : (
-        <div
-          style={{
-            color: hovered ? '#64748b' : '#cbd5e1',
-            fontSize: 14,
-            flexShrink: 0,
-            transition: 'all 0.25s ease',
-            transform: hovered ? 'translateX(2px)' : 'translateX(0)',
-          }}
-        >
-          ↗
-        </div>
+        <div style={{
+          color: hovered ? '#475569' : '#cbd5e1',
+          fontSize: 15, flexShrink: 0,
+          transition: 'all 0.28s cubic-bezier(0.34,1.56,0.64,1)',
+          transform: hovered ? 'translate(2px,-2px) rotate(-45deg)' : 'translate(0,0) rotate(0deg)',
+          fontWeight: 600,
+        }}>↗</div>
       )}
     </a>
   );
@@ -622,6 +633,15 @@ const CompactGridDropdown = ({ navItem }) => (
 
 const CompactItem = ({ item, index }) => {
   const [hovered, setHovered] = useState(false);
+  const glowRaw = item.iconGradient
+    ? `rgba(${item.iconGradient.includes('fee2e2') ? '239,68,68' :
+      item.iconGradient.includes('fef3c7') ? '245,158,11' :
+        item.iconGradient.includes('dbeafe') ? '59,130,246' :
+          item.iconGradient.includes('ccfbf1') ? '20,184,166' :
+            item.iconGradient.includes('dcfce7') ? '34,197,94' :
+              item.iconGradient.includes('f3e8ff') ? '168,85,247' : '99,102,241'},0.14)`
+    : 'rgba(99,102,241,0.14)';
+
   return (
     <a
       href={item.link ? getRoutePath(item.link) : undefined}
@@ -631,64 +651,83 @@ const CompactItem = ({ item, index }) => {
       onMouseLeave={() => setHovered(false)}
       style={{
         background: hovered
-          ? 'linear-gradient(135deg, #ffffff, #f8fafc)'
+          ? 'linear-gradient(135deg,#ffffff,#f8fafc)'
           : '#f6f8fb',
-        border: `1px solid ${hovered ? '#dde4ee' : '#edf0f5'}`,
+        border: `1.5px solid ${hovered ? glowRaw.replace('0.14)', '0.35)') : '#edf0f5'}`,
         borderRadius: 13,
         padding: '15px 17px',
         cursor: item.link ? 'pointer' : 'default',
-        transition: 'all 0.25s cubic-bezier(0.4,0,0.2,1)',
+        transition: 'all 0.3s cubic-bezier(0.34,1.2,0.64,1)',
         textDecoration: 'none',
-        display: 'flex',
-        alignItems: 'flex-start',
-        gap: 13,
-        transform: hovered ? 'translateY(-2px)' : 'translateY(0)',
+        display: 'flex', alignItems: 'flex-start', gap: 13,
+        transform: hovered ? 'translateY(-4px) scale(1.02)' : 'translateY(0) scale(1)',
         boxShadow: hovered
-          ? '0 6px 20px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.9)'
+          ? `0 12px 32px ${glowRaw}, 0 4px 10px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.9)`
           : '0 1px 3px rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.7)',
         ...(item.span ? { gridColumn: `span ${item.span}` } : {}),
         animationDelay: `${index * 30}ms`,
+        overflow: 'hidden',
+        position: 'relative',
       }}
     >
-      {/* Mini icon */}
-      {item.icon && (
-        <div
-          style={{
-            width: 28,
-            height: 28,
-            borderRadius: 8,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: 13,
-            background: item.iconGradient || '#f1f5f9',
-            flexShrink: 0,
-            marginTop: 1,
-          }}
-        >
-          {item.icon}
-        </div>
-      )}
-      <div>
-        <div
-          style={{
-            fontSize: 13.5,
-            fontWeight: 700,
-            color: '#0f172a',
+      {/* Top accent bar */}
+      <div style={{
+        position: 'absolute', top: 0, left: 0, right: 0, height: 2,
+        zIndex: 0,
+        background: item.iconGradient || 'linear-gradient(135deg,#e02020,#f5a623)',
+        opacity: hovered ? 1 : 0,
+        transition: 'opacity 0.28s ease',
+        borderRadius: '13px 13px 0 0',
+      }} />
+
+      {/* Shimmer — fixed geometry */}
+      <div
+        className={hovered ? 'sz-shimmer-active' : ''}
+        style={{
+          position: 'absolute',
+          top: 0, left: '-75%',
+          width: '62%', height: '100%',
+          zIndex: 0,
+          background: 'linear-gradient(90deg,transparent,rgba(255,255,255,0.42),transparent)',
+          pointerEvents: 'none', transform: 'skewX(-12deg)',
+        }}
+      />
+
+      {/* Content — DOM-order + position:relative guarantees above z:0 absolutes */}
+      <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-start', gap: 13 }}>
+
+        {item.icon && (
+          <div
+            className="sz-nav-icon"
+            style={{
+              width: 28, height: 28, borderRadius: 8,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontSize: 13,
+              background: item.iconGradient || '#f1f5f9',
+              flexShrink: 0, marginTop: 1,
+              transition: 'transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease',
+              boxShadow: hovered ? `0 4px 14px ${glowRaw.replace('0.14)', '0.4)')}` : 'none',
+            }}
+          >
+            {item.icon}
+          </div>
+        )}
+        <div>
+          <div style={{
+            fontSize: 13.5, fontWeight: 700,
+            color: hovered ? '#0f172a' : '#1a2332',
             letterSpacing: -0.2,
-          }}
-        >
-          {item.name}
-        </div>
-        <div
-          style={{
-            fontSize: 11.5,
-            color: '#5a7394',
-            marginTop: 4,
-            lineHeight: 1.55,
-          }}
-        >
-          {item.desc}
+            transition: 'color 0.2s ease',
+          }}>
+            {item.name}
+          </div>
+          <div style={{
+            fontSize: 11.5, color: hovered ? '#374f6b' : '#5a7394',
+            marginTop: 4, lineHeight: 1.55,
+            transition: 'color 0.2s ease',
+          }}>
+            {item.desc}
+          </div>
         </div>
       </div>
     </a>
@@ -701,28 +740,52 @@ const CompactItem = ({ item, index }) => {
 
 const AgenticAIDropdown = ({ navItem }) => {
   const pc = pillColors;
-  const AgentRow = ({ agent }) => (
-    <div style={{
-      display: 'flex', alignItems: 'flex-start', gap: 10,
-      padding: '9px 12px', borderRadius: 10,
-      border: '1px solid #f1f5f9', background: '#fafbfd',
-      transition: 'all 0.2s ease', cursor: 'default',
-    }}
-      onMouseEnter={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.background = '#f8faff'; }}
-      onMouseLeave={e => { e.currentTarget.style.borderColor = '#f1f5f9'; e.currentTarget.style.background = '#fafbfd'; }}
-    >
-      <span style={{ fontSize: 18, lineHeight: 1 }}>{agent.icon}</span>
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2 }}>
-          <span style={{ fontSize: 13, fontWeight: 700, color: '#1e293b' }}>{agent.name}</span>
-          {agent.pill && pc[agent.pillColor] && (
-            <span style={{ fontSize: 10, fontWeight: 600, padding: '1px 7px', borderRadius: 20, ...pc[agent.pillColor] }}>{agent.pill}</span>
-          )}
+  const AgentRow = ({ agent }) => {
+    const [h, setH] = useState(false);
+    const pc = pillColors;
+    return (
+      <div
+        onMouseEnter={() => setH(true)}
+        onMouseLeave={() => setH(false)}
+        style={{
+          display: 'flex', alignItems: 'flex-start', gap: 10,
+          padding: '9px 12px', borderRadius: 10,
+          border: `1px solid ${h ? 'rgba(0,229,176,0.3)' : '#f1f5f9'}`,
+          background: h ? 'linear-gradient(135deg,rgba(0,229,176,0.05),rgba(56,217,245,0.04))' : '#fafbfd',
+          transition: 'all 0.28s cubic-bezier(0.34,1.2,0.64,1)',
+          transform: h ? 'translateX(4px) scale(1.01)' : 'translateX(0) scale(1)',
+          boxShadow: h ? '0 4px 16px rgba(0,229,176,0.12), 0 1px 4px rgba(0,0,0,0.04)' : 'none',
+          cursor: 'default',
+          position: 'relative', overflow: 'hidden',
+        }}
+      >
+        {/* Left teal bar */}
+        <div style={{
+          position: 'absolute', left: 0, top: '15%', bottom: '15%', width: 3, borderRadius: 3,
+          background: 'linear-gradient(135deg,#00e5b0,#38d9f5)',
+          opacity: h ? 1 : 0,
+          transform: h ? 'scaleY(1)' : 'scaleY(0)',
+          transformOrigin: 'center',
+          transition: 'all 0.28s cubic-bezier(0.34,1.56,0.64,1)',
+        }} />
+        <span style={{
+          fontSize: 18, lineHeight: 1,
+          display: 'inline-block',
+          transition: 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1)',
+          transform: h ? 'scale(1.18) rotate(-6deg)' : 'scale(1) rotate(0deg)',
+        }}>{agent.icon}</span>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2 }}>
+            <span style={{ fontSize: 13, fontWeight: 700, color: h ? '#065f46' : '#1e293b', transition: 'color 0.2s' }}>{agent.name}</span>
+            {agent.pill && pc[agent.pillColor] && (
+              <span style={{ fontSize: 10, fontWeight: 600, padding: '1px 7px', borderRadius: 20, ...pc[agent.pillColor] }}>{agent.pill}</span>
+            )}
+          </div>
+          <div style={{ fontSize: 11.5, color: h ? '#374f6b' : '#5a7394', lineHeight: 1.45, transition: 'color 0.2s' }}>{agent.desc}</div>
         </div>
-        <div style={{ fontSize: 11.5, color: '#5a7394', lineHeight: 1.45 }}>{agent.desc}</div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div>
@@ -794,36 +857,78 @@ const K12VidyaDropdown = ({ navItem }) => (
     </div>
     {/* 3-col card grid */}
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
-      {navItem.items.map(item => (
-        <a key={item.name} href={item.link}
-          style={{
-            display: 'flex', flexDirection: 'column', gap: 8,
-            padding: '13px 13px 11px',
-            borderRadius: 12,
-            border: item.featured ? '1.5px solid rgba(59,130,246,0.3)' : '1px solid #f0f4f8',
-            background: item.featured ? 'linear-gradient(135deg, #eff6ff, #dbeafe22)' : '#fafbfd',
-            textDecoration: 'none',
-            transition: 'all 0.2s ease',
-          }}
-          onMouseEnter={e => { e.currentTarget.style.borderColor = '#cbd5e1'; e.currentTarget.style.background = '#f8faff'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
-          onMouseLeave={e => { e.currentTarget.style.borderColor = item.featured ? 'rgba(59,130,246,0.3)' : '#f0f4f8'; e.currentTarget.style.background = item.featured ? 'linear-gradient(135deg, #eff6ff, #dbeafe22)' : '#fafbfd'; e.currentTarget.style.transform = 'translateY(0)'; }}
-        >
-          <div style={{
-            width: 36, height: 36, borderRadius: 9,
-            background: item.iconGradient || '#f1f5f9',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: 17, flexShrink: 0,
-            boxShadow: item.iconShadow,
-          }}>{item.icon}</div>
-          <div style={{ fontSize: 12.5, fontWeight: 700, color: '#1e293b', lineHeight: 1.2 }}>{item.name}</div>
-          {item.pill && pillColors[item.pillColor] && (
-            <span style={{ alignSelf: 'flex-start', fontSize: 10, fontWeight: 600, padding: '1px 7px', borderRadius: 20, ...pillColors[item.pillColor] }}>{item.pill}</span>
-          )}
-        </a>
-      ))}
+      {navItem.items.map((item, i) => <K12Card key={item.name} item={item} index={i} />)}
     </div>
   </div>
 );
+
+const K12Card = ({ item }) => {
+  const [h, setH] = useState(false);
+  const glowRaw = item.iconShadow?.match(/rgba\([^)]+\)/)?.[0] || 'rgba(20,184,166,0.15)';
+  const glowMid = glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.22)');
+  return (
+    <a
+      href={item.link || undefined}
+      onClick={!item.link ? e => e.preventDefault() : undefined}
+      onMouseEnter={() => setH(true)}
+      onMouseLeave={() => setH(false)}
+      style={{
+        display: 'flex', flexDirection: 'column', gap: 8,
+        padding: '13px 13px 11px', borderRadius: 12,
+        border: h
+          ? `1.5px solid ${glowMid}`
+          : item.featured ? '1.5px solid rgba(59,130,246,0.3)' : '1px solid #f0f4f8',
+        background: h
+          ? `linear-gradient(145deg,#ffffff,${glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.06)')})`
+          : item.featured ? 'linear-gradient(135deg,#eff6ff,rgba(219,234,254,0.13))' : '#fafbfd',
+        textDecoration: 'none', overflow: 'hidden', position: 'relative',
+        cursor: item.link ? 'pointer' : 'default',
+        transition: 'all 0.3s cubic-bezier(0.34,1.2,0.64,1)',
+        transform: h ? 'translateY(-6px) scale(1.025)' : 'translateY(0) scale(1)',
+        boxShadow: h
+          ? `0 18px 40px ${glowMid}, 0 6px 14px ${glowRaw}, 0 0 0 1px ${glowRaw}`
+          : '0 1px 4px rgba(0,0,0,0.04)',
+      }}
+    >
+      {/* Gradient top bar */}
+      <div style={{
+        position: 'absolute', top: 0, left: 0, right: 0, height: 2,
+        borderRadius: '12px 12px 0 0', zIndex: 0,
+        background: item.iconGradient || 'linear-gradient(135deg,#00e5b0,#38d9f5)',
+        opacity: h ? 1 : 0,
+        transition: 'opacity 0.28s ease',
+      }} />
+      {/* Shimmer — fixed geometry */}
+      <div className={h ? 'sz-shimmer-active' : ''} style={{
+        position: 'absolute', top: 0, left: '-75%',
+        width: '62%', height: '100%', zIndex: 0,
+        background: 'linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent)',
+        pointerEvents: 'none', transform: 'skewX(-12deg)',
+      }} />
+      {/* Content above overlays */}
+      <div style={{ position: 'relative' }}>
+        <div style={{
+          width: 36, height: 36, borderRadius: 9,
+          background: item.iconGradient || '#f1f5f9',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          fontSize: 17, flexShrink: 0,
+          boxShadow: h ? `0 6px 20px ${glowMid}` : item.iconShadow,
+          transition: 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease',
+          transform: h ? 'scale(1.15) rotate(-5deg)' : 'scale(1) rotate(0deg)',
+          marginBottom: 6,
+        }}>{item.icon}</div>
+        <div style={{
+          fontSize: 12.5, fontWeight: 700,
+          color: h ? '#0f172a' : '#1e293b',
+          lineHeight: 1.2, transition: 'color 0.2s ease',
+        }}>{item.name}</div>
+        {item.pill && pillColors[item.pillColor] && (
+          <span style={{ alignSelf: 'flex-start', fontSize: 10, fontWeight: 600, padding: '1px 7px', borderRadius: 20, marginTop: 4, display: 'inline-block', ...pillColors[item.pillColor] }}>{item.pill}</span>
+        )}
+      </div>
+    </a>
+  );
+};
 
 /* ═══════════════════════════════════════════════════════════════
    ServicesGridDropdown — 3×2 service card grid + CTA
@@ -832,32 +937,76 @@ const K12VidyaDropdown = ({ navItem }) => (
 const ServicesGridDropdown = ({ navItem }) => (
   <div>
     <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} />
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, marginBottom: navItem.cta ? 0 : 0 }}>
-      {navItem.items.map(item => (
-        <a key={item.name} href={item.link}
-          style={{
-            display: 'flex', alignItems: 'flex-start', gap: 10,
-            padding: '13px 13px 11px',
-            borderRadius: 12,
-            border: '1px solid #f0f4f8',
-            background: '#fafbfd',
-            textDecoration: 'none',
-            transition: 'all 0.2s ease',
-          }}
-          onMouseEnter={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.background = '#f3f7ff'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
-          onMouseLeave={e => { e.currentTarget.style.borderColor = '#f0f4f8'; e.currentTarget.style.background = '#fafbfd'; e.currentTarget.style.transform = 'translateY(0)'; }}
-        >
-          <span style={{ fontSize: 20, lineHeight: 1, flexShrink: 0 }}>{item.icon}</span>
-          <div>
-            <div style={{ fontSize: 12.5, fontWeight: 700, color: '#1e293b', marginBottom: 3, lineHeight: 1.2 }}>{item.name}</div>
-            <div style={{ fontSize: 11, color: '#64748b', lineHeight: 1.45 }}>{item.desc}</div>
-          </div>
-        </a>
-      ))}
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
+      {navItem.items.map((item, i) => <SvcCard key={item.name} item={item} index={i} />)}
     </div>
     {navItem.cta && <CtaBar cta={navItem.cta} accentGradient={navItem.accentGradient} />}
   </div>
 );
+
+const SvcCard = ({ item }) => {
+  const [h, setH] = useState(false);
+  return (
+    <a
+      href={item.link || undefined}
+      className="sz-svc-card"
+      onMouseEnter={() => setH(true)}
+      onMouseLeave={() => setH(false)}
+      style={{
+        display: 'flex', alignItems: 'flex-start', gap: 10,
+        padding: '13px 13px 11px', borderRadius: 12,
+        border: `1px solid ${h ? 'rgba(255,107,157,0.28)' : '#f0f4f8'}`,
+        background: h ? 'linear-gradient(135deg,#ffffff,rgba(255,107,157,0.04))' : '#fafbfd',
+        textDecoration: 'none', overflow: 'hidden', position: 'relative',
+        cursor: 'pointer',
+        transition: 'all 0.3s cubic-bezier(0.34,1.2,0.64,1)',
+        transform: h ? 'translateY(-5px) scale(1.02)' : 'translateY(0) scale(1)',
+        boxShadow: h
+          ? '0 14px 36px rgba(255,107,157,0.14), 0 4px 10px rgba(0,0,0,0.04), 0 0 0 1px rgba(255,107,157,0.15)'
+          : '0 1px 4px rgba(0,0,0,0.04)',
+      }}
+    >
+      {/* Top accent bar */}
+      <div style={{
+        position: 'absolute', top: 0, left: 0, right: 0, height: 2,
+        borderRadius: '12px 12px 0 0', zIndex: 0,
+        background: 'linear-gradient(135deg,#ff6b9d,#f5a623)',
+        opacity: h ? 1 : 0,
+        transition: 'opacity 0.28s ease',
+      }} />
+      {/* Shimmer — fixed geometry */}
+      <div className={h ? 'sz-shimmer-active' : ''} style={{
+        position: 'absolute', top: 0, left: '-75%',
+        width: '62%', height: '100%', zIndex: 0,
+        background: 'linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent)',
+        pointerEvents: 'none', transform: 'skewX(-12deg)',
+      }} />
+      {/* Content above overlays */}
+      <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+        <span
+          className="sz-svc-icon"
+          style={{
+            fontSize: 20, lineHeight: 1, flexShrink: 0,
+            display: 'inline-block',
+            transition: 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1)',
+            transform: h ? 'scale(1.3) rotate(-8deg)' : 'scale(1) rotate(0)',
+          }}
+        >{item.icon}</span>
+        <div>
+          <div style={{
+            fontSize: 12.5, fontWeight: 700,
+            color: h ? '#0f172a' : '#1e293b',
+            marginBottom: 3, lineHeight: 1.2, transition: 'color 0.2s ease',
+          }}>{item.name}</div>
+          <div style={{
+            fontSize: 11, color: h ? '#374f6b' : '#64748b',
+            lineHeight: 1.45, transition: 'color 0.2s ease',
+          }}>{item.desc}</div>
+        </div>
+      </div>
+    </a>
+  );
+};
 
 /* ═══════════════════════════════════════════════════════════════
    MegaDropdown — dispatches to layout-specific component
@@ -865,11 +1014,11 @@ const ServicesGridDropdown = ({ navItem }) => (
 
 const MegaDropdown = ({ navItem }) => {
   const renderers = {
-    'card-grid':     CardGridDropdown,
-    'list-rows':     ListRowsDropdown,
-    'compact-grid':  CompactGridDropdown,
-    'agentic-ai':    AgenticAIDropdown,
-    'k12-vidya':     K12VidyaDropdown,
+    'card-grid': CardGridDropdown,
+    'list-rows': ListRowsDropdown,
+    'compact-grid': CompactGridDropdown,
+    'agentic-ai': AgenticAIDropdown,
+    'k12-vidya': K12VidyaDropdown,
     'services-grid': ServicesGridDropdown,
   };
   const Renderer = renderers[navItem.layout];
@@ -1268,84 +1417,99 @@ const Navbar = () => {
 
       {/* Animations + responsive */}
       <style>{`
+        /* ── Dropdown entrance ── */
         @keyframes szDdIn {
-          from {
-            opacity: 0;
-            transform: translateY(-10px) scale(0.97);
-            filter: blur(2px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-            filter: blur(0);
-          }
+          from { opacity:0; transform:translateY(-12px) scale(0.96); filter:blur(3px); }
+          to   { opacity:1; transform:translateY(0)    scale(1);     filter:blur(0); }
         }
 
+        /* ── Card / list item entrance ── */
         @keyframes szCardIn {
-          from {
-            opacity: 0;
-            transform: translateY(8px) scale(0.96);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
+          from { opacity:0; transform:translateY(10px) scale(0.94); }
+          to   { opacity:1; transform:translateY(0)    scale(1); }
         }
 
+        /* ── Shimmer sweep ── */
         @keyframes szShimmer {
-          from { left: -100%; }
+          from { left:-110%; }
           to   { left: 200%; }
         }
 
-        @keyframes szIconPulse {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(224,32,32,0); }
-          50% { box-shadow: 0 0 12px 2px rgba(224,32,32,0.12); }
+        /* ── Icon spring pop ── */
+        @keyframes szIconPop {
+          0%   { transform: scale(1)    rotate(0deg); }
+          30%  { transform: scale(1.22) rotate(-6deg); }
+          55%  { transform: scale(1.1)  rotate(4deg); }
+          75%  { transform: scale(1.17) rotate(-2deg); }
+          100% { transform: scale(1.12) rotate(0deg); }
         }
 
-        .sz-card-item,
-        .sz-list-item,
-        .sz-compact-item {
-          animation: szCardIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+        /* ── Left accent bar slide-in ── */
+        @keyframes szBarIn {
+          from { transform: scaleY(0); opacity:0; }
+          to   { transform: scaleY(1); opacity:1; }
         }
 
-        .sz-shimmer-active {
-          animation: szShimmer 0.7s ease-in-out !important;
+        /* ── Arrow wiggle ── */
+        @keyframes szArrowPop {
+          0%   { transform: translate(0,0)    rotate(-45deg); }
+          40%  { transform: translate(4px,-4px) rotate(-45deg); }
+          70%  { transform: translate(2px,-2px) rotate(-45deg); }
+          100% { transform: translate(3px,-3px) rotate(-45deg); }
         }
 
+        /* ── Glow pulse ── */
+        @keyframes szGlowPulse {
+          0%,100% { opacity:.7; }
+          50%     { opacity:1; }
+        }
+
+        /* ── Entrance base ── */
+        .sz-card-item, .sz-list-item, .sz-compact-item {
+          animation: szCardIn 0.35s cubic-bezier(0.16,1,0.3,1) backwards;
+        }
+
+        /* ── Card hover — icon spring ── */
         .sz-card-item:hover .sz-nav-icon {
-          transform: scale(1.1) rotate(2deg) !important;
-          animation: szIconPulse 1.5s ease-in-out infinite;
+          animation: szIconPop 0.55s cubic-bezier(0.34,1.56,0.64,1) forwards !important;
         }
 
+        /* ── Card shimmer ── */
+        .sz-shimmer-active {
+          animation: szShimmer 0.75s ease-in-out !important;
+        }
+
+        /* ── List hover — icon ── */
         .sz-list-item:hover .sz-nav-icon {
-          transform: scale(1.08) !important;
-          animation: szIconPulse 1.5s ease-in-out infinite;
+          animation: szIconPop 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards !important;
         }
 
-        .sz-compact-item:hover {
-          background: linear-gradient(145deg, #fff 0%, #fdf8f6 100%) !important;
+        /* ── Compact hover — icon ── */
+        .sz-compact-item:hover .sz-nav-icon,
+        .sz-svc-card:hover .sz-svc-icon {
+          animation: szIconPop 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards !important;
         }
 
+        /* ── CTA hover ── */
         .sz-cta-primary:hover {
-          box-shadow: 0 6px 24px rgba(224,32,32,0.35) !important;
+          box-shadow: 0 8px 28px rgba(224,32,32,0.38) !important;
           transform: translateY(-2px) scale(1.02);
         }
-
         .sz-cta-secondary:hover {
-          background: linear-gradient(135deg, #fef2f2, #fff7ed) !important;
+          background: linear-gradient(135deg,#fef2f2,#fff7ed) !important;
           border-color: #f87171 !important;
           transform: translateY(-2px) scale(1.02);
-          box-shadow: 0 4px 16px rgba(224,32,32,0.10) !important;
+          box-shadow: 0 4px 16px rgba(224,32,32,0.12) !important;
         }
 
-        .sz-desktop-nav { display: flex !important; }
-        .sz-cta-group   { display: flex !important; }
-        .sz-hamburger   { display: none  !important; }
-
-        @media (max-width: 1023px) {
-          .sz-desktop-nav { display: none  !important; }
-          .sz-cta-group   { display: none  !important; }
-          .sz-hamburger   { display: flex  !important; }
+        /* ── Responsive ── */
+        .sz-desktop-nav { display:flex !important; }
+        .sz-cta-group   { display:flex !important; }
+        .sz-hamburger   { display:none !important; }
+        @media (max-width:1023px) {
+          .sz-desktop-nav { display:none !important; }
+          .sz-cta-group   { display:none !important; }
+          .sz-hamburger   { display:flex !important; }
         }
       `}</style>
     </>
