@@ -141,7 +141,7 @@ const navItems = [
       { name: 'Vidya AI Virtual Internship', link: '/academy/byteminds', icon: '🏫', desc: 'Real-world AI, coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Flagship', pillColor: 'teal', iconGradient: 'linear-gradient(135deg, #ccfbf1, #99f6e4)', iconShadow: '0 4px 12px rgba(20,184,166,0.15)' },
       { name: 'Skill Studio for Students', link: null, icon: '🎓', desc: 'Gamified AI-powered skill tracks — ML basics, robotics, sustainability, drone tech, quantum intro.', pill: 'Grades 6-12', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f3e8ff, #e9d5ff)', iconShadow: '0 4px 12px rgba(168,85,247,0.15)' },
       { name: 'Teacher AI Upskill Lab', link: null, icon: '👩‍🏫', desc: 'Structured AI literacy programme for educators — pedagogy, tools, classroom integration, assessments.', pill: 'CPD certified', pillColor: 'orange', iconGradient: 'linear-gradient(135deg, #fef3c7, #fde68a)', iconShadow: '0 4px 12px rgba(245,158,11,0.15)' },
-      { name: 'CCMM — AI Maturity for Schools', link: null, icon: '📊', desc: 'Continuous Capability & Maturity Model — benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'blue', featured: true, iconGradient: 'linear-gradient(135deg, #dbeafe, #bfdbfe)', iconShadow: '0 4px 12px rgba(59,130,246,0.15)' },
+      { name: 'CCMM — AI Maturity for Schools', link: null, icon: '📊', desc: 'Continuous Capability & Maturity Model — benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'blue', iconGradient: 'linear-gradient(135deg, #dbeafe, #bfdbfe)', iconShadow: '0 4px 12px rgba(59,130,246,0.15)' },
       { name: 'Campus Connect — K12', link: null, icon: '🤝', desc: 'Links top-performing school students directly to university and early internship pipelines.', pill: 'Bridge', pillColor: 'pink', iconGradient: 'linear-gradient(135deg, #fce7f3, #fbcfe8)', iconShadow: '0 4px 12px rgba(236,72,153,0.15)' },
       { name: 'Future Founders Track', link: null, icon: '🌱', desc: 'Entrepreneurship & innovation bootcamp — problem-solving, pitching, and startup thinking for teens.', pill: 'New', pillColor: 'green', iconGradient: 'linear-gradient(135deg, #dcfce7, #bbf7d0)', iconShadow: '0 4px 12px rgba(34,197,94,0.15)' },
     ],
@@ -877,10 +877,10 @@ const K12Card = ({ item }) => {
         padding: '13px 13px 11px', borderRadius: 12,
         border: h
           ? `1.5px solid ${glowMid}`
-          : item.featured ? '1.5px solid rgba(59,130,246,0.3)' : '1px solid #f0f4f8',
+          : '1px solid #f0f4f8',
         background: h
           ? `linear-gradient(145deg,#ffffff,${glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.06)')})`
-          : item.featured ? 'linear-gradient(135deg,#eff6ff,rgba(219,234,254,0.13))' : '#fafbfd',
+          : '#fafbfd',
         textDecoration: 'none', overflow: 'hidden', position: 'relative',
         cursor: item.link ? 'pointer' : 'default',
         transition: 'all 0.3s cubic-bezier(0.34,1.2,0.64,1)',
@@ -1030,6 +1030,10 @@ const MegaDropdown = ({ navItem }) => {
    DesktopNavItem — hover-activated mega dropdown
 ═══════════════════════════════════════════════════════════════ */
 
+/* Module-level singleton — tracks which dropdown is currently open so
+   switching between nav items is instant (no overlap / glitch). */
+let _activeNavClose = null;
+
 const DesktopNavItem = ({ item }) => {
   const [open, setOpen] = useState(false);
   const timeoutRef = useRef(null);
@@ -1038,12 +1042,35 @@ const DesktopNavItem = ({ item }) => {
 
   const show = () => {
     clearTimeout(timeoutRef.current);
+    // Immediately close whichever dropdown is currently open (not this one)
+    if (_activeNavClose && _activeNavClose !== setOpen) {
+      _activeNavClose(false);
+    }
+    _activeNavClose = setOpen;
     setOpen(true);
   };
   const hide = () => {
-    timeoutRef.current = setTimeout(() => setOpen(false), 180);
+    timeoutRef.current = setTimeout(() => {
+      setOpen(false);
+      if (_activeNavClose === setOpen) _activeNavClose = null;
+    }, 160);
   };
 
+  // Close on outside click — no backdrop needed (backdrop was blocking hover on other nav items)
+  useEffect(() => {
+    if (!open) return;
+    const onOutside = (e) => {
+      if (itemRef.current && !itemRef.current.contains(e.target)) {
+        clearTimeout(timeoutRef.current);
+        setOpen(false);
+        if (_activeNavClose === setOpen) _activeNavClose = null;
+      }
+    };
+    document.addEventListener('mousedown', onOutside);
+    return () => document.removeEventListener('mousedown', onOutside);
+  }, [open]);
+
+  // Cleanup timeout on unmount
   useEffect(() => () => clearTimeout(timeoutRef.current), []);
 
   // Centre dropdown under the trigger, but clamp to viewport
@@ -1063,6 +1090,7 @@ const DesktopNavItem = ({ item }) => {
     <div ref={itemRef} onMouseEnter={show} onMouseLeave={hide} style={{ position: 'relative' }}>
       {/* Trigger button */}
       <button
+        onClick={show}
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -1093,31 +1121,20 @@ const DesktopNavItem = ({ item }) => {
         />
       </button>
 
-      {/* Dropdown panel */}
+      {/* Dropdown panel — no backdrop, outside-click handled by document.mousedown */}
       {open && (
-        <>
-          {/* Invisible backdrop — click to close (NO blur) */}
-          <div
-            style={{
-              position: 'fixed',
-              inset: 0,
-              zIndex: 99,
-            }}
-            onClick={() => setOpen(false)}
-          />
-          {/* Mega dropdown */}
-          <div
-            style={{
-              position: 'fixed',
-              top: 64,
-              left: pos.left,
-              width: item.width || 600,
-              zIndex: 300,
-              paddingTop: 12,
-            }}
-            onMouseEnter={show}
-            onMouseLeave={hide}
-          >
+        <div
+          style={{
+            position: 'fixed',
+            top: 64,
+            left: pos.left,
+            width: item.width || 600,
+            zIndex: 300,
+            paddingTop: 12,
+          }}
+          onMouseEnter={show}
+          onMouseLeave={hide}
+        >
             <div
               className="sz-mega-dropdown"
               style={{
@@ -1143,8 +1160,7 @@ const DesktopNavItem = ({ item }) => {
                 <MegaDropdown navItem={item} />
               </div>
             </div>
-          </div>
-        </>
+        </div>
       )}
     </div>
   );
