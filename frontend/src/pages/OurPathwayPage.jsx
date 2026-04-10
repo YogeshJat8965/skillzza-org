@@ -187,14 +187,14 @@ function OurPathwayPage() {
         /* ── Mobile Responsive (< 768px) ── */
         @media (max-width: 768px) {
           .pathway-hero-heading {
-            font-size: 32px !important;
+            font-size: 20px !important;
             line-height: 1.2 !important;
             -webkit-line-clamp: unset !important;
             overflow: visible !important;
             display: block !important;
           }
           .pathway-hero-subheading {
-            font-size: 20px !important;
+            font-size: 16px !important;
             line-height: 1.3 !important;
             white-space: normal !important;
             margin-top: 12px !important;
@@ -227,12 +227,12 @@ function OurPathwayPage() {
             white-space: normal !important;
           }
           section h2 {
-            font-size: 28px !important;
+            font-size: 20px !important;
             line-height: 1.25 !important;
             margin-bottom: 12px !important;
           }
           section h3 {
-            font-size: 24px !important;
+            font-size: 18px !important;
             line-height: 1.25 !important;
           }
           section p {
@@ -244,10 +244,10 @@ function OurPathwayPage() {
             display: inline !important;
           }
           .pathway-section-subtitle {
-            font-size: 20px !important;
+            font-size: 16px !important;
           }
           .pathway-section-title {
-            font-size: 28px !important;
+            font-size: 20px !important;
           }
           .pathway-section-desc {
             font-size: 16px !important;
@@ -274,7 +274,7 @@ function OurPathwayPage() {
             gap: 16px !important;
           }
           .pathway-highlight-row h3 {
-            font-size: 22px !important;
+            font-size: 16px !important;
             margin-bottom: 8px !important;
           }
           .pathway-highlight-row p {
@@ -327,7 +327,7 @@ function OurPathwayPage() {
             text-align: center !important;
           }
           .pathway-cta-inner h2 {
-            font-size: 26px !important;
+            font-size: 20px !important;
             text-align: center !important;
           }
           .pathway-cta-inner > div:first-child {
@@ -365,13 +365,13 @@ function OurPathwayPage() {
         /* ── Tablet (769px - 1024px) ── */
         @media (min-width: 769px) and (max-width: 1024px) {
           .pathway-hero-heading {
-            font-size: 42px !important;
+            font-size: 32px !important;
           }
           .pathway-hero-subheading {
-            font-size: 26px !important;
+            font-size: 20px !important;
           }
           .pathway-hero-description {
-            font-size: 22px !important;
+            font-size: 16px !important;
           }
           .pathway-cards-grid {
             grid-template-columns: repeat(2, 1fr) !important;
@@ -383,7 +383,7 @@ function OurPathwayPage() {
             width: 400px !important;
           }
           .pathway-tab-btn {
-            font-size: 22px !important;
+            font-size: 16px !important;
             width: 240px !important;
           }
         }
@@ -405,9 +405,9 @@ function OurPathwayPage() {
             <h1
               className="pathway-hero-heading"
               style={{
-                fontFamily: 'League Spartan, sans-serif',
-                fontWeight: 500,
-                fontSize: '56px',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                fontWeight: 900,
+                fontSize: '48px',
                 lineHeight: '1',
                 letterSpacing: '0%',
                 color: '#E11313',
@@ -430,9 +430,9 @@ function OurPathwayPage() {
             <p
               className="pathway-hero-subheading"
               style={{
-                fontFamily: 'League Spartan, sans-serif',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 400,
-                fontSize: '36px',
+                fontSize: '20px',
                 lineHeight: '1',
                 letterSpacing: '0%',
                 color: '#0F1114',
@@ -447,9 +447,9 @@ function OurPathwayPage() {
             <p
               className="pathway-hero-description"
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 400,
-                fontSize: '28px',
+                fontSize: '16px',
                 lineHeight: '1.35',
                 color: '#3F3F46',
                 marginTop: '12px',
@@ -489,9 +489,9 @@ function OurPathwayPage() {
                   key={label}
                   className="pathway-btn"
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: "'Inter', 'Segoe UI', sans-serif",
                     padding: '16px 52px',
-                    fontSize: '20px',
+                    fontSize: '16px',
                     fontWeight: 600,
                     color: '#FFFFFF',
                     borderRadius: '9999px',
@@ -549,11 +549,12 @@ function OurPathwayPage() {
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <p
               style={{
-                fontFamily: 'League Spartan, sans-serif',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 400,
-                fontSize: '32px',
+                fontSize: '20px',
                 lineHeight: '1',
-                letterSpacing: '0%',
+                letterSpacing: '2px',
+                textTransform: 'uppercase',
                 textAlign: 'center',
                 color: '#0F0F0F',
                 marginBottom: '12px',
@@ -563,9 +564,9 @@ function OurPathwayPage() {
             </p>
             <h2
               style={{
-                fontFamily: 'League Spartan, sans-serif',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 700,
-                fontSize: '48px',
+                fontSize: '38px',
                 lineHeight: '1.05',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -578,17 +579,17 @@ function OurPathwayPage() {
             </h2>
             <p
               style={{
-                fontFamily: 'League Spartan, sans-serif',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 300,
                 fontStyle: 'normal',
-                fontSize: '28px',
-                lineHeight: '1',
+                fontSize: '16px',
+                lineHeight: '1.6',
                 letterSpacing: '0%',
                 textAlign: 'center',
                 leadingTrim: 'none',
                 color: '#3F3F46',
                 width: '100%',
-                maxWidth: '1280px',
+                maxWidth: '1000px',
                 margin: '0 auto',
               }}
             >
@@ -721,9 +722,9 @@ function OurPathwayPage() {
                   >
                     <h3
                       style={{
-                        fontFamily: 'League Spartan, sans-serif',
+                        fontFamily: "'Inter', 'Segoe UI', sans-serif",
                         fontWeight: '700',
-                        fontSize: '48px',
+                        fontSize: '26px',
                         lineHeight: '1',
                         color: card.sdgColor,
                         letterSpacing: '2px',
@@ -737,9 +738,9 @@ function OurPathwayPage() {
 
                     <p
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: "'Inter', 'Segoe UI', sans-serif",
                         fontWeight: '700',
-                        fontSize: '28px',
+                        fontSize: '20px',
                         lineHeight: '1.25',
                         color: '#890404',
                         margin: 0,
@@ -753,10 +754,10 @@ function OurPathwayPage() {
                   {/* Description */}
                   <p
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: "'Inter', 'Segoe UI', sans-serif",
                       fontWeight: '400',
-                      fontSize: '22px',
-                      lineHeight: '1.4',
+                      fontSize: '15px',
+                      lineHeight: '1.6',
                       marginTop: 0,
                       textAlign: 'left',
                       color: card.textColor,
@@ -786,23 +787,24 @@ function OurPathwayPage() {
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <p
               style={{
-                fontFamily: 'League Spartan, sans-serif',
-                fontWeight: 400,
-                fontSize: '32px',
-                lineHeight: '1',
-                letterSpacing: '0%',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                fontWeight: 600,
+                fontSize: '16px',
+                lineHeight: '1.2',
+                letterSpacing: '1.5px',
+                textTransform: 'uppercase',
                 textAlign: 'center',
-                color: '#0F0F0F',
-                marginBottom: '14px',
+                color: '#6b7280',
+                marginBottom: '10px',
               }}
             >
               The Skillzza Pathway Difference
             </p>
             <h2
               style={{
-                fontFamily: 'League Spartan, sans-serif',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 700,
-                fontSize: '48px',
+                fontSize: '38px',
                 lineHeight: '1',
                 color: '#CF0C0C',
                 textShadow: '0px 4px 0px rgba(0, 0, 0, 0.25)',
@@ -878,9 +880,9 @@ function OurPathwayPage() {
                 <div>
                   <h3
                     style={{
-                      fontFamily: 'League Spartan, sans-serif',
+                      fontFamily: "'Inter', 'Segoe UI', sans-serif",
                       fontWeight: 600,
-                      fontSize: '30px',
+                      fontSize: '20px',
                       lineHeight: '1.15',
                       color: '#0F0F0F',
                       marginBottom: '8px',
@@ -890,9 +892,9 @@ function OurPathwayPage() {
                   </h3>
                   <p
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: "'Inter', 'Segoe UI', sans-serif",
                       fontWeight: 400,
-                      fontSize: '18px',
+                      fontSize: '15px',
                       lineHeight: '1.45',
                       color: '#181818',
                       maxWidth: '420px',
@@ -921,9 +923,9 @@ function OurPathwayPage() {
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <p
               style={{
-                fontFamily: 'League Spartan, sans-serif',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 400,
-                fontSize: '32px',
+                fontSize: '38px',
                 lineHeight: '1',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -935,9 +937,9 @@ function OurPathwayPage() {
             </p>
             <h2
               style={{
-                fontFamily: 'League Spartan, sans-serif',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 700,
-                fontSize: '48px',
+                fontSize: '38px',
                 lineHeight: '1',
                 color: '#CF0C0C',
                 textShadow: '0px 4px 0px rgba(0, 0, 0, 0.25)',
@@ -1054,7 +1056,7 @@ function OurPathwayPage() {
                     <div
                       style={{
                           color: '#FFFFFF',
-                        fontFamily: 'League Spartan, sans-serif',
+                        fontFamily: "'Inter', 'Segoe UI', sans-serif",
                         fontWeight: 600,
                         fontSize: '24px',
                         lineHeight: '1.2',
@@ -1085,9 +1087,9 @@ function OurPathwayPage() {
         >
           <p
             style={{
-              fontFamily: 'League Spartan, sans-serif',
+              fontFamily: "'Inter', 'Segoe UI', sans-serif",
               fontWeight: 400,
-              fontSize: '32px',
+              fontSize: '38px',
               lineHeight: 1,
               color: '#0F0F0F',
               marginBottom: '10px',
@@ -1097,9 +1099,9 @@ function OurPathwayPage() {
           </p>
           <h2
             style={{
-              fontFamily: 'League Spartan, sans-serif',
+              fontFamily: "'Inter', 'Segoe UI', sans-serif",
               fontWeight: 700,
-              fontSize: '48px',
+              fontSize: '38px',
               lineHeight: 1,
               color: '#C00F0F',
               textShadow: '0px 4px 0px rgba(0, 0, 0, 0.25)',
@@ -1132,9 +1134,9 @@ function OurPathwayPage() {
                   borderRadius: '999px',
                   backgroundColor: '#8B0404',
                   boxShadow: '0px 8px 18px rgba(0, 0, 0, 0.25)',
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: "'Inter', 'Segoe UI', sans-serif",
                   fontWeight: 600,
-                  fontSize: '20px',
+                  fontSize: '16px',
                   color: '#FFFFFF',
                 }}
               >
@@ -1161,23 +1163,24 @@ function OurPathwayPage() {
           <div style={{ textAlign: 'center' }}>
             <p
               style={{
-                fontFamily: 'League Spartan, sans-serif',
-                fontWeight: 400,
-                fontSize: '32px',
-                lineHeight: '1',
-                letterSpacing: '0%',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                fontWeight: 600,
+                fontSize: '16px',
+                lineHeight: '1.2',
+                letterSpacing: '1.5px',
+                textTransform: 'uppercase',
                 textAlign: 'center',
-                color: '#0F0F0F',
-                marginBottom: '12px',
+                color: '#6b7280',
+                marginBottom: '10px',
               }}
             >
               Get Started Today
             </p>
             <h2
               style={{
-                fontFamily: 'League Spartan, sans-serif',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 700,
-                fontSize: '48px',
+                fontSize: '38px',
                 lineHeight: '1.05',
                 color: '#CF0C0C',
                 textShadow: '0px 4px 0px rgba(0, 0, 0, 0.25)',
@@ -1218,9 +1221,9 @@ function OurPathwayPage() {
                     width: '307px',
                     height: '72px',
                     textAlign: 'center',
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: "'Inter', 'Segoe UI', sans-serif",
                     fontWeight: 600,
-                    fontSize: '32px',
+                    fontSize: '18px',
                     color: isActive ? '#FFFFFF' : '#8A0303',
                     display: 'flex',
                     alignItems: 'center',
@@ -1280,7 +1283,7 @@ function OurPathwayPage() {
             >
               <div
                 style={{
-                  fontFamily: 'League Spartan, sans-serif',
+                  fontFamily: "'Inter', 'Segoe UI', sans-serif",
                   fontWeight: 700,
                   fontSize: '30px',
                   color: '#8A0303',
@@ -1296,7 +1299,7 @@ function OurPathwayPage() {
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '18px',
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: "'Inter', 'Segoe UI', sans-serif",
                   fontSize: '20px',
                   color: '#181818',
                 }}
@@ -1359,7 +1362,7 @@ function OurPathwayPage() {
           >
             <h2
               style={{
-                fontFamily: 'League Spartan, sans-serif',
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 700,
                 fontSize: '42px',
                 lineHeight: 1.1,
@@ -1387,7 +1390,7 @@ function OurPathwayPage() {
                   key={label}
                   className="pathway-btn"
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: "'Inter', 'Segoe UI', sans-serif",
                     fontWeight: 600,
                     fontSize: '16px',
                     color: '#FFFFFF',

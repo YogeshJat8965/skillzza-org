@@ -39,7 +39,7 @@ function PartnerCollaborationPage() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap'); */
 
         /* ===== ANIMATION KEYFRAMES ===== */
         @keyframes collabFadeUp {
@@ -86,7 +86,7 @@ function PartnerCollaborationPage() {
         .collab-page {
           width: 100%;
           background: #f5f5f5;
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Inter', 'Segoe UI', sans-serif;
           overflow-x: hidden;
         }
 
@@ -264,7 +264,7 @@ function PartnerCollaborationPage() {
 
         .section-banner__title {
           margin: 0;
-          font-size: clamp(32px, 3.4vw, 50px);
+          font-size: clamp(28px, 3vw, 38px);
           font-weight: 800;
           color: #f3ad3a;
           text-shadow: 0 3px 16px rgba(0, 0, 0, 0.5);
@@ -313,7 +313,7 @@ function PartnerCollaborationPage() {
 
         .detail-section__heading {
           margin: 0 0 22px;
-          font-size: clamp(24px, 2.3vw, 34px);
+          font-size: clamp(24px, 2.5vw, 38px);
           font-weight: 700;
           color: #0f172a;
           line-height: 1.2;
@@ -495,7 +495,7 @@ function PartnerCollaborationPage() {
 
         .collab-cta__title {
           margin: 0;
-          font-size: clamp(32px, 3.4vw, 50px);
+          font-size: clamp(28px, 3vw, 38px);
           font-weight: 800;
           color: #f3ad3a;
           line-height: 1.15;

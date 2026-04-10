@@ -61,10 +61,10 @@ function AboutPage() {
           to { opacity: 1; transform: perspective(1200px) rotateX(0deg) translateY(0) translateZ(0); }
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); */
 
         .about-banner-page {
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Inter', 'Segoe UI', sans-serif;
           background: #ffffff;
           min-height: 100vh;
         }
@@ -99,7 +99,8 @@ function AboutPage() {
         }
 
         .about-banner__headline {
-          font-size: clamp(16px, 2vw, 30px);
+          font-size: clamp(28px, 4vw, 42px);
+          font-weight: 900;
           line-height: 1.3;
           margin: 0;
           max-width: 32ch;
@@ -122,7 +123,7 @@ function AboutPage() {
           }
 
           .about-banner__headline {
-            font-size: clamp(16px, 4.4vw, 24px);
+            font-size: clamp(22px, 5vw, 32px);
             line-height: 1.28;
           }
         }
@@ -144,7 +145,7 @@ function AboutPage() {
           display: inline-flex;
           align-items: center;
           gap: 16px;
-          font-size: 14px;
+          font-size: 15px;
           letter-spacing: 0.22em;
           text-transform: uppercase;
           font-weight: 400;
@@ -161,7 +162,7 @@ function AboutPage() {
         }
 
         .about-overview__title {
-          font-size: clamp(24px, 2.6vw, 32px);
+          font-size: clamp(24px, 3vw, 32px);
           font-weight: 400;
           line-height: 1.4;
           color: #2c2c2c;
@@ -280,8 +281,8 @@ function AboutPage() {
           border-radius: 4px;
           background: #f2a93b;
           color: #111111;
-          font-family: 'Poppins', sans-serif;
-          font-size: 24px;
+          font-family: 'Inter', 'Segoe UI', sans-serif;
+          font-size: 16px;
           font-weight: 600;
           line-height: 1;
           padding: 8px 14px;
@@ -302,33 +303,35 @@ function AboutPage() {
         .about-cta-strip__text {
           margin: 0;
           color: #ffffff;
-          font-family: 'Poppins', sans-serif;
-          font-size: clamp(15px, 1.4vw, 30px);
+          font-family: 'Inter', 'Segoe UI', sans-serif;
+          font-size: clamp(16px, 2vw, 22px);
           font-weight: 500;
           line-height: 1.3;
           text-align: center;
         }
 
         .about-mv {
-          background: #efefef;
+          background: #ffffff;
           padding: clamp(46px, 8vw, 92px) clamp(20px, 6vw, 56px);
         }
 
         .about-mv__container {
-          max-width: 1030px;
+          max-width: 860px;
           margin: 0 auto;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: clamp(24px, 3.5vw, 36px);
+          gap: 24px;
           align-items: start;
         }
 
         .about-mv__card {
           color: #ffffff;
-          border-radius: 0;
-          border-top-left-radius: 34px;
-          border-bottom-right-radius: 34px;
-          padding: clamp(24px, 3.2vw, 36px);
+          border-radius: 40px 0 40px 0;
+          padding: 40px 32px;
+          width: 100%;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
           transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
           will-change: transform, box-shadow;
         }
@@ -341,9 +344,8 @@ function AboutPage() {
         }
 
         .about-mv__card--mission {
-          background: #a27ab7;
-          margin-top: 8px;
-          min-height: 430px;
+          background: #A37DB3;
+          margin-top: 0;
         }
 
         .about-mv__line {
@@ -355,7 +357,7 @@ function AboutPage() {
 
         .about-mv__heading {
           margin: 0;
-          font-size: clamp(22px, 1.9vw, 32px);
+          font-size: clamp(22px, 3vw, 30px);
           font-weight: 500;
           line-height: 1;
         }
@@ -368,7 +370,7 @@ function AboutPage() {
 
         .about-mv__text {
           margin: 0;
-          font-size: clamp(14px, 1.2vw, 18px);
+          font-size: 15px;
           line-height: 1.4;
           font-weight: 400;
         }
@@ -380,21 +382,22 @@ function AboutPage() {
         .about-mv__right {
           display: flex;
           flex-direction: column;
-          gap: 22px;
-          padding-top: 24px;
+          gap: 16px;
+          padding-top: 60px;
+          position: relative;
         }
 
         .about-mv__chip {
-          width: 92px;
-          height: 56px;
-          background: #1c97d4;
-          border-top-left-radius: 26px;
-          border-bottom-right-radius: 26px;
+          width: 96px;
+          height: 72px;
+          background: #1994D2;
+          border-radius: 32px 0 32px 0;
+          margin-bottom: -16px;
+          margin-left: 20px;
         }
 
         .about-mv__card--vision {
-          background: #cf2c2e;
-          min-height: 430px;
+          background: #C4312F;
         }
 
         .about-mv__card--vision strong {
@@ -402,14 +405,13 @@ function AboutPage() {
         }
 
         .about-mv__chip--yellow {
-          width: 92px;
-          height: 56px;
-          background: #fecd2a;
-          border-top-left-radius: 26px;
-          border-bottom-right-radius: 26px;
-          align-self: flex-start;
-          margin-top: -94px;
-          margin-left: -138px;
+          width: 80px;
+          height: 60px;
+          background: #F1C40F;
+          border-radius: 28px 0 28px 0;
+          position: absolute;
+          bottom: 50px;
+          left: -100px;
         }
 
         @media (max-width: 992px) {
@@ -426,12 +428,12 @@ function AboutPage() {
 
           .about-cta-strip__button {
             min-width: 78px;
-            font-size: 18px;
+            font-size: 16px;
             padding: 8px 10px;
           }
 
           .about-cta-strip__text {
-            font-size: clamp(13px, 3vw, 20px);
+            font-size: clamp(14px, 2.5vw, 18px);
           }
 
           .about-mv__container {
@@ -465,7 +467,7 @@ function AboutPage() {
         }
 
         .about-core-values__image {
-          width: min(1300px, 100vw);
+          width: min(800px, 90vw);
           height: auto;
           display: block;
           transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
@@ -521,7 +523,7 @@ function AboutPage() {
                 Our platform serves as a strategic bridge, connecting academic knowledge with practical application while ensuring learners develop the adaptive capabilities essential for sustained career success.We champion democratized access to premium professional development, serving diverse stakeholders including individual professionals, educational institutions, and enterprise organizations.
               </p>
               <p>
-               Our commitment extends beyond urban centers to Tier 2 and Tier 3 cities, addressing systemic barriers to quality education and creating pathways for economic mobility.
+                Our commitment extends beyond urban centers to Tier 2 and Tier 3 cities, addressing systemic barriers to quality education and creating pathways for economic mobility.
               </p>
               <p>
                 Operating in alignment with the United Nations Sustainable Development Goals, Skillzza cultivates an inclusive learning ecosystem that transforms potential into performance. We are building tomorrow's workforce today,one that is not only globally competitive but also locally relevant, sustainable, and equipped to navigate the complexities of an interconnected world.

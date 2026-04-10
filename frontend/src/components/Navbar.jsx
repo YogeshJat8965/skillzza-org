@@ -15,8 +15,8 @@ const navItems = [
     columns: 4,
     width: 900,
     eyebrow: 'Products & Platform',
-    dotColor: '#e02020',
-    accentGradient: 'linear-gradient(135deg, #e02020, #f5a623)',
+    dotColor: '#BD1723',
+    accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     cta: {
       text: 'Start your free skill assessment',
       sub: '— discover your strengths in under 10 minutes.',
@@ -30,8 +30,8 @@ const navItems = [
         desc: 'AI skill assessment engine that maps strengths, career readiness & growth gaps.',
         pill: 'AI-powered',
         pillColor: 'red',
-        iconGradient: 'linear-gradient(135deg, #fee2e2, #fecaca)',
-        iconShadow: '0 4px 12px rgba(239,68,68,0.15)',
+        iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
       },
       {
         name: 'Xperience Platform',
@@ -39,9 +39,9 @@ const navItems = [
         icon: '🌐',
         desc: 'Immersive job simulations across domains to build real skills & portfolios.',
         pill: 'Flagship',
-        pillColor: 'teal',
-        iconGradient: 'linear-gradient(135deg, #ccfbf1, #99f6e4)',
-        iconShadow: '0 4px 12px rgba(20,184,166,0.15)',
+        pillColor: 'purple',
+        iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
       },
       {
         name: 'Talent Intelligence',
@@ -49,9 +49,9 @@ const navItems = [
         icon: '📊',
         desc: 'End-to-end talent insights engine matching potential to job roles at scale.',
         pill: 'Enterprise',
-        pillColor: 'blue',
-        iconGradient: 'linear-gradient(135deg, #dbeafe, #bfdbfe)',
-        iconShadow: '0 4px 12px rgba(59,130,246,0.15)',
+        pillColor: 'red',
+        iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
       },
       {
         name: 'AI HackNex',
@@ -60,8 +60,8 @@ const navItems = [
         desc: 'High-impact AI hackathon platform for students & institutions.',
         pill: 'New',
         pillColor: 'purple',
-        iconGradient: 'linear-gradient(135deg, #f3e8ff, #e9d5ff)',
-        iconShadow: '0 4px 12px rgba(168,85,247,0.15)',
+        iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
       },
       {
         name: 'Hirenest',
@@ -69,9 +69,9 @@ const navItems = [
         icon: '🤝',
         desc: 'College-to-campus hiring marketplace with pre-assessed student profiles.',
         pill: 'Marketplace',
-        pillColor: 'orange',
-        iconGradient: 'linear-gradient(135deg, #fef3c7, #fde68a)',
-        iconShadow: '0 4px 12px rgba(245,158,11,0.15)',
+        pillColor: 'red',
+        iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
       },
       {
         name: 'Skillzza Persona',
@@ -80,8 +80,8 @@ const navItems = [
         desc: 'AI roleplay simulation — interviews, workplace scenarios, confidence building.',
         pill: 'AI Agent',
         pillColor: 'purple',
-        iconGradient: 'linear-gradient(135deg, #f3e8ff, #e9d5ff)',
-        iconShadow: '0 4px 12px rgba(168,85,247,0.15)',
+        iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
       },
       {
         name: 'Skill DNA Engine',
@@ -89,9 +89,9 @@ const navItems = [
         icon: '🔍',
         desc: 'Deep behavioural profiling that maps hidden competencies beyond resumes.',
         pill: 'New',
-        pillColor: 'green',
-        iconGradient: 'linear-gradient(135deg, #dcfce7, #bbf7d0)',
-        iconShadow: '0 4px 12px rgba(34,197,94,0.15)',
+        pillColor: 'red',
+        iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
       },
       {
         name: 'AgentMatch AI',
@@ -99,9 +99,9 @@ const navItems = [
         icon: '🤖',
         desc: 'Agentic recruiter that autonomously screens, ranks and shortlists talent.',
         pill: 'Agentic',
-        pillColor: 'orange',
-        iconGradient: 'linear-gradient(135deg, #fef3c7, #fde68a)',
-        iconShadow: '0 4px 12px rgba(245,158,11,0.15)',
+        pillColor: 'purple',
+        iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
       },
     ],
   },
@@ -111,20 +111,20 @@ const navItems = [
     layout: 'agentic-ai',
     width: 820,
     eyebrow: 'Agentic AI — autonomous skill & talent intelligence',
-    dotColor: '#00e5b0',
-    accentGradient: 'linear-gradient(135deg, #00e5b0, #38d9f5)',
+    dotColor: '#BD1723',
+    accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     badge: 'New',
     agentFlow: ['Assess', 'Simulate', 'Coach', 'Match', 'Hire', 'Upskill Loop'],
     learnerAgents: [
-      { name: 'Career Navigator Agent', desc: 'Proactively maps your skill gaps against live job market signals.', icon: '🤖', pill: 'Agent', pillColor: 'purple' },
-      { name: 'AI Learning Coach', desc: 'Personalised micro-learning paths, adapted in real time.', icon: '🧠', pill: 'Adaptive', pillColor: 'teal' },
-      { name: 'Interview Simulation Agent', desc: 'Live AI interviewer with instant feedback and scoring.', icon: '🎯', pill: 'Real-time', pillColor: 'pink' },
-      { name: 'Portfolio Builder Agent', desc: 'Auto-generates a verified portfolio from simulations and projects.', icon: '📋', pill: 'New', pillColor: 'blue' },
+      { name: 'Career Navigator Agent', desc: 'Proactively maps your skill gaps against live job market signals.', icon: '🤖', pill: 'Agent', pillColor: 'red' },
+      { name: 'AI Learning Coach', desc: 'Personalised micro-learning paths, adapted in real time.', icon: '🧠', pill: 'Adaptive', pillColor: 'purple' },
+      { name: 'Interview Simulation Agent', desc: 'Live AI interviewer with instant feedback and scoring.', icon: '🎯', pill: 'Real-time', pillColor: 'red' },
+      { name: 'Portfolio Builder Agent', desc: 'Auto-generates a verified portfolio from simulations and projects.', icon: '📋', pill: 'New', pillColor: 'purple' },
     ],
     enterpriseAgents: [
-      { name: 'AgentMatch Recruiter', desc: 'Autonomous screening, ranking and shortlisting at scale.', icon: '⚙️', pill: 'Agentic', pillColor: 'orange' },
-      { name: 'Workforce Intelligence Agent', desc: 'Real-time skill mapping across departments and campuses.', icon: '🔬', pill: 'Beta', pillColor: 'green' },
-      { name: 'Multi-Agent Talent Orchestrator', desc: 'Coordinates assess → match → hire → upskill as one agentic flow.', icon: '🌐', pill: 'Soon', pillColor: 'orange' },
+      { name: 'AgentMatch Recruiter', desc: 'Autonomous screening, ranking and shortlisting at scale.', icon: '⚙️', pill: 'Agentic', pillColor: 'red' },
+      { name: 'Workforce Intelligence Agent', desc: 'Real-time skill mapping across departments and campuses.', icon: '🔬', pill: 'Beta', pillColor: 'purple' },
+      { name: 'Multi-Agent Talent Orchestrator', desc: 'Coordinates assess → match → hire → upskill as one agentic flow.', icon: '🌐', pill: 'Soon', pillColor: 'red' },
       { name: 'Skill Market Pulse', desc: 'Live labour market signal agent — trends, demand spikes, salary shifts.', icon: '📡', pill: 'Live', pillColor: 'purple' },
     ],
   },
@@ -134,16 +134,16 @@ const navItems = [
     layout: 'k12-vidya',
     width: 780,
     eyebrow: 'K-12 Vidya AI — school intelligence ecosystem',
-    dotColor: '#00e5b0',
-    accentGradient: 'linear-gradient(135deg, #00e5b0, #38d9f5)',
+    dotColor: '#BD1723',
+    accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     badge: 'Studio',
     items: [
-      { name: 'Vidya AI Virtual Internship', link: '/academy/byteminds', icon: '🏫', desc: 'Real-world AI, coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Flagship', pillColor: 'teal', iconGradient: 'linear-gradient(135deg, #ccfbf1, #99f6e4)', iconShadow: '0 4px 12px rgba(20,184,166,0.15)' },
-      { name: 'Skill Studio for Students', link: null, icon: '🎓', desc: 'Gamified AI-powered skill tracks — ML basics, robotics, sustainability, drone tech, quantum intro.', pill: 'Grades 6-12', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f3e8ff, #e9d5ff)', iconShadow: '0 4px 12px rgba(168,85,247,0.15)' },
-      { name: 'Teacher AI Upskill Lab', link: null, icon: '👩‍🏫', desc: 'Structured AI literacy programme for educators — pedagogy, tools, classroom integration, assessments.', pill: 'CPD certified', pillColor: 'orange', iconGradient: 'linear-gradient(135deg, #fef3c7, #fde68a)', iconShadow: '0 4px 12px rgba(245,158,11,0.15)' },
-      { name: 'CCMM — AI Maturity for Schools', link: null, icon: '📊', desc: 'Continuous Capability & Maturity Model — benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'blue', iconGradient: 'linear-gradient(135deg, #dbeafe, #bfdbfe)', iconShadow: '0 4px 12px rgba(59,130,246,0.15)' },
-      { name: 'Campus Connect — K12', link: null, icon: '🤝', desc: 'Links top-performing school students directly to university and early internship pipelines.', pill: 'Bridge', pillColor: 'pink', iconGradient: 'linear-gradient(135deg, #fce7f3, #fbcfe8)', iconShadow: '0 4px 12px rgba(236,72,153,0.15)' },
-      { name: 'Future Founders Track', link: null, icon: '🌱', desc: 'Entrepreneurship & innovation bootcamp — problem-solving, pitching, and startup thinking for teens.', pill: 'New', pillColor: 'green', iconGradient: 'linear-gradient(135deg, #dcfce7, #bbf7d0)', iconShadow: '0 4px 12px rgba(34,197,94,0.15)' },
+      { name: 'Vidya AI Virtual Internship', link: '/academy/byteminds', icon: '🏫', desc: 'Real-world AI, coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Flagship', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Skill Studio for Students', link: null, icon: '🎓', desc: 'Gamified AI-powered skill tracks — ML basics, robotics, sustainability, drone tech, quantum intro.', pill: 'Grades 6-12', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Teacher AI Upskill Lab', link: null, icon: '👩‍🏫', desc: 'Structured AI literacy programme for educators — pedagogy, tools, classroom integration, assessments.', pill: 'CPD certified', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'CCMM — AI Maturity for Schools', link: null, icon: '📊', desc: 'Continuous Capability & Maturity Model — benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Campus Connect — K12', link: null, icon: '🤝', desc: 'Links top-performing school students directly to university and early internship pipelines.', pill: 'Bridge', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Future Founders Track', link: null, icon: '🌱', desc: 'Entrepreneurship & innovation bootcamp — problem-solving, pitching, and startup thinking for teens.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
     ],
   },
   {
@@ -151,15 +151,15 @@ const navItems = [
     layout: 'list-rows',
     width: 660,
     eyebrow: 'The Deeptech Studio — Specialisations',
-    dotColor: '#f5a623',
-    accentGradient: 'linear-gradient(135deg, #f5a623, #e02020)',
+    dotColor: '#BD1723',
+    accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
-      { name: 'School of AI & Quantum Intelligence', link: '/academy/byteminds', icon: '🧠', desc: 'ML, neural architectures, quantum algorithms, agentic AI systems', pill: 'AI + Quantum', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f3e8ff, #e9d5ff)', iconShadow: '0 4px 12px rgba(168,85,247,0.15)' },
-      { name: 'Global School of Sustainability & Climate Action', link: '/academy/sustainability', icon: '🌍', desc: 'Green tech, carbon markets, ESG frameworks, climate data science', pill: 'New', pillColor: 'green', iconGradient: 'linear-gradient(135deg, #dcfce7, #bbf7d0)', iconShadow: '0 4px 12px rgba(34,197,94,0.15)' },
-      { name: 'Centre of Digital & Design Excellence', link: '/academy/digital-design', icon: '🎨', desc: 'UX/UI, VFX, generative AI art, immersive media, spatial design', iconGradient: 'linear-gradient(135deg, #fef3c7, #fde68a)', iconShadow: '0 4px 12px rgba(245,158,11,0.15)' },
-      { name: 'School of EV & E-Mobility', link: '/academy/ev-mobility', icon: '⚡', desc: 'Electric vehicles, battery systems, smart transport, grid tech', pill: 'Beta', pillColor: 'blue', iconGradient: 'linear-gradient(135deg, #dbeafe, #bfdbfe)', iconShadow: '0 4px 12px rgba(59,130,246,0.15)' },
-      { name: 'Institute of Aerial Intelligence', link: '/academy/udan', icon: '🚁', desc: 'Drone systems, UAV operations, aerial data & AI navigation', pill: 'New', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fee2e2, #fecaca)', iconShadow: '0 4px 12px rgba(239,68,68,0.15)' },
-      { name: 'Cybersecurity & Ethical AI School', link: null, icon: '🔐', desc: 'Threat intelligence, AI safety, responsible automation, governance', pill: 'New', pillColor: 'green', iconGradient: 'linear-gradient(135deg, #dcfce7, #bbf7d0)', iconShadow: '0 4px 12px rgba(34,197,94,0.15)' },
+      { name: 'School of AI & Quantum Intelligence', link: '/academy/byteminds', icon: '🧠', desc: 'ML, neural architectures, quantum algorithms, agentic AI systems', pill: 'AI + Quantum', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Global School of Sustainability & Climate Action', link: '/academy/sustainability', icon: '🌍', desc: 'Green tech, carbon markets, ESG frameworks, climate data science', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Centre of Digital & Design Excellence', link: '/academy/digital-design', icon: '🎨', desc: 'UX/UI, VFX, generative AI art, immersive media, spatial design', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'School of EV & E-Mobility', link: '/academy/ev-mobility', icon: '⚡', desc: 'Electric vehicles, battery systems, smart transport, grid tech', pill: 'Beta', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Institute of Aerial Intelligence', link: '/academy/udan', icon: '🚁', desc: 'Drone systems, UAV operations, aerial data & AI navigation', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Cybersecurity & Ethical AI School', link: null, icon: '🔐', desc: 'Threat intelligence, AI safety, responsible automation, governance', pill: 'New', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
     ],
   },
   {
@@ -167,8 +167,8 @@ const navItems = [
     layout: 'services-grid',
     width: 740,
     eyebrow: 'Skillzza as a service — consulting & transformation',
-    dotColor: '#ff6b9d',
-    accentGradient: 'linear-gradient(135deg, #ff6b9d, #f5a623)',
+    dotColor: '#BD1723',
+    accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     cta: {
       text: 'Partner with Skillzza',
       sub: '— universities, enterprises and governments building future-ready talent.',
@@ -188,15 +188,15 @@ const navItems = [
     layout: 'list-rows',
     width: 540,
     eyebrow: 'Resources & Knowledge',
-    dotColor: '#0ea5e9',
-    accentGradient: 'linear-gradient(135deg, #0ea5e9, #2563eb)',
+    dotColor: '#BD1723',
+    accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
-      { name: 'Skill Blueprint — Case Studies', link: '/insights/skill-blueprint', icon: '📘', desc: 'Real-world success stories in skill development', iconGradient: 'linear-gradient(135deg, #dbeafe, #bfdbfe)', iconShadow: '0 4px 12px rgba(59,130,246,0.15)' },
-      { name: 'The Skillzza Digest', link: '/insights/skill-digest', icon: '✍️', desc: 'Insights, trends & game-changers shaping future skills', iconGradient: 'linear-gradient(135deg, #fef3c7, #fde68a)', iconShadow: '0 4px 12px rgba(245,158,11,0.15)' },
-      { name: 'AI Talent Research Hub', link: '/insights/ai-talent-research-hub', icon: '🔬', desc: 'Reports & whitepapers on AI & workforce transformation', iconGradient: 'linear-gradient(135deg, #ccfbf1, #99f6e4)', iconShadow: '0 4px 12px rgba(20,184,166,0.15)' },
-      { name: 'Skill Unplugged Podcast', link: '/insights/skill-unplugged-podcast', icon: '🎙️', desc: 'Raw, Real & Revolutionary talks on the future of skills', iconGradient: 'linear-gradient(135deg, #f3e8ff, #e9d5ff)', iconShadow: '0 4px 12px rgba(168,85,247,0.15)' },
-      { name: 'Skillzza Live — Knowledge in Action', link: '/insights/skillzza-live', icon: '🎯', desc: 'Interactive sessions bringing learning to life', iconGradient: 'linear-gradient(135deg, #fee2e2, #fecaca)', iconShadow: '0 4px 12px rgba(239,68,68,0.15)' },
-      { name: 'Agentic Workforce Index 2026', link: null, icon: '📊', desc: 'Annual report on AI agent adoption across industries', pill: 'New', pillColor: 'blue', iconGradient: 'linear-gradient(135deg, #dbeafe, #bfdbfe)', iconShadow: '0 4px 12px rgba(59,130,246,0.15)' },
+      { name: 'Skill Blueprint — Case Studies', link: '/insights/skill-blueprint', icon: '📘', desc: 'Real-world success stories in skill development', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'The Skillzza Digest', link: '/insights/skill-digest', icon: '✍️', desc: 'Insights, trends & game-changers shaping future skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'AI Talent Research Hub', link: '/insights/ai-talent-research-hub', icon: '🔬', desc: 'Reports & whitepapers on AI & workforce transformation', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Skill Unplugged Podcast', link: '/insights/skill-unplugged-podcast', icon: '🎙️', desc: 'Raw, Real & Revolutionary talks on the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Skillzza Live — Knowledge in Action', link: '/insights/skillzza-live', icon: '🎯', desc: 'Interactive sessions bringing learning to life', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Agentic Workforce Index 2026', link: null, icon: '📊', desc: 'Annual report on AI agent adoption across industries', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
     ],
   },
   {
@@ -205,16 +205,16 @@ const navItems = [
     columns: 2,
     width: 480,
     eyebrow: 'About Skillzza',
-    dotColor: '#6b7280',
-    accentGradient: 'linear-gradient(135deg, #6b7280, #374151)',
+    dotColor: '#BD1723',
+    accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
-      { name: 'About Us', link: '/company/about', icon: '✦', desc: 'Our story, mission & vision', iconGradient: 'linear-gradient(135deg, #fee2e2, #fecaca)' },
-      { name: 'Our Methodology', link: '/company/methodology', icon: '⚙', desc: 'How we build skill frameworks', iconGradient: 'linear-gradient(135deg, #fef3c7, #fde68a)' },
-      { name: 'What We Do', link: '/company/what-we-do', icon: '◆', desc: 'Products, programmes & impact', iconGradient: 'linear-gradient(135deg, #dbeafe, #bfdbfe)' },
-      { name: 'Our Pathway', link: '/company/pathway', icon: '➜', desc: 'Roadmap for learners & partners', iconGradient: 'linear-gradient(135deg, #ccfbf1, #99f6e4)' },
-      { name: 'Partner Collaboration', link: '/company/partnerships', icon: '🤝', desc: 'Universities, enterprises, government & CSR partnerships', span: 2, iconGradient: 'linear-gradient(135deg, #f3e8ff, #e9d5ff)' },
-      { name: 'Careers at Skillzza', link: null, icon: '💼', desc: 'Join the team building the future of skills', iconGradient: 'linear-gradient(135deg, #dcfce7, #bbf7d0)' },
-      { name: 'Press & Media', link: null, icon: '📰', desc: 'News, features & brand resources', iconGradient: 'linear-gradient(135deg, #dbeafe, #bfdbfe)' },
+      { name: 'About Us', link: '/company/about', icon: '✦', desc: 'Our story, mission & vision', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
+      { name: 'Our Methodology', link: '/company/methodology', icon: '⚙', desc: 'How we build skill frameworks', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
+      { name: 'What We Do', link: '/company/what-we-do', icon: '◆', desc: 'Products, programmes & impact', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
+      { name: 'Our Pathway', link: '/company/pathway', icon: '➜', desc: 'Roadmap for learners & partners', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
+      { name: 'Partner Collaboration', link: '/company/partnerships', icon: '🤝', desc: 'Universities, enterprises, government & CSR partnerships', span: 2, iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
+      { name: 'Careers at Skillzza', link: null, icon: '💼', desc: 'Join the team building the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
+      { name: 'Press & Media', link: null, icon: '📰', desc: 'News, features & brand resources', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
     ],
   },
 ];
@@ -224,13 +224,13 @@ const navItems = [
 ═══════════════════════════════════════════════════════════════ */
 
 const pillColors = {
-  red: { bg: 'linear-gradient(135deg, #fef2f2, #fee2e2)', color: '#dc2626', border: 'rgba(239,68,68,0.20)' },
+  red: { bg: 'linear-gradient(135deg, #fef2f2, #fee2e2)', color: '#BD1723', border: 'rgba(189,23,35,0.20)' },
   teal: { bg: 'linear-gradient(135deg, #f0fdfa, #ccfbf1)', color: '#0d9488', border: 'rgba(20,184,166,0.20)' },
   blue: { bg: 'linear-gradient(135deg, #eff6ff, #dbeafe)', color: '#2563eb', border: 'rgba(59,130,246,0.20)' },
   orange: { bg: 'linear-gradient(135deg, #fffbeb, #fef3c7)', color: '#d97706', border: 'rgba(245,158,11,0.20)' },
   pink: { bg: 'linear-gradient(135deg, #fdf2f8, #fce7f3)', color: '#db2777', border: 'rgba(236,72,153,0.20)' },
   green: { bg: 'linear-gradient(135deg, #f0fdf4, #dcfce7)', color: '#16a34a', border: 'rgba(34,197,94,0.20)' },
-  purple: { bg: 'linear-gradient(135deg, #faf5ff, #f3e8ff)', color: '#7c3aed', border: 'rgba(124,58,237,0.20)' },
+  purple: { bg: 'linear-gradient(135deg, #faf5ff, #f3e8ff)', color: '#8947B3', border: 'rgba(137,71,179,0.20)' },
 };
 
 /* ───────────────────────────────────────────────────────────────
@@ -288,9 +288,9 @@ const Eyebrow = ({ text, dotColor, gradient }) => (
         width: 8,
         height: 8,
         borderRadius: '50%',
-        background: gradient || dotColor || '#e02020',
+        background: gradient || dotColor || '#BD1723',
         flexShrink: 0,
-        boxShadow: `0 0 8px ${dotColor || '#e02020'}40`,
+        boxShadow: `0 0 8px ${dotColor || '#BD1723'}40`,
       }}
     />
     {text}
@@ -313,7 +313,7 @@ const CtaBar = ({ cta, gradient }) => {
         background: hovered
           ? 'linear-gradient(135deg, #fef2f2, #fff7ed)'
           : 'linear-gradient(135deg, #fefefe, #fafafa)',
-        border: `1px solid ${hovered ? 'rgba(224,32,32,0.25)' : '#f1f5f9'}`,
+        border: `1px solid ${hovered ? 'rgba(189,23,35,0.25)' : '#f1f5f9'}`,
         borderRadius: 14,
         padding: '14px 18px',
         display: 'flex',
@@ -323,7 +323,7 @@ const CtaBar = ({ cta, gradient }) => {
         transition: 'all 0.25s cubic-bezier(0.4,0,0.2,1)',
         textDecoration: 'none',
         transform: hovered ? 'translateY(-1px)' : 'translateY(0)',
-        boxShadow: hovered ? '0 4px 16px rgba(224,32,32,0.06)' : 'none',
+        boxShadow: hovered ? '0 4px 16px rgba(189,23,35,0.06)' : 'none',
       }}
     >
       <div style={{ fontSize: 12.5, color: '#64748b', lineHeight: 1.5 }}>
@@ -334,7 +334,7 @@ const CtaBar = ({ cta, gradient }) => {
           width: 32,
           height: 32,
           borderRadius: '50%',
-          background: gradient || 'linear-gradient(135deg, #e02020, #f5a623)',
+          background: gradient || 'linear-gradient(135deg, #BD1723, #8947B3)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -342,7 +342,7 @@ const CtaBar = ({ cta, gradient }) => {
           fontSize: 14,
           flexShrink: 0,
           marginLeft: 14,
-          boxShadow: '0 2px 8px rgba(224,32,32,0.20)',
+          boxShadow: '0 2px 8px rgba(189,23,35,0.20)',
           transition: 'transform 0.25s ease',
           transform: hovered ? 'translateX(2px)' : 'translateX(0)',
         }}
@@ -438,7 +438,7 @@ const CardItem = ({ item, index }) => {
           borderRadius: 17,
           padding: 1.5,
           zIndex: 0,
-          background: item.iconGradient || 'linear-gradient(135deg, #e02020, #f5a623)',
+          background: item.iconGradient || 'linear-gradient(135deg, #BD1723, #8947B3)',
           WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
           WebkitMaskComposite: 'xor',
           maskComposite: 'exclude',
@@ -551,7 +551,7 @@ const ListRowItem = ({ item, index }) => {
       <div style={{
         position: 'absolute', left: 0, top: '15%', bottom: '15%',
         width: 3, borderRadius: 3, zIndex: 0,
-        background: item.iconGradient || 'linear-gradient(135deg,#e02020,#f5a623)',
+        background: item.iconGradient || 'linear-gradient(135deg,#BD1723,#8947B3)',
         opacity: hovered ? 1 : 0,
         transform: hovered ? 'scaleY(1)' : 'scaleY(0)',
         transformOrigin: 'center',
@@ -674,7 +674,7 @@ const CompactItem = ({ item, index }) => {
       <div style={{
         position: 'absolute', top: 0, left: 0, right: 0, height: 2,
         zIndex: 0,
-        background: item.iconGradient || 'linear-gradient(135deg,#e02020,#f5a623)',
+        background: item.iconGradient || 'linear-gradient(135deg,#BD1723,#8947B3)',
         opacity: hovered ? 1 : 0,
         transition: 'opacity 0.28s ease',
         borderRadius: '13px 13px 0 0',
@@ -800,12 +800,12 @@ const AgenticAIDropdown = ({ navItem }) => {
         {navItem.agentFlow.map((step, i) => (
           <span key={step} style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
             <span style={{
-              fontSize: 11, fontWeight: 600, color: '#059669',
+              fontSize: 11, fontWeight: 600, color: '#BD1723',
               padding: '2px 10px', borderRadius: 20,
-              background: 'rgba(5,150,105,0.08)', border: '1px solid rgba(5,150,105,0.15)',
+              background: 'rgba(189,23,35,0.08)', border: '1px solid rgba(189,23,35,0.15)',
             }}>{step}</span>
             {i < navItem.agentFlow.length - 1 && (
-              <span style={{ color: '#6ee7b7', fontSize: 12, fontWeight: 700 }}>→</span>
+              <span style={{ color: '#e4909a', fontSize: 12, fontWeight: 700 }}>→</span>
             )}
           </span>
         ))}
@@ -852,7 +852,7 @@ const K12VidyaDropdown = ({ navItem }) => (
       <span style={{ fontSize: 20 }}>🏫</span>
       <div>
         <div style={{ fontSize: 12, fontWeight: 700, color: '#065f46' }}>Vidya AI Studio</div>
-        <div style={{ fontSize: 11, color: '#059669', lineHeight: 1.4 }}>AI-powered K-12 school intelligence — assessments, simulations & teacher upskilling.</div>
+        <div style={{ fontSize: 11, color: '#BD1723', lineHeight: 1.4 }}>AI-powered K-12 school intelligence — assessments, simulations & teacher upskilling.</div>
       </div>
     </div>
     {/* 3-col card grid */}
@@ -922,8 +922,17 @@ const K12Card = ({ item }) => {
           color: h ? '#0f172a' : '#1e293b',
           lineHeight: 1.2, transition: 'color 0.2s ease',
         }}>{item.name}</div>
+        {item.desc && (
+          <div style={{
+            fontSize: 11.5, color: h ? '#4b6280' : '#5a7394',
+            marginTop: 4, lineHeight: 1.5,
+            transition: 'color 0.2s ease',
+          }}>
+            {item.desc}
+          </div>
+        )}
         {item.pill && pillColors[item.pillColor] && (
-          <span style={{ alignSelf: 'flex-start', fontSize: 10, fontWeight: 600, padding: '1px 7px', borderRadius: 20, marginTop: 4, display: 'inline-block', ...pillColors[item.pillColor] }}>{item.pill}</span>
+          <span style={{ alignSelf: 'flex-start', fontSize: 10, fontWeight: 600, padding: '1px 7px', borderRadius: 20, marginTop: 8, display: 'inline-block', ...pillColors[item.pillColor] }}>{item.pill}</span>
         )}
       </div>
     </a>
@@ -970,7 +979,7 @@ const SvcCard = ({ item }) => {
       <div style={{
         position: 'absolute', top: 0, left: 0, right: 0, height: 2,
         borderRadius: '12px 12px 0 0', zIndex: 0,
-        background: 'linear-gradient(135deg,#ff6b9d,#f5a623)',
+        background: 'linear-gradient(135deg,#ff6b9d,#8947B3)',
         opacity: h ? 1 : 0,
         transition: 'opacity 0.28s ease',
       }} />
@@ -1098,8 +1107,8 @@ const DesktopNavItem = ({ item }) => {
           padding: '8px 14px',
           fontSize: 13.5,
           fontWeight: 500,
-          color: open ? '#e02020' : '#475569',
-          background: open ? 'rgba(224,32,32,0.04)' : 'none',
+          color: open ? '#BD1723' : '#475569',
+          background: open ? 'rgba(189,23,35,0.04)' : 'none',
           border: 'none',
           borderRadius: 8,
           cursor: 'pointer',
@@ -1151,7 +1160,7 @@ const DesktopNavItem = ({ item }) => {
             <div
               style={{
                 height: 3,
-                background: item.accentGradient || 'linear-gradient(135deg, #e02020, #f5a623)',
+                background: item.accentGradient || 'linear-gradient(135deg, #BD1723, #8947B3)',
                 borderRadius: '20px 20px 0 0',
               }}
             />
@@ -1315,7 +1324,7 @@ const Navbar = () => {
               href={getRoutePath('/book-demo')}
               className="sz-cta-primary"
               style={{
-                background: 'linear-gradient(135deg, #e02020 0%, #f5a623 100%)',
+                background: 'linear-gradient(135deg, #BD1723 0%, #8947B3 100%)',
                 color: '#fff',
                 padding: '9px 22px',
                 borderRadius: 8,
@@ -1323,7 +1332,7 @@ const Navbar = () => {
                 fontWeight: 700,
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
-                boxShadow: '0 2px 10px rgba(224,32,32,0.25)',
+                boxShadow: '0 2px 10px rgba(189,23,35,0.25)',
                 transition: 'all 0.25s ease',
               }}
             >
@@ -1334,14 +1343,14 @@ const Navbar = () => {
               className="sz-cta-secondary"
               style={{
                 background: '#fff',
-                color: '#e02020',
+                color: '#BD1723',
                 padding: '9px 22px',
                 borderRadius: 8,
                 fontSize: 13,
                 fontWeight: 700,
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
-                border: '1.5px solid #fca5a5',
+                border: '1.5px solid rgba(189,23,35,0.3)',
                 transition: 'all 0.25s ease',
               }}
             >
@@ -1398,7 +1407,7 @@ const Navbar = () => {
               <a
                 href={getRoutePath('/book-demo')}
                 style={{
-                  background: 'linear-gradient(135deg, #e02020 0%, #f5a623 100%)',
+                  background: 'linear-gradient(135deg, #BD1723 0%, #8947B3 100%)',
                   color: '#fff',
                   padding: '11px 22px',
                   borderRadius: 8,
@@ -1414,14 +1423,14 @@ const Navbar = () => {
                 href={getRoutePath('/product-tour')}
                 style={{
                   background: '#fff',
-                  color: '#e02020',
+                  color: '#BD1723',
                   padding: '11px 22px',
                   borderRadius: 8,
                   fontSize: 14,
                   fontWeight: 700,
                   textDecoration: 'none',
                   textAlign: 'center',
-                  border: '1.5px solid #fca5a5',
+                  border: '1.5px solid rgba(189,23,35,0.3)',
                 }}
               >
                 Product Tour
@@ -1508,14 +1517,14 @@ const Navbar = () => {
 
         /* ── CTA hover ── */
         .sz-cta-primary:hover {
-          box-shadow: 0 8px 28px rgba(224,32,32,0.38) !important;
+          box-shadow: 0 8px 28px rgba(189,23,35,0.38) !important;
           transform: translateY(-2px) scale(1.02);
         }
         .sz-cta-secondary:hover {
           background: linear-gradient(135deg,#fef2f2,#fff7ed) !important;
           border-color: #f87171 !important;
           transform: translateY(-2px) scale(1.02);
-          box-shadow: 0 4px 16px rgba(224,32,32,0.12) !important;
+          box-shadow: 0 4px 16px rgba(189,23,35,0.12) !important;
         }
 
         /* ── Responsive ── */
