@@ -1774,11 +1774,10 @@ function JobSimulationPage() {
         .jsim-cta-banner {
           background-color: #8c0912;
           background: linear-gradient(135deg, #7c0a02 0%, #a61217 50%, #6b0700 100%);
-          width: 100%;
-          padding: 40px 24px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+              width: 92%;
+              max-width: 1400px;
+              margin: 40px auto;
+              border-radius: 12px;
           justify-content: center;
           text-align: center;
           gap: 16px;

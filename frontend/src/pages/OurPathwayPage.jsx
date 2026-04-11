@@ -159,10 +159,10 @@ function OurPathwayPage() {
         }
 
         /* Image hover effects */
-        img, .pathway-tab-content > div:first-child {
+        .pathway-tab-content > div:first-child {
           transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
         }
-        img:hover, .pathway-tab-content > div:first-child:hover {
+        .pathway-tab-content > div:first-child:hover {
           transform: scale(1.03) !important;
         }
 
@@ -541,7 +541,7 @@ function OurPathwayPage() {
         style={{
           width: '100%',
           backgroundColor: '#F8F8F8',
-          padding: '60px 24px 80px',
+          padding: '56px 24px 44px',
         }}
       >
         <div style={{ width: '100%', maxWidth: '1320px', margin: '0 auto' }}>
@@ -611,7 +611,7 @@ function OurPathwayPage() {
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(309px, 1fr))',
-              gap: '28px',
+              gap: '18px',
               justifyContent: 'center',
               justifyItems: 'center',
             }}
@@ -667,7 +667,7 @@ function OurPathwayPage() {
                 className="pathway-card"
                 style={{
                   width: '309px',
-                    height: '500px',
+                  height: 'auto',
                   borderRadius: '22px',
                   border: `1.5px solid ${card.borderColor}`,
                   background: '#FEFAFA',
@@ -682,7 +682,7 @@ function OurPathwayPage() {
                 <div
                   style={{
                     width: '100%',
-                    height: '205px',
+                    height: '190px',
                     borderRadius: '15px 15px 0 0',
                     position: 'relative',
                   }}
@@ -703,31 +703,31 @@ function OurPathwayPage() {
                 {/* Card Content */}
                 <div
                   style={{
-                    padding: '22px 24px 28px',
+                    padding: '16px 20px 16px',
                     flex: 1,
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: '12px',
+                    gap: '8px',
                   }}
                 >
                   <div
                     style={{
-                      minHeight: '140px',
+                      minHeight: 'unset',
                       display: 'flex',
                       flexDirection: 'column',
-                      justifyContent: 'center',
+                      justifyContent: 'flex-start',
                       alignItems: 'flex-start',
-                      gap: '10px',
+                      gap: '6px',
                     }}
                   >
                     <h3
                       style={{
                         fontFamily: "'Inter', 'Segoe UI', sans-serif",
                         fontWeight: '700',
-                        fontSize: '26px',
+                        fontSize: '22px',
                         lineHeight: '1',
                         color: card.sdgColor,
-                        letterSpacing: '2px',
+                        letterSpacing: '1.5px',
                         filter: 'drop-shadow(0px 3px 0px rgba(0, 0, 0, 0.25))',
                         margin: 0,
                         textAlign: 'left',
@@ -740,7 +740,7 @@ function OurPathwayPage() {
                       style={{
                         fontFamily: "'Inter', 'Segoe UI', sans-serif",
                         fontWeight: '700',
-                        fontSize: '20px',
+                        fontSize: '17px',
                         lineHeight: '1.25',
                         color: '#890404',
                         margin: 0,
@@ -756,9 +756,9 @@ function OurPathwayPage() {
                     style={{
                       fontFamily: "'Inter', 'Segoe UI', sans-serif",
                       fontWeight: '400',
-                      fontSize: '15px',
-                      lineHeight: '1.6',
-                      marginTop: 0,
+                      fontSize: '13px',
+                      lineHeight: '1.45',
+                      marginTop: '2px',
                       textAlign: 'left',
                       color: card.textColor,
                     }}
@@ -798,7 +798,7 @@ function OurPathwayPage() {
                 marginBottom: '10px',
               }}
             >
-              The Skillzza Pathway Difference
+              The Pathway Difference
             </p>
             <h2
               style={{
@@ -953,8 +953,8 @@ function OurPathwayPage() {
             className="pathway-stagger pathway-serve-grid"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
-              gap: '32px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gap: '24px',
               justifyContent: 'center',
               justifyItems: 'center',
             }}
@@ -995,9 +995,9 @@ function OurPathwayPage() {
                   key={index}
                   className="pathway-serve-card"
                   style={{
-                    width: '399px',
+                    width: '350px',
                     maxWidth: '100%',
-                    height: '328px',
+                    height: '280px',
                     borderRadius: '20px',
                     overflow: 'hidden',
                     position: 'relative',
@@ -1057,8 +1057,8 @@ function OurPathwayPage() {
                       style={{
                           color: '#FFFFFF',
                         fontFamily: "'Inter', 'Segoe UI', sans-serif",
-                        fontWeight: 600,
-                        fontSize: '24px',
+                        fontWeight: 700,
+                        fontSize: '20px',
                         lineHeight: '1.2',
                         textShadow: '0px 4px 12px rgba(0, 0, 0, 0.45)',
                       }}
@@ -1180,7 +1180,7 @@ function OurPathwayPage() {
               style={{
                 fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 700,
-                fontSize: '38px',
+                fontSize: '32px',
                 lineHeight: '1.05',
                 color: '#CF0C0C',
                 textShadow: '0px 4px 0px rgba(0, 0, 0, 0.25)',
@@ -1201,10 +1201,10 @@ function OurPathwayPage() {
               width: '100%',
               maxWidth: '957px',
               margin: '0 auto',
-              minHeight: '96px',
+              minHeight: '72px',
               background: '#FFFFFF',
               borderRadius: '50px',
-              padding: '12px 20px',
+              padding: '8px 16px',
               boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
               borderBottom: '4px solid #D9D9D9',
             }}
@@ -1219,7 +1219,7 @@ function OurPathwayPage() {
                   onClick={() => setActiveTab(tab.id)}
                   style={{
                     width: '307px',
-                    height: '72px',
+                    height: '56px',
                     textAlign: 'center',
                     fontFamily: "'Inter', 'Segoe UI', sans-serif",
                     fontWeight: 600,
@@ -1285,7 +1285,7 @@ function OurPathwayPage() {
                 style={{
                   fontFamily: "'Inter', 'Segoe UI', sans-serif",
                   fontWeight: 700,
-                  fontSize: '30px',
+                  fontSize: '26px',
                   color: '#8A0303',
                 }}
               >
@@ -1298,9 +1298,9 @@ function OurPathwayPage() {
                   margin: 0,
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '18px',
+                  gap: '14px',
                   fontFamily: "'Inter', 'Segoe UI', sans-serif",
-                  fontSize: '20px',
+                  fontSize: '16px',
                   color: '#181818',
                 }}
               >
@@ -1308,8 +1308,8 @@ function OurPathwayPage() {
                   <li key={text} style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                     <span
                       style={{
-                        width: '12px',
-                        height: '12px',
+                        width: '8px',
+                        height: '8px',
                         borderRadius: '999px',
                         backgroundColor: '#CF0C0C',
                       }}

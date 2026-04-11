@@ -148,7 +148,7 @@ function InsightsPage() {
                   tag: "SKILL BLUEPRINT",
                   title: "From Theory to Simulation",
                   desc: "Building Industry-Ready Talent Through AI-Powered Role-Play Labs",
-                  image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 }
               ].map((card) => (
                 <div 
@@ -360,7 +360,7 @@ function InsightsPage() {
                   tag: "PODCAST",
                   title: "Reskilling at Scale",
                   desc: "How Organizations Are Preparing for AI",
-                  image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                   id: 5,

@@ -316,24 +316,35 @@ function AboutPage() {
         }
 
         .about-mv__container {
-          max-width: 860px;
+          max-width: 1050px;
           margin: 0 auto;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 24px;
+          gap: 40px;
           align-items: start;
+        }
+
+        .about-mv__left {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0;
+          position: relative;
         }
 
         .about-mv__card {
           color: #ffffff;
-          border-radius: 40px 0 40px 0;
-          padding: 40px 32px;
+          border-radius: 48px 0 48px 0;
+          padding: 64px 48px;
           width: 100%;
           box-sizing: border-box;
           display: flex;
           flex-direction: column;
           transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
           will-change: transform, box-shadow;
+          min-height: 440px;
+          position: relative;
+          z-index: 2;
         }
 
         .about-mv__card:hover {
@@ -346,58 +357,62 @@ function AboutPage() {
         .about-mv__card--mission {
           background: #A37DB3;
           margin-top: 0;
+          z-index: 2;
         }
 
         .about-mv__line {
           display: flex;
           align-items: center;
-          gap: 12px;
-          margin: 0 0 24px;
+          gap: 16px;
+          margin: 0 0 36px;
         }
 
         .about-mv__heading {
           margin: 0;
-          font-size: clamp(22px, 3vw, 30px);
+          font-size: clamp(26px, 3vw, 32px);
           font-weight: 500;
           line-height: 1;
         }
 
         .about-mv__divider {
-          width: clamp(72px, 7vw, 100px);
+          width: clamp(80px, 8vw, 130px);
           height: 1px;
           background: rgba(255, 255, 255, 0.9);
         }
 
         .about-mv__text {
           margin: 0;
-          font-size: 15px;
-          line-height: 1.4;
+          font-size: 16.5px;
+          line-height: 1.6;
           font-weight: 400;
         }
 
         .about-mv__text + .about-mv__text {
-          margin-top: 22px;
+          margin-top: 28px;
         }
 
         .about-mv__right {
           display: flex;
           flex-direction: column;
-          gap: 16px;
+          gap: 0;
           padding-top: 60px;
           position: relative;
         }
 
         .about-mv__chip {
-          width: 96px;
-          height: 72px;
+          width: 90px;
+          height: 90px;
           background: #1994D2;
-          border-radius: 32px 0 32px 0;
-          margin-bottom: -16px;
+          border-radius: 40px 0 40px 0;
+          margin-bottom: -40px;
           margin-left: 20px;
+          position: relative;
+          z-index: 1;
         }
 
         .about-mv__card--vision {
           background: #C4312F;
+          z-index: 2;
         }
 
         .about-mv__card--vision strong {
@@ -405,13 +420,14 @@ function AboutPage() {
         }
 
         .about-mv__chip--yellow {
-          width: 80px;
-          height: 60px;
+          width: 75px;
+          height: 75px;
           background: #F1C40F;
-          border-radius: 28px 0 28px 0;
-          position: absolute;
-          bottom: 50px;
-          left: -100px;
+          border-radius: 36px 0 36px 0;
+          margin-top: -30px;
+          margin-right: 20px;
+          position: relative;
+          z-index: 1;
         }
 
         @media (max-width: 992px) {
@@ -440,6 +456,7 @@ function AboutPage() {
             grid-template-columns: 1fr;
           }
 
+          .about-mv__left,
           .about-mv__right {
             padding-top: 0;
           }
@@ -542,20 +559,24 @@ function AboutPage() {
         </section>
         <section ref={mvRef} className="about-mv about-reveal">
           <div className="about-mv__container about-stagger">
-            <article className="about-mv__card about-mv__card--mission">
-              <div className="about-mv__line">
-                <h2 className="about-mv__heading">Our MISSION</h2>
-                <span className="about-mv__divider" aria-hidden="true" />
-              </div>
-              <p className="about-mv__text">
-                To empower every student globally to realise their full potential, eliminating geographical, social,
-                and economic barriers to skill development.
-              </p>
-              <p className="about-mv__text">
-                We are committed to providing opportunities that enable individuals to advance their skills and achieve
-                their aspirations, regardless of their starting point.
-              </p>
-            </article>
+            <div className="about-mv__left">
+              <article className="about-mv__card about-mv__card--mission">
+                <div className="about-mv__line">
+                  <h2 className="about-mv__heading">Our MISSION</h2>
+                  <span className="about-mv__divider" aria-hidden="true" />
+                </div>
+                <p className="about-mv__text">
+                  To empower every student globally to realise their full potential, eliminating geographical, social,
+                  and economic barriers to skill development.
+                </p>
+                <p className="about-mv__text">
+                  We are committed to providing opportunities that enable individuals to advance their skills and achieve
+                  their aspirations, regardless of their starting point.
+                </p>
+              </article>
+              <div className="about-mv__chip--yellow" aria-hidden="true" />
+            </div>
+            
             <div className="about-mv__right">
               <div className="about-mv__chip" aria-hidden="true" />
               <article className="about-mv__card about-mv__card--vision">
@@ -573,7 +594,6 @@ function AboutPage() {
                   driving a positive impact on industries and communities.
                 </p>
               </article>
-              <div className="about-mv__chip--yellow" aria-hidden="true" />
             </div>
           </div>
         </section>

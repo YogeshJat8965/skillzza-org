@@ -61,6 +61,9 @@ function PartnerCollaborationPage() {
 
         .collab-animate {
           opacity: 0;
+          will-change: transform, opacity;
+          backface-visibility: hidden;
+          transform: translateZ(0);
         }
         .collab-animate.collab-visible {
           opacity: 1;
@@ -123,10 +126,10 @@ function PartnerCollaborationPage() {
 
         .collab-hero__title {
           margin: 0;
-          font-size: clamp(38px, 4.5vw, 56px);
-          font-weight: 700;
+          font-size: 56px;
+          font-weight: 900;
           line-height: 1.1;
-          letter-spacing: -0.01em;
+          letter-spacing: -1px;
           color: #ffffff;
           max-width: 520px;
           text-shadow: 0 4px 24px rgba(0,0,0,0.35);
@@ -149,8 +152,8 @@ function PartnerCollaborationPage() {
 
         .collab-partners__heading {
           margin: 0 auto 20px;
-          font-size: clamp(26px, 2.4vw, 38px);
-          font-weight: 700;
+          font-size: 36px;
+          font-weight: 800;
           line-height: 1.15;
           color: #0f172a;
           text-align: center;
@@ -159,7 +162,7 @@ function PartnerCollaborationPage() {
         .collab-partners__intro {
           max-width: 1060px;
           margin: 0 auto clamp(30px, 4vw, 44px);
-          font-size: clamp(15px, 1.5vw, 20px);
+          font-size: 18px;
           line-height: 1.55;
           color: #475569;
           text-align: center;
@@ -183,6 +186,9 @@ function PartnerCollaborationPage() {
           height: 100%;
           transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
           cursor: pointer;
+          will-change: transform, box-shadow;
+          backface-visibility: hidden;
+          transform: translateZ(0);
         }
 
         .collab-partners__card:hover {
@@ -196,6 +202,9 @@ function PartnerCollaborationPage() {
           object-fit: cover;
           display: block;
           transition: transform 0.45s ease;
+          will-change: transform;
+          backface-visibility: hidden;
+          transform: translateZ(0);
         }
 
         .collab-partners__card:hover .collab-partners__card-image {
@@ -210,9 +219,9 @@ function PartnerCollaborationPage() {
           justify-content: center;
           text-align: center;
           padding: 20px 14px;
-          font-size: clamp(22px, 1.8vw, 32px);
+          font-size: 24px;
           line-height: 1.2;
-          font-weight: 600;
+          font-weight: 700;
           color: #0f172a;
         }
 
@@ -220,10 +229,7 @@ function PartnerCollaborationPage() {
         .section-banner {
           position: relative;
           width: 100%;
-          min-height: clamp(280px, 30vw, 400px);
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
+          background-color: #8A0303;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -232,21 +238,15 @@ function PartnerCollaborationPage() {
 
         .section-banner::after {
           content: '';
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(135deg, rgba(7, 7, 12, 0.84) 0%, rgba(7, 7, 12, 0.72) 40%, rgba(7, 7, 12, 0.60) 100%);
         }
 
         .section-banner--corporate {
-          background-image: url('/Company/collaboration/corporate_banner.png');
         }
 
         .section-banner--govt {
-          background-image: url('/Company/collaboration/government_banner.png');
         }
 
         .section-banner--education {
-          background-image: url('/Company/collaboration/education_banner.png');
         }
 
         .section-banner__content {
@@ -254,7 +254,7 @@ function PartnerCollaborationPage() {
           z-index: 1;
           max-width: 900px;
           margin: 0 auto;
-          padding: clamp(44px, 6vw, 72px) clamp(22px, 6vw, 72px);
+          padding: 40px 24px;
           display: flex;
           flex-direction: column;
           gap: 16px;
@@ -264,7 +264,7 @@ function PartnerCollaborationPage() {
 
         .section-banner__title {
           margin: 0;
-          font-size: clamp(28px, 3vw, 38px);
+          font-size: 36px;
           font-weight: 800;
           color: #f3ad3a;
           text-shadow: 0 3px 16px rgba(0, 0, 0, 0.5);
@@ -273,15 +273,15 @@ function PartnerCollaborationPage() {
 
         .section-banner__subtitle {
           margin: 0;
-          font-size: clamp(19px, 2vw, 28px);
-          font-weight: 500;
+          font-size: 24px;
+          font-weight: 700;
           color: #ffffff;
           text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
         }
 
         .section-banner__description {
           margin: 4px 0 0;
-          font-size: clamp(15px, 1.4vw, 18px);
+          font-size: 16px;
           line-height: 1.65;
           color: #e2e8f0;
           text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
@@ -291,7 +291,7 @@ function PartnerCollaborationPage() {
         /* ===== DETAIL SECTION — CONTENT LEFT, IMAGE RIGHT ===== */
         .detail-section {
           background: #f5f5f5;
-          padding: clamp(50px, 6vw, 80px) clamp(18px, 6vw, 70px);
+          padding: 60px 24px;
         }
 
         .detail-section__inner {
@@ -313,8 +313,8 @@ function PartnerCollaborationPage() {
 
         .detail-section__heading {
           margin: 0 0 22px;
-          font-size: clamp(24px, 2.5vw, 38px);
-          font-weight: 700;
+          font-size: 36px;
+          font-weight: 800;
           color: #0f172a;
           line-height: 1.2;
         }
@@ -325,15 +325,15 @@ function PartnerCollaborationPage() {
 
         .detail-section__subheading {
           margin: 0 0 8px;
-          font-size: clamp(16px, 1.7vw, 22px);
-          font-weight: 600;
+          font-size: 20px;
+          font-weight: 700;
           color: #1e293b;
         }
 
         .detail-section__list {
           margin: 0;
           padding-left: 20px;
-          font-size: clamp(14px, 1.25vw, 16.5px);
+          font-size: 16px;
           line-height: 1.55;
           color: #334155;
         }
@@ -356,6 +356,9 @@ function PartnerCollaborationPage() {
           display: block;
           box-shadow: none;
           transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+          will-change: transform;
+          backface-visibility: hidden;
+          transform: translateZ(0);
         }
 
         .detail-section__image:hover {
@@ -386,8 +389,8 @@ function PartnerCollaborationPage() {
 
         .cards-section__heading {
           margin: 0 0 clamp(28px, 4vw, 44px);
-          font-size: clamp(28px, 2.6vw, 40px);
-          font-weight: 700;
+          font-size: 36px;
+          font-weight: 800;
           color: #0f172a;
         }
 
@@ -405,6 +408,9 @@ function PartnerCollaborationPage() {
           box-shadow: 0 10px 32px rgba(15, 23, 42, 0.09);
           overflow: hidden;
           transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+          will-change: transform, box-shadow;
+          backface-visibility: hidden;
+          transform: translateZ(0);
         }
 
         .cards-section__card::before {
@@ -443,21 +449,21 @@ function PartnerCollaborationPage() {
 
         .cards-section__card-title {
           margin: 0 0 10px;
-          font-size: clamp(17px, 1.5vw, 21px);
-          font-weight: 600;
+          font-size: 20px;
+          font-weight: 700;
           color: #0f172a;
         }
 
         .cards-section__card-text {
           margin: 0;
-          font-size: clamp(13.5px, 1.15vw, 15.5px);
+          font-size: 15px;
           line-height: 1.55;
           color: #475569;
         }
 
         .cards-section__cta {
           margin: clamp(30px, 4vw, 48px) auto 0;
-          font-size: clamp(17px, 1.7vw, 22px);
+          font-size: 18px;
           font-weight: 500;
           color: #1e293b;
           font-style: italic;
@@ -465,8 +471,8 @@ function PartnerCollaborationPage() {
 
         /* ===== CTA SECTION ===== */
         .collab-cta {
-          background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-          padding: clamp(60px, 8vw, 110px) clamp(22px, 6vw, 72px);
+          background-color: #8A0303;
+          padding: 80px 24px;
           text-align: center;
           position: relative;
           overflow: hidden;
@@ -495,7 +501,7 @@ function PartnerCollaborationPage() {
 
         .collab-cta__title {
           margin: 0;
-          font-size: clamp(28px, 3vw, 38px);
+          font-size: 36px;
           font-weight: 800;
           color: #f3ad3a;
           line-height: 1.15;
@@ -504,14 +510,14 @@ function PartnerCollaborationPage() {
 
         .collab-cta__text {
           margin: 0;
-          font-size: clamp(16px, 1.6vw, 21px);
+          font-size: 18px;
           line-height: 1.65;
           color: #cbd5e1;
         }
 
         .collab-cta__tagline {
           margin: 6px 0 0;
-          font-size: clamp(19px, 2vw, 28px);
+          font-size: 24px;
           font-weight: 600;
           color: #ffffff;
           font-style: italic;
@@ -559,7 +565,7 @@ function PartnerCollaborationPage() {
           }
 
           .collab-hero__title {
-            font-size: clamp(24px, 7.5vw, 38px);
+            font-size: 56px;
             max-width: 280px;
           }
 
@@ -578,7 +584,7 @@ function PartnerCollaborationPage() {
 
           .collab-partners__card-title {
             min-height: 64px;
-            font-size: clamp(17px, 4.6vw, 22px);
+            font-size: 24px;
             padding: 14px 10px;
           }
 
@@ -736,22 +742,22 @@ function PartnerCollaborationPage() {
             <h3 className="cards-section__heading collab-animate anim-fade-up">Partnership Models We Offer</h3>
             <div className="cards-section__grid">
               <article className="cards-section__card collab-animate anim-scale-in anim-delay-1">
-                <span className="cards-section__card-number">1</span>
+                
                 <h4 className="cards-section__card-title">Custom Learning Academies</h4>
                 <p className="cards-section__card-text">End-to-end skill development programs tailored to your workforce.</p>
               </article>
               <article className="cards-section__card collab-animate anim-scale-in anim-delay-2">
-                <span className="cards-section__card-number">2</span>
+                
                 <h4 className="cards-section__card-title">Innovation Challenges</h4>
                 <p className="cards-section__card-text">Hackathons and bootcamps to discover and nurture internal talent.</p>
               </article>
               <article className="cards-section__card collab-animate anim-scale-in anim-delay-3">
-                <span className="cards-section__card-number">3</span>
+                
                 <h4 className="cards-section__card-title">CSR Skill Initiatives</h4>
                 <p className="cards-section__card-text">Community-focused programs that create social value while engaging employees.</p>
               </article>
               <article className="cards-section__card collab-animate anim-scale-in anim-delay-4">
-                <span className="cards-section__card-number">4</span>
+                
                 <h4 className="cards-section__card-title">Skillzza Xperience Platform</h4>
                 <p className="cards-section__card-text">Immersive virtual simulations for hands-on learning and assessment.</p>
               </article>
@@ -891,22 +897,22 @@ function PartnerCollaborationPage() {
             <h3 className="cards-section__heading collab-animate anim-fade-up">Our Proven Engagement Process</h3>
             <div className="cards-section__grid">
               <article className="cards-section__card collab-animate anim-scale-in anim-delay-1">
-                <span className="cards-section__card-number">1</span>
+                
                 <h4 className="cards-section__card-title">Vision Alignment</h4>
                 <p className="cards-section__card-text">Understanding your development priorities and constraints</p>
               </article>
               <article className="cards-section__card collab-animate anim-scale-in anim-delay-2">
-                <span className="cards-section__card-number">2</span>
+                
                 <h4 className="cards-section__card-title">Strategic Co-Creation</h4>
                 <p className="cards-section__card-text">Designing impactful, evidence-based programs</p>
               </article>
               <article className="cards-section__card collab-animate anim-scale-in anim-delay-3">
-                <span className="cards-section__card-number">3</span>
+                
                 <h4 className="cards-section__card-title">Technology-Enabled Delivery</h4>
                 <p className="cards-section__card-text">Implementing with digital tools for scale and efficiency</p>
               </article>
               <article className="cards-section__card collab-animate anim-scale-in anim-delay-4">
-                <span className="cards-section__card-number">4</span>
+                
                 <h4 className="cards-section__card-title">Impact Measurement</h4>
                 <p className="cards-section__card-text">Continuous monitoring and evaluation for sustainable success</p>
               </article>
@@ -1036,22 +1042,22 @@ function PartnerCollaborationPage() {
             <h3 className="cards-section__heading collab-animate anim-fade-up">Our Impact Commitment</h3>
             <div className="cards-section__grid">
               <article className="cards-section__card collab-animate anim-scale-in anim-delay-1">
-                <span className="cards-section__card-number">1</span>
+                
                 <h4 className="cards-section__card-title">Future Workforce Readiness</h4>
                 <p className="cards-section__card-text">Skills and mindset for tomorrow's job market</p>
               </article>
               <article className="cards-section__card collab-animate anim-scale-in anim-delay-2">
-                <span className="cards-section__card-number">2</span>
+                
                 <h4 className="cards-section__card-title">Inclusive Access</h4>
                 <p className="cards-section__card-text">Reaching underserved and diverse student communities</p>
               </article>
               <article className="cards-section__card collab-animate anim-scale-in anim-delay-3">
-                <span className="cards-section__card-number">3</span>
+                
                 <h4 className="cards-section__card-title">Sustainability Leadership</h4>
                 <p className="cards-section__card-text">Inspiring climate action and environmental stewardship</p>
               </article>
               <article className="cards-section__card collab-animate anim-scale-in anim-delay-4">
-                <span className="cards-section__card-number">4</span>
+                
                 <h4 className="cards-section__card-title">Leadership Development</h4>
                 <p className="cards-section__card-text">Building confidence, resilience, and social responsibility</p>
               </article>

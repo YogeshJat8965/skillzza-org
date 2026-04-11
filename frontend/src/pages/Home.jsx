@@ -38,6 +38,7 @@ const studioTabs = [
       "Data-driven mentoring insights powered by our proprietary 4M framework.",
     ],
     btns: ["Discover Your Potential", "Get Your Skill Report"],
+    img: "/mockdashboard.png",
   },
   {
     id: 1, label: "Xperience platform", title: "Xperience Platform",
@@ -49,6 +50,7 @@ const studioTabs = [
       "Sharpened workplace readiness through applied learning.",
     ],
     btns: ["Start Your Simulation Journey"],
+    img: "/xperience_bg_bannerpng.jpg",
   },
   {
     id: 2, label: "Talent Transformation", title: "Talent Transformation",
@@ -61,6 +63,7 @@ const studioTabs = [
       "Real-time dashboard for HR and L&D decision-making.",
     ],
     btns: ["Book Your Demo", "Download TIS Overview"],
+    img: "/TransformingdatawithPowerBI_tile_img.png",
   },
   {
     id: 3, label: "AI HackNex", title: "AI HackNex",
@@ -72,6 +75,7 @@ const studioTabs = [
       "Showcase your AI, data, and coding skills on leading platforms.",
     ],
     btns: ["Join the Next Challenge", "See Winner Showcases"],
+    img: "/ai_hacknex_tile_img.png",
   },
   {
     id: 4, label: "Hirenest", title: "Hirenest",
@@ -83,6 +87,7 @@ const studioTabs = [
       "AI-powered matching that eliminates guesswork.",
     ],
     btns: ["Access Talent Pool", "Partner with Us"],
+    img: "/building_intelligent_tile.png",
   },
 ];
 
@@ -745,34 +750,45 @@ export default function SkillzzaHome() {
           </div>
 
           {/* Pill Tabs */}
-          <div className="tabs-row" style={{ display: "flex", gap: 12, overflowX: "auto", scrollbarWidth: "none", msOverflowStyle: "none", marginBottom: 28, justifyContent: "flex-start", flexWrap: "wrap" }}>
+          <div className="tabs-row" style={{ display: "flex", gap: 12, overflowX: "auto", scrollbarWidth: "none", msOverflowStyle: "none", padding: "8px 4px", marginBottom: 20, justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
             {studioTabs.map((t, idx) => {
               const isActive = activeTab === t.id;
               const tabColors = [
-                { bg: "#9b6fd4", hover: "#8a5ec7", text: "#000" },
-                { bg: "#f7bb5f", hover: "#f0a832", text: "#000" },
-                { bg: "#7d8796", hover: "#6b7280", text: "#000" },
-                { bg: "#f07070", hover: "#e05050", text: "#000" },
-                { bg: "#60a5fa", hover: "#3b82f6", text: "#000" },
+                { bg: "#9b6fd4", hover: "#8a5ec7", text: "#000", shadow: "rgba(155,111,212,0.4)" },
+                { bg: "#f7bb5f", hover: "#f0a832", text: "#000", shadow: "rgba(247,187,95,0.4)" },
+                { bg: "#7d8796", hover: "#6b7280", text: "#000", shadow: "rgba(125,135,150,0.4)" },
+                { bg: "#f07070", hover: "#e05050", text: "#000", shadow: "rgba(240,112,112,0.4)" },
+                { bg: "#60a5fa", hover: "#3b82f6", text: "#000", shadow: "rgba(96,165,250,0.4)" },
               ];
               const c = tabColors[idx] || tabColors[0];
               return (
                 <button key={t.id} onClick={() => setActiveTab(t.id)}
-                  onMouseEnter={e => { e.currentTarget.style.background = c.hover; e.currentTarget.style.transform = "translateY(-2px)"; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = c.bg; e.currentTarget.style.transform = "translateY(0)"; }}
+                  onMouseEnter={e => { 
+                    e.currentTarget.style.background = c.hover; 
+                    e.currentTarget.style.transform = "translateY(-3px) scale(1.02)";
+                    e.currentTarget.style.boxShadow = `0 6px 16px ${c.shadow}`;
+                  }}
+                  onMouseLeave={e => { 
+                    e.currentTarget.style.background = c.bg; 
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
+                    e.currentTarget.style.boxShadow = isActive ? `0 4px 12px ${c.shadow}` : "none";
+                  }}
                   style={{
-                    padding: "10px 24px",
+                    padding: "12px 24px",
                     fontSize: 14,
                     fontWeight: 600,
                     border: "none",
                     borderRadius: 10,
                     cursor: "pointer",
                     whiteSpace: "nowrap",
-                    transition: "all .2s",
-                    background: isActive ? c.bg : c.bg,
+                    transition: "all 0.3s ease-out",
+                    background: c.bg,
                     color: isActive ? "#fff" : c.text,
-                    boxShadow: isActive ? `0 4px 12px rgba(124,58,237,0.35)` : "none",
+                    boxShadow: isActive ? `0 4px 12px ${c.shadow}` : "none",
                     outline: "none",
+                    flex: "1 1 200px",
+                    maxWidth: "220px",
+                    textAlign: "center"
                   }}>
                   {t.label}
                 </button>
@@ -797,8 +813,8 @@ export default function SkillzzaHome() {
                 ))}
               </div>
             </div>
-            <div className="studio-right-img" style={{ flex: 1, maxWidth: 440 }}>
-              <img src={getAssetPath("/mockdashboard.png")} alt="Dashboard" style={{ width: "100%", borderRadius: 16, boxShadow: "0 8px 32px rgba(0,0,0,0.10)" }} />
+            <div className="studio-right-img" style={{ flex: 1, maxWidth: 440, display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <img src={getAssetPath(tab.img)} alt={tab.title} style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.08))" }} />
             </div>
           </div>
         </div>
@@ -824,7 +840,30 @@ export default function SkillzzaHome() {
               <h4 style={{ fontSize: 16, fontWeight: 700, marginBottom: 14 }}>Areas of Expertise</h4>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
                 {["AI & Quantum", "Sustainability & Climate Action", "Aerial Intelligence", "Design Thinking", "EV & E-Mobility"].map((tag) => (
-                  <span key={tag} style={{ background: "#dbeafe", color: "#1d4ed8", padding: "8px 18px", borderRadius: 24, fontSize: 13, fontWeight: 500 }}>{tag}</span>
+                  <span key={tag} 
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateY(-2px) scale(1.05)";
+                      e.currentTarget.style.boxShadow = "0 4px 12px rgba(29, 78, 216, 0.2)";
+                      e.currentTarget.style.background = "#bfdbfe";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateY(0) scale(1)";
+                      e.currentTarget.style.boxShadow = "none";
+                      e.currentTarget.style.background = "#dbeafe";
+                    }}
+                    style={{ 
+                      background: "#dbeafe", 
+                      color: "#1d4ed8", 
+                      padding: "8px 18px", 
+                      borderRadius: 24, 
+                      fontSize: 13, 
+                      fontWeight: 500, 
+                      transition: "all 0.2s ease-in-out",
+                      cursor: "default",
+                      display: "inline-block"
+                  }}>
+                    {tag}
+                  </span>
                 ))}
               </div>
             </div>

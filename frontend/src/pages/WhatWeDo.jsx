@@ -296,6 +296,7 @@ const WhatWeDo = () => {
       </section>
 
       {/* ── Partner Section ── */}
+      {/*
       <section style={{
         backgroundImage: `url(${getAssetPath('/background-partner.png')})`,
         backgroundSize: "cover",
@@ -340,8 +341,10 @@ const WhatWeDo = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* ── Skill Digest Section ── */}
+      {/*
       <section style={{ background: "#fff", padding: "80px 0", fontFamily: "Inter, sans-serif" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
           <div className="insights-row" style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
@@ -396,6 +399,7 @@ const WhatWeDo = () => {
           </div>
         </div>
       </section>
+      */}
     </>
   );
 };
