@@ -119,16 +119,17 @@ const navItems = [
     layout: 'k12-vidya',
     width: 780,
     eyebrow: 'K-12 Vidya AI — school intelligence ecosystem',
+    studioLink: 'https://cognifyai.skillzza.com/',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     badge: 'K-12',
     items: [
-      { name: 'Vidya AI Virtual Internship', link: '/academy/byteminds', icon: '🏫', desc: 'Real-world AI, coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Flagship', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Skill Studio for Students', link: null, icon: '🎓', desc: 'Gamified AI-powered skill tracks — ML basics, robotics, sustainability, drone tech, quantum intro.', pill: 'Grades 6-12', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Teacher AI Upskill Lab', link: null, icon: '👩‍🏫', desc: 'Structured AI literacy programme for educators — pedagogy, tools, classroom integration, assessments.', pill: 'CPD certified', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'CCMM — AI Maturity for Schools', link: null, icon: '📊', desc: 'Continuous Capability & Maturity Model — benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Campus Connect — K12', link: null, icon: '🤝', desc: 'Links top-performing school students directly to university and early internship pipelines.', pill: 'Bridge', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Future Founders Track', link: null, icon: '🌱', desc: 'Entrepreneurship & innovation bootcamp — problem-solving, pitching, and startup thinking for teens.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Vidya AI Virtual Internship', link: 'https://cognifyai.skillzza.com/', icon: '🏫', desc: 'Real-world AI, coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Flagship', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Skill Studio for Students', link: 'https://skillzza-club.vercel.app/', icon: '🎓', desc: 'Gamified AI-powered skill tracks — ML basics, robotics, sustainability, drone tech, quantum intro.', pill: 'Grades 6-12', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Teacher AI Upskill Lab', link: 'https://cognifyai.skillzza.com/for-tutor.html', icon: '👩‍🏫', desc: 'Structured AI literacy programme for educators — pedagogy, tools, classroom integration, assessments.', pill: 'CPD certified', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'CCMM — AI Maturity for Schools', link: 'https://cognifyai.skillzza.com/for-tutor.html', icon: '📊', desc: 'Continuous Capability & Maturity Model — benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Campus Connect — K12', link: 'https://cognifyai.skillzza.com/#', icon: '🤝', desc: 'Links top-performing school students directly to university and early internship pipelines.', pill: 'Bridge', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Future Founders Track', link: 'https://cognifyai.skillzza.com/#', icon: '🌱', desc: 'Entrepreneurship & innovation bootcamp — problem-solving, pitching, and startup thinking for teens.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
     ],
   },
   {
@@ -139,11 +140,11 @@ const navItems = [
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
-      { name: 'School of AI & Quantum Intelligence', link: '/academy/byteminds', icon: '🧠', desc: 'ML, neural architectures, quantum algorithms, agentic AI systems', pill: 'AI + Quantum', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Global School of Sustainability & Climate Action', link: '/academy/sustainability', icon: '🌍', desc: 'Green tech, carbon markets, ESG frameworks, climate data science', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Centre of Digital & Design Excellence', link: '/academy/digital-design', icon: '🎨', desc: 'UX/UI, VFX, generative AI art, immersive media, spatial design', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'School of EV & E-Mobility', link: '/academy/ev-mobility', icon: '⚡', desc: 'Electric vehicles, battery systems, smart transport, grid tech', pill: 'Beta', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Institute of Aerial Intelligence', link: '/academy/udan', icon: '🚁', desc: 'Drone systems, UAV operations, aerial data & AI navigation', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'School of AI & Quantum Intelligence', link: null, icon: '🧠', desc: 'ML, neural architectures, quantum algorithms, agentic AI systems', pill: 'AI + Quantum', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Global School of Sustainability & Climate Action', link: 'https://globalschoolofsustainability.com/', icon: '🌍', desc: 'Green tech, carbon markets, ESG frameworks, climate data science', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Centre of Digital & Design Excellence', link: null, icon: '🎨', desc: 'UX/UI, VFX, generative AI art, immersive media, spatial design', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'School of EV & E-Mobility', link: null, icon: '⚡', desc: 'Electric vehicles, battery systems, smart transport, grid tech', pill: 'Beta', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Institute of Aerial Intelligence', link: null, icon: '🚁', desc: 'Drone systems, UAV operations, aerial data & AI navigation', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Cybersecurity & Ethical AI School', link: null, icon: '🔐', desc: 'Threat intelligence, AI safety, responsible automation, governance', pill: 'New', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
     ],
   },
@@ -182,7 +183,7 @@ const navItems = [
       { name: 'What We Do', link: '/company/what-we-do', icon: '◆', desc: 'Products, programmes & impact', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
       { name: 'Our Pathway', link: '/company/pathway', icon: '➜', desc: 'Roadmap for learners & partners', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
       { name: 'Partner Collaboration', link: '/company/partnerships', icon: '🤝', desc: 'Universities, enterprises, government & CSR partnerships', span: 2, iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
-      { name: 'Careers at Skillzza', link: null, icon: '💼', desc: 'Join the team building the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
+      { name: 'Careers at Skillzza', link: '/#partner-contact-form', icon: '💼', desc: 'Join the team building the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
       { name: 'Press & Media', link: null, icon: '📰', desc: 'News, features & brand resources', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
     ],
     serviceItems: [
@@ -587,28 +588,36 @@ const CardItem = ({ item, index }) => {
    LIST ROWS DROPDOWN — School of Technology, Insights
 ═══════════════════════════════════════════════════════════════ */
 
-const ListRowsDropdown = ({ navItem }) => (
-  <div>
+const ListRowsDropdown = ({ navItem, onComingSoon }) => {
+  return (
+  <div style={{ position: 'relative' }}>
     <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} gradient={navItem.accentGradient} />
     <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
       {navItem.items.map((item, i) => (
-        <ListRowItem key={item.name} item={item} index={i} />
+        <ListRowItem key={item.name} item={item} index={i} onComingSoon={onComingSoon} />
       ))}
     </div>
   </div>
-);
+  );
+};
 
-const ListRowItem = ({ item, index }) => {
+const ListRowItem = ({ item, index, onComingSoon }) => {
   const [hovered, setHovered] = useState(false);
   const glowRaw = item.iconShadow?.match(/rgba\([^)]+\)/)?.[0] || 'rgba(99,102,241,0.15)';
   const bgWash = glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.05)');
   const glowMid = glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.18)');
   const borderGradient = item.iconGradient || 'linear-gradient(135deg,#BD1723,#8947B3)';
+  const isExternal = item.link?.startsWith('http');
 
   return (
     <a
-      href={item.link ? getRoutePath(item.link) : undefined}
-      onClick={!item.link ? e => e.preventDefault() : undefined}
+      href={item.link ? (isExternal ? item.link : getRoutePath(item.link)) : undefined}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+      onClick={!item.link ? (e) => {
+        e.preventDefault();
+        onComingSoon?.(item.name);
+      } : undefined}
       className="sz-list-item"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -945,18 +954,20 @@ const K12VidyaDropdown = ({ navItem }) => (
   <div>
     <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} badge={navItem.badge} />
     {/* Banner */}
-    <div style={{
+    <a href={navItem.studioLink || undefined} target={navItem.studioLink?.startsWith('http') ? '_blank' : undefined} rel={navItem.studioLink?.startsWith('http') ? 'noopener noreferrer' : undefined} style={{
       background: 'linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%)',
       border: '1px solid #d1fae5', borderRadius: 12,
       padding: '10px 16px', marginBottom: 18,
       display: 'flex', alignItems: 'center', gap: 10,
+      textDecoration: 'none',
+      cursor: navItem.studioLink ? 'pointer' : 'default',
     }}>
       <span style={{ fontSize: 20 }}>🏫</span>
       <div>
         <div style={{ fontSize: 12, fontWeight: 700, color: '#065f46' }}>Vidya AI Studio</div>
         <div style={{ fontSize: 11, color: '#BD1723', lineHeight: 1.4 }}>AI-powered K-12 school intelligence — assessments, simulations & teacher upskilling.</div>
       </div>
-    </div>
+    </a>
     {/* 3-col card grid */}
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
       {navItem.items.map((item, i) => <K12Card key={item.name} item={item} index={i} />)}
@@ -968,9 +979,12 @@ const K12Card = ({ item }) => {
   const [h, setH] = useState(false);
   const glowRaw = item.iconShadow?.match(/rgba\([^)]+\)/)?.[0] || 'rgba(20,184,166,0.15)';
   const glowMid = glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.22)');
+  const isExternal = item.link?.startsWith('http');
   return (
     <a
       href={item.link || undefined}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
       onClick={!item.link ? e => e.preventDefault() : undefined}
       onMouseEnter={() => setH(true)}
       onMouseLeave={() => setH(false)}
@@ -1165,7 +1179,7 @@ const CompanyMegaDropdown = ({ navItem }) => (
    MegaDropdown — dispatches to layout-specific component
 ═══════════════════════════════════════════════════════════════ */
 
-const MegaDropdown = ({ navItem }) => {
+const MegaDropdown = ({ navItem, onComingSoon }) => {
   const renderers = {
     'card-grid': CardGridDropdown,
     'list-rows': ListRowsDropdown,
@@ -1177,7 +1191,7 @@ const MegaDropdown = ({ navItem }) => {
   };
   const Renderer = renderers[navItem.layout];
   if (!Renderer) return null;
-  return <Renderer navItem={navItem} />;
+  return <Renderer navItem={navItem} onComingSoon={onComingSoon} />;
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -1188,7 +1202,7 @@ const MegaDropdown = ({ navItem }) => {
    switching between nav items is instant (no overlap / glitch). */
 let _activeNavClose = null;
 
-const DesktopNavItem = ({ item }) => {
+const DesktopNavItem = ({ item, onComingSoon }) => {
   const [open, setOpen] = useState(false);
   const timeoutRef = useRef(null);
   const itemRef = useRef(null);
@@ -1331,7 +1345,7 @@ const DesktopNavItem = ({ item }) => {
             />
             {/* Content */}
             <div style={{ padding: '22px 24px 20px' }}>
-              <MegaDropdown navItem={item} />
+              <MegaDropdown navItem={item} onComingSoon={onComingSoon} />
             </div>
           </div>
         </div>
@@ -1424,6 +1438,7 @@ const MobileNavItem = ({ item, onClose }) => {
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [comingSoonText, setComingSoonText] = useState('');
 
   return (
     <>
@@ -1476,7 +1491,11 @@ const Navbar = () => {
             }}
           >
             {navItems.map((item) => (
-              <DesktopNavItem key={item.name} item={item} />
+              <DesktopNavItem
+                key={item.name}
+                item={item}
+                onComingSoon={(name) => setComingSoonText(`${name} is coming soon.`)}
+              />
             ))}
           </nav>
 
@@ -1504,7 +1523,7 @@ const Navbar = () => {
               Book a Demo
             </a>
             <a
-              href={getRoutePath('/product-tour')}
+              href={`${getRoutePath('/')}#ecosystem-diagram`}
               className="sz-cta-secondary"
               style={{
                 background: '#fff',
@@ -1585,7 +1604,7 @@ const Navbar = () => {
                 Book a Demo
               </a>
               <a
-                href={getRoutePath('/product-tour')}
+                href={`${getRoutePath('/')}#ecosystem-diagram`}
                 style={{
                   background: '#fff',
                   color: '#BD1723',
@@ -1604,6 +1623,56 @@ const Navbar = () => {
           </div>
         )}
       </header>
+
+      {comingSoonText && (
+        <div
+          onClick={() => setComingSoonText('')}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 1200,
+            background: 'rgba(15, 23, 42, 0.42)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 20,
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              minWidth: 280,
+              maxWidth: 460,
+              borderRadius: 16,
+              background: '#ffffff',
+              border: '1px solid rgba(189,23,35,0.22)',
+              boxShadow: '0 28px 60px rgba(15,23,42,0.26)',
+              overflow: 'hidden',
+            }}
+          >
+            <div style={{ height: 3, background: 'linear-gradient(135deg, #BD1723, #8947B3)' }} />
+            <div style={{ padding: '16px 18px 14px' }}>
+              <div style={{ fontSize: 16, fontWeight: 800, color: '#7f1d1d', marginBottom: 6 }}>Coming Soon</div>
+              <div style={{ fontSize: 13, color: '#334155', lineHeight: 1.5 }}>{comingSoonText}</div>
+              <button
+                onClick={() => setComingSoonText('')}
+                style={{
+                  marginTop: 12,
+                  border: 'none',
+                  borderRadius: 10,
+                  padding: '8px 12px',
+                  background: 'linear-gradient(135deg, #fee2e2, #f3e8ff)',
+                  color: '#7f1d1d',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                }}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Animations + responsive */}
       <style>{`

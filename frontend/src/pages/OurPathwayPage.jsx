@@ -1120,13 +1120,14 @@ function OurPathwayPage() {
             }}
           >
             {[
-              'UN Partners',
-              'Government Collaborations',
-              'Industry Partners',
-              'Educational Institutions',
-            ].map((label) => (
-              <div
-                key={label}
+              { label: 'UN Partners', to: '/company/partnerships#partner' },
+              { label: 'Government Collaborations', to: '/company/partnerships#government' },
+              { label: 'Industry Partners', to: '/company/partnerships#corporate' },
+              { label: 'Educational Institutions', to: '/company/partnerships#education' },
+            ].map((item) => (
+              <Link
+                key={item.label}
+                to={item.to}
                 className="pathway-pill"
                 style={{
                   minWidth: '220px',
@@ -1138,10 +1139,21 @@ function OurPathwayPage() {
                   fontWeight: 600,
                   fontSize: '16px',
                   color: '#FFFFFF',
+                  textDecoration: 'none',
+                  display: 'inline-block',
+                  transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0px 12px 22px rgba(0, 0, 0, 0.28)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0px 8px 18px rgba(0, 0, 0, 0.25)';
                 }}
               >
-                {label}
-              </div>
+                {item.label}
+              </Link>
             ))}
           </div>
         </div>

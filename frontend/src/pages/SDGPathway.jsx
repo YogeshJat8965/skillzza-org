@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
+import { getAssetPath, getBackgroundImageUrl, getRoutePath } from '../utils/assets';
 
 const SDGPathway = () => {
   const [activeTab, setActiveTab] = useState('individuals');
@@ -371,7 +371,7 @@ const SDGPathway = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* UN Partners */}
-            <div className="text-center">
+            <a href={getRoutePath('/company/partnerships#partner')} className="text-center block rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <div className="w-8 h-8 bg-white rounded-lg"></div>
               </div>
@@ -381,10 +381,10 @@ const SDGPathway = () => {
                 <li>ILO for decent work standards</li>
                 <li>UN Women for gender equality initiatives</li>
               </ul>
-            </div>
+            </a>
 
             {/* Government Collaborations */}
-            <div className="text-center">
+            <a href={getRoutePath('/company/partnerships#government')} className="text-center block rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <div className="w-8 h-8 bg-white rounded-lg"></div>
               </div>
@@ -394,10 +394,10 @@ const SDGPathway = () => {
                 <li>State government partnership programs</li>
                 <li>Policy advocacy and implementation</li>
               </ul>
-            </div>
+            </a>
 
             {/* Industry Partners */}
-            <div className="text-center">
+            <a href={getRoutePath('/company/partnerships#corporate')} className="text-center block rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <div className="w-8 h-8 bg-white rounded-lg"></div>
               </div>
@@ -407,10 +407,10 @@ const SDGPathway = () => {
                 <li>Startups for innovation projects</li>
                 <li>Social enterprises for community impact</li>
               </ul>
-            </div>
+            </a>
 
             {/* Educational Institutions */}
-            <div className="text-center">
+            <a href={getRoutePath('/company/partnerships#education')} className="text-center block rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <div className="w-8 h-8 bg-white rounded-lg"></div>
               </div>
@@ -420,7 +420,7 @@ const SDGPathway = () => {
                 <li>Research institutions for impact studies</li>
                 <li>International institutions for global exposure</li>
               </ul>
-            </div>
+            </a>
           </div>
         </div>
       </section>

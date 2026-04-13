@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react'
+import { getRoutePath } from '../utils/assets'
 
 function PartnerCollaborationPage() {
   const pageRef = useRef(null)
   const corporateSectionRef = useRef(null)
   const governmentSectionRef = useRef(null)
   const educationSectionRef = useRef(null)
+  const partnerSectionRef = useRef(null)
 
   const scrollToSection = (sectionRef) => {
     sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -16,6 +18,8 @@ function PartnerCollaborationPage() {
       scrollToSection(sectionRef)
     }
   }
+
+  const contactFormLink = `${getRoutePath('/')}#partner-contact-form`
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,6 +38,25 @@ function PartnerCollaborationPage() {
     els?.forEach((el) => observer.observe(el))
 
     return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '').toLowerCase()
+    const sectionMap = {
+      corporate: corporateSectionRef,
+      government: governmentSectionRef,
+      education: educationSectionRef,
+      partner: partnerSectionRef,
+    }
+
+    const targetRef = sectionMap[hash]
+    if (!targetRef?.current) return
+
+    const timer = setTimeout(() => {
+      targetRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 120)
+
+    return () => clearTimeout(timer)
   }, [])
 
   return (
@@ -485,6 +508,28 @@ function PartnerCollaborationPage() {
           font-style: italic;
         }
 
+        .cards-section__cta-btn {
+          margin-top: 18px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px 22px;
+          border-radius: 999px;
+          background: linear-gradient(135deg, #8B0404, #BD1723);
+          color: #ffffff;
+          font-size: 14px;
+          font-weight: 700;
+          text-decoration: none;
+          letter-spacing: 0.2px;
+          box-shadow: 0 8px 18px rgba(139, 4, 4, 0.3);
+          transition: transform 0.22s ease, box-shadow 0.22s ease;
+        }
+
+        .cards-section__cta-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 12px 24px rgba(139, 4, 4, 0.34);
+        }
+
         /* ===== CTA SECTION ===== */
         .collab-cta {
           background-color: #8A0303;
@@ -782,6 +827,7 @@ function PartnerCollaborationPage() {
               </article>
             </div>
             <p className="cards-section__cta collab-animate anim-fade-up">Ready to build a workforce that's skilled for today and prepared for tomorrow?</p>
+            <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
           </div>
         </section>
 
@@ -940,6 +986,7 @@ function PartnerCollaborationPage() {
               </article>
             </div>
             <p className="cards-section__cta collab-animate anim-fade-up">Together, let's build a skilled and future-ready nation.</p>
+            <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
           </div>
         </section>
 
@@ -1088,11 +1135,12 @@ function PartnerCollaborationPage() {
               </article>
             </div>
             <p className="cards-section__cta collab-animate anim-fade-up">Let's shape the innovators and leaders of tomorrow—together.</p>
+            <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
           </div>
         </section>
 
         {/* ===== CTA - READY TO PARTNER ===== */}
-        <section className="collab-cta">
+        <section ref={partnerSectionRef} className="collab-cta">
           <div className="collab-cta__inner collab-animate anim-fade-up">
             <h2 className="collab-cta__title">Ready to Partner with Skillzza?</h2>
             <p className="collab-cta__text">

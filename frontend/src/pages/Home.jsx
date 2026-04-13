@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
+import { getAssetPath, getBackgroundImageUrl, getRoutePath } from '../utils/assets';
 
 // ─── MARQUEE CSS ──────────────────────────────────────────────────────────────
 const MARQUEE_CSS = `
@@ -381,10 +381,26 @@ function PartnerLogoCard({ p }) {
 }
 
 // ─── PARTNERSHIP CARDS ───────────────────────────────────────────────────────
-function PartnerCard({ title, desc, iconSrc }) {
+function PartnerCard({ title, desc, iconSrc, targetHash }) {
   const [hovered, setHovered] = useState(false);
+
+  const handleClick = () => {
+    window.location.href = getRoutePath(`/company/partnerships${targetHash}`);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleClick();
+    }
+  };
+
   return (
     <div
+      role="button"
+      tabIndex={0}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
@@ -407,10 +423,10 @@ function PartnerCard({ title, desc, iconSrc }) {
 
 function PartnershipCards() {
   const cards = [
-    { title: <>Schools /<br />Universities</>, desc: "Partnering to Cultivate the Next Generation of Leaders", iconSrc: "/g2475.svg" },
-    { title: "Corporates", desc: "Driving Business Success through Workforce Excellence", iconSrc: "/corporation.svg" },
-    { title: "Government", desc: "Building a Skilled Workforce for a Stronger Economy", iconSrc: "/government.svg" },
-    { title: <>Become our<br />upskilling partner</>, desc: "Join Us in Shaping the Future of Work", iconSrc: "/Group 23779.svg" },
+    { title: <>Schools /<br />Universities</>, desc: "Partnering to Cultivate the Next Generation of Leaders", iconSrc: "/g2475.svg", targetHash: "#education" },
+    { title: "Corporates", desc: "Driving Business Success through Workforce Excellence", iconSrc: "/corporation.svg", targetHash: "#corporate" },
+    { title: "Government", desc: "Building a Skilled Workforce for a Stronger Economy", iconSrc: "/government.svg", targetHash: "#government" },
+    { title: <>Become our<br />upskilling partner</>, desc: "Join Us in Shaping the Future of Work", iconSrc: "/Group 23779.svg", targetHash: "#partner" },
   ];
 
   return (
@@ -432,7 +448,7 @@ function PartnershipCards() {
 // ─── ECOSYSTEM SECTION ────────────────────────────────────────────────────────
 function EcosystemSection() {
   return (
-    <section style={{ background: "linear-gradient(160deg,#f8f4ff 0%,#ede8fb 60%,#e4dcf8 100%)", padding: "80px 0 32px" }}>
+    <section id="ecosystem-diagram" style={{ background: "linear-gradient(160deg,#f8f4ff 0%,#ede8fb 60%,#e4dcf8 100%)", padding: "80px 0 32px" }}>
       <div className="section-inner" style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
 
         {/* Heading - kept as is */}
@@ -569,7 +585,74 @@ function FeatureStrip() {
 // ─── MAIN COMPONENT ───────────────────────────────────────────────────────────
 export default function SkillzzaHome() {
   const [activeTab, setActiveTab] = useState(0);
+  const [expertisePopup, setExpertisePopup] = useState({ open: false, tag: "" });
+  const [partnerForm, setPartnerForm] = useState({ name: "", email: "", mobile: "" });
+  const [partnerFormStatus, setPartnerFormStatus] = useState({ loading: false, message: "", type: "" });
   const tab = studioTabs[activeTab];
+
+  const handleStudioButtonClick = (tabId, buttonIndex) => {
+    // Potential Meter primary CTA is live.
+    if (tabId === 0 && buttonIndex === 0) {
+      window.location.href = getRoutePath('/product/potential-meter');
+    }
+    // MCQ CTA is intentionally left inactive until the route/page is implemented.
+  };
+
+  const handleExpertiseTagClick = (tag) => {
+    if (tag === "Sustainability & Climate Action") {
+      window.open("https://globalschoolofsustainability.com/", "_blank", "noopener,noreferrer");
+      return;
+    }
+    setExpertisePopup({ open: true, tag });
+  };
+
+  const handlePartnerFormChange = (field, value) => {
+    setPartnerForm((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handlePartnerFormSubmit = async (event) => {
+    event.preventDefault();
+
+    const name = partnerForm.name.trim();
+    const email = partnerForm.email.trim();
+    const mobile = partnerForm.mobile.trim();
+
+    if (!name || !email || !mobile) return;
+
+    try {
+      setPartnerFormStatus({ loading: true, message: "Sending your request...", type: "info" });
+
+      const response = await fetch("https://formsubmit.co/ajax/contact@skillzza.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          mobile: `India +91 ${mobile}`,
+          _subject: "Partnership Inquiry - Skillzza Home Page",
+          message: "Interested in partnering with Skillzza.",
+        }),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || result.success === "false") {
+        throw new Error(result?.message || "Unable to send right now.");
+      }
+
+      setPartnerForm({ name: "", email: "", mobile: "" });
+      setPartnerFormStatus({ loading: false, message: "Request sent successfully.", type: "success" });
+    } catch (error) {
+      setPartnerFormStatus({
+        loading: false,
+        message: error?.message || "Could not send right now. Please try again in a moment.",
+        type: "error",
+      });
+    }
+  };
 
   useEffect(() => {
     if (document.getElementById("skz-marquee-css")) return;
@@ -579,8 +662,65 @@ export default function SkillzzaHome() {
     document.head.appendChild(el);
   }, []);
 
+  useEffect(() => {
+    if (!expertisePopup.open) return;
+    const timer = setTimeout(() => {
+      setExpertisePopup({ open: false, tag: "" });
+    }, 2200);
+    return () => clearTimeout(timer);
+  }, [expertisePopup.open]);
+
   return (
     <div style={{ fontFamily: "'Inter','Segoe UI',sans-serif", color: "#1f2937", overflowX: "hidden" }}>
+
+      {expertisePopup.open && (
+        <div
+          onClick={() => setExpertisePopup({ open: false, tag: "" })}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 2200,
+            background: "rgba(15, 23, 42, 0.3)",
+            backdropFilter: "blur(3px)",
+            WebkitBackdropFilter: "blur(3px)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 20,
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              width: "min(92vw, 430px)",
+              borderRadius: 16,
+              background: "linear-gradient(145deg, #ffffff 0%, #faf5ff 100%)",
+              border: "1px solid rgba(107, 33, 168, 0.18)",
+              boxShadow: "0 18px 40px rgba(107, 33, 168, 0.22)",
+              overflow: "hidden",
+            }}
+          >
+            <div style={{ height: 3, background: "linear-gradient(90deg, #e02020 0%, #6b21a8 100%)" }} />
+            <div style={{ padding: "18px" }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <div style={{ width: 34, height: 34, borderRadius: 10, background: "linear-gradient(135deg, #fee2e2, #f3e8ff)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16 }}>⏳</div>
+                  <div style={{ fontSize: 16, fontWeight: 800, color: "#4c1d95" }}>Coming Soon</div>
+                </div>
+                <button
+                  onClick={() => setExpertisePopup({ open: false, tag: "" })}
+                  style={{ border: "none", background: "transparent", color: "#6b7280", fontSize: 19, cursor: "pointer", lineHeight: 1 }}
+                >
+                  ×
+                </button>
+              </div>
+              <p style={{ margin: "12px 0 0", fontSize: 14, lineHeight: 1.6, color: "#475569" }}>
+                <strong style={{ color: "#1f2937" }}>{expertisePopup.tag}</strong> will be launched soon.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* HERO SECTION */}
       <section style={{
@@ -809,7 +949,25 @@ export default function SkillzzaHome() {
               </ul>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                 {tab.btns.map((b, i) => (
-                  <button key={b} style={{ background: i === 0 ? "#6b21a8" : "transparent", color: i === 0 ? "#fff" : "#6b21a8", padding: "10px 22px", borderRadius: 8, fontSize: 14, fontWeight: 600, border: i === 0 ? "none" : "1.5px solid #6b21a8", cursor: "pointer" }}>{b}</button>
+                  <button
+                    key={b}
+                    onClick={() => handleStudioButtonClick(tab.id, i)}
+                    disabled={tab.id === 0 && i === 1}
+                    title={tab.id === 0 && i === 1 ? "MCQ page is not available yet" : undefined}
+                    style={{
+                      background: i === 0 ? "#6b21a8" : "transparent",
+                      color: i === 0 ? "#fff" : "#6b21a8",
+                      padding: "10px 22px",
+                      borderRadius: 8,
+                      fontSize: 14,
+                      fontWeight: 600,
+                      border: i === 0 ? "none" : "1.5px solid #6b21a8",
+                      cursor: tab.id === 0 && i === 1 ? "not-allowed" : "pointer",
+                      opacity: tab.id === 0 && i === 1 ? 0.7 : 1,
+                    }}
+                  >
+                    {b}
+                  </button>
                 ))}
               </div>
             </div>
@@ -841,6 +999,7 @@ export default function SkillzzaHome() {
               <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
                 {["AI & Quantum", "Sustainability & Climate Action", "Aerial Intelligence", "Design Thinking", "EV & E-Mobility"].map((tag) => (
                   <span key={tag} 
+                    onClick={() => handleExpertiseTagClick(tag)}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = "translateY(-2px) scale(1.05)";
                       e.currentTarget.style.boxShadow = "0 4px 12px rgba(29, 78, 216, 0.2)";
@@ -859,7 +1018,7 @@ export default function SkillzzaHome() {
                       fontSize: 13, 
                       fontWeight: 500, 
                       transition: "all 0.2s ease-in-out",
-                      cursor: "default",
+                      cursor: "pointer",
                       display: "inline-block"
                   }}>
                     {tag}
@@ -904,7 +1063,7 @@ export default function SkillzzaHome() {
       </section>
 
       {/* PARTNER CTA SECTION */}
-      <section style={{
+      <section id="partner-contact-form" style={{
         backgroundImage: `url(${getAssetPath('/background-partner.png')})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -934,22 +1093,62 @@ export default function SkillzzaHome() {
             <p style={{ fontSize: 15, color: "#4b5563", marginBottom: 28, lineHeight: 1.6, maxWidth: 400, fontFamily: "Inter, sans-serif" }}>
               Connect with our industry experts for a personalised consultation. Let's explore how our solutions can revolutionise your growth.
             </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 14, maxWidth: 420 }}>
-              <input placeholder="Name*" style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }} />
-              <input placeholder="Email*" style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }} />
+            <form onSubmit={handlePartnerFormSubmit} style={{ display: "flex", flexDirection: "column", gap: 14, maxWidth: 420 }}>
+              <input
+                value={partnerForm.name}
+                onChange={(e) => handlePartnerFormChange("name", e.target.value)}
+                placeholder="Name*"
+                required
+                style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }}
+              />
+              <input
+                type="email"
+                value={partnerForm.email}
+                onChange={(e) => handlePartnerFormChange("email", e.target.value)}
+                placeholder="Email*"
+                required
+                style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }}
+              />
               <div className="partner-phone-row" style={{ display: "flex", gap: 12 }}>
                 <div className="partner-country-code" style={{ display: "flex", alignItems: "center", gap: 4, padding: "13px 16px", borderRadius: 6, background: "#fff", color: "#1f2937", fontSize: 14, minWidth: 100, fontFamily: "Inter, sans-serif" }}>
                   <span>India</span><span style={{ color: "#9ca3af", marginLeft: 4 }}>+91</span>
                 </div>
-                <input className="partner-mobile-input" placeholder="Mobile Number*" style={{ flex: 1, padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif" }} />
+                <input
+                  className="partner-mobile-input"
+                  value={partnerForm.mobile}
+                  onChange={(e) => handlePartnerFormChange("mobile", e.target.value)}
+                  placeholder="Mobile Number*"
+                  required
+                  style={{ flex: 1, padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif" }}
+                />
               </div>
               <button
+                type="submit"
+                disabled={partnerFormStatus.loading}
                 onMouseEnter={e => e.currentTarget.style.opacity = "0.9"}
                 onMouseLeave={e => e.currentTarget.style.opacity = "1"}
-                style={{ width: "100%", padding: "14px", borderRadius: 6, background: "#1f2937", color: "#fff", border: "none", fontSize: 16, fontWeight: 600, cursor: "pointer", fontFamily: "Inter, sans-serif", marginTop: 4, transition: "opacity 0.2s" }}>
-                Get Started
+                style={{ width: "100%", padding: "14px", borderRadius: 6, background: "#1f2937", color: "#fff", border: "none", fontSize: 16, fontWeight: 600, cursor: partnerFormStatus.loading ? "not-allowed" : "pointer", fontFamily: "Inter, sans-serif", marginTop: 4, transition: "opacity 0.2s", opacity: partnerFormStatus.loading ? 0.75 : 1 }}>
+                {partnerFormStatus.loading ? "Sending..." : "Get Started"}
               </button>
-            </div>
+              {partnerFormStatus.message && (
+                <p
+                  style={{
+                    margin: "2px 0 0",
+                    fontSize: 13,
+                    fontWeight: 500,
+                    color:
+                      partnerFormStatus.type === "success"
+                        ? "#065f46"
+                        : partnerFormStatus.type === "error"
+                          ? "#991b1b"
+                          : "#334155",
+                    fontFamily: "Inter, sans-serif",
+                  }}
+                >
+                  {partnerFormStatus.message}
+                </p>
+              )}
+            </form>
           </div>
 
         </div>
@@ -963,7 +1162,12 @@ export default function SkillzzaHome() {
             {/* Left Column */}
             <div className="insights-left-col" style={{ display: "flex", flexDirection: "column", width: 280, flexShrink: 0, alignSelf: "stretch" }}>
               <h2 style={{ fontSize: 42, fontWeight: 800, marginBottom: 20, color: "#111827", fontFamily: "Inter, sans-serif", letterSpacing: "-0.5px" }}>Insights</h2>
-              <button style={{ border: "1.5px solid #d1d5db", background: "#fff", padding: "10px 20px", borderRadius: 8, fontSize: 14, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", marginBottom: 24, fontFamily: "Inter, sans-serif" }}>View all the resources</button>
+              <button
+                onClick={() => { window.location.href = getRoutePath('/insights'); }}
+                style={{ border: "1.5px solid #d1d5db", background: "#fff", padding: "10px 20px", borderRadius: 8, fontSize: 14, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", marginBottom: 24, fontFamily: "Inter, sans-serif" }}
+              >
+                View all the resources
+              </button>
 
               {/* Blog Card */}
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#ede9fe", display: "flex", flexDirection: "column", flex: 1 }}>
@@ -975,7 +1179,12 @@ export default function SkillzzaHome() {
                 <div style={{ padding: "20px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
                   <img src={getAssetPath("/pen.svg")} alt="Blog" style={{ width: 40, height: 40, marginBottom: 12 }} />
                   <h4 style={{ fontSize: 16, fontWeight: 700, color: "#111827", marginBottom: 16, lineHeight: 1.5, flex: 1, fontFamily: "Inter, sans-serif" }}>Skill Gaps to Skill Maps: The Future of Adaptive Career Assessment with AI</h4>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Read the Blog</button>
+                  <button
+                    onClick={() => { window.location.href = getRoutePath('/insights'); }}
+                    style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}
+                  >
+                    Read the Blog
+                  </button>
                 </div>
               </div>
             </div>
@@ -991,7 +1200,12 @@ export default function SkillzzaHome() {
                 <div style={{ padding: "18px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
                   <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, background: "#f5a623", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
                   <h4 style={{ fontSize: 17, fontWeight: 700, color: "#111827", marginBottom: 16, flex: 1, lineHeight: 1.4, fontFamily: "Inter, sans-serif" }}>2025 AI Talent & Salary Benchmark Report</h4>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Read the reports</button>
+                  <button
+                    onClick={() => { window.location.href = getRoutePath('/insights/ai-talent-research-hub'); }}
+                    style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}
+                  >
+                    Read the reports
+                  </button>
                 </div>
               </div>
 
@@ -1003,7 +1217,12 @@ export default function SkillzzaHome() {
                 <div style={{ padding: "18px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
                   <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, background: "#e02020", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
                   <h4 style={{ fontSize: 17, fontWeight: 700, color: "#111827", marginBottom: 16, flex: 1, lineHeight: 1.4, fontFamily: "Inter, sans-serif" }}>The Skill Blueprint AI & The Future of Work</h4>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Explore the Case studies</button>
+                  <button
+                    onClick={() => { window.location.href = getRoutePath('/insights/skill-blueprint'); }}
+                    style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}
+                  >
+                    Explore the Case studies
+                  </button>
                 </div>
               </div>
 
@@ -1016,7 +1235,12 @@ export default function SkillzzaHome() {
                 </div>
                 <div className="insights-podcast-action" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, flexShrink: 0 }}>
                   <img src={getAssetPath("/mic.svg")} alt="Podcast" style={{ width: 72, height: 72 }} />
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", whiteSpace: "nowrap", fontFamily: "Inter, sans-serif" }}>Listen now</button>
+                  <button
+                    onClick={() => { window.location.href = getRoutePath('/insights/skill-unplugged-podcast'); }}
+                    style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", whiteSpace: "nowrap", fontFamily: "Inter, sans-serif" }}
+                  >
+                    Listen now
+                  </button>
                 </div>
               </div>
 
