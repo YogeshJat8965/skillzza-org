@@ -320,7 +320,7 @@ function AboutPage() {
           margin: 0 auto;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 40px;
+            gap: 30px;
           align-items: start;
         }
 
@@ -335,14 +335,13 @@ function AboutPage() {
         .about-mv__card {
           color: #ffffff;
           border-radius: 48px 0 48px 0;
-          padding: 64px 48px;
+          padding: 56px 44px;
           width: 100%;
           box-sizing: border-box;
           display: flex;
           flex-direction: column;
           transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
           will-change: transform, box-shadow;
-          min-height: 440px;
           position: relative;
           z-index: 2;
         }
@@ -358,13 +357,15 @@ function AboutPage() {
           background: #A37DB3;
           margin-top: 0;
           z-index: 2;
+          max-width: 450px;
+          min-height: 350px;
         }
 
         .about-mv__line {
           display: flex;
           align-items: center;
           gap: 16px;
-          margin: 0 0 36px;
+          margin: 0 0 30px;
         }
 
         .about-mv__heading {
@@ -382,13 +383,13 @@ function AboutPage() {
 
         .about-mv__text {
           margin: 0;
-          font-size: 16.5px;
-          line-height: 1.6;
+          font-size: 15.5px;
+          line-height: 1.55;
           font-weight: 400;
         }
 
         .about-mv__text + .about-mv__text {
-          margin-top: 28px;
+          margin-top: 22px;
         }
 
         .about-mv__right {
@@ -400,12 +401,13 @@ function AboutPage() {
         }
 
         .about-mv__chip {
-          width: 90px;
-          height: 90px;
+          width: 110px;
+          height: 84px;
           background: #1994D2;
           border-radius: 40px 0 40px 0;
-          margin-bottom: -40px;
-          margin-left: 20px;
+          margin-bottom: 20px;
+          margin-left: 5px;
+          margin-top: -30px;
           position: relative;
           z-index: 1;
         }
@@ -413,6 +415,8 @@ function AboutPage() {
         .about-mv__card--vision {
           background: #C4312F;
           z-index: 2;
+          max-width: 450px;
+          min-height: 395px;
         }
 
         .about-mv__card--vision strong {
@@ -420,12 +424,12 @@ function AboutPage() {
         }
 
         .about-mv__chip--yellow {
-          width: 75px;
-          height: 75px;
+          width: 90px;
+          height: 68px;
           background: #F1C40F;
           border-radius: 36px 0 36px 0;
-          margin-top: -30px;
-          margin-right: 20px;
+          margin-top: 30px;
+          margin-right: 5px;
           position: relative;
           z-index: 1;
         }

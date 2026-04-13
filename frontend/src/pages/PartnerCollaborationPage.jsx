@@ -288,6 +288,22 @@ function PartnerCollaborationPage() {
           max-width: 750px;
         }
 
+        .section-description-below {
+          background-color: #ffffff;
+          padding: 40px 24px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+        }
+
+        .section-description-below__text {
+          max-width: 900px;
+          font-size: 18px;
+          line-height: 1.65;
+          color: #4a5568;
+          margin: 0;
+        }
+
         /* ===== DETAIL SECTION — CONTENT LEFT, IMAGE RIGHT ===== */
         .detail-section {
           background: #f5f5f5;
@@ -665,11 +681,14 @@ function PartnerCollaborationPage() {
           <div className="section-banner__content collab-animate anim-fade-up">
             <h3 className="section-banner__title">Corporate Partnerships</h3>
             <h4 className="section-banner__subtitle">Upskill Your Workforce. Empower Innovation.</h4>
-            <p className="section-banner__description">
-              In today's rapidly evolving business landscape, organizations need agile, skilled talent to stay competitive.
-              Skillzza partners with forward-thinking companies to create future-ready upskilling and reskilling programs that align with your strategic vision.
-            </p>
           </div>
+        </section>
+
+        <section className="section-description-below">
+          <p className="section-description-below__text collab-animate anim-fade-up">
+            In today's rapidly evolving business landscape, organizations need agile, skilled talent to stay competitive.
+            Skillzza partners with forward-thinking companies to create future-ready upskilling and reskilling programs that align with your strategic vision.
+          </p>
         </section>
 
         {/* Why Choose Skillzza — content left, image right */}
@@ -774,12 +793,15 @@ function PartnerCollaborationPage() {
           <div className="section-banner__content collab-animate anim-fade-up">
             <h3 className="section-banner__title">Government Partnerships</h3>
             <h4 className="section-banner__subtitle">Building a Skilled Nation Together</h4>
-            <p className="section-banner__description">
-              Skillzza collaborates with government bodies at every level to design scalable, sustainable skill
-              development programs that bridge workforce gaps, accelerate economic growth, and promote social equity
-              across communities.
-            </p>
           </div>
+        </section>
+
+        <section className="section-description-below">
+          <p className="section-description-below__text collab-animate anim-fade-up">
+            Skillzza collaborates with government bodies at every level to design scalable, sustainable skill
+            development programs that bridge workforce gaps, accelerate economic growth, and promote social equity
+            across communities.
+          </p>
         </section>
 
         {/* How We Empower Governments — content left, image right */}
@@ -929,13 +951,16 @@ function PartnerCollaborationPage() {
           <div className="section-banner__content collab-animate anim-fade-up">
             <h3 className="section-banner__title">Educational Partnerships</h3>
             <h4 className="section-banner__subtitle">Empowering Students for Tomorrow's World</h4>
-            <p className="section-banner__description">
-              Skillzza partners with schools and educational institutions to equip young minds with
-              essential 21st-century skills. Our programs go beyond traditional academics to inspire
-              innovation, creativity, and leadership—preparing students to become tomorrow's
-              changemakers.
-            </p>
           </div>
+        </section>
+
+        <section className="section-description-below">
+          <p className="section-description-below__text collab-animate anim-fade-up">
+            Skillzza partners with schools and educational institutions to equip young minds with
+            essential 21st-century skills. Our programs go beyond traditional academics to inspire
+            innovation, creativity, and leadership—preparing students to become tomorrow's
+            changemakers.
+          </p>
         </section>
 
         {/* Why Educational Institutions Choose Skillzza — image left, content right */}
