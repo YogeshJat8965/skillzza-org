@@ -19,8 +19,13 @@ const navItems = [
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     cta: {
       text: 'Start your free skill assessment',
-      sub: '— discover your strengths in under 10 minutes.',
+      sub: 'Discover your strengths in under 10 minutes.',
       link: '/product/potential-meter',
+      secondary: {
+        text: 'Job Simulation',
+        sub: 'Explore realistic job simulation',
+        link: '/explore/job-simulations',
+      },
     },
     items: [
       {
@@ -110,13 +115,13 @@ const navItems = [
   },
   /* NEW */
   {
-    name: 'K-12 Vidya',
+    name: 'Vedya',
     layout: 'k12-vidya',
     width: 780,
     eyebrow: 'K-12 Vidya AI — school intelligence ecosystem',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
-    badge: 'Studio',
+    badge: 'K-12',
     items: [
       { name: 'Vidya AI Virtual Internship', link: '/academy/byteminds', icon: '🏫', desc: 'Real-world AI, coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Flagship', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Skill Studio for Students', link: null, icon: '🎓', desc: 'Gamified AI-powered skill tracks — ML basics, robotics, sustainability, drone tech, quantum intro.', pill: 'Grades 6-12', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
@@ -143,27 +148,6 @@ const navItems = [
     ],
   },
   {
-    name: 'Services',
-    layout: 'services-grid',
-    width: 740,
-    eyebrow: 'Skillzza as a service — consulting & transformation',
-    dotColor: '#BD1723',
-    accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
-    cta: {
-      text: 'Partner with Skillzza',
-      sub: '— universities, enterprises and governments building future-ready talent.',
-      link: '/company/partnerships',
-    },
-    items: [
-      { name: 'Institution Transformation', icon: '🏛️', desc: 'End-to-end curriculum redesign and AI integration for universities and colleges.', link: '/company/partnerships' },
-      { name: 'Enterprise Skill Audit', icon: '🏢', desc: 'Workforce capability mapping, gap analysis and a 90-day upskilling roadmap.', link: '/company/partnerships' },
-      { name: 'Govt & CSR Programmes', icon: '🏛️', desc: 'National skill missions, youth employment schemes and impact reporting.', link: '/company/partnerships' },
-      { name: 'Assessment-as-a-Service', icon: '🎓', desc: 'White-label Potential Meter and CCMM for partners, boards and accreditors.', link: '/company/partnerships' },
-      { name: 'API & Platform Licensing', icon: '🔗', desc: "Embed Skillzza's assessment, simulation and matching engine into your platform.", link: '/company/partnerships' },
-      { name: 'Talent Intelligence Reports', icon: '📡', desc: 'Bespoke workforce analytics, labour market signals and sector skill reports.', link: '/company/partnerships' },
-    ],
-  },
-  {
     name: 'Insights',
     layout: 'list-rows',
     width: 540,
@@ -181,13 +165,18 @@ const navItems = [
   },
   {
     name: 'Company',
-    layout: 'compact-grid',
-    columns: 2,
-    width: 480,
-    eyebrow: 'About Skillzza',
+    layout: 'company-mega',
+    width: 760,
+    companyEyebrow: 'About Skillzza',
+    servicesEyebrow: 'Services & Consulting',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
-    items: [
+    cta: {
+      text: 'Partner with Skillzza',
+      sub: '— universities, enterprises and governments building future-ready talent.',
+      link: '/company/partnerships',
+    },
+    companyItems: [
       { name: 'About Us', link: '/company/about', icon: '✦', desc: 'Our story, mission & vision', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
       { name: 'Our Methodology', link: '/company/methodology', icon: '⚙', desc: 'How we build skill frameworks', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
       { name: 'What We Do', link: '/company/what-we-do', icon: '◆', desc: 'Products, programmes & impact', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
@@ -195,6 +184,14 @@ const navItems = [
       { name: 'Partner Collaboration', link: '/company/partnerships', icon: '🤝', desc: 'Universities, enterprises, government & CSR partnerships', span: 2, iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
       { name: 'Careers at Skillzza', link: null, icon: '💼', desc: 'Join the team building the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
       { name: 'Press & Media', link: null, icon: '📰', desc: 'News, features & brand resources', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
+    ],
+    serviceItems: [
+      { name: 'Institution Transformation', icon: '🏛️', desc: 'Curriculum redesign & AI integration for universities.', link: '/company/partnerships' },
+      { name: 'Enterprise Skill Audit', icon: '🏢', desc: 'Workforce gap analysis & 90-day upskilling roadmap.', link: '/company/partnerships' },
+      { name: 'Govt & CSR Programmes', icon: '🏛️', desc: 'National skill missions & youth employment schemes.', link: '/company/partnerships' },
+      { name: 'Assessment-as-a-Service', icon: '🎓', desc: 'White-label Potential Meter & CCMM for partners.', link: '/company/partnerships' },
+      { name: 'API & Platform Licensing', icon: '🔗', desc: "Embed Skillzza's engine into your platform.", link: '/company/partnerships' },
+      { name: 'Talent Intelligence Reports', icon: '📡', desc: 'Workforce analytics & sector skill signals.', link: '/company/partnerships' },
     ],
   },
 ];
@@ -283,6 +280,112 @@ const Eyebrow = ({ text, dotColor, gradient }) => (
 
 const CtaBar = ({ cta, gradient }) => {
   const [hovered, setHovered] = useState(false);
+
+  if (cta.secondary) {
+    const ctaButtons = [
+      { ...cta, icon: '→' },
+      { ...cta.secondary, icon: '↗' },
+    ];
+
+    return (
+      <div
+        style={{
+          marginTop: 18,
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+          gap: 12,
+        }}
+      >
+        {ctaButtons.map((btn) => (
+          <a
+            key={btn.text}
+            href={getRoutePath(btn.link)}
+            className="sz-dual-cta"
+            style={{
+              background: 'linear-gradient(120deg, #ffffff 0%, #fef2f2 35%, #f3e8ff 70%, #ffffff 100%)',
+              backgroundSize: '220% 220%',
+              animation: 'szCtaGradientShift 5.5s ease-in-out infinite',
+              border: '1px solid #f1f5f9',
+              borderRadius: 14,
+              padding: '14px 16px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: 10,
+              cursor: 'pointer',
+              transition: 'all 0.25s cubic-bezier(0.4,0,0.2,1)',
+              textDecoration: 'none',
+              boxShadow: '0 1px 4px rgba(15,23,42,0.04)',
+              position: 'relative',
+              overflow: 'hidden',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-1px)';
+              e.currentTarget.style.borderColor = 'rgba(189,23,35,0.25)';
+              e.currentTarget.style.boxShadow = '0 8px 20px rgba(189,23,35,0.08)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.borderColor = '#f1f5f9';
+              e.currentTarget.style.boxShadow = '0 1px 4px rgba(15,23,42,0.04)';
+            }}
+          >
+            <div
+              className="sz-dual-cta-shimmer"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: '-60%',
+                width: '52%',
+                height: '100%',
+                background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.52), transparent)',
+                transform: 'skewX(-18deg)',
+                pointerEvents: 'none',
+              }}
+            />
+            <div style={{ minWidth: 0, position: 'relative', zIndex: 1 }}>
+              <div style={{ fontSize: 13, color: '#0f172a', fontWeight: 700, lineHeight: 1.3 }}>{btn.text}</div>
+              <div style={{ fontSize: 11.5, color: '#64748b', marginTop: 3, lineHeight: 1.35 }}>{btn.sub}</div>
+            </div>
+            <div
+              className="sz-dual-cta-icon"
+              style={{
+                width: 34,
+                height: 34,
+                borderRadius: 10,
+                background: gradient || 'linear-gradient(135deg, #BD1723, #8947B3)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#fff',
+                fontSize: 14,
+                flexShrink: 0,
+                boxShadow: '0 2px 8px rgba(189,23,35,0.20)',
+                position: 'relative',
+                zIndex: 1,
+              }}
+            >
+              <span
+                className="sz-dual-cta-spark"
+                style={{
+                  position: 'absolute',
+                  top: -4,
+                  right: -3,
+                  fontSize: 10,
+                  color: '#fde68a',
+                  textShadow: '0 0 8px rgba(253,230,138,0.9)',
+                }}
+              >
+                ✦
+              </span>
+              <span className="sz-dual-cta-arrow">➜</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <a
       href={getRoutePath(cta.link)}
@@ -500,6 +603,7 @@ const ListRowItem = ({ item, index }) => {
   const glowRaw = item.iconShadow?.match(/rgba\([^)]+\)/)?.[0] || 'rgba(99,102,241,0.15)';
   const bgWash = glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.05)');
   const glowMid = glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.18)');
+  const borderGradient = item.iconGradient || 'linear-gradient(135deg,#BD1723,#8947B3)';
 
   return (
     <a
@@ -512,10 +616,10 @@ const ListRowItem = ({ item, index }) => {
         display: 'flex', alignItems: 'center', gap: 14,
         padding: '12px 15px',
         borderRadius: 13,
-        border: `1px solid ${hovered ? glowMid : 'transparent'}`,
+        border: '1px solid transparent',
         background: hovered
           ? `linear-gradient(135deg, #ffffff, ${bgWash})`
-          : 'transparent',
+          : '#ffffff',
         cursor: item.link ? 'pointer' : 'default',
         transition: 'all 0.28s cubic-bezier(0.34,1.2,0.64,1)',
         textDecoration: 'none',
@@ -527,6 +631,24 @@ const ListRowItem = ({ item, index }) => {
         animationDelay: `${index * 30}ms`,
       }}
     >
+      {/* Gradient border ring */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: -1,
+          borderRadius: 14,
+          padding: 1,
+          zIndex: 0,
+          background: borderGradient,
+          WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+          WebkitMaskComposite: 'xor',
+          maskComposite: 'exclude',
+          pointerEvents: 'none',
+          opacity: hovered ? 0.75 : 0.5,
+          transition: 'opacity 0.28s ease',
+        }}
+      />
+
       {/* Left accent bar */}
       <div style={{
         position: 'absolute', left: 0, top: '15%', bottom: '15%',
@@ -998,6 +1120,48 @@ const SvcCard = ({ item }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
+   CompanyMegaDropdown — About + Services in one dropdown
+═══════════════════════════════════════════════════════════════ */
+
+const CompanyMegaDropdown = ({ navItem }) => (
+  <div>
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: 18,
+      }}
+    >
+      <div>
+        <Eyebrow text={navItem.companyEyebrow} dotColor={navItem.dotColor} gradient={navItem.accentGradient} />
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: 12,
+          }}
+        >
+          {navItem.companyItems.map((item, i) => (
+            <CompactItem key={item.name} item={item} index={i} />
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <Eyebrow text={navItem.servicesEyebrow} dotColor={navItem.dotColor} gradient={navItem.accentGradient} />
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 10 }}>
+          {navItem.serviceItems.map((item, i) => (
+            <SvcCard key={item.name} item={item} index={i} />
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {navItem.cta && <CtaBar cta={navItem.cta} accentGradient={navItem.accentGradient} />}
+  </div>
+);
+
+/* ═══════════════════════════════════════════════════════════════
    MegaDropdown — dispatches to layout-specific component
 ═══════════════════════════════════════════════════════════════ */
 
@@ -1009,6 +1173,7 @@ const MegaDropdown = ({ navItem }) => {
     'agentic-ai': AgenticAIDropdown,
     'k12-vidya': K12VidyaDropdown,
     'services-grid': ServicesGridDropdown,
+    'company-mega': CompanyMegaDropdown,
   };
   const Renderer = renderers[navItem.layout];
   if (!Renderer) return null;
@@ -1099,6 +1264,26 @@ const DesktopNavItem = ({ item }) => {
         }}
       >
         {item.name}
+        {item.badge && (
+          <span
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              fontSize: 10,
+              fontWeight: 700,
+              lineHeight: 1,
+              padding: '2px 7px',
+              borderRadius: 999,
+              background: 'linear-gradient(135deg, #fee2e2, #fecaca)',
+              color: '#9f1239',
+              border: '1px solid rgba(244,63,94,0.28)',
+              marginLeft: 2,
+              marginRight: 1,
+            }}
+          >
+            {item.badge}
+          </span>
+        )}
         <IoIosArrowDown
           style={{
             fontSize: 11,
@@ -1469,6 +1654,31 @@ const Navbar = () => {
           50%     { opacity:1; }
         }
 
+        /* ── Dual CTA gradient movement ── */
+        @keyframes szCtaGradientShift {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+
+        /* ── Dual CTA shimmer sweep ── */
+        @keyframes szCtaSweep {
+          0% { left: -65%; }
+          100% { left: 145%; }
+        }
+
+        /* ── Dual CTA icon float ── */
+        @keyframes szCtaIconFloat {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-2px); }
+        }
+
+        /* ── Dual CTA arrow nudge ── */
+        @keyframes szCtaArrowNudge {
+          0%, 100% { transform: translateX(0); }
+          50% { transform: translateX(2px); }
+        }
+
         /* ── Entrance base ── */
         .sz-card-item, .sz-list-item, .sz-compact-item {
           animation: szCardIn 0.35s cubic-bezier(0.16,1,0.3,1) backwards;
@@ -1482,6 +1692,28 @@ const Navbar = () => {
         /* ── Card shimmer ── */
         .sz-shimmer-active {
           animation: szShimmer 0.75s ease-in-out !important;
+        }
+
+        /* ── Product dropdown dual CTA animations ── */
+        .sz-dual-cta .sz-dual-cta-shimmer {
+          animation: szCtaSweep 2.6s ease-in-out infinite;
+        }
+
+        .sz-dual-cta .sz-dual-cta-icon {
+          animation: szCtaIconFloat 2.4s ease-in-out infinite;
+        }
+
+        .sz-dual-cta .sz-dual-cta-arrow {
+          display: inline-block;
+          animation: szCtaArrowNudge 1.4s ease-in-out infinite;
+        }
+
+        .sz-dual-cta .sz-dual-cta-spark {
+          animation: szGlowPulse 1.8s ease-in-out infinite;
+        }
+
+        .sz-dual-cta:hover {
+          animation-duration: 2.8s !important;
         }
 
         /* ── List hover — icon ── */
