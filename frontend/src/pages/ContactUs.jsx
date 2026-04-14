@@ -66,10 +66,10 @@ function ContactUs() {
       <section
         style={{
           position: 'relative',
-          minHeight: '420px',
-          backgroundImage: getBackgroundImageUrl('/business-person-futuristic-business-environment.jpg'),
+          minHeight: '480px',
+          backgroundImage: getBackgroundImageUrl('/improvements/call center.jpg'),
           backgroundSize: 'cover',
-          backgroundPosition: 'center 42%',
+          backgroundPosition: 'center 22%',
           display: 'flex',
           alignItems: 'center',
           overflow: 'hidden',

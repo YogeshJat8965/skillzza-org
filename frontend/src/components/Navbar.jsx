@@ -176,7 +176,7 @@ const navItems = [
     cta: {
       text: 'Partner with Skillzza',
       sub: '— universities, enterprises and governments building future-ready talent.',
-      link: '/company/partnerships',
+      link: '/contact-us',
     },
     companyItems: [
       { name: 'About Us', link: '/company/about', icon: '✦', desc: 'Our story, mission & vision', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
