@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
+import { getAssetPath, getBackgroundImageUrl, getRoutePath } from '../utils/assets';
 const PotentialMeter = () => {
+  const contactUsPath = getRoutePath('/contact-us');
+
   return (
     <>
       {/* Hero Section */}
@@ -33,7 +35,7 @@ const PotentialMeter = () => {
                <button className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-bold py-4 px-10 rounded-full hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
                  🚀 Start Your Assessment - Only 15 Minutes
                </button>
-               <button className="border-2 border-white text-white font-semibold py-4 px-10 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300 backdrop-blur-sm bg-white/10">
+               <button onClick={() => { window.location.href = contactUsPath; }} className="border-2 border-white text-white font-semibold py-4 px-10 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300 backdrop-blur-sm bg-white/10">
                  📅 Book Demo
                </button>
              </div>
@@ -791,7 +793,7 @@ const PotentialMeter = () => {
                   <li>• Custom integration APIs</li>
                   <li>• Dedicated success manager</li>
                 </ul>
-                <button className="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-600 transition-colors font-semibold">
+                <button onClick={() => { window.location.href = contactUsPath; }} className="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-600 transition-colors font-semibold">
                   Contact Sales
                 </button>
               </div>
@@ -944,7 +946,7 @@ const PotentialMeter = () => {
               <button className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                 Start Your Assessment - Only 15 Minutes
               </button>
-              <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
+              <button onClick={() => { window.location.href = contactUsPath; }} className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
                 Book Demo
               </button>
             </div>
@@ -960,16 +962,16 @@ const PotentialMeter = () => {
             <div className="mt-12">
               <p className="text-2xl font-bold mb-4">Ready to Start?</p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                <button className="bg-white/20 backdrop-blur-sm text-white py-3 px-4 rounded-lg hover:bg-white/30 transition-all duration-300">
+                <button onClick={() => { window.location.href = contactUsPath; }} className="bg-white/20 backdrop-blur-sm text-white py-3 px-4 rounded-lg hover:bg-white/30 transition-all duration-300">
                   📞 Talk to Our Team
                 </button>
-                <button className="bg-white/20 backdrop-blur-sm text-white py-3 px-4 rounded-lg hover:bg-white/30 transition-all duration-300">
+                <button onClick={() => { window.location.href = contactUsPath; }} className="bg-white/20 backdrop-blur-sm text-white py-3 px-4 rounded-lg hover:bg-white/30 transition-all duration-300">
                   💬 Live Chat 24/7
                 </button>
-                <button className="bg-white/20 backdrop-blur-sm text-white py-3 px-4 rounded-lg hover:bg-white/30 transition-all duration-300">
+                <button onClick={() => { window.location.href = contactUsPath; }} className="bg-white/20 backdrop-blur-sm text-white py-3 px-4 rounded-lg hover:bg-white/30 transition-all duration-300">
                   📧 Email Us
                 </button>
-                <button className="bg-white/20 backdrop-blur-sm text-white py-3 px-4 rounded-lg hover:bg-white/30 transition-all duration-300">
+                <button onClick={() => { window.location.href = contactUsPath; }} className="bg-white/20 backdrop-blur-sm text-white py-3 px-4 rounded-lg hover:bg-white/30 transition-all duration-300">
                   📅 Book Demo
                 </button>
               </div>

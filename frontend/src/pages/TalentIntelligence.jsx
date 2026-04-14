@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
+import { getAssetPath, getBackgroundImageUrl, getRoutePath } from '../utils/assets';
 const TalentIntelligence = () => {
+  const contactUsPath = getRoutePath('/contact-us');
+
   return (
     <>
       {/* Hero Section */}
@@ -481,13 +483,13 @@ const TalentIntelligence = () => {
             <p className="text-lg mb-8 opacity-90">Experience the power of 360° talent analytics and predictive insights</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <button className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <button onClick={() => { window.location.href = contactUsPath; }} className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                 📊 Book Your Demo
               </button>
               <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
                 📥 Download TIS Overview
               </button>
-              <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
+              <button onClick={() => { window.location.href = contactUsPath; }} className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
                 📞 Speak with Expert
               </button>
             </div>

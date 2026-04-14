@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Lenis from 'lenis'
 
@@ -44,6 +44,19 @@ import InsightsPage from './pages/InsightsPage'
 import JobSimulationPage from './pages/JobSimulationPage'
 import XperiencePlatformPage from './pages/XperiencePlatformPage'
 import AIHackNexPage from './pages/AIHackNexPage'
+import ContactUs from './pages/ContactUs'
+import Login from './pages/Login'
+import SignUp from './pages/SignUp'
+
+function ScrollToTopOnRouteChange() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [pathname])
+
+  return null
+}
 
 export default function App() {
 
@@ -71,6 +84,7 @@ export default function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors">
+      <ScrollToTopOnRouteChange />
       <WelcomePopup />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -109,6 +123,13 @@ export default function App() {
 
         <Route path="/company/responsible-ai" element={<ResponsibleAI />} />
         <Route path="/company/product-catalog" element={<ProductCatalog />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/book-demo" element={<ContactUs />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-in" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/register" element={<SignUp />} />
       </Routes>
     </div>
   )

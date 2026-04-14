@@ -485,8 +485,9 @@ function OurPathwayPage() {
                 'Start Your Journey',
                 'Explore Programs',
               ].map((label) => (
-                <button
+                <Link
                   key={label}
+                  to="/signup"
                   className="pathway-btn"
                   style={{
                     fontFamily: "'Inter', 'Segoe UI', sans-serif",
@@ -502,10 +503,14 @@ function OurPathwayPage() {
                     boxShadow: '0px 4px 4px 0px #00000040',
                     letterSpacing: '0.5px',
                     minWidth: '240px',
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                   }}
                 >
                   {label}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
@@ -1120,10 +1125,10 @@ function OurPathwayPage() {
             }}
           >
             {[
-              { label: 'UN Partners', to: '/company/partnerships#partner' },
-              { label: 'Government Collaborations', to: '/company/partnerships#government' },
-              { label: 'Industry Partners', to: '/company/partnerships#corporate' },
-              { label: 'Educational Institutions', to: '/company/partnerships#education' },
+              { label: 'UN Partners', to: '/company/partnerships' },
+              { label: 'Government Collaborations', to: '/company/partnerships' },
+              { label: 'Industry Partners', to: '/company/partnerships' },
+              { label: 'Educational Institutions', to: '/company/partnerships' },
             ].map((item) => (
               <Link
                 key={item.label}
@@ -1395,11 +1400,12 @@ function OurPathwayPage() {
               }}
             >
               {[
-                "Apply Now - It's Free",
-                'Schedule Counseling Call',
-              ].map((label) => (
-                <button
-                  key={label}
+                { label: "Apply Now - It's Free", to: '/signup' },
+                { label: 'Schedule Counseling Call', to: '/contact-us' },
+              ].map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.to}
                   className="pathway-btn"
                   style={{
                     fontFamily: "'Inter', 'Segoe UI', sans-serif",
@@ -1413,10 +1419,14 @@ function OurPathwayPage() {
                     cursor: 'pointer',
                     boxShadow: '0px 6px 14px rgba(0, 0, 0, 0.15)',
                     whiteSpace: 'nowrap',
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                   }}
                 >
-                  {label}
-                </button>
+                  {item.label}
+                </Link>
               ))}
             </div>
           </div>

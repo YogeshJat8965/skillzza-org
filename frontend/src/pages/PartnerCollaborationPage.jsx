@@ -19,7 +19,7 @@ function PartnerCollaborationPage() {
     }
   }
 
-  const contactFormLink = `${getRoutePath('/')}#partner-contact-form`
+  const contactFormLink = getRoutePath('/contact-us')
 
   useEffect(() => {
     const observer = new IntersectionObserver(

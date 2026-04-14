@@ -536,12 +536,18 @@ const SDGPathway = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-red-600 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <a
+                href={getRoutePath('/signup')}
+                className="bg-white text-red-600 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              >
                 Apply Now - It's Free
-              </button>
-              <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-red-600 transition-all duration-300">
+              </a>
+              <a
+                href={getRoutePath('/contact-us')}
+                className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-red-600 transition-all duration-300"
+              >
                 Schedule Counseling Call
-              </button>
+              </a>
               <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-red-600 transition-all duration-300">
                 Download Program Brochure
               </button>

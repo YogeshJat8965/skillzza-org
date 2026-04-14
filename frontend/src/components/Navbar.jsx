@@ -183,7 +183,7 @@ const navItems = [
       { name: 'What We Do', link: '/company/what-we-do', icon: '◆', desc: 'Products, programmes & impact', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
       { name: 'Our Pathway', link: '/company/pathway', icon: '➜', desc: 'Roadmap for learners & partners', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
       { name: 'Partner Collaboration', link: '/company/partnerships', icon: '🤝', desc: 'Universities, enterprises, government & CSR partnerships', span: 2, iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
-      { name: 'Careers at Skillzza', link: '/#partner-contact-form', icon: '💼', desc: 'Join the team building the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
+      { name: 'Careers at Skillzza', link: '/contact-us', icon: '💼', desc: 'Join the team building the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
       { name: 'Press & Media', link: null, icon: '📰', desc: 'News, features & brand resources', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
     ],
     serviceItems: [

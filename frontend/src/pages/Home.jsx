@@ -594,6 +594,12 @@ export default function SkillzzaHome() {
     // Potential Meter primary CTA is live.
     if (tabId === 0 && buttonIndex === 0) {
       window.location.href = getRoutePath('/product/potential-meter');
+      return;
+    }
+    // Talent Transformation demo CTA should open Contact Us.
+    if (tabId === 2 && buttonIndex === 0) {
+      window.location.href = getRoutePath('/contact-us');
+      return;
     }
     // MCQ CTA is intentionally left inactive until the route/page is implemented.
   };

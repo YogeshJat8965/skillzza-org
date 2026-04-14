@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { getRoutePath } from '../utils/assets'
 
 function XperiencePlatformPage() {
+  const contactUsPath = getRoutePath('/contact-us')
   const [flippedCards, setFlippedCards] = useState([false, false, false, false])
   const [activeTab, setActiveTab] = useState(1) // 0: Learners, 1: Universities, 2: Enterprises, 3: Programs
   const [expandedAccordion, setExpandedAccordion] = useState(null) // Default: No accordion expanded
@@ -1239,6 +1241,7 @@ function XperiencePlatformPage() {
 
                   {/* Book Demo Link */}
                   <button
+                    onClick={() => { window.location.href = contactUsPath }}
                     className="hero-button text-xs sm:text-sm lg:text-base font-semibold underline whitespace-nowrap"
                     style={{ color: '#71717A' }}
                   >
