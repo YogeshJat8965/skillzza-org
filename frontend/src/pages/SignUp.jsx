@@ -1,13 +1,26 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 function SignUp() {
+  const navigate = useNavigate()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSignUpSubmit = (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    localStorage.setItem('skillzza_demo_auth', 'true')
+    localStorage.setItem('skillzza_demo_auth_type', 'signup')
+    setTimeout(() => {
+      navigate('/')
+    }, 450)
+  }
+
   return (
     <main className="auth-page auth-page--signup">
       <div className="auth-bg-orb auth-bg-orb--one" />
       <div className="auth-bg-orb auth-bg-orb--two" />
       <div className="auth-grid">
-        <section className="auth-brand">
+        <section className="auth-heading-row">
           <p className="auth-kicker">Create your profile</p>
           <h1 className="auth-title">Join Skillzza and build your future</h1>
         </section>
@@ -17,7 +30,7 @@ function SignUp() {
             <h2 className="auth-card-title">Sign Up</h2>
             <p className="auth-card-sub">Create your account in a minute</p>
 
-            <form className="auth-form" onSubmit={(e) => e.preventDefault()}>
+            <form className="auth-form" onSubmit={handleSignUpSubmit}>
               <label htmlFor="signup-name" className="auth-label">Full name</label>
               <input id="signup-name" className="auth-input" type="text" placeholder="Your full name" />
 
@@ -38,7 +51,9 @@ function SignUp() {
                 <span>I agree to the Terms and Privacy Policy.</span>
               </label>
 
-              <button type="submit" className="auth-submit">Create Account</button>
+              <button type="submit" className="auth-submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Creating Account...' : 'Create Account'}
+              </button>
             </form>
 
             <p className="auth-switch">
@@ -89,90 +104,50 @@ function SignUp() {
         .auth-grid {
           position: relative;
           z-index: 2;
-          width: min(1180px, 100%);
+          width: min(920px, 100%);
           display: grid;
-          grid-template-columns: 1.05fr 1fr;
-          gap: 28px;
+          grid-template-columns: 1fr;
+          gap: 14px;
           align-items: start;
         }
 
-        .auth-brand {
+        .auth-heading-row {
           color: #fff;
-          padding: 56px 40px 46px;
-          border-radius: 24px;
-          background: linear-gradient(140deg, #fba93e 0%, #f59e0b 34%, #ef7f1a 64%, #dc5b1a 100%);
-          border: 1px solid rgba(255, 232, 200, 0.38);
-          backdrop-filter: blur(5px);
-          box-shadow: 0 26px 62px rgba(122, 42, 8, 0.34);
+          padding: 2px 8px 6px;
+          text-align: center;
           animation: authRise 0.7s ease both;
-          position: relative;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-        }
-
-        .auth-brand::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background:
-            radial-gradient(420px 260px at -8% -12%, rgba(255, 246, 225, 0.38), transparent 62%),
-            radial-gradient(340px 220px at 108% 12%, rgba(255, 184, 108, 0.34), transparent 60%),
-            linear-gradient(160deg, rgba(122, 42, 8, 0.28), rgba(122, 42, 8, 0.08) 42%, rgba(255, 255, 255, 0.04));
-          pointer-events: none;
-        }
-
-        .auth-brand > * {
-          position: relative;
-          z-index: 1;
         }
 
         .auth-kicker {
           margin: 0 0 14px;
-          color: #fff3dc;
+          color: #ffd39f;
           text-transform: uppercase;
           letter-spacing: 1.3px;
           font-weight: 700;
           font-size: 13px;
-          text-shadow: 0 1px 6px rgba(99, 32, 6, 0.28);
+          text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
         }
 
         .auth-title {
           margin: 0;
-          font-size: clamp(36px, 4.6vw, 58px);
+          font-size: clamp(30px, 3.6vw, 46px);
           line-height: 1.08;
           letter-spacing: -0.02em;
           font-weight: 800;
-          max-width: 520px;
-          text-shadow: 0 2px 12px rgba(92, 29, 6, 0.38);
-        }
-
-        .auth-copy {
-          margin: 18px 0 0;
-          color: rgba(255, 255, 255, 0.9);
-          font-size: 17px;
-          line-height: 1.6;
-          max-width: 560px;
-        }
-
-        .auth-points {
-          margin: 24px 0 0;
-          padding-left: 22px;
-          display: grid;
-          gap: 10px;
-          color: rgba(255, 255, 255, 0.9);
-          font-size: 15px;
-          line-height: 1.5;
+          color: #facc15;
+          white-space: nowrap;
+          text-shadow: 0 3px 16px rgba(0, 0, 0, 0.35);
         }
 
         .auth-card-wrap {
           display: grid;
-          align-items: start;
+          align-items: center;
+          justify-items: center;
           animation: authRise 0.7s 0.08s ease both;
         }
 
         .auth-card {
+          width: min(760px, 100%);
           border-radius: 24px;
           background: linear-gradient(165deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.92));
           border: 1px solid rgba(255, 255, 255, 0.8);
@@ -308,14 +283,7 @@ function SignUp() {
         }
 
         @media (max-width: 980px) {
-          .auth-grid {
-            grid-template-columns: 1fr;
-            gap: 18px;
-          }
-
-          .auth-brand {
-            padding: 26px 22px;
-          }
+          .auth-grid { gap: 16px; }
         }
 
         @media (max-width: 640px) {
@@ -324,7 +292,8 @@ function SignUp() {
           }
 
           .auth-title {
-            font-size: 32px;
+            font-size: 30px;
+            white-space: normal;
           }
 
           .auth-card {

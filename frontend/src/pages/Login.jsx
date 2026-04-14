@@ -1,7 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Login() {
+  const navigate = useNavigate()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleLoginSubmit = (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    localStorage.setItem('skillzza_demo_auth', 'true')
+    localStorage.setItem('skillzza_demo_auth_type', 'login')
+    setTimeout(() => {
+      navigate('/')
+    }, 450)
+  }
+
   return (
     <main className="auth-page auth-page--login">
       <div className="auth-bg-orb auth-bg-orb--one" />
@@ -25,7 +38,7 @@ function Login() {
             <h2 className="auth-card-title">Log In</h2>
             <p className="auth-card-sub">Enter your credentials to continue</p>
 
-            <form className="auth-form" onSubmit={(e) => e.preventDefault()}>
+            <form className="auth-form" onSubmit={handleLoginSubmit}>
               <label htmlFor="login-email" className="auth-label">Email address</label>
               <input id="login-email" className="auth-input" type="email" placeholder="name@company.com" />
 
@@ -40,7 +53,9 @@ function Login() {
                 <a href="#" className="auth-link">Forgot password?</a>
               </div>
 
-              <button type="submit" className="auth-submit">Log In</button>
+              <button type="submit" className="auth-submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Logging In...' : 'Log In'}
+              </button>
             </form>
 
             <p className="auth-switch">
