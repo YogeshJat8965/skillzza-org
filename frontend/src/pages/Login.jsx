@@ -95,43 +95,67 @@ function Login() {
           display: grid;
           grid-template-columns: 1.05fr 1fr;
           gap: 28px;
-          align-items: stretch;
+          align-items: start;
         }
 
         .auth-brand {
           color: #fff;
           padding: 52px 40px;
           border-radius: 24px;
-          background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
-          border: 1px solid rgba(255, 255, 255, 0.18);
+          background: linear-gradient(140deg, #fba93e 0%, #f59e0b 34%, #ef7f1a 64%, #dc5b1a 100%);
+          border: 1px solid rgba(255, 232, 200, 0.38);
           backdrop-filter: blur(5px);
-          box-shadow: 0 25px 60px rgba(15, 23, 42, 0.28);
+          box-shadow: 0 26px 62px rgba(122, 42, 8, 0.34);
           animation: authRise 0.7s ease both;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+
+        .auth-brand::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background:
+            radial-gradient(420px 260px at -8% -12%, rgba(255, 246, 225, 0.38), transparent 62%),
+            radial-gradient(340px 220px at 108% 12%, rgba(255, 184, 108, 0.34), transparent 60%),
+            linear-gradient(160deg, rgba(122, 42, 8, 0.3), rgba(122, 42, 8, 0.1) 42%, rgba(255, 255, 255, 0.04));
+          pointer-events: none;
+        }
+
+        .auth-brand > * {
+          position: relative;
+          z-index: 1;
         }
 
         .auth-kicker {
           margin: 0 0 14px;
-          color: #ffd39f;
+          color: #fff3dc;
           text-transform: uppercase;
           letter-spacing: 1.3px;
           font-weight: 700;
-          font-size: 12px;
+          font-size: 13px;
+          text-shadow: 0 1px 6px rgba(99, 32, 6, 0.28);
         }
 
         .auth-title {
           margin: 0;
-          font-size: clamp(32px, 4.2vw, 52px);
+          font-size: clamp(36px, 4.6vw, 58px);
           line-height: 1.08;
           letter-spacing: -0.02em;
           font-weight: 800;
+          text-shadow: 0 2px 12px rgba(92, 29, 6, 0.38);
         }
 
         .auth-copy {
           margin: 18px 0 0;
-          color: rgba(255, 255, 255, 0.9);
-          font-size: 17px;
+          color: rgba(255, 255, 255, 0.97);
+          font-size: 18px;
           line-height: 1.6;
           max-width: 560px;
+          text-shadow: 0 1px 8px rgba(92, 29, 6, 0.24);
         }
 
         .auth-points {
@@ -139,14 +163,15 @@ function Login() {
           padding-left: 22px;
           display: grid;
           gap: 10px;
-          color: rgba(255, 255, 255, 0.9);
-          font-size: 15px;
+          color: rgba(255, 255, 255, 0.96);
+          font-size: 16px;
           line-height: 1.5;
+          text-shadow: 0 1px 6px rgba(92, 29, 6, 0.22);
         }
 
         .auth-card-wrap {
           display: grid;
-          align-items: center;
+          align-items: start;
           animation: authRise 0.7s 0.08s ease both;
         }
 

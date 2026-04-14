@@ -811,6 +811,7 @@ const newDesignCards = [
 ];
 
 function JobSimulationPage() {
+  const jobSimulationsRedirectUrl = 'https://portal.skillzza.com/'
   const [showAll, setShowAll] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedCompany, setSelectedCompany] = useState("all");
@@ -1395,6 +1396,14 @@ function JobSimulationPage() {
           cursor: pointer;
         }
 
+        .sim-card-link {
+          text-decoration: none;
+          color: inherit;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+
         .sim-card:hover {
           transform: translateY(-6px) scale(1.035);
           box-shadow: 0 30px 50px -12px rgba(0, 0, 0, 0.15), 0 15px 25px -8px rgba(0, 0, 0, 0.1);
@@ -1774,10 +1783,11 @@ function JobSimulationPage() {
         .jsim-cta-banner {
           background-color: #8c0912;
           background: linear-gradient(135deg, #7c0a02 0%, #a61217 50%, #6b0700 100%);
-              width: 92%;
-              max-width: 1400px;
-              margin: 40px auto;
-              border-radius: 12px;
+          width: 92%;
+          max-width: 1400px;
+          margin: 40px auto;
+          border-radius: 12px;
+          padding: 18px 28px 24px;
           justify-content: center;
           text-align: center;
           gap: 16px;
@@ -1789,11 +1799,14 @@ function JobSimulationPage() {
           font-family: 'Inter', sans-serif;
           font-size: 20px;
           font-weight: 400;
+          line-height: 1.45;
+          margin-bottom: 10px;
           position: relative;
           z-index: 1;
         }
 
         .jsim-cta-btn {
+          display: inline-block;
           background-color: #f7a930;
           color: #1a1a1a;
           border: none;
@@ -1802,6 +1815,7 @@ function JobSimulationPage() {
           font-family: 'Inter', sans-serif;
           font-size: 16px;
           font-weight: 600;
+          text-decoration: none;
           cursor: pointer;
           transition: background-color 0.3s, transform 0.2s;
           position: relative;
@@ -1984,38 +1998,41 @@ function JobSimulationPage() {
           {/* Job Simulation Cards */}
           <div className="sim-cards-grid">
             {visibleCards.length > 0 ? visibleCards.map((card, index) => (
-              <ScrollReveal key={index} delay={(index % 4) * 100} className="sim-card">
-                <div className="sim-card-image-wrap">
-                  <img src={card.image} alt={card.title} className="sim-card-image" />
-                  <div className="sim-card-logo-box">
-                    <img src={card.logo} alt="Company logo" />
+              <ScrollReveal key={index} delay={(index % 4) * 100}>
+                <a href={jobSimulationsRedirectUrl} className="sim-card sim-card-link">
+                  <div className="sim-card-image-wrap">
+                    <img src={card.image} alt={card.title} className="sim-card-image" />
+                    <div className="sim-card-logo-box">
+                      <img src={card.logo} alt="Company logo" />
+                    </div>
                   </div>
-                </div>
-                <div className="sim-card-body">
-                  <h3 className="sim-card-title">{card.title}</h3>
-                  <div className="sim-card-tags">
-                    <span className="sim-tag-category">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sim-tag-icon">
-                        <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"></path>
-                        <path d="M7 7h.01"></path>
-                      </svg>
-                      {card.category}
-                    </span>
-                    {card.hiring && (
-                      <span className="sim-hiring-badge">HIRING NOW</span>
-                    )}
+
+                  <div className="sim-card-body">
+                    <h3 className="sim-card-title">{card.title}</h3>
+                    <div className="sim-card-tags">
+                      <span className="sim-tag-category">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sim-tag-icon">
+                          <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"></path>
+                          <path d="M7 7h.01"></path>
+                        </svg>
+                        {card.category}
+                      </span>
+                      {card.hiring && (
+                        <span className="sim-hiring-badge">HIRING NOW</span>
+                      )}
+                    </div>
+                    <div className="sim-card-footer">
+                      <span className="sim-level">{card.level}</span>
+                      <span className="sim-duration">
+                        <svg className="sim-clock-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        {card.duration}
+                      </span>
+                    </div>
                   </div>
-                  <div className="sim-card-footer">
-                    <span className="sim-level">{card.level}</span>
-                    <span className="sim-duration">
-                      <svg className="sim-clock-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
-                      {card.duration}
-                    </span>
-                  </div>
-                </div>
+                </a>
               </ScrollReveal>
             )) : (
               <div style={{ padding: '40px', width: '100%', textAlign: 'center', gridColumn: '1 / -1', color: '#555b6e', fontFamily: 'Inter', fontSize: '18px' }}>
@@ -2135,9 +2152,9 @@ function JobSimulationPage() {
           Join Skillzza And Transcend Traditional Learning <br />Start your simulation today. Step confidently into the future with skills that matter.
         </ScrollReveal>
         <ScrollReveal delay={150}>
-          <button className="jsim-cta-btn">
+          <a href="https://portal.skillzza.com/" className="jsim-cta-btn">
             Get Started Now!
-          </button>
+          </a>
         </ScrollReveal>
       </section>
     </>

@@ -50,7 +50,7 @@ const studioTabs = [
       "Sharpened workplace readiness through applied learning.",
     ],
     btns: ["Start Your Simulation Journey"],
-    img: "/xperience_bg_bannerpng.jpg",
+    img: "/improvements/working%20on%20a%20laptop.jpg",
   },
   {
     id: 2, label: "Talent Transformation", title: "Talent Transformation",
@@ -63,7 +63,7 @@ const studioTabs = [
       "Real-time dashboard for HR and L&D decision-making.",
     ],
     btns: ["Book Your Demo", "Download TIS Overview"],
-    img: "/TransformingdatawithPowerBI_tile_img.png",
+    img: "https://etimg.etb2bimg.com/thumb/msid-118509285,imgsize-25106,width-1200,height=765,overlay-ethrsea/news/industry/indonesia-to-100000-digital-talents-in-2025-through-its-dts-program.jpg",
   },
   {
     id: 3, label: "AI HackNex", title: "AI HackNex",
@@ -75,7 +75,7 @@ const studioTabs = [
       "Showcase your AI, data, and coding skills on leading platforms.",
     ],
     btns: ["Join the Next Challenge", "See Winner Showcases"],
-    img: "/ai_hacknex_tile_img.png",
+    img: "https://habrastorage.org/getpro/habr/upload_files/d63/371/45e/d6337145e1a5b5b59671f214ac118ded.jpg",
   },
   {
     id: 4, label: "Hirenest", title: "Hirenest",
@@ -87,7 +87,7 @@ const studioTabs = [
       "AI-powered matching that eliminates guesswork.",
     ],
     btns: ["Access Talent Pool", "Partner with Us"],
-    img: "/building_intelligent_tile.png",
+    img: "/improvements/futuristic-technology-concept%20(1).jpg",
   },
 ];
 
@@ -892,7 +892,7 @@ export default function SkillzzaHome() {
       <section style={{ background: "#fff", padding: "48px 0 0" }}>
         <div className="section-inner" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
           <div style={{ textAlign: "center", marginBottom: 28 }}>
-            <h2 style={{ fontSize: 36, fontWeight: 800 }}>The Solution-Skill Studio</h2>
+            <h2 style={{ fontSize: 36, fontWeight: 800 }}>The Solution</h2>
           </div>
 
           {/* Pill Tabs */}
@@ -978,7 +978,11 @@ export default function SkillzzaHome() {
               </div>
             </div>
             <div className="studio-right-img" style={{ flex: 1, maxWidth: 440, display: "flex", justifyContent: "center", alignItems: "center" }}>
-              <img src={getAssetPath(tab.img)} alt={tab.title} style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.08))" }} />
+              <img
+                src={tab.img.startsWith('http') ? tab.img : getAssetPath(tab.img)}
+                alt={tab.title}
+                style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.08))" }}
+              />
             </div>
           </div>
         </div>

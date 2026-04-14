@@ -47,6 +47,7 @@ import AIHackNexPage from './pages/AIHackNexPage'
 import ContactUs from './pages/ContactUs'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
+import ProductComingSoon from './pages/ProductComingSoon'
 
 function ScrollToTopOnRouteChange() {
   const { pathname } = useLocation()
@@ -103,17 +104,17 @@ export default function App() {
         <Route path="/insights/skillzza-live" element={<InsightsPage />} />
         <Route path="/explore/job-simulations" element={<JobSimulationPage />} />
         <Route path="/explore/career-trajectory" element={<CareerTrajectory />} />
-        <Route path="/explore/skillzza-persona" element={<SkillzzaPersona />} />
+        <Route path="/explore/skillzza-persona" element={<ProductComingSoon />} />
         <Route path="/use-case/students" element={<StudentsUseCase />} />
         <Route path="/use-case/institutions" element={<InstitutionsUseCase />} />
         <Route path="/use-case/enterprises" element={<EnterprisesUseCase />} />
         <Route path="/use-case/government" element={<GovernmentUseCase />} />
 
-        <Route path="/product/hirenest" element={<Hirenest />} />
-        <Route path="/product/potential-meter" element={<PotentialMeter />} />
-        <Route path="/product/xperience-platform" element={<XperiencePlatformPage />} />
-        <Route path="/product/talent-intelligence" element={<TalentIntelligence />} />
-        <Route path="/product/ai-hacknex" element={<AIHackNexPage />} />
+        <Route path="/product/hirenest" element={<ProductComingSoon />} />
+        <Route path="/product/potential-meter" element={<ProductComingSoon />} />
+        <Route path="/product/xperience-platform" element={<ProductComingSoon />} />
+        <Route path="/product/talent-intelligence" element={<ProductComingSoon />} />
+        <Route path="/product/ai-hacknex" element={<ProductComingSoon />} />
         <Route path="/academy" element={<Academy />} />
         <Route path="/academy/byteminds" element={<ByteMinds />} />
         <Route path="/academy/sustainability" element={<Sustainability />} />
@@ -122,7 +123,7 @@ export default function App() {
         <Route path="/academy/udan" element={<Udan />} />
 
         <Route path="/company/responsible-ai" element={<ResponsibleAI />} />
-        <Route path="/company/product-catalog" element={<ProductCatalog />} />
+        <Route path="/company/product-catalog" element={<ProductComingSoon />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/book-demo" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />

@@ -30,7 +30,7 @@ const navItems = [
     items: [
       {
         name: 'The Potential Meter',
-        link: '/product/potential-meter',
+        link: null,
         icon: '🎯',
         desc: 'AI skill assessment engine that maps strengths, career readiness & growth gaps.',
         pill: 'AI-powered',
@@ -40,7 +40,7 @@ const navItems = [
       },
       {
         name: 'Xperience Platform',
-        link: '/product/xperience-platform',
+        link: null,
         icon: '🌐',
         desc: 'Immersive job simulations across domains to build real skills & portfolios.',
         pill: 'Flagship',
@@ -50,7 +50,7 @@ const navItems = [
       },
       {
         name: 'Talent Intelligence',
-        link: '/product/talent-intelligence',
+        link: null,
         icon: '📊',
         desc: 'End-to-end talent insights engine matching potential to job roles at scale.',
         pill: 'Enterprise',
@@ -60,7 +60,7 @@ const navItems = [
       },
       {
         name: 'AI HackNex',
-        link: '/product/ai-hacknex',
+        link: null,
         icon: '⚡',
         desc: 'High-impact AI hackathon platform for students & institutions.',
         pill: 'New',
@@ -70,7 +70,7 @@ const navItems = [
       },
       {
         name: 'Hirenest',
-        link: '/product/hirenest',
+        link: null,
         icon: '🤝',
         desc: 'College-to-campus hiring marketplace with pre-assessed student profiles.',
         pill: 'Marketplace',
@@ -80,7 +80,7 @@ const navItems = [
       },
       {
         name: 'Skillzza Persona',
-        link: '/explore/skillzza-persona',
+        link: null,
         icon: '🎭',
         desc: 'AI roleplay simulation — interviews, workplace scenarios, confidence building.',
         pill: 'AI Agent',
@@ -145,6 +145,7 @@ const navItems = [
       { name: 'Centre of Digital & Design Excellence', link: null, icon: '🎨', desc: 'UX/UI, VFX, generative AI art, immersive media, spatial design', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'School of EV & E-Mobility', link: null, icon: '⚡', desc: 'Electric vehicles, battery systems, smart transport, grid tech', pill: 'Beta', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Institute of Aerial Intelligence', link: null, icon: '🚁', desc: 'Drone systems, UAV operations, aerial data & AI navigation', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Future Skill Academy', link: null, icon: '🎓', desc: 'Future-ready learning tracks for AI, product, and digital careers.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Cybersecurity & Ethical AI School', link: null, icon: '🔐', desc: 'Threat intelligence, AI safety, responsible automation, governance', pill: 'New', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
     ],
   },
@@ -156,7 +157,7 @@ const navItems = [
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
-      { name: 'Skill Blueprint — Case Studies', link: '/insights/skill-blueprint', icon: '📘', desc: 'Real-world success stories in skill development', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Skill Blueprint', link: '/insights/skill-blueprint', icon: '📘', desc: 'Real-world success stories in skill development', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'The Skillzza Digest', link: '/insights/skill-digest', icon: '✍️', desc: 'Insights, trends & game-changers shaping future skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'AI Talent Research Hub', link: '/insights/ai-talent-research-hub', icon: '🔬', desc: 'Reports & whitepapers on AI & workforce transformation', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Skill Unplugged Podcast', link: '/insights/skill-unplugged-podcast', icon: '🎙️', desc: 'Raw, Real & Revolutionary talks on the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
@@ -190,8 +191,6 @@ const navItems = [
       { name: 'Institution Transformation', icon: '🏛️', desc: 'Curriculum redesign & AI integration for universities.', link: '/company/partnerships' },
       { name: 'Enterprise Skill Audit', icon: '🏢', desc: 'Workforce gap analysis & 90-day upskilling roadmap.', link: '/company/partnerships' },
       { name: 'Govt & CSR Programmes', icon: '🏛️', desc: 'National skill missions & youth employment schemes.', link: '/company/partnerships' },
-      { name: 'Assessment-as-a-Service', icon: '🎓', desc: 'White-label Potential Meter & CCMM for partners.', link: '/company/partnerships' },
-      { name: 'API & Platform Licensing', icon: '🔗', desc: "Embed Skillzza's engine into your platform.", link: '/company/partnerships' },
       { name: 'Talent Intelligence Reports', icon: '📡', desc: 'Workforce analytics & sector skill signals.', link: '/company/partnerships' },
     ],
   },
@@ -466,7 +465,7 @@ const GradientIcon = ({ icon, gradient, shadow, size = 44, fontSize = 20 }) => (
    CARD GRID DROPDOWN — Products, Use Cases, Explore
 ═══════════════════════════════════════════════════════════════ */
 
-const CardGridDropdown = ({ navItem }) => (
+const CardGridDropdown = ({ navItem, onComingSoon }) => (
   <div>
     <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} gradient={navItem.accentGradient} />
     <div
@@ -477,19 +476,22 @@ const CardGridDropdown = ({ navItem }) => (
       }}
     >
       {navItem.items.map((item, i) => (
-        <CardItem key={item.name} item={item} index={i} />
+        <CardItem key={item.name} item={item} index={i} onComingSoon={onComingSoon} />
       ))}
     </div>
     {navItem.cta && <CtaBar cta={navItem.cta} gradient={navItem.accentGradient} />}
   </div>
 );
 
-const CardItem = ({ item, index }) => {
+const CardItem = ({ item, index, onComingSoon }) => {
   const [hovered, setHovered] = useState(false);
   return (
     <a
       href={item.link ? getRoutePath(item.link) : undefined}
-      onClick={!item.link ? e => e.preventDefault() : undefined}
+      onClick={!item.link ? (e) => {
+        e.preventDefault();
+        onComingSoon?.(item.name);
+      } : undefined}
       className="sz-card-item"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -1358,7 +1360,7 @@ const DesktopNavItem = ({ item, onComingSoon }) => {
    MobileNavItem — accordion with icons
 ═══════════════════════════════════════════════════════════════ */
 
-const MobileNavItem = ({ item, onClose }) => {
+const MobileNavItem = ({ item, onClose, onComingSoon }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -1395,8 +1397,16 @@ const MobileNavItem = ({ item, onClose }) => {
           {item.items.map((sub) => (
             <a
               key={sub.name}
-              href={getRoutePath(sub.link)}
-              onClick={onClose}
+              href={sub.link ? getRoutePath(sub.link) : undefined}
+              onClick={(e) => {
+                if (!sub.link) {
+                  e.preventDefault();
+                  onClose?.();
+                  onComingSoon?.(sub.name);
+                  return;
+                }
+                onClose?.();
+              }}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -1578,6 +1588,7 @@ const Navbar = () => {
                 key={item.name}
                 item={item}
                 onClose={() => setMobileOpen(false)}
+                onComingSoon={(name) => setComingSoonText(`${name} is coming soon.`)}
               />
             ))}
             <div

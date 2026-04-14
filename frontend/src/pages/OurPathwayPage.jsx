@@ -24,6 +24,7 @@ function useScrollReveal(options = {}) {
 
 function OurPathwayPage() {
   const [activeTab, setActiveTab] = useState('individuals')
+  const [showPotentialComingSoon, setShowPotentialComingSoon] = useState(false)
 
   const tabOptions = [
     { id: 'individuals', label: 'For Individuals' },
@@ -482,35 +483,64 @@ function OurPathwayPage() {
               }}
             >
               {[
-                'Start Your Journey',
-                'Explore Programs',
-              ].map((label) => (
-                <Link
-                  key={label}
-                  to="/signup"
-                  className="pathway-btn"
-                  style={{
-                    fontFamily: "'Inter', 'Segoe UI', sans-serif",
-                    padding: '16px 52px',
-                    fontSize: '16px',
-                    fontWeight: 600,
-                    color: '#FFFFFF',
-                    borderRadius: '9999px',
-                    border: 'none',
-                    cursor: 'pointer',
-                    whiteSpace: 'nowrap',
-                    backgroundColor: '#E11313',
-                    boxShadow: '0px 4px 4px 0px #00000040',
-                    letterSpacing: '0.5px',
-                    minWidth: '240px',
-                    textDecoration: 'none',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  {label}
-                </Link>
+                { label: 'Start Your Journey', action: 'coming-soon' },
+                { label: 'Explore Programs', to: '/signup' },
+              ].map((item) => (
+                item.action === 'coming-soon' ? (
+                  <button
+                    key={item.label}
+                    type="button"
+                    onClick={() => setShowPotentialComingSoon(true)}
+                    className="pathway-btn"
+                    style={{
+                      fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                      padding: '16px 52px',
+                      fontSize: '16px',
+                      fontWeight: 600,
+                      color: '#FFFFFF',
+                      borderRadius: '9999px',
+                      border: 'none',
+                      cursor: 'pointer',
+                      whiteSpace: 'nowrap',
+                      backgroundColor: '#E11313',
+                      boxShadow: '0px 4px 4px 0px #00000040',
+                      letterSpacing: '0.5px',
+                      minWidth: '240px',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.label}
+                    to={item.to}
+                    className="pathway-btn"
+                    style={{
+                      fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                      padding: '16px 52px',
+                      fontSize: '16px',
+                      fontWeight: 600,
+                      color: '#FFFFFF',
+                      borderRadius: '9999px',
+                      border: 'none',
+                      cursor: 'pointer',
+                      whiteSpace: 'nowrap',
+                      backgroundColor: '#E11313',
+                      boxShadow: '0px 4px 4px 0px #00000040',
+                      letterSpacing: '0.5px',
+                      minWidth: '240px',
+                      textDecoration: 'none',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                )
               ))}
             </div>
           </div>
@@ -1478,6 +1508,56 @@ function OurPathwayPage() {
           </div>
         </div>
       </section>
+
+      {showPotentialComingSoon && (
+        <div
+          onClick={() => setShowPotentialComingSoon(false)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 1200,
+            background: 'rgba(15, 23, 42, 0.42)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 20,
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              minWidth: 280,
+              maxWidth: 460,
+              borderRadius: 16,
+              background: '#ffffff',
+              border: '1px solid rgba(189, 23, 35, 0.22)',
+              boxShadow: '0 28px 60px rgba(15, 23, 42, 0.26)',
+              overflow: 'hidden',
+            }}
+          >
+            <div style={{ height: 3, background: 'linear-gradient(135deg, #BD1723, #8947B3)' }} />
+            <div style={{ padding: '16px 18px 14px' }}>
+              <div style={{ fontSize: 16, fontWeight: 800, color: '#7f1d1d', marginBottom: 6 }}>Coming Soon</div>
+              <div style={{ fontSize: 13, color: '#334155', lineHeight: 1.5 }}>The Potential Meter is coming soon.</div>
+              <button
+                onClick={() => setShowPotentialComingSoon(false)}
+                style={{
+                  marginTop: 12,
+                  border: 'none',
+                  borderRadius: 10,
+                  padding: '8px 12px',
+                  background: 'linear-gradient(135deg, #fee2e2, #f3e8ff)',
+                  color: '#7f1d1d',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                }}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }

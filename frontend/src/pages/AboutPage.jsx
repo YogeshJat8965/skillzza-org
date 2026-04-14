@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { getRoutePath } from '../utils/assets'
 
 /* ── Custom hook for scroll-reveal animation ── */
 function useScrollReveal(options = {}) {
@@ -557,7 +558,7 @@ function AboutPage() {
         </section>
         <section ref={ctaRef} className="about-cta-strip about-reveal">
           <div className="about-cta-strip__inner about-stagger">
-            <button type="button" className="about-cta-strip__button">Join</button>
+            <a href={getRoutePath('/signup')} className="about-cta-strip__button">Join</a>
             <p className="about-cta-strip__text">Skillzza Today And Gain The Skills You Need To Shape The Future You Aspire To.</p>
           </div>
         </section>

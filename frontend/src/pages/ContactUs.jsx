@@ -119,74 +119,25 @@ function ContactUs() {
         <div className="cu-flow-inner">
           <h2 className="cu-flow-title">Join the Skillzza</h2>
 
+          <div className="cu-steps cu-steps--top" aria-label="Progress steps">
+            {steps.map((step, index) => {
+              const isActive = step.id === activeStep
+              const isPast = step.id < activeStep
+              return (
+                <div key={step.id} className="cu-step-row">
+                  <div className={`cu-step-dot ${isActive ? 'is-active' : ''} ${isPast ? 'is-past' : ''}`}>
+                    {String(step.id).padStart(2, '0')}
+                  </div>
+                  <div className={`cu-step-text ${isActive ? 'is-active' : ''}`}>
+                    {step.label}
+                  </div>
+                  {index < steps.length - 1 && <span className="cu-step-connector" aria-hidden="true" />}
+                </div>
+              )
+            })}
+          </div>
+
           <div className="cu-flow-grid">
-            <aside className="cu-left-col">
-              <div className="cu-steps" aria-label="Progress steps">
-                {steps.map((step, index) => {
-                  const isActive = step.id === activeStep
-                  const isPast = step.id < activeStep
-                  return (
-                    <div key={step.id} className="cu-step-row">
-                      <div className={`cu-step-dot ${isActive ? 'is-active' : ''} ${isPast ? 'is-past' : ''}`}>
-                        {String(step.id).padStart(2, '0')}
-                      </div>
-                      <div className={`cu-step-text ${isActive ? 'is-active' : ''}`}>
-                        {step.label}
-                      </div>
-                      {index < steps.length - 1 && <div className="cu-step-line" />}
-                    </div>
-                  )
-                })}
-              </div>
-
-              <section className="cu-contact-card" aria-label="Contact information">
-                <h3 className="cu-contact-title">Contact Information</h3>
-
-                <div className="cu-contact-item">
-                  <div className="cu-contact-icon cu-contact-icon--blue" aria-hidden="true">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="cu-contact-label">Headquarters</h4>
-                    <p className="cu-contact-text">
-                      5th floor,wingA Statesman, House,<br />
-                      Barakhamba Road, Connaught Place,<br />
-                      Central Delhi, India , Civil Lines,<br />
-                      CENTRAL (Delhi) - 110001
-                    </p>
-                  </div>
-                </div>
-
-                <div className="cu-contact-item">
-                  <div className="cu-contact-icon cu-contact-icon--green" aria-hidden="true">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.8 19.8 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.1 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="cu-contact-label">Phone</h4>
-                    <p className="cu-contact-text">+91 95959 57878</p>
-                  </div>
-                </div>
-
-                <div className="cu-contact-item">
-                  <div className="cu-contact-icon cu-contact-icon--green" aria-hidden="true">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" />
-                      <polyline points="22,6 12,13 2,6" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="cu-contact-label">Email</h4>
-                    <p className="cu-contact-text">Contact@ChamberofSmartManufacturingCouncil</p>
-                  </div>
-                </div>
-              </section>
-            </aside>
-
             <section className="cu-form-card" aria-label="Contact form wizard">
               <h3 className="cu-form-title">{steps[activeStep - 1].label}</h3>
 
@@ -271,6 +222,55 @@ function ContactUs() {
                 {submitted && <p className="cu-success">Application submitted successfully.</p>}
               </form>
             </section>
+
+            <aside className="cu-right-col">
+              <section className="cu-contact-card" aria-label="Contact information">
+                <h3 className="cu-contact-title">Contact Information</h3>
+
+                <div className="cu-contact-item">
+                  <div className="cu-contact-icon cu-contact-icon--blue" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="cu-contact-label">Headquarters</h4>
+                    <p className="cu-contact-text">
+                      5th floor,wingA Statesman, House,<br />
+                      Barakhamba Road, Connaught Place,<br />
+                      Central Delhi, India , Civil Lines,<br />
+                      CENTRAL (Delhi) - 110001
+                    </p>
+                  </div>
+                </div>
+
+                <div className="cu-contact-item">
+                  <div className="cu-contact-icon cu-contact-icon--green" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.8 19.8 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.1 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="cu-contact-label">Phone</h4>
+                    <p className="cu-contact-text">+91 95959 57878</p>
+                  </div>
+                </div>
+
+                <div className="cu-contact-item">
+                  <div className="cu-contact-icon cu-contact-icon--green" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="cu-contact-label">Email</h4>
+                    <p className="cu-contact-text">Contact@ChamberofSmartManufacturingCouncil</p>
+                  </div>
+                </div>
+              </section>
+            </aside>
           </div>
         </div>
       </section>
@@ -328,38 +328,57 @@ function ContactUs() {
 
         .cu-flow-grid {
           display: grid;
-          grid-template-columns: 1.05fr 1fr;
-          gap: 42px;
+          grid-template-columns: 1.25fr 0.9fr;
+          gap: 22px;
           align-items: stretch;
         }
 
         .cu-steps {
           position: relative;
-          padding: 8px 0 0 8px;
+          padding: 0;
           animation: cuFadeUp 0.75s 0.08s ease both;
         }
 
-        .cu-left-col {
+        .cu-steps--top {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 14px;
+          margin-bottom: 34px;
+        }
+
+        .cu-right-col {
           display: flex;
           flex-direction: column;
-          gap: 28px;
-          min-height: 100%;
         }
 
         .cu-step-row {
           position: relative;
           display: flex;
           align-items: center;
-          gap: 16px;
-          min-height: 122px;
-          padding-left: 8px;
+          gap: 12px;
+          min-height: 72px;
+          padding: 0 6px;
+        }
+
+        .cu-step-connector {
+          flex: 1;
+          min-width: 24px;
+          height: 2px;
+          margin-left: 6px;
+          background: linear-gradient(90deg, rgba(148, 163, 184, 0.45), rgba(148, 163, 184, 0.16));
+          border-radius: 999px;
         }
 
         .cu-step-dot {
           position: relative;
           z-index: 2;
-          width: 44px;
-          height: 44px;
+          width: 46px;
+          height: 46px;
+          min-width: 46px;
+          min-height: 46px;
+          aspect-ratio: 1 / 1;
+          flex: 0 0 46px;
+          flex-shrink: 0;
           border-radius: 50%;
           border: 2px solid rgba(255, 255, 255, 0.28);
           color: rgba(241, 245, 249, 0.55);
@@ -367,6 +386,7 @@ function ContactUs() {
           align-items: center;
           justify-content: center;
           font-size: 18px;
+          line-height: 1;
           font-weight: 600;
           background: transparent;
           transition: all 0.28s ease;
@@ -387,24 +407,14 @@ function ContactUs() {
 
         .cu-step-text {
           color: rgba(241, 245, 249, 0.45);
-          font-size: 32px;
+          font-size: 28px;
           font-weight: 700;
-          line-height: 1.05;
+          line-height: 1.1;
           transition: color 0.25s ease;
         }
 
         .cu-step-text.is-active {
           color: #ffffff;
-        }
-
-        .cu-step-line {
-          position: absolute;
-          left: 29px;
-          top: 83px;
-          width: 2px;
-          height: 78px;
-          background: linear-gradient(180deg, rgba(148, 163, 184, 0.35), rgba(148, 163, 184, 0.1));
-          z-index: 1;
         }
 
         .cu-form-card {
@@ -422,7 +432,7 @@ function ContactUs() {
           box-shadow: 0 10px 28px rgba(2, 6, 23, 0.2);
           border: 1px solid rgba(255, 255, 255, 0.7);
           animation: cuFadeUp 0.82s 0.16s ease both;
-          margin-top: auto;
+          align-self: stretch;
         }
 
         .cu-contact-title {
@@ -679,7 +689,7 @@ function ContactUs() {
             gap: 24px;
           }
 
-          .cu-steps {
+          .cu-steps--top {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 14px;
@@ -693,11 +703,7 @@ function ContactUs() {
             font-size: 34px;
           }
 
-          .cu-step-row {
-            min-height: 72px;
-          }
-
-          .cu-step-line {
+          .cu-step-connector {
             display: none;
           }
         }
@@ -711,7 +717,7 @@ function ContactUs() {
             margin-bottom: 26px;
           }
 
-          .cu-steps {
+          .cu-steps--top {
             grid-template-columns: 1fr;
           }
 
