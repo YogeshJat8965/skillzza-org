@@ -50,11 +50,20 @@ import SignUp from './pages/SignUp'
 import ProductComingSoon from './pages/ProductComingSoon'
 
 function ScrollToTopOnRouteChange() {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
 
   useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.substring(1))
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }, 100)
+        return
+      }
+    }
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
-  }, [pathname])
+  }, [pathname, hash])
 
   return null
 }

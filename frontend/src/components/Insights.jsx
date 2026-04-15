@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { getRoutePath } from '../utils/assets';
 
 const Insights = ({ showHero = false, showContent = true }) => {
   const [isVisible, setIsVisible] = useState({
@@ -256,15 +257,15 @@ const Insights = ({ showHero = false, showContent = true }) => {
           <div 
             className="absolute inset-0 w-full h-full"
             style={{
-              backgroundImage: "url('/businessman-hand-holding-lightbulb-with-glowing-light-creative-smart-thinking-inspiration-innovation-with-network-concept.jpg')",
+              backgroundImage: "url('/Company/premium_photo-1661486479651-09063e9671dd.avif')",
               backgroundSize: 'cover',
-              backgroundPosition: 'center 45%',
-              filter: 'brightness(1)'
+              backgroundPosition: 'center 35%',
+              filter: 'brightness(0.65)'
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           
-          <div className="relative z-10 w-full text-center pr-[15%] md:pr-[25%] animate-fade-in-up">
+          <div className="relative z-10 text-center px-4 w-full animate-fade-in-up">
             <h1 
               style={{ 
                 fontFamily: "'League Spartan', sans-serif", 
@@ -332,6 +333,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                   e.target.style.background = 'transparent';
                   e.target.style.color = '#0F1114';
                 }}
+                onClick={() => { window.location.href = getRoutePath('/insights'); }}
               >
                 View all the resources
               </button>
@@ -418,6 +420,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                       e.target.style.background = 'transparent';
                       e.target.style.color = '#0F1114';
                     }}
+                    onClick={() => { window.location.href = getRoutePath('/insights'); }}
                   >
                     Read the Blog
                   </button>
@@ -519,6 +522,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                       e.target.style.background = 'transparent';
                       e.target.style.color = '#0F1114';
                     }}
+                    onClick={() => { window.location.href = getRoutePath('/insights/ai-talent-research-hub'); }}
                   >
                     Read the reports
                   </button>
@@ -620,6 +624,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                       e.target.style.background = 'transparent';
                       e.target.style.color = '#0F1114';
                     }}
+                    onClick={() => { window.location.href = getRoutePath('/insights/skill-blueprint'); }}
                   >
                     Explore the Case studies
                   </button>
@@ -732,6 +737,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                   e.target.style.background = 'transparent';
                   e.target.style.color = '#0F1114';
                 }}
+                onClick={() => { window.location.href = getRoutePath('/insights/skill-unplugged-podcast'); }}
               >
                 Listen now
               </button>
