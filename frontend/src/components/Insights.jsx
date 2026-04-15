@@ -164,6 +164,33 @@ const Insights = ({ showHero = false, showContent = true }) => {
           transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
+        /* ===== Fluid Responsive Overrides (Desktop/Tablet) ===== */
+        @media (min-width: 768px) {
+          .insights-heading {
+            font-size: clamp(32px, 4vw, 48px) !important;
+          }
+          .insights-card-lg {
+            width: clamp(350px, 35vw, 505px) !important;
+            height: clamp(650px, 60vw, 861px) !important;
+          }
+          .insights-card-md {
+            flex: 1;
+            width: 100% !important; /* Reset inline width */
+            height: clamp(550px, 50vw, 776px) !important;
+          }
+          /* Card 3 is slightly shorter natively */
+          .insights-card-md:nth-child(2) {
+             height: clamp(500px, 45vw, 712px) !important;
+          }
+          .insights-podcast {
+            width: clamp(600px, 65vw, 1023px) !important;
+            height: auto !important;
+            min-height: 348px;
+            margin-left: auto !important; /* Push to right alignment automatically */
+            margin-top: clamp(-200px, -20vw, -370px) !important;
+          }
+        }
+
         @media (max-width: 767px) {
           .insights-heading {
             font-size: 28px !important;
@@ -296,7 +323,6 @@ const Insights = ({ showHero = false, showContent = true }) => {
                 className={`insights-heading mb-4 md:mb-6 ${isVisible.heading ? 'animate-fade-in-left' : 'opacity-0'}`}
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '48px',
                   fontWeight: 700,
                   lineHeight: '1.2',
                   color: '#0F1114',
@@ -343,8 +369,6 @@ const Insights = ({ showHero = false, showContent = true }) => {
                 ref={card1Ref}
                 className={`insights-card-lg ${isVisible.card1 ? 'animate-fade-in-scale delay-300' : 'opacity-0'}`}
                 style={{
-                  width: '505px',
-                  height: '861px',
                   background: '#F4F4FF',
                   borderRadius: '12px',
                   overflow: 'hidden',
@@ -435,8 +459,6 @@ const Insights = ({ showHero = false, showContent = true }) => {
                 ref={card2Ref}
                 className={`insights-card-md ${isVisible.card2 ? 'animate-fade-in-up delay-100' : 'opacity-0'}`}
                 style={{
-                  width: '491px',
-                  height: '776px',
                   background: '#F4E3CC',
                   borderRadius: '12px',
                   overflow: 'hidden',
@@ -535,8 +557,6 @@ const Insights = ({ showHero = false, showContent = true }) => {
                 className={`insights-card-md ${isVisible.card3 ? 'animate-fade-in-up delay-300' : 'opacity-0'}`}
                 style={{
                   marginTop: '0',
-                  width: '508px',
-                  height: '712px',
                   background: '#F7C9C9',
                   borderRadius: '12px',
                   overflow: 'hidden',
@@ -638,10 +658,6 @@ const Insights = ({ showHero = false, showContent = true }) => {
             ref={card4Ref}
             className={`insights-podcast ${isVisible.card4 ? 'animate-flip-in-x delay-400' : 'opacity-0'}`}
             style={{
-              marginTop: '-370px',
-              width: '1023px',
-              height: '348px',
-              marginLeft: '530px',
               background: '#B6DFF5',
               borderRadius: '12px',
               padding: '36px 40px',
