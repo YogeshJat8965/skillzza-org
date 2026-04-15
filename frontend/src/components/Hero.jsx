@@ -243,25 +243,26 @@ const Hero = () => {
         }}
       >
         <div
-          className={`max-w-[1920px] mx-auto pt-0 relative z-10 ${isMobile ? 'px-4' : 'px-12 lg:px-24 xl:px-32'}`}
-          style={{ paddingBottom: isMobile ? '60px' : '200px' }}
+          className={`max-w-[1920px] mx-auto pt-0 relative z-10 ${isMobile ? 'px-4' : ''}`}
+          style={{ paddingBottom: isMobile ? '60px' : '200px', ...(!isMobile ? { paddingLeft: 'clamp(48px, 5vw, 128px)', paddingRight: 'clamp(48px, 5vw, 128px)' } : {}) }}
         >
           <div className={`flex flex-col lg:flex-row items-center justify-between ${isMobile ? 'gap-6' : 'gap-12'}`}>
             {/* Left Side - Content */}
             <div
-              className={`flex-1 ${isMobile ? 'max-w-full ml-0 text-center' : 'max-w-2xl ml-[40px]'}`}
+              className={`${isMobile ? 'max-w-full ml-0 text-center' : 'ml-[40px]'}`}
+              style={!isMobile ? { flex: '0 0 45%', maxWidth: '45%' } : {}}
             >
               {/* Main Heading */}
               <h1
                 className={`mb-6 ${isLoaded ? 'animate-slide-in-left' : 'opacity-0'}`}
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize: isMobile ? '32px' : '70px',
+                  fontSize: isMobile ? '32px' : 'clamp(32px, 3.8vw, 70px)',
                   fontWeight: 700,
                   lineHeight: isMobile ? '1.15' : '1.2',
                   color: '#0F1114',
                   animationDelay: '0.2s',
-                  marginTop: isMobile ? '20px' : '-194px',
+                  marginTop: isMobile ? '20px' : 'clamp(-120px, -10vw, -194px)',
                 }}
               >
                 The AI-Powered Career Engine for Tomorrow's Talent
@@ -272,7 +273,7 @@ const Hero = () => {
                 className={`mb-8 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}
                 style={{
                   fontFamily: "'Lato', sans-serif",
-                  fontSize: isMobile ? '16px' : '24px',
+                  fontSize: isMobile ? '16px' : 'clamp(16px, 1.5vw, 24px)',
                   fontWeight: 400,
                   lineHeight: '1.6',
                   color: '#71717B',
@@ -284,8 +285,8 @@ const Hero = () => {
 
               {/* Buttons */}
               <div
-                className={`flex flex-wrap gap-4 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'} ${isMobile ? 'justify-center' : ''}`}
-                style={{ animationDelay: '0.6s' }}
+                className={`flex gap-4 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'} ${isMobile ? 'justify-center flex-wrap' : ''}`}
+                style={{ animationDelay: '0.6s', flexWrap: isMobile ? 'wrap' : 'nowrap' }}
               >
                 {/* Start Your Journey Button */}
                 <button
@@ -329,17 +330,18 @@ const Hero = () => {
 
             {/* Right Side - Image */}
             <div
-              className={`flex-1 relative flex justify-center lg:justify-end ${isLoaded ? 'animate-fade-in-scale' : 'opacity-0'}`}
+              className={`relative flex justify-center lg:justify-end ${isLoaded ? 'animate-fade-in-scale' : 'opacity-0'}`}
               style={{
                 zIndex: 20,
                 animationDelay: '0.3s',
+                ...(!isMobile ? { flex: '0 0 55%', maxWidth: '55%' } : {}),
               }}
             >
               <div
                 style={{
                   background: 'transparent url(/img/02.png) 0% 0% no-repeat padding-box',
-                  width: isMobile ? '320px' : '918px',
-                  height: isMobile ? '330px' : '918px',
+                  width: isMobile ? '320px' : 'clamp(450px, 50vw, 918px)',
+                  height: isMobile ? '330px' : 'clamp(450px, 50vw, 918px)',
                   opacity: 1,
                   backgroundSize: 'contain',
                   zIndex: 20,
