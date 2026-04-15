@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import Challenge from '../components/Challenge'
 import SchoolOfTechnology from '../components/SchoolOfTechnology'
 import Partnerships from '../components/Partnerships'
-import OurPartners from '../components/OurPartners'
+// import OurPartners from '../components/OurPartners'
 import PartnerForm from '../components/PartnerForm'
 import Insights from '../components/Insights'
 import SkillzzaEcosystem from '../components/SkillzzaEcosystem'
@@ -18,7 +18,7 @@ function HomePage() {
       <SolutionSkillStudio />
       <SchoolOfTechnology />
       <Partnerships />
-      <OurPartners />
+      {/* <OurPartners /> */}
       <PartnerForm />
       <Insights />
     </>

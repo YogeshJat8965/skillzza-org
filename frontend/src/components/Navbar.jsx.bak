@@ -1458,7 +1458,7 @@ const Navbar = () => {
           }}
         >
           {/* Logo */}
-          <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
+          <div style={{ flexShrink: 0 }}>
             <a href={getRoutePath('/')}>
               <img
                 src={getAssetPath('/skillzza-logo.png')}
