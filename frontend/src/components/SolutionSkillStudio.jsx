@@ -81,7 +81,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Start Your Journey',
             cta2: 'Explore Simulations',
-            image: '/img/Group 37833.png',
+            image: '/improvements/photo-female-office-worker-sitting-desk-with-laptop-clipboard-high-quality-photo.jpg',
         },
         {
             label: 'Talent Transformation',
@@ -95,7 +95,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Transform Your Team',
             cta2: 'View Programs',
-            image: '/img/Mask Group 98.png',
+            image: '/improvements/image copy.png',
         },
         {
             label: 'AI HackNex',
@@ -109,7 +109,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Join a Challenge',
             cta2: 'View Past Hackathons',
-            image: '/img/Mask Group 96.png',
+            image: '/improvements/image.png',
         },
         {
             label: 'Hirenest',
@@ -123,7 +123,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Find Talent',
             cta2: 'Post a Role',
-            image: '/img/Mask Group 112.png',
+            image: '/improvements/futuristic-technology-concept (1).jpg',
         },
     ];
 

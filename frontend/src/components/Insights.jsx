@@ -178,16 +178,11 @@ const Insights = ({ showHero = false, showContent = true }) => {
             width: 100% !important; /* Reset inline width */
             height: clamp(550px, 50vw, 776px) !important;
           }
-          /* Card 3 is slightly shorter natively */
-          .insights-card-md:nth-child(2) {
-             height: clamp(500px, 45vw, 712px) !important;
-          }
           .insights-podcast {
-            width: clamp(600px, 65vw, 1023px) !important;
+            width: 100% !important;
             height: auto !important;
             min-height: 348px;
-            margin-left: auto !important; /* Push to right alignment automatically */
-            margin-top: clamp(-200px, -20vw, -370px) !important;
+            margin-top: 24px !important;
           }
         }
 
@@ -452,10 +447,12 @@ const Insights = ({ showHero = false, showContent = true }) => {
               </div>
             </div>
 
-            {/* Right Column - 2 Cards Side by Side on desktop, stacked on mobile */}
-            <div className="flex-1 flex flex-col sm:flex-row gap-4 md:gap-6">
-              {/* Card 2 - AI Talent Report (Robot - Beige) */}
-              <div
+            {/* Right Column - Top (2 cards) and Bottom (Podcast) */}
+            <div className="flex-1 flex flex-col gap-4 md:gap-6">
+              {/* Row for 2 side-by-side cards */}
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 w-full">
+                {/* Card 2 - AI Talent Report (Robot - Beige) */}
+                <div
                 ref={card2Ref}
                 className={`insights-card-md ${isVisible.card2 ? 'animate-fade-in-up delay-100' : 'opacity-0'}`}
                 style={{
@@ -650,115 +647,116 @@ const Insights = ({ showHero = false, showContent = true }) => {
                   </button>
                 </div>
               </div>
-            </div>
-          </div>
+              </div> {/* Close Row for 2 cards */}
 
-          {/* Bottom - Full Width Podcast Card */}
-          <div
-            ref={card4Ref}
-            className={`insights-podcast ${isVisible.card4 ? 'animate-flip-in-x delay-400' : 'opacity-0'}`}
-            style={{
-              background: '#B6DFF5',
-              borderRadius: '12px',
-              padding: '36px 40px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '40px',
-            }}
-          >
-            {/* Left Content */}
-            <div style={{ flex: 1 }}>
-              {/* Tag */}
-              <span
-                className="insights-tag"
+              {/* Bottom - Full Width Podcast Card */}
+              <div
+                ref={card4Ref}
+                className={`insights-podcast ${isVisible.card4 ? 'animate-flip-in-x delay-400' : 'opacity-0'}`}
                 style={{
-                  display: 'inline-flex',
+                  background: '#B6DFF5',
+                  borderRadius: '12px',
+                  padding: '36px 40px',
+                  display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '206px',
-                  height: '50px',
-                  background: '#4A9FD8',
-                  borderRadius: '20px',
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '18px',
-                  fontWeight: 500,
-                  color: '#FFFFFF',
-                  marginBottom: '50px',
+                  gap: '40px',
                 }}
               >
-                Podcast
-              </span>
+                {/* Left Content */}
+                <div style={{ flex: 1 }}>
+                  {/* Tag */}
+                  <span
+                    className="insights-tag"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      width: '206px',
+                      height: '50px',
+                      background: '#4A9FD8',
+                      borderRadius: '20px',
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: '18px',
+                      fontWeight: 500,
+                      color: '#FFFFFF',
+                      marginBottom: '50px',
+                    }}
+                  >
+                    Podcast
+                  </span>
 
-              {/* Title */}
-              <h3
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '30px',
-                  fontWeight: 600,
-                  lineHeight: '1.3',
-                  color: '#393939',
-                  marginBottom: '16px',
-                }}
-              >
-                Skills DECODED:<br />
-                Conversations that matter.
-              </h3>
+                  {/* Title */}
+                  <h3
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: '30px',
+                      fontWeight: 600,
+                      lineHeight: '1.3',
+                      color: '#393939',
+                      marginBottom: '16px',
+                    }}
+                  >
+                    Skills DECODED:<br />
+                    Conversations that matter.
+                  </h3>
 
-              {/* Description */}
-              <p
-                style={{
-                  fontFamily: "'Lato', sans-serif",
-                  fontSize: '20px',
-                  fontWeight: 400,
-                  lineHeight: '1.7',
-                  color: '#393939',
-                  maxWidth: '700px',
-                }}
-              >
-                Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.
-              </p>
-            </div>
+                  {/* Description */}
+                  <p
+                    style={{
+                      fontFamily: "'Lato', sans-serif",
+                      fontSize: '20px',
+                      fontWeight: 400,
+                      lineHeight: '1.7',
+                      color: '#393939',
+                      maxWidth: '700px',
+                    }}
+                  >
+                    Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.
+                  </p>
+                </div>
 
-            {/* Right - Icon + Button */}
-            <div className="insights-podcast-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
-              <img
-                src="/img/Group%2034199.svg"
-                alt="Microphone"
-                style={{
-                  width: '100px',
-                  height: '100px',
-                  objectFit: 'contain',
-                }}
-              />
-              <button
-                style={{
-                  height: '48px',
-                  padding: '0 16px',
-                  background: 'transparent',
-                  border: '1px solid #0F1114',
-                  borderRadius: '8px',
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '14px',
-                  fontWeight: 500,
-                  color: '#0F1114',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  whiteSpace: 'nowrap',
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.background = '#0F1114';
-                  e.target.style.color = '#FFFFFF';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.background = 'transparent';
-                  e.target.style.color = '#0F1114';
-                }}
-                onClick={() => { window.location.href = getRoutePath('/insights/skill-unplugged-podcast'); }}
-              >
-                Listen now
-              </button>
-            </div>
-          </div>
+                {/* Right - Icon + Button */}
+                <div className="insights-podcast-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
+                  <img
+                    src="/img/Group%2034199.svg"
+                    alt="Microphone"
+                    style={{
+                      width: '100px',
+                      height: '100px',
+                      objectFit: 'contain',
+                    }}
+                  />
+                  <button
+                    style={{
+                      height: '48px',
+                      padding: '0 16px',
+                      background: 'transparent',
+                      border: '1px solid #0F1114',
+                      borderRadius: '8px',
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: '14px',
+                      fontWeight: 500,
+                      color: '#0F1114',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      whiteSpace: 'nowrap',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.background = '#0F1114';
+                      e.target.style.color = '#FFFFFF';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.background = 'transparent';
+                      e.target.style.color = '#0F1114';
+                    }}
+                    onClick={() => { window.location.href = getRoutePath('/insights/skill-unplugged-podcast'); }}
+                  >
+                    Listen now
+                  </button>
+                </div>
+              </div>
+            </div> {/* Close Right Column */}
+          </div> {/* Close Main Content */}
         </div>
       </section>
       )}
