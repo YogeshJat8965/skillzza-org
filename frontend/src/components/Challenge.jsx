@@ -224,6 +224,70 @@ const Challenge = () => {
           animation-delay: 2s;
         }
 
+        /* ===== Fluid responsive overrides for intermediate screens ===== */
+
+        /* Large desktops (1800px+): use original fixed sizes */
+        @media (min-width: 1800px) {
+          .challenge-image {
+            width: 778px !important;
+            height: 756px !important;
+          }
+          .challenge-cards-grid {
+            width: 998px !important;
+          }
+          .challenge-card {
+            width: 487px !important;
+            height: 366px !important;
+          }
+        }
+
+        /* Intermediate screens (768px - 1799px): fluid scaling */
+        @media (min-width: 768px) and (max-width: 1799px) {
+          .challenge-content-grid {
+            flex-direction: row !important;
+            align-items: stretch !important;
+          }
+          .challenge-heading {
+            font-size: clamp(32px, 3.2vw, 48px) !important;
+          }
+          .challenge-sub-heading {
+            font-size: clamp(28px, 2.8vw, 42px) !important;
+          }
+          .challenge-desc {
+            font-size: clamp(14px, 1.25vw, 18px) !important;
+          }
+          .challenge-image {
+            width: 38% !important;
+            height: auto !important;
+            aspect-ratio: 778 / 756 !important;
+            background-size: contain !important;
+            flex-shrink: 0 !important;
+          }
+          .challenge-cards-grid {
+            width: auto !important;
+            flex: 1 1 0% !important;
+            min-width: 0 !important;
+          }
+          .challenge-card {
+            width: 100% !important;
+            height: auto !important;
+            min-height: 0 !important;
+            padding: clamp(16px, 2vw, 32px) clamp(16px, 2.5vw, 48px) !important;
+          }
+          .challenge-card-percent {
+            font-size: clamp(40px, 4.5vw, 96px) !important;
+            margin-bottom: clamp(6px, 0.7vw, 14px) !important;
+          }
+          .challenge-card-title {
+            font-size: clamp(16px, 1.8vw, 32px) !important;
+            margin-bottom: clamp(8px, 1vw, 24px) !important;
+          }
+          .challenge-card-desc {
+            font-size: clamp(12px, 1.1vw, 20px) !important;
+            line-height: 1.4 !important;
+          }
+        }
+
         /* Mobile overrides for Challenge */
         @media (max-width: 767px) {
           .challenge-heading {
@@ -321,7 +385,7 @@ const Challenge = () => {
 
         {/* Content Grid */}
         <div className="max-w-[1920px] mx-auto px-4 md:px-0">
-          <div className="flex flex-col lg:flex-row gap-6 items-start">
+          <div className="challenge-content-grid flex flex-col lg:flex-row gap-6 items-start">
             {/* Left Side - Image */}
             <div
               ref={imageRef}
@@ -342,6 +406,8 @@ const Challenge = () => {
               className="challenge-cards-grid grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6"
               style={{
                 width: '998px',
+                flex: '1 1 auto',
+                minWidth: 0,
               }}
             >
               {/* Card 1: 69% */}
