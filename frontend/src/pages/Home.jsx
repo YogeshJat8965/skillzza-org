@@ -11,17 +11,19 @@ import SolutionSkillStudio from '../components/SolutionSkillStudio'
 
 function HomePage() {
   return (
-    <>
-      <Hero />
-      <Challenge />
-      <SkillzzaEcosystem />
-      <SolutionSkillStudio />
-      <SchoolOfTechnology />
-      <Partnerships />
-      {/* <OurPartners /> */}
-      <PartnerForm />
-      <Insights />
-    </>
+    <div className="home-scale-shell">
+      <div className="home-scale-content">
+        <Hero />
+        <Challenge />
+        <SkillzzaEcosystem />
+        <SolutionSkillStudio />
+        <SchoolOfTechnology />
+        <Partnerships />
+        {/* <OurPartners /> */}
+        <PartnerForm />
+        <Insights />
+      </div>
+    </div>
   )
 }
 

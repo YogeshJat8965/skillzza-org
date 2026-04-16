@@ -259,6 +259,18 @@ const Hero = () => {
             font-size: clamp(13px, 0.9vw, 16px) !important;
           }
         }
+
+        /* Keep the hero model anchored like large-screen composition on smaller laptops */
+        @media (min-width: 768px) and (max-width: 1400px) {
+          .hero-image-wrapper {
+            align-self: flex-end !important;
+            align-items: flex-end !important;
+            margin-top: clamp(16px, 2vw, 36px) !important;
+          }
+          .hero-image {
+            background-position: center bottom !important;
+          }
+        }
       `}</style>
 
       <section

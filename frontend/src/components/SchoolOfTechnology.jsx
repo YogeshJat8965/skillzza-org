@@ -120,7 +120,61 @@ const SchoolOfTechnology = () => {
         .delay-400 { animation-delay: 0.4s; }
         .delay-500 { animation-delay: 0.5s; }
 
+        .sot-scale-shell {
+          width: 100%;
+          overflow-x: hidden;
+        }
+
+        .sot-scale-content {
+          width: 100%;
+          transform-origin: top left;
+        }
+
+        @media (max-width: 1600px) {
+          .sot-scale-content {
+            transform: scale(0.95);
+            width: calc(100% / 0.95);
+          }
+        }
+
+        @media (max-width: 1400px) {
+          .sot-scale-content {
+            transform: scale(0.9);
+            width: calc(100% / 0.9);
+          }
+        }
+
+        @media (max-width: 1200px) {
+          .sot-scale-content {
+            transform: scale(0.85);
+            width: calc(100% / 0.85);
+          }
+        }
+
+        @media (max-width: 1000px) {
+          .sot-scale-content {
+            transform: scale(0.8);
+            width: calc(100% / 0.8);
+          }
+        }
+
+        @media (max-width: 850px) {
+          .sot-scale-content {
+            transform: scale(0.74);
+            width: calc(100% / 0.74);
+          }
+        }
+
         @media (max-width: 767px) {
+          .sot-row {
+            align-items: stretch !important;
+          }
+          .sot-content {
+            width: 100% !important;
+            flex: 0 0 100% !important;
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+          }
           .sot-image {
             width: 100% !important;
             height: 300px !important;
@@ -147,8 +201,10 @@ const SchoolOfTechnology = () => {
         }
       `}</style>
       <section className="w-full bg-white pt-0 pb-16 lg:pb-20">
-        <div className="max-w-[1920px] mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
+        <div className="sot-scale-shell">
+          <div className="sot-scale-content">
+            <div className="max-w-[1920px] mx-auto">
+              <div className="sot-row flex flex-col md:flex-row items-center gap-6 md:gap-12">
             {/* Left Side - Image */}
             <div
               ref={imageRef}
@@ -165,7 +221,7 @@ const SchoolOfTechnology = () => {
             </div>
 
             {/* Right Side - Content */}
-            <div className="flex-1 px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
+            <div className="sot-content flex-1 px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
               {/* Main Heading */}
               <h2
                 ref={headingRef}
@@ -311,6 +367,8 @@ const SchoolOfTechnology = () => {
                 </div>
               </div>
             </div>
+          </div>
+          </div>
           </div>
         </div>
       </section>

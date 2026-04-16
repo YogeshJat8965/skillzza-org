@@ -243,6 +243,11 @@ const Challenge = () => {
 
         /* Intermediate screens (768px - 1799px): fluid scaling */
         @media (min-width: 768px) and (max-width: 1799px) {
+          .challenge-content-wrap {
+            padding-left: clamp(12px, 2vw, 28px) !important;
+            padding-right: clamp(12px, 2vw, 28px) !important;
+            box-sizing: border-box !important;
+          }
           .challenge-content-grid {
             flex-direction: row !important;
             align-items: stretch !important;
@@ -384,7 +389,7 @@ const Challenge = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="max-w-[1920px] mx-auto px-4 md:px-0">
+        <div className="challenge-content-wrap max-w-[1920px] mx-auto px-4 md:px-0">
           <div className="challenge-content-grid flex flex-col lg:flex-row gap-6 items-start">
             {/* Left Side - Image */}
             <div
