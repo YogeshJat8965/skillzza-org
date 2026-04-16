@@ -5,8 +5,8 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/newsite/(.*)",
-      "destination": "/newsite/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
