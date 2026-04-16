@@ -19,7 +19,7 @@ const navItems = [
     name: 'Platform',
     layout: 'card-grid',
     columns: 3,
-    width: 900,
+    width: 950,
     eyebrow: 'Products & Platform',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
@@ -120,7 +120,7 @@ const navItems = [
   {
     name: 'School of Technology',
     layout: 'list-rows',
-    width: 660,
+    width: 710,
     eyebrow: 'The Deeptech Studio — Specialisations',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
@@ -142,7 +142,7 @@ const navItems = [
   {
     name: 'Insights',
     layout: 'list-rows',
-    width: 540,
+    width: 600,
     eyebrow: 'Resources & Knowledge',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
@@ -158,7 +158,7 @@ const navItems = [
   {
     name: 'Company',
     layout: 'company-mega',
-    width: 760,
+    width: 810,
     companyEyebrow: 'About Skillzza',
     servicesEyebrow: 'Services & Consulting',
     dotColor: '#BD1723',
@@ -665,7 +665,9 @@ const ListRowItem = ({ item, index, onComingSoon }) => {
       </div>
 
       {item.pill ? (
-        <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}><Pill text={item.pill} color={item.pillColor} /></div>
+        <div style={{ flexShrink: 0 }}>
+          <Pill text={item.pill} color={item.pillColor} />
+        </div>
       ) : (
         <div style={{
           color: hovered ? '#475569' : '#cbd5e1',
@@ -1458,7 +1460,7 @@ const Navbar = () => {
           }}
         >
           {/* Logo */}
-          <div style={{ flexShrink: 0 }}>
+          <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
             <a href={getRoutePath('/')}>
               <img
                 src={getAssetPath('/skillzza-logo.png')}

@@ -67,7 +67,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Discover Your Potential',
             cta2: 'Get Your Skill Report',
-            image: '/img/Mask Group 90.png',
+            image: '/img/potential_meter_right_img.png',
         },
         {
             label: 'Xperience platform',
