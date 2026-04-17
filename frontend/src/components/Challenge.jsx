@@ -329,13 +329,34 @@ const Challenge = () => {
             font-size: 15px !important;
           }
         }
+
+        /* Control the gap between Hero and Challenge */
+        .challenge-wrapper-section {
+          margin-top: 0px; 
+          padding-top: 80px;
+        }
+
+        /* Special query for screens 1480px or less - Pull the section up! */
+        @media (min-width: 768px) and (max-width: 1480px) {
+          .challenge-wrapper-section {
+            /* Adjust THESE TWO values to move the section UP or DOWN */
+            /* A more negative margin-top (e.g. -200px) pulls it UP higher over the hero section */
+margin-top: 20px !important;            margin-top: -30px !important;
+            /* Match the padding-top so the text inside doesn't hit the ceiling */
+            padding-top: 80px !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .challenge-wrapper-section {
+            margin-top: 0px !important;
+            padding-top: 40px !important;
+          }
+        }
       `}</style>
       <section
         ref={sectionRef}
-        className="w-full bg-white pb-16 lg:pb-20 relative"
+        className="w-full bg-white pb-16 lg:pb-20 relative challenge-wrapper-section"
         style={{
-          marginTop: '-80px',
-          paddingTop: '80px',
           zIndex: 10,
           overflow: 'hidden',
         }}
@@ -355,24 +376,11 @@ const Challenge = () => {
                 fontWeight: 700,
                 lineHeight: '1.2',
                 color: '#0F1114',
-                marginBottom: '16px',
-              }}
-            >
-              The Challenge
-            </h2>
-            <h3
-              className="challenge-sub-heading"
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '42px',
-                fontWeight: 700,
-                lineHeight: '1.2',
-                color: '#0F1114',
                 marginBottom: '24px',
               }}
             >
-              A Widening Skill Gap
-            </h3>
+              The Challenge – A Widening Skill Gap
+            </h2>
             <p
               className="max-w-4xl mx-auto challenge-desc"
               style={{

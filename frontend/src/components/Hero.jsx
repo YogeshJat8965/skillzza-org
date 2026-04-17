@@ -231,10 +231,10 @@ const Hero = () => {
         /* ===== Hero fluid responsive overrides ===== */
         @media (min-width: 768px) and (max-width: 1799px) {
           .hero-section {
-            min-height: clamp(600px, 52vw, 907px) !important;
+            min-height: auto !important;
           }
           .hero-container {
-            padding-bottom: clamp(60px, 6vw, 200px) !important;
+            padding-bottom: 0px !important;
           }
           .hero-heading {
             font-size: clamp(28px, 3.2vw, 70px) !important;
@@ -252,7 +252,7 @@ const Hero = () => {
             height: clamp(400px, 43vw, 918px) !important;
           }
           .hero-scroll-strip {
-            margin-top: clamp(-180px, -9vw, -80px) !important;
+            margin-top: -80px !important;
           }
           .hero-btn {
             padding: clamp(12px, 1vw, 18px) clamp(24px, 2.2vw, 40px) !important;
@@ -267,31 +267,29 @@ const Hero = () => {
             align-items: flex-end !important;
             margin-top: clamp(16px, 2vw, 36px) !important;
           }
-          .hero-image {
-            background-position: center bottom !important;
-          }
         }
       `}</style>
 
       <section
-        className="hero-section w-full relative bg-white"
+        className="hero-section w-full relative bg-white flex"
         style={{
           backgroundColor: '#ffffff',
           backgroundImage: 'url(/img/Group%2037827.png)',
           backgroundPosition: isMobile ? 'top center' : 'center center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: isMobile ? 'cover' : '100% 100%',
-          minHeight: isMobile ? 'auto' : '907px',
-          overflow: 'hidden',
+          overflowX: 'hidden',
+          overflowY: 'visible',
+          alignItems: 'flex-end',
           opacity: Math.max(1 - scrollY * 0.0015, 0),
           transition: 'opacity 0.1s ease-out',
         }}
       >
         <div
-          className={`hero-container max-w-[1920px] mx-auto pt-0 relative z-10 ${isMobile ? 'px-4' : ''}`}
-          style={{ paddingBottom: isMobile ? '60px' : '200px', ...(!isMobile ? { paddingLeft: 'clamp(48px, 5vw, 128px)', paddingRight: 'clamp(48px, 5vw, 128px)' } : {}) }}
+          className={`hero-container w-full max-w-[1920px] mx-auto pt-6 lg:pt-0 relative z-10 ${isMobile ? 'px-4 pt-16' : ''}`}
+          style={{ paddingBottom: '0px', ...(!isMobile ? { paddingLeft: 'clamp(48px, 5vw, 128px)', paddingRight: 'clamp(48px, 5vw, 128px)' } : {}) }}
         >
-          <div className={`flex flex-col lg:flex-row items-center justify-between ${isMobile ? 'gap-6' : 'gap-12'}`}>
+          <div className={`w-full flex flex-col lg:flex-row items-center justify-between ${isMobile ? 'gap-6' : 'gap-12'}`}>
             {/* Left Side - Content */}
             <div
               className={`${isMobile ? 'max-w-full ml-0 text-center' : 'ml-[40px]'}`}
@@ -385,12 +383,14 @@ const Hero = () => {
               <div
                 className="hero-image"
                 style={{
-                  background: 'transparent url(/img/02.png) 0% 0% no-repeat padding-box',
+                  background: 'transparent url(/img/02.png) center bottom no-repeat padding-box',
                   width: isMobile ? '320px' : 'clamp(450px, 50vw, 918px)',
                   height: isMobile ? '330px' : 'clamp(450px, 50vw, 918px)',
                   opacity: 1,
                   backgroundSize: 'contain',
                   zIndex: 20,
+                  alignSelf: 'flex-end',
+                  marginBottom: '0px',
                 }}
               >
               </div>
@@ -407,7 +407,7 @@ const Hero = () => {
               zIndex: 30,
               width: '100vw',
               marginLeft: isMobile ? '0' : 'calc(-50vw + 50%)',
-              marginTop: isMobile ? '0px' : '-220px',
+              marginTop: isMobile ? '0px' : '-80px',
             }}
           >
             <div className="scroll-content">
