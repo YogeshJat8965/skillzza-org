@@ -253,6 +253,7 @@ const Hero = () => {
           }
           .hero-scroll-strip {
             margin-top: -80px !important;
+            transform: translateY(-10px);
           }
           .hero-btn {
             padding: clamp(12px, 1vw, 18px) clamp(24px, 2.2vw, 40px) !important;
@@ -408,6 +409,7 @@ const Hero = () => {
               width: '100vw',
               marginLeft: isMobile ? '0' : 'calc(-50vw + 50%)',
               marginTop: isMobile ? '0px' : '-80px',
+              transform: isMobile ? 'none' : 'translateY(-70px)',
             }}
           >
             <div className="scroll-content">

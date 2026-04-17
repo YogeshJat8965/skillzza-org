@@ -18,18 +18,18 @@ const PartnerForm = () => {
       className="w-full relative overflow-hidden bg-white bg-cover bg-center"
       style={{ backgroundImage: "url('/img/Group%2037835.png')" }}
     >
-      <div className="max-w-[1920px] mx-auto flex flex-col lg:flex-row items-center py-10 sm:py-16 md:py-20 lg:py-32 xl:py-40">
+      <div className="max-w-[1920px] mx-auto flex flex-col lg:flex-row items-center justify-between py-10 sm:py-16 md:py-20 lg:py-24 xl:py-32">
         {/* Left — Image (constrained on mobile) */}
-        <div className="flex-shrink-0 w-full lg:w-auto px-4 sm:px-6 md:px-8 lg:px-0 mb-8 lg:mb-0">
+        <div className="w-full lg:w-1/2 xl:w-[55%] flex justify-start mb-8 lg:mb-0">
           <img
             src="/img/businesspeople-having-discussion-office.png"
             alt="Business meeting"
-            className="w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[1000px] h-auto mx-auto lg:mx-0"
+            className="w-full h-auto max-w-full lg:max-w-[900px] object-contain rounded-r-2xl lg:rounded-r-3xl pr-4 lg:pr-8"
           />
         </div>
 
         {/* Right — Form */}
-        <div className="flex-1 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+        <div className="w-full lg:w-1/2 xl:w-[45%] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 flex flex-col justify-center">
           <h2 className="mb-4 sm:mb-6 font-[DM_Sans] text-[#0F1114] font-medium leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px]">
             Partner with us<br />
             To make a Difference
