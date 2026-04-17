@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { getAssetPath } from '../utils/assets';
 
 const WhatWeDo = () => {
@@ -11,6 +11,28 @@ const WhatWeDo = () => {
       sectionRefs[index].current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 50);
   };
+
+  useEffect(() => {
+    const revealEls = document.querySelectorAll('.wwd-reveal');
+    if (!revealEls.length) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('wwd-visible');
+          } else {
+            entry.target.classList.remove('wwd-visible');
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -8% 0px' }
+    );
+
+    revealEls.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
 
   const pillars = [
@@ -93,6 +115,57 @@ const WhatWeDo = () => {
   return (
     <>
       <style>{`
+        @keyframes wwdFadeUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes wwdSlideInLeft {
+          from { opacity: 0; transform: translateX(-36px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes wwdSlideInRight {
+          from { opacity: 0; transform: translateX(36px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes wwdScaleUp {
+          from { opacity: 0; transform: scale(0.97); }
+          to { opacity: 1; transform: scale(1); }
+        }
+
+        .wwd-reveal {
+          opacity: 0;
+          will-change: transform, opacity;
+          transform: translateZ(0);
+          backface-visibility: hidden;
+        }
+
+        .wwd-reveal.wwd-visible {
+          opacity: 1;
+        }
+
+        .wwd-reveal.wwd-fade-up.wwd-visible {
+          animation: wwdFadeUp 0.62s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .wwd-reveal.wwd-slide-left.wwd-visible {
+          animation: wwdSlideInLeft 0.66s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .wwd-reveal.wwd-slide-right.wwd-visible {
+          animation: wwdSlideInRight 0.66s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .wwd-reveal.wwd-scale-up.wwd-visible {
+          animation: wwdScaleUp 0.62s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .wwd-delay-1 { animation-delay: 0.08s !important; }
+        .wwd-delay-2 { animation-delay: 0.16s !important; }
+        .wwd-delay-3 { animation-delay: 0.24s !important; }
+
         @media (max-width: 768px) {
           .pillar-row {
             flex-direction: column !important;
@@ -135,20 +208,20 @@ const WhatWeDo = () => {
           fontSize: '38px', fontWeight: '700', color: '#0f172a',
           lineHeight: '1.25', margin: '0 auto 18px', maxWidth: '760px',
           letterSpacing: '-0.3px',
-        }}>
+        }} className="wwd-reveal wwd-fade-up">
           Bridging Education and Employment with Role-Ready Skills
         </h1>
 
         <p style={{
           fontSize: '15px', color: '#64748b', lineHeight: '1.75',
           maxWidth: '580px', margin: '0 auto 52px',
-        }}>
+        }} className="wwd-reveal wwd-fade-up wwd-delay-1">
           Bridging the gap between education and employment, Skillzza empowers professionals,
           institutions, and enterprises with real-world capabilities. We combine AI-driven intelligence,
           immersive learning, and role-based simulations to create a future-ready workforce.
         </p>
 
-        <div style={{ maxWidth: '1020px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1020px', margin: '0 auto' }} className="wwd-reveal wwd-scale-up wwd-delay-2">
           <img
             src={getAssetPath('/maskgroup.png')}
             alt="Assess Learn Simulate HireNest"
@@ -162,14 +235,14 @@ const WhatWeDo = () => {
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 48px' }}>
 
           {/* Header */}
-          <div style={{ textAlign: 'center', padding: '64px 0 48px' }}>
+          <div style={{ textAlign: 'center', padding: '64px 0 48px' }} className="wwd-reveal wwd-fade-up">
             <h2 style={{ fontSize: 42, fontWeight: 800, color: '#111827', lineHeight: 1.2, margin: 0 }}>
               The Skillzza Framework<br />Four Core Pillars
             </h2>
           </div>
 
           {/* Sticky Tab Bar */}
-          <div className="pillar-tabs" style={{
+          <div className="pillar-tabs wwd-reveal wwd-fade-up wwd-delay-1" style={{
             position: 'sticky',
             top: 0,
             zIndex: 50,
@@ -209,7 +282,7 @@ const WhatWeDo = () => {
           {pillars.map((pillar, i) => (
             <div
               key={i}
-              className="pillar-row"
+              className="pillar-row wwd-reveal wwd-fade-up"
               ref={sectionRefs[i]}
               style={{
                 display: 'flex',
@@ -254,7 +327,7 @@ const WhatWeDo = () => {
                 background: pillar.screenBg,
                 padding: 24,
                 marginLeft: i === 3 ? '32px' : 0,
-              }}>
+              }} className={`wwd-reveal ${pillar.imageLeft ? 'wwd-slide-left' : 'wwd-slide-right'} wwd-delay-1`}>
                 <img
                   src={pillar.image}
                   alt={pillar.title}
@@ -264,7 +337,7 @@ const WhatWeDo = () => {
               </div>
 
               {/* Text */}
-              <div style={{ flex: 1, zIndex: 1 }}>
+              <div style={{ flex: 1, zIndex: 1 }} className={`wwd-reveal ${pillar.imageLeft ? 'wwd-slide-right' : 'wwd-slide-left'} wwd-delay-2`}>
                 <h3 style={{
                   fontSize: 32, fontWeight: 800, color: pillar.titleColor,
                   marginBottom: 16, lineHeight: 1.2, fontFamily: 'Inter, sans-serif',

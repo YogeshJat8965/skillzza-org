@@ -1,21 +1,19 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { getRoutePath } from '../utils/assets'
 
 function PartnerCollaborationPage() {
   const pageRef = useRef(null)
-  const corporateSectionRef = useRef(null)
-  const governmentSectionRef = useRef(null)
-  const educationSectionRef = useRef(null)
   const partnerSectionRef = useRef(null)
+  const [selectedCard, setSelectedCard] = useState(null)
 
-  const scrollToSection = (sectionRef) => {
-    sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  const handleCardSelect = (cardKey) => {
+    setSelectedCard((currentCard) => (currentCard === cardKey ? null : cardKey))
   }
 
-  const handleCardKeyDown = (event, sectionRef) => {
+  const handleCardKeyDown = (event, cardKey) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault()
-      scrollToSection(sectionRef)
+      handleCardSelect(cardKey)
     }
   }
 
@@ -38,25 +36,22 @@ function PartnerCollaborationPage() {
     els?.forEach((el) => observer.observe(el))
 
     return () => observer.disconnect()
-  }, [])
+  }, [selectedCard])
 
   useEffect(() => {
     const hash = window.location.hash.replace('#', '').toLowerCase()
-    const sectionMap = {
-      corporate: corporateSectionRef,
-      government: governmentSectionRef,
-      education: educationSectionRef,
-      partner: partnerSectionRef,
+    if (hash === 'corporate' || hash === 'government' || hash === 'education') {
+      setSelectedCard(hash)
+      return
     }
 
-    const targetRef = sectionMap[hash]
-    if (!targetRef?.current) return
+    if (hash === 'partner') {
+      const timer = setTimeout(() => {
+        partnerSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 120)
 
-    const timer = setTimeout(() => {
-      targetRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }, 120)
-
-    return () => clearTimeout(timer)
+      return () => clearTimeout(timer)
+    }
   }, [])
 
   return (
@@ -219,6 +214,13 @@ function PartnerCollaborationPage() {
           box-shadow: 0 20px 48px rgba(15, 23, 42, 0.18);
         }
 
+        .collab-partners__card.is-active {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 48px rgba(15, 23, 42, 0.22);
+          outline: 3px solid rgba(243, 173, 58, 0.7);
+          outline-offset: -3px;
+        }
+
         .collab-partners__card-image {
           width: 100%;
           height: 210px;
@@ -233,6 +235,7 @@ function PartnerCollaborationPage() {
         .collab-partners__card:hover .collab-partners__card-image {
           transform: scale(1.05);
         }
+
 
         .collab-partners__card-title {
           min-height: 80px;
@@ -686,31 +689,34 @@ function PartnerCollaborationPage() {
           </p>
           <div className="collab-partners__grid">
             <article
-              className="collab-partners__card collab-animate anim-fade-up anim-delay-1"
+              className={`collab-partners__card collab-animate anim-fade-up anim-delay-1 ${selectedCard === 'corporate' ? 'is-active' : ''}`}
               role="button"
+              aria-pressed={selectedCard === 'corporate'}
               tabIndex={0}
-              onClick={() => scrollToSection(corporateSectionRef)}
-              onKeyDown={(event) => handleCardKeyDown(event, corporateSectionRef)}
+              onClick={() => handleCardSelect('corporate')}
+              onKeyDown={(event) => handleCardKeyDown(event, 'corporate')}
             >
               <img className="collab-partners__card-image" src="/Company/collaboration/corporates.jpg" alt="Corporates" />
               <h3 className="collab-partners__card-title">Corporates</h3>
             </article>
             <article
-              className="collab-partners__card collab-animate anim-fade-up anim-delay-2"
+              className={`collab-partners__card collab-animate anim-fade-up anim-delay-2 ${selectedCard === 'government' ? 'is-active' : ''}`}
               role="button"
+              aria-pressed={selectedCard === 'government'}
               tabIndex={0}
-              onClick={() => scrollToSection(governmentSectionRef)}
-              onKeyDown={(event) => handleCardKeyDown(event, governmentSectionRef)}
+              onClick={() => handleCardSelect('government')}
+              onKeyDown={(event) => handleCardKeyDown(event, 'government')}
             >
               <img className="collab-partners__card-image" src="/Company/collaboration/govtCardImg.jpg" alt="Government" />
               <h3 className="collab-partners__card-title">Government</h3>
             </article>
             <article
-              className="collab-partners__card collab-animate anim-fade-up anim-delay-3"
+              className={`collab-partners__card collab-animate anim-fade-up anim-delay-3 ${selectedCard === 'education' ? 'is-active' : ''}`}
               role="button"
+              aria-pressed={selectedCard === 'education'}
               tabIndex={0}
-              onClick={() => scrollToSection(educationSectionRef)}
-              onKeyDown={(event) => handleCardKeyDown(event, educationSectionRef)}
+              onClick={() => handleCardSelect('education')}
+              onKeyDown={(event) => handleCardKeyDown(event, 'education')}
             >
               <img className="collab-partners__card-image" src="/Company/collaboration/school_unversity_img.jpeg" alt="Educational institutions" />
               <h3 className="collab-partners__card-title">Educational Institutions</h3>
@@ -722,7 +728,9 @@ function PartnerCollaborationPage() {
         {/* ========= CORPORATE PARTNERSHIPS ========= */}
         {/* ========================================== */}
 
-        <section ref={corporateSectionRef} className="section-banner section-banner--corporate">
+        {selectedCard === 'corporate' ? (
+        <>
+        <section className="section-banner section-banner--corporate">
           <div className="section-banner__content collab-animate anim-fade-up">
             <h3 className="section-banner__title">Corporate Partnerships</h3>
             <h4 className="section-banner__subtitle">Upskill Your Workforce. Empower Innovation.</h4>
@@ -830,12 +838,16 @@ function PartnerCollaborationPage() {
             <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
           </div>
         </section>
+        </>
+        ) : null}
 
         {/* ========================================== */}
         {/* ======= GOVERNMENT PARTNERSHIPS ========= */}
         {/* ========================================== */}
 
-        <section ref={governmentSectionRef} className="section-banner section-banner--govt">
+        {selectedCard === 'government' ? (
+        <>
+        <section className="section-banner section-banner--govt">
           <div className="section-banner__content collab-animate anim-fade-up">
             <h3 className="section-banner__title">Government Partnerships</h3>
             <h4 className="section-banner__subtitle">Building a Skilled Nation Together</h4>
@@ -989,12 +1001,16 @@ function PartnerCollaborationPage() {
             <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
           </div>
         </section>
+        </>
+        ) : null}
 
         {/* ========================================== */}
         {/* ====== EDUCATIONAL PARTNERSHIPS ========== */}
         {/* ========================================== */}
 
-        <section ref={educationSectionRef} className="section-banner section-banner--education">
+        {selectedCard === 'education' ? (
+        <>
+        <section className="section-banner section-banner--education">
           <div className="section-banner__content collab-animate anim-fade-up">
             <h3 className="section-banner__title">Educational Partnerships</h3>
             <h4 className="section-banner__subtitle">Empowering Students for Tomorrow's World</h4>
@@ -1138,6 +1154,8 @@ function PartnerCollaborationPage() {
             <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
           </div>
         </section>
+        </>
+        ) : null}
 
         {/* ===== CTA - READY TO PARTNER ===== */}
         <section ref={partnerSectionRef} className="collab-cta">

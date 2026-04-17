@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
+import { getAssetPath } from '../utils/assets';
 
 /* ─── Animated counter hook ─── */
 function useCountUp(target, duration = 1800, started = false) {
@@ -20,6 +20,35 @@ function useCountUp(target, duration = 1800, started = false) {
     requestAnimationFrame(step);
   }, [started, target, duration]);
   return count;
+}
+
+/* ─── Replay-on-scroll reveal hook ─── */
+function useScrollRevealReplay(options = {}) {
+  const ref = useRef(null);
+  const hasRevealedRef = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasRevealedRef.current) {
+          hasRevealedRef.current = true;
+          el.classList.add('meth-visible');
+        }
+      },
+      {
+        threshold: options.threshold ?? 0.1,
+        rootMargin: options.rootMargin ?? '0px 0px -2% 0px',
+      }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [options.threshold, options.rootMargin]);
+
+  return ref;
 }
 
 /* ─── Single animated stat ─── */
@@ -153,6 +182,9 @@ const phases = [
 const ImplementationStepper = () => {
   const [active, setActive] = useState(0);
   const phase = phases[active];
+  const titleRef = useScrollRevealReplay();
+  const stepperRef = useScrollRevealReplay();
+  const panelRef = useScrollRevealReplay();
 
   return (
     <section style={{ background: '#f0eeff', fontFamily: "'Inter', sans-serif", padding: '64px 0 72px' }}>
@@ -270,10 +302,10 @@ const ImplementationStepper = () => {
 
       <div className="imp-wrap">
         {/* Title */}
-        <h2 className="imp-title">Our Methodology</h2>
+        <h2 ref={titleRef} className="imp-title meth-reveal meth-fade-up">Our Methodology</h2>
 
         {/* Stepper */}
-        <div className="imp-stepper">
+        <div ref={stepperRef} className="imp-stepper meth-reveal meth-fade-up meth-delay-1">
           <div className="imp-line" />
           {phases.map((p, i) => (
             <div key={i} className="imp-step" onClick={() => setActive(i)}>
@@ -297,7 +329,7 @@ const ImplementationStepper = () => {
         </div>
 
         {/* Content panel */}
-        <div className="imp-panel">
+        <div ref={panelRef} className="imp-panel meth-reveal meth-scale-up meth-delay-2">
           <div className="imp-panel-left">
             <span className="imp-panel-tag">PHASE {active + 1}</span>
             <h3 className="imp-panel-heading">{phase.title}</h3>
@@ -383,6 +415,9 @@ const learnData = [
 const LearnFramework = () => {
   const [active, setActive] = useState(0);
   const item = learnData[active];
+  const titleRef = useScrollRevealReplay();
+  const wheelRef = useScrollRevealReplay();
+  const contentRef = useScrollRevealReplay();
 
   const zones = [
     { index: 0, label: 'L', top: '8%', left: '10%', width: '35%', height: '38%' },
@@ -420,13 +455,13 @@ const LearnFramework = () => {
 
       <div className="lf-wrap">
         {/* Bordered title box */}
-        <div className="lf-title-box">
+        <div ref={titleRef} className="lf-title-box meth-reveal meth-fade-up">
           <h2 className="lf-title">The LEARN Framework<br />How Skillzza Builds Real-World Skills</h2>
         </div>
 
         <div className="lf-body">
           {/* Left: image with invisible clickable overlay zones */}
-          <div style={{ flexShrink: 0, width: '360px', position: 'relative' }}>
+          <div ref={wheelRef} className="meth-reveal meth-slide-left meth-delay-1" style={{ flexShrink: 0, width: '360px', position: 'relative' }}>
             <img
               src={getAssetPath('/framework.png')}
               alt="LEARN Framework Wheel"
@@ -447,7 +482,7 @@ const LearnFramework = () => {
           </div>
 
           {/* Right: content panel updates on click */}
-          <div className="lf-right">
+          <div ref={contentRef} className="lf-right meth-reveal meth-slide-right meth-delay-2">
             <h3 className="lf-item-title">{item.title}</h3>
             <p className="lf-item-desc">{item.desc}</p>
             <div>
@@ -466,18 +501,78 @@ const LearnFramework = () => {
 };
 
 const OurMethodology = () => {
+  const heroTitleRef = useScrollRevealReplay();
+  const heroImageRef = useScrollRevealReplay();
+  const introRef = useScrollRevealReplay();
+  const coreTitleRef = useScrollRevealReplay();
+  const coreGridRef = useScrollRevealReplay();
+
   return (
     <>
+      <style>{`
+        @keyframes methFadeUp {
+          from { opacity: 0; transform: translateY(32px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes methSlideLeft {
+          from { opacity: 0; transform: translateX(-36px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes methSlideRight {
+          from { opacity: 0; transform: translateX(36px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes methScaleUp {
+          from { opacity: 0; transform: scale(0.97); }
+          to { opacity: 1; transform: scale(1); }
+        }
+
+        .meth-reveal {
+          opacity: 0;
+          will-change: transform, opacity;
+          backface-visibility: hidden;
+          transform: translateZ(0);
+        }
+        .meth-reveal.meth-visible {
+          opacity: 1;
+        }
+        .meth-reveal.meth-fade-up.meth-visible {
+          animation: methFadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .meth-reveal.meth-slide-left.meth-visible {
+          animation: methSlideLeft 0.52s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .meth-reveal.meth-slide-right.meth-visible {
+          animation: methSlideRight 0.52s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .meth-reveal.meth-scale-up.meth-visible {
+          animation: methScaleUp 0.48s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .meth-delay-1 { animation-delay: 0.05s !important; }
+        .meth-delay-2 { animation-delay: 0.1s !important; }
+        .meth-delay-3 { animation-delay: 0.15s !important; }
+
+        @media (prefers-reduced-motion: reduce) {
+          .meth-reveal,
+          .meth-reveal.meth-visible {
+            opacity: 1 !important;
+            animation: none !important;
+            transform: none !important;
+          }
+        }
+      `}</style>
+
       {/* Hero Section */}
       {/* Top: white bg with title */}
       <section style={{ backgroundColor: '#fff', padding: '48px 24px 32px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
-        <h1 style={{ fontSize: '38px', fontWeight: '700', color: '#111827', lineHeight: '1.25', letterSpacing: '-0.3px', margin: '0 auto', maxWidth: '700px' }}>
+        <h1 ref={heroTitleRef} className="meth-reveal meth-fade-up" style={{ fontSize: '38px', fontWeight: '700', color: '#111827', lineHeight: '1.25', letterSpacing: '-0.3px', margin: '0 auto', maxWidth: '700px' }}>
           The Skillzza Learning Framework
         </h1>
       </section>
 
       {/* Full-width banner image — no overlay */}
-      <div className="method-hero-image-wrap" style={{ width: '100%', lineHeight: 0 }}>
+      <div ref={heroImageRef} className="method-hero-image-wrap meth-reveal meth-scale-up meth-delay-1" style={{ width: '100%', lineHeight: 0 }}>
         <img
           src={getAssetPath('/speaker.png')}
           alt="The Skillzza Learning Framework"
@@ -488,7 +583,7 @@ const OurMethodology = () => {
 
       {/* Below image: white section with centered text + stat pills */}
       {/* ── FIX: increased maxWidth for heading, paragraph and pills ── */}
-      <section className="method-intro-section" style={{ backgroundColor: '#fff', padding: '64px 48px 72px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
+      <section ref={introRef} className="method-intro-section meth-reveal meth-fade-up" style={{ backgroundColor: '#fff', padding: '64px 48px 72px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
         <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#111', lineHeight: '1.25', margin: '0 auto 20px', maxWidth: '100%' }}>
           Transforming Potential Through<br />Science-Backed Learning
         </h2>
@@ -546,7 +641,7 @@ const OurMethodology = () => {
         />
 
         {/* Title */}
-        <h2 style={{
+        <h2 ref={coreTitleRef} className="meth-reveal meth-fade-up" style={{
           textAlign: 'center', fontSize: '36px', fontWeight: '700',
           color: '#111', marginBottom: '32px', letterSpacing: '-0.3px',
         }}>
@@ -554,7 +649,7 @@ const OurMethodology = () => {
         </h2>
 
         {/* ── FIX: increased maxWidth from 920px to 1100px, fixed asymmetric padding ── */}
-        <div style={{
+        <div ref={coreGridRef} className="meth-reveal meth-fade-up meth-delay-1" style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gap: '14px',
@@ -566,7 +661,7 @@ const OurMethodology = () => {
         }}>
 
           {/* Card 1 – Competency-Based Progression */}
-          <div style={{
+          <div className="meth-reveal meth-scale-up" style={{
             backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
           }}>
@@ -577,7 +672,7 @@ const OurMethodology = () => {
           </div>
 
           {/* Card 2 – Industry-Academic Convergence */}
-          <div style={{
+          <div className="meth-reveal meth-scale-up meth-delay-1" style={{
             backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
           }}>
@@ -588,7 +683,7 @@ const OurMethodology = () => {
           </div>
 
           {/* Card 3 – Cognitive Load Optimization */}
-          <div style={{
+          <div className="meth-reveal meth-scale-up meth-delay-2" style={{
             backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
           }}>
@@ -599,7 +694,7 @@ const OurMethodology = () => {
           </div>
 
           {/* Card 4 – Cultural and Contextual Relevance */}
-          <div style={{
+          <div className="meth-reveal meth-scale-up meth-delay-3" style={{
             backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
           }}>
