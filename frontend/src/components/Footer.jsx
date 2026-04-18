@@ -83,6 +83,7 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer style={{ background: '#f0f0f0', fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
+      <div style={{ width: '100%', height: '4px', backgroundColor: '#E11313' }} />
 
       {/* ── Main Body ── */}
       <div className="footer-main-wrap" style={{ maxWidth: 1440, margin: '0 auto', padding: '48px 48px 44px' }}>

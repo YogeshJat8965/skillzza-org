@@ -115,31 +115,30 @@ const WhatWeDo = () => {
   return (
     <>
       <style>{`
+        /* ===== Modern Blur & Smooth Scale Revealing ===== */
         @keyframes wwdFadeUp {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
+          0% { opacity: 0; filter: blur(12px); transform: translateY(40px) scale(0.97); }
+          100% { opacity: 1; filter: blur(0px); transform: translateY(0) scale(1); }
         }
 
         @keyframes wwdSlideInLeft {
-          from { opacity: 0; transform: translateX(-36px); }
-          to { opacity: 1; transform: translateX(0); }
+          0% { opacity: 0; filter: blur(12px); transform: translateX(-40px) scale(0.97); }
+          100% { opacity: 1; filter: blur(0px); transform: translateX(0) scale(1); }
         }
 
         @keyframes wwdSlideInRight {
-          from { opacity: 0; transform: translateX(36px); }
-          to { opacity: 1; transform: translateX(0); }
+          0% { opacity: 0; filter: blur(12px); transform: translateX(40px) scale(0.97); }
+          100% { opacity: 1; filter: blur(0px); transform: translateX(0) scale(1); }
         }
 
         @keyframes wwdScaleUp {
-          from { opacity: 0; transform: scale(0.97); }
-          to { opacity: 1; transform: scale(1); }
+          0% { opacity: 0; filter: blur(14px); transform: scale(0.85); }
+          100% { opacity: 1; filter: blur(0px); transform: scale(1); }
         }
 
         .wwd-reveal {
           opacity: 0;
-          will-change: transform, opacity;
-          transform: translateZ(0);
-          backface-visibility: hidden;
+          will-change: transform, opacity, filter;
         }
 
         .wwd-reveal.wwd-visible {
@@ -147,19 +146,19 @@ const WhatWeDo = () => {
         }
 
         .wwd-reveal.wwd-fade-up.wwd-visible {
-          animation: wwdFadeUp 0.62s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          animation: wwdFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
 
         .wwd-reveal.wwd-slide-left.wwd-visible {
-          animation: wwdSlideInLeft 0.66s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          animation: wwdSlideInLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
 
         .wwd-reveal.wwd-slide-right.wwd-visible {
-          animation: wwdSlideInRight 0.66s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          animation: wwdSlideInRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
 
         .wwd-reveal.wwd-scale-up.wwd-visible {
-          animation: wwdScaleUp 0.62s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          animation: wwdScaleUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
 
         .wwd-delay-1 { animation-delay: 0.08s !important; }
@@ -198,7 +197,11 @@ const WhatWeDo = () => {
       `}</style>
       {/* ── Hero Section ── */}
       <section style={{
-        backgroundColor: '#e8eef7',
+        backgroundImage: `url('${getAssetPath('/improvements/image copy 2.png')}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#e8eef7', // Fallback color
         padding: '72px 24px 60px',
         textAlign: 'center',
         fontFamily: 'Inter, sans-serif',
@@ -237,7 +240,7 @@ const WhatWeDo = () => {
           {/* Header */}
           <div style={{ textAlign: 'center', padding: '64px 0 48px' }} className="wwd-reveal wwd-fade-up">
             <h2 style={{ fontSize: 42, fontWeight: 800, color: '#111827', lineHeight: 1.2, margin: 0 }}>
-              The Skillzza Framework<br />Four Core Pillars
+              The Four Core Pillars
             </h2>
           </div>
 
@@ -327,7 +330,7 @@ const WhatWeDo = () => {
                 background: pillar.screenBg,
                 padding: 24,
                 marginLeft: i === 3 ? '32px' : 0,
-              }} className={`wwd-reveal ${pillar.imageLeft ? 'wwd-slide-left' : 'wwd-slide-right'} wwd-delay-1`}>
+              }}>
                 <img
                   src={pillar.image}
                   alt={pillar.title}
@@ -337,7 +340,7 @@ const WhatWeDo = () => {
               </div>
 
               {/* Text */}
-              <div style={{ flex: 1, zIndex: 1 }} className={`wwd-reveal ${pillar.imageLeft ? 'wwd-slide-right' : 'wwd-slide-left'} wwd-delay-2`}>
+              <div style={{ flex: 1, zIndex: 1 }}>
                 <h3 style={{
                   fontSize: 32, fontWeight: 800, color: pillar.titleColor,
                   marginBottom: 16, lineHeight: 1.2, fontFamily: 'Inter, sans-serif',

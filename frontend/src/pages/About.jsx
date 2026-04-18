@@ -8,7 +8,7 @@ const AboutUs = () => {
       <section
         className="relative py-24 md:py-32 flex items-center bg-cover bg-center"
         style={{
-          backgroundImage: getBackgroundImageUrl('/about_us_banner.png'),
+          backgroundImage: "url('https://assets.kpmg.com/is/image/kpmg/fintech-segments-banner:cq5dam.web.2100.700')",
           minHeight: '600px',
         }}
       >

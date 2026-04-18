@@ -2,6 +2,24 @@ import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import Insights from '../components/Insights'
 
+
+function ExpandableText({ text, limit = 80 }) {
+  const [isExpanded, setIsExpanded] = React.useState(false);
+  if (!text) return null;
+  if (text.length <= limit) return <>{text}</>;
+  return (
+    <>
+      {isExpanded ? text : text.substring(0, limit) + '...'}
+      <button 
+        onClick={(e) => { e.preventDefault(); setIsExpanded(!isExpanded); }}
+        className="text-[#E11313] hover:underline font-bold ml-1 text-[14px]"
+      >
+        {isExpanded ? "Read less" : "Read more"}
+      </button>
+    </>
+  );
+}
+
 function InsightsPage() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -66,7 +84,7 @@ function InsightsPage() {
 
           {/* 5 Buttons wrapped for mobile and big screens alike */}
           <div 
-            className="w-full flex justify-center pt-8 pb-12 px-2 md:px-4 lg:px-0 insight-btn-container"
+            className="w-full hidden justify-center pt-8 pb-12 px-2 md:px-4 lg:px-0 insight-btn-container"
           >
             <div className="flex flex-wrap gap-3 md:gap-5 mx-auto w-full lg:w-auto justify-center items-center">
               {insightTabs.map((tab) => {
@@ -178,9 +196,9 @@ function InsightsPage() {
                       {card.title}
                     </h3>
                     
-                    <p className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
-                      {card.desc}
-                    </p>
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
+                      <ExpandableText text={card.desc} />
+                    </div>
                   </div>
                 </div>
               ))}
@@ -250,9 +268,9 @@ function InsightsPage() {
                       {card.title}
                     </h3>
                     
-                    <p className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
-                      {card.desc}
-                    </p>
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
+                      <ExpandableText text={card.desc} />
+                    </div>
                   </div>
                 </div>
               ))}
@@ -322,9 +340,9 @@ function InsightsPage() {
                       {card.title}
                     </h3>
                     
-                    <p className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
-                      {card.desc}
-                    </p>
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
+                      <ExpandableText text={card.desc} />
+                    </div>
                   </div>
                 </div>
               ))}
@@ -394,9 +412,9 @@ function InsightsPage() {
                       {card.title}
                     </h3>
                     
-                    <p className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
-                      {/* {card.desc} */}
-                    </p>
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
+                      <ExpandableText text={card.desc} />
+                    </div>
                   </div>
                 </div>
               ))}
@@ -466,9 +484,9 @@ function InsightsPage() {
                       {card.title}
                     </h3>
                     
-                    <p className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
-                      {/* {card.desc} */}
-                    </p>
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
+                      <ExpandableText text={card.desc} />
+                    </div>
                   </div>
                 </div>
               ))}

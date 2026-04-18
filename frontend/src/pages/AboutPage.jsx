@@ -74,9 +74,9 @@ function AboutPage() {
           position: relative;
           width: 100%;
           min-height: clamp(320px, 50vh, 520px);
-          background-image: url('/Company/about/Post205-cover.jpg');
-          // background-size: 118% auto;
-          // background-position: 94% center;
+          background-image: url('https://assets.kpmg.com/is/image/kpmg/fintech-segments-banner:cq5dam.web.2100.700');
+          background-size: cover;
+          background-position: center;
           display: flex;
           align-items: center;
           color: #f1f5f9;
@@ -257,9 +257,9 @@ function AboutPage() {
 
         .about-cta-strip {
           width: 100vw;
-          height: 120px;
+          height: 80px;
           margin-left: calc(50% - 50vw);
-          margin-top: -120px;
+          margin-top: -80px;
           background: linear-gradient(90deg, #990913 0%, #60050a 100%);
           display: flex;
           align-items: center;
@@ -290,6 +290,9 @@ function AboutPage() {
           cursor: pointer;
           transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
           will-change: transform, box-shadow;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .about-cta-strip__button:hover {
@@ -439,7 +442,7 @@ function AboutPage() {
           .about-cta-strip {
             margin-top: 0;
             height: auto;
-            min-height: 120px;
+            min-height: 80px;
             padding: 24px clamp(20px, 6vw, 56px);
           }
 

@@ -128,10 +128,10 @@ const navItems = [
       { name: 'School of AI & Quantum Intelligence', link: null, desc: 'ML, neural architectures, quantum algorithms, agentic AI systems', pill: 'AI + Quantum', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Global School of Sustainability & Climate Action', link: 'https://globalschoolofsustainability.com/', desc: 'Green tech, carbon markets, ESG frameworks, climate data science', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Centre of Digital & Design Excellence', link: null, desc: 'UX/UI, VFX, generative AI art, immersive media, spatial design', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'School of EV & E-Mobility', link: null, desc: 'Electric vehicles, battery systems, smart transport, grid tech', pill: 'Beta', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      // { name: 'School of EV & E-Mobility', link: null, desc: 'Electric vehicles, battery systems, smart transport, grid tech', pill: 'Beta', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Institute of Aerial Intelligence', link: null, desc: 'Drone systems, UAV operations, aerial data & AI navigation', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Future Skill Academy', link: null, desc: 'Future-ready learning tracks for AI, product, and digital careers.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Cybersecurity & Ethical AI School', link: null, desc: 'Threat intelligence, AI safety, responsible automation, governance', pill: 'New', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      // { name: 'Future Skill Academy', link: null, desc: 'Future-ready learning tracks for AI, product, and digital careers.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      // { name: 'Cybersecurity & Ethical AI School', link: null, desc: 'Threat intelligence, AI safety, responsible automation, governance', pill: 'New', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
     ],
   },
   {
@@ -151,7 +151,7 @@ const navItems = [
       { name: 'The Skillzza Digest', link: '/insights/skill-digest', desc: 'Insights, trends & game-changers shaping future skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'AI Talent Research Hub', link: '/insights/ai-talent-research-hub', desc: 'Reports & whitepapers on AI & workforce transformation', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Skill Unplugged Podcast', link: '/insights/skill-unplugged-podcast', desc: 'Raw, Real & Revolutionary talks on the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Skillzza Live — Knowledge in Action', link: '/insights/skillzza-live', desc: 'Interactive sessions bringing learning to life', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Skillzza Live', link: '/insights/skillzza-live', desc: 'Interactive sessions bringing learning to life', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Agentic Workforce Index 2026', link: null, desc: 'Annual report on AI agent adoption across industries', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
     ],
   },
@@ -178,10 +178,10 @@ const navItems = [
       { name: 'Press & Media', link: null, desc: 'News, features & brand resources', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
     ],
     serviceItems: [
-      { name: 'Institution Transformation', desc: 'Curriculum redesign & AI integration for universities.', link: '/company/partnerships' },
-      { name: 'Enterprise Skill Audit', desc: 'Workforce gap analysis & 90-day upskilling roadmap.', link: '/company/partnerships' },
-      { name: 'Govt & CSR Programmes', desc: 'National skill missions & youth employment schemes.', link: '/company/partnerships' },
-      { name: 'Talent Intelligence Reports', desc: 'Workforce analytics & sector skill signals.', link: '/company/partnerships' },
+      { name: 'Institution Transformation', desc: 'Curriculum redesign & AI integration for universities.', link: null },
+      { name: 'Enterprise Skill Audit', desc: 'Workforce gap analysis & 90-day upskilling roadmap.', link: null },
+      { name: 'Govt & CSR Programmes', desc: 'National skill missions & youth employment schemes.', link: null },
+      { name: 'Talent Intelligence Reports', desc: 'Workforce analytics & sector skill signals.', link: null },
     ],
   },
 ];
@@ -232,46 +232,7 @@ const Pill = ({ text, color = 'red' }) => {
    Eyebrow — premium section header with gradient accent line
 ─────────────────────────────────────────────────────────────── */
 
-const Eyebrow = ({ text, dotColor, gradient }) => (
-  <div
-    style={{
-      fontSize: 11,
-      fontWeight: 800,
-      letterSpacing: 1.5,
-      textTransform: 'uppercase',
-      marginBottom: 18,
-      padding: '12px 16px',
-      background: 'linear-gradient(135deg, #e4dafc 0%, #def1f7 50%, #daf4ef 100%)',
-      borderRadius: 10,
-      border: 'none',
-      display: 'flex',
-      alignItems: 'center',
-      gap: 10,
-      position: 'relative',
-    }}
-  >
-    {/* Gradient accent dot */}
-    <span
-      style={{
-        width: 8,
-        height: 8,
-        borderRadius: '50%',
-        background: gradient || dotColor || '#BD1723',
-        flexShrink: 0,
-        boxShadow: `0 0 8px ${dotColor || '#BD1723'}40`,
-      }}
-    />
-    <span
-      style={{
-        color: '#0f172a',
-        letterSpacing: 1.5,
-        fontWeight: 800,
-      }}
-    >
-      {text}
-    </span>
-  </div>
-);
+const Eyebrow = ({ text, dotColor, gradient }) => null;
 
 /* ───────────────────────────────────────────────────────────────
    CtaBar — gradient CTA strip
@@ -1090,8 +1051,8 @@ const CompanyMegaDropdown = ({ navItem }) => (
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: 18,
+        gridTemplateColumns: '1fr 1px 1fr',
+        gap: '24px',
       }}
     >
       <div>
@@ -1108,6 +1069,9 @@ const CompanyMegaDropdown = ({ navItem }) => (
           ))}
         </div>
       </div>
+
+      {/* Decorative Separator Line */}
+      <div style={{ background: '#e2e8f0', width: '1px', alignSelf: 'stretch' }} />
 
       <div>
         <Eyebrow text={navItem.servicesEyebrow} dotColor={navItem.dotColor} gradient={navItem.accentGradient} />

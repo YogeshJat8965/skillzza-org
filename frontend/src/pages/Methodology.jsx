@@ -456,7 +456,7 @@ const LearnFramework = () => {
       <div className="lf-wrap">
         {/* Bordered title box */}
         <div ref={titleRef} className="lf-title-box meth-reveal meth-fade-up">
-          <h2 className="lf-title">The LEARN Framework<br />How Skillzza Builds Real-World Skills</h2>
+          <h2 className="lf-title">The LEARN Framework<br />How We Builds Real-World Skills</h2>
         </div>
 
         <div className="lf-body">
@@ -584,20 +584,20 @@ const OurMethodology = () => {
       {/* Below image: white section with centered text + stat pills */}
       {/* ── FIX: increased maxWidth for heading, paragraph and pills ── */}
       <section ref={introRef} className="method-intro-section meth-reveal meth-fade-up" style={{ backgroundColor: '#fff', padding: '64px 48px 72px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
-        <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#111', lineHeight: '1.25', margin: '0 auto 20px', maxWidth: '100%' }}>
+        {/* <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#111', lineHeight: '1.25', margin: '0 auto 20px', maxWidth: '100%' }}>
           Transforming Potential Through<br />Science-Backed Learning
-        </h2>
+        </h2> */}
         <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.75', maxWidth: '100%', margin: '0 auto 40px' }}>
-          At Skillzza, we believe that effective skill development requires more than traditional training approaches. Our methodology integrates cognitive science, industry insights, and adaptive technology to create learning experiences that deliver measurable, lasting results.
+          At Skillzza, we believe that effective skill development requires more than traditional training approaches. Our methodology integrates cognitive science, <br /> industry insights, and adaptive technology to create learning experiences that deliver measurable, lasting results.
         </p>
         <div className="method-stat-pills" style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', justifyContent: 'center', width: '100%', margin: '0 auto' }}>
           {['85%+ Skill Acquisition', '90%+ Learner Satisfaction', '75%+ Career Advancement', '95%+ Employer Satisfaction'].map((stat, i) => (
             <div key={i} style={{
               padding: '10px 24px', borderRadius: '50px',
               backgroundColor: '#e8f4fd', color: '#2c6fad',
-              fontSize: '14px', fontWeight: '500',
+              fontSize: '16px', fontWeight: '500',
             }}>
-              {stat}
+              <strong>{stat.split(' ')[0]}</strong> {stat.split(' ').slice(1).join(' ')}
             </div>
           ))}
         </div>
@@ -709,9 +709,6 @@ const OurMethodology = () => {
 
       {/* Implementation Methodology — Stepper */}
       <ImplementationStepper />
-
-      {/* ── METHODOLOGY DELIVERS STATS ── */}
-      <MethodologyStats />
     </>
   );
 };

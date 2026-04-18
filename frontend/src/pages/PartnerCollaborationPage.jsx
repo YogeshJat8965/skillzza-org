@@ -116,7 +116,7 @@ function PartnerCollaborationPage() {
           position: relative;
           width: 100%;
           min-height: clamp(340px, 38vw, 500px);
-          background-image: url('/Company/collaboration/heroSectionImage.jpg');
+          background-image: url('/improvements/GettyImages_Daenin-Arnee_25.10.24-1024x441.jpg.jpeg');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
@@ -375,9 +375,18 @@ function PartnerCollaborationPage() {
         .detail-section__list {
           margin: 0;
           padding-left: 20px;
+          list-style-type: disc;
           font-size: 16px;
           line-height: 1.55;
           color: #334155;
+        }
+
+        .detail-section__list li {
+          padding-left: 4px;
+        }
+
+        .detail-section__list li::marker {
+          color: #E11313;
         }
 
         .detail-section__list li + li {
@@ -683,7 +692,7 @@ function PartnerCollaborationPage() {
 
         {/* ===== STRATEGIC PARTNERSHIPS GRID ===== */}
         <section className="collab-partners">
-          <h2 className="collab-partners__heading collab-animate anim-fade-up">Strategic Partnerships That Transform Futures</h2>
+          {/* <h2 className="collab-partners__heading collab-animate anim-fade-up">Strategic Partnerships That Transform Futures</h2> */}
           <p className="collab-partners__intro collab-animate anim-fade-up anim-delay-1">
             Skillzza forges strategic alliances across sectors to drive meaningful skill development and innovation. Our collaborative approach delivers customized solutions that meet the unique needs of corporates, governments, and educational institutions creating shared value and sustainable impact.
           </p>
@@ -929,35 +938,14 @@ function PartnerCollaborationPage() {
         <section className="detail-section">
           <div className="detail-section__inner">
             <div className="detail-section__content collab-animate anim-slide-left">
-              <h3 className="detail-section__heading">Priority Focus Areas</h3>
+              <h3 className="detail-section__heading">Focus Areas</h3>
               <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Youth Empowerment</h4>
-                <ul className="detail-section__list">
-                  <li>Job-ready skills for emerging workforce</li>
-                </ul>
-              </div>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Women's Economic Participation</h4>
-                <ul className="detail-section__list">
-                  <li>Gender-inclusive skill programs</li>
-                </ul>
-              </div>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Rural Development</h4>
-                <ul className="detail-section__list">
-                  <li>Bringing opportunities to underserved regions</li>
-                </ul>
-              </div>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Green Transition</h4>
-                <ul className="detail-section__list">
-                  <li>Skills for sustainable economy jobs</li>
-                </ul>
-              </div>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Digital Inclusion</h4>
-                <ul className="detail-section__list">
-                  <li>Bridging the digital divide through skill development</li>
+                <ul className="detail-section__list" style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <li><span className="detail-section__subheading" style={{ fontSize: '18px' }}>Youth Empowerment</span></li>
+                  <li><span className="detail-section__subheading" style={{ fontSize: '18px' }}>Women's Economic Participation</span></li>
+                  <li><span className="detail-section__subheading" style={{ fontSize: '18px' }}>Rural Development</span></li>
+                  <li><span className="detail-section__subheading" style={{ fontSize: '18px' }}>Green Transition</span></li>
+                  <li><span className="detail-section__subheading" style={{ fontSize: '18px' }}>Digital Inclusion</span></li>
                 </ul>
               </div>
             </div>

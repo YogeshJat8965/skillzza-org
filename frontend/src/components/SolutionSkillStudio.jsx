@@ -112,8 +112,8 @@ const SolutionSkillStudio = () => {
             image: '/improvements/image.png',
         },
         {
-            label: 'Hirenest',
-            title: 'Hirenest',
+            label: 'Hirenest Recruit',
+            title: 'Hirenest Recruit',
             subtitle: 'AI-Powered Talent Marketplace Connecting Verified Skills with the Right Roles',
             bullets: [
                 'AI-matched, skill-verified talent pools.',
