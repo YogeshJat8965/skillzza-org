@@ -11,31 +11,33 @@ import { getAssetPath, getRoutePath } from '../utils/assets';
 
 const footerSections = [
   {
-    title: 'Products',
+    title: 'Platforms',
     links: [
       { name: 'The Potential Meter AI', href: '/product/potential-meter' },
       { name: 'Xperience Platform', href: '/product/xperience-platform' },
       { name: 'Hirenest', href: '/product/hirenest' },
-      { name: 'Talent Transformation', href: '/product/talent-intelligence' },
-      { name: 'AI Hacknex', href: '/product/ai-hacknex' },
+      { name: 'Agentic AI', href: '/product/ai-hacknex' },
+      { name: 'Skill Persona', href: '/product/ai-hacknex' },
+
+      // { name: 'AI Talent Intelligence', href: '/product/talent-intelligence' },
     ],
   },
-  {
-    title: 'Use Case',
-    links: [
-      { name: 'Student Advantage Package', href: '/use-case/students' },
-      { name: 'Campus Enablement Package', href: '/use-case/institutions' },
-      { name: 'Enterprise Talent Solutions Package', href: '/use-case/enterprises' },
-      { name: 'Government & Csr Impact Package', href: '/use-case/government' },
-    ],
-  },
+  // {
+  //   title: 'Use Case',
+  //   links: [
+  //     { name: 'Student Advantage Package', href: '/use-case/students' },
+  //     { name: 'Campus Enablement Package', href: '/use-case/institutions' },
+  //     { name: 'Enterprise Talent Solutions Package', href: '/use-case/enterprises' },
+  //     { name: 'Government & Csr Impact Package', href: '/use-case/government' },
+  //   ],
+  // },
   {
     title: 'School of Technology',
     links: [
       { name: 'ByteMinds–The School of AI & Data', href: '/academy/byteminds' },
       { name: 'Gssca–Global School Of Sustainability & Climate Action', href: '/academy/sustainability' },
       { name: 'Centre Of Digital & Design Excellence', href: '/academy/digital-design' },
-      { name: 'School Of Ev & E- Mobility', href: '/academy/ev-mobility' },
+      // { name: 'School Of Ev & E- Mobility', href: '/academy/ev-mobility' },
       { name: 'Udaan Aerial Intelligence', href: '/academy/udan' },
     ],
   },
@@ -45,7 +47,7 @@ const footerSections = [
       { name: 'Job Simulations Master', href: '/explore/job-simulations' },
       { name: 'Explore Domains', href: '/explore/domains' },
       { name: 'Career Trajectory', href: '/explore/career-trajectory' },
-      { name: 'Skillzza Persona', href: '/explore/skillzza-persona' },
+      // { name: 'Skillzza Persona', href: '/explore/skillzza-persona' },
     ],
   },
   {
@@ -92,7 +94,7 @@ const Footer = () => {
         <div className="footer-outer" style={{
           display: 'grid',
           gridTemplateColumns: '280px 1fr',
-          columnGap: 40,
+          columnGap: 80,
           alignItems: 'start',
         }}>
 
@@ -130,7 +132,7 @@ const Footer = () => {
                 lineHeight: 1.7,
                 margin: 0,
               }}>
-                Skillzza, WeWork India, Chromium, CTS No.&nbsp;106/1–5<br />
+                Skillzza,WeWork India,Chromium, CTS No.&nbsp;106/1–5<br />
                 Jogeshwari–Vikhroli Link Road, Milind Nagar,<br />
                 Powai, Mumbai – 400076
               </p>
@@ -156,10 +158,12 @@ const Footer = () => {
           {/* ── RIGHT: 6 link columns ── */}
           <div className="footer-links-grid" style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(6, 1fr)',
-            columnGap: 16,
+            gridTemplateColumns: 'repeat(5, 1fr)',
+            columnGap: 24,
             rowGap: 0,
             alignItems: 'start',
+            marginLeft: '110px',
+            paddingRight: '20px',
           }}>
             {footerSections.map((section) => (
               <div key={section.title}>
@@ -206,8 +210,8 @@ const Footer = () => {
               </div>
             ))}
 
-            {/* ── Stay Connected — spans cols 5–6 (Insights + Company) ── */}
-            <div className="footer-social-col" style={{ gridColumn: '5 / 7', marginTop: 36 }}>
+            {/* ── Stay Connected — spans cols 4–6 (Insights + Company) ── */}
+            <div className="footer-social-col" style={{ gridColumn: '4 / 6', marginTop: 36, marginLeft: '-15px' }}>
               <p style={{
                 fontWeight: 700,
                 fontSize: 13,

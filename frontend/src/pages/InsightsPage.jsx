@@ -63,11 +63,19 @@ function InsightsPage() {
   ];
 
   const tabDescriptions = {
-    "Skill Blueprint": "Solutions & Case Studies Real-World Success Stories in Skill Development",
-    "The Skill Digest": "The Skillzza Digest Insights, Trends & Game-changers shaping the Future of Skills",
-    "AI Talent Research Hub": "Reports & Whitepapers Data-Driven Insights on AI & Workforce Transformation.",
+    "Skill Blueprint": "Real-World Success Stories in Skill Development",
+    "The Skill Digest": "Insights, Trends & Game-changers shaping the Future of Skills",
+    "AI Talent Research Hub": "Data-Driven Insights on AI & Workforce Transformation.",
     "The Skill Unplugged Podcast Series (3R )": "Talks on the Future of Skills.",
-    "Skillzza Live": "Knowledge in Action Interactive Sessions Bringing Learning to Life."
+    "Skillzza Live": "Interactive Sessions Bringing Learning to Life."
+  };
+
+  const breadcrumbMappings = {
+    "Skill Blueprint": { left: "Case Studies", right: "Skill Blueprint" },
+    "The Skill Digest": { left: "Blog", right: "The Skillzza Digest" },
+    "AI Talent Research Hub": { left: "Reports & Whitepapers", right: "AI Talent Research Hub" },
+    "The Skill Unplugged Podcast Series (3R )": { left: "Skill Unplugged Podcast", right: "A Podcast series" },
+    "Skillzza Live": { left: "Knowledge in Action", right: "Skillzza Live" }
   };
 
   return (
@@ -75,8 +83,24 @@ function InsightsPage() {
       {/* Banner */}
       <Insights showHero={true} showContent={false} />
 
+      {/* Breadcrumbs */}
+      <div className="bg-transparent pt-6 pb-2 px-4 md:px-8 w-full">
+        <div className="max-w-[1440px] mx-auto border-b-2 border-dotted border-gray-500 pb-3 flex items-center gap-2 text-[14px] md:text-[16px] font-['DM_Sans',sans-serif]">
+          <span 
+            onClick={() => navigate('/')} 
+            className="text-[#0070AC] font-bold cursor-pointer hover:underline"
+          >
+            {breadcrumbMappings[activeTab]?.left || "Home"}
+          </span>
+          <span className="text-gray-500">/</span>
+          <span className="text-[#475569]">
+            {breadcrumbMappings[activeTab]?.right || "Insights"}
+          </span>
+        </div>
+      </div>
+
       {/* Main Filter Section */}
-      <section className="w-full px-4 md:px-8 mt-16 md:mt-24">
+      <section className="w-full px-4 md:px-8 mt-2 md:mt-4">
         <div className="max-w-[1440px] mx-auto flex flex-col items-center">
           
           {/* Main Heading */}
@@ -84,7 +108,7 @@ function InsightsPage() {
 
           {/* 5 Buttons wrapped for mobile and big screens alike */}
           <div 
-            className="w-full hidden justify-center pt-8 pb-12 px-2 md:px-4 lg:px-0 insight-btn-container"
+            className="w-full hidden justify-center pt-2 pb-2 px-2 md:px-4 lg:px-0 insight-btn-container"
           >
             <div className="flex flex-wrap gap-3 md:gap-5 mx-auto w-full lg:w-auto justify-center items-center">
               {insightTabs.map((tab) => {
@@ -119,7 +143,7 @@ function InsightsPage() {
             </div>
           </div>
           
-          <div className="mt-6 text-left transistion-all duration-300 w-full max-w-[1440px] px-4">
+          <div className="mt-2 text-left transistion-all duration-300 w-full max-w-[1440px] px-4">
             <p className="font-['DM_Sans',sans-serif] text-[18px] md:text-[20px] font-bold text-[#475569]">
               {tabDescriptions[activeTab]}
             </p>
@@ -128,7 +152,7 @@ function InsightsPage() {
       </section>
 
       {/* Content Section below the buttons */}
-      <section className="w-full px-4 md:px-8 mt-12 md:mt-20 pb-20">
+      <section className="w-full px-4 md:px-8 mt-6 md:mt-8 pb-20">
         <div className="max-w-[1440px] mx-auto">
           {activeTab === 'Skill Blueprint' && (
             <div className="flex flex-wrap justify-center gap-8">

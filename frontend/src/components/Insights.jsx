@@ -279,7 +279,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
           <div 
             className="absolute inset-0 w-full h-full"
             style={{
-              backgroundImage: "url('/Company/premium_photo-1661486479651-09063e9671dd.avif')",
+              backgroundImage: "url('/improvements/Untitled%20design.jpg.jpeg')",
               backgroundSize: 'cover',
               backgroundPosition: 'center 35%',
               filter: 'brightness(0.65)'
@@ -287,7 +287,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           
-          <div className="relative z-10 text-center px-4 w-full animate-fade-in-up">
+          <div className="relative z-10 text-center px-4 w-full animate-fade-in-up md:pr-[20%]">
             <h1 
               style={{ 
                 fontFamily: "'League Spartan', sans-serif", 
@@ -296,7 +296,8 @@ const Insights = ({ showHero = false, showContent = true }) => {
                 letterSpacing: '2px',
                 color: '#FFFFFF',
                 margin: 0,
-                textShadow: '0 4px 12px rgba(0,0,0,0.5)'
+                textShadow: '0 4px 12px rgba(0,0,0,0.5)',
+                transform: 'translateX(-10%)'
               }}
             >
               Insights
