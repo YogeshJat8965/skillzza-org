@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { getRoutePath } from '../utils/assets'
+import { getAssetPath, getBackgroundImageUrl, getRoutePath } from '../utils/assets'
 
 function XperiencePlatformPage() {
   const contactUsPath = getRoutePath('/contact-us')
@@ -1148,7 +1148,7 @@ function XperiencePlatformPage() {
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full hero-background">
             <img
-              src="/img/Group 41584.png"
+              src={getAssetPath('/img/Group 41584.png')}
               alt="Background"
               className="w-full h-full object-cover"
             />
@@ -1253,7 +1253,7 @@ function XperiencePlatformPage() {
               {/* Right Image - Responsive positioning */}
               <div className="w-full lg:w-[45%] xl:w-1/2 relative z-10 lg:pr-0">
                 <img
-                  src="/img/young-female-teacher-headphones-having-video-conference-call-with-teenage-girl-student-using-laptop-home-online-lesson-elearning-distance-remote-class.png"
+                  src={getAssetPath('/img/young-female-teacher-headphones-having-video-conference-call-with-teenage-girl-student-using-laptop-home-online-lesson-elearning-distance-remote-class.png')}
                   alt="Virtual Internship Platform"
                   className="w-full h-auto shadow-xl md:shadow-2xl rounded-lg lg:rounded-l-lg lg:rounded-r-none hero-image"
                 />
@@ -1269,7 +1269,7 @@ function XperiencePlatformPage() {
               {/* Left Image - No left padding */}
               <div className="w-full lg:w-1/2 px-4 sm:px-6 md:px-8 lg:px-0 slide-in-left">
                 <img
-                  src="/img/Image 408.png"
+                  src={getAssetPath('/img/Image 408.png')}
                   alt="Xperience Platform Learning"
                   className="w-full h-auto"
                 />
@@ -1408,7 +1408,7 @@ function XperiencePlatformPage() {
                     >
                       {/* Card Image */}
                       <img
-                        src={`/img/${card.image}`}
+                        src={getAssetPath(`/img/${card.image}`)}
                         alt={card.title}
                         className="card-image w-full h-full object-cover grayscale brightness-75 transition-all duration-[600ms] lg:group-hover:grayscale-0 lg:group-hover:brightness-100"
                       />
@@ -1577,7 +1577,7 @@ function XperiencePlatformPage() {
                 >
                   {/* Icon */}
                   <img
-                    src={`/img/${card.icon}`}
+                    src={getAssetPath(`/img/${card.icon}`)}
                     alt={card.title}
                     className="mb-5 md:mb-6"
                     style={{
@@ -1644,7 +1644,7 @@ function XperiencePlatformPage() {
               {/* Left Side - Image */}
               <div className="w-full lg:w-[55%] xl:w-[58%] capabilities-image">
                 <img
-                  src="/img/Group 41361.png"
+                  src={getAssetPath('/img/Group 41361.png')}
                   alt="Platform Dashboard"
                   className="w-full h-auto"
                 />
@@ -1823,7 +1823,7 @@ function XperiencePlatformPage() {
                   aria-label="Previous slide"
                 >
                   <img
-                    src="/img/Group 41596.svg"
+                    src={getAssetPath('/img/Group 41596.svg')}
                     alt="Previous"
                     style={{ width: '48px', height: '48px' }}
                   />
@@ -1835,7 +1835,7 @@ function XperiencePlatformPage() {
                   aria-label="Next slide"
                 >
                   <img
-                    src="/img/Group 41595.svg"
+                    src={getAssetPath('/img/Group 41595.svg')}
                     alt="Next"
                     style={{ width: '48px', height: '48px' }}
                   />
@@ -1927,13 +1927,13 @@ function XperiencePlatformPage() {
                       <div className="relative flex-shrink-0 z-10">
                         {/* Default state: Group 41598 */}
                         <img
-                          src="/img/Group 41598.svg"
+                          src={getAssetPath('/img/Group 41598.svg')}
                           alt={`Step ${step.number}`}
                           className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 transition-opacity duration-300 group-hover:opacity-0"
                         />
                         {/* Hover state: Group 41597 */}
                         <img
-                          src="/img/Group 41597.svg"
+                          src={getAssetPath('/img/Group 41597.svg')}
                           alt={`Step ${step.number} Active`}
                           className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
                         />
@@ -1986,7 +1986,7 @@ function XperiencePlatformPage() {
               {/* Right Side - Image */}
               <div className="works-image w-full lg:w-[70%] flex items-end justify-center lg:justify-end pt-4">
                 <img
-                  src="/img/Mask Group 120.png"
+                  src={getAssetPath('/img/Mask Group 120.png')}
                   alt="How it Works Dashboard"
                   className="w-full h-auto lg:w-auto"
                   style={{ width: '760px', height: '519px', opacity: 1 }}
@@ -2011,7 +2011,7 @@ function XperiencePlatformPage() {
           ref={impactSectionRef}
           className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
           style={{
-            backgroundImage: "url('/img/Mask Group 138.png')",
+            backgroundImage: getBackgroundImageUrl('/img/Mask Group 138.png'),
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -2022,7 +2022,7 @@ function XperiencePlatformPage() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url('/img/Mask Group 138.png')",
+              backgroundImage: getBackgroundImageUrl('/img/Mask Group 138.png'),
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -2206,7 +2206,7 @@ function XperiencePlatformPage() {
                       {/* Icon */}
                       <div className="mb-8">
                         <img
-                          src={`/img/${card.icon}`}
+                          src={getAssetPath(`/img/${card.icon}`)}
                           alt={card.title}
                           className="w-auto h-auto"
                           style={{
@@ -2261,7 +2261,7 @@ function XperiencePlatformPage() {
                   aria-label="Previous"
                 >
                   <img
-                    src="/img/Group 41596.svg"
+                    src={getAssetPath('/img/Group 41596.svg')}
                     alt="Previous"
                     className="w-full h-full"
                   />
@@ -2273,7 +2273,7 @@ function XperiencePlatformPage() {
                   aria-label="Next"
                 >
                   <img
-                    src="/img/Group 41595.svg"
+                    src={getAssetPath('/img/Group 41595.svg')}
                     alt="Next"
                     className="w-full h-full"
                   />
@@ -2288,7 +2288,7 @@ function XperiencePlatformPage() {
           ref={ctaSectionRef}
           className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
           style={{
-            backgroundImage: "url('/img/Group 41600.png')",
+            backgroundImage: getBackgroundImageUrl('/img/Group 41600.png'),
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -2333,7 +2333,7 @@ function XperiencePlatformPage() {
             {/* Center Image */}
             <div className="cta-image flex justify-center mb-12 md:mb-16">
               <img
-                src="/img/Mask Group 122.png"
+                src={getAssetPath('/img/Mask Group 122.png')}
                 alt="Platform Dashboard"
                 className="w-full h-auto"
                 style={{

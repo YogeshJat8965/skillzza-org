@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { getAssetPath } from '../utils/assets';
 
 const SchoolOfTechnology = () => {
   const [isVisible, setIsVisible] = useState({
@@ -213,7 +214,7 @@ const SchoolOfTechnology = () => {
                 left: '0px',
                 width: '650px',
                 height: '665px',
-                background: 'transparent url(/img/Group%2037833.png) 0% 0% no-repeat padding-box',
+                background: `transparent url(${getAssetPath('/img/Group%2037833.png')}) 0% 0% no-repeat padding-box`,
                 backgroundSize: 'contain',
                 opacity: 1,
               }}

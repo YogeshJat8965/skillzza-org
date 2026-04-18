@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { getRoutePath } from '../utils/assets'
+import { getAssetPath, getRoutePath } from '../utils/assets'
 
 function PartnerCollaborationPage() {
   const pageRef = useRef(null)
@@ -116,7 +116,7 @@ function PartnerCollaborationPage() {
           position: relative;
           width: 100%;
           min-height: clamp(340px, 38vw, 500px);
-          background-image: url('/improvements/GettyImages_Daenin-Arnee_25.10.24-1024x441.jpg.jpeg');
+          background-image: url('${getAssetPath('/improvements/GettyImages_Daenin-Arnee_25.10.24-1024x441.jpg.jpeg')}');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
@@ -705,7 +705,7 @@ function PartnerCollaborationPage() {
               onClick={() => handleCardSelect('corporate')}
               onKeyDown={(event) => handleCardKeyDown(event, 'corporate')}
             >
-              <img className="collab-partners__card-image" src="/Company/collaboration/corporates.jpg" alt="Corporates" />
+              <img className="collab-partners__card-image" src={getAssetPath('/Company/collaboration/corporates.jpg')} alt="Corporates" />
               <h3 className="collab-partners__card-title">Corporates</h3>
             </article>
             <article
@@ -716,7 +716,7 @@ function PartnerCollaborationPage() {
               onClick={() => handleCardSelect('government')}
               onKeyDown={(event) => handleCardKeyDown(event, 'government')}
             >
-              <img className="collab-partners__card-image" src="/Company/collaboration/govtCardImg.jpg" alt="Government" />
+              <img className="collab-partners__card-image" src={getAssetPath('/Company/collaboration/govtCardImg.jpg')} alt="Government" />
               <h3 className="collab-partners__card-title">Government</h3>
             </article>
             <article
@@ -727,7 +727,7 @@ function PartnerCollaborationPage() {
               onClick={() => handleCardSelect('education')}
               onKeyDown={(event) => handleCardKeyDown(event, 'education')}
             >
-              <img className="collab-partners__card-image" src="/Company/collaboration/school_unversity_img.jpeg" alt="Educational institutions" />
+              <img className="collab-partners__card-image" src={getAssetPath('/Company/collaboration/school_unversity_img.jpeg')} alt="Educational institutions" />
               <h3 className="collab-partners__card-title">Educational Institutions</h3>
             </article>
           </div>
@@ -778,7 +778,7 @@ function PartnerCollaborationPage() {
             <figure className="detail-section__figure collab-animate anim-slide-right">
               <img
                 className="detail-section__image"
-                src="/Company/collaboration/for_corporate_only_img1.jpg"
+                src={getAssetPath('/Company/collaboration/for_corporate_only_img1.jpg')}
                 alt="Corporate leaders collaborating during a learning session"
               />
             </figure>
@@ -810,7 +810,7 @@ function PartnerCollaborationPage() {
             <figure className="detail-section__figure collab-animate anim-slide-left">
               <img
                 className="detail-section__image"
-                src="/Company/collaboration/corporate%20partnership%20image%202.jpg"
+                src={getAssetPath('/Company/collaboration/corporate%20partnership%20image%202.jpg')}
                 alt="Professionals collaborating during a corporate partnership workshop"
               />
             </figure>
@@ -896,7 +896,7 @@ function PartnerCollaborationPage() {
             <figure className="detail-section__figure collab-animate anim-slide-right">
               <img
                 className="detail-section__image"
-                src="/Company/collaboration/howWeSupportGovt_image1.jpg"
+                src={getAssetPath('/Company/collaboration/howWeSupportGovt_image1.jpg')}
                 alt="Government partnership collaboration for skill development"
               />
             </figure>
@@ -927,7 +927,7 @@ function PartnerCollaborationPage() {
             <figure className="detail-section__figure collab-animate anim-slide-left">
               <img
                 className="detail-section__image"
-                src="/Company/collaboration/KeyGovtCollaborationAreas_image2.jpg"
+                src={getAssetPath('/Company/collaboration/KeyGovtCollaborationAreas_image2.jpg')}
                 alt="Key government collaboration areas"
               />
             </figure>
@@ -952,7 +952,7 @@ function PartnerCollaborationPage() {
             <figure className="detail-section__figure collab-animate anim-slide-right">
               <img
                 className="detail-section__image"
-                src="/Company/collaboration/govImageDiscuss.jpg"
+                src={getAssetPath('/Company/collaboration/govImageDiscuss.jpg')}
                 alt="Priority focus areas for government partnerships"
               />
             </figure>
@@ -1048,7 +1048,7 @@ function PartnerCollaborationPage() {
               <img
                 className="detail-section__image"
                 style={{ objectFit: 'contain', maxHeight: 'none' }}
-                src="/Company/collaboration/education%20image%203.png"
+                src={getAssetPath('/Company/collaboration/education%20image%203.png')}
                 alt="Educational partnerships skill development"
               />
             </figure>
@@ -1079,7 +1079,7 @@ function PartnerCollaborationPage() {
             <figure className="detail-section__figure collab-animate anim-slide-right">
               <img
                 className="detail-section__image"
-                src="/Company/collaboration/education%20image2.jpeg"
+                src={getAssetPath('/Company/collaboration/education%20image2.jpeg')}
                 alt="Educator excellence and career preparation"
               />
             </figure>
@@ -1105,7 +1105,7 @@ function PartnerCollaborationPage() {
             <figure className="detail-section__figure collab-animate anim-slide-left">
               <img
                 className="detail-section__image detail-section__image--plain"
-                src="/Company/collaboration/education%20Image1.png"
+                src={getAssetPath('/Company/collaboration/education%20Image1.png')}
                 alt="Comprehensive educational program offerings"
               />
             </figure>

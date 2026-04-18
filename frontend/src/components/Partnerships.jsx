@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { getRoutePath } from '../utils/assets';
+import { getAssetPath, getBackgroundImageUrl, getRoutePath } from '../utils/assets';
 
 const Partnerships = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -42,10 +42,10 @@ const Partnerships = () => {
   }, []);
 
   const cards = [
-    { id: 1, icon: '/img/g2475.svg', title: 'Schools / Universities', description: 'Partnering to Cultivate the Next Generation of Leaders', bgColor: '#E6E6E6', targetHash: '#schools' },
-    { id: 2, icon: '/img/corporation.svg', title: 'Corporates', description: 'Driving Business Success through Workforce', bgColor: '#E6E6E6', targetHash: '#corporates' },
-    { id: 3, icon: '/img/government.svg', title: 'Government', description: 'Building a Skilled Workforce for a Stronger', bgColor: '#E6E6E6', targetHash: '#government' },
-    { id: 4, icon: '/img/Group%2023779.svg', title: 'Become our upskilling partner', description: 'Join Us in Shaping the Future of Work', bgColor: '#EAE8E8', targetHash: '#upskilling' },
+    { id: 1, icon: getAssetPath('/img/g2475.svg'), title: 'Schools / Universities', description: 'Partnering to Cultivate the Next Generation of Leaders', bgColor: '#E6E6E6', targetHash: '#schools' },
+    { id: 2, icon: getAssetPath('/img/corporation.svg'), title: 'Corporates', description: 'Driving Business Success through Workforce', bgColor: '#E6E6E6', targetHash: '#corporates' },
+    { id: 3, icon: getAssetPath('/img/government.svg'), title: 'Government', description: 'Building a Skilled Workforce for a Stronger', bgColor: '#E6E6E6', targetHash: '#government' },
+    { id: 4, icon: getAssetPath('/img/Group%2023779.svg'), title: 'Become our upskilling partner', description: 'Join Us in Shaping the Future of Work', bgColor: '#EAE8E8', targetHash: '#upskilling' },
   ];
 
   return (
@@ -171,7 +171,7 @@ const Partnerships = () => {
       `}</style>
       <section
         className="w-full relative flex items-center justify-center bg-white bg-cover bg-center bg-no-repeat min-h-0 sm:min-h-[700px] lg:min-h-[800px] xl:min-h-[873px]"
-        style={{ backgroundImage: 'url(/img/Group%2037834.png)' }}
+        style={{ backgroundImage: getBackgroundImageUrl('/img/Group%2037834.png') }}
       >
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32 w-full py-12 sm:py-16 lg:py-20">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full items-center justify-center">

@@ -1,20 +1,21 @@
 import React from 'react';
+import { getAssetPath } from '../utils/assets';
 
 const OurPartners = () => {
   const firstRowPartners = [
-    { img: '/img/Group%2023862.png', alt: 'NSDC' },
-    { img: '/img/Group%2034185.png', alt: 'Adobe' },
-    { img: '/img/Group%2023863.png', alt: 'Meta' },
-    { img: '/img/Mask%20Group%2030.png', alt: 'Microsoft' },
-    { img: '/img/Group%2023839.png', alt: 'Google' },
+    { img: getAssetPath('/img/Group%2023862.png'), alt: 'NSDC' },
+    { img: getAssetPath('/img/Group%2034185.png'), alt: 'Adobe' },
+    { img: getAssetPath('/img/Group%2023863.png'), alt: 'Meta' },
+    { img: getAssetPath('/img/Mask%20Group%2030.png'), alt: 'Microsoft' },
+    { img: getAssetPath('/img/Group%2023839.png'), alt: 'Google' },
   ];
 
   const secondRowPartners = [
-    { img: '/img/Group%2023838.png', alt: 'Startup India' },
-    { img: '/img/Group%2023867.png', alt: 'Ministry of MSME' },
-    { img: '/img/Group%2023868.png', alt: 'Startup India' },
-    { img: '/img/Group%2023869.png', alt: 'HP' },
-    { img: '/img/Group%2023864.png', alt: 'AWS' },
+    { img: getAssetPath('/img/Group%2023838.png'), alt: 'Startup India' },
+    { img: getAssetPath('/img/Group%2023867.png'), alt: 'Ministry of MSME' },
+    { img: getAssetPath('/img/Group%2023868.png'), alt: 'Startup India' },
+    { img: getAssetPath('/img/Group%2023869.png'), alt: 'HP' },
+    { img: getAssetPath('/img/Group%2023864.png'), alt: 'AWS' },
   ];
 
   return (

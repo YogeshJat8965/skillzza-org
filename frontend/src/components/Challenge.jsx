@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { getAssetPath } from '../utils/assets';
 
 const Challenge = () => {
   const [isVisible, setIsVisible] = useState({
@@ -404,7 +405,7 @@ margin-top: 20px !important;            margin-top: -30px !important;
               ref={imageRef}
               className={`challenge-image ${isVisible.image ? 'challenge-image-reveal' : 'opacity-0'}`}
               style={{
-                background: '#F8F8F8 url(/img/Group%2037831.png) center center no-repeat',
+                background: `#F8F8F8 url(${getAssetPath('/img/Group%2037831.png')}) center center no-repeat`,
                 backgroundSize: 'contain',
                 width: '778px',
                 height: '756px',

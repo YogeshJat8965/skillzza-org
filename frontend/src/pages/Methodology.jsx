@@ -151,31 +151,31 @@ const phases = [
     label: 'Discovery and\nMapping',
     title: 'Discovery and Mapping',
     bullets: ['Comprehensive skill gap analysis', 'Learning preference identification', 'Career trajectory planning', 'Baseline competency establishment'],
-    image: '/skill_mapping_vertical.jpg',
+    image: getAssetPath('/skill_mapping_vertical.jpg'),
   },
   {
     label: 'Personalized\nLearning Path\nCreation',
     title: 'Personalized Learning Path Creation',
     bullets: ['AI-generated curriculum customization', 'Resource allocation and scheduling', 'Milestone and checkpoint definition', 'Success metrics establishment'],
-    image: '/mirroing_img.png',
+    image: getAssetPath('/mirroing_img.png'),
   },
   {
     label: 'Active Learning\nEngagement',
     title: 'Active Learning Engagement',
     bullets: ['Interactive content delivery', 'Real-time performance monitoring', 'Adaptive difficulty adjustment', 'Peer and mentor integration'],
-    image: '/one-and-ond-mentoring-img.jpg',
+    image: getAssetPath('/one-and-ond-mentoring-img.jpg'),
   },
   {
     label: 'Application\nand Validation',
     title: 'Application and Validation',
     bullets: ['Project-based assessments', 'Industry simulation participation', 'Competency certification', 'Portfolio development'],
-    image: '/RiskAssessmentStrategist_tile_img.png',
+    image: getAssetPath('/RiskAssessmentStrategist_tile_img.png'),
   },
   {
     label: 'Continuous\nGrowth and\nAdaptation',
     title: 'Continuous Growth and Adaptation',
     bullets: ['Ongoing skill maintenance', 'Emerging technology integration', 'Career advancement planning', 'Lifelong learning pathway creation'],
-    image: '/digital_bugiess_growthBlog_img.jpg',
+    image: getAssetPath('/digital_bugiess_growthBlog_img.jpg'),
   },
 ];
 

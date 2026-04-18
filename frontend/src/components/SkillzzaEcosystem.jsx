@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { getAssetPath } from '../utils/assets';
 
 const SkillzzaEcosystem = () => {
   const [isVisible, setIsVisible] = useState({
@@ -142,7 +143,7 @@ const SkillzzaEcosystem = () => {
         style={{ position: 'relative', zIndex: 1 }}
       >
         <img
-          src="/img/Group 37832.svg"
+          src={getAssetPath('/img/Group 37832.svg')}
           alt="Skillzza Ecosystem diagram showing five interconnected platforms: The Potential Meter (AI Skill Engine), Xperience Platform (Immersive Learning Labs), Talent Transformation (Career Mobility Pipeline), AI HackNex (Talent Marketplace), and Hirenest (Career Mobility Pipeline). Bottom process flow shows Assessment, Mentoring, Simulations, Project Showcase, and Get Hired."
           className="w-full h-auto"
           style={{

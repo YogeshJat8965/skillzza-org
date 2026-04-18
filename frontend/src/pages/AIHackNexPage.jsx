@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { getBackgroundImageUrl } from '../utils/assets'
 
 // Import images
 import heroLaptopImg from '../assets/AI Hacknex/ChatGPT Image Jan 12, 2026, 08_34_27 PM.png'
@@ -1199,7 +1200,7 @@ function AIHackNexPage() {
         ref={impactSectionRef}
         className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
         style={{
-          backgroundImage: "url('/img/Mask Group 138.png')",
+          backgroundImage: getBackgroundImageUrl('/img/Mask Group 138.png'),
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -1210,7 +1211,7 @@ function AIHackNexPage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/img/Mask Group 138.png')",
+            backgroundImage: getBackgroundImageUrl('/img/Mask Group 138.png'),
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',

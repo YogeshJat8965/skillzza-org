@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { getRoutePath } from '../utils/assets';
+import { getAssetPath, getBackgroundImageUrl, getRoutePath } from '../utils/assets';
 
 const Insights = ({ showHero = false, showContent = true }) => {
   const [isVisible, setIsVisible] = useState({
@@ -279,7 +279,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
           <div 
             className="absolute inset-0 w-full h-full"
             style={{
-              backgroundImage: "url('/improvements/Untitled%20design.jpg.jpeg')",
+              backgroundImage: getBackgroundImageUrl('/improvements/Untitled%20design.jpg.jpeg'),
               backgroundSize: 'cover',
               backgroundPosition: 'center 35%',
               filter: 'brightness(0.65)'
@@ -375,7 +375,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                 {/* Image */}
                 <div className="insights-card-img" style={{ width: '100%', height: '320px', overflow: 'hidden' }}>
                   <img
-                    src="/img/Mask%20Group%2096.png"
+                    src={getAssetPath('/img/Mask%20Group%2096.png')}
                     alt="AI Assistant"
                     style={{
                       width: '100%',
@@ -391,7 +391,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                   {/* Icon */}
                   <div className="insights-card-icon" style={{ marginBottom: '60px', marginTop: '40px' }}>
                     <img
-                      src="/img/Group%2034192.svg"
+                      src={getAssetPath('/img/Group%2034192.svg')}
                       alt="Icon"
                       style={{
                         width: '56px',
@@ -467,7 +467,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                 {/* Image */}
                 <div className="insights-card-img" style={{ width: '100%', height: '380px', overflow: 'hidden' }}>
                   <img
-                    src="/img/Mask%20Group%20112.png"
+                    src={getAssetPath('/img/Mask%20Group%20112.png')}
                     alt="AI Robot"
                     style={{
                       width: '100%',
@@ -565,7 +565,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                 {/* Image */}
                 <div className="insights-card-img" style={{ width: '100%', height: '380px', overflow: 'hidden' }}>
                   <img
-                    src="/img/Mask%20Group%2098.png"
+                    src={getAssetPath('/img/Mask%20Group%2098.png')}
                     alt="Digital Interface"
                     style={{
                       width: '100%',
@@ -719,7 +719,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                 {/* Right - Icon + Button */}
                 <div className="insights-podcast-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
                   <img
-                    src="/img/Group%2034199.svg"
+                    src={getAssetPath('/img/Group%2034199.svg')}
                     alt="Microphone"
                     style={{
                       width: '100px',

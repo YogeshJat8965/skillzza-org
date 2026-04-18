@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { getAssetPath } from '../utils/assets'
 
 const AnimatedCounter = ({ value }) => {
   const [count, setCount] = useState(0);
@@ -688,7 +689,7 @@ const newDesignCards = [
   },
   {
     image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=80',
-    logo: '/simulation/nvidia-logo-horiz-blk-16x9 1.png',
+    logo: getAssetPath('/simulation/nvidia-logo-horiz-blk-16x9 1.png'),
     title: 'Engineering Autonomous Robotics & Industrial Control Systems',
     category: 'Development',
     level: 'Advanced',
@@ -766,7 +767,7 @@ const newDesignCards = [
   },
   {
     image: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=1000&q=80',
-    logo: '/simulation/pngwing.com.png',
+    logo: getAssetPath('/simulation/pngwing.com.png'),
     title: 'Architecting Secure and Scalable Digital Payment Platforms',
     category: 'Development',
     level: 'Advanced',
@@ -792,7 +793,7 @@ const newDesignCards = [
   },
   {
     image: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=1000&q=80',
-    logo: '/simulation/pngwing.com.png',
+    logo: getAssetPath('/simulation/pngwing.com.png'),
     title: 'Architecting Secure and Scalable FinTech Payment Infrastructure',
     category: 'Development',
     level: 'Advanced',
@@ -1832,7 +1833,7 @@ function JobSimulationPage() {
 
         {/* Wavy background image — positioned absolutely on the right */}
         <img
-          src="/simulation/wavyImage.png"
+          src={getAssetPath('/simulation/wavyImage.png')}
           alt=""
           className="jsim-wavy"
           aria-hidden="true"
@@ -1878,7 +1879,7 @@ function JobSimulationPage() {
       {/* ── THE SOLUTION SECTION ── */}
       <section className="sol-section">
         {/* Absolute Background Map */}
-        <img src="/simulation/grey world map.jpg" alt="" className="sol-map-bg" />
+        <img src={getAssetPath('/simulation/grey world map.jpg')} alt="" className="sol-map-bg" />
 
         <div className="sol-inner">
           {/* Header */}
@@ -1912,7 +1913,7 @@ function JobSimulationPage() {
                 
                 {/* Main Image */}
                 <img 
-                  src="/simulation/women.avif" 
+                  src={getAssetPath('/simulation/women.avif')} 
                   alt="Woman with laptop" 
                   className="sol-woman-img" 
                 />
@@ -2061,7 +2062,7 @@ function JobSimulationPage() {
             <p>Just one click can move you one step closer to a future-ready profession.</p>
           </div>
           <div className="jsim-banner-image-wrapper">
-            <img src="/simulation/HappyMan.png" alt="Happy Man" className="jsim-banner-img" />
+            <img src={getAssetPath('/simulation/HappyMan.png')} alt="Happy Man" className="jsim-banner-img" />
           </div>
         </ScrollReveal>
       </section>

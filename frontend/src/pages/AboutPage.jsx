@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { getRoutePath } from '../utils/assets'
+import { getAssetPath, getRoutePath } from '../utils/assets'
 
 /* ── Custom hook for scroll-reveal animation ── */
 function useScrollReveal(options = {}) {
@@ -555,7 +555,7 @@ function AboutPage() {
               </p>
             </div>
             <div className="about-commitment__image-wrapper">
-              <img src="/Company/about/women.png" alt="Women collaborating" />
+              <img src={getAssetPath('/Company/about/women.png')} alt="Women collaborating" />
             </div>
           </div>
         </section>
@@ -608,7 +608,7 @@ function AboutPage() {
         <section ref={valuesRef} className="about-core-values about-reveal">
           <img
             className="about-core-values__image"
-            src="/Company/about/core value.png"
+            src={getAssetPath('/Company/about/core value.png')}
             alt="Core values spark"
           />
         </section>

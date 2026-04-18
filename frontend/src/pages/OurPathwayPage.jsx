@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { getAssetPath } from '../utils/assets'
 
 /* ── Custom hook for scroll-reveal animation ── */
 function useScrollReveal(options = {}) {
@@ -35,7 +36,7 @@ function OurPathwayPage() {
   const tabContent = {
     individuals: {
       heading: 'For Individuals',
-      image: '/Company/Get Started TodayIndividuals.png',
+      image: getAssetPath('/Company/Get Started TodayIndividuals.png'),
       bullets: [
         'Complete our SDG Skills Assessment',
         'Get personalized pathway recommendations',
@@ -45,7 +46,7 @@ function OurPathwayPage() {
     },
     organizations: {
       heading: 'For Organizations',
-      image: '/Company/Get Started TodayOrganizations.png',
+      image: getAssetPath('/Company/Get Started TodayOrganizations.png'),
       bullets: [
         'Diagnose workforce gaps with our SDG Skills Index',
         'Co-create tailored capability pathways for every team',
@@ -55,7 +56,7 @@ function OurPathwayPage() {
     },
     communities: {
       heading: 'For Communities',
-      image: '/Company/Get Started TodayCommunities.png',
+      image: getAssetPath('/Company/Get Started TodayCommunities.png'),
       bullets: [
         'Partner with us for employee development',
         'Create custom corporate programs',
@@ -557,7 +558,7 @@ function OurPathwayPage() {
             }}
           >
             <img
-              src="/Company/25412d49d304b2df2e2cae48121b10e56bca89fb.png"
+              src={getAssetPath('/Company/25412d49d304b2df2e2cae48121b10e56bca89fb.png')}
               alt="Skillzza and UN SDG partnership - people connecting puzzle pieces"
               style={{
                 width: '100%',
@@ -653,7 +654,7 @@ function OurPathwayPage() {
           >
             {[
               {
-                image: '/Company/1image.png',
+                image: getAssetPath('/Company/1image.png'),
                 sdg: 'SDG 04',
                 title: 'Quality Education',
                 description: 'Ensuring inclusive and equitable quality education',
@@ -664,7 +665,7 @@ function OurPathwayPage() {
                 background: 'linear-gradient(180deg, #FFFFFF 0%, #FBEEEE 100%)',
               },
               {
-                image: '/Company/2image.png',
+                image: getAssetPath('/Company/2image.png'),
                 sdg: 'SDG 05',
                 title: 'Gender Equality',
                 description: 'Empowering women and girls through economic opportunities',
@@ -675,7 +676,7 @@ function OurPathwayPage() {
                 background: 'linear-gradient(180deg, #FFFFFF 0%, #F6EFFB 100%)',
               },
               {
-                image: '/Company/3image.png',
+                image: getAssetPath('/Company/3image.png'),
                 sdg: 'SDG 08',
                 title: 'Decent Work & Economic Growth',
                 description: 'Promoting inclusive economic growth and decent work for all',
@@ -686,7 +687,7 @@ function OurPathwayPage() {
                 background: 'linear-gradient(180deg, #FFFFFF 0%, #FDF5E9 100%)',
               },
               {
-                image: '/Company/4image.png',
+                image: getAssetPath('/Company/4image.png'),
                 sdg: 'SDG 10',
                 title: 'Reduced Inequalities',
                 description: 'Reducing inequality within and among countries',
@@ -861,25 +862,25 @@ function OurPathwayPage() {
           >
             {[
               {
-                icon: '/Company/1icon.png',
+                icon: getAssetPath('/Company/1icon.png'),
                 title: 'Holistic Development Approach',
                 description:
                   'We go beyond technical skills to nurture leadership, emotional intelligence, and sustainable mindsets.',
               },
               {
-                icon: '/Company/2icon.png',
+                icon: getAssetPath('/Company/2icon.png'),
                 title: 'Inclusive Access Framework',
                 description:
                   'Designed to remove barriers and ensure everyone, regardless of background, has equal opportunity to succeed.',
               },
               {
-                icon: '/Company/3icon.png',
+                icon: getAssetPath('/Company/3icon.png'),
                 title: 'Impact-Driven Outcomes',
                 description:
                   'Every program is measured against real-world SDG targets with transparent reporting and accountability.',
               },
               {
-                icon: '/Company/4icon.png',
+                icon: getAssetPath('/Company/4icon.png'),
                 title: 'Industry-Aligned Curriculum',
                 description:
                   'Co-created with leading employers to ensure skills taught today meet the demands of tomorrow.',
@@ -996,33 +997,33 @@ function OurPathwayPage() {
           >
             {[
               {
-                image: '/Company/youth.png',
-                icon: '/Company/Who We Serveicon1.png',
+                image: getAssetPath('/Company/youth.png'),
+                icon: getAssetPath('/Company/Who We Serveicon1.png'),
                 title: 'Youth & Students',
               },
               {
-                image: '/Company/working.png',
-                icon: '/Company/Who We Serveicon2.png',
+                image: getAssetPath('/Company/working.png'),
+                icon: getAssetPath('/Company/Who We Serveicon2.png'),
                 title: 'Working Professionals',
               },
               {
-                image: '/Company/women.png',
-                icon: '/Company/Who We Serveicon3.png',
+                image: getAssetPath('/Company/women.png'),
+                icon: getAssetPath('/Company/Who We Serveicon3.png'),
                 title: 'Women Returning to Work',
               },
               {
-                image: '/Company/underemployed.png',
-                icon: '/Company/Who We Serveicon4.png',
+                image: getAssetPath('/Company/underemployed.png'),
+                icon: getAssetPath('/Company/Who We Serveicon4.png'),
                 title: 'Underemployed Individuals',
               },
               {
-                image: '/Company/rural.png',
-                icon: '/Company/Who We Serveicon5.png',
+                image: getAssetPath('/Company/rural.png'),
+                icon: getAssetPath('/Company/Who We Serveicon5.png'),
                 title: 'Rural Communities',
               },
               {
-                image: '/Company/persons.png',
-                icon: '/Company/Who We Serveicon6.png',
+                image: getAssetPath('/Company/persons.png'),
+                icon: getAssetPath('/Company/Who We Serveicon6.png'),
                 title: 'Persons with Disabilities',
               },
             ].map((segment, index) => (
@@ -1473,7 +1474,7 @@ function OurPathwayPage() {
             }}
           >
             <img
-              src="/Company/ourPathwayLatImage.png"
+              src={getAssetPath('/Company/ourPathwayLatImage.png')}
               alt="Colorful head silhouette with learning icons"
               style={{
                 width: '82%',
@@ -1485,10 +1486,10 @@ function OurPathwayPage() {
               }}
             />
             {[
-              { src: '/Company/lastIcon3.png', top: '10%', left: '20%' },
-              { src: '/Company/lastIcon1.png', top: '4%', right: '14%' },
-              { src: '/Company/lastIcon2.png', top: '42%', right: '2%' },
-              { src: '/Company/lastIcon4.png', bottom: '18%', right: '18%' },
+              { src: getAssetPath('/Company/lastIcon3.png'), top: '10%', left: '20%' },
+              { src: getAssetPath('/Company/lastIcon1.png'), top: '4%', right: '14%' },
+              { src: getAssetPath('/Company/lastIcon2.png'), top: '42%', right: '2%' },
+              { src: getAssetPath('/Company/lastIcon4.png'), bottom: '18%', right: '18%' },
             ].map((icon) => (
               <img
                 key={icon.src}

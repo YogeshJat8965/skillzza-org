@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 
 const PartnerForm = () => {
   const [formData, setFormData] = useState({ name: '', email: '', mobile: '', countryCode: '+91' });
@@ -16,13 +17,13 @@ const PartnerForm = () => {
     <section
       id="partner-contact-form"
       className="w-full relative overflow-hidden bg-white bg-cover bg-center"
-      style={{ backgroundImage: "url('/img/Group%2037835.png')" }}
+      style={{ backgroundImage: getBackgroundImageUrl('/img/Group%2037835.png') }}
     >
       <div className="max-w-[1920px] mx-auto flex flex-col lg:flex-row items-center justify-between py-10 sm:py-16 md:py-20 lg:py-24 xl:py-32">
         {/* Left — Image (constrained on mobile) */}
         <div className="w-full lg:w-1/2 xl:w-[55%] flex justify-start mb-8 lg:mb-0">
           <img
-            src="/img/businesspeople-having-discussion-office.png"
+            src={getAssetPath('/img/businesspeople-having-discussion-office.png')}
             alt="Business meeting"
             className="w-full h-auto max-w-full lg:max-w-[900px] object-contain rounded-r-2xl lg:rounded-r-3xl pr-4 lg:pr-8"
           />

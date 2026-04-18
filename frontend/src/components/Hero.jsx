@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getRoutePath } from '../utils/assets';
+import { getAssetPath, getBackgroundImageUrl, getRoutePath } from '../utils/assets';
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -33,9 +33,9 @@ const Hero = () => {
 
   // Scrolling strip data to avoid repetition
   const stripData = [
-    { icon: '/img/Group 37828.svg', alt: 'Assessments', text: 'Discover your strengths through smart assessments' },
-    { icon: '/img/Group 37829.svg', alt: 'Simulations', text: 'Simulate real-world roles to sharpen your edge' },
-    { icon: '/img/Group 37830.svg', alt: 'Portfolio', text: 'Build a portfolio that proves your potential' },
+    { icon: getAssetPath('/img/Group 37828.svg'), alt: 'Assessments', text: 'Discover your strengths through smart assessments' },
+    { icon: getAssetPath('/img/Group 37829.svg'), alt: 'Simulations', text: 'Simulate real-world roles to sharpen your edge' },
+    { icon: getAssetPath('/img/Group 37830.svg'), alt: 'Portfolio', text: 'Build a portfolio that proves your potential' },
   ];
 
   const stripStyle = {
@@ -275,7 +275,7 @@ const Hero = () => {
         className="hero-section w-full relative bg-white flex"
         style={{
           backgroundColor: '#ffffff',
-          backgroundImage: 'url(/img/Group%2037827.png)',
+          backgroundImage: getBackgroundImageUrl('/img/Group%2037827.png'),
           backgroundPosition: isMobile ? 'top center' : 'center center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: isMobile ? 'cover' : '100% 100%',
@@ -384,7 +384,7 @@ const Hero = () => {
               <div
                 className="hero-image"
                 style={{
-                  background: 'transparent url(/img/02.png) center bottom no-repeat padding-box',
+                  background: `transparent url(${getAssetPath('/img/02.png')}) center bottom no-repeat padding-box`,
                   width: isMobile ? '320px' : 'clamp(450px, 50vw, 918px)',
                   height: isMobile ? '330px' : 'clamp(450px, 50vw, 918px)',
                   opacity: 1,

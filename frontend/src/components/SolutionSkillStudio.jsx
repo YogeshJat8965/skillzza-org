@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { getRoutePath } from '../utils/assets';
+import { getAssetPath, getRoutePath } from '../utils/assets';
 
 const SolutionSkillStudio = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -67,7 +67,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Discover Your Potential',
             cta2: 'Get Your Skill Report',
-            image: '/img/potential_meter_right_img.png',
+            image: getAssetPath('/img/potential_meter_right_img.png'),
         },
         {
             label: 'Xperience platform',
@@ -81,7 +81,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Start Your Journey',
             cta2: 'Explore Simulations',
-            image: '/improvements/photo-female-office-worker-sitting-desk-with-laptop-clipboard-high-quality-photo.jpg',
+            image: getAssetPath('/improvements/photo-female-office-worker-sitting-desk-with-laptop-clipboard-high-quality-photo.jpg'),
         },
         {
             label: 'Talent Transformation',
@@ -95,7 +95,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Transform Your Team',
             cta2: 'View Programs',
-            image: '/improvements/image copy.png',
+            image: getAssetPath('/improvements/image copy.png'),
         },
         {
             label: 'AI HackNex',
@@ -109,7 +109,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Join a Challenge',
             cta2: 'View Past Hackathons',
-            image: '/improvements/image.png',
+            image: getAssetPath('/improvements/image.png'),
         },
         {
             label: 'Hirenest Recruit',
@@ -123,7 +123,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Find Talent',
             cta2: 'Post a Role',
-            image: '/improvements/futuristic-technology-concept (1).jpg',
+            image: getAssetPath('/improvements/futuristic-technology-concept (1).jpg'),
         },
     ];
 

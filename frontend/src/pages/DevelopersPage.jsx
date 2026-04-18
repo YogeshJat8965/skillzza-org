@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaCode, FaLightbulb, FaRocket, FaCoffee, FaGamepad, FaBrain } from 'react-icons/fa';
-import { getBackgroundImageUrl } from '../utils/assets';
+import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 
 const developersData = [
     {
@@ -10,7 +10,7 @@ const developersData = [
         role: 'AI Engineer & Innovative Developer',
         expertise: 'Machine Learning, Deep Learning, Full-Stack Development, Simulation Design',
         experience: '3+ years (academic & project-driven)',
-        image: '/test/dev1.png',
+        image: getAssetPath('/test/dev1.png'),
         bio: 'Kshitij is a passionate computer science engineer and AI enthusiast with expertise in developing intelligent systems, full-stack platforms, and simulation-based solutions. He has worked across domains including healthcare, e-commerce, cloud computing, and blockchain, creating impactful projects that merge innovation with real-world problem solving. His work spans AI-powered diagnosis platforms, blockchain-secured healthcare records, smart assistive devices, and advanced e-commerce recommendation engines.',
         achievements: [
             'Inventor of MedQ-Strip: Medicine packaging innovation using thermochromic ink & QR for safety',
@@ -44,7 +44,7 @@ const developersData = [
         role: 'Full-Stack Developer & UX Architect',
         expertise: 'React, Node.js, User Experience Design',
         experience: '6+ years',
-        image: '/test/dev2.jpg',
+        image: getAssetPath('/test/dev2.jpg'),
         bio: 'Sarah is a versatile full-stack developer who combines technical excellence with user-centered design principles. She architects scalable web applications and crafts intuitive user experiences that make complex skill assessments accessible and engaging for learners worldwide.',
         achievements: [
             'Architected platform serving 100K+ active users',
