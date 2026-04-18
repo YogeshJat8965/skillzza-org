@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
+import { getAssetPath, getBackgroundImageUrl, getRoutePath } from '../utils/assets';
 const Hirenest = () => {
+  const contactUsPath = getRoutePath('/contact-us');
+
   return (
     <>
       {/* Hero Section */}
@@ -583,7 +585,7 @@ const Hirenest = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">For Employers</h3>
                 <div className="text-2xl font-bold text-orange-600 mb-4">Custom Pricing</div>
                 <p className="text-gray-600 mb-6">Tailored subscription plans to match your hiring needs and scale.</p>
-                <button className="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition-colors">
+                <button onClick={() => { window.location.href = contactUsPath; }} className="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition-colors">
                   Book Your Demo
                 </button>
               </div>
@@ -593,7 +595,7 @@ const Hirenest = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">For Institutions</h3>
                 <div className="text-2xl font-bold text-purple-600 mb-4">Partnership Model</div>
                 <p className="text-gray-600 mb-6">Revenue sharing model with no upfront costs. Earn from successful placements.</p>
-                <button className="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-600 transition-colors">
+                <button onClick={() => { window.location.href = contactUsPath; }} className="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-600 transition-colors">
                   Explore Partnership
                 </button>
               </div>
@@ -672,10 +674,10 @@ const Hirenest = () => {
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <button className="flex-1 bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold text-sm">
+                  <button onClick={() => { window.location.href = contactUsPath; }} className="flex-1 bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold text-sm">
                     Book Demo
                   </button>
-                  <button className="flex-1 bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold text-sm">
+                  <button onClick={() => { window.location.href = contactUsPath; }} className="flex-1 bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold text-sm">
                     Chat with Expert
                   </button>
                 </div>
@@ -705,7 +707,7 @@ const Hirenest = () => {
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <button className="flex-1 bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-600 transition-colors font-semibold text-sm">
+                  <button onClick={() => { window.location.href = contactUsPath; }} className="flex-1 bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-600 transition-colors font-semibold text-sm">
                     Explore Partnership
                   </button>
                   <button className="flex-1 bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-600 transition-colors font-semibold text-sm">
@@ -929,7 +931,7 @@ const Hirenest = () => {
                   <p className="text-sm text-gray-600">Start your free assessment now</p>
                 </button>
                 
-                <button className="group bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-xl border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-lg">
+                <button onClick={() => { window.location.href = contactUsPath; }} className="group bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-xl border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-lg">
                   <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     <span className="text-white text-xl">🏢</span>
                   </div>
@@ -937,7 +939,7 @@ const Hirenest = () => {
                   <p className="text-sm text-gray-600">Book a 15-minute demo</p>
                 </button>
                 
-                <button className="group bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200 hover:border-purple-300 transition-all duration-300 hover:shadow-lg">
+                <button onClick={() => { window.location.href = contactUsPath; }} className="group bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200 hover:border-purple-300 transition-all duration-300 hover:shadow-lg">
                   <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     <span className="text-white text-xl">🏫</span>
                   </div>
@@ -961,10 +963,10 @@ const Hirenest = () => {
               <button className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                 Start Your Assessment Now
               </button>
-              <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
+              <button onClick={() => { window.location.href = contactUsPath; }} className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
                 Book Your Demo
               </button>
-              <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
+              <button onClick={() => { window.location.href = contactUsPath; }} className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
                 Explore Partnership
               </button>
             </div>

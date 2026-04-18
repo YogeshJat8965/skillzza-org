@@ -1,7 +1,8 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Lenis from 'lenis'
 
+import WelcomePopup from './components/WelcomePopup'
 import Home from './pages/Home'
 import DevelopersPage from './pages/DevelopersPage'
 import About from './pages/About'
@@ -9,11 +10,11 @@ import Methodology from './pages/Methodology'
 import WhatWeDo from './pages/WhatWeDo'
 import SDGPathway from './pages/SDGPathway'
 import PartnerCollaboration from './pages/PartnerCollaboration'
-import SkillBlueprint from './pages/SkillBlueprint'
-import SkillDigest from './pages/SkillDigest'
-import AITalentResearchHub from './pages/AITalentResearchHub'
-import SkillUnpluggedPodcast from './pages/SkillUnpluggedPodcast'
-import SkillzzaLive from './pages/SkillzzaLive'
+// import SkillBlueprint from './pages/SkillBlueprint'
+// import SkillDigest from './pages/SkillDigest'
+// import AITalentResearchHub from './pages/AITalentResearchHub'
+// import SkillUnpluggedPodcast from './pages/SkillUnpluggedPodcast'
+// import SkillzzaLive from './pages/SkillzzaLive'
 import JobSimulations from './pages/JobSimulations'
 import CareerTrajectory from './pages/CareerTrajectory'
 import SkillzzaPersona from './pages/SkillzzaPersona'
@@ -34,6 +35,38 @@ import EVMobility from './pages/EVMobility'
 import Udan from './pages/Udan'
 import ResponsibleAI from './pages/ResponsibleAI'
 import ProductCatalog from './pages/ProductCatalog'
+
+// ── Yogesh's pages ──
+import OurPathwayPage from './pages/OurPathwayPage'
+import AboutPage from './pages/AboutPage'
+import PartnerCollaborationPage from './pages/PartnerCollaborationPage'
+import InsightsPage from './pages/InsightsPage'
+import JobSimulationPage from './pages/JobSimulationPage'
+import XperiencePlatformPage from './pages/XperiencePlatformPage'
+import AIHackNexPage from './pages/AIHackNexPage'
+import ContactUs from './pages/ContactUs'
+import Login from './pages/Login'
+import SignUp from './pages/SignUp'
+import ProductComingSoon from './pages/ProductComingSoon'
+
+function ScrollToTopOnRouteChange() {
+  const { pathname, hash } = useLocation()
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.substring(1))
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }, 100)
+        return
+      }
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [pathname, hash])
+
+  return null
+}
 
 export default function App() {
 
@@ -61,33 +94,36 @@ export default function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors">
+      <ScrollToTopOnRouteChange />
+      <WelcomePopup />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/developers/team" element={<DevelopersPage />} />
-        <Route path="/company/about" element={<About />} />
+        <Route path="/company/about" element={<AboutPage />} />
         <Route path="/company/methodology" element={<Methodology />} />
         <Route path="/company/what-we-do" element={<WhatWeDo />} />
-        <Route path="/company/pathway" element={<SDGPathway />} />
-        <Route path="/company/partnerships" element={<PartnerCollaboration />} />
+        <Route path="/company/pathway" element={<OurPathwayPage />} />
+        <Route path="/company/partnerships" element={<PartnerCollaborationPage />} />
 
-        <Route path="/insights/skill-blueprint" element={<SkillBlueprint />} />
-        <Route path="/insights/skill-digest" element={<SkillDigest />} />
-        <Route path="/insights/ai-talent-research-hub" element={<AITalentResearchHub />} />
-        <Route path="/insights/skill-unplugged-podcast" element={<SkillUnpluggedPodcast />} />
-        <Route path="/insights/skillzza-live" element={<SkillzzaLive />} />
-        <Route path="/explore/job-simulations" element={<JobSimulations />} />
+        <Route path="/insights" element={<InsightsPage />} />
+        <Route path="/insights/skill-blueprint" element={<InsightsPage />} />
+        <Route path="/insights/skill-digest" element={<InsightsPage />} />
+        <Route path="/insights/ai-talent-research-hub" element={<InsightsPage />} />
+        <Route path="/insights/skill-unplugged-podcast" element={<InsightsPage />} />
+        <Route path="/insights/skillzza-live" element={<InsightsPage />} />
+        <Route path="/explore/job-simulations" element={<JobSimulationPage />} />
         <Route path="/explore/career-trajectory" element={<CareerTrajectory />} />
-        <Route path="/explore/skillzza-persona" element={<SkillzzaPersona />} />
+        <Route path="/explore/skillzza-persona" element={<ProductComingSoon />} />
         <Route path="/use-case/students" element={<StudentsUseCase />} />
         <Route path="/use-case/institutions" element={<InstitutionsUseCase />} />
         <Route path="/use-case/enterprises" element={<EnterprisesUseCase />} />
         <Route path="/use-case/government" element={<GovernmentUseCase />} />
 
-        <Route path="/product/hirenest" element={<Hirenest />} />
-        <Route path="/product/potential-meter" element={<PotentialMeter />} />
-        <Route path="/product/xperience-platform" element={<XperiencePlatform />} />
-        <Route path="/product/talent-intelligence" element={<TalentIntelligence />} />
-        <Route path="/product/ai-hacknex" element={<AIHackNex />} />
+        <Route path="/product/hirenest" element={<ProductComingSoon />} />
+        <Route path="/product/potential-meter" element={<ProductComingSoon />} />
+        <Route path="/product/xperience-platform" element={<ProductComingSoon />} />
+        <Route path="/product/talent-intelligence" element={<ProductComingSoon />} />
+        <Route path="/product/ai-hacknex" element={<ProductComingSoon />} />
         <Route path="/academy" element={<Academy />} />
         <Route path="/academy/byteminds" element={<ByteMinds />} />
         <Route path="/academy/sustainability" element={<Sustainability />} />
@@ -96,7 +132,14 @@ export default function App() {
         <Route path="/academy/udan" element={<Udan />} />
 
         <Route path="/company/responsible-ai" element={<ResponsibleAI />} />
-        <Route path="/company/product-catalog" element={<ProductCatalog />} />
+        <Route path="/company/product-catalog" element={<ProductComingSoon />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/book-demo" element={<ContactUs />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-in" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/register" element={<SignUp />} />
       </Routes>
     </div>
   )

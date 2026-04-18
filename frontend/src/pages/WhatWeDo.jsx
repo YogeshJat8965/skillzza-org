@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { getAssetPath } from '../utils/assets';
 
 const WhatWeDo = () => {
@@ -11,6 +11,28 @@ const WhatWeDo = () => {
       sectionRefs[index].current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 50);
   };
+
+  useEffect(() => {
+    const revealEls = document.querySelectorAll('.wwd-reveal');
+    if (!revealEls.length) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('wwd-visible');
+          } else {
+            entry.target.classList.remove('wwd-visible');
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -8% 0px' }
+    );
+
+    revealEls.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
 
   const pillars = [
@@ -93,6 +115,56 @@ const WhatWeDo = () => {
   return (
     <>
       <style>{`
+        /* ===== Modern Blur & Smooth Scale Revealing ===== */
+        @keyframes wwdFadeUp {
+          0% { opacity: 0; filter: blur(12px); transform: translateY(40px) scale(0.97); }
+          100% { opacity: 1; filter: blur(0px); transform: translateY(0) scale(1); }
+        }
+
+        @keyframes wwdSlideInLeft {
+          0% { opacity: 0; filter: blur(12px); transform: translateX(-40px) scale(0.97); }
+          100% { opacity: 1; filter: blur(0px); transform: translateX(0) scale(1); }
+        }
+
+        @keyframes wwdSlideInRight {
+          0% { opacity: 0; filter: blur(12px); transform: translateX(40px) scale(0.97); }
+          100% { opacity: 1; filter: blur(0px); transform: translateX(0) scale(1); }
+        }
+
+        @keyframes wwdScaleUp {
+          0% { opacity: 0; filter: blur(14px); transform: scale(0.85); }
+          100% { opacity: 1; filter: blur(0px); transform: scale(1); }
+        }
+
+        .wwd-reveal {
+          opacity: 0;
+          will-change: transform, opacity, filter;
+        }
+
+        .wwd-reveal.wwd-visible {
+          opacity: 1;
+        }
+
+        .wwd-reveal.wwd-fade-up.wwd-visible {
+          animation: wwdFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .wwd-reveal.wwd-slide-left.wwd-visible {
+          animation: wwdSlideInLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .wwd-reveal.wwd-slide-right.wwd-visible {
+          animation: wwdSlideInRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .wwd-reveal.wwd-scale-up.wwd-visible {
+          animation: wwdScaleUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .wwd-delay-1 { animation-delay: 0.08s !important; }
+        .wwd-delay-2 { animation-delay: 0.16s !important; }
+        .wwd-delay-3 { animation-delay: 0.24s !important; }
+
         @media (max-width: 768px) {
           .pillar-row {
             flex-direction: column !important;
@@ -125,7 +197,11 @@ const WhatWeDo = () => {
       `}</style>
       {/* ── Hero Section ── */}
       <section style={{
-        backgroundColor: '#e8eef7',
+        backgroundImage: `url('${getAssetPath('/improvements/image copy 2.png')}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#e8eef7', // Fallback color
         padding: '72px 24px 60px',
         textAlign: 'center',
         fontFamily: 'Inter, sans-serif',
@@ -135,20 +211,20 @@ const WhatWeDo = () => {
           fontSize: '38px', fontWeight: '700', color: '#0f172a',
           lineHeight: '1.25', margin: '0 auto 18px', maxWidth: '760px',
           letterSpacing: '-0.3px',
-        }}>
+        }} className="wwd-reveal wwd-fade-up">
           Bridging Education and Employment with Role-Ready Skills
         </h1>
 
         <p style={{
           fontSize: '15px', color: '#64748b', lineHeight: '1.75',
           maxWidth: '580px', margin: '0 auto 52px',
-        }}>
+        }} className="wwd-reveal wwd-fade-up wwd-delay-1">
           Bridging the gap between education and employment, Skillzza empowers professionals,
           institutions, and enterprises with real-world capabilities. We combine AI-driven intelligence,
           immersive learning, and role-based simulations to create a future-ready workforce.
         </p>
 
-        <div style={{ maxWidth: '1020px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1020px', margin: '0 auto' }} className="wwd-reveal wwd-scale-up wwd-delay-2">
           <img
             src={getAssetPath('/maskgroup.png')}
             alt="Assess Learn Simulate HireNest"
@@ -162,14 +238,14 @@ const WhatWeDo = () => {
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 48px' }}>
 
           {/* Header */}
-          <div style={{ textAlign: 'center', padding: '64px 0 48px' }}>
+          <div style={{ textAlign: 'center', padding: '64px 0 48px' }} className="wwd-reveal wwd-fade-up">
             <h2 style={{ fontSize: 42, fontWeight: 800, color: '#111827', lineHeight: 1.2, margin: 0 }}>
-              The Skillzza Framework<br />Four Core Pillars
+              The Four Core Pillars
             </h2>
           </div>
 
           {/* Sticky Tab Bar */}
-          <div className="pillar-tabs" style={{
+          <div className="pillar-tabs wwd-reveal wwd-fade-up wwd-delay-1" style={{
             position: 'sticky',
             top: 0,
             zIndex: 50,
@@ -209,7 +285,7 @@ const WhatWeDo = () => {
           {pillars.map((pillar, i) => (
             <div
               key={i}
-              className="pillar-row"
+              className="pillar-row wwd-reveal wwd-fade-up"
               ref={sectionRefs[i]}
               style={{
                 display: 'flex',
@@ -296,6 +372,7 @@ const WhatWeDo = () => {
       </section>
 
       {/* ── Partner Section ── */}
+      {/*
       <section style={{
         backgroundImage: `url(${getAssetPath('/background-partner.png')})`,
         backgroundSize: "cover",
@@ -340,8 +417,10 @@ const WhatWeDo = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* ── Skill Digest Section ── */}
+      {/*
       <section style={{ background: "#fff", padding: "80px 0", fontFamily: "Inter, sans-serif" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
           <div className="insights-row" style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
@@ -396,6 +475,7 @@ const WhatWeDo = () => {
           </div>
         </div>
       </section>
+      */}
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
+import { getAssetPath, getBackgroundImageUrl, getRoutePath } from '../utils/assets';
 const AboutUs = () => {
   return (
     <>
@@ -8,7 +8,7 @@ const AboutUs = () => {
       <section
         className="relative py-24 md:py-32 flex items-center bg-cover bg-center"
         style={{
-          backgroundImage: getBackgroundImageUrl('/about_us_banner.png'),
+          backgroundImage: "url('https://assets.kpmg.com/is/image/kpmg/fintech-segments-banner:cq5dam.web.2100.700')",
           minHeight: '600px',
         }}
       >
@@ -74,9 +74,12 @@ const AboutUs = () => {
           <h3 className="text-2xl md:text-3xl font-bold">
             Join Skillzza Today And Gain The Skills You Need To Shape The Future You Aspire To.
           </h3>
-          <button className="mt-8 bg-orange-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-orange-600 transition-colors">
+          <a
+            href={getRoutePath('/signup')}
+            className="mt-8 inline-block bg-orange-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-orange-600 transition-colors"
+          >
             Join
-          </button>
+          </a>
         </div>
       </section>
 

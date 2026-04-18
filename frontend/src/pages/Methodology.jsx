@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
+import { getAssetPath } from '../utils/assets';
 
 /* ─── Animated counter hook ─── */
 function useCountUp(target, duration = 1800, started = false) {
@@ -20,6 +20,35 @@ function useCountUp(target, duration = 1800, started = false) {
     requestAnimationFrame(step);
   }, [started, target, duration]);
   return count;
+}
+
+/* ─── Replay-on-scroll reveal hook ─── */
+function useScrollRevealReplay(options = {}) {
+  const ref = useRef(null);
+  const hasRevealedRef = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasRevealedRef.current) {
+          hasRevealedRef.current = true;
+          el.classList.add('meth-visible');
+        }
+      },
+      {
+        threshold: options.threshold ?? 0.1,
+        rootMargin: options.rootMargin ?? '0px 0px -2% 0px',
+      }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [options.threshold, options.rootMargin]);
+
+  return ref;
 }
 
 /* ─── Single animated stat ─── */
@@ -153,6 +182,9 @@ const phases = [
 const ImplementationStepper = () => {
   const [active, setActive] = useState(0);
   const phase = phases[active];
+  const titleRef = useScrollRevealReplay();
+  const stepperRef = useScrollRevealReplay();
+  const panelRef = useScrollRevealReplay();
 
   return (
     <section style={{ background: '#f0eeff', fontFamily: "'Inter', sans-serif", padding: '64px 0 72px' }}>
@@ -270,10 +302,10 @@ const ImplementationStepper = () => {
 
       <div className="imp-wrap">
         {/* Title */}
-        <h2 className="imp-title">Our Methodology</h2>
+        <h2 ref={titleRef} className="imp-title meth-reveal meth-fade-up">Our Methodology</h2>
 
         {/* Stepper */}
-        <div className="imp-stepper">
+        <div ref={stepperRef} className="imp-stepper meth-reveal meth-fade-up meth-delay-1">
           <div className="imp-line" />
           {phases.map((p, i) => (
             <div key={i} className="imp-step" onClick={() => setActive(i)}>
@@ -297,7 +329,7 @@ const ImplementationStepper = () => {
         </div>
 
         {/* Content panel */}
-        <div className="imp-panel">
+        <div ref={panelRef} className="imp-panel meth-reveal meth-scale-up meth-delay-2">
           <div className="imp-panel-left">
             <span className="imp-panel-tag">PHASE {active + 1}</span>
             <h3 className="imp-panel-heading">{phase.title}</h3>
@@ -383,6 +415,9 @@ const learnData = [
 const LearnFramework = () => {
   const [active, setActive] = useState(0);
   const item = learnData[active];
+  const titleRef = useScrollRevealReplay();
+  const wheelRef = useScrollRevealReplay();
+  const contentRef = useScrollRevealReplay();
 
   const zones = [
     { index: 0, label: 'L', top: '8%', left: '10%', width: '35%', height: '38%' },
@@ -420,13 +455,13 @@ const LearnFramework = () => {
 
       <div className="lf-wrap">
         {/* Bordered title box */}
-        <div className="lf-title-box">
-          <h2 className="lf-title">The LEARN Framework<br />How Skillzza Builds Real-World Skills</h2>
+        <div ref={titleRef} className="lf-title-box meth-reveal meth-fade-up">
+          <h2 className="lf-title">The LEARN Framework<br />How We Builds Real-World Skills</h2>
         </div>
 
         <div className="lf-body">
           {/* Left: image with invisible clickable overlay zones */}
-          <div style={{ flexShrink: 0, width: '360px', position: 'relative' }}>
+          <div ref={wheelRef} className="meth-reveal meth-slide-left meth-delay-1" style={{ flexShrink: 0, width: '360px', position: 'relative' }}>
             <img
               src={getAssetPath('/framework.png')}
               alt="LEARN Framework Wheel"
@@ -447,7 +482,7 @@ const LearnFramework = () => {
           </div>
 
           {/* Right: content panel updates on click */}
-          <div className="lf-right">
+          <div ref={contentRef} className="lf-right meth-reveal meth-slide-right meth-delay-2">
             <h3 className="lf-item-title">{item.title}</h3>
             <p className="lf-item-desc">{item.desc}</p>
             <div>
@@ -466,19 +501,78 @@ const LearnFramework = () => {
 };
 
 const OurMethodology = () => {
+  const heroTitleRef = useScrollRevealReplay();
+  const heroImageRef = useScrollRevealReplay();
+  const introRef = useScrollRevealReplay();
+  const coreTitleRef = useScrollRevealReplay();
+  const coreGridRef = useScrollRevealReplay();
+
   return (
     <>
+      <style>{`
+        @keyframes methFadeUp {
+          from { opacity: 0; transform: translateY(32px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes methSlideLeft {
+          from { opacity: 0; transform: translateX(-36px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes methSlideRight {
+          from { opacity: 0; transform: translateX(36px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes methScaleUp {
+          from { opacity: 0; transform: scale(0.97); }
+          to { opacity: 1; transform: scale(1); }
+        }
+
+        .meth-reveal {
+          opacity: 0;
+          will-change: transform, opacity;
+          backface-visibility: hidden;
+          transform: translateZ(0);
+        }
+        .meth-reveal.meth-visible {
+          opacity: 1;
+        }
+        .meth-reveal.meth-fade-up.meth-visible {
+          animation: methFadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .meth-reveal.meth-slide-left.meth-visible {
+          animation: methSlideLeft 0.52s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .meth-reveal.meth-slide-right.meth-visible {
+          animation: methSlideRight 0.52s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .meth-reveal.meth-scale-up.meth-visible {
+          animation: methScaleUp 0.48s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .meth-delay-1 { animation-delay: 0.05s !important; }
+        .meth-delay-2 { animation-delay: 0.1s !important; }
+        .meth-delay-3 { animation-delay: 0.15s !important; }
+
+        @media (prefers-reduced-motion: reduce) {
+          .meth-reveal,
+          .meth-reveal.meth-visible {
+            opacity: 1 !important;
+            animation: none !important;
+            transform: none !important;
+          }
+        }
+      `}</style>
+
       {/* Hero Section */}
       {/* Top: white bg with title */}
       <section style={{ backgroundColor: '#fff', padding: '48px 24px 32px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
-        <h1 style={{ fontSize: '48px', fontWeight: '400', color: '#111', lineHeight: '1.2', margin: '0 auto', maxWidth: '700px' }}>
-          The Skillzza Learning{' '}
-          <span style={{ fontWeight: '800' }}>Framework</span>
+        <h1 ref={heroTitleRef} className="meth-reveal meth-fade-up" style={{ fontSize: '38px', fontWeight: '700', color: '#111827', lineHeight: '1.25', letterSpacing: '-0.3px', margin: '0 auto', maxWidth: '700px' }}>
+          The Skillzza Learning Framework
         </h1>
       </section>
 
       {/* Full-width banner image — no overlay */}
-      <div className="method-hero-image-wrap" style={{ width: '100%', lineHeight: 0 }}>
+      <div ref={heroImageRef} className="method-hero-image-wrap meth-reveal meth-scale-up meth-delay-1" style={{ width: '100%', lineHeight: 0 }}>
         <img
           src={getAssetPath('/speaker.png')}
           alt="The Skillzza Learning Framework"
@@ -489,21 +583,21 @@ const OurMethodology = () => {
 
       {/* Below image: white section with centered text + stat pills */}
       {/* ── FIX: increased maxWidth for heading, paragraph and pills ── */}
-      <section className="method-intro-section" style={{ backgroundColor: '#fff', padding: '64px 48px 72px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
-        <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#111', lineHeight: '1.25', margin: '0 auto 20px', maxWidth: '100%' }}>
+      <section ref={introRef} className="method-intro-section meth-reveal meth-fade-up" style={{ backgroundColor: '#fff', padding: '64px 48px 72px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
+        {/* <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#111', lineHeight: '1.25', margin: '0 auto 20px', maxWidth: '100%' }}>
           Transforming Potential Through<br />Science-Backed Learning
-        </h2>
+        </h2> */}
         <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.75', maxWidth: '100%', margin: '0 auto 40px' }}>
-          At Skillzza, we believe that effective skill development requires more than traditional training approaches. Our methodology integrates cognitive science, industry insights, and adaptive technology to create learning experiences that deliver measurable, lasting results.
+          At Skillzza, we believe that effective skill development requires more than traditional training approaches. Our methodology integrates cognitive science, <br /> industry insights, and adaptive technology to create learning experiences that deliver measurable, lasting results.
         </p>
         <div className="method-stat-pills" style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', justifyContent: 'center', width: '100%', margin: '0 auto' }}>
           {['85%+ Skill Acquisition', '90%+ Learner Satisfaction', '75%+ Career Advancement', '95%+ Employer Satisfaction'].map((stat, i) => (
             <div key={i} style={{
               padding: '10px 24px', borderRadius: '50px',
               backgroundColor: '#e8f4fd', color: '#2c6fad',
-              fontSize: '14px', fontWeight: '500',
+              fontSize: '16px', fontWeight: '500',
             }}>
-              {stat}
+              <strong>{stat.split(' ')[0]}</strong> {stat.split(' ').slice(1).join(' ')}
             </div>
           ))}
         </div>
@@ -547,7 +641,7 @@ const OurMethodology = () => {
         />
 
         {/* Title */}
-        <h2 style={{
+        <h2 ref={coreTitleRef} className="meth-reveal meth-fade-up" style={{
           textAlign: 'center', fontSize: '36px', fontWeight: '700',
           color: '#111', marginBottom: '32px', letterSpacing: '-0.3px',
         }}>
@@ -555,7 +649,7 @@ const OurMethodology = () => {
         </h2>
 
         {/* ── FIX: increased maxWidth from 920px to 1100px, fixed asymmetric padding ── */}
-        <div style={{
+        <div ref={coreGridRef} className="meth-reveal meth-fade-up meth-delay-1" style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gap: '14px',
@@ -567,7 +661,7 @@ const OurMethodology = () => {
         }}>
 
           {/* Card 1 – Competency-Based Progression */}
-          <div style={{
+          <div className="meth-reveal meth-scale-up" style={{
             backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
           }}>
@@ -578,7 +672,7 @@ const OurMethodology = () => {
           </div>
 
           {/* Card 2 – Industry-Academic Convergence */}
-          <div style={{
+          <div className="meth-reveal meth-scale-up meth-delay-1" style={{
             backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
           }}>
@@ -589,7 +683,7 @@ const OurMethodology = () => {
           </div>
 
           {/* Card 3 – Cognitive Load Optimization */}
-          <div style={{
+          <div className="meth-reveal meth-scale-up meth-delay-2" style={{
             backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
           }}>
@@ -600,7 +694,7 @@ const OurMethodology = () => {
           </div>
 
           {/* Card 4 – Cultural and Contextual Relevance */}
-          <div style={{
+          <div className="meth-reveal meth-scale-up meth-delay-3" style={{
             backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
             display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
           }}>
@@ -615,119 +709,6 @@ const OurMethodology = () => {
 
       {/* Implementation Methodology — Stepper */}
       <ImplementationStepper />
-
-      {/* ── METHODOLOGY DELIVERS STATS ── */}
-      <MethodologyStats />
-
-      {/* Our Commitment to Excellence */}
-      <section style={{
-        backgroundImage: `url(${getAssetPath('/background-partner.png')})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        padding: "0",
-        overflow: "hidden",
-        position: "relative",
-        width: "100%",
-      }}>
-        <div className="partner-cta-main" style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", width: "100%", paddingTop: 40 }}>
-          <div style={{ flex: "0 0 46%", position: "relative" }}>
-            <img
-              src={getAssetPath('/businesspeople-having-discussion-office@2x.png')}
-              alt="Partner with us"
-              style={{ width: "100%", height: "auto", minHeight: 340, objectFit: "cover", objectPosition: "center", display: "block" }}
-            />
-            <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 12, background: "#FDB913" }} />
-          </div>
-          <div className="partner-cta-form-col" style={{ flex: 1, display: "flex", flexDirection: "column", padding: "0px 64px 48px 180px" }}>
-            <h2 style={{ fontSize: 36, fontWeight: 700, color: "#1f2937", lineHeight: 1.25, marginBottom: 16, fontFamily: "Inter, sans-serif" }}>
-              Partner with us<br />To make a Difference
-            </h2>
-            <p style={{ fontSize: 15, color: "#4b5563", marginBottom: 28, lineHeight: 1.6, maxWidth: 400, fontFamily: "Inter, sans-serif" }}>
-              Connect with our industry experts for a personalised consultation. Let's explore how our solutions can revolutionise your growth.
-            </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 14, maxWidth: 420 }}>
-              <input placeholder="Name*" style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }} />
-              <input placeholder="Email*" style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }} />
-              <div className="partner-phone-row" style={{ display: "flex", gap: 12 }}>
-                <div className="partner-country-code" style={{ display: "flex", alignItems: "center", gap: 4, padding: "13px 16px", borderRadius: 6, background: "#fff", color: "#1f2937", fontSize: 14, minWidth: 100, fontFamily: "Inter, sans-serif" }}>
-                  <span>India</span><span style={{ color: "#9ca3af", marginLeft: 4 }}>+91</span>
-                </div>
-                <input className="partner-mobile-input" placeholder="Mobile Number*" style={{ flex: 1, padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif" }} />
-              </div>
-              <button
-                onMouseEnter={e => e.currentTarget.style.opacity = "0.9"}
-                onMouseLeave={e => e.currentTarget.style.opacity = "1"}
-                style={{ width: "100%", padding: "14px", borderRadius: 6, background: "#1f2937", color: "#fff", border: "none", fontSize: 16, fontWeight: 600, cursor: "pointer", fontFamily: "Inter, sans-serif", marginTop: 4, transition: "opacity 0.2s" }}>
-                Get Started
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section style={{ background: "#fff", padding: "80px 0", fontFamily: "Inter, sans-serif" }}>
-        <div className="section-inner" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-          <div className="insights-row" style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
-
-            {/* Left Column */}
-            <div className="insights-left-col" style={{ display: "flex", flexDirection: "column", width: 280, flexShrink: 0, alignSelf: "stretch" }}>
-              <h2 style={{ fontSize: 42, fontWeight: 800, marginBottom: 20, color: "#111827", fontFamily: "Inter, sans-serif", letterSpacing: "-0.5px" }}>Insights</h2>
-              <button style={{ border: "1.5px solid #d1d5db", background: "#fff", padding: "10px 20px", borderRadius: 8, fontSize: 14, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", marginBottom: 24, fontFamily: "Inter, sans-serif" }}>View all the resources</button>
-
-              <div style={{ borderRadius: 16, overflow: "hidden", background: "#ede9fe", display: "flex", flexDirection: "column", flex: 1 }}>
-                <div style={{ background: "#1a1a2e", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", position: "relative", flexShrink: 0 }}>
-                  <img src={getAssetPath("/insight-blog.png")} alt="Blog" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
-                    onError={e => { e.target.style.display = "none"; }} />
-                  <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.15)", backdropFilter: "blur(4px)", borderRadius: 6, padding: "4px 10px", fontSize: 11, fontWeight: 700, color: "#fff", fontFamily: "Inter, sans-serif" }}>AI Assistant</div>
-                </div>
-                <div style={{ padding: "20px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <img src={getAssetPath("/pen.svg")} alt="Blog" style={{ width: 40, height: 40, marginBottom: 12 }} />
-                  <h4 style={{ fontSize: 16, fontWeight: 700, color: "#111827", marginBottom: 16, lineHeight: 1.5, flex: 1, fontFamily: "Inter, sans-serif" }}>Skill Gaps to Skill Maps: The Future of Adaptive Career Assessment with AI</h4>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Read the Blog</button>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Grid */}
-            <div className="insights-grid" style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "auto auto", gap: 16 }}>
-              <div style={{ borderRadius: 16, overflow: "hidden", background: "#fef3e2", display: "flex", flexDirection: "column" }}>
-                <div style={{ overflow: "hidden", background: "#e5d5c0" }}>
-                  <img src={getAssetPath("/insight-robot.png")} alt="AI Robot" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
-                </div>
-                <div style={{ padding: "18px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, background: "#f5a623", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
-                  <h4 style={{ fontSize: 17, fontWeight: 700, color: "#111827", marginBottom: 16, flex: 1, lineHeight: 1.4, fontFamily: "Inter, sans-serif" }}>2025 AI Talent & Salary Benchmark Report</h4>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Read the reports</button>
-                </div>
-              </div>
-
-              <div style={{ borderRadius: 16, overflow: "hidden", background: "#fce7f3", display: "flex", flexDirection: "column" }}>
-                <div style={{ overflow: "hidden", background: "#d0b0c0" }}>
-                  <img src={getAssetPath("/insight-future.png")} alt="Future of Work" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
-                </div>
-                <div style={{ padding: "18px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, background: "#e02020", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
-                  <h4 style={{ fontSize: 17, fontWeight: 700, color: "#111827", marginBottom: 16, flex: 1, lineHeight: 1.4, fontFamily: "Inter, sans-serif" }}>The Skill Blueprint AI & The Future of Work</h4>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Explore the Case studies</button>
-                </div>
-              </div>
-
-              <div className="insights-podcast-card" style={{ gridColumn: "1 / -1", borderRadius: 16, background: "#cffafe", padding: "28px 32px", display: "flex", alignItems: "center", gap: 24 }}>
-                <div style={{ flex: 1 }}>
-                  <span style={{ display: "inline-block", background: "#22d3ee", color: "#fff", fontSize: 12, fontWeight: 600, padding: "5px 14px", borderRadius: 20, marginBottom: 14, fontFamily: "Inter, sans-serif" }}>Podcast</span>
-                  <h4 style={{ fontSize: 22, fontWeight: 700, marginBottom: 10, color: "#111827", lineHeight: 1.3, fontFamily: "Inter, sans-serif" }}>Skills DECODED:<br />Conversations that matter.</h4>
-                  <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.6, marginBottom: 0, maxWidth: 480, fontFamily: "Inter, sans-serif" }}>Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.</p>
-                </div>
-                <div className="insights-podcast-action" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, flexShrink: 0 }}>
-                  <img src={getAssetPath("/mic.svg")} alt="Podcast" style={{ width: 72, height: 72 }} />
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", whiteSpace: "nowrap", fontFamily: "Inter, sans-serif" }}>Listen now</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 };

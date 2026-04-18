@@ -1,4 +1,5 @@
 import React from 'react';
+import { getRoutePath } from '../utils/assets';
 
 const Topbar = () => {
   return (
@@ -31,7 +32,7 @@ const Topbar = () => {
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
             <circle cx="12" cy="7" r="4"/>
           </svg>
-          <a href="#" style={{ color: "#fff", textDecoration: "none", fontSize: 13, fontWeight: 500, opacity: 0.9, whiteSpace: "nowrap" }}>
+          <a href={getRoutePath('/login')} style={{ color: "#fff", textDecoration: "none", fontSize: 13, fontWeight: 500, opacity: 0.9, whiteSpace: "nowrap" }}>
             Log in
           </a>
         </div>
