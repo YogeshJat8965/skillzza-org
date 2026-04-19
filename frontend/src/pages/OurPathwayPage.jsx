@@ -266,7 +266,7 @@ function OurPathwayPage() {
             width: 100% !important;
             max-width: 380px !important;
             height: auto !important;
-            min-height: 480px !important;
+            min-height: unset !important;
           }
           .pathway-highlight-grid {
             grid-template-columns: 1fr !important;

@@ -86,10 +86,7 @@ function InsightsPage() {
       {/* Breadcrumbs */}
       <div className="bg-transparent pt-6 pb-2 px-4 md:px-8 w-full">
         <div className="max-w-[1440px] mx-auto border-b-2 border-dotted border-gray-500 pb-3 flex items-center gap-2 text-[14px] md:text-[16px] font-['DM_Sans',sans-serif]">
-          <span 
-            onClick={() => navigate('/')} 
-            className="text-[#0070AC] font-bold cursor-pointer hover:underline"
-          >
+          <span className="text-[#0070AC] font-bold">
             {breadcrumbMappings[activeTab]?.left || "Home"}
           </span>
           <span className="text-gray-500">/</span>

@@ -124,6 +124,12 @@ const Insights = ({ showHero = false, showContent = true }) => {
         .delay-400 { animation-delay: 0.4s; }
         .delay-500 { animation-delay: 0.5s; }
 
+        .insights-hero-bg {
+          background-size: cover;
+          background-position: center 35%;
+          filter: brightness(0.65);
+        }
+
         /* ===== Insights Card Hover Effects ===== */
         .insights-card-lg,
         .insights-card-md {
@@ -187,6 +193,15 @@ const Insights = ({ showHero = false, showContent = true }) => {
         }
 
         @media (max-width: 767px) {
+          .insights-hero-section {
+            min-height: 180px !important;
+            height: 180px !important;
+            max-height: 180px !important;
+          }
+          .insights-hero-bg {
+            background-size: 180% auto !important;
+            background-position: center 52% !important;
+          }
           .insights-heading {
             font-size: 28px !important;
             margin-top: 0px !important;
@@ -273,16 +288,13 @@ const Insights = ({ showHero = false, showContent = true }) => {
       {/* Hero Banner Section */}
       {showHero && (
         <section 
-          className="w-full relative flex items-center justify-center overflow-hidden" 
+          className="insights-hero-section w-full relative flex items-center justify-center overflow-hidden" 
           style={{ minHeight: '280px', height: '35vh', maxHeight: '350px' }}
         >
           <div 
-            className="absolute inset-0 w-full h-full"
+            className="insights-hero-bg absolute inset-0 w-full h-full"
             style={{
               backgroundImage: getBackgroundImageUrl('/improvements/Untitled%20design.jpg.jpeg'),
-              backgroundSize: 'cover',
-              backgroundPosition: 'center 35%',
-              filter: 'brightness(0.65)'
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

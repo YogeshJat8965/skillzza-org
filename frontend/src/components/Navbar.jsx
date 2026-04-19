@@ -1306,13 +1306,45 @@ const DesktopNavItem = ({ item, onComingSoon }) => {
    MobileNavItem — accordion with icons
 ═══════════════════════════════════════════════════════════════ */
 
-const MobileNavItem = ({ item, onClose, onComingSoon }) => {
-  const [open, setOpen] = useState(false);
+const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
+  const mobileCompanyItems = item.companyItems || [];
+  const mobileServiceItems = item.serviceItems || [];
+  const isCompanyMenu = item.name === 'Company' && mobileCompanyItems.length > 0;
+  const mobileSubItems = item.items
+    ? item.items
+    : [...mobileCompanyItems, ...mobileServiceItems];
+  const hasSubItems = mobileSubItems.length > 0;
+
+  if (item.isDirectLink) {
+    return (
+      <a
+        href={getRoutePath(item.link)}
+        onClick={() => onClose?.()}
+        style={{
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '14px 20px',
+          fontSize: 14,
+          fontWeight: 600,
+          color: '#1e293b',
+          background: 'none',
+          border: 'none',
+          textAlign: 'left',
+          textDecoration: 'none',
+          borderBottom: '1px solid #f1f5f9',
+        }}
+      >
+        <span>{item.name}</span>
+      </a>
+    );
+  }
 
   return (
     <div style={{ borderBottom: '1px solid #f1f5f9' }}>
       <button
-        onClick={() => setOpen(!open)}
+        onClick={() => hasSubItems && onToggle?.(item.name)}
         style={{
           width: '100%',
           display: 'flex',
@@ -1329,18 +1361,20 @@ const MobileNavItem = ({ item, onClose, onComingSoon }) => {
         }}
       >
         <span>{item.name}</span>
-        <IoIosArrowDown
-          style={{
-            fontSize: 14,
-            transition: 'transform 0.3s cubic-bezier(0.4,0,0.2,1)',
-            transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
-            color: '#94a3b8',
-          }}
-        />
+        {hasSubItems && (
+          <IoIosArrowDown
+            style={{
+              fontSize: 14,
+              transition: 'transform 0.3s cubic-bezier(0.4,0,0.2,1)',
+              transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
+              color: '#94a3b8',
+            }}
+          />
+        )}
       </button>
       {open && (
         <div style={{ background: '#f8fafc', padding: '6px 0 12px' }}>
-          {item.items.map((sub) => (
+          {(isCompanyMenu ? mobileCompanyItems : mobileSubItems).map((sub) => (
             <a
               key={sub.name}
               href={sub.link ? getRoutePath(sub.link) : undefined}
@@ -1382,6 +1416,44 @@ const MobileNavItem = ({ item, onClose, onComingSoon }) => {
               <span style={{ fontWeight: 500 }}>{sub.name}</span>
             </a>
           ))}
+
+          {isCompanyMenu && mobileServiceItems.length > 0 && (
+            <>
+              <div
+                style={{
+                  height: 1,
+                  background: '#e2e8f0',
+                  margin: '8px 24px',
+                }}
+              />
+              {mobileServiceItems.map((sub) => (
+                <a
+                  key={sub.name}
+                  href={sub.link ? getRoutePath(sub.link) : undefined}
+                  onClick={(e) => {
+                    if (!sub.link) {
+                      e.preventDefault();
+                      onClose?.();
+                      onComingSoon?.(sub.name);
+                      return;
+                    }
+                    onClose?.();
+                  }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 12,
+                    padding: '10px 24px',
+                    fontSize: 13,
+                    color: '#475569',
+                    textDecoration: 'none',
+                  }}
+                >
+                  <span style={{ fontWeight: 500 }}>{sub.name}</span>
+                </a>
+              ))}
+            </>
+          )}
         </div>
       )}
     </div>
@@ -1394,6 +1466,7 @@ const MobileNavItem = ({ item, onClose, onComingSoon }) => {
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
   const [comingSoonText, setComingSoonText] = useState('');
 
   return (
@@ -1500,7 +1573,13 @@ const Navbar = () => {
           {/* Hamburger */}
           <button
             className="sz-hamburger"
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={() => {
+              setMobileOpen((prev) => {
+                const next = !prev;
+                if (!next) setActiveMobileDropdown(null);
+                return next;
+              });
+            }}
             style={{
               display: 'none',
               alignItems: 'center',
@@ -1532,7 +1611,14 @@ const Navbar = () => {
               <MobileNavItem
                 key={item.name}
                 item={item}
-                onClose={() => setMobileOpen(false)}
+                open={activeMobileDropdown === item.name}
+                onToggle={(name) => {
+                  setActiveMobileDropdown((prev) => (prev === name ? null : name));
+                }}
+                onClose={() => {
+                  setMobileOpen(false);
+                  setActiveMobileDropdown(null);
+                }}
                 onComingSoon={(name) => setComingSoonText(`${name} is coming soon.`)}
               />
             ))}
