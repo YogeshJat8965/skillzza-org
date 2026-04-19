@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
        but persists across client-side React Router navigations.
        sessionStorage / localStorage survive F5, so we avoid both. ── */
 let _dismissed = false;
+const MOBILE_MAX_WIDTH = 767;
 
 /* ─── Chip list (matches screenshot) ────────────────────────── */
 const chips = [
@@ -85,6 +86,27 @@ const WelcomePopup = () => {
   const [visible,  setVisible]  = useState(false);
   const [closing,  setClosing]  = useState(false);
   const [counting, setCounting] = useState(false);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== 'undefined'
+      ? window.matchMedia(`(max-width: ${MOBILE_MAX_WIDTH}px)`).matches
+      : false
+  );
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return undefined;
+
+    const media = window.matchMedia(`(max-width: ${MOBILE_MAX_WIDTH}px)`);
+    const onChange = (event) => setIsMobile(event.matches);
+    setIsMobile(media.matches);
+
+    if (typeof media.addEventListener === 'function') {
+      media.addEventListener('change', onChange);
+      return () => media.removeEventListener('change', onChange);
+    }
+
+    media.addListener(onChange);
+    return () => media.removeListener(onChange);
+  }, []);
 
   useEffect(() => {
     // Only show on the home page
@@ -102,6 +124,8 @@ const WelcomePopup = () => {
     setTimeout(() => setVisible(false), 360);
   };
 
+  const visibleChips = isMobile ? chips.slice(0, 6) : chips;
+
   if (!visible) return null;
 
   const overlayStyle = {
@@ -117,15 +141,18 @@ const WelcomePopup = () => {
   const wrapStyle = {
     position: 'fixed', inset: 0,
     display: 'flex', alignItems: 'center', justifyContent: 'center',
-    zIndex: 9999, padding: 20, pointerEvents: 'none',
+    zIndex: 9999,
+    padding: isMobile ? 10 : 20,
+    pointerEvents: 'none',
   };
 
   const cardStyle = {
     position: 'relative',
-    width: '100%', maxWidth: 800,
+    width: '100%',
+    maxWidth: isMobile ? 360 : 800,
     background: 'linear-gradient(165deg, #07091a 0%, #0a0d1e 50%, #060818 100%)',
-    borderRadius: 22,
-    padding: '52px 52px 46px',
+    borderRadius: isMobile ? 18 : 22,
+    padding: isMobile ? '44px 16px 20px' : '52px 52px 46px',
     textAlign: 'center',
     pointerEvents: 'all',
     border: '1px solid rgba(124,111,255,0.14)',
@@ -136,6 +163,8 @@ const WelcomePopup = () => {
     transform: closing ? 'scale(0.95) translateY(18px)' : 'scale(1) translateY(0)',
     transition: 'opacity 0.36s ease, transform 0.36s cubic-bezier(0.4,0,0.2,1)',
     animation: 'szWelcomeIn 0.48s cubic-bezier(0.16,1,0.3,1)',
+    maxHeight: isMobile ? '90vh' : 'unset',
+    overflowY: isMobile ? 'auto' : 'visible',
   };
 
   return (
@@ -150,12 +179,13 @@ const WelcomePopup = () => {
             onClick={dismiss}
             aria-label="Close"
             style={{
-              position: 'absolute', top: 16, right: 16,
-              width: 34, height: 34, borderRadius: 9,
+              position: 'absolute', top: isMobile ? 10 : 16, right: isMobile ? 10 : 16,
+              width: isMobile ? 30 : 34, height: isMobile ? 30 : 34, borderRadius: 9,
               background: 'rgba(255,255,255,0.05)',
               border: '1px solid rgba(255,255,255,0.08)',
               color: 'rgba(255,255,255,0.4)',
-              fontSize: 16, display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontSize: isMobile ? 14 : 16,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
               cursor: 'pointer', transition: 'all 0.2s ease',
             }}
             onMouseEnter={e => {
@@ -178,9 +208,11 @@ const WelcomePopup = () => {
             background: '#0d1020',
             border: '1px solid rgba(124,111,255,0.28)',
             borderRadius: 20,
-            padding: '5px 14px',
-            fontSize: 11.5, color: '#a09cf7',
-            marginBottom: 22,
+            padding: isMobile ? '4px 10px' : '5px 14px',
+            fontSize: isMobile ? 10.5 : 11.5,
+            color: '#a09cf7',
+            marginBottom: isMobile ? 14 : 22,
+            maxWidth: isMobile ? 'calc(100% - 44px)' : '100%',
           }}>
             <span style={{
               width: 7, height: 7, borderRadius: '50%',
@@ -192,11 +224,11 @@ const WelcomePopup = () => {
           {/* ── Heading ── */}
           <h2 style={{
             fontFamily: "'Sora', system-ui, sans-serif",
-            fontSize: 'clamp(28px, 4vw, 44px)',
+            fontSize: isMobile ? 'clamp(28px, 7.5vw, 34px)' : 'clamp(28px, 4vw, 44px)',
             fontWeight: 700,
             lineHeight: 1.12,
-            marginBottom: 26,
-            letterSpacing: -1.4,
+            marginBottom: isMobile ? 16 : 26,
+            letterSpacing: isMobile ? -1 : -1.4,
             color: '#fff',
           }}>
             Your career,
@@ -223,14 +255,17 @@ const WelcomePopup = () => {
           {/* ── Chips ── */}
           <div style={{
             display: 'flex', flexWrap: 'wrap',
-            justifyContent: 'center', gap: 8, marginBottom: 28,
+            justifyContent: 'center',
+            gap: isMobile ? 7 : 8,
+            marginBottom: isMobile ? 16 : 28,
           }}>
-            {chips.map((chip, i) => (
+            {visibleChips.map((chip, i) => (
               <span
                 key={chip}
                 style={{
-                  padding: '6px 16px', borderRadius: 22,
-                  fontSize: 12.5, fontWeight: 500,
+                  padding: isMobile ? '5px 12px' : '6px 16px', borderRadius: 22,
+                  fontSize: isMobile ? 11.5 : 12.5,
+                  fontWeight: 500,
                   color: '#8892a4',
                   border: '1px solid rgba(255,255,255,0.09)',
                   background: 'rgba(255,255,255,0.03)',
@@ -257,7 +292,8 @@ const WelcomePopup = () => {
           {/* ── Buttons ── */}
           <div style={{
             display: 'flex', justifyContent: 'center',
-            gap: 12, marginBottom: 38,
+            gap: isMobile ? 8 : 12,
+            marginBottom: isMobile ? 20 : 38,
             flexWrap: 'wrap',
           }}>
             {/* Primary CTA */}
@@ -268,11 +304,14 @@ const WelcomePopup = () => {
                 display: 'inline-flex', alignItems: 'center', gap: 5,
                 background: 'linear-gradient(135deg, #7c6fff 0%, #6254e0 100%)',
                 color: '#fff',
-                fontSize: 13.5, fontWeight: 600,
-                padding: '11px 28px', borderRadius: 9,
+                fontSize: isMobile ? 13 : 13.5,
+                fontWeight: 600,
+                padding: isMobile ? '10px 20px' : '11px 28px', borderRadius: 9,
                 textDecoration: 'none',
                 boxShadow: '0 8px 28px rgba(124,111,255,0.38)',
                 transition: 'all 0.25s ease',
+                minWidth: isMobile ? 196 : 'unset',
+                justifyContent: 'center',
               }}
               onMouseEnter={e => {
                 e.currentTarget.style.transform = 'translateY(-2px)';
@@ -293,11 +332,14 @@ const WelcomePopup = () => {
                 display: 'inline-flex', alignItems: 'center', gap: 5,
                 background: 'none',
                 color: '#c8cde0',
-                fontSize: 13.5, fontWeight: 500,
-                padding: '11px 28px', borderRadius: 9,
+                fontSize: isMobile ? 13 : 13.5,
+                fontWeight: 500,
+                padding: isMobile ? '10px 20px' : '11px 28px', borderRadius: 9,
                 textDecoration: 'none',
                 border: '1px solid rgba(255,255,255,0.13)',
                 transition: 'all 0.25s ease',
+                minWidth: isMobile ? 178 : 'unset',
+                justifyContent: 'center',
               }}
               onMouseEnter={e => {
                 e.currentTarget.style.borderColor = 'rgba(255,255,255,0.28)';
@@ -312,19 +354,21 @@ const WelcomePopup = () => {
             </a>
           </div>
 
-          {/* ── Stats row ── */}
-          <div style={{
-            borderTop: '1px solid rgba(255,255,255,0.055)',
-            paddingTop: 26,
-            display: 'flex',
-            justifyContent: 'center',
-            gap: 'clamp(20px, 4vw, 40px)',
-            flexWrap: 'wrap',
-          }}>
-            {stats.map((s, i) => (
-              <StatItem key={s.label} stat={s} active={counting} />
-            ))}
-          </div>
+          {/* ── Stats row (desktop only) ── */}
+          {!isMobile && (
+            <div style={{
+              borderTop: '1px solid rgba(255,255,255,0.055)',
+              paddingTop: 26,
+              display: 'flex',
+              justifyContent: 'center',
+              gap: 'clamp(20px, 4vw, 40px)',
+              flexWrap: 'wrap',
+            }}>
+              {stats.map((s) => (
+                <StatItem key={s.label} stat={s} active={counting} />
+              ))}
+            </div>
+          )}
 
         </div>
       </div>
