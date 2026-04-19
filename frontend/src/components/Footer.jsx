@@ -295,7 +295,14 @@ const Footer = () => {
         }
         @media (max-width: 899px) {
           .footer-outer { grid-template-columns: 1fr !important; }
-          .footer-links-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          .footer-links-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            margin-left: 0 !important;
+            padding-right: 0 !important;
+            margin-top: 10px !important;
+            column-gap: 18px !important;
+            row-gap: 20px !important;
+          }
           .footer-bottom-bar {
             padding: 14px 20px !important;
             flex-direction: column !important;
@@ -304,8 +311,31 @@ const Footer = () => {
           }
         }
         @media (max-width: 599px) {
-          .footer-main-wrap { padding: 32px 16px 28px !important; }
-          .footer-links-grid { grid-template-columns: 1fr 1fr !important; }
+          .footer-main-wrap { padding: 28px 16px 24px !important; }
+          .footer-outer > div:first-child {
+            gap: 14px !important;
+            margin-bottom: 6px !important;
+          }
+          .footer-links-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 14px !important;
+          }
+          .footer-links-grid > div {
+            min-width: 0 !important;
+          }
+          .footer-links-grid p {
+            margin-bottom: 10px !important;
+            font-size: 15px !important;
+          }
+          .footer-links-grid a {
+            font-size: 12.5px !important;
+            line-height: 1.45 !important;
+            white-space: normal !important;
+            word-break: break-word !important;
+          }
+          .footer-social-col {
+            margin-left: 0 !important;
+          }
           .footer-bottom-links { gap: 16px !important; }
         }
         @media (max-width: 400px) {

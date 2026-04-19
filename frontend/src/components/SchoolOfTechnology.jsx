@@ -167,6 +167,10 @@ const SchoolOfTechnology = () => {
         }
 
         @media (max-width: 767px) {
+          .sot-scale-content {
+            transform: none !important;
+            width: 100% !important;
+          }
           .sot-row {
             align-items: stretch !important;
           }
@@ -201,7 +205,7 @@ const SchoolOfTechnology = () => {
           }
         }
       `}</style>
-      <section className="w-full bg-white pt-0 pb-16 lg:pb-20">
+      <section className="w-full bg-white pt-0 pb-8 sm:pb-16 lg:pb-20">
         <div className="sot-scale-shell">
           <div className="sot-scale-content">
             <div className="max-w-[1920px] mx-auto">

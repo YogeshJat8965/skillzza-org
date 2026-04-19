@@ -411,6 +411,13 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .home-scale-content {
+    transform: none;
+    width: 100%;
+  }
+}
+
 *,
 *::before,
 *::after {
