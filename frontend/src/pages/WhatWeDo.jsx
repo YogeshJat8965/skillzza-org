@@ -171,6 +171,9 @@ const WhatWeDo = () => {
             gap: 32px !important;
             padding: 40px 0 !important;
           }
+          .wwd-core-decor {
+            display: none !important;
+          }
           .pillar-row > div:nth-child(2) {
             margin-left: 0 !important;
           }
@@ -303,6 +306,7 @@ const WhatWeDo = () => {
               {/* core.svg decorative — left side (Pillar 1) */}
               {pillar.decorLeft && (
                 <img
+                  className="wwd-core-decor"
                   src={getAssetPath('/core.svg')}
                   alt=""
                   style={{

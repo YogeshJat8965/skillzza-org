@@ -54,6 +54,20 @@ function PartnerCollaborationPage() {
     }
   }, [])
 
+  useEffect(() => {
+    if (!selectedCard) return undefined
+
+    const timer = setTimeout(() => {
+      const target = document.querySelector(`[data-collab-section="${selectedCard}"]`)
+      if (!target) return
+
+      const top = target.getBoundingClientRect().top + window.scrollY - 72
+      window.scrollTo({ top, behavior: 'smooth' })
+    }, 90)
+
+    return () => clearTimeout(timer)
+  }, [selectedCard])
+
   return (
     <>
       <style>{`
@@ -629,17 +643,20 @@ function PartnerCollaborationPage() {
 
         @media (max-width: 768px) {
           .collab-hero {
-            min-height: 300px;
+            min-height: 270px;
+            background-position: 64% center;
           }
 
           .collab-hero__inner {
-            min-height: 300px;
-            padding: 28px 24px;
+            min-height: 270px;
+            padding: 24px 18px;
           }
 
           .collab-hero__title {
-            font-size: 56px;
-            max-width: 280px;
+            font-size: clamp(38px, 10.5vw, 44px);
+            max-width: 100%;
+            line-height: 1.06;
+            letter-spacing: -0.6px;
           }
 
           .collab-partners {
@@ -664,6 +681,12 @@ function PartnerCollaborationPage() {
           .cards-section__grid {
             grid-template-columns: repeat(2, 1fr);
             gap: 14px;
+          }
+        }
+
+        @media (max-width: 420px) {
+          .collab-hero__title {
+            font-size: clamp(34px, 11.2vw, 40px);
           }
         }
 
@@ -739,7 +762,7 @@ function PartnerCollaborationPage() {
 
         {selectedCard === 'corporate' ? (
         <>
-        <section className="section-banner section-banner--corporate">
+        <section className="section-banner section-banner--corporate" data-collab-section="corporate">
           <div className="section-banner__content collab-animate anim-fade-up">
             <h3 className="section-banner__title">Corporate Partnerships</h3>
             <h4 className="section-banner__subtitle">Upskill Your Workforce. Empower Innovation.</h4>
@@ -856,7 +879,7 @@ function PartnerCollaborationPage() {
 
         {selectedCard === 'government' ? (
         <>
-        <section className="section-banner section-banner--govt">
+        <section className="section-banner section-banner--govt" data-collab-section="government">
           <div className="section-banner__content collab-animate anim-fade-up">
             <h3 className="section-banner__title">Government Partnerships</h3>
             <h4 className="section-banner__subtitle">Building a Skilled Nation Together</h4>
@@ -998,7 +1021,7 @@ function PartnerCollaborationPage() {
 
         {selectedCard === 'education' ? (
         <>
-        <section className="section-banner section-banner--education">
+        <section className="section-banner section-banner--education" data-collab-section="education">
           <div className="section-banner__content collab-animate anim-fade-up">
             <h3 className="section-banner__title">Educational Partnerships</h3>
             <h4 className="section-banner__subtitle">Empowering Students for Tomorrow's World</h4>

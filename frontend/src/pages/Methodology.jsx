@@ -622,8 +622,17 @@ const OurMethodology = () => {
       {/* ─── Core Principles ─── */}
       <section style={{ backgroundColor: '#fff', padding: '48px 0 56px', fontFamily: 'Inter, sans-serif', position: 'relative', overflow: 'hidden' }}>
 
+        <style>{`
+          @media (max-width: 768px) {
+            .method-core-shape {
+              top: 58% !important;
+            }
+          }
+        `}</style>
+
         {/* core.svg — decorative background shape on the left */}
         <img
+          className="method-core-shape"
           src={getAssetPath('/core.svg')}
           alt=""
           aria-hidden="true"
