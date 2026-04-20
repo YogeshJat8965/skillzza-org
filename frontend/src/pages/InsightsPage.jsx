@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import Insights from '../components/Insights'
 
 
-function ExpandableText({ text, limit = 80 }) {
+function ExpandableText({ text, limit = 45 }) {
   const [isExpanded, setIsExpanded] = React.useState(false);
   if (!text) return null;
   if (text.length <= limit) return <>{text}</>;
@@ -377,7 +377,7 @@ function InsightsPage() {
                   id: 1,
                   tag: "PODCAST",
                   title: "From AI Awareness to AI Mastery",
-                  // desc: "Tune in as we discuss moving past the AI hype cycle and taking actionable steps to deeply integrate AI tools into professional workflows.",
+                  desc: "Tune in as we discuss moving past the AI hype cycle and taking actionable steps to deeply integrate AI tools into professional workflows.",
                   image: "https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
@@ -449,7 +449,7 @@ function InsightsPage() {
                   id: 1,
                   tag: "SKILLZZA LIVE",
                   title: "How to Build a High-Income Skill Using AI",
-                  // desc: "Learn actionable strategies in this comprehensive live session to monetize AI tools and rapidly build high-value freelance or corporate skills.",
+                  desc: "Learn actionable strategies in this comprehensive live session to monetize AI tools and rapidly build high-value freelance or corporate skills.",
                   image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {

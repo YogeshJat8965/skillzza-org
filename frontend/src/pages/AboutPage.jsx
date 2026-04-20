@@ -100,7 +100,7 @@ function AboutPage() {
         }
 
         .about-banner__headline {
-          font-size: clamp(28px, 4vw, 42px);
+          font-size: clamp(24px, 3.2vw, 36px);
           font-weight: 900;
           line-height: 1.3;
           margin: 0;
@@ -124,7 +124,7 @@ function AboutPage() {
           }
 
           .about-banner__headline {
-            font-size: clamp(22px, 5vw, 32px);
+            font-size: clamp(20px, 4.5vw, 28px);
             line-height: 1.28;
           }
         }
@@ -492,16 +492,10 @@ function AboutPage() {
         }
 
         .about-core-values__image {
-          width: min(800px, 90vw);
+          width: min(940px, 95vw);
           height: auto;
           display: block;
-          transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
-          will-change: transform, filter;
-        }
-
-        .about-core-values__image:hover {
-          transform: scale(1.02);
-          filter: drop-shadow(0px 20px 40px rgba(0,0,0,0.15));
+          transition: none;
         }
       `}</style>
       <main className="about-banner-page">

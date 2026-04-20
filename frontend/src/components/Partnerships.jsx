@@ -170,10 +170,10 @@ const Partnerships = () => {
         }
       `}</style>
       <section
-        className="w-full relative flex items-start justify-center bg-white bg-cover bg-center bg-no-repeat min-h-0 sm:min-h-[560px] lg:min-h-[640px] xl:min-h-[700px]"
+        className="w-full relative flex items-start justify-center bg-white bg-cover bg-center bg-no-repeat min-h-0 sm:min-h-[460px] lg:min-h-[520px] xl:min-h-[560px]"
         style={{ backgroundImage: getBackgroundImageUrl('/img/Group%2037834.png') }}
       >
-        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32 w-full pt-4 sm:pt-6 lg:pt-8 pb-10 sm:pb-12 lg:pb-16">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32 w-full pt-2 sm:pt-3 lg:pt-4 pb-2 sm:pb-4 lg:pb-6">
           <div className="flex flex-col lg:flex-row gap-7 lg:gap-10 w-full items-center justify-center">
             {/* Left — Content */}
             <div

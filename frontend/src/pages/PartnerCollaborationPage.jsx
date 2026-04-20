@@ -559,7 +559,7 @@ function PartnerCollaborationPage() {
         /* ===== CTA SECTION ===== */
         .collab-cta {
           background-color: #8A0303;
-          padding: 80px 24px;
+          padding: clamp(44px, 6vw, 60px) 24px;
           text-align: center;
           position: relative;
           overflow: hidden;
@@ -582,7 +582,7 @@ function PartnerCollaborationPage() {
           margin: 0 auto;
           display: flex;
           flex-direction: column;
-          gap: 20px;
+          gap: 14px;
           align-items: center;
         }
 
