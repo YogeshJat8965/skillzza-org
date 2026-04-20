@@ -31,6 +31,12 @@ function useScrollRevealReplay(options = {}) {
     const el = ref.current;
     if (!el) return undefined;
 
+    // Fallback for environments where IntersectionObserver is unavailable.
+    if (typeof window === 'undefined' || typeof window.IntersectionObserver === 'undefined') {
+      el.classList.add('meth-visible');
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasRevealedRef.current) {
@@ -623,9 +629,53 @@ const OurMethodology = () => {
       <section style={{ backgroundColor: '#fff', padding: '48px 0 56px', fontFamily: 'Inter, sans-serif', position: 'relative', overflow: 'hidden' }}>
 
         <style>{`
+          .method-core-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 48px;
+            position: relative;
+            z-index: 2;
+          }
+
+          .method-core-card {
+            background-color: #F5F5F5;
+            border-radius: 8px;
+            padding: 36px 20px 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+
+          @media (max-width: 1024px) {
+            .method-core-grid {
+              padding: 0 24px;
+            }
+
+            .method-core-shape {
+              height: 72% !important;
+              opacity: 0.7;
+            }
+          }
+
           @media (max-width: 768px) {
+            .method-core-grid {
+              grid-template-columns: 1fr;
+              gap: 12px;
+              padding: 0 16px;
+            }
+
+            .method-core-card {
+              padding: 30px 16px 24px;
+            }
+
             .method-core-shape {
               top: 58% !important;
+              height: 56% !important;
+              opacity: 0.55;
             }
           }
         `}</style>
@@ -658,22 +708,10 @@ const OurMethodology = () => {
         </h2>
 
         {/* ── FIX: increased maxWidth from 920px to 1100px, fixed asymmetric padding ── */}
-        <div ref={coreGridRef} className="meth-reveal meth-fade-up meth-delay-1" style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '14px',
-          maxWidth: '1100px',
-          margin: '0 auto',
-          padding: '0 48px',
-          position: 'relative',
-          zIndex: 2,
-        }}>
+        <div ref={coreGridRef} className="method-core-grid meth-reveal meth-fade-up meth-delay-1">
 
           {/* Card 1 – Competency-Based Progression */}
-          <div className="meth-reveal meth-scale-up" style={{
-            backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
-            display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
-          }}>
+          <div className="method-core-card">
             <img src={getAssetPath('/badge.svg')} alt="Competency-Based Progression" style={{ width: '52px', height: '52px' }} />
             <p style={{ marginTop: '14px', fontSize: '13.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
               Competency-Based<br />Progression
@@ -681,10 +719,7 @@ const OurMethodology = () => {
           </div>
 
           {/* Card 2 – Industry-Academic Convergence */}
-          <div className="meth-reveal meth-scale-up meth-delay-1" style={{
-            backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
-            display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
-          }}>
+          <div className="method-core-card">
             <img src={getAssetPath('/bag.svg')} alt="Industry-Academic Convergence" style={{ width: '52px', height: '52px' }} />
             <p style={{ marginTop: '14px', fontSize: '13.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
               Industry-Academic<br />Convergence
@@ -692,10 +727,7 @@ const OurMethodology = () => {
           </div>
 
           {/* Card 3 – Cognitive Load Optimization */}
-          <div className="meth-reveal meth-scale-up meth-delay-2" style={{
-            backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
-            display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
-          }}>
+          <div className="method-core-card">
             <img src={getAssetPath('/brain.svg')} alt="Cognitive Load Optimization" style={{ width: '52px', height: '52px' }} />
             <p style={{ marginTop: '14px', fontSize: '13.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
               Cognitive Load<br />Optimization
@@ -703,10 +735,7 @@ const OurMethodology = () => {
           </div>
 
           {/* Card 4 – Cultural and Contextual Relevance */}
-          <div className="meth-reveal meth-scale-up meth-delay-3" style={{
-            backgroundColor: '#F5F5F5', borderRadius: '8px', padding: '36px 20px 28px',
-            display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
-          }}>
+          <div className="method-core-card">
             <img src={getAssetPath('/world.svg')} alt="Cultural and Contextual Relevance" style={{ width: '52px', height: '52px' }} />
             <p style={{ marginTop: '14px', fontSize: '13.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
               Cultural and Contextual<br />Relevance

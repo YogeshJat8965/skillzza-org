@@ -275,7 +275,7 @@ const Challenge = () => {
             align-items: stretch !important;
           }
           .challenge-heading {
-            font-size: clamp(32px, 3.2vw, 48px) !important;
+            font-size: clamp(24px, 2.8vw, 52px) !important;
           }
           .challenge-sub-heading {
             font-size: clamp(28px, 2.8vw, 42px) !important;
@@ -321,7 +321,7 @@ const Challenge = () => {
             padding-top: clamp(18px, 1.8vw, 32px) !important;
           }
           .challenge-heading {
-            font-size: clamp(26px, 2vw, 36px) !important;
+            font-size: clamp(24px, 2.8vw, 52px) !important;
             margin-bottom: clamp(8px, 0.7vw, 12px) !important;
           }
           .challenge-desc {
@@ -376,7 +376,7 @@ const Challenge = () => {
         /* Mobile overrides for Challenge */
         @media (max-width: 767px) {
           .challenge-heading {
-            font-size: 28px !important;
+            font-size: clamp(18px, 5.4vw, 28px) !important;
           }
           .challenge-sub-heading {
             font-size: 24px !important;
@@ -452,7 +452,7 @@ const Challenge = () => {
               className="challenge-heading"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: '44px',
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
                 fontWeight: 700,
                 lineHeight: '1.2',
                 color: '#0F1114',

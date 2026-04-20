@@ -114,7 +114,7 @@ const SkillzzaEcosystem = () => {
           className="mb-3"
           style={{
             fontFamily: "'DM Sans', sans-serif",
-            fontSize: 'clamp(32px, 4vw, 48px)',
+            fontSize: 'clamp(24px, 2.8vw, 52px)',
             fontWeight: 700,
             lineHeight: 1.2,
             color: '#0F1114',
