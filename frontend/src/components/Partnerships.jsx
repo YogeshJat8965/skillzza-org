@@ -170,28 +170,28 @@ const Partnerships = () => {
         }
       `}</style>
       <section
-        className="w-full relative flex items-center justify-center bg-white bg-cover bg-center bg-no-repeat min-h-0 sm:min-h-[700px] lg:min-h-[800px] xl:min-h-[873px]"
+        className="w-full relative flex items-start justify-center bg-white bg-cover bg-center bg-no-repeat min-h-0 sm:min-h-[560px] lg:min-h-[640px] xl:min-h-[700px]"
         style={{ backgroundImage: getBackgroundImageUrl('/img/Group%2037834.png') }}
       >
-        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32 w-full py-12 sm:py-16 lg:py-20">
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full items-center justify-center">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32 w-full pt-4 sm:pt-6 lg:pt-8 pb-10 sm:pb-12 lg:pb-16">
+          <div className="flex flex-col lg:flex-row gap-7 lg:gap-10 w-full items-center justify-center">
             {/* Left — Content */}
             <div
               ref={contentRef}
               className={`flex-1 max-w-xl lg:text-left text-center ${isVisible.content ? '' : 'opacity-0'}`}
             >
               <h2
-                className={`partnerships-heading mb-4 sm:mb-6 font-[DM_Sans] text-[#0F1114] font-bold leading-tight text-[64px] ${isVisible.content ? 'partner-blur-reveal' : 'opacity-0'}`}
+                className={`partnerships-heading mb-4 sm:mb-5 font-[DM_Sans] text-[#0F1114] font-bold leading-tight text-[46px] ${isVisible.content ? 'partner-blur-reveal' : 'opacity-0'}`}
               >
                 Partnerships For <br className="hidden sm:block" />Impact
               </h2>
               <p
-                className={`partnerships-desc mb-4 sm:mb-6 font-[Lato] text-[#71717B] font-normal leading-relaxed text-[24px] ${isVisible.content ? 'partner-text-slide partner-text-slide-d1' : 'opacity-0'}`}
+                className={`partnerships-desc mb-4 sm:mb-5 font-[Lato] text-[#71717B] font-normal leading-relaxed text-[18px] ${isVisible.content ? 'partner-text-slide partner-text-slide-d1' : 'opacity-0'}`}
               >
                 At Skillzza, we believe that collaboration is the cornerstone of impactful change. By joining forces, we aim to bridge skill gaps and create a future-ready workforce.
               </p>
               <p
-                className={`partnerships-desc font-[Lato] text-[#71717B] font-normal leading-relaxed text-[24px] ${isVisible.content ? 'partner-text-slide partner-text-slide-d2' : 'opacity-0'}`}
+                className={`partnerships-desc font-[Lato] text-[#71717B] font-normal leading-relaxed text-[18px] ${isVisible.content ? 'partner-text-slide partner-text-slide-d2' : 'opacity-0'}`}
               >
                 Together, we can shape a world where education and skills are accessible to all, fostering innovation and sustainable growth.
               </p>
@@ -200,40 +200,40 @@ const Partnerships = () => {
             {/* Right — Cards */}
             <div
               ref={cardsRef}
-              className="flex-1 w-full max-w-[650px] mx-auto lg:mx-0 gap-x-[12px]"
+              className="flex-1 w-full max-w-[620px] mx-auto lg:mx-0 gap-x-[12px]"
             >
-              <div className="partner-cards-grid grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-x-14 gap-y-3 sm:gap-y-0">
+              <div className="partner-cards-grid grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-x-10 gap-y-3 sm:gap-y-0">
                 {cards.map((card, index) => (
                   <div
                     key={card.id}
                     onClick={() => { window.location.href = getRoutePath('/company/partnerships' + card.targetHash); }}
                     onMouseEnter={() => setHoveredCard(card.id)}
                     onMouseLeave={() => setHoveredCard(null)}
-                    className={`partner-card-item partner-card-interactive cursor-pointer flex flex-col justify-start p-5 sm:p-6 lg:p-7 h-auto sm:h-[260px] ${index === 1 || index === 3 ? 'sm:mt-[60px] partner-card-offset' : ''} ${isVisible.cards ? `partner-card-pop partner-card-d${index + 1}` : 'opacity-0'}`}
+                    className={`partner-card-item partner-card-interactive cursor-pointer flex flex-col justify-start p-4 sm:p-5 lg:p-6 h-auto sm:h-[196px] ${index === 1 || index === 3 ? 'sm:mt-[60px] partner-card-offset' : ''} ${isVisible.cards ? `partner-card-pop partner-card-d${index + 1}` : 'opacity-0'}`}
                     style={{
                       background: hoveredCard === card.id ? '#9268A8' : card.bgColor,
                       boxShadow: hoveredCard === card.id ? '0px 24px 50px rgba(146, 104, 168, 0.3)' : '0px 3px 6px #00000029',
                       borderRadius: index === 0 ? '8px' : '20px',
                     }}
                   >
-                    <div className="mb-3 sm:mb-4">
+                    <div className="mb-2 sm:mb-3">
                       <img
                         src={card.icon}
                         alt={card.title}
-                        className="partner-card-icon w-10 h-10 sm:w-11 sm:h-11"
+                        className="partner-card-icon w-9 h-9 sm:w-10 sm:h-10"
                         style={{
                           filter: hoveredCard === card.id ? 'brightness(0) invert(1)' : 'brightness(0) saturate(100%)',
                         }}
                       />
                     </div>
                     <h3
-                      className="mb-2 sm:mb-3 font-[DM_Sans] font-semibold leading-tight text-base sm:text-lg lg:text-xl transition-colors duration-300"
+                      className="mb-2 sm:mb-2 font-[DM_Sans] font-semibold leading-tight text-sm sm:text-base lg:text-[18px] transition-colors duration-300"
                       style={{ color: hoveredCard === card.id ? '#FFFFFF' : '#0F1114' }}
                     >
                       {card.title}
                     </h3>
                     <p
-                      className="font-[Lato] font-normal leading-normal text-sm sm:text-[15px] lg:text-base transition-colors duration-300"
+                      className="font-[Lato] font-normal leading-normal text-xs sm:text-[14px] lg:text-[15px] transition-colors duration-300"
                       style={{ color: hoveredCard === card.id ? '#FFFFFF' : '#71717B' }}
                     >
                       {card.description}

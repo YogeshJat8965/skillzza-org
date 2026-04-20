@@ -173,22 +173,86 @@ const Insights = ({ showHero = false, showContent = true }) => {
         /* ===== Fluid Responsive Overrides (Desktop/Tablet) ===== */
         @media (min-width: 768px) {
           .insights-heading {
-            font-size: clamp(32px, 4vw, 48px) !important;
+            font-size: clamp(30px, 3.2vw, 44px) !important;
+            margin-top: 10px !important;
+          }
+          .insights-view-btn {
+            margin-top: 10px !important;
+            margin-bottom: 28px !important;
+            height: 44px !important;
+            padding: 0 20px !important;
           }
           .insights-card-lg {
-            width: clamp(350px, 35vw, 505px) !important;
-            height: clamp(650px, 60vw, 861px) !important;
+            width: clamp(280px, 27vw, 370px) !important;
+            height: clamp(470px, 37vw, 560px) !important;
           }
           .insights-card-md {
             flex: 1;
             width: 100% !important; /* Reset inline width */
-            height: clamp(550px, 50vw, 776px) !important;
+            height: clamp(390px, 31vw, 480px) !important;
+          }
+          .insights-card-lg .insights-card-img {
+            height: 200px !important;
+          }
+          .insights-card-md .insights-card-img {
+            height: 190px !important;
+          }
+          .insights-card-lg > div:last-child,
+          .insights-card-md > div:last-child {
+            padding: 20px !important;
+          }
+          .insights-card-lg .insights-card-icon {
+            margin-top: 16px !important;
+            margin-bottom: 24px !important;
+          }
+          .insights-card-lg .insights-card-icon img {
+            width: 44px !important;
+            height: 44px !important;
+          }
+          .insights-card-md .insights-tag {
+            width: auto !important;
+            height: 40px !important;
+            padding: 0 18px !important;
+            font-size: 14px !important;
+            margin-top: 14px !important;
+            margin-bottom: 16px !important;
+          }
+          .insights-card-lg h3 {
+            font-size: 24px !important;
+            line-height: 1.3 !important;
+            padding-bottom: 16px !important;
+          }
+          .insights-card-md h3 {
+            font-size: 22px !important;
+            line-height: 1.25 !important;
+            padding-bottom: 14px !important;
           }
           .insights-podcast {
             width: 100% !important;
             height: auto !important;
-            min-height: 348px;
-            margin-top: 24px !important;
+            min-height: 230px;
+            margin-top: 16px !important;
+            padding: 22px 24px !important;
+            gap: 20px !important;
+          }
+          .insights-podcast .insights-tag {
+            width: auto !important;
+            height: 38px !important;
+            padding: 0 18px !important;
+            font-size: 14px !important;
+            margin-bottom: 18px !important;
+          }
+          .insights-podcast h3 {
+            font-size: 24px !important;
+            line-height: 1.25 !important;
+          }
+          .insights-podcast p {
+            font-size: 16px !important;
+            line-height: 1.55 !important;
+          }
+          .insights-podcast .insights-podcast-right img {
+            width: 72px !important;
+            height: 72px !important;
           }
         }
 
@@ -319,10 +383,10 @@ const Insights = ({ showHero = false, showContent = true }) => {
       )}
 
       {showContent && (
-      <section className="w-full bg-white py-12 md:py-20">
-        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 2xl:px-32">
+      <section className="w-full bg-white py-12 md:py-14">
+        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-24">
           {/* Main Content - 2 Columns on desktop, 1 column on mobile */}
-          <div className="flex flex-col lg:flex-row gap-6 md:gap-8 mb-6">
+          <div className="flex flex-col lg:flex-row gap-6 md:gap-6 mb-4">
             {/* Left Column - Heading + Button + Purple Card */}
             <div className="w-full lg:w-auto">
               {/* Heading */}
@@ -461,9 +525,9 @@ const Insights = ({ showHero = false, showContent = true }) => {
             </div>
 
             {/* Right Column - Top (2 cards) and Bottom (Podcast) */}
-            <div className="flex-1 flex flex-col gap-4 md:gap-6">
+            <div className="flex-1 flex flex-col gap-4 md:gap-5">
               {/* Row for 2 side-by-side cards */}
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 w-full">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-5 w-full">
                 {/* Card 2 - AI Talent Report (Robot - Beige) */}
                 <div
                 ref={card2Ref}

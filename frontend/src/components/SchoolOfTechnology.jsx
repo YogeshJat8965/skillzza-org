@@ -216,8 +216,8 @@ const SchoolOfTechnology = () => {
               className={`sot-image ${isVisible.image ? 'animate-slide-in-left' : 'opacity-0'}`}
               style={{
                 left: '0px',
-                width: '650px',
-                height: '665px',
+                width: '600px',
+                height: '615px',
                 background: `transparent url(${getAssetPath('/img/Group%2037833.png')}) 0% 0% no-repeat padding-box`,
                 backgroundSize: 'contain',
                 opacity: 1,
@@ -233,7 +233,7 @@ const SchoolOfTechnology = () => {
                 className={`sot-heading mb-4 ${isVisible.heading ? 'animate-fade-in-right' : 'opacity-0'}`}
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '48px',
+                  fontSize: '42px',
                   fontWeight: 700,
                   lineHeight: '1.2',
                   color: '#0F1114',
@@ -354,21 +354,6 @@ const SchoolOfTechnology = () => {
                   }}
                 >
                   Design Thinking
-                </div>
-                <div
-                  onClick={() => setShowPopup(true)}
-                  className="sot-tag cursor-pointer hover:opacity-80 transition-opacity"
-                  style={{
-                    background: '#D4EDFA',
-                    borderRadius: '25px',
-                    padding: '12px 24px',
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '16px',
-                    fontWeight: 500,
-                    color: '#0F1114',
-                  }}
-                >
-                  EV & E-Mobility
                 </div>
               </div>
             </div>

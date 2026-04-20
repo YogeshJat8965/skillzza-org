@@ -19,24 +19,24 @@ const PartnerForm = () => {
       className="w-full relative overflow-hidden bg-white bg-cover bg-center"
       style={{ backgroundImage: getBackgroundImageUrl('/img/Group%2037835.png') }}
     >
-      <div className="max-w-[1920px] mx-auto flex flex-col lg:flex-row items-center justify-between py-10 sm:py-16 md:py-20 lg:py-24 xl:py-32">
+      <div className="max-w-[1920px] mx-auto flex flex-col lg:flex-row items-center justify-between py-6 sm:py-10 md:py-12 lg:py-14 xl:py-16">
         {/* Left — Image (constrained on mobile) */}
         <div className="w-full lg:w-1/2 xl:w-[55%] flex justify-start mb-8 lg:mb-0">
           <img
             src={getAssetPath('/img/businesspeople-having-discussion-office.png')}
             alt="Business meeting"
-            className="w-full h-auto max-w-full lg:max-w-[900px] object-contain rounded-r-2xl lg:rounded-r-3xl pr-4 lg:pr-8"
+            className="w-full h-auto max-w-full lg:max-w-[820px] object-contain rounded-r-2xl lg:rounded-r-3xl pr-4 lg:pr-8"
           />
         </div>
 
         {/* Right — Form */}
         <div className="w-full lg:w-1/2 xl:w-[45%] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 flex flex-col justify-center">
-          <h2 className="mb-4 sm:mb-6 font-[DM_Sans] text-[#0F1114] font-medium leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px]">
+          <h2 className="mb-4 sm:mb-5 font-[DM_Sans] text-[#0F1114] font-medium leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[52px]">
             Partner with us<br />
             To make a Difference
           </h2>
 
-          <p className="mb-6 sm:mb-8 md:mb-12 font-[Lato] text-[#414040] font-normal leading-relaxed text-base sm:text-lg md:text-xl lg:text-2xl max-w-[440px]">
+          <p className="mb-6 sm:mb-7 md:mb-8 font-[Lato] text-[#414040] font-normal leading-relaxed text-base sm:text-lg md:text-[18px] lg:text-[20px] max-w-[440px]">
             Connect with our industry experts for a personalised consultation. Let's explore how our solutions can revolutionise your growth.
           </p>
 

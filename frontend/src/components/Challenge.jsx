@@ -230,15 +230,36 @@ const Challenge = () => {
         /* Large desktops (1800px+): use original fixed sizes */
         @media (min-width: 1800px) {
           .challenge-image {
-            width: 778px !important;
-            height: 756px !important;
+            width: 730px !important;
+            height: 708px !important;
+            margin-left: 14px !important;
           }
           .challenge-cards-grid {
-            width: 998px !important;
+            width: 930px !important;
+            column-gap: 20px !important;
+            row-gap: 20px !important;
           }
           .challenge-card {
-            width: 487px !important;
-            height: 366px !important;
+            width: 455px !important;
+            height: 320px !important;
+            padding: 18px 24px !important;
+            min-height: 0 !important;
+          }
+          .challenge-card-percent {
+            font-size: 68px !important;
+            margin-bottom: 6px !important;
+          }
+          .challenge-card-title {
+            font-size: 26px !important;
+            margin-bottom: 10px !important;
+            line-height: 1.14 !important;
+          }
+          .challenge-card-desc {
+            font-size: 16px !important;
+            line-height: 1.34 !important;
+          }
+          .challenge-cards-grid > .challenge-card:nth-child(odd) {
+            margin-left: 30px !important;
           }
         }
 
@@ -294,6 +315,64 @@ const Challenge = () => {
           }
         }
 
+        /* Desktop compaction: keep same visual layout but fit in one viewport */
+        @media (min-width: 1024px) and (max-width: 1799px) {
+          .challenge-wrapper-section {
+            padding-top: clamp(18px, 1.8vw, 32px) !important;
+          }
+          .challenge-heading {
+            font-size: clamp(26px, 2vw, 36px) !important;
+            margin-bottom: clamp(8px, 0.7vw, 12px) !important;
+          }
+          .challenge-desc {
+            font-size: clamp(15.5px, 0.95vw, 16px) !important;
+            line-height: 1.45 !important;
+          }
+          .challenge-heading-wrap {
+            margin-bottom: clamp(12px, 1.1vw, 22px) !important;
+          }
+          .challenge-content-grid {
+            gap: clamp(10px, 0.8vw, 14px) !important;
+            --challenge-card-h: clamp(250px, 15.5vw, 290px);
+            --challenge-card-gap: clamp(12px, 0.9vw, 16px);
+            align-items: stretch !important;
+          }
+          .challenge-cards-grid {
+            width: clamp(900px, 58vw, 1080px) !important;
+            flex: 0 1 auto !important;
+            column-gap: clamp(90px, 6.5vw, 160px) !important;
+            row-gap: var(--challenge-card-gap) !important;
+            margin-right: auto !important;
+          }
+          .challenge-image {
+            width: clamp(530px, 32.5vw, 650px) !important;
+            height: calc((var(--challenge-card-h) * 2) + var(--challenge-card-gap)) !important;
+            max-height: none !important;
+            margin-left: clamp(8px, 0.75vw, 12px) !important;
+            align-self: stretch !important;
+          }
+          .challenge-card {
+            padding: clamp(14px, 1vw, 20px) clamp(16px, 1.2vw, 24px) !important;
+            min-height: var(--challenge-card-h) !important;
+          }
+          .challenge-card-percent {
+            font-size: clamp(56px, 3.9vw, 72px) !important;
+            margin-bottom: clamp(2px, 0.15vw, 3px) !important;
+          }
+          .challenge-card-title {
+            font-size: clamp(24px, 1.7vw, 32px) !important;
+            margin-bottom: clamp(4px, 0.35vw, 8px) !important;
+            line-height: 1.15 !important;
+          }
+          .challenge-card-desc {
+            font-size: clamp(15.5px, 1.02vw, 18px) !important;
+            line-height: 1.4 !important;
+          }
+          .challenge-cards-grid > .challenge-card:nth-child(odd) {
+            margin-left: clamp(60px, 2vw, 48px) !important;
+          }
+        }
+
         /* Mobile overrides for Challenge */
         @media (max-width: 767px) {
           .challenge-heading {
@@ -342,7 +421,7 @@ const Challenge = () => {
           .challenge-wrapper-section {
             /* Adjust THESE TWO values to move the section UP or DOWN */
             /* A more negative margin-top (e.g. -200px) pulls it UP higher over the hero section */
-margin-top: 20px !important;            margin-top: -30px !important;
+            margin-top: -30px !important;
             /* Match the padding-top so the text inside doesn't hit the ceiling */
             padding-top: 80px !important;
           }
@@ -356,7 +435,7 @@ margin-top: 20px !important;            margin-top: -30px !important;
       `}</style>
       <section
         ref={sectionRef}
-        className="w-full bg-white pb-16 lg:pb-20 relative challenge-wrapper-section"
+        className="w-full bg-white pb-8 lg:pb-12 relative challenge-wrapper-section"
         style={{
           zIndex: 10,
           overflow: 'hidden',
@@ -367,13 +446,13 @@ margin-top: 20px !important;            margin-top: -30px !important;
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 2xl:px-32">
           <div
             ref={headingRef}
-            className={`text-center mb-12 lg:mb-16 ${isVisible.heading ? 'challenge-blur-reveal' : 'opacity-0'}`}
+            className={`challenge-heading-wrap text-center mb-12 lg:mb-16 ${isVisible.heading ? 'challenge-blur-reveal' : 'opacity-0'}`}
           >
             <h2
               className="challenge-heading"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: '48px',
+                fontSize: '44px',
                 fontWeight: 700,
                 lineHeight: '1.2',
                 color: '#0F1114',

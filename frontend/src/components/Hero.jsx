@@ -228,6 +228,11 @@ const Hero = () => {
           animation: shimmer 3s infinite;
         }
 
+        .hero-heading-line {
+          display: block;
+          white-space: nowrap;
+        }
+
         /* ===== Hero fluid responsive overrides ===== */
         @media (min-width: 768px) and (max-width: 1799px) {
           .hero-section {
@@ -237,19 +242,19 @@ const Hero = () => {
             padding-bottom: 0px !important;
           }
           .hero-heading {
-            font-size: clamp(28px, 3.2vw, 70px) !important;
-            margin-top: clamp(-220px, -12vw, -120px) !important;
+            font-size: clamp(24px, 2.8vw, 52px) !important;
+            margin-top: clamp(-170px, -9.5vw, -92px) !important;
           }
           .hero-subheading {
-            font-size: clamp(14px, 1.3vw, 24px) !important;
+            font-size: clamp(13px, 1.1vw, 19px) !important;
           }
           .hero-image-wrapper {
             flex: 0 0 50% !important;
             max-width: 50% !important;
           }
           .hero-image {
-            width: clamp(400px, 43vw, 918px) !important;
-            height: clamp(400px, 43vw, 918px) !important;
+            width: clamp(360px, 39vw, 760px) !important;
+            height: clamp(360px, 39vw, 760px) !important;
           }
           .hero-scroll-strip {
             margin-top: -80px !important;
@@ -301,15 +306,16 @@ const Hero = () => {
                 className={`hero-heading mb-6 ${isLoaded ? 'animate-slide-in-left' : 'opacity-0'}`}
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize: isMobile ? '32px' : 'clamp(32px, 3.8vw, 70px)',
+                  fontSize: isMobile ? 'clamp(18px, 5.4vw, 28px)' : 'clamp(24px, 2.8vw, 52px)',
                   fontWeight: 700,
-                  lineHeight: isMobile ? '1.15' : '1.2',
+                  lineHeight: isMobile ? '1.2' : '1.16',
                   color: '#0F1114',
                   animationDelay: '0.2s',
                   marginTop: isMobile ? '20px' : 'clamp(-120px, -10vw, -194px)',
                 }}
               >
-                The AI-Powered Career Engine for Tomorrow's Talent
+                <span className="hero-heading-line">The AI-Powered Career</span>
+                <span className="hero-heading-line">Engine for Tomorrow's Talent</span>
               </h1>
 
               {/* Subheading */}
@@ -317,7 +323,7 @@ const Hero = () => {
                 className={`hero-subheading mb-8 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}
                 style={{
                   fontFamily: "'Lato', sans-serif",
-                  fontSize: isMobile ? '16px' : 'clamp(16px, 1.5vw, 24px)',
+                  fontSize: isMobile ? '16px' : 'clamp(14px, 1.2vw, 20px)',
                   fontWeight: 400,
                   lineHeight: '1.6',
                   color: '#71717B',
@@ -339,11 +345,11 @@ const Hero = () => {
                   style={{
                     background: 'linear-gradient(90deg, #CF2C2E 0%, #C72C2E 54.7%, #FBA93E 100%)',
                     borderRadius: '8px',
-                    padding: isMobile ? '14px 28px' : '18px 40px',
+                    padding: isMobile ? '14px 28px' : '16px 34px',
                     border: 'none',
                     cursor: 'pointer',
                     fontFamily: "'DM Sans', sans-serif",
-                    fontSize: isMobile ? '14px' : '15px',
+                    fontSize: isMobile ? '14px' : '14px',
                     fontWeight: 700,
                     color: '#fff',
                   }}
@@ -358,11 +364,11 @@ const Hero = () => {
                   style={{
                     background: '#ffffff',
                     borderRadius: '8px',
-                    padding: isMobile ? '14px 28px' : '18px 40px',
+                    padding: isMobile ? '14px 28px' : '16px 34px',
                     border: '1px solid #CC2B2E',
                     cursor: 'pointer',
                     fontFamily: "'Lato', sans-serif",
-                    fontSize: isMobile ? '14px' : '16px',
+                    fontSize: isMobile ? '14px' : '15px',
                     fontWeight: 600,
                     color: '#CA2C2E',
                   }}

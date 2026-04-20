@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { getAssetPath, getRoutePath } from '../utils/assets';
 
 const SolutionSkillStudio = () => {
@@ -54,7 +54,7 @@ const SolutionSkillStudio = () => {
         return () => observer.disconnect();
     }, []);
 
-    const tabs = [
+    const tabs = useMemo(() => [
         {
             label: 'The potential Meter',
             title: 'The Potential Meter',
@@ -125,9 +125,21 @@ const SolutionSkillStudio = () => {
             cta2: 'Post a Role',
             image: getAssetPath('/improvements/futuristic-technology-concept (1).jpg'),
         },
-    ];
+    ], []);
 
     const activeData = tabs[activeTab];
+
+    // Warm up current and next tab images so tab switches feel instant.
+    useEffect(() => {
+        const preload = (src) => {
+            const img = new Image();
+            img.decoding = 'async';
+            img.src = src;
+        };
+
+        preload(tabs[activeTab].image);
+        preload(tabs[(activeTab + 1) % tabs.length].image);
+    }, [activeTab, tabs]);
 
     // Tab background colors (inactive state)
     const tabBgColors = [
@@ -253,7 +265,7 @@ const SolutionSkillStudio = () => {
                         color: '#0F1114',
                     }}
                 >
-                    The Solution–Skill Studio
+                    The Solution
                 </h2>
             </div>
 
@@ -346,7 +358,7 @@ const SolutionSkillStudio = () => {
                                     style={{
                                         fontFamily: "'DM Sans', sans-serif",
                                         fontSize: 'clamp(14px, 1.5vw, 16px)',
-                                        fontWeight: 600,
+                                        fontWeight: 400,
                                         lineHeight: 1.6,
                                         color: '#4B5563',
                                     }}
@@ -413,6 +425,9 @@ const SolutionSkillStudio = () => {
                             src={activeData.image}
                             alt={activeData.title}
                             className="w-full h-auto"
+                            loading="eager"
+                            decoding="async"
+                            fetchPriority="high"
                             style={{
                                 maxWidth: '560px',
                                 borderRadius: '16px',

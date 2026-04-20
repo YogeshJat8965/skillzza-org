@@ -120,7 +120,7 @@ const SkillzzaEcosystem = () => {
             color: '#0F1114',
           }}
         >
-          Skillzza Ecosystem
+          Skill Ecosystem
         </h2>
         <p
           style={{
@@ -139,7 +139,7 @@ const SkillzzaEcosystem = () => {
       {/* Ecosystem Diagram - Using the actual design SVG */}
       <div 
         ref={diagramRef}
-        className={`max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 ${isVisible.diagram ? 'animate-slide-in-from-bottom' : 'opacity-0'}`}
+        className={`max-w-[1260px] mx-auto px-4 sm:px-8 lg:px-12 ${isVisible.diagram ? 'animate-slide-in-from-bottom' : 'opacity-0'}`}
         style={{ position: 'relative', zIndex: 1 }}
       >
         <img
@@ -147,7 +147,10 @@ const SkillzzaEcosystem = () => {
           alt="Skillzza Ecosystem diagram showing five interconnected platforms: The Potential Meter (AI Skill Engine), Xperience Platform (Immersive Learning Labs), Talent Transformation (Career Mobility Pipeline), AI HackNex (Talent Marketplace), and Hirenest (Career Mobility Pipeline). Bottom process flow shows Assessment, Mentoring, Simulations, Project Showcase, and Get Hired."
           className="w-full h-auto"
           style={{
+            width: 'min(100%, 1160px)',
             maxWidth: '100%',
+            margin: '0 auto',
+            display: 'block',
           }}
         />
       </div>

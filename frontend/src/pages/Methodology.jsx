@@ -302,7 +302,7 @@ const ImplementationStepper = () => {
 
       <div className="imp-wrap">
         {/* Title */}
-        <h2 ref={titleRef} className="imp-title meth-reveal meth-fade-up">Our Methodology</h2>
+        <h2 ref={titleRef} className="imp-title meth-reveal meth-fade-up">Our Approach</h2>
 
         {/* Stepper */}
         <div ref={stepperRef} className="imp-stepper meth-reveal meth-fade-up meth-delay-1">
