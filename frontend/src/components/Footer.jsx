@@ -15,6 +15,8 @@ const footerSections = [
     links: [
       { name: 'The Potential Meter AI', href: '/product/potential-meter' },
       { name: 'Xperience Platform', href: '/product/xperience-platform' },
+      { name: 'Talent Transformation', href: '/product/talent-intelligence' },
+      { name: 'AI Hacknex', href: '/product/ai-hacknex' },
       { name: 'Hirenest', href: '/product/hirenest' },
       { name: 'Agentic AI', href: '/product/ai-hacknex' },
       { name: 'Skill Persona', href: '/product/ai-hacknex' },

@@ -230,14 +230,14 @@ const SolutionSkillStudio = () => {
 
                 @media (max-width: 767px) {
                   .sss-tab-btn {
-                    font-size: 12px !important;
+                                        font-size: 11px !important;
                     padding: 8px 14px !important;
                   }
                   .sss-content-box {
                     padding: 20px 16px !important;
                   }
                   .sss-title {
-                    font-size: 24px !important;
+                                        font-size: 21px !important;
                   }
                   .sss-subtitle {
                     font-size: 14px !important;
@@ -289,7 +289,7 @@ const SolutionSkillStudio = () => {
                             className={`sss-tab-btn tab-btn flex-1 text-center transition-all duration-300 ${activeTab === index ? 'tab-btn-active' : ''} ${scaledButton === index ? 'tab-btn-scaled' : ''}`}
                             style={{
                                 fontFamily: "'DM Sans', sans-serif",
-                                fontSize: 'clamp(13px, 1.5vw, 16px)',
+                                fontSize: 'clamp(12px, 1.1vw, 14px)',
                                 fontWeight: 600,
                                 padding: '10px 10px',
                                 minWidth: '120px',
@@ -327,7 +327,7 @@ const SolutionSkillStudio = () => {
                             className="sss-title mb-3"
                             style={{
                                 fontFamily: "'DM Sans', sans-serif",
-                                fontSize: 'clamp(28px, 3.5vw, 40px)',
+                                fontSize: 'clamp(22px, 2.4vw, 32px)',
                                 fontWeight: 700,
                                 lineHeight: 1.2,
                                 color: '#5B2D8E',

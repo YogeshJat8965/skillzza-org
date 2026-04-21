@@ -594,7 +594,7 @@ const OurMethodology = () => {
           Transforming Potential Through<br />Science-Backed Learning
         </h2> */}
         <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.75', maxWidth: '100%', margin: '0 auto 40px' }}>
-          At Skillzza, we believe that effective skill development requires more than traditional training approaches. Our methodology integrates cognitive science, <br /> industry insights, and adaptive technology to create learning experiences that deliver measurable, lasting results.
+          We believe that effective skill development requires more than traditional training approaches. Our methodology integrates cognitive science, <br /> industry insights, and adaptive technology to create learning experiences that deliver measurable, lasting results.
         </p>
         <div className="method-stat-pills" style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', justifyContent: 'center', width: '100%', margin: '0 auto' }}>
           {['85%+ Skill Acquisition', '90%+ Learner Satisfaction', '75%+ Career Advancement', '95%+ Employer Satisfaction'].map((stat, i) => (

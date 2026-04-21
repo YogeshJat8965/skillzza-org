@@ -163,7 +163,7 @@ function AboutPage() {
         }
 
         .about-overview__title {
-          font-size: clamp(24px, 3vw, 32px);
+          font-size: clamp(22px, 2.7vw, 30px);
           font-weight: 400;
           line-height: 1.4;
           color: #2c2c2c;

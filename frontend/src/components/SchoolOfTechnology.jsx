@@ -190,14 +190,14 @@ const SchoolOfTechnology = () => {
             font-size: 28px !important;
           }
           .sot-subheading {
-            font-size: 18px !important;
+            font-size: 17px !important;
           }
           .sot-description {
-            font-size: 15px !important;
+            font-size: 14px !important;
             margin-bottom: 24px !important;
           }
           .sot-expertise-heading {
-            font-size: 20px !important;
+            font-size: 19px !important;
           }
           .sot-tag {
             padding: 8px 16px !important;
@@ -248,7 +248,7 @@ const SchoolOfTechnology = () => {
                 className={`sot-subheading mb-6 ${isVisible.subheading ? 'animate-fade-in-right delay-100' : 'opacity-0'}`}
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '24px',
+                  fontSize: '22px',
                   fontWeight: 600,
                   lineHeight: '1.2',
                   color: '#71717B',
@@ -263,7 +263,7 @@ const SchoolOfTechnology = () => {
                 className={`sot-description mb-12 ${isVisible.description ? 'animate-fade-in-up delay-200' : 'opacity-0'}`}
                 style={{
                   fontFamily: "'Lato', sans-serif",
-                  fontSize: '18px',
+                  fontSize: '17px',
                   fontWeight: 400,
                   lineHeight: '1.6',
                   color: '#71717B',
@@ -278,7 +278,7 @@ const SchoolOfTechnology = () => {
                 className={`sot-expertise-heading mb-6 ${isVisible.expertiseHeading ? 'animate-fade-in-right delay-300' : 'opacity-0'}`}
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '24px',
+                  fontSize: '22px',
                   fontWeight: 700,
                   lineHeight: '1.2',
                   color: '#0F1114',

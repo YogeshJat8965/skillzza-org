@@ -211,11 +211,11 @@ const WhatWeDo = () => {
         overflow: 'hidden',
       }}>
         <h1 style={{
-          fontSize: '38px', fontWeight: '700', color: '#0f172a',
+          fontSize: '34px', fontWeight: '700', color: '#0f172a',
           lineHeight: '1.25', margin: '0 auto 18px', maxWidth: '760px',
           letterSpacing: '-0.3px',
         }} className="wwd-reveal wwd-fade-up">
-          Bridging Education and Employment with Role-Ready Skills
+          Bridging Education and Employment with <br /> Role-Ready Skills
         </h1>
 
         <p style={{
