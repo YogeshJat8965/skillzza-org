@@ -95,8 +95,8 @@ const Footer = () => {
         {/* Outer grid: brand (left) + links (right) */}
         <div className="footer-outer" style={{
           display: 'grid',
-          gridTemplateColumns: '280px 1fr',
-          columnGap: 80,
+          gridTemplateColumns: '330px 1fr',
+          columnGap: 36,
           alignItems: 'start',
         }}>
 
@@ -164,8 +164,8 @@ const Footer = () => {
             columnGap: 24,
             rowGap: 0,
             alignItems: 'start',
-            marginLeft: '110px',
-            paddingRight: '20px',
+            marginLeft: '0px',
+            paddingRight: '0px',
           }}>
             {footerSections.map((section) => (
               <div key={section.title}>
