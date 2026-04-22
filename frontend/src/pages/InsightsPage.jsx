@@ -1,22 +1,62 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import Insights from '../components/Insights'
+import { skillUnpluggedEpisodes } from '../data/skillUnpluggedEpisodes'
+import { skillzzaLiveSessions } from '../data/skillzzaLiveSessions'
 
 
-function ExpandableText({ text, limit = 45 }) {
+function ExpandableText({ text, limit = 155, onReadMore, forceReadMore = false }) {
   const [isExpanded, setIsExpanded] = React.useState(false);
   if (!text) return null;
-  if (text.length <= limit) return <>{text}</>;
+  const hasOverflow = text.length > limit;
+  const shouldShowReadMore = forceReadMore || hasOverflow;
+
+  if (!shouldShowReadMore) return <>{text}</>;
+
+  const handleReadMore = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (onReadMore) {
+      onReadMore();
+      return;
+    }
+
+    setIsExpanded(true);
+  };
+
+  const handleReadLess = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsExpanded(false);
+  };
+
   return (
-    <>
-      {isExpanded ? text : text.substring(0, limit) + '...'}
-      <button 
-        onClick={(e) => { e.preventDefault(); setIsExpanded(!isExpanded); }}
-        className="text-[#E11313] hover:underline font-bold ml-1 text-[14px]"
+    <span className="relative block">
+      <span
+        className={isExpanded ? '' : 'insight-three-line-clamp pr-[86px]'}
       >
-        {isExpanded ? "Read less" : "Read more"}
-      </button>
-    </>
+        {text}
+      </span>
+
+      {!isExpanded && (
+        <button
+          onClick={handleReadMore}
+          className="absolute bottom-0 right-0 bg-white pl-2 text-[#E11313] hover:underline font-bold text-[14px] leading-[1.6]"
+        >
+          Read more
+        </button>
+      )}
+
+      {isExpanded && !onReadMore && (
+        <button
+          onClick={handleReadLess}
+          className="mt-1 block text-[#E11313] hover:underline font-bold text-[14px]"
+        >
+          Read less
+        </button>
+      )}
+    </span>
   );
 }
 
@@ -52,6 +92,22 @@ function InsightsPage() {
       case "Skillzza Live": navigate('/insights/skillzza-live', { replace: false }); break;
       default: navigate('/insights');
     }
+  };
+
+  const openSkillBlueprintCaseStudy = (slug) => {
+    navigate(`/insights/skill-blueprint/${slug}`, { replace: false });
+  };
+
+  const openSkillDigestArticle = (slug) => {
+    navigate(`/insights/skill-digest/${slug}`, { replace: false });
+  };
+
+  const openSkillUnpluggedEpisode = (slug) => {
+    navigate(`/insights/skill-unplugged-podcast/${slug}`, { replace: false });
+  };
+
+  const openSkillzzaLiveSession = (slug) => {
+    navigate(`/insights/skillzza-live/${slug}`, { replace: false });
   };
 
   const insightTabs = [
@@ -157,42 +213,34 @@ function InsightsPage() {
                 {
                   id: 1,
                   tag: "SKILL BLUEPRINT",
-                  title: "Redefining Student Success",
-                  desc: "How AI-Based Potential Mapping Helped a University Identify Hidden Talent Beyond Grades",
+                  slug: 'ai-powered-reskilling-initiatives',
+                  title: "AI-Powered Reskilling Initiatives",
+                  subtitle: "Transforming Workforce Agility Through Intelligent Skill Gap Analysis",
+                  desc: "In today's rapidly evolving business landscape, organizations face an unprecedented challenge: the skills their workforce possessed yesterday may not be sufficient for tomorrow's demands. Traditional approaches to identifying skill gaps often rely on annual reviews, manager assessments, and broad industry reports-methods that are slow, subjective, and frequently outdated by the time action is taken.",
                   image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                   id: 2,
                   tag: "SKILL BLUEPRINT",
-                  title: "From Scores to Skills",
-                  desc: "A Case Study on AI-Powered Assessments Driving Inclusive Hiring",
+                  slug: 'ai-in-personalized-learning-paths',
+                  title: "AI in Personalized Learning Paths",
+                  subtitle: "Creating Custom Learning Journeys for Individual Career Growth",
+                  desc: "Traditional one-size-fits-all training programs are giving way to hyper-personalized learning experiences powered by AI. These systems recognize that every learner has unique strengths, preferences, career goals, and learning patterns-and adapt accordingly.",
                   image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 3,
-                  tag: "SKILL BLUEPRINT",
-                  title: "Unlocking Career Pathways",
-                  desc: "How AI Potential Meters Are Guiding Students Toward Future-Ready Professions",
-                  image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 4,
-                  tag: "SKILL BLUEPRINT",
-                  title: "Learning by Doing",
-                  desc: "How an AI Xperience Platform Transformed Internship Readiness in 8 Weeks",
-                  image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 5,
-                  tag: "SKILL BLUEPRINT",
-                  title: "From Theory to Simulation",
-                  desc: "Building Industry-Ready Talent Through AI-Powered Role-Play Labs",
-                  image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 }
               ].map((card) => (
                 <div 
                   key={card.id} 
-                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1"
+                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1 cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openSkillBlueprintCaseStudy(card.slug)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      openSkillBlueprintCaseStudy(card.slug);
+                    }
+                  }}
                 >
                   {/* Card Image */}
                   <div className="w-full h-[250px] overflow-hidden relative">
@@ -216,9 +264,20 @@ function InsightsPage() {
                     <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
                       {card.title}
                     </h3>
+
+                    {card.subtitle && (
+                      <p className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[1.5] text-[#374151] mb-4">
+                        {card.subtitle}
+                      </p>
+                    )}
                     
-                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
-                      <ExpandableText text={card.desc} />
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-4">
+                      <ExpandableText
+                        text={card.desc}
+                        limit={210}
+                        forceReadMore={true}
+                        onReadMore={() => openSkillBlueprintCaseStudy(card.slug)}
+                      />
                     </div>
                   </div>
                 </div>
@@ -233,41 +292,60 @@ function InsightsPage() {
                   id: 1,
                   tag: "THE SKILL DIGEST",
                   title: "Beyond Grades",
-                  desc: "How AI-Powered Potential Meters are Redefining Talent Discovery",
+                  slug: 'beyond-grades-ai-potential-meters',
+                  subtitle: 'How AI-Powered Potential Meters are Redefining Talent Discovery',
+                  desc: 'For decades, grades and test scores have been the primary indicators of student potential. But as industries evolve, these traditional benchmarks are proving insufficient to capture the true spectrum of human capability.',
                   image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                   id: 2,
                   tag: "THE SKILL DIGEST",
-                  title: "From Skill Gaps to Skill Maps",
-                  desc: "The Future of Adaptive Career Assessment with AI",
+                  title: "Immersive Learning",
+                  slug: 'immersive-learning-ai-xperience-platforms',
+                  subtitle: 'How AI-Powered Experience Platforms are Shaping Future-Ready Talent',
+                  desc: 'Classroom learning is no longer enough. Today\'s students and professionals need hands-on, immersive experiences that mirror the challenges of real-world workplaces.',
                   image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                   id: 3,
                   tag: "THE SKILL DIGEST",
-                  title: "Immersive Learning",
-                  desc: "How AI-Powered Experience Platforms are Shaping Future-Ready Talent",
+                  title: "Campus Hiring 2.0",
+                  slug: 'campus-hiring-2-ai-marketplaces',
+                  subtitle: 'How AI Marketplaces are Matching Job-Ready Talent with Employers',
+                  desc: 'Campus recruitment is high-stakes for both students and employers, but traditional methods are often inefficient and biased. AI-powered hiring marketplaces are changing the model.',
                   image: "https://images.unsplash.com/photo-1535905557558-afc4877a26fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                   id: 4,
                   tag: "THE SKILL DIGEST",
-                  title: "Campus Hiring 2.0",
-                  desc: "How AI Marketplaces are Matching Job-Ready Talent with Employers",
+                  title: "From Workforce to Skillforce",
+                  slug: 'from-workforce-to-skillforce-ai-transformation',
+                  subtitle: 'How AI is Driving the Next Wave of Talent Transformation',
+                  desc: 'Automation, AI, and digital transformation are reshaping roles across industries. The next frontier is a skillforce built on continuous learning and adaptability.',
                   image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                   id: 5,
                   tag: "THE SKILL DIGEST",
-                  title: "Talent Transformation 2030",
-                  desc: "Preparing Human Potential for an AI-Driven Future",
+                  title: "AI Hackathons as Innovation Labs",
+                  slug: 'ai-hackathons-new-innovation-labs',
+                  subtitle: 'Crowdsourcing the Future of Tech',
+                  desc: 'Innovation is moving from closed R&D teams to open hackathon ecosystems where coders, builders, and domain experts co-create high-impact solutions rapidly.',
                   image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 }
               ].map((card) => (
                 <div 
                   key={card.id} 
-                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1"
+                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1 cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openSkillDigestArticle(card.slug)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      openSkillDigestArticle(card.slug);
+                    }
+                  }}
                 >
                   <div className="w-full h-[250px] overflow-hidden relative">
                     <img 
@@ -288,9 +366,20 @@ function InsightsPage() {
                     <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
                       {card.title}
                     </h3>
+
+                    {card.subtitle && (
+                      <p className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[1.5] text-[#374151] mb-4">
+                        {card.subtitle}
+                      </p>
+                    )}
                     
-                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
-                      <ExpandableText text={card.desc} />
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-4">
+                      <ExpandableText
+                        text={card.desc}
+                        limit={190}
+                        forceReadMore={true}
+                        onReadMore={() => openSkillDigestArticle(card.slug)}
+                      />
                     </div>
                   </div>
                 </div>
@@ -361,8 +450,8 @@ function InsightsPage() {
                       {card.title}
                     </h3>
                     
-                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
-                      <ExpandableText text={card.desc} />
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6">
+                      <ExpandableText text={card.desc} forceReadMore={true} />
                     </div>
                   </div>
                 </div>
@@ -372,46 +461,19 @@ function InsightsPage() {
 
           {activeTab === 'The Skill Unplugged Podcast Series (3R )' && (
             <div className="flex flex-wrap justify-center gap-8">
-              {[
-                {
-                  id: 1,
-                  tag: "PODCAST",
-                  title: "From AI Awareness to AI Mastery",
-                  desc: "Tune in as we discuss moving past the AI hype cycle and taking actionable steps to deeply integrate AI tools into professional workflows.",
-                  image: "https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 2,
-                  tag: "PODCAST",
-                  title: "Prompt Engineering as a Core Career Skill",
-                  desc: "Experts break down why communicating effectively with LLMs is becoming the most sought-after soft skill of the decade.",
-                  image: "https://images.unsplash.com/photo-1593697821252-0c9137d9fc45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 3,
-                  tag: "PODCAST",
-                  title: "Upskilling for the AI-Augmented Workplace",
-                  desc: "Join our guest speakers to discover which legacy skills are fading and which human-centric skills are becoming more valuable.",
-                  image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 4,
-                  tag: "PODCAST",
-                  title: "Reskilling at Scale",
-                  desc: "How Organizations Are Preparing for AI",
-                  image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 5,
-                  tag: "PODCAST",
-                  title: "The Rise of AI Generalists vs Specialists",
-                  desc: "A debate on the future of work: should you specialize in narrow AI implementation or build broad horizontal knowledge across systems?",
-                  image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                }
-              ].map((card) => (
+              {skillUnpluggedEpisodes.map((card) => (
                 <div 
                   key={card.id} 
-                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1"
+                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1 cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openSkillUnpluggedEpisode(card.slug)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      openSkillUnpluggedEpisode(card.slug);
+                    }
+                  }}
                 >
                   <div className="w-full h-[250px] overflow-hidden relative">
                     <img 
@@ -432,9 +494,18 @@ function InsightsPage() {
                     <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
                       {card.title}
                     </h3>
+
+                    <p className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[1.5] text-[#374151] mb-4">
+                      {card.category}
+                    </p>
                     
-                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
-                      <ExpandableText text={card.desc} />
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6">
+                      <ExpandableText
+                        text={card.desc}
+                        limit={170}
+                        forceReadMore={true}
+                        onReadMore={() => openSkillUnpluggedEpisode(card.slug)}
+                      />
                     </div>
                   </div>
                 </div>
@@ -444,46 +515,19 @@ function InsightsPage() {
 
           {activeTab === 'Skillzza Live' && (
             <div className="flex flex-wrap justify-center gap-8">
-              {[
-                {
-                  id: 1,
-                  tag: "SKILLZZA LIVE",
-                  title: "How to Build a High-Income Skill Using AI",
-                  desc: "Learn actionable strategies in this comprehensive live session to monetize AI tools and rapidly build high-value freelance or corporate skills.",
-                  image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 2,
-                  tag: "SKILLZZA LIVE",
-                  title: "Live Workshop",
-                  desc: "Automate Your Daily Work with AI",
-                  image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 3,
-                  tag: "SKILLZZA LIVE",
-                  title: "Top AI Career Paths You Can Start Without Coding",
-                  desc: "Discover the fast-growing non-technical roles in the AI industry and the exact roadmap to transition into them today.",
-                  image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 4,
-                  tag: "SKILLZZA LIVE",
-                  title: "Create Content, Designs & Presentations Using AI (Live)",
-                  desc: "Watch our experts build marketing campaigns, graphics, and slide decks from scratch in real-time leveraging the latest generative models.",
-                  image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 5,
-                  tag: "SKILLZZA LIVE",
-                  title: "AI for Students & Professionals",
-                  desc: "Learn Smarter, Work Faster",
-                  image: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                }
-              ].map((card) => (
+              {skillzzaLiveSessions.map((card) => (
                 <div 
                   key={card.id} 
-                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1"
+                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1 cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openSkillzzaLiveSession(card.slug)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      openSkillzzaLiveSession(card.slug);
+                    }
+                  }}
                 >
                   <div className="w-full h-[250px] overflow-hidden relative">
                     <img 
@@ -504,9 +548,18 @@ function InsightsPage() {
                     <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
                       {card.title}
                     </h3>
+
+                    <p className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[1.5] text-[#374151] mb-4">
+                      {card.category}
+                    </p>
                     
-                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6 mt-auto">
-                      <ExpandableText text={card.desc} />
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6">
+                      <ExpandableText
+                        text={card.desc}
+                        limit={170}
+                        forceReadMore={true}
+                        onReadMore={() => openSkillzzaLiveSession(card.slug)}
+                      />
                     </div>
                   </div>
                 </div>
@@ -524,6 +577,14 @@ function InsightsPage() {
         .no-scrollbar {
           -ms-overflow-style: none; /* IE and Edge */
           scrollbar-width: none;    /* Firefox */
+        }
+
+        .insight-three-line-clamp {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          min-height: calc(1.6em * 3);
         }
 
         /* Smooth pill hover states (matching main red brand colors) */

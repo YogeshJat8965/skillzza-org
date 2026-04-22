@@ -41,6 +41,10 @@ import OurPathwayPage from './pages/OurPathwayPage'
 import AboutPage from './pages/AboutPage'
 import PartnerCollaborationPage from './pages/PartnerCollaborationPage'
 import InsightsPage from './pages/InsightsPage'
+import InsightCaseStudyPage from './pages/InsightCaseStudyPage'
+import SkillDigestArticlePage from './pages/SkillDigestArticlePage'
+import SkillUnpluggedEpisodePage from './pages/SkillUnpluggedEpisodePage'
+import SkillzzaLiveSessionPage from './pages/SkillzzaLiveSessionPage'
 import JobSimulationPage from './pages/JobSimulationPage'
 import XperiencePlatformPage from './pages/XperiencePlatformPage'
 import AIHackNexPage from './pages/AIHackNexPage'
@@ -107,10 +111,14 @@ export default function App() {
 
         <Route path="/insights" element={<InsightsPage />} />
         <Route path="/insights/skill-blueprint" element={<InsightsPage />} />
+        <Route path="/insights/skill-blueprint/:caseSlug" element={<InsightCaseStudyPage />} />
         <Route path="/insights/skill-digest" element={<InsightsPage />} />
+        <Route path="/insights/skill-digest/:digestSlug" element={<SkillDigestArticlePage />} />
         <Route path="/insights/ai-talent-research-hub" element={<InsightsPage />} />
         <Route path="/insights/skill-unplugged-podcast" element={<InsightsPage />} />
+        <Route path="/insights/skill-unplugged-podcast/:podcastSlug" element={<SkillUnpluggedEpisodePage />} />
         <Route path="/insights/skillzza-live" element={<InsightsPage />} />
+        <Route path="/insights/skillzza-live/:liveSlug" element={<SkillzzaLiveSessionPage />} />
         <Route path="/explore/job-simulations" element={<JobSimulationPage />} />
         <Route path="/explore/career-trajectory" element={<CareerTrajectory />} />
         <Route path="/explore/skillzza-persona" element={<ProductComingSoon />} />
