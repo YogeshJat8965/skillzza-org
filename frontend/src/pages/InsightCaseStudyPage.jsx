@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { ArrowRight, BrainCircuit, Sparkles } from 'lucide-react'
 import Insights from '../components/Insights'
 
 const caseStudyContent = {
@@ -231,8 +232,12 @@ const caseStudyContent = {
   },
 }
 
-const SectionCard = ({ title, children }) => (
-  <article className="rounded-2xl border border-[#E7EAF0] bg-white p-6 sm:p-8 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
+const SectionCard = ({ title, children, accent = '#CF2C2E' }) => (
+  <article
+    className="rounded-2xl border bg-white p-6 sm:p-8 shadow-[0_8px_24px_rgba(15,23,42,0.04)]"
+    style={{ borderColor: `${accent}33` }}
+  >
+    <span className="mb-3 inline-flex h-1.5 w-16 rounded-full" style={{ backgroundColor: `${accent}AA` }} />
     <h3 className="font-['DM_Sans',sans-serif] text-[24px] leading-[1.25] font-bold text-[#0F172A] mb-4">{title}</h3>
     <div className="font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#334155] space-y-4">
       {children}
@@ -240,11 +245,11 @@ const SectionCard = ({ title, children }) => (
   </article>
 )
 
-const BulletList = ({ items }) => (
+const BulletList = ({ items, dotColor = '#CF2C2E' }) => (
   <ul className="space-y-2.5 pl-0 list-none">
     {items.map((item) => (
       <li key={item} className="flex items-start gap-3">
-        <span className="mt-2 h-2 w-2 rounded-full bg-[#CF2C2E] flex-shrink-0" />
+        <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: dotColor }} />
         <span>{item}</span>
       </li>
     ))}
@@ -255,6 +260,15 @@ function InsightCaseStudyPage() {
   const { caseSlug } = useParams()
   const navigate = useNavigate()
   const data = caseStudyContent[caseSlug]
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    const frame = requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    })
+
+    return () => cancelAnimationFrame(frame)
+  }, [])
 
   if (!data) {
     return (
@@ -279,6 +293,9 @@ function InsightCaseStudyPage() {
   }
 
   const isFirstCase = caseSlug === 'ai-powered-reskilling-initiatives'
+  const accent = '#CF2C2E'
+  const softAccent = '#FFF3F1'
+  const strategicSignals = isFirstCase ? data.keySuccessFactors.slice(0, 3) : data.keyTakeaways.slice(0, 3)
 
   return (
     <div style={{ backgroundColor: '#F8F9FA', minHeight: '100vh', paddingBottom: '100px' }}>
@@ -297,11 +314,20 @@ function InsightCaseStudyPage() {
             <span className="text-[#475569]">{data.title}</span>
           </div>
 
-          <div className="rounded-[24px] border border-[#E6EAF2] bg-gradient-to-br from-white via-[#FFF9F4] to-[#F6F7FF] p-6 sm:p-8 lg:p-10 shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
+          <div
+            className="rounded-[24px] border p-6 sm:p-8 lg:p-10 shadow-[0_14px_30px_rgba(15,23,42,0.06)] relative overflow-hidden"
+            style={{
+              borderColor: `${accent}33`,
+              background: `radial-gradient(800px 240px at 0% 0%, ${accent}1A 0%, transparent 58%), linear-gradient(135deg, #ffffff 0%, #fffaf7 56%, #f8faff 100%)`,
+            }}
+          >
+            <div className="absolute right-6 top-6 h-[110px] w-[110px] rounded-full blur-2xl" style={{ backgroundColor: `${accent}22` }} />
+
             <span className="inline-flex items-center rounded-full bg-[#0F172A] px-4 py-1.5 text-[11px] font-['DM_Sans',sans-serif] font-bold tracking-[0.12em] text-white uppercase">
               {data.caseLabel}
             </span>
-            <p className="mt-4 font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] uppercase tracking-[0.1em] text-[#CF2C2E] font-bold">
+
+            <p className="mt-4 font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] uppercase tracking-[0.1em] font-bold" style={{ color: accent }}>
               {data.category}
             </p>
             <p className="mt-2 font-['DM_Sans',sans-serif] text-[15px] text-[#475569]">
@@ -316,101 +342,122 @@ function InsightCaseStudyPage() {
             <p className="mt-6 max-w-[1000px] font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#475569]">
               {data.intro}
             </p>
+
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {data.highlights.map((item) => (
+                <div key={item.label} className="rounded-xl border p-3" style={{ borderColor: `${accent}33`, backgroundColor: softAccent }}>
+                  <p className="font-['DM_Sans',sans-serif] text-[20px] font-bold leading-none" style={{ color: accent }}>{item.value}</p>
+                  <p className="font-['DM_Sans',sans-serif] text-[12px] text-[#475569] mt-1">{item.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       <section className="w-full px-4 md:px-8 mt-8">
-        <div className="max-w-[1280px] mx-auto grid grid-cols-1 xl:grid-cols-[1fr_320px] gap-6 xl:gap-8">
+        <div className="max-w-[1280px] mx-auto">
           <div className="space-y-6">
             {isFirstCase ? (
               <>
-                <SectionCard title="The Challenge">
+                <SectionCard title="The Challenge" accent={accent}>
                   <p>{data.intro}</p>
                 </SectionCard>
 
-                <SectionCard title="The AI Solution: Precision-Driven Reskilling">
+                <SectionCard title="The AI Solution: Precision-Driven Reskilling" accent={accent}>
                   <p>{data.aiSolution}</p>
                 </SectionCard>
 
-                <SectionCard title="Real-World Implementation: TechCorp Global's Digital Transformation">
+                <SectionCard title="Real-World Implementation: TechCorp Global's Digital Transformation" accent={accent}>
                   <p>{data.implementation}</p>
                 </SectionCard>
 
-                <SectionCard title="The AI System Architecture">
+                <SectionCard title="The AI System Architecture" accent={accent}>
                   <div className="space-y-5">
                     {data.architecture.map((item) => (
-                      <div key={item.title} className="rounded-xl border border-[#E6EAF2] bg-[#FAFBFF] p-4">
+                      <div key={item.title} className="rounded-xl border p-4" style={{ borderColor: `${accent}2D`, backgroundColor: '#FAFBFF' }}>
                         <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#0F172A] mb-2">{item.title}</h4>
-                        <BulletList items={item.points} />
+                        <BulletList items={item.points} dotColor={accent} />
                       </div>
                     ))}
                   </div>
                 </SectionCard>
 
-                <SectionCard title="Results and Impact">
+                <SectionCard title="Results and Impact" accent={accent}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                       <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#0F172A] mb-2">Quantitative Outcomes</h4>
-                      <BulletList items={data.quantitativeOutcomes} />
+                      <BulletList items={data.quantitativeOutcomes} dotColor={accent} />
                     </div>
                     <div>
                       <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#0F172A] mb-2">Qualitative Benefits</h4>
-                      <BulletList items={data.qualitativeBenefits} />
+                      <BulletList items={data.qualitativeBenefits} dotColor={accent} />
                     </div>
                   </div>
                 </SectionCard>
 
-                <SectionCard title="Key Success Factors">
-                  <BulletList items={data.keySuccessFactors} />
+                <SectionCard title="Key Success Factors" accent={accent}>
+                  <BulletList items={data.keySuccessFactors} dotColor={accent} />
                 </SectionCard>
+
+                <article className="rounded-2xl border bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
+                  <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Quick Snapshot</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    {data.highlights.map((item) => (
+                      <div key={item.label} className="rounded-xl border p-3" style={{ borderColor: `${accent}2D`, backgroundColor: softAccent }}>
+                        <p className="font-['DM_Sans',sans-serif] text-[20px] font-bold leading-none" style={{ color: accent }}>{item.value}</p>
+                        <p className="font-['DM_Sans',sans-serif] text-[12px] text-[#475569] mt-1">{item.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </article>
               </>
             ) : (
               <>
-                <SectionCard title="The Revolution in Personal Development">
+                <SectionCard title="The Revolution in Personal Development" accent={accent}>
                   <p>{data.intro}</p>
                 </SectionCard>
 
-                <SectionCard title="Case Study: FinanceForward's Career Development Platform">
+                <SectionCard title="Case Study: FinanceForward's Career Development Platform" accent={accent}>
                   <p>{data.implementation}</p>
                 </SectionCard>
 
-                <SectionCard title="The Personalization Engine">
+                <SectionCard title="The Personalization Engine" accent={accent}>
                   <div className="space-y-5">
                     {data.personalizationEngine.map((item) => (
-                      <div key={item.title} className="rounded-xl border border-[#E6EAF2] bg-[#FAFBFF] p-4">
+                      <div key={item.title} className="rounded-xl border p-4" style={{ borderColor: `${accent}2D`, backgroundColor: '#FAFBFF' }}>
                         <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#0F172A] mb-2">{item.title}</h4>
-                        <BulletList items={item.points} />
+                        <BulletList items={item.points} dotColor={accent} />
                       </div>
                     ))}
                   </div>
                 </SectionCard>
 
-                <SectionCard title="Implementation Journey">
+                <SectionCard title="Implementation Journey" accent={accent}>
                   <div className="space-y-4">
                     {data.implementationJourney.map((phase) => (
-                      <div key={phase.phase} className="rounded-xl border border-[#F0E8FF] bg-[#FCFAFF] p-4">
-                        <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#5B2D8E] mb-2">{phase.phase}</h4>
-                        <BulletList items={phase.points} />
+                      <div key={phase.phase} className="rounded-xl border p-4" style={{ borderColor: `${accent}33`, backgroundColor: '#FCFAFF' }}>
+                        <h4 className="font-['DM_Sans',sans-serif] font-bold mb-2" style={{ color: accent }}>{phase.phase}</h4>
+                        <BulletList items={phase.points} dotColor={accent} />
                       </div>
                     ))}
                   </div>
                 </SectionCard>
 
-                <SectionCard title="Transformative Results">
+                <SectionCard title="Transformative Results" accent={accent}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                       <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#0F172A] mb-2">Individual Impact</h4>
-                      <BulletList items={data.individualImpact} />
+                      <BulletList items={data.individualImpact} dotColor={accent} />
                     </div>
                     <div>
                       <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#0F172A] mb-2">Organizational Benefits</h4>
-                      <BulletList items={data.organizationalBenefits} />
+                      <BulletList items={data.organizationalBenefits} dotColor={accent} />
                     </div>
                   </div>
                 </SectionCard>
 
-                <SectionCard title="The Personalization Advantage">
+                <SectionCard title="The Personalization Advantage" accent={accent}>
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#0F172A] mb-1">Micro-Learning Adaptation</h4>
@@ -418,7 +465,7 @@ function InsightCaseStudyPage() {
                     </div>
                     <div>
                       <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#0F172A] mb-1">Multi-Modal Learning Integration</h4>
-                      <BulletList items={data.personalizationAdvantage.multiModal} />
+                      <BulletList items={data.personalizationAdvantage.multiModal} dotColor={accent} />
                     </div>
                     <div>
                       <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#0F172A] mb-1">Real-Time Adjustment</h4>
@@ -427,10 +474,10 @@ function InsightCaseStudyPage() {
                   </div>
                 </SectionCard>
 
-                <SectionCard title="The Future Landscape: What's Next?">
+                <SectionCard title="The Future Landscape: What's Next?" accent={accent}>
                   <div className="space-y-4">
                     {data.futureTrends.map((trend) => (
-                      <div key={trend.title} className="rounded-xl border border-[#E6EAF2] bg-[#FAFBFF] p-4">
+                      <div key={trend.title} className="rounded-xl border p-4" style={{ borderColor: `${accent}2D`, backgroundColor: '#FAFBFF' }}>
                         <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#0F172A] mb-1">{trend.title}</h4>
                         <p>{trend.description}</p>
                       </div>
@@ -438,39 +485,49 @@ function InsightCaseStudyPage() {
                   </div>
                 </SectionCard>
 
-                <SectionCard title="Implementation Roadmap for Organizations">
+                <SectionCard title="Implementation Roadmap for Organizations" accent={accent}>
                   <div className="space-y-4">
                     {data.implementationRoadmap.map((phase) => (
-                      <div key={phase.phase} className="rounded-xl border border-[#F0E8FF] bg-[#FCFAFF] p-4">
-                        <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#5B2D8E] mb-2">{phase.phase}</h4>
-                        <BulletList items={phase.points} />
+                      <div key={phase.phase} className="rounded-xl border p-4" style={{ borderColor: `${accent}33`, backgroundColor: '#FCFAFF' }}>
+                        <h4 className="font-['DM_Sans',sans-serif] font-bold mb-2" style={{ color: accent }}>{phase.phase}</h4>
+                        <BulletList items={phase.points} dotColor={accent} />
                       </div>
                     ))}
                   </div>
                 </SectionCard>
 
-                <SectionCard title="Key Takeaways for Skillzza">
-                  <BulletList items={data.keyTakeaways} />
+                <SectionCard title="Key Takeaways for Skillzza" accent={accent}>
+                  <BulletList items={data.keyTakeaways} dotColor={accent} />
                   <p className="mt-5">{data.closing}</p>
                 </SectionCard>
+
+                <article className="rounded-2xl border bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
+                  <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Quick Snapshot</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    {data.highlights.map((item) => (
+                      <div key={item.label} className="rounded-xl border p-3" style={{ borderColor: `${accent}2D`, backgroundColor: softAccent }}>
+                        <p className="font-['DM_Sans',sans-serif] text-[20px] font-bold leading-none" style={{ color: accent }}>{item.value}</p>
+                        <p className="font-['DM_Sans',sans-serif] text-[12px] text-[#475569] mt-1">{item.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </article>
               </>
             )}
-          </div>
 
-          <aside className="space-y-4 xl:sticky xl:top-6 self-start">
-            <div className="rounded-2xl border border-[#E7EAF0] bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
-              <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Quick Snapshot</h3>
-              <div className="grid grid-cols-2 gap-3">
-                {data.highlights.map((item) => (
-                  <div key={item.label} className="rounded-xl border border-[#EEF2F7] bg-[#F8FAFC] p-3">
-                    <p className="font-['DM_Sans',sans-serif] text-[20px] font-bold text-[#CF2C2E] leading-none">{item.value}</p>
-                    <p className="font-['DM_Sans',sans-serif] text-[12px] text-[#475569] mt-1">{item.label}</p>
-                  </div>
+            <article className="rounded-2xl border bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
+              <p className="font-['DM_Sans',sans-serif] text-[13px] uppercase tracking-[0.08em] font-bold" style={{ color: accent }}>AI Readiness Signal</p>
+              <ul className="mt-3 space-y-3 pl-0 list-none">
+                {strategicSignals.map((item) => (
+                  <li key={item} className="flex items-start gap-2.5">
+                    <span className="mt-1" style={{ color: accent }}><BrainCircuit size={15} /></span>
+                    <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[1.55] text-[#334155]">{item}</span>
+                  </li>
                 ))}
-              </div>
-            </div>
+              </ul>
+            </article>
 
-            <div className="rounded-2xl border border-[#E7EAF0] bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
+            <article className="rounded-2xl border bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
               <p className="font-['DM_Sans',sans-serif] text-[14px] text-[#475569] mb-4">
                 Explore the other Skill Blueprint case study for a complete AI-powered workforce transformation perspective.
               </p>
@@ -482,18 +539,22 @@ function InsightCaseStudyPage() {
                       : '/insights/skill-blueprint/ai-powered-reskilling-initiatives'
                   )
                 }
-                className="w-full rounded-lg bg-[#CF2C2E] py-2.5 px-4 text-white font-['DM_Sans',sans-serif] font-semibold"
+                className="w-full rounded-lg py-2.5 px-4 text-white font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2"
+                style={{ backgroundColor: accent }}
               >
+                <Sparkles size={16} />
                 Open Other Case Study
               </button>
               <button
                 onClick={() => navigate('/insights/skill-blueprint')}
-                className="w-full mt-2.5 rounded-lg border border-[#CF2C2E] py-2.5 px-4 text-[#CF2C2E] font-['DM_Sans',sans-serif] font-semibold"
+                className="w-full mt-2.5 rounded-lg border py-2.5 px-4 font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2"
+                style={{ borderColor: accent, color: accent }}
               >
+                <ArrowRight size={16} />
                 Back to Skill Blueprint
               </button>
-            </div>
-          </aside>
+            </article>
+          </div>
         </div>
       </section>
     </div>

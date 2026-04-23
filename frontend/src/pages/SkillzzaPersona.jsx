@@ -269,7 +269,7 @@ const SkillzzaPersona = () => {
       <section style={{ backgroundColor: '#F9FAFB', paddingTop: '80px', paddingBottom: '80px' }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '48px' }}>
-            What Skillzza Persona™ Develops
+            What Skillzza Person Develops
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             {[

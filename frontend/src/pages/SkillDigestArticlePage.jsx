@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { ArrowRight, BookMarked, Clock3, Flame, Layers3 } from 'lucide-react'
 import Insights from '../components/Insights'
 
 const digestArticles = {
@@ -170,9 +171,21 @@ const digestArticles = {
   },
 }
 
-const ArticleSection = ({ heading, paragraphs }) => (
-  <article className="digest-section-card">
-    <h2>{heading}</h2>
+const DIGEST_ACCENT = '#CF2C2E'
+
+function getReadTime(article) {
+  const paragraphCount = article.sections.reduce((total, section) => total + section.paragraphs.length, 0)
+  return `${Math.max(4, paragraphCount * 2)} min read`
+}
+
+const ArticleSection = ({ heading, paragraphs, index, accent }) => (
+  <article className="digest-section-card" style={{ borderColor: `${accent}30` }}>
+    <div className="digest-section-head">
+      <span className="digest-section-index" style={{ backgroundColor: `${accent}1A`, color: accent }}>
+        {String(index + 1).padStart(2, '0')}
+      </span>
+      <h2>{heading}</h2>
+    </div>
     {paragraphs.map((p) => (
       <p key={p}>{p}</p>
     ))}
@@ -183,10 +196,20 @@ function SkillDigestArticlePage() {
   const { digestSlug } = useParams()
   const navigate = useNavigate()
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    const frame = requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    })
+
+    return () => cancelAnimationFrame(frame)
+  }, [])
+
   const article = digestArticles[digestSlug]
   const articleEntries = Object.entries(digestArticles)
   const articleIndex = articleEntries.findIndex(([slug]) => slug === digestSlug)
   const nextArticle = articleIndex >= 0 ? articleEntries[(articleIndex + 1) % articleEntries.length] : null
+  const accent = DIGEST_ACCENT
 
   if (!article) {
     return (
@@ -216,10 +239,10 @@ function SkillDigestArticlePage() {
 
       <style>{`
         .digest-hero {
-          background: radial-gradient(1200px 400px at 10% 0%, rgba(207, 44, 46, 0.14), transparent 55%),
-                      radial-gradient(1000px 380px at 100% 10%, rgba(59, 130, 246, 0.14), transparent 60%),
+          background: radial-gradient(1200px 400px at 10% 0%, var(--digest-accent-soft), transparent 55%),
+                      radial-gradient(1000px 380px at 100% 10%, rgba(207, 44, 46, 0.10), transparent 60%),
                       linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
-          border: 1px solid #e8edf5;
+          border: 1px solid var(--digest-accent-border);
           border-radius: 28px;
           box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
           padding: 28px;
@@ -246,10 +269,36 @@ function SkillDigestArticlePage() {
           padding: 22px;
           box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
           animation: digestFadeUp 0.55s ease-out both;
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .digest-section-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+        }
+
+        .digest-section-head {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 10px;
+        }
+
+        .digest-section-index {
+          height: 30px;
+          min-width: 30px;
+          border-radius: 999px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.08em;
         }
 
         .digest-section-card h2 {
-          margin: 0 0 10px;
+          margin: 0;
           font-family: 'DM Sans', sans-serif;
           font-size: 24px;
           font-weight: 700;
@@ -326,7 +375,13 @@ function SkillDigestArticlePage() {
             <span className="text-[#475569]">Article {article.number}</span>
           </div>
 
-          <div className="digest-hero">
+          <div
+            className="digest-hero"
+            style={{
+              '--digest-accent-soft': `${accent}1F`,
+              '--digest-accent-border': `${accent}33`,
+            }}
+          >
             <div className="inline-flex items-center rounded-full bg-[#0F172A] px-4 py-1.5 text-[11px] font-['DM_Sans',sans-serif] font-bold tracking-[0.1em] text-white uppercase">
               Skill Digest • Article {article.number}
             </div>
@@ -336,39 +391,84 @@ function SkillDigestArticlePage() {
             <p className="mt-3 font-['DM_Sans',sans-serif] text-[18px] leading-[1.5] font-semibold text-[#334155]">
               {article.subtitle}
             </p>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.08em]"
+                style={{ backgroundColor: `${accent}1A`, color: accent }}
+              >
+                <Clock3 size={14} />
+                {getReadTime(article)}
+              </span>
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.08em]"
+                style={{ backgroundColor: `${accent}1A`, color: accent }}
+              >
+                <Layers3 size={14} />
+                {article.sections.length} sections
+              </span>
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.08em]"
+                style={{ backgroundColor: `${accent}1A`, color: accent }}
+              >
+                <Flame size={14} />
+                Future-ready insights
+              </span>
+            </div>
           </div>
 
           <div className="digest-layout">
             <div className="digest-main">
-              {article.sections.map((section) => (
-                <ArticleSection key={section.heading} heading={section.heading} paragraphs={section.paragraphs} />
+              {article.sections.map((section, index) => (
+                <ArticleSection key={section.heading} heading={section.heading} paragraphs={section.paragraphs} index={index} accent={accent} />
               ))}
             </div>
 
             <aside className="digest-aside">
-              <div className="rounded-2xl border border-[#E8EDF5] bg-white p-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
+              <div className="rounded-2xl border bg-white p-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
                 <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Quick Highlights</h3>
                 <div className="digest-chip-grid">
                   {article.highlights.map((item) => (
-                    <div key={item} className="digest-chip">{item}</div>
+                    <div key={item} className="digest-chip" style={{ borderColor: `${accent}30`, backgroundColor: `${accent}12` }}>{item}</div>
                   ))}
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-[#E8EDF5] bg-white p-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
+              <div className="rounded-2xl border bg-white p-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
+                <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Topic Map</h3>
+                <div className="space-y-2.5">
+                  {article.sections.map((section, index) => (
+                    <div key={section.heading} className="flex items-center gap-2.5">
+                      <span
+                        className="h-6 min-w-6 rounded-full inline-flex items-center justify-center text-[11px] font-bold"
+                        style={{ backgroundColor: `${accent}1A`, color: accent }}
+                      >
+                        {index + 1}
+                      </span>
+                      <p className="font-['DM_Sans',sans-serif] text-[13px] leading-[1.45] text-[#334155]">{section.heading}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-2xl border bg-white p-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
                 <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Continue Reading</h3>
                 {nextArticle && (
                   <button
                     onClick={() => navigate(`/insights/skill-digest/${nextArticle[0]}`)}
-                    className="w-full rounded-lg bg-[#CF2C2E] py-2.5 px-4 text-white font-['DM_Sans',sans-serif] font-semibold"
+                    className="w-full rounded-lg py-2.5 px-4 text-white font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2"
+                    style={{ backgroundColor: accent }}
                   >
+                    <BookMarked size={16} />
                     Open Next Article
                   </button>
                 )}
                 <button
                   onClick={() => navigate('/insights/skill-digest')}
-                  className="w-full mt-2.5 rounded-lg border border-[#CF2C2E] py-2.5 px-4 text-[#CF2C2E] font-['DM_Sans',sans-serif] font-semibold"
+                  className="w-full mt-2.5 rounded-lg border py-2.5 px-4 font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2"
+                  style={{ borderColor: accent, color: accent }}
                 >
+                  <ArrowRight size={16} />
                   Back to Skill Digest
                 </button>
               </div>

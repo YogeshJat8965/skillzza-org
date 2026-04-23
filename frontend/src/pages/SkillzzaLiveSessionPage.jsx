@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { Activity, CalendarClock, Radio, Sparkles } from 'lucide-react'
 import Insights from '../components/Insights'
 import { skillzzaLiveSessions, skillzzaLiveSessionsBySlug } from '../data/skillzzaLiveSessions'
 
@@ -76,14 +77,30 @@ const liveCategoryContext = {
   },
 }
 
+const LIVE_ACCENT = '#CF2C2E'
+
+function durationFromId(id) {
+  return `${40 + (id % 4) * 10} min`
+}
+
 function SkillzzaLiveSessionPage() {
   const { liveSlug } = useParams()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    const frame = requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    })
+
+    return () => cancelAnimationFrame(frame)
+  }, [])
 
   const session = skillzzaLiveSessionsBySlug[liveSlug]
   const sessionIndex = skillzzaLiveSessions.findIndex((item) => item.slug === liveSlug)
   const nextSession = sessionIndex >= 0 ? skillzzaLiveSessions[(sessionIndex + 1) % skillzzaLiveSessions.length] : null
   const context = session ? liveCategoryContext[session.category] : null
+  const accent = LIVE_ACCENT
 
   if (!session) {
     return (
@@ -124,11 +141,19 @@ function SkillzzaLiveSessionPage() {
             <span className="text-[#475569]">{session.title}</span>
           </div>
 
-          <div className="rounded-[24px] border border-[#E6EAF2] bg-gradient-to-br from-white via-[#F5FCFF] to-[#FFF8F4] p-6 sm:p-8 lg:p-10 shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
+          <div
+            className="rounded-[24px] border p-6 sm:p-8 lg:p-10 shadow-[0_14px_30px_rgba(15,23,42,0.06)] relative overflow-hidden"
+            style={{
+              borderColor: `${accent}40`,
+              background: `radial-gradient(900px 260px at 0% 0%, ${accent}1F 0%, transparent 58%), linear-gradient(135deg, #ffffff 0%, #f4faff 55%, #f8fcff 100%)`,
+            }}
+          >
+            <div className="absolute right-5 top-5 h-[120px] w-[120px] rounded-full blur-2xl" style={{ backgroundColor: `${accent}22` }} />
+
             <span className="inline-flex items-center rounded-full bg-[#0F172A] px-4 py-1.5 text-[11px] font-['DM_Sans',sans-serif] font-bold tracking-[0.12em] text-white uppercase">
               Skillzza Live
             </span>
-            <p className="mt-4 font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] uppercase tracking-[0.1em] text-[#CF2C2E] font-bold">
+            <p className="mt-4 font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] uppercase tracking-[0.1em] font-bold" style={{ color: accent }}>
               {session.category}
             </p>
             <h1 className="mt-4 font-['League_Spartan',sans-serif] text-[36px] sm:text-[44px] leading-[1.05] font-bold text-[#0F172A]">
@@ -140,6 +165,30 @@ function SkillzzaLiveSessionPage() {
             <p className="mt-6 max-w-[980px] font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#475569]">
               {context.whyNow}
             </p>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.08em]"
+                style={{ backgroundColor: `${accent}18`, color: accent }}
+              >
+                <CalendarClock size={14} />
+                {durationFromId(session.id)}
+              </span>
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.08em]"
+                style={{ backgroundColor: `${accent}18`, color: accent }}
+              >
+                <Radio size={14} />
+                Session {session.id}
+              </span>
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.08em]"
+                style={{ backgroundColor: `${accent}18`, color: accent }}
+              >
+                <Sparkles size={14} />
+                Live + Interactive
+              </span>
+            </div>
           </div>
 
           <div className="mt-6 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-6">
@@ -149,6 +198,19 @@ function SkillzzaLiveSessionPage() {
                 <p className="font-['DM_Sans',sans-serif] text-[16px] leading-[1.8] text-[#334155]">
                   {session.desc} This live format is designed for active participation, practical translation, and immediate workplace application of AI skills.
                 </p>
+
+                <div className="mt-6 flex items-end gap-1.5" aria-hidden="true">
+                  {Array.from({ length: 16 }).map((_, index) => (
+                    <span
+                      key={`pulse-${index}`}
+                      className="w-2 rounded-full"
+                      style={{
+                        height: `${8 + ((index * 9) % 26)}px`,
+                        backgroundColor: `${accent}${index % 2 === 0 ? '66' : 'A8'}`,
+                      }}
+                    />
+                  ))}
+                </div>
               </article>
 
               <article className="rounded-2xl border border-[#E7EAF0] bg-white p-6 sm:p-8 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
@@ -156,7 +218,7 @@ function SkillzzaLiveSessionPage() {
                 <ul className="space-y-3 pl-0 list-none">
                   {context.takeaways.map((point) => (
                     <li key={point} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#334155]">
-                      <span className="mt-2 h-2 w-2 rounded-full bg-[#CF2C2E] flex-shrink-0" />
+                      <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
                       <span>{point}</span>
                     </li>
                   ))}
@@ -168,7 +230,7 @@ function SkillzzaLiveSessionPage() {
                 <ul className="space-y-3 pl-0 list-none">
                   {context.exercises.map((exercise) => (
                     <li key={exercise} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#334155]">
-                      <span className="mt-2 h-2 w-2 rounded-full bg-[#0EA5E9] flex-shrink-0" />
+                      <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
                       <span>{exercise}</span>
                     </li>
                   ))}
@@ -177,20 +239,32 @@ function SkillzzaLiveSessionPage() {
             </div>
 
             <aside className="space-y-4">
-              <div className="rounded-2xl border border-[#E7EAF0] bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
+              <div
+                className="rounded-2xl border bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]"
+                style={{ borderColor: `${accent}33` }}
+              >
                 <p className="font-['DM_Sans',sans-serif] text-[13px] uppercase tracking-[0.08em] text-[#64748B] font-bold">Live Track</p>
                 <p className="mt-2 font-['DM_Sans',sans-serif] text-[18px] leading-[1.45] font-semibold text-[#0F172A]">{session.category}</p>
                 <p className="mt-2 font-['DM_Sans',sans-serif] text-[15px] leading-[1.65] text-[#475569]">
                   Session {session.id} of {skillzzaLiveSessions.length}
                 </p>
+
+                <button
+                  className="w-full mt-4 rounded-xl px-4 py-2.5 text-white font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2"
+                  style={{ backgroundColor: accent }}
+                >
+                  <Activity size={18} />
+                  Join Live Track
+                </button>
               </div>
 
               {nextSession && (
                 <button
                   onClick={() => navigate(`/insights/skillzza-live/${nextSession.slug}`)}
-                  className="w-full rounded-2xl border border-[#F1D6D7] bg-[#FFF6F6] p-5 text-left hover:border-[#CF2C2E] transition-colors"
+                  className="w-full rounded-2xl border p-5 text-left transition-colors"
+                  style={{ borderColor: `${accent}33`, backgroundColor: `${accent}11` }}
                 >
-                  <p className="font-['DM_Sans',sans-serif] text-[12px] uppercase tracking-[0.08em] text-[#CF2C2E] font-bold">Next Session</p>
+                  <p className="font-['DM_Sans',sans-serif] text-[12px] uppercase tracking-[0.08em] font-bold" style={{ color: accent }}>Next Session</p>
                   <p className="mt-2 font-['DM_Sans',sans-serif] text-[18px] leading-[1.4] font-semibold text-[#0F172A]">{nextSession.title}</p>
                   <p className="mt-2 font-['DM_Sans',sans-serif] text-[14px] leading-[1.6] text-[#475569]">{nextSession.subtitle}</p>
                 </button>
@@ -198,7 +272,8 @@ function SkillzzaLiveSessionPage() {
 
               <button
                 onClick={() => navigate('/insights/skillzza-live')}
-                className="w-full rounded-xl bg-[#CF2C2E] px-4 py-3 text-white font-['DM_Sans',sans-serif] font-semibold"
+                className="w-full rounded-xl px-4 py-3 text-white font-['DM_Sans',sans-serif] font-semibold"
+                style={{ backgroundColor: accent }}
               >
                 Back to All Live Sessions
               </button>
