@@ -57,7 +57,7 @@ const navItems = [
       },
       {
         name: 'Skill Persona',
-        link: null,
+        link: '/explore/skillzza-persona',
         desc: 'AI roleplay simulation — interviews, workplace scenarios, confidence building.',
         pill: 'AI Agent',
         pillColor: 'purple',

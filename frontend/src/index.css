@@ -367,7 +367,7 @@ img, video, iframe, embed, object {
 }
 *::-webkit-scrollbar {
   display: none;
-}@import "tailwindcss";
+}
 
 html,
 body {

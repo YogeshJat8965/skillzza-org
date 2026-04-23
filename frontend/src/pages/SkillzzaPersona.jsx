@@ -1,712 +1,519 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { getAssetPath } from '../utils/assets';
 
-import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const SkillzzaPersona = () => {
+  const heroRef = useRef(null);
+  const [activeHowTab, setActiveHowTab] = useState(0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const els = entry.target.querySelectorAll('.persona-animate');
+          if (entry.isIntersecting) {
+            els.forEach((el) => el.classList.add('active'));
+          } else {
+            els.forEach((el) => el.classList.remove('active'));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    if (heroRef.current) observer.observe(heroRef.current);
+    return () => { if (heroRef.current) observer.unobserve(heroRef.current); };
+  }, []);
+
   return (
     <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+        .persona-animate {
+          opacity: 0;
+          transform: translateY(40px);
+          transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .persona-animate.active {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .persona-animate.delay-1 { transition-delay: 0.15s; }
+        .persona-animate.delay-2 { transition-delay: 0.35s; }
+        .persona-animate.delay-3 { transition-delay: 0.55s; }
+        .persona-animate.delay-4 { transition-delay: 0.75s; }
+
+        .persona-hero-image {
+          opacity: 0;
+          transform: translateX(50px) scale(0.98);
+          transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+        }
+        .persona-hero-image.active {
+          opacity: 1;
+          transform: translateX(0) scale(1);
+        }
+
+        .persona-cta-primary {
+          background: linear-gradient(135deg, #6C63FF 0%, #8B5CF6 50%, #A855F7 100%);
+          transition: all 0.3s ease;
+        }
+        .persona-cta-primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 12px 28px rgba(108, 99, 255, 0.35);
+        }
+        .persona-cta-outline {
+          border: 1.5px solid #374151;
+          transition: all 0.3s ease;
+        }
+        .persona-cta-outline:hover {
+          background: #374151;
+          color: #fff;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(55, 65, 81, 0.2);
+        }
+      `}</style>
+
       {/* Hero Section */}
       <section
-        className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
-        style={{ 
-          backgroundImage: getBackgroundImageUrl('/ai_hacknex_tile_img.png'),
-          minHeight: '70vh'
+        ref={heroRef}
+        className="relative w-full overflow-hidden"
+        style={{
+          width: '100%',
+          height: 'clamp(400px, 47.4vw, 910px)',
+          backgroundColor: '#EFF6FF',
         }}
       >
-        <div className="absolute inset-0 bg-gray-900/70"></div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
-              SKILLZZA PERSONA™
+        {/* Background Hero Image */}
+        <div className="absolute inset-0 persona-hero-image persona-animate" style={{
+          width: '100%',
+          height: '100%',
+          background: `transparent url(${getAssetPath('/skillzza_persona_home.png')}) center center no-repeat padding-box`,
+          backgroundSize: 'cover',
+          opacity: 1,
+        }}>
+          {/* Left overlay */}
+          <div
+            className="absolute"
+            style={{
+              top: 0,
+              left: 0,
+              width: '60.7%',
+              height: '100%',
+              background: 'transparent linear-gradient(89deg, #B6E2FD 0%, #2668B210 100%) 0% 0% no-repeat padding-box',
+              opacity: 0.58,
+            }}
+          />
+        </div>
+
+        {/* Content layer */}
+        <div className="relative z-10 w-full h-full">
+          {/* Breadcrumb */}
+          <nav
+            className="absolute persona-animate delay-1"
+            style={{ top: '13.4%', left: '11.67%' }}
+          >
+            <div className="flex items-center gap-2" style={{ color: '#71717A', fontSize: 'clamp(11px, 0.73vw, 14px)' }}>
+              <Link to="/" className="hover:opacity-70 transition-opacity">Home</Link>
+              <span>&gt;</span>
+              <span className="hover:opacity-70 transition-opacity">Products</span>
+              <span>&gt;</span>
+              <span className="font-medium" style={{ color: '#4B5563' }}>Skillzza Persona</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
-              The AI-Powered Career Rehearsal Engine That Transforms Potential Into Performance
-            </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
-              Ready to unlock your true potential? Let our Skill assessment Engine help you discover your strengths and take the next step towards your dream job. One click away – Start your journey today!
+          </nav>
+
+          {/* Main Heading */}
+          <h1
+            className="absolute persona-animate delay-2"
+            style={{
+              top: '18.9%',
+              left: '11.67%',
+              width: '40.4%',
+              textAlign: 'left',
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 500,
+              fontSize: 'clamp(28px, 4.375vw, 84px)',
+              lineHeight: 'clamp(34px, 4.79vw, 92px)',
+              letterSpacing: '-2.1px',
+              color: '#0F1114',
+              opacity: 1,
+            }}
+          >
+            The AI Role-Play Simulation Engine for Career-Ready Performance
+          </h1>
+
+          {/* Subtitle */}
+          <p
+            className="absolute persona-animate delay-3"
+            style={{
+              top: '62.97%',
+              left: '11.67%',
+              width: '33.85%',
+              textAlign: 'left',
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 500,
+              fontSize: 'clamp(13px, 1.25vw, 24px)',
+              lineHeight: 'clamp(18px, 1.875vw, 36px)',
+              letterSpacing: '0px',
+              color: '#71717A',
+              opacity: 1,
+            }}
+          >
+            Practice high-stakes career moments in a risk-free environment, before they define your future.
+          </p>
+
+          {/* CTA Buttons */}
+          <div
+            className="absolute flex items-center gap-4 persona-animate delay-4"
+            style={{ top: '77.36%', left: '11.67%' }}
+          >
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center justify-center text-white font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 'clamp(12px, 0.83vw, 16px)',
+                width: 'clamp(200px, 15vw, 288px)',
+                height: 'clamp(42px, 3.125vw, 60px)',
+                background: '#4543D9 0% 0% no-repeat padding-box',
+                borderRadius: '8px',
+              }}
+            >
+              Start Your Free Persona
+            </Link>
+            <Link
+              to="/book-demo"
+              className="persona-cta-outline inline-flex items-center justify-center font-semibold rounded-lg"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 'clamp(12px, 0.83vw, 16px)',
+                height: 'clamp(42px, 3.125vw, 60px)',
+                padding: '0 clamp(20px, 1.56vw, 30px)',
+                borderRadius: '8px',
+                color: '#374151',
+              }}
+            >
+              Book a Demo
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 1: The Hidden Gap ── */}
+      <section className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
+
+            {/* Left Column */}
+            <div className="lg:w-1/2">
+              <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', lineHeight: '44px', color: '#0F1114', marginBottom: '28px' }}>
+                The Hidden Gap Between Qualified And Career-Ready
+              </h2>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#4B5563', marginBottom: '12px' }}>
+                Modern organizations need professionals who can:
+              </p>
+              <ul style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#4B5563', paddingLeft: '20px', marginBottom: '24px', listStyleType: 'disc' }}>
+                <li>Think clearly in ambiguity</li>
+                <li>Communicate with confidence and credibility</li>
+                <li>Lead without authority</li>
+                <li>Navigate complex human and organizational dynamics</li>
+              </ul>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#4B5563', marginBottom: '20px', lineHeight: '1.7' }}>
+                Yet most professionals enter these moments unprepared, learning through costly trial and error rather than deliberate practice. Skillzza Persona™ changes that.
+              </p>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#4B5563', lineHeight: '1.7' }}>
+                We don't teach you about workplace behavior. We let you experience it, stepping into real roles, navigating real scenarios, and performing under real pressure, before the career moment actually arrives.
+              </p>
+            </div>
+
+            {/* Right Column */}
+            <div className="lg:w-1/2">
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#4B5563', lineHeight: '1.7', marginBottom: '24px' }}>
+                Technical skills may open doors, but careers are shaped by how people think, communicate, influence, and respond under pressure.
+              </p>
+              <img
+                src={getAssetPath('/corporate_model_img.jpg')}
+                alt="Professional businessman"
+                className="w-full object-cover rounded-lg shadow-lg"
+              />
+            </div> {/* end right column */}
+
+          </div> {/* end flex row */}
+
+          {/* Designed For Section — full width below both columns */}
+          <div className="mt-16">
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#6B7280', marginBottom: '16px', letterSpacing: '0.5px' }}>
+              Designed for
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-px" style={{ border: '1px solid #E5E7EB', borderRadius: '12px', overflow: 'hidden' }}>
+              {[
+                { title: 'Students & Graduates', desc: 'entering the professional world', icon: '🎓' },
+                { title: 'Professionals', desc: 'preparing for leadership or role transitions', icon: '👔' },
+                { title: 'Institutions', desc: 'focused on employability and career outcomes', icon: '🏛️' },
+                { title: 'Employers', desc: 'seeking behaviorally ready, workplace-fit talent', icon: '🏢' },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-4 bg-white p-6" style={{ borderBottom: i < 2 ? '1px solid #E5E7EB' : 'none', borderRight: i % 2 === 0 ? '1px solid #E5E7EB' : 'none' }}>
+                  <span className="text-3xl" style={{ color: '#1F57C7' }}>{item.icon}</span>
+                  <div>
+                    <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '15px', color: '#0F1114' }}>{item.title}</p>
+                    <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '13px', color: '#6B7280' }}>{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div> {/* end max-w container */}
+      </section>
+
+      {/* ── Section 2: What Skillzza Persona Develops ── */}
+      <section style={{ backgroundColor: '#F9FAFB', paddingTop: '80px', paddingBottom: '80px' }}>
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '48px' }}>
+            What Skillzza Persona™ Develops
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            {[
+              'Professional Communication & Executive Presence',
+              'Leadership & Influence Without Authority',
+              'Emotional & Social Intelligence',
+            ].map((skill, i) => (
+              <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '16px', color: '#1F57C7' }}>{skill}</p>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            {[
+              'Decision-Making Under Pressure',
+              'Workplace Adaptability & Resilience',
+            ].map((skill, i) => (
+              <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '16px', color: '#1F57C7' }}>{skill}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Experience Your Future Career */}
+      {/* ── Section 3: Career Moments You Can Practice Today ── */}
       <section className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Experience Your Future Career Today
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            {/* Left: Image */}
+            <div className="lg:w-5/12 relative">
+              <img
+                src={getAssetPath('/Group 41611.jpg')}
+                alt="Team of professionals"
+                className="w-full h-80 object-cover rounded-lg shadow-lg relative z-0"
+              />
+            </div>
+
+            {/* Right: Content */}
+            <div className="lg:w-7/12">
+              <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', lineHeight: '44px', color: '#0F1114', marginBottom: '16px' }}>
+                Career Moments You Can Practice Today
               </h2>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                What if you could walk into your dream role with the confidence of someone who's already been there? What if your first client presentation, team leadership moment, or strategic decision wasn't really your first?
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '16px', color: '#4B5563', marginBottom: '20px', fontWeight: 500 }}>
+                Imagine being able to rehearse:
               </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 mb-12">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Skillzza Persona™ makes this possible.</h3>
-              <p className="text-lg text-gray-700 text-center leading-relaxed">
-                Unlike traditional learning platforms that teach you about careers, Persona lets you live them. Through cutting-edge AI role-play simulations, you don't just study workplace scenarios—you navigate them, master them, and emerge ready to excel from day one.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src={getAssetPath('/AI_driven_customized_img.jpg')} 
-                    alt="AI Powered"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">AI-Powered Simulations</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Experience dynamic, intelligent role-play scenarios that adapt to your responses and learning style.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src={getAssetPath('/personalizedpearningpaths_ico.png')} 
-                    alt="Personalized Learning"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Personalized Experience</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Every interaction adapts to your industry, role, experience level, and learning objectives.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src={getAssetPath('/datadriveninsights_ico.png')} 
-                    alt="Real-time Feedback"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Real-time Coaching</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Get immediate, actionable feedback that accelerates your professional growth and confidence.
-                </p>
-              </div>
+              <ul style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#374151', lineHeight: '2', paddingLeft: '20px', listStyleType: 'disc' }}>
+                <li>Your first presentation to senior leadership, before your voice shakes</li>
+                <li>A difficult conversation with an underperforming team member, before you avoid it</li>
+                <li>Pitching your idea when you're the most junior person in the room, before you second-guess yourself</li>
+                <li>Handling a frustrated client threatening to leave, before you lose the account</li>
+                <li>Leading a critical project with no direct authority, before stakeholders lose confidence</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Human Intelligence Revolution */}
-      <section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              <div className="lg:w-1/2">
-                <img 
-                  src={getAssetPath('/future_workspace.jpg')} 
-                  alt="Human Intelligence Revolution" 
-                  className="w-full h-96 object-cover rounded-2xl shadow-lg" 
-                />
-              </div>
-              <div className="lg:w-1/2">
-                <div className="inline-block px-6 py-2 bg-orange-100 rounded-full text-sm font-semibold text-orange-600 mb-6">
-                  THE HUMAN INTELLIGENCE REVOLUTION
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Beyond Skills Training: Building Career Readiness
-                </h2>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  In today's competitive landscape, technical competence is just the entry ticket. What separates the hired from the passed over? Human intelligence—the ability to communicate with impact, lead with authenticity, and navigate complex professional dynamics with grace under pressure.
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Skillzza Persona™ is the world's most advanced AI-powered platform for developing these mission-critical capabilities. It's where ambition meets preparation, and where potential transforms into proven performance.
-                </p>
-              </div>
-            </div>
+      {/* ── Section 4: How Persona Works (Tabbed) ── */}
+      <section style={{ backgroundColor: '#F9FAFB', paddingTop: '80px', paddingBottom: '80px' }}>
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '40px' }}>
+            How Persona Works
+          </h2>
+
+          {/* Tabs */}
+          <div className="flex flex-wrap justify-center gap-0 mb-10" style={{ borderBottom: '2px solid #E5E7EB' }}>
+            {[
+              'AI-Driven Role Immersion',
+              'Adaptive AI Intelligence',
+              'Behavioral Intelligence Tracking',
+              'Real-Time Coaching & Career Insights',
+            ].map((tab, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveHowTab(i)}
+                className="px-6 py-3 text-sm font-semibold transition-all"
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  color: activeHowTab === i ? '#1F57C7' : '#6B7280',
+                  borderBottom: activeHowTab === i ? '3px solid #1F57C7' : '3px solid transparent',
+                  marginBottom: '-2px',
+                }}
+              >
+                {tab}
+              </button>
+            ))}
           </div>
-        </div>
-      </section>
 
-      {/* The Skillzza Ecosystem */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                The Skillzza Ecosystem: Where Persona Fits
-              </h2>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-                Think of Skillzza as your complete AI Career Engine:
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-200 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src={getAssetPath('/Job Stimulation_header_img.png')} 
-                    alt="Core Simulations"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Core Simulations</h3>
-                <p className="text-gray-600 text-sm">Build your technical foundation</p>
-              </div>
-
-              <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-6 rounded-2xl border border-orange-200 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src={getAssetPath('/ai_hacknex_tile_img.png')} 
-                    alt="Persona"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Persona</h3>
-                <p className="text-gray-600 text-sm">Develop professional presence and interpersonal mastery</p>
-              </div>
-
-              <div className="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-2xl border border-green-200 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src={getAssetPath('/potential_meter.png')} 
-                    alt="Assessment Engine"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Assessment Engine</h3>
-                <p className="text-gray-600 text-sm">Validate your readiness</p>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-200 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src={getAssetPath('/career_readyness.jpg')} 
-                    alt="Career Intelligence"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Career Intelligence</h3>
-                <p className="text-gray-600 text-sm">Guide your path forward</p>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Persona isn't just a feature—it's the human intelligence layer that makes everything else meaningful.
-              </h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How Persona Works */}
-      <section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                How Persona Works: Intelligence Meets Experience
-              </h2>
-            </div>
-
-            <div className="space-y-12">
-              {/* Dynamic Role Immersion */}
-              <div className="flex flex-col lg:flex-row items-center gap-8">
+          {/* Tab Content */}
+          <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-sm">
+            {activeHowTab === 0 && (
+              <div className="flex flex-col lg:flex-row gap-10 items-start">
                 <div className="lg:w-1/2">
-                  <div className="flex items-center mb-6">
-                    <span className="text-4xl mr-4">🎭</span>
-                    <h3 className="text-2xl font-bold text-gray-900">Dynamic Role Immersion</h3>
-                  </div>
-                  <p className="text-lg text-gray-700 mb-6">
-                    Step into authentic professional roles with complete contextual accuracy:
+                  <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>AI-Driven Role Immersion</h3>
+                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#374151', fontWeight: 600, marginBottom: '12px' }}>
+                    Step into authentic, professionally mapped scenarios that match your career path:
                   </p>
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Product Manager leading cross-functional teams through feature launches</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Management Consultant presenting strategic recommendations to C-suite executives</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Business Analyst facilitating stakeholder alignment meetings</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Team Lead navigating performance conversations and conflict resolution</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Client Success Manager handling escalations and relationship recovery</span>
-                    </li>
+                  <ul style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#4B5563', lineHeight: '1.9', paddingLeft: '20px', listStyleType: 'disc' }}>
+                    <li><strong>Product Managers</strong> leading tense cross-functional prioritization meetings</li>
+                    <li><strong>Consultants</strong> presenting recommendations to skeptical C-suite executives</li>
+                    <li><strong>Team Leads</strong> managing performance conversations and team conflict</li>
+                    <li><strong>Account Managers</strong> recovering trust after a service failure</li>
+                    <li><strong>First-Time Managers</strong> navigating the transition from peer to leader</li>
+                  </ul>
+                  <p className="mt-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#6B7280', lineHeight: '1.7' }}>
+                    Each scenario is built on industry role benchmarks and real workplace challenges, not generic case studies.
+                  </p>
+                </div>
+                <div className="lg:w-1/2">
+                  <img src={getAssetPath('/business-people-corporate-staff-meeting-with-envisional-graphic.jpg')} alt="AI Role Immersion" className="w-full h-72 object-cover rounded-xl shadow-md" />
+                </div>
+              </div>
+            )}
+            {activeHowTab === 1 && (
+              <div className="flex flex-col lg:flex-row gap-10 items-start">
+                <div className="lg:w-1/2">
+                  <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>Adaptive AI Intelligence</h3>
+                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#374151', fontWeight: 600, marginBottom: '12px' }}>
+                    Our AI doesn't follow scripts—it responds intelligently to your every choice:
+                  </p>
+                  <ul style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#4B5563', lineHeight: '1.9', paddingLeft: '20px', listStyleType: 'disc' }}>
+                    <li><strong>Contextual Awareness:</strong> Understands the nuances of each situation</li>
+                    <li><strong>Emotional Intelligence:</strong> Recognizes and responds to your communication style</li>
+                    <li><strong>Dynamic Difficulty:</strong> Adjusts complexity based on your performance</li>
+                    <li><strong>Authentic Reactions:</strong> Responds as real colleagues and stakeholders would</li>
                   </ul>
                 </div>
                 <div className="lg:w-1/2">
-                  <img 
-                    src={getAssetPath('/corporate_model_img.jpg')} 
-                    alt="Dynamic Role Immersion" 
-                    className="w-full h-80 object-cover rounded-2xl shadow-lg" 
-                  />
+                  <img src={getAssetPath('/AI_driven_customized_img.jpg')} alt="Adaptive AI" className="w-full h-72 object-cover rounded-xl shadow-md" />
                 </div>
               </div>
-
-              {/* Adaptive AI Intelligence */}
-              <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
+            )}
+            {activeHowTab === 2 && (
+              <div className="flex flex-col lg:flex-row gap-10 items-start">
                 <div className="lg:w-1/2">
-                  <div className="flex items-center mb-6">
-                    <span className="text-4xl mr-4">🧠</span>
-                    <h3 className="text-2xl font-bold text-gray-900">Adaptive AI Intelligence</h3>
-                  </div>
-                  <p className="text-lg text-gray-700 mb-6">
-                    Our proprietary AI doesn't just follow scripts—it responds intelligently to your every choice:
+                  <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>Behavioral Intelligence Tracking</h3>
+                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#374151', fontWeight: 600, marginBottom: '12px' }}>
+                    Advanced analytics measure the soft skills that matter most:
                   </p>
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Contextual Awareness:</strong> Understands the nuances of each situation</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Emotional Intelligence:</strong> Recognizes and responds to your communication style</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Dynamic Difficulty:</strong> Adjusts complexity based on your performance</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Authentic Reactions:</strong> Responds as real colleagues, clients, and stakeholders would</span>
-                    </li>
+                  <ul style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#4B5563', lineHeight: '1.9', paddingLeft: '20px', listStyleType: 'disc' }}>
+                    <li><strong>Communication Clarity:</strong> How effectively do you convey complex ideas?</li>
+                    <li><strong>Leadership Presence:</strong> Can you influence without authority?</li>
+                    <li><strong>Strategic Thinking:</strong> How well do you connect tactics to outcomes?</li>
+                    <li><strong>Adaptability:</strong> How gracefully do you pivot when circumstances change?</li>
                   </ul>
                 </div>
                 <div className="lg:w-1/2">
-                  <img 
-                    src={getAssetPath('/data_ai.jpg')} 
-                    alt="Adaptive AI Intelligence" 
-                    className="w-full h-80 object-cover rounded-2xl shadow-lg" 
-                  />
+                  <img src={getAssetPath('/data_ai.jpg')} alt="Behavioral Tracking" className="w-full h-72 object-cover rounded-xl shadow-md" />
                 </div>
               </div>
-
-              {/* Behavioral Intelligence Tracking */}
-              <div className="flex flex-col lg:flex-row items-center gap-8">
+            )}
+            {activeHowTab === 3 && (
+              <div className="flex flex-col lg:flex-row gap-10 items-start">
                 <div className="lg:w-1/2">
-                  <div className="flex items-center mb-6">
-                    <span className="text-4xl mr-4">📊</span>
-                    <h3 className="text-2xl font-bold text-gray-900">Behavioral Intelligence Tracking</h3>
-                  </div>
-                  <p className="text-lg text-gray-700 mb-6">
-                    Advanced analytics measure and develop the soft skills that matter most:
-                  </p>
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Communication Clarity:</strong> How effectively do you convey complex ideas?</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Emotional Intelligence:</strong> Do you read the room and respond appropriately?</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Leadership Presence:</strong> Can you influence without authority?</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Strategic Thinking:</strong> How well do you connect tactics to outcomes?</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Adaptability:</strong> How gracefully do you pivot when circumstances change?</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="lg:w-1/2">
-                  <img 
-                    src={getAssetPath('/datadriveninsights_ico.png')} 
-                    alt="Behavioral Intelligence" 
-                    className="w-full h-80 object-cover rounded-2xl shadow-lg" 
-                  />
-                </div>
-              </div>
-
-              {/* Real-Time Performance Coaching */}
-              <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
-                <div className="lg:w-1/2">
-                  <div className="flex items-center mb-6">
-                    <span className="text-4xl mr-4">🔄</span>
-                    <h3 className="text-2xl font-bold text-gray-900">Real-Time Performance Coaching</h3>
-                  </div>
-                  <p className="text-lg text-gray-700 mb-6">
+                  <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>Real-Time Coaching & Career Insights</h3>
+                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#374151', fontWeight: 600, marginBottom: '12px' }}>
                     Get immediate, actionable feedback that accelerates your growth:
                   </p>
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Moment-by-moment insights on your communication effectiveness</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Pattern recognition that identifies your natural strengths and blind spots</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Personalized development paths that target your specific growth areas</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Benchmarking against industry standards so you know where you stand</span>
-                    </li>
+                  <ul style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#4B5563', lineHeight: '1.9', paddingLeft: '20px', listStyleType: 'disc' }}>
+                    <li>Moment-by-moment insights on your communication effectiveness</li>
+                    <li>Pattern recognition that identifies your natural strengths and blind spots</li>
+                    <li>Personalized development paths targeting your specific growth areas</li>
+                    <li>Benchmarking against industry standards so you know where you stand</li>
                   </ul>
                 </div>
                 <div className="lg:w-1/2">
-                  <img 
-                    src={getAssetPath('/feedback_mentor.jpg')} 
-                    alt="Real-Time Performance Coaching" 
-                    className="w-full h-80 object-cover rounded-2xl shadow-lg" 
-                  />
+                  <img src={getAssetPath('/feedback_mentor.jpg')} alt="Real-Time Coaching" className="w-full h-72 object-cover rounded-xl shadow-md" />
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </section>
 
-      {/* The Persona Experience */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                The Persona Experience: What Sets Us Apart
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Not Simulation. Immersion.</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Other platforms give you scenarios to analyze. Persona gives you realities to navigate. You're not selecting from multiple choice options—you're responding naturally, thinking strategically, and adapting in real-time as situations evolve.
-                </p>
+      {/* ── Section 5: The Impact ── */}
+      <section className="relative py-20 overflow-hidden" style={{
+        backgroundImage: `url(${getAssetPath('/abstract-technical-wave-graphic-white-background.jpg')})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#ffffff',
+      }}>
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
+          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '48px' }}>
+            The Impact: Proven Results Across Learners and Institutions
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { number: '2.8X', label: 'improvement in professional confidence' },
+              { number: '65%', label: 'faster readiness for leadership and client-facing roles' },
+              { number: '50%', label: 'reduction in early-career performance gaps' },
+              { number: '70%', label: 'higher employer confidence in behavioral preparedness' },
+            ].map((stat, i) => (
+              <div key={i}>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '42px', color: '#1F57C7', marginBottom: '8px' }}>{stat.number}</p>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#4B5563', lineHeight: '1.5' }}>{stat.label}</p>
               </div>
-
-              <div className="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl border border-green-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Not Generic. Personalized.</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Every interaction adapts to your industry, role, experience level, and learning objectives. A healthcare consultant faces different challenges than a fintech analyst, and Persona knows the difference.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Not Individual. Relational.</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Professional success isn't about solo performance—it's about human dynamics. Persona helps you master the art of influence, negotiation, collaboration, and leadership through authentic interpersonal experiences.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Not Theoretical. Practical.</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Every scenario is grounded in real workplace challenges, drawn from actual professional situations that shape careers and drive business outcomes.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Transformational Outcomes */}
-      <section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Transformational Outcomes for Every User
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* For Students & New Graduates */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <div className="flex items-center mb-6">
-                  <span className="text-3xl mr-4">🎓</span>
-                  <h3 className="text-xl font-bold text-gray-900">For Students & New Graduates</h3>
-                </div>
-                <p className="text-lg font-semibold text-orange-600 mb-4">"Graduate job-ready, not just degree-ready"</p>
-                <ul className="space-y-3 text-gray-700 mb-6">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Experience multiple career paths before choosing your direction</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Build confidence through realistic workplace simulations</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Develop the professional presence employers seek</span>
-                  </li>
-                </ul>
-                <p className="text-sm font-semibold text-gray-900">Outcome: Start your career ahead of peers who learned the hard way</p>
-              </div>
-
-              {/* For Educational Institutions */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <div className="flex items-center mb-6">
-                  <span className="text-3xl mr-4">🏢</span>
-                  <h3 className="text-xl font-bold text-gray-900">For Educational Institutions</h3>
-                </div>
-                <p className="text-lg font-semibold text-orange-600 mb-4">"Transform employability from promise to proof"</p>
-                <ul className="space-y-3 text-gray-700 mb-6">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Offer students hands-on career preparation that employers value</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Provide measurable soft skills development alongside academic learning</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Generate placement success stories that enhance institutional reputation</span>
-                  </li>
-                </ul>
-                <p className="text-sm font-semibold text-gray-900">Outcome: Higher placement rates and stronger industry partnerships</p>
-              </div>
-
-              {/* For Working Professionals */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <div className="flex items-center mb-6">
-                  <span className="text-3xl mr-4">💼</span>
-                  <h3 className="text-xl font-bold text-gray-900">For Working Professionals</h3>
-                </div>
-                <p className="text-lg font-semibold text-orange-600 mb-4">"Level up without burning out"</p>
-                <ul className="space-y-3 text-gray-700 mb-6">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Practice high-stakes situations in a risk-free environment</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Develop leadership skills before taking on management roles</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Prepare for industry transitions with confidence</span>
-                  </li>
-                </ul>
-                <p className="text-sm font-semibold text-gray-900">Outcome: Faster promotions and smoother career transitions</p>
-              </div>
-
-              {/* For Employers & Recruiters */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <div className="flex items-center mb-6">
-                  <span className="text-3xl mr-4">🏭</span>
-                  <h3 className="text-xl font-bold text-gray-900">For Employers & Recruiters</h3>
-                </div>
-                <p className="text-lg font-semibold text-orange-600 mb-4">"See beyond the resume to real-world readiness"</p>
-                <ul className="space-y-3 text-gray-700 mb-6">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Assess candidates' behavioral competencies before hiring</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Identify high-potential talent through performance-based evaluation</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Reduce new hire training time and costs</span>
-                  </li>
-                </ul>
-                <p className="text-sm font-semibold text-gray-900">Outcome: Better hiring decisions and stronger team performance</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Science Behind the Magic */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                The Science Behind the Magic
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Advanced AI Architecture</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Natural Language Processing:</strong> Understands context, tone, and intent</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Behavioral Modeling:</strong> Predicts realistic human responses and reactions</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Learning Analytics:</strong> Tracks progress and optimizes experiences</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl border border-green-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Behavioral Science Foundation</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Competency Frameworks:</strong> Aligned with global industry standards</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Psychological Profiling:</strong> Based on validated assessment methodologies</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Performance Psychology:</strong> Incorporating principles of deliberate practice</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Quality Assurance</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Industry Expert Review:</strong> Scenarios validated by domain professionals</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Continuous Learning:</strong> AI models improved through user interactions</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Outcome Tracking:</strong> Long-term career impact measurement</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Now? Why Persona? */}
-      <section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Why Now? Why Persona?
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">The Employability Gap is Growing</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Traditional education excels at knowledge transfer but struggles with skill application. Graduates enter the workforce technically qualified but professionally unprepared. Persona bridges this gap.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Remote Work Changes Everything</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Virtual collaboration, digital communication, and distributed leadership require new competencies. Persona helps you master these modern workplace realities.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">AI Augments Human Value</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  As AI handles more routine tasks, uniquely human skills become more valuable. Persona helps you develop interpersonal intelligence that no machine can replicate.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Career Paths Are Accelerating</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Modern careers move faster than ever. You can't afford to learn through trial and error. Persona lets you make mistakes, learn lessons, and build expertise at the speed of ambition.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Persona Promise */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                The Persona Promise
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">For Learners:</h3>
-                <p className="text-gray-700 text-sm italic">
-                  "Walk into any room with the confidence of someone who belongs there."
-                </p>
-              </div>
-
-              <div className="text-center bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-2xl border border-green-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">For Educators:</h3>
-                <p className="text-gray-700 text-sm italic">
-                  "Graduate students who don't just have degrees—they have presence."
-                </p>
-              </div>
-
-              <div className="text-center bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-2xl border border-yellow-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">For Employers:</h3>
-                <p className="text-gray-700 text-sm italic">
-                  "Hire people who are ready to contribute from day one."
-                </p>
-              </div>
-
-              <div className="text-center bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">For Society:</h3>
-                <p className="text-gray-700 text-sm italic">
-                  "Bridge the gap between education and employment, creating a more skilled and confident workforce."
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="bg-gradient-to-r from-orange-400 to-yellow-500 py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Career Trajectory?
-            </h2>
-            <p className="text-xl mb-8 max-w-4xl mx-auto">
-              Skillzza Persona™ isn't just about preparing for your next role—it's about preparing for your best role. The future of career preparation isn't about learning what to do. It's about experiencing how to excel.
-            </p>
-            <p className="text-lg mb-8 max-w-3xl mx-auto">
-              Experience the difference between knowing about success and knowing how to succeed. Join thousands of professionals who've transformed their careers through the power of intelligent role-play simulation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                Start Your Persona Journey
-              </button>
-              <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
-                Book a Demo
-              </button>
-              <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
+      {/* ── Final CTA ── */}
+      <section className="py-20" style={{
+        backgroundImage: `url(${getAssetPath('/Group%2041612.png')})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#F59E0B',
+      }}>
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '40px', lineHeight: '48px', color: '#0F1114', marginBottom: '32px' }}>
+            Prepare for the Role,<br />Before You Step Into It
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center justify-center text-white font-semibold rounded-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: '15px',
+                padding: '16px 36px',
+                backgroundColor: '#1F57C7',
+                borderRadius: '8px',
+              }}
+            >
+              Start Your Journey
+            </Link>
+            <Link
+              to="/book-demo"
+              className="inline-flex items-center justify-center font-semibold rounded-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: '15px',
+                padding: '15px 36px',
+                backgroundColor: 'transparent',
+                color: '#0F1114',
+                border: '1.5px solid #0F1114',
+                borderRadius: '8px',
+              }}
+            >
+              Book a Demo
+            </Link>
           </div>
         </div>
       </section>

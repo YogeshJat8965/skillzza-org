@@ -121,7 +121,7 @@ export default function App() {
         <Route path="/insights/skillzza-live/:liveSlug" element={<SkillzzaLiveSessionPage />} />
         <Route path="/explore/job-simulations" element={<JobSimulationPage />} />
         <Route path="/explore/career-trajectory" element={<CareerTrajectory />} />
-        <Route path="/explore/skillzza-persona" element={<ProductComingSoon />} />
+        <Route path="/explore/skillzza-persona" element={<SkillzzaPersona />} />
         <Route path="/use-case/students" element={<StudentsUseCase />} />
         <Route path="/use-case/institutions" element={<InstitutionsUseCase />} />
         <Route path="/use-case/enterprises" element={<EnterprisesUseCase />} />
