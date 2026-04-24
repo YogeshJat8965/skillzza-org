@@ -595,6 +595,23 @@ function XperiencePlatformPage() {
           opacity: 0;
         }
         
+        @keyframes meshGradient {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        
+        .animated-mesh-bg {
+          background: linear-gradient(-45deg, #1F57C7, #5B2D8E, #1442A0, #713593);
+          background-size: 300% 300%;
+          animation: meshGradient 8s ease infinite;
+        }
+        
+        .glass-overlay {
+          background: radial-gradient(circle at top right, rgba(255,255,255,0.15), transparent 50%),
+                      radial-gradient(circle at bottom left, rgba(255,255,255,0.1), transparent 50%);
+        }
+        
         /* Section heading repeatable animation */
         .section-heading {
           opacity: 0;
@@ -1165,7 +1182,7 @@ function XperiencePlatformPage() {
             }}
           />
 
-          <div className="relative w-full py-6 md:py-8 lg:py-12 xl:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative lg:static w-full py-6 md:py-8 lg:py-12 xl:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="mb-6 md:mb-8 lg:mb-12">
               <div className="flex items-center gap-2 text-xs sm:text-sm lg:text-base" style={{ color: '#71717A' }}>
@@ -1178,16 +1195,16 @@ function XperiencePlatformPage() {
             </nav>
 
             {/* Main Content - Responsive Layout */}
-            <div className="flex flex-col lg:flex-row items-center lg:items-start xl:items-center gap-6 md:gap-8 lg:gap-4 xl:gap-0">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start xl:items-center gap-6 md:gap-8 lg:gap-4 xl:gap-0 lg:static">
               {/* Left Content */}
-              <div className="w-full lg:w-[55%] xl:w-1/2 space-y-4 md:space-y-6 lg:space-y-6 xl:space-y-8 z-10 pr-0 lg:pr-8 xl:pr-12">
+              <div className="w-full lg:w-[50%] xl:w-[45%] space-y-4 md:space-y-6 lg:space-y-6 xl:space-y-8 z-10 pr-0 lg:pr-8 xl:pr-12">
                 {/* Heading */}
                 <h1
                   className="hero-heading"
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: '500',
-                    fontSize: 'clamp(32px, 4vw, 48px)',
+                    fontSize: 'clamp(28px, 3.5vw, 40px)',
                     lineHeight: '1.2',
                     letterSpacing: 'clamp(-1.5px, -0.15vw, -2.1px)',
                     color: '#0F1114'
@@ -1206,8 +1223,8 @@ function XperiencePlatformPage() {
                     textAlign: 'left',
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: '500',
-                    fontSize: 'clamp(16px, 1.8vw, 24px)',
-                    lineHeight: 'clamp(24px, 2.5vw, 36px)',
+                    fontSize: 'clamp(14px, 1.4vw, 18px)',
+                    lineHeight: 'clamp(22px, 2vw, 28px)',
                     letterSpacing: '0px',
                     color: '#71717A',
                     opacity: 1
@@ -1242,7 +1259,7 @@ function XperiencePlatformPage() {
                   {/* Book Demo Link */}
                   <button
                     onClick={() => { window.location.href = contactUsPath }}
-                    className="hero-button text-xs sm:text-sm lg:text-base font-semibold underline whitespace-nowrap"
+                    className="hero-button text-xs sm:text-sm lg:text-base font-semibold underline whitespace-nowrap pt-[2px]"
                     style={{ color: '#71717A' }}
                   >
                     Book Demo
@@ -1251,11 +1268,11 @@ function XperiencePlatformPage() {
               </div>
 
               {/* Right Image - Responsive positioning */}
-              <div className="w-full lg:w-[45%] xl:w-1/2 relative z-10 lg:pr-0">
+              <div className="w-full lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-[46%] xl:w-[50%] 2xl:w-[45%] flex justify-end relative z-10 mt-8 lg:mt-0 lg:pr-0 pl-4 sm:pl-8 lg:pl-0">
                 <img
                   src={getAssetPath('/img/young-female-teacher-headphones-having-video-conference-call-with-teenage-girl-student-using-laptop-home-online-lesson-elearning-distance-remote-class.png')}
                   alt="Virtual Internship Platform"
-                  className="w-full h-auto shadow-xl md:shadow-2xl rounded-lg lg:rounded-l-lg lg:rounded-r-none hero-image"
+                  className="w-full h-auto max-h-[350px] lg:max-h-[500px] xl:max-h-[600px] object-cover object-left shadow-2xl rounded-l-xl lg:rounded-l-2xl hero-image"
                 />
               </div>
             </div>
@@ -1263,7 +1280,7 @@ function XperiencePlatformPage() {
         </section>
 
         {/* Platform Description Section */}
-        <section ref={platformSectionRef} className="w-full bg-white py-12 md:py-16 lg:py-20 xl:py-24">
+        <section ref={platformSectionRef} className="w-full bg-white py-6 md:py-8 lg:py-10 xl:py-12">
           <div className="w-full">
             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-16">
               {/* Left Image - No left padding */}
@@ -1281,8 +1298,8 @@ function XperiencePlatformPage() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: '500',
-                    fontSize: 'clamp(18px, 1.6vw, 24px)',
-                    lineHeight: 'clamp(28px, 3vw, 50px)',
+                    fontSize: 'clamp(16px, 1.4vw, 20px)',
+                    lineHeight: 'clamp(26px, 2.5vw, 40px)',
                     letterSpacing: '0px',
                     color: '#71717A',
                     textAlign: 'left'
@@ -1295,8 +1312,8 @@ function XperiencePlatformPage() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: '500',
-                    fontSize: 'clamp(18px, 1.6vw, 24px)',
-                    lineHeight: 'clamp(28px, 3vw, 50px)',
+                    fontSize: 'clamp(16px, 1.4vw, 20px)',
+                    lineHeight: 'clamp(26px, 2.5vw, 40px)',
                     letterSpacing: '0px',
                     color: '#71717A',
                     textAlign: 'left'
@@ -1310,15 +1327,15 @@ function XperiencePlatformPage() {
         </section>
 
         {/* Stakeholder Section */}
-        <section ref={stakeholderSectionRef} className="w-full bg-[#F9FAFB] py-12 md:py-16 lg:py-20 xl:py-24">
+        <section ref={stakeholderSectionRef} className="w-full bg-[#F9FAFB] py-6 md:py-8 lg:py-10 xl:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Heading */}
             <h2
-              className="section-heading text-center mb-8 md:mb-12 lg:mb-16"
+              className="section-heading text-center mb-4 md:mb-6 lg:mb-8"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '500',
-                fontSize: 'clamp(32px, 4vw, 48px)',
+                fontSize: 'clamp(28px, 3.5vw, 40px)',
                 lineHeight: 'clamp(32px, 4vw, 60px)',
                 color: '#000000'
               }}
@@ -1327,7 +1344,7 @@ function XperiencePlatformPage() {
             </h2>
 
             {/* Tabs */}
-            <div className="flex justify-center mb-8 md:mb-12 lg:mb-16">
+            <div className="flex justify-center mb-4 md:mb-6 lg:mb-8">
               <div className="flex flex-wrap justify-center gap-0 bg-[#F3F4F6] rounded-lg p-1">
                 {['Learners', 'Universities', 'Enterprises', 'Programs'].map((tab, index) => (
                   <button
@@ -1460,17 +1477,19 @@ function XperiencePlatformPage() {
 
                     {/* Back Face */}
                     <div
-                      className="absolute inset-0 overflow-hidden rounded-lg cursor-pointer bg-gradient-to-br from-[#1F57C7] to-[#1442A0] p-8 flex flex-col justify-center items-center"
+                      className="absolute inset-0 overflow-hidden rounded-lg cursor-pointer animated-mesh-bg p-8 flex flex-col justify-center items-center"
                       style={{
                         backfaceVisibility: 'hidden',
                         WebkitBackfaceVisibility: 'hidden',
                         transform: 'rotateY(180deg)',
-                        boxShadow: '0 20px 60px rgba(31, 87, 199, 0.3)'
+                        boxShadow: '0 20px 60px rgba(91, 45, 142, 0.4)'
                       }}
                       onClick={() => toggleCard(index)}
                     >
+                      <div className="absolute inset-0 glass-overlay pointer-events-none" />
+                      
                       <p
-                        className={`back-content text-white text-center ${flippedCards[index] ? '' : ''}`}
+                        className={`back-content relative z-10 text-white text-center ${flippedCards[index] ? '' : ''}`}
                         style={{
                           fontFamily: 'DM Sans, sans-serif',
                           fontWeight: '400',
@@ -1511,7 +1530,7 @@ function XperiencePlatformPage() {
         </section>
 
         {/* How It Helps Section */}
-        <section ref={howItHelpsRef} className="w-full bg-white py-12 md:py-16 lg:py-20 xl:py-24">
+        <section ref={howItHelpsRef} className="w-full bg-white py-6 md:py-8 lg:py-10 xl:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Main Heading */}
             <h2
@@ -1519,7 +1538,7 @@ function XperiencePlatformPage() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '600',
-                fontSize: 'clamp(32px, 4vw, 48px)',
+                fontSize: 'clamp(28px, 3.5vw, 40px)',
                 lineHeight: 'clamp(40px, 4.5vw, 72px)',
                 color: '#393939',
                 textTransform: 'capitalize',
@@ -1531,7 +1550,7 @@ function XperiencePlatformPage() {
 
             {/* Subheading */}
             <p
-              className="text-center mb-12 md:mb-16 lg:mb-20 help-subheading"
+              className="text-center mb-6 md:mb-8 lg:mb-10 help-subheading"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '400',
@@ -1569,9 +1588,9 @@ function XperiencePlatformPage() {
               ].map((card, index) => (
                 <div
                   key={index}
-                  className="bg-[#F4F4F5] rounded-lg p-8 md:p-10 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] help-card"
+                  className="bg-[#F4F4F5] rounded-lg p-6 md:p-8 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] help-card"
                   style={{
-                    minHeight: '320px',
+                    minHeight: '260px',
                     width: '100%'
                   }}
                 >
@@ -1579,22 +1598,22 @@ function XperiencePlatformPage() {
                   <img
                     src={getAssetPath(`/img/${card.icon}`)}
                     alt={card.title}
-                    className="mb-5 md:mb-6"
+                    className="mb-4 md:mb-5"
                     style={{
-                      width: '90px',
-                      height: '90px'
+                      width: '70px',
+                      height: '70px'
                     }}
                   />
 
                   {/* Card Title */}
                   <h3
-                    className="mb-3"
+                    className="mb-2"
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: '500',
-                      fontSize: 'clamp(24px, 2vw, 32px)',
-                      lineHeight: 'clamp(32px, 2.5vw, 40px)',
-                      letterSpacing: '-0.8px',
+                      fontSize: 'clamp(20px, 1.8vw, 26px)',
+                      lineHeight: 'clamp(28px, 2.2vw, 34px)',
+                      letterSpacing: '-0.5px',
                       color: '#000000'
                     }}
                   >
@@ -1606,9 +1625,9 @@ function XperiencePlatformPage() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: '300',
-                      fontSize: 'clamp(18px, 1.6vw, 24px)',
-                      lineHeight: 'clamp(26px, 2vw, 38px)',
-                      letterSpacing: '-0.6px',
+                      fontSize: 'clamp(16px, 1.3vw, 18px)',
+                      lineHeight: 'clamp(24px, 1.8vw, 28px)',
+                      letterSpacing: '-0.3px',
                       color: '#000000'
                     }}
                   >
@@ -1621,15 +1640,15 @@ function XperiencePlatformPage() {
         </section>
 
         {/* Key Platform Capabilities Section */}
-        <section ref={capabilitiesSectionRef} className="w-full bg-white py-12 md:py-16 lg:py-20 xl:py-24">
+        <section ref={capabilitiesSectionRef} className="w-full bg-white py-6 md:py-8 lg:py-10 xl:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Heading - Full Width */}
             <h2
-              className="mb-8 md:mb-10 lg:mb-12 capabilities-heading"
+              className="mb-4 md:mb-5 lg:mb-6 capabilities-heading"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '600',
-                fontSize: 'clamp(32px, 4vw, 48px)',
+                fontSize: 'clamp(28px, 3.5vw, 40px)',
                 lineHeight: 'clamp(40px, 4.5vw, 72px)',
                 color: '#393939',
                 textTransform: 'capitalize',
@@ -1737,15 +1756,15 @@ function XperiencePlatformPage() {
         </section>
 
         {/* Our Product Philosophy Section */}
-        <section ref={philosophySectionRef} className="w-full bg-white py-12 md:py-16 lg:py-20 xl:py-24">
+        <section ref={philosophySectionRef} className="w-full bg-white py-6 md:py-8 lg:py-10 xl:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Main Heading */}
             <h2
-              className="philosophy-heading text-center mb-12 md:mb-16"
+              className="philosophy-heading text-center mb-6 md:mb-8"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '600',
-                fontSize: 'clamp(32px, 4vw, 48px)',
+                fontSize: 'clamp(28px, 3.5vw, 40px)',
                 lineHeight: 'clamp(44px, 4.5vw, 72px)',
                 color: '#393939',
                 textTransform: 'capitalize',
@@ -1756,7 +1775,7 @@ function XperiencePlatformPage() {
             </h2>
 
             {/* Cards Grid */}
-            <div className="mb-8 md:mb-12">
+            <div className="mb-4 md:mb-6">
               <div className="overflow-hidden">
                 <div
                   className="flex transition-transform duration-700 ease-in-out gap-4 md:gap-6"
@@ -1766,13 +1785,13 @@ function XperiencePlatformPage() {
                     <div
                       key={index}
                       className="philosophy-card flex-shrink-0"
-                      style={{ width: 'calc(33.333% - 16px)', minWidth: '520px' }}
+                      style={{ width: 'calc(33.333% + 10px)', minWidth: '380px' }}
                     >
                       <div
-                        className="rounded-lg flex items-center justify-center"
+                        className="rounded-lg flex items-center justify-center p-6 md:p-8"
                         style={{
                           width: '100%',
-                          height: '319px',
+                          height: '240px',
                           backgroundColor: card.bgColor,
                           opacity: 0.73
                         }}
@@ -1846,7 +1865,7 @@ function XperiencePlatformPage() {
         </section>
 
         {/* How it Works Section */}
-        <section ref={worksRef} className="w-full bg-white py-12 md:py-16 lg:py-20 xl:py-24">
+        <section ref={worksRef} className="w-full bg-white py-6 md:py-8 lg:py-10 xl:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Main Heading */}
             <h2
@@ -1854,7 +1873,7 @@ function XperiencePlatformPage() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '600',
-                fontSize: 'clamp(32px, 4vw, 48px)',
+                fontSize: 'clamp(28px, 3.5vw, 40px)',
                 lineHeight: 'clamp(44px, 4.5vw, 74px)',
                 letterSpacing: '-1.6px',
                 color: '#0F1114'
@@ -1865,7 +1884,7 @@ function XperiencePlatformPage() {
 
             {/* Subheading */}
             <p
-              className="works-subheading text-center mb-12 md:mb-16"
+              className="works-subheading text-center mb-6 md:mb-8"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '400',
@@ -1879,7 +1898,7 @@ function XperiencePlatformPage() {
 
             {/* Steps Description */}
             <p
-              className="works-description mb-12 md:mb-16 ml-8 md:ml-12 lg:ml-16"
+              className="works-description mb-6 md:mb-8 ml-8 md:ml-12 lg:ml-16"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '500',
@@ -1943,21 +1962,21 @@ function XperiencePlatformPage() {
                       <div
                         className="flex-1 rounded-lg transition-all duration-300 flex flex-col justify-center bg-[#E6D6EF] group-hover:bg-[#F8F8FF] group-hover:justify-start"
                         style={{
-                          maxWidth: '526px',
-                          minHeight: '126px',
+                          maxWidth: '600px',
+                          minHeight: '90px',
                           border: '1px solid #FFFFFF',
                           borderRadius: '8px',
-                          padding: '24px'
+                          padding: '16px 24px'
                         }}
                       >
                         {/* Title - Always Visible */}
                         <h3
-                          className="transition-all duration-300 text-center group-hover:text-left"
+                          className="transition-all duration-300 text-center group-hover:text-left whitespace-nowrap"
                           style={{
                             fontFamily: 'DM Sans, sans-serif',
                             fontWeight: '600',
-                            fontSize: 'clamp(16px, 1.5vw, 20px)',
-                            lineHeight: '40px',
+                            fontSize: 'clamp(16px, 1.4vw, 19px)',
+                            lineHeight: '28px',
                             color: '#682D99'
                           }}
                         >
@@ -1970,7 +1989,7 @@ function XperiencePlatformPage() {
                           style={{
                             fontFamily: 'DM Sans, sans-serif',
                             fontWeight: '500',
-                            fontSize: 'clamp(16px, 1.4vw, 20px)',
+                            fontSize: 'clamp(15px, 1.3vw, 19px)',
                             lineHeight: '30px',
                             color: '#71717B'
                           }}
@@ -1984,12 +2003,12 @@ function XperiencePlatformPage() {
               </div>
 
               {/* Right Side - Image */}
-              <div className="works-image w-full lg:w-[70%] flex items-end justify-center lg:justify-end pt-4">
+              <div className="works-image w-full lg:w-[60%] flex items-center justify-center lg:justify-end pt-4 lg:-mr-16 xl:-mr-28">
                 <img
                   src={getAssetPath('/img/Mask Group 120.png')}
                   alt="How it Works Dashboard"
-                  className="w-full h-auto lg:w-auto"
-                  style={{ width: '760px', height: '519px', opacity: 1 }}
+                  className="w-full h-auto lg:w-auto object-contain"
+                  style={{ maxWidth: '850px', width: '100%', height: 'auto', opacity: 1 }}
                 />
               </div>
             </div>
@@ -2009,7 +2028,7 @@ function XperiencePlatformPage() {
         {/* Measured Impact Section */}
         <section
           ref={impactSectionRef}
-          className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
+          className="relative py-6 md:py-10 lg:py-12 overflow-hidden"
           style={{
             backgroundImage: getBackgroundImageUrl('/img/Mask Group 138.png'),
             backgroundSize: 'cover',
@@ -2034,11 +2053,11 @@ function XperiencePlatformPage() {
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             {/* Title */}
             <h2
-              className="text-center mb-16 md:mb-20 lg:mb-24"
+              className="text-center mb-6 md:mb-8 lg:mb-10"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',
-                fontSize: 'clamp(32px, 4vw, 48px)',
+                fontSize: 'clamp(28px, 3.5vw, 40px)',
                 lineHeight: '1.2',
                 color: '#000000',
                 letterSpacing: '0px'
@@ -2169,15 +2188,15 @@ function XperiencePlatformPage() {
         </section>
 
         {/* Technology Stack Section */}
-        <section ref={techStackRef} className="py-16 md:py-24 lg:py-32 bg-white">
+        <section ref={techStackRef} className="py-6 md:py-10 lg:py-12 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             {/* Title */}
             <h2
-              className="tech-heading text-center mb-16 md:mb-20"
+              className="tech-heading text-center mb-6 md:mb-8"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',
-                fontSize: 'clamp(32px, 4vw, 48px)',
+                fontSize: 'clamp(28px, 3.5vw, 40px)',
                 lineHeight: '1.2',
                 color: '#000000',
                 letterSpacing: '0px'
@@ -2219,13 +2238,13 @@ function XperiencePlatformPage() {
 
                       {/* Title */}
                       <h3
-                        className="mb-4"
+                        className="mb-3"
                         style={{
                           fontFamily: 'DM Sans, sans-serif',
                           fontWeight: '600',
-                          fontSize: '32px',
-                          lineHeight: '40px',
-                          letterSpacing: '-0.8px',
+                          fontSize: 'clamp(20px, 1.8vw, 24px)',
+                          lineHeight: 'clamp(28px, 2.4vw, 32px)',
+                          letterSpacing: '-0.5px',
                           color: '#000000',
                           textAlign: 'left'
                         }}
@@ -2237,10 +2256,10 @@ function XperiencePlatformPage() {
                       <p
                         style={{
                           fontFamily: 'DM Sans, sans-serif',
-                          fontWeight: '500',
-                          fontSize: '28px',
-                          lineHeight: '36px',
-                          letterSpacing: '-0.7px',
+                          fontWeight: '400',
+                          fontSize: 'clamp(16px, 1.4vw, 18px)',
+                          lineHeight: 'clamp(24px, 2vw, 28px)',
+                          letterSpacing: '-0.3px',
                           color: '#71717B',
                           textAlign: 'left'
                         }}
@@ -2286,7 +2305,7 @@ function XperiencePlatformPage() {
         {/* Prepare for the Role Section */}
         <section
           ref={ctaSectionRef}
-          className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
+          className="relative py-6 md:py-10 lg:py-12 overflow-hidden"
           style={{
             backgroundImage: getBackgroundImageUrl('/img/Group 41600.png'),
             backgroundSize: 'cover',
@@ -2302,8 +2321,8 @@ function XperiencePlatformPage() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '600',
-                fontSize: '48px',
-                lineHeight: '74px',
+                fontSize: 'clamp(28px, 3.5vw, 40px)',
+                lineHeight: 'clamp(38px, 4vw, 56px)',
                 letterSpacing: '-1.6px',
                 color: '#000000',
                 maxWidth: '1265px',
@@ -2315,7 +2334,7 @@ function XperiencePlatformPage() {
 
             {/* Subheading */}
             <p
-              className="cta-subheading text-center mb-12 md:mb-16"
+              className="cta-subheading text-center mb-6 md:mb-8"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '500',
@@ -2331,7 +2350,7 @@ function XperiencePlatformPage() {
             </p>
 
             {/* Center Image */}
-            <div className="cta-image flex justify-center mb-12 md:mb-16">
+            <div className="cta-image flex justify-center mb-6 md:mb-8">
               <img
                 src={getAssetPath('/img/Mask Group 122.png')}
                 alt="Platform Dashboard"

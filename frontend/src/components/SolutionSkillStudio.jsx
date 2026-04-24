@@ -154,7 +154,7 @@ const SolutionSkillStudio = () => {
     const activeTabColor = '#713593';
 
     return (
-        <section className="w-full pt-16 md:pt-24 lg:pt-32 pb-15" style={{ background: '#FFFFFF' }}>
+        <section className="w-full pt-8 md:pt-10 lg:pt-16 pb-15" style={{ background: '#FFFFFF' }}>
             {/* Hover style for tab buttons */}
             <style>{`
                 @keyframes fadeInDown {
@@ -254,7 +254,7 @@ const SolutionSkillStudio = () => {
             {/* Section Title */}
             <div
                 ref={titleRef}
-                className={`max-w-[1580px] w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-24 xl:px-32 text-center mb-8 md:mb-12 lg:mb-16 ${isVisible.title ? 'animate-fade-in-down' : 'opacity-0'}`}
+                className={`max-w-[1580px] w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-24 xl:px-32 text-center mb-6 md:mb-8 lg:mb-10 ${isVisible.title ? 'animate-fade-in-down' : 'opacity-0'}`}
             >
                 <h2
                     style={{
