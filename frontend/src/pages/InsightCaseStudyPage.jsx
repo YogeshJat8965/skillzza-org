@@ -233,13 +233,12 @@ const caseStudyContent = {
 }
 
 const SectionCard = ({ title, children, accent = '#CF2C2E' }) => (
-  <article
-    className="rounded-2xl border bg-white p-6 sm:p-8 shadow-[0_8px_24px_rgba(15,23,42,0.04)]"
-    style={{ borderColor: `${accent}33` }}
-  >
-    <span className="mb-3 inline-flex h-1.5 w-16 rounded-full" style={{ backgroundColor: `${accent}AA` }} />
-    <h3 className="font-['DM_Sans',sans-serif] text-[24px] leading-[1.25] font-bold text-[#0F172A] mb-4">{title}</h3>
-    <div className="font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#334155] space-y-4">
+  <article className="border-b border-gray-100 pb-10 last:border-0 last:pb-0">
+    <div className="flex items-center gap-4 mb-6">
+      <span className="h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
+      <h3 className="font-['League_Spartan',sans-serif] text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">{title}</h3>
+    </div>
+    <div className="font-['DM_Sans',sans-serif] text-[16px] md:text-[17px] leading-[1.85] text-[#334155] space-y-5">
       {children}
     </div>
   </article>
@@ -272,7 +271,7 @@ function InsightCaseStudyPage() {
 
   if (!data) {
     return (
-      <div style={{ backgroundColor: '#F8F9FA', minHeight: '100vh', paddingBottom: '100px' }}>
+      <div style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingBottom: '100px' }}>
         <Insights showHero={true} showContent={false} />
         <section className="w-full px-4 md:px-8 mt-8">
           <div className="max-w-[1000px] mx-auto rounded-2xl border border-[#E2E8F0] bg-white p-8 text-center">
@@ -298,7 +297,7 @@ function InsightCaseStudyPage() {
   const strategicSignals = isFirstCase ? data.keySuccessFactors.slice(0, 3) : data.keyTakeaways.slice(0, 3)
 
   return (
-    <div style={{ backgroundColor: '#F8F9FA', minHeight: '100vh', paddingBottom: '100px' }}>
+    <div style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingBottom: '100px' }}>
       <Insights showHero={true} showContent={false} />
 
       <section className="w-full px-4 md:px-8 mt-6">
@@ -355,9 +354,9 @@ function InsightCaseStudyPage() {
         </div>
       </section>
 
-      <section className="w-full px-4 md:px-8 mt-8">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="space-y-6">
+      <section className="w-full px-4 md:px-8 mt-8 mb-16">
+        <div className="max-w-[1000px] mx-auto">
+          <div className="space-y-12">
             {isFirstCase ? (
               <>
                 <SectionCard title="The Challenge" accent={accent}>
@@ -400,8 +399,8 @@ function InsightCaseStudyPage() {
                   <BulletList items={data.keySuccessFactors} dotColor={accent} />
                 </SectionCard>
 
-                <article className="rounded-2xl border bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
-                  <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Quick Snapshot</h3>
+                <article className="mt-10" style={{ borderColor: `${accent}33`, backgroundColor: '#F8FAFCCC' }}>
+                  <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-4">Quick Snapshot</h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     {data.highlights.map((item) => (
                       <div key={item.label} className="rounded-xl border p-3" style={{ borderColor: `${accent}2D`, backgroundColor: softAccent }}>
@@ -501,8 +500,8 @@ function InsightCaseStudyPage() {
                   <p className="mt-5">{data.closing}</p>
                 </SectionCard>
 
-                <article className="rounded-2xl border bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
-                  <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Quick Snapshot</h3>
+                <article className="mt-10" style={{ borderColor: `${accent}33`, backgroundColor: '#F8FAFCCC' }}>
+                  <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-4">Quick Snapshot</h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     {data.highlights.map((item) => (
                       <div key={item.label} className="rounded-xl border p-3" style={{ borderColor: `${accent}2D`, backgroundColor: softAccent }}>
@@ -515,7 +514,7 @@ function InsightCaseStudyPage() {
               </>
             )}
 
-            <article className="rounded-2xl border bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
+            <article className="rounded-2xl border p-6" style={{ borderColor: `${accent}33`, backgroundColor: softAccent }}>
               <p className="font-['DM_Sans',sans-serif] text-[13px] uppercase tracking-[0.08em] font-bold" style={{ color: accent }}>AI Readiness Signal</p>
               <ul className="mt-3 space-y-3 pl-0 list-none">
                 {strategicSignals.map((item) => (
@@ -527,32 +526,34 @@ function InsightCaseStudyPage() {
               </ul>
             </article>
 
-            <article className="rounded-2xl border bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
-              <p className="font-['DM_Sans',sans-serif] text-[14px] text-[#475569] mb-4">
+            <article className="rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm mt-8">
+              <p className="font-['DM_Sans',sans-serif] text-[15px] text-[#475569] mb-4">
                 Explore the other Skill Blueprint case study for a complete AI-powered workforce transformation perspective.
               </p>
-              <button
-                onClick={() =>
-                  navigate(
-                    caseSlug === 'ai-powered-reskilling-initiatives'
-                      ? '/insights/skill-blueprint/ai-in-personalized-learning-paths'
-                      : '/insights/skill-blueprint/ai-powered-reskilling-initiatives'
-                  )
-                }
-                className="w-full rounded-lg py-2.5 px-4 text-white font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2"
-                style={{ backgroundColor: accent }}
-              >
-                <Sparkles size={16} />
-                Open Other Case Study
-              </button>
-              <button
-                onClick={() => navigate('/insights/skill-blueprint')}
-                className="w-full mt-2.5 rounded-lg border py-2.5 px-4 font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2"
-                style={{ borderColor: accent, color: accent }}
-              >
-                <ArrowRight size={16} />
-                Back to Skill Blueprint
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
+                <button
+                  onClick={() =>
+                    navigate(
+                      caseSlug === 'ai-powered-reskilling-initiatives'
+                        ? '/insights/skill-blueprint/ai-in-personalized-learning-paths'
+                        : '/insights/skill-blueprint/ai-powered-reskilling-initiatives'
+                    )
+                  }
+                  className="rounded-lg py-2.5 px-6 text-white font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: accent }}
+                >
+                  <Sparkles size={16} />
+                  Open Other Case Study
+                </button>
+                <button
+                  onClick={() => navigate('/insights/skill-blueprint')}
+                  className="rounded-lg border py-2.5 px-6 font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
+                  style={{ borderColor: accent, color: accent }}
+                >
+                  <ArrowRight size={16} />
+                  Back to Skill Blueprint
+                </button>
+              </div>
             </article>
           </div>
         </div>

@@ -104,7 +104,7 @@ function SkillUnpluggedEpisodePage() {
 
   if (!episode) {
     return (
-      <div style={{ backgroundColor: '#F8F9FA', minHeight: '100vh', paddingBottom: '100px' }}>
+      <div style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingBottom: '100px' }}>
         <Insights showHero={true} showContent={false} />
         <section className="w-full px-4 md:px-8 mt-8">
           <div className="max-w-[980px] mx-auto rounded-2xl border border-[#E2E8F0] bg-white p-8 text-center">
@@ -191,89 +191,105 @@ function SkillUnpluggedEpisodePage() {
             </div>
           </div>
 
-          <div className="mt-6 space-y-5">
-            <article className="rounded-2xl border border-[#E7EAF0] bg-white p-6 sm:p-8 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
-              <h3 className="font-['DM_Sans',sans-serif] text-[24px] leading-[1.25] font-bold text-[#0F172A] mb-4">Episode Snapshot</h3>
-              <p className="font-['DM_Sans',sans-serif] text-[16px] leading-[1.8] text-[#334155]">
-                {episode.desc} This episode breaks down the operating realities, mindset shifts, and decision frameworks professionals need to stay relevant in an AI-shaped world.
-              </p>
+          <div className="mt-8 mb-16 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-8 items-start">
+            <div className="space-y-12">
+              <article className="border-b border-gray-100 pb-10 last:border-0 last:pb-0">
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
+                  <h3 className="font-['League_Spartan',sans-serif] text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Episode Snapshot</h3>
+                </div>
+                Episode Snapshot</h3>
+                <p className="font-['DM_Sans',sans-serif] text-[16px] leading-[1.8] text-[#334155]">
+                  {episode.desc} This episode breaks down the operating realities, mindset shifts, and decision frameworks professionals need to stay relevant in an AI-shaped world.
+                </p>
 
-              <div className="mt-6 flex items-end gap-1.5" aria-hidden="true">
-                {Array.from({ length: 18 }).map((_, index) => (
-                  <span
-                    key={`wave-${index}`}
-                    className="w-1.5 rounded-full"
-                    style={{
-                      height: `${10 + ((index * 7) % 28)}px`,
-                      backgroundColor: `${accent}${index % 2 === 0 ? '66' : 'AA'}`,
-                    }}
-                  />
-                ))}
+                <div className="mt-6 flex items-end gap-1.5" aria-hidden="true">
+                  {Array.from({ length: 18 }).map((_, index) => (
+                    <span
+                      key={`wave-${index}`}
+                      className="w-1.5 rounded-full"
+                      style={{
+                        height: `${10 + ((index * 7) % 28)}px`,
+                        backgroundColor: `${accent}${index % 2 === 0 ? '66' : 'AA'}`,
+                      }}
+                    />
+                  ))}
+                </div>
+              </article>
+
+              <article className="border-b border-gray-100 pb-10 last:border-0 last:pb-0">
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
+                  <h3 className="font-['League_Spartan',sans-serif] text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Key Takeaways</h3>
+                </div>
+                <ul className="space-y-3 pl-0 list-none">
+                  {context.takeaways.map((point) => (
+                    <li key={point} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#334155]">
+                      <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+
+              <article className="border-b border-gray-100 pb-10 last:border-0 last:pb-0">
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
+                  <h3 className="font-['League_Spartan',sans-serif] text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Discussion Prompts</h3>
+                </div>
+                <ul className="space-y-3 pl-0 list-none">
+                  {context.prompts.map((prompt) => (
+                    <li key={prompt} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#334155]">
+                      <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
+                      <span>{prompt}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+
+            <aside className="space-y-4">
+              <article
+                className="rounded-2xl border bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]"
+                style={{ borderColor: `${accent}33` }}
+              >
+                <p className="font-['DM_Sans',sans-serif] text-[13px] uppercase tracking-[0.08em] text-[#64748B] font-bold">Series Track</p>
+                <p className="mt-2 font-['DM_Sans',sans-serif] text-[18px] leading-[1.45] font-semibold text-[#0F172A]">{episode.category}</p>
+                <p className="mt-2 font-['DM_Sans',sans-serif] text-[15px] leading-[1.65] text-[#475569]">
+                  Episode {episode.id} of {skillUnpluggedEpisodes.length}
+                </p>
+
+                <button
+                  className="w-full sm:w-fit mt-4 rounded-xl px-6 py-2.5 text-white font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: accent }}
+                >
+                  <PlayCircle size={18} />
+                  Play Preview
+                </button>
+              </article>
+
+              {nextEpisode && (
+                <button
+                  onClick={() => navigate(`/insights/skill-unplugged-podcast/${nextEpisode.slug}`)}
+                  className="w-full rounded-2xl border p-5 text-left transition-colors hover:shadow-md"
+                  style={{ borderColor: `${accent}33`, backgroundColor: `${accent}11` }}
+                >
+                  <p className="font-['DM_Sans',sans-serif] text-[12px] uppercase tracking-[0.08em] font-bold" style={{ color: accent }}>Next Episode</p>
+                  <p className="mt-2 font-['DM_Sans',sans-serif] text-[18px] leading-[1.4] font-semibold text-[#0F172A]">{nextEpisode.title}</p>
+                  <p className="mt-2 font-['DM_Sans',sans-serif] text-[14px] leading-[1.6] text-[#475569]">{nextEpisode.subtitle}</p>
+                </button>
+              )}
+
+              <div className="flex">
+                <button
+                  onClick={() => navigate('/insights/skill-unplugged-podcast')}
+                  className="w-full sm:w-fit rounded-xl px-6 py-3 text-white font-['DM_Sans',sans-serif] font-semibold hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: accent }}
+                >
+                  Back to All Episodes
+                </button>
               </div>
-            </article>
-
-            <article className="rounded-2xl border border-[#E7EAF0] bg-white p-6 sm:p-8 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
-              <h3 className="font-['DM_Sans',sans-serif] text-[24px] leading-[1.25] font-bold text-[#0F172A] mb-4">Key Takeaways</h3>
-              <ul className="space-y-3 pl-0 list-none">
-                {context.takeaways.map((point) => (
-                  <li key={point} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#334155]">
-                    <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-
-            <article className="rounded-2xl border border-[#E7EAF0] bg-white p-6 sm:p-8 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
-              <h3 className="font-['DM_Sans',sans-serif] text-[24px] leading-[1.25] font-bold text-[#0F172A] mb-4">Discussion Prompts</h3>
-              <ul className="space-y-3 pl-0 list-none">
-                {context.prompts.map((prompt) => (
-                  <li key={prompt} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#334155]">
-                    <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
-                    <span>{prompt}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-
-            <article
-              className="rounded-2xl border bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]"
-              style={{ borderColor: `${accent}33` }}
-            >
-              <p className="font-['DM_Sans',sans-serif] text-[13px] uppercase tracking-[0.08em] text-[#64748B] font-bold">Series Track</p>
-              <p className="mt-2 font-['DM_Sans',sans-serif] text-[18px] leading-[1.45] font-semibold text-[#0F172A]">{episode.category}</p>
-              <p className="mt-2 font-['DM_Sans',sans-serif] text-[15px] leading-[1.65] text-[#475569]">
-                Episode {episode.id} of {skillUnpluggedEpisodes.length}
-              </p>
-
-              <button
-                className="w-full mt-4 rounded-xl px-4 py-2.5 text-white font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2"
-                style={{ backgroundColor: accent }}
-              >
-                <PlayCircle size={18} />
-                Play Preview
-              </button>
-            </article>
-
-            {nextEpisode && (
-              <button
-                onClick={() => navigate(`/insights/skill-unplugged-podcast/${nextEpisode.slug}`)}
-                className="w-full rounded-2xl border p-5 text-left transition-colors"
-                style={{ borderColor: `${accent}33`, backgroundColor: `${accent}11` }}
-              >
-                <p className="font-['DM_Sans',sans-serif] text-[12px] uppercase tracking-[0.08em] font-bold" style={{ color: accent }}>Next Episode</p>
-                <p className="mt-2 font-['DM_Sans',sans-serif] text-[18px] leading-[1.4] font-semibold text-[#0F172A]">{nextEpisode.title}</p>
-                <p className="mt-2 font-['DM_Sans',sans-serif] text-[14px] leading-[1.6] text-[#475569]">{nextEpisode.subtitle}</p>
-              </button>
-            )}
-
-            <button
-              onClick={() => navigate('/insights/skill-unplugged-podcast')}
-              className="w-full rounded-xl px-4 py-3 text-white font-['DM_Sans',sans-serif] font-semibold"
-              style={{ backgroundColor: accent }}
-            >
-              Back to All Episodes
-            </button>
+            </aside>
           </div>
         </div>
       </section>

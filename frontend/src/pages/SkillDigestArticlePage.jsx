@@ -213,7 +213,7 @@ function SkillDigestArticlePage() {
 
   if (!article) {
     return (
-      <div style={{ backgroundColor: '#F8F9FA', minHeight: '100vh', paddingBottom: '100px' }}>
+      <div style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingBottom: '100px' }}>
         <Insights showHero={true} showContent={false} />
         <section className="w-full px-4 md:px-8 mt-8">
           <div className="max-w-[980px] mx-auto rounded-2xl border border-[#E2E8F0] bg-white p-8 text-center">
@@ -425,7 +425,7 @@ function SkillDigestArticlePage() {
             </div>
 
             <aside className="digest-aside">
-              <div className="rounded-2xl border bg-white p-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
+              <div className="border-l-2 p-4" style={{ borderColor: accent }}>
                 <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Quick Highlights</h3>
                 <div className="digest-chip-grid">
                   {article.highlights.map((item) => (
@@ -434,7 +434,7 @@ function SkillDigestArticlePage() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border bg-white p-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
+              <div className="border-l-2 p-4" style={{ borderColor: accent }}>
                 <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Topic Map</h3>
                 <div className="space-y-2.5">
                   {article.sections.map((section, index) => (
@@ -451,26 +451,28 @@ function SkillDigestArticlePage() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border bg-white p-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)]" style={{ borderColor: `${accent}33` }}>
+              <div className="border-l-2 p-4" style={{ borderColor: accent }}>
                 <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Continue Reading</h3>
-                {nextArticle && (
+                <div className="flex flex-col gap-3">
+                  {nextArticle && (
+                    <button
+                      onClick={() => navigate(`/insights/skill-digest/${nextArticle[0]}`)}
+                      className="w-full sm:w-fit rounded-lg py-2.5 px-5 text-white font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+                      style={{ backgroundColor: accent }}
+                    >
+                      <BookMarked size={16} />
+                      Open Next Article
+                    </button>
+                  )}
                   <button
-                    onClick={() => navigate(`/insights/skill-digest/${nextArticle[0]}`)}
-                    className="w-full rounded-lg py-2.5 px-4 text-white font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2"
-                    style={{ backgroundColor: accent }}
+                    onClick={() => navigate('/insights/skill-digest')}
+                    className="w-full sm:w-fit rounded-lg border py-2.5 px-5 font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
+                    style={{ borderColor: accent, color: accent }}
                   >
-                    <BookMarked size={16} />
-                    Open Next Article
+                    <ArrowRight size={16} />
+                    Back to Skill Digest
                   </button>
-                )}
-                <button
-                  onClick={() => navigate('/insights/skill-digest')}
-                  className="w-full mt-2.5 rounded-lg border py-2.5 px-4 font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2"
-                  style={{ borderColor: accent, color: accent }}
-                >
-                  <ArrowRight size={16} />
-                  Back to Skill Digest
-                </button>
+                </div>
               </div>
             </aside>
           </div>

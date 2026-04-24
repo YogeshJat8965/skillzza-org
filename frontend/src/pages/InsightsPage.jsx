@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import Insights from '../components/Insights'
 import { skillUnpluggedEpisodes } from '../data/skillUnpluggedEpisodes'
 import { skillzzaLiveSessions } from '../data/skillzzaLiveSessions'
+import { aiTalentResearchHubCards } from '../data/aiTalentResearchHubCards'
 
 
 function ExpandableText({ text, limit = 155, onReadMore, forceReadMore = false }) {
@@ -208,7 +209,7 @@ function InsightsPage() {
       <section className="w-full px-4 md:px-8 mt-6 md:mt-8 pb-20">
         <div className="max-w-[1440px] mx-auto">
           {activeTab === 'Skill Blueprint' && (
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="flex flex-wrap gap-8">
               {[
                 {
                   id: 1,
@@ -227,16 +228,47 @@ function InsightsPage() {
                   subtitle: "Creating Custom Learning Journeys for Individual Career Growth",
                   desc: "Traditional one-size-fits-all training programs are giving way to hyper-personalized learning experiences powered by AI. These systems recognize that every learner has unique strengths, preferences, career goals, and learning patterns-and adapt accordingly.",
                   image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                },
+                {
+                  id: 3,
+                  tag: "SKILL BLUEPRINT",
+                  slug: 'redefining-student-success-ai-potential-mapping',
+                  title: "Redefining Student Success: How AI-Based Potential Mapping Helped a University Identify Hidden Talent Beyond Grades",
+                  subtitle: "Looking Beyond Traditional Metrics",
+                  desc: "Discover how a leading university utilized AI-based potential mapping to identify and nurture student talents that traditional grading systems overlooked, resulting in a more diverse, engaged, and successful student body.",
+                  image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                },
+                {
+                  id: 4,
+                  tag: "SKILL BLUEPRINT",
+                  slug: 'scores-to-skills-ai-inclusive-hiring',
+                  title: "From Scores to Skills: A Case Study on AI-Powered Assessments Driving Inclusive Hiring",
+                  subtitle: "Transforming the Recruitment Landscape",
+                  desc: "Learn how modern enterprises are shifting from traditional score-based filtering to AI-powered skill assessments, significantly improving hiring inclusivity, reducing bias, and finding the right organizational fit for every role.",
+                  image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                },
+                {
+                  id: 5,
+                  tag: "SKILL BLUEPRINT",
+                  slug: 'unlocking-career-pathways-ai-potential-meters',
+                  title: "Unlocking Career Pathways: How AI Potential Meters Are Guiding Students Toward Future-Ready Professions",
+                  subtitle: "Mapping Intrinsic Skills to Future Careers",
+                  desc: "Explore how AI Potential Meters are revolutionizing career guidance by analyzing students' intrinsic strengths and aligning them with emerging, future-ready professions, ensuring long-term career success and adaptability.",
+                  image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 }
-              ].map((card) => (
+              ].map((card) => {
+                const isClickable = card.id === 1 || card.id === 2;
+                return (
                 <div 
                   key={card.id} 
-                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1 cursor-pointer"
-                  role="button"
-                  tabIndex={0}
-                  onClick={() => openSkillBlueprintCaseStudy(card.slug)}
+                  className={`insight-card flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#F3F4F6] transition-all duration-400 ${
+                    isClickable ? "group hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] relative top-0 hover:-top-1 cursor-pointer" : ""
+                  }`}
+                  role={isClickable ? "button" : "article"}
+                  tabIndex={isClickable ? 0 : undefined}
+                  onClick={() => isClickable && openSkillBlueprintCaseStudy(card.slug)}
                   onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
+                    if (isClickable && (e.key === 'Enter' || e.key === ' ')) {
                       e.preventDefault();
                       openSkillBlueprintCaseStudy(card.slug);
                     }
@@ -247,10 +279,12 @@ function InsightsPage() {
                     <img 
                       src={card.image} 
                       alt={card.title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className={`w-full h-full object-cover transition-transform duration-700 ${isClickable ? 'group-hover:scale-110' : ''}`}
                     />
                     {/* Subtle gradient overlay on image */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    {isClickable && (
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    )}
                   </div>
                   
                   {/* Card Body */}
@@ -261,7 +295,7 @@ function InsightsPage() {
                       </span>
                     </div>
                     
-                    <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
+                    <h3 className={`font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 transition-colors duration-300 ${isClickable ? 'group-hover:text-[#E11313]' : ''}`}>
                       {card.title}
                     </h3>
 
@@ -272,21 +306,25 @@ function InsightsPage() {
                     )}
                     
                     <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-4">
-                      <ExpandableText
-                        text={card.desc}
-                        limit={210}
-                        forceReadMore={true}
-                        onReadMore={() => openSkillBlueprintCaseStudy(card.slug)}
-                      />
+                      {isClickable ? (
+                        <ExpandableText
+                          text={card.desc}
+                          limit={210}
+                          forceReadMore={true}
+                          onReadMore={() => openSkillBlueprintCaseStudy(card.slug)}
+                        />
+                      ) : (
+                        <p>{card.desc}</p>
+                      )}
                     </div>
                   </div>
                 </div>
-              ))}
+              )})}
             </div>
           )}
 
           {activeTab === 'The Skill Digest' && (
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="flex flex-wrap gap-8">
               {[
                 {
                   id: 1,
@@ -388,47 +426,12 @@ function InsightsPage() {
           )}
 
           {activeTab === 'AI Talent Research Hub' && (
-            <div className="flex flex-wrap justify-center gap-8">
-              {[
-                {
-                  id: 1,
-                  tag: "RESEARCH HUB",
-                  title: "AI Fluency as the New Digital Literacy",
-                  desc: "Discover why AI fluency is replacing traditional digital literacy as the core competency needed to thrive in the modern workplace.",
-                  image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 2,
-                  tag: "RESEARCH HUB",
-                  title: "Rise of Human + AI Hybrid Workforce Models",
-                  desc: "An exploration into how leading companies are restructuring teams to maximize synergy between human creativity and AI efficiency.",
-                  image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 3,
-                  tag: "RESEARCH HUB",
-                  title: "Agentic AI & Autonomous Workflows",
-                  desc: "Understand the shift from basic automation to agentic AI, where self-governing systems manage complex workflows to accelerate productivity.",
-                  image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 4,
-                  tag: "RESEARCH HUB",
-                  title: "AI Talent Shift Beyond Tech Roles (Blue-Collar + Infra Talent)",
-                  desc: "Analyzing the unexpected ways AI adoption is reshaping blue-collar industries and transforming infrastructure and operational roles.",
-                  image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                },
-                {
-                  id: 5,
-                  tag: "RESEARCH HUB",
-                  title: "Skills-First Hiring & AI-Driven Talent Evaluation",
-                  desc: "How AI-driven evaluations are permanently shifting the focus from resumes and pedigree to verified, demonstrable skills.",
-                  image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                }
-              ].map((card) => (
+            <div className="flex flex-wrap gap-8">
+              {aiTalentResearchHubCards.map((card) => (
                 <div 
                   key={card.id} 
-                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1"
+                  onClick={() => openResearchHubArticle(card.slug)}
+                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1 cursor-pointer"
                 >
                   <div className="w-full h-[250px] overflow-hidden relative">
                     <img 
@@ -460,7 +463,7 @@ function InsightsPage() {
           )}
 
           {activeTab === 'The Skill Unplugged Podcast Series (3R )' && (
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="flex flex-wrap gap-8">
               {skillUnpluggedEpisodes.map((card) => (
                 <div 
                   key={card.id} 
@@ -514,7 +517,7 @@ function InsightsPage() {
           )}
 
           {activeTab === 'Skillzza Live' && (
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="flex flex-wrap gap-8">
               {skillzzaLiveSessions.map((card) => (
                 <div 
                   key={card.id} 

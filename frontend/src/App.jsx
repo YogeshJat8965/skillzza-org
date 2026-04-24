@@ -48,6 +48,7 @@ import SkillzzaLiveSessionPage from './pages/SkillzzaLiveSessionPage'
 import JobSimulationPage from './pages/JobSimulationPage'
 import XperiencePlatformPage from './pages/XperiencePlatformPage'
 import AIHackNexPage from './pages/AIHackNexPage'
+import AITalentResearchHubDetailPage from './pages/AITalentResearchHubDetailPage'
 import ContactUs from './pages/ContactUs'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
@@ -115,6 +116,7 @@ export default function App() {
         <Route path="/insights/skill-digest" element={<InsightsPage />} />
         <Route path="/insights/skill-digest/:digestSlug" element={<SkillDigestArticlePage />} />
         <Route path="/insights/ai-talent-research-hub" element={<InsightsPage />} />
+        <Route path="/insights/ai-talent-research-hub/:articleSlug" element={<AITalentResearchHubDetailPage />} />
         <Route path="/insights/skill-unplugged-podcast" element={<InsightsPage />} />
         <Route path="/insights/skill-unplugged-podcast/:podcastSlug" element={<SkillUnpluggedEpisodePage />} />
         <Route path="/insights/skillzza-live" element={<InsightsPage />} />
