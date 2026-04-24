@@ -36,14 +36,14 @@ const navItems = [
     items: [
       {
         name: 'The Potential Meter',
-        link: null,
+        link: '/product/potential-meter',
         desc: 'AI skill assessment engine that maps strengths, career readiness & growth gaps.',
         pill: 'AI-powered',
         pillColor: 'red',
       },
       {
         name: 'Xperience Platform',
-        link: null,
+        link: '/product/xperience-platform',
         desc: 'Immersive job simulations across domains to build real skills & portfolios.',
         pill: 'Flagship',
         pillColor: 'purple',

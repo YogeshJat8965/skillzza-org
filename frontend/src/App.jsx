@@ -49,6 +49,7 @@ import JobSimulationPage from './pages/JobSimulationPage'
 import XperiencePlatformPage from './pages/XperiencePlatformPage'
 import AIHackNexPage from './pages/AIHackNexPage'
 import AITalentResearchHubDetailPage from './pages/AITalentResearchHubDetailPage'
+import PotentialMeterPage from './pages/PotentialMeterPage'
 import ContactUs from './pages/ContactUs'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
@@ -130,8 +131,8 @@ export default function App() {
         <Route path="/use-case/government" element={<GovernmentUseCase />} />
 
         <Route path="/product/hirenest" element={<ProductComingSoon />} />
-        <Route path="/product/potential-meter" element={<ProductComingSoon />} />
-        <Route path="/product/xperience-platform" element={<ProductComingSoon />} />
+        <Route path="/product/potential-meter" element={<PotentialMeterPage />} />
+        <Route path="/product/xperience-platform" element={<XperiencePlatformPage />} />
         <Route path="/product/talent-intelligence" element={<ProductComingSoon />} />
         <Route path="/product/ai-hacknex" element={<ProductComingSoon />} />
         <Route path="/academy" element={<Academy />} />
