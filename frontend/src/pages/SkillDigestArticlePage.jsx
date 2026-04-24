@@ -179,16 +179,18 @@ function getReadTime(article) {
 }
 
 const ArticleSection = ({ heading, paragraphs, index, accent }) => (
-  <article className="digest-section-card" style={{ borderColor: `${accent}30` }}>
+  <article className="digest-section-card" style={{ borderBottomColor: `${accent}30` }}>
     <div className="digest-section-head">
       <span className="digest-section-index" style={{ backgroundColor: `${accent}1A`, color: accent }}>
         {String(index + 1).padStart(2, '0')}
       </span>
       <h2>{heading}</h2>
     </div>
-    {paragraphs.map((p) => (
-      <p key={p}>{p}</p>
-    ))}
+    <div className="space-y-4">
+      {paragraphs.map((p) => (
+        <p key={p}>{p}</p>
+      ))}
+    </div>
   </article>
 )
 
@@ -259,22 +261,18 @@ function SkillDigestArticlePage() {
         .digest-main {
           display: flex;
           flex-direction: column;
-          gap: 16px;
+          gap: 36px;
         }
 
         .digest-section-card {
-          background: #ffffff;
-          border: 1px solid #e8edf5;
-          border-radius: 20px;
-          padding: 22px;
-          box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+          border-bottom: 1px solid #e8edf5;
+          padding-bottom: 32px;
           animation: digestFadeUp 0.55s ease-out both;
-          transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .digest-section-card:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+        .digest-section-card:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
         }
 
         .digest-section-head {
@@ -425,27 +423,27 @@ function SkillDigestArticlePage() {
             </div>
 
             <aside className="digest-aside">
-              <div className="border-l-2 p-4" style={{ borderColor: accent }}>
-                <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Quick Highlights</h3>
-                <div className="digest-chip-grid">
+              <div className="border-l-2 pl-5 py-1" style={{ borderColor: accent }}>
+                <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-4">Quick Highlights</h3>
+                <div className="space-y-3">
                   {article.highlights.map((item) => (
-                    <div key={item} className="digest-chip" style={{ borderColor: `${accent}30`, backgroundColor: `${accent}12` }}>{item}</div>
+                    <div key={item} className="font-['DM_Sans',sans-serif] text-[15px] font-medium text-[#475569]">{item}</div>
                   ))}
                 </div>
               </div>
 
-              <div className="border-l-2 p-4" style={{ borderColor: accent }}>
-                <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Topic Map</h3>
-                <div className="space-y-2.5">
+              <div className="border-l-2 pl-5 py-1" style={{ borderColor: accent }}>
+                <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-4">Topic Map</h3>
+                <div className="space-y-3">
                   {article.sections.map((section, index) => (
-                    <div key={section.heading} className="flex items-center gap-2.5">
+                    <div key={section.heading} className="flex items-start gap-3">
                       <span
-                        className="h-6 min-w-6 rounded-full inline-flex items-center justify-center text-[11px] font-bold"
+                        className="h-6 w-6 shrink-0 rounded-full inline-flex items-center justify-center text-[11px] font-bold mt-0.5"
                         style={{ backgroundColor: `${accent}1A`, color: accent }}
                       >
                         {index + 1}
                       </span>
-                      <p className="font-['DM_Sans',sans-serif] text-[13px] leading-[1.45] text-[#334155]">{section.heading}</p>
+                      <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[1.5] text-[#334155]">{section.heading}</p>
                     </div>
                   ))}
                 </div>

@@ -198,7 +198,6 @@ function SkillUnpluggedEpisodePage() {
                   <span className="h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
                   <h3 className="font-['League_Spartan',sans-serif] text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Episode Snapshot</h3>
                 </div>
-                Episode Snapshot</h3>
                 <p className="font-['DM_Sans',sans-serif] text-[16px] leading-[1.8] text-[#334155]">
                   {episode.desc} This episode breaks down the operating realities, mindset shifts, and decision frameworks professionals need to stay relevant in an AI-shaped world.
                 </p>

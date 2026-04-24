@@ -198,7 +198,6 @@ function SkillzzaLiveSessionPage() {
                   <span className="h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
                   <h3 className="font-['League_Spartan',sans-serif] text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Session Focus</h3>
                 </div>
-                <h3 className="font-['DM_Sans',sans-serif] text-[24px] leading-[1.25] font-bold text-[#0F172A] mb-4">Session Focus</h3>
                 <p className="font-['DM_Sans',sans-serif] text-[16px] leading-[1.8] text-[#334155]">
                   {session.desc} This live format is designed for active participation, practical translation, and immediate workplace application of AI skills.
                 </p>
@@ -217,24 +216,30 @@ function SkillzzaLiveSessionPage() {
                 </div>
               </article>
 
-              <article className="rounded-2xl border border-[#E7EAF0] bg-white p-6 sm:p-8 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
-                <h3 className="font-['DM_Sans',sans-serif] text-[24px] leading-[1.25] font-bold text-[#0F172A] mb-4">Learning Outcomes</h3>
-                <ul className="space-y-3 pl-0 list-none">
+              <article className="border-b border-gray-100 pb-10 last:border-0 last:pb-0">
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
+                  <h3 className="font-['League_Spartan',sans-serif] text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Learning Outcomes</h3>
+                </div>
+                <ul className="space-y-4 pl-0 list-none">
                   {context.takeaways.map((point) => (
-                    <li key={point} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#334155]">
-                      <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
+                    <li key={point} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[16px] leading-[1.8] text-[#334155]">
+                      <span className="mt-2.5 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
                       <span>{point}</span>
                     </li>
                   ))}
                 </ul>
               </article>
 
-              <article className="rounded-2xl border border-[#E7EAF0] bg-white p-6 sm:p-8 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
-                <h3 className="font-['DM_Sans',sans-serif] text-[24px] leading-[1.25] font-bold text-[#0F172A] mb-4">Hands-on Exercises</h3>
-                <ul className="space-y-3 pl-0 list-none">
+              <article className="border-b border-gray-100 pb-10 last:border-0 last:pb-0">
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
+                  <h3 className="font-['League_Spartan',sans-serif] text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Hands-on Exercises</h3>
+                </div>
+                <ul className="space-y-4 pl-0 list-none">
                   {context.exercises.map((exercise) => (
-                    <li key={exercise} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#334155]">
-                      <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
+                    <li key={exercise} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[16px] leading-[1.8] text-[#334155]">
+                      <span className="mt-2.5 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
                       <span>{exercise}</span>
                     </li>
                   ))}

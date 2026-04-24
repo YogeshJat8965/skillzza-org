@@ -111,6 +111,10 @@ function InsightsPage() {
     navigate(`/insights/skillzza-live/${slug}`, { replace: false });
   };
 
+  const openResearchHubArticle = (slug) => {
+    navigate(`/insights/ai-talent-research-hub/${slug}`, { replace: false });
+  };
+
   const insightTabs = [
     "Skill Blueprint",
     "The Skill Digest",
@@ -314,7 +318,11 @@ function InsightsPage() {
                           onReadMore={() => openSkillBlueprintCaseStudy(card.slug)}
                         />
                       ) : (
-                        <p>{card.desc}</p>
+                        <ExpandableText
+                          text={card.desc}
+                          limit={210}
+                          forceReadMore={true}
+                        />
                       )}
                     </div>
                   </div>
