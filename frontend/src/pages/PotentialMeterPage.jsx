@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import heroImg from '../assets/potentiometer/Mask Group 129.png';
 import measureImg from '../assets/potentiometer/Group 41603.png';
 import dashImg from '../assets/Xperience Platform – 1/Mask Group 120.png';
@@ -73,41 +74,75 @@ const tabData = {
   }
 };
 
+const faqData = [
+  {
+    question: 'What is the AI Potential Meter?',
+    answer: 'The AI Potential Meter is an AI-powered career intelligence platform that measures real-world performance capability, role fit, and career readiness,helping individuals and organizations make data-backed career and hiring decisions in minutes.'
+  },
+  {
+    question: 'How is this different from traditional aptitude or psychometric tests?',
+    answer: 'Traditional tests measure knowledge or personality. The AI Potential Meter evaluates applied skills, cognitive agility, behavior, and execution capability through scenario-based challenges that reflect real job conditions.'
+  },
+  {
+    question: 'Who should use the AI Potential Meter?',
+    answer: 'The platform is designed for students, working professionals, educational institutions, and employers who want accurate career clarity, better placement outcomes, and smarter talent decisions.'
+  },
+  {
+    question: 'How long does the assessment take and what do I receive?',
+    answer: 'The assessment takes 20–45 minutes. You receive a comprehensive Career Intelligence Report with role-fit scores, capability heat maps, skill gaps, and personalized growth recommendations.'
+  },
+  {
+    question: 'How accurate are the role-fit and career recommendations?',
+    answer: 'The platform maps performance data to 150+ roles and 2,000+ job tasks using real labor-market intelligence, delivering role-fit accuracy of 85% or higher.'
+  },
+  {
+    question: 'Can institutions and employers use this at scale?',
+    answer: 'Yes. Institutions can assess entire batches with centralized dashboards, and employers can screen or benchmark candidates and employees at scale, including API integration with ATS platforms.'
+  }
+];
+
 const AnimatedNumber = ({ end, duration = 2000, suffix = '' }) => {
   const [count, setCount] = useState(0);
-  const [hasTriggered, setHasTriggered] = useState(false);
+  const [isIntersecting, setIsIntersecting] = useState(false);
   const nodeRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting && !hasTriggered) {
-          setHasTriggered(true);
-        }
+        setIsIntersecting(entries[0].isIntersecting);
       },
       { threshold: 0.1 }
     );
     if (nodeRef.current) observer.observe(nodeRef.current);
     return () => observer.disconnect();
-  }, [hasTriggered]);
+  }, []);
 
   useEffect(() => {
-    if (!hasTriggered) return;
-    let startTime = null;
-    const animate = (time) => {
-      if (!startTime) startTime = time;
-      const progress = Math.min((time - startTime) / duration, 1);
-      // easeOut component
-      const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-      setCount(end * easeProgress);
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        setCount(end);
-      }
+    let animationFrameId;
+    
+    if (isIntersecting) {
+      let startTime = null;
+      const animate = (time) => {
+        if (!startTime) startTime = time;
+        const progress = Math.min((time - startTime) / duration, 1);
+        // easeOut component
+        const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        setCount(end * easeProgress);
+        if (progress < 1) {
+          animationFrameId = requestAnimationFrame(animate);
+        } else {
+          setCount(end);
+        }
+      };
+      animationFrameId = requestAnimationFrame(animate);
+    } else {
+      setCount(0);
+    }
+
+    return () => {
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
     };
-    requestAnimationFrame(animate);
-  }, [hasTriggered, end, duration]);
+  }, [isIntersecting, end, duration]);
 
   const isFloat = end % 1 !== 0;
   const displayValue = isFloat ? count.toFixed(1) : Math.floor(count);
@@ -119,6 +154,7 @@ export default function PotentialMeterPage() {
   const imgRef = useRef(null);
   const [imgHeight, setImgHeight] = useState(0);
   const [activeGetTab, setActiveGetTab] = useState('individuals');
+  const [activeFaq, setActiveFaq] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -154,18 +190,27 @@ export default function PotentialMeterPage() {
         />
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center text-center px-4 md:px-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 flex flex-col items-center text-center px-4 md:px-8"
+        >
 
           {/* Breadcrumb */}
           <div className="w-full max-w-[1400px] mb-3 text-left">
-            <span className="font-['DM_Sans',sans-serif] text-[13px] text-[#71717A]">
-              Home {'>'} Products {'>'} Potential Meter AI
+            <span className="font-['DM_Sans',sans-serif] text-[13px] text-[#71717A] flex items-center gap-2">
+              <Link to="/" className="hover:text-[#2563eb] transition-colors">Home</Link> 
+              <span className="text-[10px]">/</span> 
+              <span>Products</span> 
+              <span className="text-[10px]">/</span> 
+              <span className="font-medium text-[#0F1114]">Potential Meter AI</span>
             </span>
           </div>
 
           {/* Main Heading */}
           <h1
-            className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] max-w-[1118px] text-[48px] leading-[54px] md:text-[60px] md:leading-[66px] lg:text-[68px] lg:leading-[76px] tracking-[-1.9px] mb-3"
+            className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] max-w-[1118px] text-[36px] leading-[42px] md:text-[48px] md:leading-[54px] lg:text-[56px] lg:leading-[64px] tracking-[-1.5px] mb-3"
           >
             Stop Guessing <span className="text-[#2563eb]">Career Potential.</span>
             <br />
@@ -202,7 +247,12 @@ export default function PotentialMeterPage() {
           </div>
 
           {/* Hero Image */}
-          <div className="w-full max-w-[1400px] mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full max-w-[1400px] mx-auto"
+          >
             <img
               ref={imgRef}
               src={heroImg}
@@ -212,16 +262,22 @@ export default function PotentialMeterPage() {
                 if (imgRef.current) setImgHeight(imgRef.current.offsetHeight);
               }}
             />
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
       </section>
 
       {/* ── Statistics Section ── */}
       <section 
-        className="w-full flex-shrink-0 flex items-center justify-center bg-[#1F57C7] px-4 py-8 md:py-12"
+        className="w-full flex-shrink-0 flex items-center justify-center bg-[#1F57C7] px-4 py-6 md:py-8"
       >
-        <div className="max-w-[1400px] w-full flex flex-col items-center text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="max-w-[1400px] w-full flex flex-col items-center text-center"
+        >
           <h2 className="font-['DM_Sans',sans-serif] font-medium text-white text-[28px] leading-[36px] md:text-[40px] md:leading-[48px] tracking-[-0.5px] mb-3">
             Real Outcomes. Measurable Impact.
           </h2>
@@ -270,12 +326,18 @@ export default function PotentialMeterPage() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* ── Problem We Solve Section ── */}
-      <section className="w-full bg-white flex justify-center px-4 py-20 md:py-28">
-        <div className="max-w-[1200px] w-full flex flex-col items-center">
+      <section className="w-full bg-white flex justify-center px-4 py-10 md:py-14">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="max-w-[1200px] w-full flex flex-col items-center"
+        >
           
           <div className="text-center mb-16 max-w-[800px]">
             <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] text-[36px] md:text-[48px] tracking-[-1px] mb-4">
@@ -329,18 +391,30 @@ export default function PotentialMeterPage() {
             </div>
 
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* ── What We Measure Section ── */}
-      <section className="relative w-full py-16 md:py-24 bg-white overflow-hidden">
-        <div className="text-center mb-10 md:mb-16 relative z-20">
+      <section className="relative w-full py-10 md:py-14 bg-white overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-10 md:mb-16 relative z-20"
+        >
           <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#3C3C3C] text-[36px] md:text-[48px] tracking-[-1px]">
             What We Measure
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="relative w-full flex items-center min-h-[750px]">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8 }}
+          className="relative w-full flex items-center min-h-[750px]"
+        >
           {/* Background Image Container sticking to the right edge */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[65%] max-w-[1144px] h-[705px] hidden md:flex justify-end opacity-20 md:opacity-100">
              <img 
@@ -395,12 +469,18 @@ export default function PotentialMeterPage() {
 
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* ── How The Platform Works Section ── */}
-      <section className="w-full bg-white py-16 md:py-24">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-white py-10 md:py-14">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8"
+        >
           
           <h2 className="font-['DM_Sans',sans-serif] font-semibold text-center text-[#0F1114] text-[36px] md:text-[48px] tracking-[-1px] mb-12 md:mb-20">
             How The Platform Works
@@ -493,12 +573,18 @@ export default function PotentialMeterPage() {
             </div>
 
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* ── What You Get with Potential Meter Section ── */}
-      <section className="relative w-full py-16 md:py-24 bg-white overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
+      <section className="relative w-full py-10 md:py-14 bg-white overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5 }}
+          className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12"
+        >
           
           <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] text-[36px] md:text-[42px] tracking-[-1px] mb-4">
             What You Get with Potential Meter
@@ -526,10 +612,16 @@ export default function PotentialMeterPage() {
               </button>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Tab Content Container */}
-        <div className="relative w-full mx-auto flex flex-col lg:flex-row items-center border border-gray-100/0 min-h-[700px]">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative w-full mx-auto flex flex-col lg:flex-row items-center border border-gray-100/0 min-h-[700px]"
+        >
           
           {/* Active Content (Left Side) */}
           <div className="w-full lg:w-[55%] xl:w-[50%] pl-4 sm:pl-8 lg:pl-[6%] xl:pl-[12%] pr-4 sm:pr-8 lg:pr-8 pb-16 lg:pb-0 relative z-10">
@@ -621,7 +713,89 @@ export default function PotentialMeterPage() {
              />
           </div>
 
-        </div>
+        </motion.div>
+      </section>
+
+      {/* ── FAQ Section ── */}
+      <section className="w-full bg-white py-10 md:py-14">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8"
+        >
+          <div className="flex flex-col md:flex-row gap-12 md:gap-20">
+            
+            {/* Left side: Heading */}
+            <div className="w-full md:w-[35%] lg:w-[30%]">
+              <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] text-[40px] md:text-[52px] tracking-[-1px] md:sticky top-24">
+                FAQ's
+              </h2>
+            </div>
+
+            {/* Right side: Accordions */}
+            <div className="w-full md:w-[65%] lg:w-[70%]">
+              {faqData.map((faq, index) => (
+                <div key={index} className="border-b border-gray-100 last:border-0 py-6 pr-4">
+                  <button 
+                    className="w-full flex justify-between items-center text-left focus:outline-none group"
+                    onClick={() => setActiveFaq(activeFaq === index ? null : index)}
+                  >
+                    <span className="font-['DM_Sans',sans-serif] font-semibold text-[#000000] text-[18px] md:text-[20px] pr-8 group-hover:text-[#2563eb] transition-colors">
+                      {faq.question}
+                    </span>
+                    <span className="flex-shrink-0 text-black group-hover:text-[#2563eb] transition-colors">
+                      {activeFaq === index ? (
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                      ) : (
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      )}
+                    </span>
+                  </button>
+                  <div className={`overflow-hidden transition-all duration-300 ease-in-out ${activeFaq === index ? 'max-h-[300px] mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <p className="font-['DM_Sans',sans-serif] font-normal text-[#71717B] text-[16px] leading-[28px] pr-4 md:pr-12">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ── Call To Action Section ── */}
+      <section className="w-full bg-[#FBA93E] py-10 md:py-16 px-4 flex flex-col items-center justify-center text-center mt-auto overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="w-full flex flex-col items-center justify-center"
+        >
+          <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] tracking-[-1.5px] mb-4 md:mb-5">
+            Upskill Smarter. Learn Faster.<br />Lead Confidently.
+          </h2>
+          <p className="font-['DM_Sans',sans-serif] font-medium text-[#0F1114] text-[18px] md:text-[22px] leading-[1.4] mb-7 md:mb-9">
+            Skillzza Academy doesn't just teach skills<br />we build careers, capability, and confidence for the next decade.
+          </p>
+
+          <button className="bg-[#2563eb] hover:bg-[#1d4ed8] transition-colors text-white font-['DM_Sans',sans-serif] font-semibold text-[15px] md:text-[16px] w-[260px] md:w-[320px] py-4 rounded-md mb-6 md:mb-8">
+            Apply Now
+          </button>
+
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 font-['DM_Sans',sans-serif] font-bold text-[13px] md:text-[15px] text-[#0F1114]">
+            <span className="cursor-pointer hover:opacity-70 transition-opacity">Talk to an Academic Advisor</span>
+            <span className="text-[16px] md:text-[18px] font-medium opacity-80">|</span>
+            <span className="cursor-pointer hover:opacity-70 transition-opacity">Download Academy Brochure</span>
+          </div>
+        </motion.div>
       </section>
 
     </div>
