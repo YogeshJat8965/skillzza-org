@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { getAssetPath, getRoutePath } from '../utils/assets';
-
+import xperienceImg from '../assets/WhatsApp Image 2026-04-27 at 12.39.51 AM.jpeg';
+import aiHackNexImg from '../assets/AI Hacknex/image copy.png';
+import talentImg from '../assets/AI Hacknex/image copy 2.png';
 const SolutionSkillStudio = () => {
     const [activeTab, setActiveTab] = useState(0);
     const [scaledButton, setScaledButton] = useState(0);
@@ -81,7 +83,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Start Your Journey',
             cta2: 'Explore Simulations',
-            image: getAssetPath('/improvements/photo-female-office-worker-sitting-desk-with-laptop-clipboard-high-quality-photo.jpg'),
+            image: xperienceImg,
         },
         {
             label: 'Talent Transformation',
@@ -95,7 +97,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Transform Your Team',
             cta2: 'View Programs',
-            image: getAssetPath('/improvements/image copy.png'),
+            image: talentImg,
         },
         {
             label: 'AI HackNex',
@@ -109,7 +111,7 @@ const SolutionSkillStudio = () => {
             ],
             cta1: 'Join a Challenge',
             cta2: 'View Past Hackathons',
-            image: getAssetPath('/improvements/image.png'),
+            image: aiHackNexImg,
         },
         {
             label: 'Hirenest Recruit',

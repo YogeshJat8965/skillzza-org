@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getAssetPath } from '../utils/assets';
-
+import adaptiveAiImg from '../assets/skill persona/image.png';
 const SkillzzaPersona = () => {
   const heroRef = useRef(null);
   const [activeHowTab, setActiveHowTab] = useState(0);
@@ -399,7 +399,7 @@ const SkillzzaPersona = () => {
                   </ul>
                 </div>
                 <div className="lg:w-1/2">
-                  <img src={getAssetPath('/AI_driven_customized_img.jpg')} alt="Adaptive AI" className="w-full h-72 object-cover rounded-xl shadow-md" />
+                  <img src={adaptiveAiImg} alt="Adaptive AI" className="w-full h-72 object-cover rounded-xl shadow-md" />
                 </div>
               </div>
             )}
