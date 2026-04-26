@@ -216,7 +216,7 @@ function SkillDigestArticlePage() {
   if (!article) {
     return (
       <div style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingBottom: '100px' }}>
-        <Insights showHero={true} showContent={false} />
+
         <section className="w-full px-4 md:px-8 mt-8">
           <div className="max-w-[980px] mx-auto rounded-2xl border border-[#E2E8F0] bg-white p-8 text-center">
             <h1 className="font-['DM_Sans',sans-serif] text-[30px] font-bold text-[#0F172A] mb-3">Article not found</h1>
@@ -237,7 +237,7 @@ function SkillDigestArticlePage() {
 
   return (
     <div style={{ backgroundColor: '#F6F8FB', minHeight: '100vh', paddingBottom: '100px' }}>
-      <Insights showHero={true} showContent={false} />
+
 
       <style>{`
         .digest-hero {

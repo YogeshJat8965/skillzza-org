@@ -20,7 +20,7 @@ const AITalentResearchHub = () => {
               AI TALENT RESEARCH HUB
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
-              2025 AI Talent & Salary Benchmark Report
+              2026 AI Talent & Salary Benchmark Report
             </h1>
             <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
               Global Insights into AI/ML Recruitment Trends, Compensation Patterns, and Emerging Hot Skills

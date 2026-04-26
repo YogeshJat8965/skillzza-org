@@ -9,7 +9,7 @@ const SchoolOfTechnology = () => {
     description: false,
     expertiseHeading: false,
     tags: false,
-  });  
+  });
   const [showPopup, setShowPopup] = useState(false);
   const imageRef = useRef(null);
   const headingRef = useRef(null);
@@ -210,155 +210,155 @@ const SchoolOfTechnology = () => {
           <div className="sot-scale-content">
             <div className="max-w-[1920px] mx-auto">
               <div className="sot-row flex flex-col md:flex-row items-center gap-6 md:gap-12">
-            {/* Left Side - Image */}
-            <div
-              ref={imageRef}
-              className={`sot-image ${isVisible.image ? 'animate-slide-in-left' : 'opacity-0'}`}
-              style={{
-                left: '0px',
-                width: '600px',
-                height: '615px',
-                background: `transparent url(${getAssetPath('/img/Group%2037833.png')}) 0% 0% no-repeat padding-box`,
-                backgroundSize: 'contain',
-                opacity: 1,
-              }}
-            >
-            </div>
-
-            {/* Right Side - Content */}
-            <div className="sot-content flex-1 px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
-              {/* Main Heading */}
-              <h2
-                ref={headingRef}
-                className={`sot-heading mb-4 ${isVisible.heading ? 'animate-fade-in-right' : 'opacity-0'}`}
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '42px',
-                  fontWeight: 700,
-                  lineHeight: '1.2',
-                  color: '#0F1114',
-                }}
-              >
-                School of Technology
-              </h2>
-
-              {/* Subheading */}
-              <h3
-                ref={subheadingRef}
-                className={`sot-subheading mb-6 ${isVisible.subheading ? 'animate-fade-in-right delay-100' : 'opacity-0'}`}
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '22px',
-                  fontWeight: 600,
-                  lineHeight: '1.2',
-                  color: '#71717B',
-                }}
-              >
-                Elevate Your Expertise with Future-Ready Skills
-              </h3>
-
-              {/* Description */}
-              <p
-                ref={descriptionRef}
-                className={`sot-description mb-12 ${isVisible.description ? 'animate-fade-in-up delay-200' : 'opacity-0'}`}
-                style={{
-                  fontFamily: "'Lato', sans-serif",
-                  fontSize: '17px',
-                  fontWeight: 400,
-                  lineHeight: '1.6',
-                  color: '#71717B',
-                }}
-              >
-                Experience the perfect blend of theoretical knowledge and practical application. Our programs don't just teach you to adapt to change, they position you to lead transformation in your field.
-              </p>
-
-              {/* Areas of Expertise */}
-              <h4
-                ref={expertiseHeadingRef}
-                className={`sot-expertise-heading mb-6 ${isVisible.expertiseHeading ? 'animate-fade-in-right delay-300' : 'opacity-0'}`}
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '22px',
-                  fontWeight: 700,
-                  lineHeight: '1.2',
-                  color: '#0F1114',
-                }}
-              >
-                Areas of Expertise
-              </h4>
-
-              {/* Tags/Pills */}
-              <div
-                ref={tagsRef}
-                className={`flex flex-wrap gap-3 md:gap-4 ${isVisible.tags ? 'animate-pop-in delay-400' : 'opacity-0'}`}
-              >
+                {/* Left Side - Image */}
                 <div
-                  onClick={() => setShowPopup(true)}
-                  className="sot-tag cursor-pointer hover:opacity-80 transition-opacity"
+                  ref={imageRef}
+                  className={`sot-image ${isVisible.image ? 'animate-slide-in-left' : 'opacity-0'}`}
                   style={{
-                    background: '#D4EDFA',
-                    borderRadius: '25px',
-                    padding: '12px 24px',
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '16px',
-                    fontWeight: 500,
-                    color: '#0F1114',
+                    left: '0px',
+                    width: '600px',
+                    height: '615px',
+                    background: `transparent url(${getAssetPath('/img/Group%2037833.png')}) 0% 0% no-repeat padding-box`,
+                    backgroundSize: 'contain',
+                    opacity: 1,
                   }}
                 >
-                  AI & Quantum
                 </div>
-                <a
-                  href="https://globalschoolofsustainability.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="sot-tag cursor-pointer hover:opacity-80 transition-opacity"
-                  style={{
-                    background: '#D4EDFA',
-                    borderRadius: '25px',
-                    padding: '12px 24px',
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '16px',
-                    fontWeight: 500,
-                    color: '#0F1114',
-                    textDecoration: 'none'
-                  }}
-                >
-                  Sustainability & Climate Action
-                </a>
-                <div
-                  onClick={() => setShowPopup(true)}
-                  className="sot-tag cursor-pointer hover:opacity-80 transition-opacity"
-                  style={{
-                    background: '#D4EDFA',
-                    borderRadius: '25px',
-                    padding: '12px 24px',
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '16px',
-                    fontWeight: 500,
-                    color: '#0F1114',
-                  }}
-                >
-                  Aerial Intelligence
-                </div>
-                <div
-                  onClick={() => setShowPopup(true)}
-                  className="sot-tag cursor-pointer hover:opacity-80 transition-opacity"
-                  style={{
-                    background: '#D4EDFA',
-                    borderRadius: '25px',
-                    padding: '12px 24px',
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '16px',
-                    fontWeight: 500,
-                    color: '#0F1114',
-                  }}
-                >
-                  Design Thinking
+
+                {/* Right Side - Content */}
+                <div className="sot-content flex-1 px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
+                  {/* Main Heading */}
+                  <h2
+                    ref={headingRef}
+                    className={`sot-heading mb-4 ${isVisible.heading ? 'animate-fade-in-right' : 'opacity-0'}`}
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: '42px',
+                      fontWeight: 700,
+                      lineHeight: '1.2',
+                      color: '#0F1114',
+                    }}
+                  >
+                    School of Technology
+                  </h2>
+
+                  {/* Subheading */}
+                  <h3
+                    ref={subheadingRef}
+                    className={`sot-subheading mb-6 ${isVisible.subheading ? 'animate-fade-in-right delay-100' : 'opacity-0'}`}
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: '22px',
+                      fontWeight: 600,
+                      lineHeight: '1.2',
+                      color: '#71717B',
+                    }}
+                  >
+                    Elevate Your Expertise with Future-Ready Skills
+                  </h3>
+
+                  {/* Description */}
+                  <p
+                    ref={descriptionRef}
+                    className={`sot-description mb-12 ${isVisible.description ? 'animate-fade-in-up delay-200' : 'opacity-0'}`}
+                    style={{
+                      fontFamily: "'Lato', sans-serif",
+                      fontSize: '17px',
+                      fontWeight: 400,
+                      lineHeight: '1.6',
+                      color: '#71717B',
+                    }}
+                  >
+                    Experience the perfect blend of theoretical knowledge and practical application. Our programs don't just teach you to adapt to change, they position you to lead transformation in your field.
+                  </p>
+
+                  {/* Areas of Expertise */}
+                  <h4
+                    ref={expertiseHeadingRef}
+                    className={`sot-expertise-heading mb-6 ${isVisible.expertiseHeading ? 'animate-fade-in-right delay-300' : 'opacity-0'}`}
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: '22px',
+                      fontWeight: 700,
+                      lineHeight: '1.2',
+                      color: '#0F1114',
+                    }}
+                  >
+                    Areas of Expertise
+                  </h4>
+
+                  {/* Tags/Pills */}
+                  <div
+                    ref={tagsRef}
+                    className={`flex flex-wrap gap-3 md:gap-4 ${isVisible.tags ? 'animate-pop-in delay-400' : 'opacity-0'}`}
+                  >
+                    <div
+                      onClick={() => setShowPopup(true)}
+                      className="sot-tag cursor-pointer hover:opacity-80 transition-opacity"
+                      style={{
+                        background: '#D4EDFA',
+                        borderRadius: '25px',
+                        padding: '12px 24px',
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: '16px',
+                        fontWeight: 500,
+                        color: '#0F1114',
+                      }}
+                    >
+                      AI & Quantum
+                    </div>
+                    <a
+                      href="https://globalschoolofsustainability.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="sot-tag cursor-pointer hover:opacity-80 transition-opacity"
+                      style={{
+                        background: '#D4EDFA',
+                        borderRadius: '25px',
+                        padding: '12px 24px',
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: '16px',
+                        fontWeight: 500,
+                        color: '#0F1114',
+                        textDecoration: 'none'
+                      }}
+                    >
+                      Sustainability & Climate Action
+                    </a>
+                    <div
+                      onClick={() => setShowPopup(true)}
+                      className="sot-tag cursor-pointer hover:opacity-80 transition-opacity"
+                      style={{
+                        background: '#D4EDFA',
+                        borderRadius: '25px',
+                        padding: '12px 24px',
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: '16px',
+                        fontWeight: 500,
+                        color: '#0F1114',
+                      }}
+                    >
+                      Aerial Intelligence
+                    </div>
+                    <div
+                      onClick={() => setShowPopup(true)}
+                      className="sot-tag cursor-pointer hover:opacity-80 transition-opacity"
+                      style={{
+                        background: '#D4EDFA',
+                        borderRadius: '25px',
+                        padding: '12px 24px',
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: '16px',
+                        fontWeight: 500,
+                        color: '#0F1114',
+                      }}
+                    >
+                      Design Thinking
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          </div>
           </div>
         </div>
       </section>
@@ -373,7 +373,7 @@ const SchoolOfTechnology = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2 font-['DM_Sans']">Coming Soon!</h3>
               <p className="text-gray-600 mb-6 font-['Lato']">We're working hard to bring this area of expertise to you. Stay tuned!</p>
-              <button 
+              <button
                 onClick={() => setShowPopup(false)}
                 className="px-6 py-2 bg-[#713593] text-white rounded-full font-semibold hover:bg-opacity-90 transition-colors font-['DM_Sans']"
               >

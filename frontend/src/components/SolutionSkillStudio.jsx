@@ -381,10 +381,10 @@ const SolutionSkillStudio = () => {
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
                             <button
-                                className="sss-cta transition-all duration-300 hover:opacity-90"                                onClick={() => {
+                                className="sss-cta transition-all duration-300 hover:opacity-90" onClick={() => {
                                     if (activeTab === 0) window.location.href = getRoutePath('/product/potential-meter');
                                     if (activeTab === 2) window.location.href = getRoutePath('/contact-us');
-                                }}                                style={{
+                                }} style={{
                                     fontFamily: "'DM Sans', sans-serif",
                                     fontSize: '15px',
                                     fontWeight: 600,

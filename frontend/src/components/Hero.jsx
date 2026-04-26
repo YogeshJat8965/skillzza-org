@@ -38,13 +38,13 @@ const Hero = () => {
   ];
 
   const stripStyle = {
-    width: isMobile ? '320px' : '606px',
+    width: 'max-content',
     height: isMobile ? '68px' : '82px',
     borderRadius: '8px',
     background: 'rgba(255, 255, 255, 0.9)',
     display: 'flex',
     alignItems: 'center',
-    padding: isMobile ? '12px 16px' : '16px 24px',
+    padding: isMobile ? '12px 20px' : '16px 28px',
     gap: isMobile ? '12px' : '16px',
     boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
     flexShrink: 0,
@@ -61,6 +61,7 @@ const Hero = () => {
     fontWeight: '500',
     color: '#6B7280',
     lineHeight: '1.4',
+    whiteSpace: 'nowrap',
   };
 
   const renderStripSet = (keyPrefix) => (

@@ -13,15 +13,13 @@ const footerSections = [
   {
     title: 'Platforms',
     links: [
-      { name: 'The Potential Meter AI', href: '/product/potential-meter' },
+      { name: 'The Potential Meter', href: '/product/potential-meter' },
       { name: 'Xperience Platform', href: '/product/xperience-platform' },
       { name: 'Talent Transformation', href: '/product/talent-intelligence' },
       { name: 'AI Hacknex', href: '/product/ai-hacknex' },
       { name: 'Hirenest', href: '/product/hirenest' },
       { name: 'Agentic AI', href: '/product/ai-hacknex' },
       { name: 'Skill Persona', href: '/product/ai-hacknex' },
-
-      // { name: 'AI Talent Intelligence', href: '/product/talent-intelligence' },
     ],
   },
   // {
@@ -36,19 +34,18 @@ const footerSections = [
   {
     title: 'School of Technology',
     links: [
-      { name: 'ByteMinds–The School of AI & Data', href: '/academy/byteminds' },
-      { name: 'Gssca–Global School Of Sustainability & Climate Action', href: '/academy/sustainability' },
+      { name: 'The School of Al & Quantum Intelligence', href: '/academy/ai-quantum' },
+      { name: 'Global School Of Sustainability & Climate Action', href: '/academy/sustainability' },
       { name: 'Centre Of Digital & Design Excellence', href: '/academy/digital-design' },
-      // { name: 'School Of Ev & E- Mobility', href: '/academy/ev-mobility' },
-      { name: 'Udaan Aerial Intelligence', href: '/academy/udan' },
+      { name: 'Udaan - Aerial Intelligence', href: '/academy/udaan' },
     ],
   },
   {
     title: 'Explore',
     links: [
-      { name: 'Job Simulations Master', href: '/explore/job-simulations' },
-      { name: 'Explore Domains', href: '/explore/domains' },
-      { name: 'Career Trajectory', href: '/explore/career-trajectory' },
+      { name: 'Job Simulations', href: '/explore/job-simulations' },
+      // { name: 'Explore Domains', href: '/explore/domains' },
+      // { name: 'Career Trajectory', href: '/explore/career-trajectory' },
       // { name: 'Skillzza Persona', href: '/explore/skillzza-persona' },
     ],
   },
@@ -58,7 +55,7 @@ const footerSections = [
       { name: 'Skill Blueprint', href: '/insights/skill-blueprint' },
       { name: 'The Skill Digest', href: '/insights/skill-digest' },
       { name: 'Ai Talent Research Hub', href: '/insights/ai-talent-research-hub' },
-      { name: 'The Skill Unplugged Podcast', href: '/insights/skill-unplugged-podcast' },
+      { name: 'The Skill Unplugged', href: '/insights/skill-unplugged-podcast' },
       { name: 'Skillzza Live', href: '/insights/skillzza-live' },
     ],
   },
@@ -70,7 +67,7 @@ const footerSections = [
       { name: 'What We Do', href: '/company/what-we-do' },
       { name: 'Our Pathway', href: '/company/pathway' },
       { name: 'Partner Collaboration', href: '/company/partnerships' },
-      { name: 'Responsible Ai', href: '/company/responsible-ai' },
+      { name: 'Responsible AI', href: '/company/responsible-ai' },
     ],
   },
 ];
@@ -86,7 +83,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer style={{ background: '#f0f0f0', fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
+    <footer style={{ background: '#f0f0f0', fontFamily: "'Lato', sans-serif" }}>
       <div style={{ width: '100%', height: '4px', backgroundColor: '#E11313' }} />
 
       {/* ── Main Body ── */}

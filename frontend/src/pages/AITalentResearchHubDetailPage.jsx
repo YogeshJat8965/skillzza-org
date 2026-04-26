@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
+import Insights from '../components/Insights';
 
 
 const ExecutiveSummaryContent = () => (
@@ -158,7 +159,7 @@ const FutureOutlookContent = () => (
 );
 
 const CONTENT_MAP = {
- 'executive-summary': { title:"2025 AI Talent & Salary Benchmark Report", Content: ExecutiveSummaryContent },
+ 'executive-summary': { title:"2026 AI Talent & Salary Benchmark Report", Content: ExecutiveSummaryContent },
  'global-compensation': { title:"Global Compensation Landscape", Content: GlobalCompensationContent },
  'in-demand-skills': { title:"Most In-Demand Skills for 2025", Content: InDemandSkillsContent },
  'recruitment-trends': { title:"Recruitment Trends & Strategies", Content: RecruitmentTrendsContent },
@@ -167,55 +168,113 @@ const CONTENT_MAP = {
 };
 
 export default function AITalentResearchHubDetailPage() {
- 
- const { articleSlug } = useParams();
- const [article, setArticle] = useState(null);
+  const { articleSlug } = useParams();
+  const [article, setArticle] = useState(null);
+  const navigate = useNavigate();
 
- useEffect(() => {
- if (articleSlug && CONTENT_MAP[articleSlug]) {
- setArticle(CONTENT_MAP[articleSlug]);
- }
- }, [articleSlug]);
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    const frame = requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, []);
 
- if (!article) {
- return (
- <div className={'min-h-screen bg-[#FAFAFA]'}>
- <div className="pt-[140px] pb-20 px-4 md:px-8 max-w-7xl mx-auto flex items-center justify-center">
- <p className="text-xl text-gray-600">Loading research details...</p>
- </div>
- </div>
- );
- }
+  useEffect(() => {
+    if (articleSlug && CONTENT_MAP[articleSlug]) {
+      setArticle(CONTENT_MAP[articleSlug]);
+    }
+  }, [articleSlug]);
 
- const { Content, title } = article;
+  if (!article) {
+    return (
+      <div style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingBottom: '100px' }}>
 
- return (
- <div className={'min-h-screen flex flex-col bg-[#FAFAFA]'}>
- <main className="flex-grow pt-[140px] pb-20 px-4 md:px-8">
- <div className="max-w-4xl mx-auto">
- <Link 
- to="/insights"
- className="inline-flex items-center text-[#E11313] hover:text-[#BD1723] transition-colors mb-8 font-['DM_Sans',sans-serif] font-bold"
- >
- ← Back to Insights
- </Link>
- 
- <div className="py-2">
- <div className="mb-10 text-center">
- <span className="inline-block bg-[#0F1114] text-white text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full mb-6">
- Research Hub
- </span>
- <h1 className="text-4xl md:text-5xl font-bold font-['League_Spartan',sans-serif] text-gray-900 leading-tight">
- {title}
- </h1>
- </div>
- 
- <div className="mt-12 pt-8">
- <Content />
- </div>
- </div>
- </div>
- </main>
- </div>
- );
+        <section className="w-full px-4 md:px-8 mt-8">
+          <div className="max-w-[980px] mx-auto rounded-2xl border border-[#E2E8F0] bg-white p-8 text-center">
+            <h1 className="font-['DM_Sans',sans-serif] text-[30px] font-bold text-[#0F172A] mb-3">Report not found</h1>
+            <p className="font-['DM_Sans',sans-serif] text-[16px] text-[#475569] mb-6">
+              This Research Hub report is unavailable right now.
+            </p>
+            <button
+              onClick={() => navigate('/insights/ai-talent-research-hub')}
+              className="inline-flex items-center rounded-lg bg-[#CF2C2E] px-5 py-2.5 text-white font-['DM_Sans',sans-serif] font-semibold"
+            >
+              Back to Research Hub
+            </button>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  const { Content, title } = article;
+  const accent = '#CF2C2E';
+
+  return (
+    <div style={{ backgroundColor: '#F6F8FB', minHeight: '100vh', paddingBottom: '100px' }}>
+
+
+      <style>{`
+        .digest-hero {
+          background: radial-gradient(1200px 400px at 10% 0%, var(--digest-accent-soft), transparent 55%),
+                      radial-gradient(1000px 380px at 100% 10%, rgba(207, 44, 46, 0.10), transparent 60%),
+                      linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+          border: 1px solid var(--digest-accent-border);
+          border-radius: 28px;
+          box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+          padding: 30px 40px;
+          animation: digestFadeUp 0.55s ease-out both;
+          text-align: left;
+        }
+
+        @keyframes digestFadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(14px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
+
+      <section className="w-full px-4 md:px-8 mt-6">
+        <div className="max-w-[1200px] mx-auto">
+          {/* Breadcrumbs */}
+          <div className="text-[14px] font-['DM_Sans',sans-serif] mb-4 flex items-center gap-2">
+            <Link to="/insights/ai-talent-research-hub" className="text-[#0070AC] font-bold hover:underline">
+              Research Hub
+            </Link>
+            <span className="text-[#94A3B8]">/</span>
+            <span className="text-[#475569]">{title}</span>
+          </div>
+
+          {/* Hero Banner Box */}
+          <div
+            className="digest-hero"
+            style={{
+              '--digest-accent-soft': `${accent}1F`,
+              '--digest-accent-border': `${accent}33`,
+            }}
+          >
+            <div className="inline-flex items-center rounded-full bg-[#0F172A] px-4 py-1.5 text-[11px] font-['DM_Sans',sans-serif] font-bold tracking-[0.1em] text-white uppercase shadow-sm">
+              RESEARCH HUB
+            </div>
+            
+            <h1 className="mt-5 font-['League_Spartan',sans-serif] text-[34px] sm:text-[42px] md:text-[48px] leading-[1.1] font-bold text-[#0F172A]">
+              {title}
+            </h1>
+          </div>
+
+          {/* Report Content */}
+          <div className="mt-12 max-w-[1000px] mx-auto">
+            <Content />
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
 }

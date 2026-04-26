@@ -237,7 +237,7 @@ function InsightsPage() {
                   id: 3,
                   tag: "SKILL BLUEPRINT",
                   slug: 'redefining-student-success-ai-potential-mapping',
-                  title: "Redefining Student Success: How AI-Based Potential Mapping Helped a University Identify Hidden Talent Beyond Grades",
+                  title: "Redefining Student Success",
                   subtitle: "Looking Beyond Traditional Metrics",
                   desc: "Discover how a leading university utilized AI-based potential mapping to identify and nurture student talents that traditional grading systems overlooked, resulting in a more diverse, engaged, and successful student body.",
                   image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
@@ -246,8 +246,7 @@ function InsightsPage() {
                   id: 4,
                   tag: "SKILL BLUEPRINT",
                   slug: 'scores-to-skills-ai-inclusive-hiring',
-                  title: "From Scores to Skills: A Case Study on AI-Powered Assessments Driving Inclusive Hiring",
-                  subtitle: "Transforming the Recruitment Landscape",
+                  title: "From Scores to Skills",
                   desc: "Learn how modern enterprises are shifting from traditional score-based filtering to AI-powered skill assessments, significantly improving hiring inclusivity, reducing bias, and finding the right organizational fit for every role.",
                   image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
@@ -255,7 +254,7 @@ function InsightsPage() {
                   id: 5,
                   tag: "SKILL BLUEPRINT",
                   slug: 'unlocking-career-pathways-ai-potential-meters',
-                  title: "Unlocking Career Pathways: How AI Potential Meters Are Guiding Students Toward Future-Ready Professions",
+                  title: "Unlocking Career Pathways",
                   subtitle: "Mapping Intrinsic Skills to Future Careers",
                   desc: "Explore how AI Potential Meters are revolutionizing career guidance by analyzing students' intrinsic strengths and aligning them with emerging, future-ready professions, ensuring long-term career success and adaptability.",
                   image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"

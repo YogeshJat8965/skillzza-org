@@ -167,10 +167,25 @@ const Partnerships = () => {
           .partner-card-offset {
             margin-top: 0px !important;
           }
+        } /* Closing brace for max-width: 767px */
+
+        .partnerships-wrapper-section {
+          margin-top: -160px;
+          z-index: 20;
+        }
+        @media (max-width: 1200px) {
+          .partnerships-wrapper-section {
+            margin-top: -100px;
+          }
+        }
+        @media (max-width: 767px) {
+          .partnerships-wrapper-section {
+            margin-top: -40px;
+          }
         }
       `}</style>
       <section
-        className="w-full relative flex items-start justify-center bg-white bg-cover bg-center bg-no-repeat min-h-0 sm:min-h-[460px] lg:min-h-[520px] xl:min-h-[560px]"
+        className="partnerships-wrapper-section w-full relative flex items-start justify-center bg-white bg-cover bg-center bg-no-repeat min-h-0 sm:min-h-[460px] lg:min-h-[520px] xl:min-h-[560px]"
         style={{ backgroundImage: getBackgroundImageUrl('/img/Group%2037834.png') }}
       >
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32 w-full pt-2 sm:pt-3 lg:pt-4 pb-2 sm:pb-4 lg:pb-6">

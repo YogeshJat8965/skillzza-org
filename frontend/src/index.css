@@ -379,6 +379,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ── Global Typography System ──────────────────────────────────── */
+/* Headings: DM Sans font family */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Body text: Lato font family */
+p, span, a, li, td, th, label, input, textarea, select, button, div {
+  font-family: 'Lato', sans-serif !important;
+}
+
 /* Home page only: proportional zoom-out on smaller laptop widths */
 .home-scale-shell {
   width: 100%;

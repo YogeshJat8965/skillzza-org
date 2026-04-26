@@ -183,13 +183,13 @@ const Insights = ({ showHero = false, showContent = true }) => {
             padding: 0 20px !important;
           }
           .insights-card-lg {
-            width: clamp(280px, 27vw, 370px) !important;
-            height: clamp(470px, 37vw, 560px) !important;
+            width: clamp(260px, 25vw, 340px) !important;
+            height: clamp(420px, 33vw, 500px) !important;
           }
           .insights-card-md {
             flex: 1;
             width: 100% !important; /* Reset inline width */
-            height: clamp(390px, 31vw, 480px) !important;
+            height: clamp(340px, 28vw, 420px) !important;
           }
           .insights-card-lg .insights-card-img {
             height: 200px !important;
@@ -348,26 +348,29 @@ const Insights = ({ showHero = false, showContent = true }) => {
           }
         }
       `}</style>
-      
+
       {/* Hero Banner Section */}
       {showHero && (
-        <section 
-          className="insights-hero-section w-full relative flex items-center justify-center overflow-hidden" 
+        <section
+          className="insights-hero-section w-full relative flex items-center justify-center overflow-hidden"
           style={{ minHeight: '280px', height: '35vh', maxHeight: '350px' }}
         >
-          <div 
+          <div
             className="insights-hero-bg absolute inset-0 w-full h-full"
             style={{
               backgroundImage: getBackgroundImageUrl('/improvements/Untitled%20design.jpg.jpeg'),
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          
+
           <div className="relative z-10 text-center px-4 w-full animate-fade-in-up md:pr-[20%]">
-            <h1 
-              style={{ 
-                fontFamily: "'League Spartan', sans-serif", 
-                fontWeight: 700, 
+            <h1
+              style={{
+                fontFamily: "'League Spartan', sans-serif",
+                fontWeight: 700,
                 fontSize: 'clamp(48px, 6vw, 72px)',
                 letterSpacing: '2px',
                 color: '#FFFFFF',
@@ -383,459 +386,459 @@ const Insights = ({ showHero = false, showContent = true }) => {
       )}
 
       {showContent && (
-      <section className="w-full bg-white py-12 md:py-14">
-        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-24">
-          {/* Main Content - 2 Columns on desktop, 1 column on mobile */}
-          <div className="flex flex-col lg:flex-row gap-6 md:gap-6 mb-4">
-            {/* Left Column - Heading + Button + Purple Card */}
-            <div className="w-full lg:w-auto">
-              {/* Heading */}
-              <h2
-                ref={headingRef}
-                className={`insights-heading mb-4 md:mb-6 ${isVisible.heading ? 'animate-fade-in-left' : 'opacity-0'}`}
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 700,
-                  lineHeight: '1.2',
-                  color: '#0F1114',
-                  marginTop: '40px',
-                }}
-              >
-                Insights
-              </h2>
+        <section className="w-full bg-white py-12 md:py-14">
+          <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-24">
+            {/* Main Content - 2 Columns on desktop, 1 column on mobile */}
+            <div className="flex flex-col lg:flex-row gap-6 md:gap-6 mb-4">
+              {/* Left Column - Heading + Button + Purple Card */}
+              <div className="w-full lg:w-auto">
+                {/* Heading */}
+                <h2
+                  ref={headingRef}
+                  className={`insights-heading mb-4 md:mb-6 ${isVisible.heading ? 'animate-fade-in-left' : 'opacity-0'}`}
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 700,
+                    lineHeight: '1.2',
+                    color: '#0F1114',
+                    marginTop: '40px',
+                  }}
+                >
+                  Insights
+                </h2>
 
-              {/* View all resources button */}
-              <button
-                ref={buttonRef}
-                className={`insights-view-btn mb-8 ${isVisible.button ? 'animate-fade-in-up delay-200' : 'opacity-0'}`}
-                style={{
-                  height: '48px',
-                  padding: '0 24px',
-                  background: 'transparent',
-                  border: '1px solid #0F1114',
-                  borderRadius: '8px',
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '14px',
-                  fontWeight: 500,
-                  color: '#0F1114',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  marginTop: '30px',
-                  marginBottom: '80px',
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.background = '#0F1114';
-                  e.target.style.color = '#FFFFFF';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.background = 'transparent';
-                  e.target.style.color = '#0F1114';
-                }}
-                onClick={() => { window.location.href = getRoutePath('/insights'); }}
-              >
-                View all the resources
-              </button>
+                {/* View all resources button */}
+                <button
+                  ref={buttonRef}
+                  className={`insights-view-btn mb-8 ${isVisible.button ? 'animate-fade-in-up delay-200' : 'opacity-0'}`}
+                  style={{
+                    height: '48px',
+                    padding: '0 24px',
+                    background: 'transparent',
+                    border: '1px solid #0F1114',
+                    borderRadius: '8px',
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: '14px',
+                    fontWeight: 500,
+                    color: '#0F1114',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    marginTop: '30px',
+                    marginBottom: '80px',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = '#0F1114';
+                    e.target.style.color = '#FFFFFF';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = 'transparent';
+                    e.target.style.color = '#0F1114';
+                  }}
+                  onClick={() => { window.location.href = getRoutePath('/insights'); }}
+                >
+                  View all the resources
+                </button>
 
-              {/* Purple Card */}
-              <div
-                ref={card1Ref}
-                className={`insights-card-lg ${isVisible.card1 ? 'animate-fade-in-scale delay-300' : 'opacity-0'}`}
-                style={{
-                  background: '#F4F4FF',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-              >
-                {/* Image */}
-                <div className="insights-card-img" style={{ width: '100%', height: '320px', overflow: 'hidden' }}>
-                  <img
-                    src={getAssetPath('/img/Mask%20Group%2096.png')}
-                    alt="AI Assistant"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      objectPosition: 'center',
-                    }}
-                  />
-                </div>
-
-                {/* Content */}
-                <div style={{ padding: '28px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                  {/* Icon */}
-                  <div className="insights-card-icon" style={{ marginBottom: '60px', marginTop: '40px' }}>
+                {/* Purple Card */}
+                <div
+                  ref={card1Ref}
+                  className={`insights-card-lg ${isVisible.card1 ? 'animate-fade-in-scale delay-300' : 'opacity-0'}`}
+                  style={{
+                    background: '#F4F4FF',
+                    borderRadius: '12px',
+                    overflow: 'hidden',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  {/* Image */}
+                  <div className="insights-card-img" style={{ width: '100%', height: '320px', overflow: 'hidden' }}>
                     <img
-                      src={getAssetPath('/img/Group%2034192.svg')}
-                      alt="Icon"
+                      src={getAssetPath('/img/Mask%20Group%2096.png')}
+                      alt="AI Assistant"
                       style={{
-                        width: '56px',
-                        height: '56px',
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'center',
                       }}
                     />
                   </div>
 
-                  {/* Title */}
-                  <h3
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '30px',
-                      fontWeight: 600,
-                      lineHeight: '1.4',
-                      color: '#393939',
-                      marginBottom: 'auto',
-                      paddingBottom: '24px',
-                    }}
-                  >
-                    Skill Gaps to Skill Maps: The Future of Adaptive Career Assessment with AI
-                  </h3>
+                  {/* Content */}
+                  <div style={{ padding: '28px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                    {/* Icon */}
+                    <div className="insights-card-icon" style={{ marginBottom: '20px', marginTop: '20px' }}>
+                      <img
+                        src={getAssetPath('/img/Group%2034192.svg')}
+                        alt="Icon"
+                        style={{
+                          width: '56px',
+                          height: '56px',
+                        }}
+                      />
+                    </div>
 
-                  {/* Button */}
-                  <button
-                    style={{
-                      marginBottom: '20px',
-                      width: '173px',
-                      height: '48px',
-                      padding: '0 16px',
-                      background: 'transparent',
-                      border: '1px solid #0F1114',
-                      borderRadius: '8px',
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '14px',
-                      fontWeight: 500,
-                      color: '#0F1114',
-                      cursor: 'pointer',
-                      transition: 'all 0.3s ease',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.background = '#0F1114';
-                      e.target.style.color = '#FFFFFF';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.background = 'transparent';
-                      e.target.style.color = '#0F1114';
-                    }}
-                    onClick={() => { window.location.href = getRoutePath('/insights'); }}
-                  >
-                    Read the Blog
-                  </button>
+                    {/* Title */}
+                    <h3
+                      style={{
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: '26px',
+                        fontWeight: 600,
+                        lineHeight: '1.4',
+                        color: '#393939',
+                        marginBottom: 'auto',
+                        paddingBottom: '0',
+                      }}
+                    >
+                      Skill Gaps to Skill Maps: The Future of Adaptive Career Assessment with AI
+                    </h3>
+
+                    {/* Button */}
+                    <button
+                      style={{
+                        marginBottom: '20px',
+                        width: '173px',
+                        height: '48px',
+                        padding: '0 16px',
+                        background: 'transparent',
+                        border: '1px solid #0F1114',
+                        borderRadius: '8px',
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: '14px',
+                        fontWeight: 500,
+                        color: '#0F1114',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.background = '#0F1114';
+                        e.target.style.color = '#FFFFFF';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.background = 'transparent';
+                        e.target.style.color = '#0F1114';
+                      }}
+                      onClick={() => { window.location.href = getRoutePath('/insights'); }}
+                    >
+                      Read the Blog
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Right Column - Top (2 cards) and Bottom (Podcast) */}
-            <div className="flex-1 flex flex-col gap-4 md:gap-5">
-              {/* Row for 2 side-by-side cards */}
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-5 w-full">
-                {/* Card 2 - AI Talent Report (Robot - Beige) */}
+              {/* Right Column - Top (2 cards) and Bottom (Podcast) */}
+              <div className="flex-1 flex flex-col gap-4 md:gap-5">
+                {/* Row for 2 side-by-side cards */}
+                <div className="flex flex-col sm:flex-row gap-4 md:gap-5 w-full">
+                  {/* Card 2 - AI Talent Report (Robot - Beige) */}
+                  <div
+                    ref={card2Ref}
+                    className={`insights-card-md ${isVisible.card2 ? 'animate-fade-in-up delay-100' : 'opacity-0'}`}
+                    style={{
+                      background: '#F4E3CC',
+                      borderRadius: '12px',
+                      overflow: 'hidden',
+                      display: 'flex',
+                      flexDirection: 'column',
+                    }}
+                  >
+                    {/* Image */}
+                    <div className="insights-card-img" style={{ width: '100%', height: '380px', overflow: 'hidden' }}>
+                      <img
+                        src={getAssetPath('/img/Mask%20Group%20112.png')}
+                        alt="AI Robot"
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                          objectPosition: 'center',
+                        }}
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div style={{ padding: '28px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                      {/* Tag */}
+                      <span
+                        className="insights-tag"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          alignSelf: 'flex-start',
+                          width: '206px',
+                          height: '50px',
+                          background: '#E87444',
+                          borderRadius: '20px',
+                          fontFamily: "'DM Sans', sans-serif",
+                          fontSize: '18px',
+                          fontWeight: 500,
+                          color: '#FFFFFF',
+                          marginBottom: '20px',
+                          marginTop: '20px',
+                        }}
+                      >
+                        Research & Insights
+                      </span>
+
+                      {/* Title */}
+                      <h3
+                        style={{
+                          fontFamily: "'DM Sans', sans-serif",
+                          fontSize: '28px',
+                          fontWeight: 600,
+                          lineHeight: '1.3',
+                          color: '#393939',
+                          marginBottom: 'auto',
+                          paddingBottom: '0',
+                        }}
+                      >
+                        2026 AI Talent & <br />Salary Benchmark Report
+                      </h3>
+
+                      {/* Button */}
+                      <button
+                        style={{
+                          width: '188px',
+                          height: '48px',
+                          padding: '0 16px',
+                          background: 'transparent',
+                          border: '1px solid #0F1114',
+                          borderRadius: '8px',
+                          fontFamily: "'DM Sans', sans-serif",
+                          fontSize: '14px',
+                          fontWeight: 500,
+                          color: '#0F1114',
+                          cursor: 'pointer',
+                          transition: 'all 0.3s ease',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.background = '#0F1114';
+                          e.target.style.color = '#FFFFFF';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.background = 'transparent';
+                          e.target.style.color = '#0F1114';
+                        }}
+                        onClick={() => { window.location.href = getRoutePath('/insights/ai-talent-research-hub'); }}
+                      >
+                        Read the reports
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Card 3 - Skill Blueprint (Digital Interface - Pink) */}
+                  <div
+                    ref={card3Ref}
+                    className={`insights-card-md ${isVisible.card3 ? 'animate-fade-in-up delay-300' : 'opacity-0'}`}
+                    style={{
+                      marginTop: '0',
+                      background: '#F7C9C9',
+                      borderRadius: '12px',
+                      overflow: 'hidden',
+                      display: 'flex',
+                      flexDirection: 'column',
+                    }}
+                  >
+                    {/* Image */}
+                    <div className="insights-card-img" style={{ width: '100%', height: '380px', overflow: 'hidden' }}>
+                      <img
+                        src={getAssetPath('/img/Mask%20Group%2098.png')}
+                        alt="Digital Interface"
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                          objectPosition: 'center',
+                        }}
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div style={{ padding: '28px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                      {/* Tag */}
+                      <span
+                        className="insights-tag"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          alignSelf: 'flex-start',
+                          width: '206px',
+                          height: '50px',
+                          background: '#D02C2F',
+                          borderRadius: '20px',
+                          fontFamily: "'DM Sans', sans-serif",
+                          fontSize: '18px',
+                          fontWeight: 500,
+                          color: '#FFFFFF',
+                          marginBottom: '20px',
+                          marginTop: '20px',
+                        }}
+                      >
+                        Research & Insights
+                      </span>
+
+                      {/* Title */}
+                      <h3
+                        style={{
+                          fontFamily: "'DM Sans', sans-serif",
+                          fontSize: '26px',
+                          fontWeight: 600,
+                          lineHeight: '1.3',
+                          color: '#393939',
+                          marginBottom: 'auto',
+                          paddingBottom: '0',
+                        }}
+                      >
+                        The Skill Blueprint<br />
+                        AI & The Future of Work
+                      </h3>
+
+                      {/* Button */}
+                      <button
+                        style={{
+                          width: '259px',
+                          maxWidth: '100%',
+                          height: '48px',
+                          padding: '0 16px',
+                          background: 'transparent',
+                          border: '1px solid #0F1114',
+                          borderRadius: '8px',
+                          fontFamily: "'DM Sans', sans-serif",
+                          fontSize: '14px',
+                          fontWeight: 500,
+                          color: '#0F1114',
+                          cursor: 'pointer',
+                          transition: 'all 0.3s ease',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.background = '#0F1114';
+                          e.target.style.color = '#FFFFFF';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.background = 'transparent';
+                          e.target.style.color = '#0F1114';
+                        }}
+                        onClick={() => { window.location.href = getRoutePath('/insights/skill-blueprint'); }}
+                      >
+                        Explore the Case studies
+                      </button>
+                    </div>
+                  </div>
+                </div> {/* Close Row for 2 cards */}
+
+                {/* Bottom - Full Width Podcast Card */}
                 <div
-                ref={card2Ref}
-                className={`insights-card-md ${isVisible.card2 ? 'animate-fade-in-up delay-100' : 'opacity-0'}`}
-                style={{
-                  background: '#F4E3CC',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-              >
-                {/* Image */}
-                <div className="insights-card-img" style={{ width: '100%', height: '380px', overflow: 'hidden' }}>
-                  <img
-                    src={getAssetPath('/img/Mask%20Group%20112.png')}
-                    alt="AI Robot"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      objectPosition: 'center',
-                    }}
-                  />
+                  ref={card4Ref}
+                  className={`insights-podcast ${isVisible.card4 ? 'animate-flip-in-x delay-400' : 'opacity-0'}`}
+                  style={{
+                    background: '#B6DFF5',
+                    borderRadius: '12px',
+                    padding: '36px 40px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '40px',
+                  }}
+                >
+                  {/* Left Content */}
+                  <div style={{ flex: 1 }}>
+                    {/* Tag */}
+                    <span
+                      className="insights-tag"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '206px',
+                        height: '50px',
+                        background: '#4A9FD8',
+                        borderRadius: '20px',
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: '18px',
+                        fontWeight: 500,
+                        color: '#FFFFFF',
+                        marginBottom: '50px',
+                      }}
+                    >
+                      Podcast
+                    </span>
+
+                    {/* Title */}
+                    <h3
+                      style={{
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: '26px',
+                        fontWeight: 600,
+                        lineHeight: '1.3',
+                        color: '#393939',
+                        marginBottom: '16px',
+                      }}
+                    >
+                      Skills DECODED:<br />
+                      Conversations that matter.
+                    </h3>
+
+                    {/* Description */}
+                    <p
+                      style={{
+                        fontFamily: "'Lato', sans-serif",
+                        fontSize: '20px',
+                        fontWeight: 400,
+                        lineHeight: '1.7',
+                        color: '#393939',
+                        maxWidth: '700px',
+                      }}
+                    >
+                      Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.
+                    </p>
+                  </div>
+
+                  {/* Right - Icon + Button */}
+                  <div className="insights-podcast-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
+                    <img
+                      src={getAssetPath('/img/Group%2034199.svg')}
+                      alt="Microphone"
+                      style={{
+                        width: '100px',
+                        height: '100px',
+                        objectFit: 'contain',
+                      }}
+                    />
+                    <button
+                      style={{
+                        height: '48px',
+                        padding: '0 16px',
+                        background: 'transparent',
+                        border: '1px solid #0F1114',
+                        borderRadius: '8px',
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: '14px',
+                        fontWeight: 500,
+                        color: '#0F1114',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease',
+                        whiteSpace: 'nowrap',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.background = '#0F1114';
+                        e.target.style.color = '#FFFFFF';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.background = 'transparent';
+                        e.target.style.color = '#0F1114';
+                      }}
+                      onClick={() => { window.location.href = getRoutePath('/insights/skill-unplugged-podcast'); }}
+                    >
+                      Listen now
+                    </button>
+                  </div>
                 </div>
-
-                {/* Content */}
-                <div style={{ padding: '28px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                  {/* Tag */}
-                  <span
-                    className="insights-tag"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      alignSelf: 'flex-start',
-                      width: '206px',
-                      height: '50px',
-                      background: '#E87444',
-                      borderRadius: '20px',
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '18px',
-                      fontWeight: 500,
-                      color: '#FFFFFF',
-                      marginBottom: '40px',
-                      marginTop: '40px',
-                    }}
-                  >
-                    Research & Insights
-                  </span>
-
-                  {/* Title */}
-                  <h3
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '32px',
-                      fontWeight: 600,
-                      lineHeight: '1.3',
-                      color: '#393939',
-                      marginBottom: 'auto',
-                      paddingBottom: '24px',
-                    }}
-                  >
-                    2025 AI Talent & <br />Salary Benchmark Report
-                  </h3>
-
-                  {/* Button */}
-                  <button
-                    style={{
-                      width: '188px',
-                      height: '48px',
-                      padding: '0 16px',
-                      background: 'transparent',
-                      border: '1px solid #0F1114',
-                      borderRadius: '8px',
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '14px',
-                      fontWeight: 500,
-                      color: '#0F1114',
-                      cursor: 'pointer',
-                      transition: 'all 0.3s ease',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.background = '#0F1114';
-                      e.target.style.color = '#FFFFFF';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.background = 'transparent';
-                      e.target.style.color = '#0F1114';
-                    }}
-                    onClick={() => { window.location.href = getRoutePath('/insights/ai-talent-research-hub'); }}
-                  >
-                    Read the reports
-                  </button>
-                </div>
-              </div>
-
-              {/* Card 3 - Skill Blueprint (Digital Interface - Pink) */}
-              <div
-                ref={card3Ref}
-                className={`insights-card-md ${isVisible.card3 ? 'animate-fade-in-up delay-300' : 'opacity-0'}`}
-                style={{
-                  marginTop: '0',
-                  background: '#F7C9C9',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-              >
-                {/* Image */}
-                <div className="insights-card-img" style={{ width: '100%', height: '380px', overflow: 'hidden' }}>
-                  <img
-                    src={getAssetPath('/img/Mask%20Group%2098.png')}
-                    alt="Digital Interface"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      objectPosition: 'center',
-                    }}
-                  />
-                </div>
-
-                {/* Content */}
-                <div style={{ padding: '28px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                  {/* Tag */}
-                  <span
-                    className="insights-tag"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      alignSelf: 'flex-start',
-                      width: '206px',
-                      height: '50px',
-                      background: '#D02C2F',
-                      borderRadius: '20px',
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '18px',
-                      fontWeight: 500,
-                      color: '#FFFFFF',
-                      marginBottom: '40px',
-                      marginTop: '40px',
-                    }}
-                  >
-                    Research & Insights
-                  </span>
-
-                  {/* Title */}
-                  <h3
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '30px',
-                      fontWeight: 600,
-                      lineHeight: '1.3',
-                      color: '#393939',
-                      marginBottom: 'auto',
-                      paddingBottom: '24px',
-                    }}
-                  >
-                    The Skill Blueprint<br />
-                    AI & The Future of Work
-                  </h3>
-
-                  {/* Button */}
-                  <button
-                    style={{
-                      width: '259px',
-                      maxWidth: '100%',
-                      height: '48px',
-                      padding: '0 16px',
-                      background: 'transparent',
-                      border: '1px solid #0F1114',
-                      borderRadius: '8px',
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '14px',
-                      fontWeight: 500,
-                      color: '#0F1114',
-                      cursor: 'pointer',
-                      transition: 'all 0.3s ease',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.background = '#0F1114';
-                      e.target.style.color = '#FFFFFF';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.background = 'transparent';
-                      e.target.style.color = '#0F1114';
-                    }}
-                    onClick={() => { window.location.href = getRoutePath('/insights/skill-blueprint'); }}
-                  >
-                    Explore the Case studies
-                  </button>
-                </div>
-              </div>
-              </div> {/* Close Row for 2 cards */}
-
-              {/* Bottom - Full Width Podcast Card */}
-              <div
-                ref={card4Ref}
-                className={`insights-podcast ${isVisible.card4 ? 'animate-flip-in-x delay-400' : 'opacity-0'}`}
-                style={{
-                  background: '#B6DFF5',
-                  borderRadius: '12px',
-                  padding: '36px 40px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '40px',
-                }}
-              >
-                {/* Left Content */}
-                <div style={{ flex: 1 }}>
-                  {/* Tag */}
-                  <span
-                    className="insights-tag"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      width: '206px',
-                      height: '50px',
-                      background: '#4A9FD8',
-                      borderRadius: '20px',
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '18px',
-                      fontWeight: 500,
-                      color: '#FFFFFF',
-                      marginBottom: '50px',
-                    }}
-                  >
-                    Podcast
-                  </span>
-
-                  {/* Title */}
-                  <h3
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '30px',
-                      fontWeight: 600,
-                      lineHeight: '1.3',
-                      color: '#393939',
-                      marginBottom: '16px',
-                    }}
-                  >
-                    Skills DECODED:<br />
-                    Conversations that matter.
-                  </h3>
-
-                  {/* Description */}
-                  <p
-                    style={{
-                      fontFamily: "'Lato', sans-serif",
-                      fontSize: '20px',
-                      fontWeight: 400,
-                      lineHeight: '1.7',
-                      color: '#393939',
-                      maxWidth: '700px',
-                    }}
-                  >
-                    Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.
-                  </p>
-                </div>
-
-                {/* Right - Icon + Button */}
-                <div className="insights-podcast-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
-                  <img
-                    src={getAssetPath('/img/Group%2034199.svg')}
-                    alt="Microphone"
-                    style={{
-                      width: '100px',
-                      height: '100px',
-                      objectFit: 'contain',
-                    }}
-                  />
-                  <button
-                    style={{
-                      height: '48px',
-                      padding: '0 16px',
-                      background: 'transparent',
-                      border: '1px solid #0F1114',
-                      borderRadius: '8px',
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '14px',
-                      fontWeight: 500,
-                      color: '#0F1114',
-                      cursor: 'pointer',
-                      transition: 'all 0.3s ease',
-                      whiteSpace: 'nowrap',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.background = '#0F1114';
-                      e.target.style.color = '#FFFFFF';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.background = 'transparent';
-                      e.target.style.color = '#0F1114';
-                    }}
-                    onClick={() => { window.location.href = getRoutePath('/insights/skill-unplugged-podcast'); }}
-                  >
-                    Listen now
-                  </button>
-                </div>
-              </div>
-            </div> {/* Close Right Column */}
-          </div> {/* Close Main Content */}
-        </div>
-      </section>
+              </div> {/* Close Right Column */}
+            </div> {/* Close Main Content */}
+          </div>
+        </section>
       )}
     </>
   );
