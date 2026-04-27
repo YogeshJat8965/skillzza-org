@@ -292,11 +292,7 @@ function InsightsPage() {
                   
                   {/* Card Body */}
                   <div className="p-7 sm:p-8 flex flex-col flex-grow bg-white">
-                    <div className="mb-4">
-                      <span className="inline-flex items-center bg-[#0F1114] text-white text-[11px] font-bold uppercase tracking-[0.1em] py-1.5 px-4 rounded-full font-['DM_Sans',sans-serif]">
-                        {card.tag}
-                      </span>
-                    </div>
+
                     
                     <h3 className={`font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 transition-colors duration-300 ${isClickable ? 'group-hover:text-[#E11313]' : ''}`}>
                       {card.title}
@@ -402,11 +398,7 @@ function InsightsPage() {
                   </div>
                   
                   <div className="p-7 sm:p-8 flex flex-col flex-grow bg-white">
-                    <div className="mb-4">
-                      <span className="inline-flex items-center bg-[#0F1114] text-white text-[11px] font-bold uppercase tracking-[0.1em] py-1.5 px-4 rounded-full font-['DM_Sans',sans-serif]">
-                        {card.tag}
-                      </span>
-                    </div>
+
                     
                     <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
                       {card.title}
@@ -450,11 +442,7 @@ function InsightsPage() {
                   </div>
                   
                   <div className="p-7 sm:p-8 flex flex-col flex-grow bg-white">
-                    <div className="mb-4">
-                      <span className="inline-flex items-center bg-[#0F1114] text-white text-[11px] font-bold uppercase tracking-[0.1em] py-1.5 px-4 rounded-full font-['DM_Sans',sans-serif]">
-                        {card.tag}
-                      </span>
-                    </div>
+
                     
                     <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
                       {card.title}
@@ -495,11 +483,7 @@ function InsightsPage() {
                   </div>
                   
                   <div className="p-7 sm:p-8 flex flex-col flex-grow bg-white">
-                    <div className="mb-4">
-                      <span className="inline-flex items-center bg-[#0F1114] text-white text-[11px] font-bold uppercase tracking-[0.1em] py-1.5 px-4 rounded-full font-['DM_Sans',sans-serif]">
-                        {card.tag}
-                      </span>
-                    </div>
+
                     
                     <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
                       {card.title}
@@ -549,11 +533,7 @@ function InsightsPage() {
                   </div>
                   
                   <div className="p-7 sm:p-8 flex flex-col flex-grow bg-white">
-                    <div className="mb-4">
-                      <span className="inline-flex items-center bg-[#0F1114] text-white text-[11px] font-bold uppercase tracking-[0.1em] py-1.5 px-4 rounded-full font-['DM_Sans',sans-serif]">
-                        {card.tag}
-                      </span>
-                    </div>
+
                     
                     <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
                       {card.title}

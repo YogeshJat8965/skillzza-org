@@ -259,10 +259,7 @@ export default function AITalentResearchHubDetailPage() {
               '--digest-accent-border': `${accent}33`,
             }}
           >
-            <div className="inline-flex items-center rounded-full bg-[#0F172A] px-4 py-1.5 text-[11px] font-['DM_Sans',sans-serif] font-bold tracking-[0.1em] text-white uppercase shadow-sm">
-              RESEARCH HUB
-            </div>
-            
+
             <h1 className="mt-5 font-['League_Spartan',sans-serif] text-[34px] sm:text-[42px] md:text-[48px] leading-[1.1] font-bold text-[#0F172A]">
               {title}
             </h1>

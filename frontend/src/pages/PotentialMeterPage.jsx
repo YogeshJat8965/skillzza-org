@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import heroImg from '../assets/potentiometer/Mask Group 129.png';
 import measureImg from '../assets/potentiometer/Group 41603.png';
-import dashImg from '../assets/Xperience Platform – 1/Mask Group 120.png';
+import dashImg from '../assets/Gemini_Generated_Image_mq3oqmmq3oqmmq3o.png';
 import whatsGetImg from '../assets/potentiometer/Group 41604.png';
 
 const tabData = {
@@ -228,7 +228,7 @@ export default function PotentialMeterPage() {
 
           {/* Content Paragraph */}
           <p
-            className="font-['DM_Sans',sans-serif] font-medium text-[#71717A] max-w-[800px] text-[14px] leading-[22px] md:text-[16px] md:leading-[24px] lg:text-[18px] lg:leading-[26px] mb-5"
+            className="font-['Lato',sans-serif] font-medium text-[#71717A] max-w-[800px] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-5"
           >
             The Potential Meter AI combines artificial intelligence, behavioral science, and
             role-based analytics to deliver precision insights into skills, cognitive agility, and
@@ -269,7 +269,7 @@ export default function PotentialMeterPage() {
 
       {/* ── Statistics Section ── */}
       <section 
-        className="w-full flex-shrink-0 flex items-center justify-center bg-[#1F57C7] px-4 py-6 md:py-8"
+        className="w-full flex-shrink-0 flex items-center justify-center bg-[#1F57C7] px-4 py-8 md:py-12"
       >
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
@@ -278,10 +278,10 @@ export default function PotentialMeterPage() {
           transition={{ duration: 0.6 }}
           className="max-w-[1400px] w-full flex flex-col items-center text-center"
         >
-          <h2 className="font-['DM_Sans',sans-serif] font-medium text-white text-[28px] leading-[36px] md:text-[40px] md:leading-[48px] tracking-[-0.5px] mb-3">
+          <h2 className="product-heading font-medium text-white tracking-[-0.5px] mb-3">
             Real Outcomes. Measurable Impact.
           </h2>
-          <p className="font-['DM_Sans',sans-serif] font-normal text-white/90 text-[16px] md:text-[18px] leading-[26px] mb-8 max-w-[800px]">
+          <p className="font-['Lato',sans-serif] font-normal text-white/90 text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-8 max-w-[800px]">
             What users and institutions achieve after using the Potential Meter
           </p>
 
@@ -291,7 +291,7 @@ export default function PotentialMeterPage() {
               <div className="font-['DM_Sans',sans-serif] font-semibold text-white text-[48px] md:text-[56px] leading-[1] mb-4">
                 <AnimatedNumber end={87} suffix="%" />
               </div>
-              <p className="font-['DM_Sans',sans-serif] font-normal text-white text-[14px] md:text-[16px] leading-[22px]">
+              <p className="font-['Lato',sans-serif] font-normal text-white text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
                 Improvement in career<br/>clarity
               </p>
             </div>
@@ -301,7 +301,7 @@ export default function PotentialMeterPage() {
               <div className="font-['DM_Sans',sans-serif] font-semibold text-white text-[48px] md:text-[56px] leading-[1] mb-4">
                 <AnimatedNumber end={2.5} suffix="X" />
               </div>
-              <p className="font-['DM_Sans',sans-serif] font-normal text-white text-[14px] md:text-[16px] leading-[22px]">
+              <p className="font-['Lato',sans-serif] font-normal text-white text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
                 faster career and learning<br/>decision-making
               </p>
             </div>
@@ -311,7 +311,7 @@ export default function PotentialMeterPage() {
               <div className="font-['DM_Sans',sans-serif] font-semibold text-white text-[48px] md:text-[56px] leading-[1] mb-4">
                 <AnimatedNumber end={60} suffix="%" />
               </div>
-              <p className="font-['DM_Sans',sans-serif] font-normal text-white text-[14px] md:text-[16px] leading-[24px] max-w-[250px]">
+              <p className="font-['Lato',sans-serif] font-normal text-white text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] max-w-[250px]">
                 higher role-fit accuracy<br/>for institutions and<br/>employers
               </p>
             </div>
@@ -321,7 +321,7 @@ export default function PotentialMeterPage() {
               <div className="font-['DM_Sans',sans-serif] font-semibold text-white text-[48px] md:text-[56px] leading-[1] mb-4">
                 <AnimatedNumber end={40} suffix="%" />
               </div>
-              <p className="font-['DM_Sans',sans-serif] font-normal text-white text-[14px] md:text-[16px] leading-[22px] max-w-[220px]">
+              <p className="font-['Lato',sans-serif] font-normal text-white text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] max-w-[220px]">
                 reduction in early-career<br/>misalignment
               </p>
             </div>
@@ -330,7 +330,7 @@ export default function PotentialMeterPage() {
       </section>
 
       {/* ── Problem We Solve Section ── */}
-      <section className="w-full bg-white flex justify-center px-4 py-10 md:py-14">
+      <section className="w-full bg-white flex justify-center px-4 py-2 md:py-4">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -339,11 +339,11 @@ export default function PotentialMeterPage() {
           className="max-w-[1200px] w-full flex flex-col items-center"
         >
           
-          <div className="text-center mb-16 max-w-[800px]">
+          <div className="text-center mb-6 max-w-[800px]">
             <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] text-[36px] md:text-[48px] tracking-[-1px] mb-4">
               The Problem We Solve
             </h2>
-            <p className="font-['DM_Sans',sans-serif] font-medium text-[#475569] text-[18px] md:text-[22px] leading-[30px]">
+            <p className="font-['Lato',sans-serif] font-medium text-[#475569] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
               Career decisions today are based on assumptions<br className="hidden md:block"/> — not real performance data.
             </p>
           </div>
@@ -355,7 +355,7 @@ export default function PotentialMeterPage() {
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] mb-3 group-hover:text-[#2563eb] transition-colors">
                 Students
               </h3>
-              <p className="font-['DM_Sans',sans-serif] text-[#71717A] text-[16px] leading-[26px]">
+              <p className="font-['Lato',sans-serif] text-[#71717A] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
                 waste years in wrong-fit careers because aptitude tests can't predict real-world performance.
               </p>
             </div>
@@ -365,7 +365,7 @@ export default function PotentialMeterPage() {
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] mb-3 group-hover:text-[#2563eb] transition-colors">
                 Professionals
               </h3>
-              <p className="font-['DM_Sans',sans-serif] text-[#71717A] text-[16px] leading-[26px]">
+              <p className="font-['Lato',sans-serif] text-[#71717A] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
                 hit career plateaus without knowing which skills actually matter for their next role.
               </p>
             </div>
@@ -375,7 +375,7 @@ export default function PotentialMeterPage() {
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] mb-3 group-hover:text-[#2563eb] transition-colors">
                 Institutions
               </h3>
-              <p className="font-['DM_Sans',sans-serif] text-[#71717A] text-[16px] leading-[26px]">
+              <p className="font-['Lato',sans-serif] text-[#71717A] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
                 struggle with 40%+ placement mismatches, damaging reputation and student outcomes.
               </p>
             </div>
@@ -385,7 +385,7 @@ export default function PotentialMeterPage() {
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] mb-3 group-hover:text-[#2563eb] transition-colors">
                 Employers
               </h3>
-              <p className="font-['DM_Sans',sans-serif] text-[#71717A] text-[16px] leading-[26px]">
+              <p className="font-['Lato',sans-serif] text-[#71717A] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
                 lose $15K+ per bad hire because resumes don't reveal execution capability.
               </p>
             </div>
@@ -395,13 +395,13 @@ export default function PotentialMeterPage() {
       </section>
 
       {/* ── What We Measure Section ── */}
-      <section className="relative w-full py-10 md:py-14 bg-white overflow-hidden">
+      <section className="relative w-full py-2 md:py-4 bg-white overflow-hidden">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10 md:mb-16 relative z-20"
+          className="text-center mb-10 md:mb-6 relative z-20"
         >
           <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#3C3C3C] text-[36px] md:text-[48px] tracking-[-1px]">
             What We Measure
@@ -432,7 +432,7 @@ export default function PotentialMeterPage() {
                 <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[20px] md:text-[22px] mb-3">
                   AI-Based Skill Assessment
                 </h3>
-                <p className="font-['DM_Sans',sans-serif] font-medium text-white/90 text-[15px] md:text-[16px] leading-[22px]">
+                <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
                   Applied, task-level technical<br className="hidden lg:block"/>competence
                 </p>
               </div>
@@ -442,7 +442,7 @@ export default function PotentialMeterPage() {
                 <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[20px] md:text-[22px] mb-3">
                   Cognitive & Behavioral<br/>Intelligence
                 </h3>
-                <p className="font-['DM_Sans',sans-serif] font-medium text-white/90 text-[15px] md:text-[16px] leading-[22px]">
+                <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
                   Problem-solving, adaptability,<br className="hidden lg:block"/>communication
                 </p>
               </div>
@@ -452,7 +452,7 @@ export default function PotentialMeterPage() {
                 <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[20px] md:text-[22px] mb-3">
                   Career Readiness & Role Fit
                 </h3>
-                <p className="font-['DM_Sans',sans-serif] font-medium text-white/90 text-[15px] md:text-[16px] leading-[22px]">
+                <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
                   Alignment with real-world job<br className="hidden lg:block"/>requirements
                 </p>
               </div>
@@ -462,7 +462,7 @@ export default function PotentialMeterPage() {
                 <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[20px] md:text-[22px] mb-3">
                   Soft Skills &<br/>Professional Maturity
                 </h3>
-                <p className="font-['DM_Sans',sans-serif] font-medium text-white/90 text-[15px] md:text-[16px] leading-[22px]">
+                <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
                   Workplace effectiveness and<br className="hidden lg:block"/>growth readiness
                 </p>
               </div>
@@ -473,7 +473,7 @@ export default function PotentialMeterPage() {
       </section>
 
       {/* ── How The Platform Works Section ── */}
-      <section className="w-full bg-white py-10 md:py-14">
+      <section className="w-full bg-white py-2 md:py-4">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -482,7 +482,7 @@ export default function PotentialMeterPage() {
           className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8"
         >
           
-          <h2 className="font-['DM_Sans',sans-serif] font-semibold text-center text-[#0F1114] text-[36px] md:text-[48px] tracking-[-1px] mb-12 md:mb-20">
+          <h2 className="font-['DM_Sans',sans-serif] font-semibold text-center text-[#0F1114] text-[36px] md:text-[48px] tracking-[-1px] mb-4 md:mb-6">
             How The Platform Works
           </h2>
 
@@ -545,7 +545,7 @@ export default function PotentialMeterPage() {
                       
                       {/* Hidden content that expands on hover */}
                       <div className="transition-all duration-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[160px] group-hover:mt-3">
-                        <p className="font-['DM_Sans',sans-serif] font-medium text-[#64748b] text-[15px] md:text-[16px] leading-[26px]">
+                        <p className="font-['Lato',sans-serif] font-medium text-[#64748b] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
                           {step.content}
                         </p>
                       </div>
@@ -577,24 +577,24 @@ export default function PotentialMeterPage() {
       </section>
 
       {/* ── What You Get with Potential Meter Section ── */}
-      <section className="relative w-full py-10 md:py-14 bg-white overflow-hidden">
+      <section className="relative w-full py-2 md:py-4 bg-white overflow-hidden">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5 }}
-          className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12"
+          className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-4"
         >
           
           <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] text-[36px] md:text-[42px] tracking-[-1px] mb-4">
             What You Get with Potential Meter
           </h2>
-          <p className="font-['DM_Sans',sans-serif] font-normal text-[#71717B] text-[16px] md:text-[18px] max-w-2xl mx-auto mb-10">
+          <p className="font-['Lato',sans-serif] font-normal text-[#71717B] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] max-w-2xl mx-auto mb-10">
             Tailored intelligence for individuals, institutions, and employers - designed to drive real-world outcomes.
           </p>
 
           {/* Toggle Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 max-w-[600px] mx-auto mb-16 px-4">
+          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 max-w-[600px] mx-auto mb-6 px-4">
             {[
               { id: 'individuals', label: 'Individuals' },
               { id: 'institutions', label: 'Institutions' },
@@ -634,7 +634,7 @@ export default function PotentialMeterPage() {
                 {tabData[activeGetTab].heading}
               </h3>
               
-              <p className="font-['DM_Sans',sans-serif] font-medium text-[#71717B] text-[16px] leading-[26px] mb-8 whitespace-pre-line">
+              <p className="font-['Lato',sans-serif] font-medium text-[#71717B] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-8 whitespace-pre-line">
                 {tabData[activeGetTab].intro}
               </p>
 
@@ -649,7 +649,7 @@ export default function PotentialMeterPage() {
                   {tabData[activeGetTab].features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-4">
                       <div className="w-[6px] h-[6px] rounded-full bg-[#71717B] mt-2.5 flex-shrink-0" />
-                      <span className="font-['DM_Sans',sans-serif] text-[#71717B] text-[15.5px] leading-relaxed">
+                      <span className="font-['Lato',sans-serif] text-[#71717B] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
                         {feature}
                       </span>
                     </li>
@@ -681,7 +681,7 @@ export default function PotentialMeterPage() {
                 <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#2563eb] text-[14px] uppercase tracking-wide mb-2 block">
                   PRICING:
                 </h4>
-                <p className="font-['DM_Sans',sans-serif] font-medium text-[#71717B] text-[16px] whitespace-pre-line leading-[26px]">
+                <p className="font-['Lato',sans-serif] font-medium text-[#71717B] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] whitespace-pre-line">
                   {tabData[activeGetTab].pricing}
                 </p>
               </div>
@@ -717,7 +717,7 @@ export default function PotentialMeterPage() {
       </section>
 
       {/* ── FAQ Section ── */}
-      <section className="w-full bg-white py-10 md:py-14">
+      <section className="w-full bg-white py-2 md:py-4">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -758,7 +758,7 @@ export default function PotentialMeterPage() {
                     </span>
                   </button>
                   <div className={`overflow-hidden transition-all duration-300 ease-in-out ${activeFaq === index ? 'max-h-[300px] mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <p className="font-['DM_Sans',sans-serif] font-normal text-[#71717B] text-[16px] leading-[28px] pr-4 md:pr-12">
+                    <p className="font-['Lato',sans-serif] font-normal text-[#71717B] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] pr-4 md:pr-12">
                       {faq.answer}
                     </p>
                   </div>
@@ -771,7 +771,7 @@ export default function PotentialMeterPage() {
       </section>
 
       {/* ── Call To Action Section ── */}
-      <section className="w-full bg-[#FBA93E] py-10 md:py-16 px-4 flex flex-col items-center justify-center text-center mt-auto overflow-hidden">
+      <section className="w-full bg-[#FBA93E] py-12 md:py-16 px-4 flex flex-col items-center justify-center text-center mt-auto overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -779,10 +779,10 @@ export default function PotentialMeterPage() {
           transition={{ duration: 0.6 }}
           className="w-full flex flex-col items-center justify-center"
         >
-          <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] tracking-[-1.5px] mb-4 md:mb-5">
+          <h2 className="product-heading font-bold text-[#0F1114] tracking-[-1.5px] mb-4 md:mb-5">
             Upskill Smarter. Learn Faster.<br />Lead Confidently.
           </h2>
-          <p className="font-['DM_Sans',sans-serif] font-medium text-[#0F1114] text-[18px] md:text-[22px] leading-[1.4] mb-7 md:mb-9">
+          <p className="font-['Lato',sans-serif] font-medium text-[#0F1114] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-7 md:mb-9">
             Skillzza Academy doesn't just teach skills<br />we build careers, capability, and confidence for the next decade.
           </p>
 

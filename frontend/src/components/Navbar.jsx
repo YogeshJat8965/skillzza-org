@@ -8,6 +8,12 @@ import {
   FileText, School, Building, Hexagon
 } from 'lucide-react';
 import { getAssetPath, getRoutePath } from '../utils/assets';
+import platformImg1 from '../assets/card grid/image 1.png';
+import platformImg2 from '../assets/card grid/image 2.png';
+import platformImg3 from '../assets/card grid/image 3.png';
+import platformImg4 from '../assets/card grid/image 4.png';
+import platformImg5 from '../assets/card grid/image 5.png';
+import platformImg6 from '../assets/card grid/image 6.png';
 
 /* ═══════════════════════════════════════════════════════════════
    NAV DATA — enriched with gradient icons, descriptions, pills
@@ -17,57 +23,111 @@ import { getAssetPath, getRoutePath } from '../utils/assets';
 const navItems = [
   {
     name: 'Platform',
-    layout: 'card-grid',
-    columns: 3,
-    width: 950,
-    eyebrow: 'Products & Platform',
+    layout: 'platform-tabs',
+    width: 1180,
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
-    cta: {
+    bottomCta: {
       text: 'Start your free skill assessment',
-      sub: 'Discover your strengths in under 10 minutes.',
+      sub: 'discover your strengths in under 10 minutes.',
       link: '/product/potential-meter',
-      secondary: {
-        text: 'Job Simulation',
-        sub: 'Explore realistic job simulation',
-        link: '/explore/job-simulations',
-      },
     },
-    items: [
+    tabs: [
       {
         name: 'The Potential Meter',
+        subtitle: 'AI skill assessment engine',
         link: '/product/potential-meter',
-        desc: 'AI skill assessment engine that maps strengths, career readiness & growth gaps.',
-        pill: 'AI-powered',
-        pillColor: 'red',
+        heading: 'Discover your true potential with',
+        headingHighlight: 'AI-powered assessments.',
+        description: 'Our intelligent assessment engine maps your skills, strengths, and growth areas to help you make better career decisions.',
+        bullets: [
+          'Identify your top skills and strengths',
+          'Benchmark your potential against industry standards',
+          'Personalized insights for your growth journey',
+        ],
+        ctaText: 'Assess Your Potential',
+        ctaLink: '/product/potential-meter',
+        illustrationId: 'potential-meter',
       },
       {
         name: 'Xperience Platform',
+        subtitle: 'Job simulations',
         link: '/product/xperience-platform',
-        desc: 'Immersive job simulations across domains to build real skills & portfolios.',
-        pill: 'Flagship',
-        pillColor: 'purple',
+        heading: 'Practice real roles.',
+        headingHighlight: 'Build real confidence.',
+        description: 'Our job simulations platform lets you experience real-world roles, solve industry challenges, and get AI-powered feedback to improve.',
+        bullets: [
+          'Simulate real job roles and tasks',
+          'Get AI feedback on your performance',
+          'Improve with role-specific recommendations',
+        ],
+        ctaText: 'Explore Simulations',
+        ctaLink: '/product/xperience-platform',
+        illustrationId: 'xperience-platform',
       },
       {
-        name: 'Hirenest Recruit',
+        name: 'Talent Intelligence',
+        subtitle: 'Talent insights engine',
         link: null,
-        desc: 'College-to-campus hiring marketplace with pre-assessed student profiles.',
-        pill: 'Marketplace',
-        pillColor: 'red',
+        heading: 'Unlock data-driven',
+        headingHighlight: 'talent insights. Stay ahead always.',
+        description: 'Our talent intelligence engine analyzes skills, trends, and market data to help you make smarter learning and career decisions.',
+        bullets: [
+          'Discover in-demand skills and emerging trends',
+          'Compare your skills with top performers',
+          'Make smarter career and learning choices',
+        ],
+        ctaText: 'Explore Insights',
+        ctaLink: null,
+        illustrationId: 'talent-intelligence',
       },
       {
-        name: 'Skill Persona',
+        name: 'AI HackNex',
+        subtitle: 'AI hackathons',
+        link: null,
+        heading: 'Compete. Build. Innovate.',
+        headingHighlight: 'All with AI HackNex.',
+        description: 'Join AI-powered hackathons, solve real-world challenges, and showcase your skills to top companies and opportunities.',
+        bullets: [
+          'Participate in AI-powered hackathons',
+          'Solve real-world problems',
+          'Earn recognition and unlock opportunities',
+        ],
+        ctaText: 'Explore Hackathons',
+        ctaLink: null,
+        illustrationId: 'ai-hacknex',
+      },
+      {
+        name: 'Hirenest',
+        subtitle: 'Campus hiring marketplace',
+        link: null,
+        heading: 'Connecting talent.',
+        headingHighlight: 'Creating opportunities.',
+        description: 'Hirenest is your campus hiring marketplace that connects students with top companies and the right opportunities.',
+        bullets: [
+          'Discover verified job & internship opportunities',
+          'Connect with top recruiters',
+          'Stand out and get hired',
+        ],
+        ctaText: 'Explore Opportunities',
+        ctaLink: null,
+        illustrationId: 'hirenest',
+      },
+      {
+        name: 'Skillzza Persona',
+        subtitle: 'AI roleplay simulator',
         link: '/explore/skillzza-persona',
-        desc: 'AI roleplay simulation — interviews, workplace scenarios, confidence building.',
-        pill: 'AI Agent',
-        pillColor: 'purple',
-      },
-      {
-        name: 'Agentic AI',
-        link: null,
-        desc: 'Autonomous skill orchestration, learner coaching & talent intelligence agents.',
-        pill: 'Coming Soon',
-        pillColor: 'purple',
+        heading: 'Practice like real.',
+        headingHighlight: 'Prepare for your AI interview.',
+        description: 'Skillzza Persona is your AI agent that simulates real interviews, provides smart feedback, and helps you improve with every practice.',
+        bullets: [
+          'AI agent that conducts real interview simulations',
+          'Instant, personalized feedback and improvement tips',
+          'Boost confidence and ace your next interview',
+        ],
+        ctaText: 'Start Roleplay',
+        ctaLink: '/explore/skillzza-persona',
+        illustrationId: 'skillzza-persona',
       },
     ],
   },
@@ -1088,11 +1148,225 @@ const CompanyMegaDropdown = ({ navItem }) => (
 );
 
 /* ═══════════════════════════════════════════════════════════════
+   PLATFORM TABS DROPDOWN — Sidebar + Content + Illustration
+   Matches the 6-tab reference design
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Platform illustration images map ── */
+
+const platformImageMap = {
+  'potential-meter': platformImg1,
+  'xperience-platform': platformImg2,
+  'talent-intelligence': platformImg3,
+  'ai-hacknex': platformImg4,
+  'hirenest': platformImg5,
+  'skillzza-persona': platformImg6,
+};
+
+/* ── PlatformTabsDropdown (main component) ── */
+
+const PlatformTabsDropdown = ({ navItem }) => {
+  const [activeTab, setActiveTab] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const prevTab = useRef(0);
+
+  const switchTab = (index) => {
+    if (index === activeTab) return;
+    setIsTransitioning(true);
+    prevTab.current = activeTab;
+    setTimeout(() => {
+      setActiveTab(index);
+      setIsTransitioning(false);
+    }, 150);
+  };
+
+  const tab = navItem.tabs[activeTab];
+
+  return (
+    <div>
+      <div style={{ display: 'flex', gap: 0, minHeight: 360 }}>
+        {/* ─── Left Sidebar ─── */}
+        <div style={{
+          width: 240, flexShrink: 0,
+          borderRight: '1px solid #e2e8f0',
+          paddingRight: 20,
+          display: 'flex', flexDirection: 'column', gap: 0,
+        }}>
+          {navItem.tabs.map((t, i) => (
+            <div
+              key={t.name}
+              onClick={() => switchTab(i)}
+              onMouseEnter={() => switchTab(i)}
+              style={{
+                padding: '14px 16px',
+                borderLeft: i === activeTab ? '3px solid #7c3aed' : '3px solid transparent',
+                background: i === activeTab ? 'rgba(124,58,237,0.04)' : 'transparent',
+                cursor: 'pointer',
+                transition: 'all 0.25s ease',
+                borderRadius: '0 8px 8px 0',
+              }}
+            >
+              <div style={{
+                fontSize: 14, fontWeight: 700, lineHeight: 1.3,
+                color: i === activeTab ? '#7c3aed' : '#0f172a',
+                transition: 'color 0.25s ease',
+              }}>{t.name}</div>
+              <div style={{
+                fontSize: 12, color: '#94a3b8', marginTop: 2,
+                fontWeight: 400, lineHeight: 1.3,
+              }}>{t.subtitle}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* ─── Center Content ─── */}
+        <div style={{
+          flex: 1, padding: '8px 28px',
+          display: 'flex', flexDirection: 'column', justifyContent: 'center',
+          opacity: isTransitioning ? 0 : 1,
+          transform: isTransitioning ? 'translateY(8px)' : 'translateY(0)',
+          transition: 'opacity 0.15s ease, transform 0.15s ease',
+        }}>
+          <h3 style={{
+            fontSize: 28, fontWeight: 800, lineHeight: 1.25,
+            color: '#0f172a', margin: 0,
+            fontFamily: "'DM Sans', sans-serif",
+          }}>
+            {tab.heading}<br />
+            <span style={{ color: '#7c3aed' }}>{tab.headingHighlight}</span>
+          </h3>
+
+          <p style={{
+            fontSize: 13.5, color: '#475569', lineHeight: 1.6,
+            margin: '14px 0 18px', maxWidth: 340,
+          }}>{tab.description}</p>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 22 }}>
+            {tab.bullets.map((b, i) => (
+              <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+                <div style={{
+                  width: 20, height: 20, borderRadius: '50%',
+                  border: '1.5px solid #a78bfa',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  flexShrink: 0, marginTop: 1,
+                }}>
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5L4.2 7L8 3" stroke="#7c3aed" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <span style={{ fontSize: 13, color: '#374151', lineHeight: 1.5 }}>{b}</span>
+              </div>
+            ))}
+          </div>
+
+          <a
+            href={tab.ctaLink ? getRoutePath(tab.ctaLink) : undefined}
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: 8,
+              background: '#7c3aed', color: '#fff',
+              padding: '10px 22px', borderRadius: 10,
+              fontSize: 13.5, fontWeight: 600,
+              textDecoration: 'none',
+              cursor: tab.ctaLink ? 'pointer' : 'default',
+              transition: 'all 0.25s ease',
+              boxShadow: '0 4px 14px rgba(124,58,237,0.25)',
+              alignSelf: 'flex-start',
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.background = '#6d28d9';
+              e.currentTarget.style.transform = 'translateY(-1px)';
+              e.currentTarget.style.boxShadow = '0 6px 20px rgba(124,58,237,0.35)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.background = '#7c3aed';
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 4px 14px rgba(124,58,237,0.25)';
+            }}
+          >
+            {tab.ctaText} <span style={{ fontSize: 16 }}>→</span>
+          </a>
+        </div>
+
+        {/* ─── Right Illustration ─── */}
+        <div className="sz-platform-illust" style={{
+          width: 340, flexShrink: 0, marginLeft: -8,
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          position: 'relative',
+          opacity: isTransitioning ? 0 : 1,
+          transform: isTransitioning ? 'scale(0.96) translateX(10px)' : 'scale(1) translateX(0)',
+          transition: 'opacity 0.2s ease, transform 0.25s cubic-bezier(0.34,1.56,0.64,1)',
+        }}>
+          {/* Animated background orbs */}
+          <div className="sz-orb sz-orb-1" />
+          <div className="sz-orb sz-orb-2" />
+          <div className="sz-orb sz-orb-3" />
+          {/* Decorative sparkles */}
+          <div className="sz-sparkle" style={{ top: -6, right: 20, fontSize: 20, animationDelay: '0s' }}>✦</div>
+          <div className="sz-sparkle" style={{ top: 16, right: 50, fontSize: 11, animationDelay: '1.2s' }}>✦</div>
+          <div className="sz-sparkle" style={{ bottom: 30, right: 5, fontSize: 14, animationDelay: '2.4s' }}>✦</div>
+          {/* Dashed orbit rings */}
+          <div style={{ position: 'absolute', top: -10, right: -6, width: 110, height: 110, borderRadius: '50%', border: '1.5px dashed rgba(124,58,237,0.12)', animation: 'szOrbitSpin 20s linear infinite' }} />
+          <div style={{ position: 'absolute', bottom: -5, left: -10, width: 80, height: 80, borderRadius: '50%', border: '1px dashed rgba(124,58,237,0.08)', animation: 'szOrbitSpin 30s linear infinite reverse' }} />
+          {/* Image container */}
+          <div style={{ width: '100%', position: 'relative', zIndex: 1 }}>
+            <img
+              src={platformImageMap[tab.illustrationId]}
+              alt={tab.name}
+              style={{
+                width: '100%', height: 340, objectFit: 'contain',
+                borderRadius: 16,
+                filter: 'drop-shadow(0 8px 24px rgba(124,58,237,0.10))',
+              }}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* ─── Bottom CTA Bar ─── */}
+      {navItem.bottomCta && (
+        <a
+          href={getRoutePath(navItem.bottomCta.link)}
+          style={{
+            marginTop: 16,
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+            background: '#fafbfc',
+            border: '1px solid #e2e8f0',
+            borderRadius: 14,
+            padding: '14px 20px',
+            textDecoration: 'none',
+            transition: 'all 0.25s ease',
+          }}
+          onMouseEnter={e => {
+            e.currentTarget.style.borderColor = 'rgba(124,58,237,0.3)';
+            e.currentTarget.style.boxShadow = '0 4px 16px rgba(124,58,237,0.08)';
+          }}
+          onMouseLeave={e => {
+            e.currentTarget.style.borderColor = '#e2e8f0';
+            e.currentTarget.style.boxShadow = 'none';
+          }}
+        >
+          <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.5 }}>
+            <strong style={{ color: '#0f172a', fontWeight: 700 }}>{navItem.bottomCta.text}</strong>{' : '}{navItem.bottomCta.sub}
+          </div>
+          <div style={{
+            width: 36, height: 36, borderRadius: '50%',
+            background: 'linear-gradient(135deg, #7c3aed, #a78bfa)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            color: '#fff', fontSize: 16, flexShrink: 0, marginLeft: 14,
+          }}>→</div>
+        </a>
+      )}
+    </div>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════════════
    MegaDropdown — dispatches to layout-specific component
 ═══════════════════════════════════════════════════════════════ */
 
 const MegaDropdown = ({ navItem, onComingSoon }) => {
   const renderers = {
+    'platform-tabs': PlatformTabsDropdown,
     'card-grid': CardGridDropdown,
     'list-rows': ListRowsDropdown,
     'compact-grid': CompactGridDropdown,
@@ -1312,6 +1586,8 @@ const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
   const isCompanyMenu = item.name === 'Company' && mobileCompanyItems.length > 0;
   const mobileSubItems = item.items
     ? item.items
+    : item.tabs
+    ? item.tabs.map(t => ({ name: t.name, link: t.link, desc: t.subtitle }))
     : [...mobileCompanyItems, ...mobileServiceItems];
   const hasSubItems = mobileSubItems.length > 0;
 

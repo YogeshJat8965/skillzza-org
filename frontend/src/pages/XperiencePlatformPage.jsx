@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { getAssetPath, getBackgroundImageUrl, getRoutePath } from '../utils/assets'
+import dashImg from '../assets/Gemini_Generated_Image_mq3oqmmq3oqmmq3o.png'
 
 function XperiencePlatformPage() {
   const contactUsPath = getRoutePath('/contact-us')
@@ -1184,7 +1185,7 @@ function XperiencePlatformPage() {
 
           <div className="relative lg:static w-full py-6 md:py-8 lg:py-12 xl:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
-            <nav className="mb-6 md:mb-8 lg:mb-12">
+            <nav className="mb-6 md:mb-8 lg:mb-4">
               <div className="flex items-center gap-2 text-xs sm:text-sm lg:text-base" style={{ color: '#71717A' }}>
                 <Link to="/" className="hover:opacity-70 transition-opacity">Home</Link>
                 <span>&gt;</span>
@@ -1200,12 +1201,8 @@ function XperiencePlatformPage() {
               <div className="w-full lg:w-[50%] xl:w-[45%] space-y-4 md:space-y-6 lg:space-y-6 xl:space-y-8 z-10 pr-0 lg:pr-8 xl:pr-12">
                 {/* Heading */}
                 <h1
-                  className="hero-heading"
+                  className="hero-heading product-heading"
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
-                    fontWeight: '500',
-                    fontSize: 'clamp(28px, 3.5vw, 40px)',
-                    lineHeight: '1.2',
                     letterSpacing: 'clamp(-1.5px, -0.15vw, -2.1px)',
                     color: '#0F1114'
                   }}
@@ -1280,7 +1277,7 @@ function XperiencePlatformPage() {
         </section>
 
         {/* Platform Description Section */}
-        <section ref={platformSectionRef} className="w-full bg-white py-6 md:py-8 lg:py-10 xl:py-12">
+        <section ref={platformSectionRef} className="w-full bg-white py-2 md:py-4 lg:py-4 xl:py-4">
           <div className="w-full">
             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-16">
               {/* Left Image - No left padding */}
@@ -1327,7 +1324,7 @@ function XperiencePlatformPage() {
         </section>
 
         {/* Stakeholder Section */}
-        <section ref={stakeholderSectionRef} className="w-full bg-[#F9FAFB] py-6 md:py-8 lg:py-10 xl:py-12">
+        <section ref={stakeholderSectionRef} className="w-full bg-[#F9FAFB] py-2 md:py-4 lg:py-4 xl:py-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Heading */}
             <h2
@@ -1351,8 +1348,8 @@ function XperiencePlatformPage() {
                     key={tab}
                     onClick={() => handleTabClick(index)}
                     className={`relative px-6 sm:px-8 md:px-12 lg:px-16 py-3 md:py-4 text-sm md:text-base lg:text-lg font-medium transition-all duration-300 ${activeTab === index
-                        ? 'bg-white text-black shadow-sm'
-                        : 'bg-transparent text-gray-700 hover:text-black'
+                      ? 'bg-white text-black shadow-sm'
+                      : 'bg-transparent text-gray-700 hover:text-black'
                       }`}
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
@@ -1487,7 +1484,7 @@ function XperiencePlatformPage() {
                       onClick={() => toggleCard(index)}
                     >
                       <div className="absolute inset-0 glass-overlay pointer-events-none" />
-                      
+
                       <p
                         className={`back-content relative z-10 text-white text-center ${flippedCards[index] ? '' : ''}`}
                         style={{
@@ -1530,7 +1527,7 @@ function XperiencePlatformPage() {
         </section>
 
         {/* How It Helps Section */}
-        <section ref={howItHelpsRef} className="w-full bg-white py-6 md:py-8 lg:py-10 xl:py-12">
+        <section ref={howItHelpsRef} className="w-full bg-white py-2 md:py-4 lg:py-4 xl:py-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Main Heading */}
             <h2
@@ -1640,7 +1637,7 @@ function XperiencePlatformPage() {
         </section>
 
         {/* Key Platform Capabilities Section */}
-        <section ref={capabilitiesSectionRef} className="w-full bg-white py-6 md:py-8 lg:py-10 xl:py-12">
+        <section ref={capabilitiesSectionRef} className="w-full bg-white py-2 md:py-4 lg:py-4 xl:py-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Heading - Full Width */}
             <h2
@@ -1756,7 +1753,7 @@ function XperiencePlatformPage() {
         </section>
 
         {/* Our Product Philosophy Section */}
-        <section ref={philosophySectionRef} className="w-full bg-white py-6 md:py-8 lg:py-10 xl:py-12">
+        <section ref={philosophySectionRef} className="w-full bg-white py-2 md:py-4 lg:py-4 xl:py-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Main Heading */}
             <h2
@@ -1865,7 +1862,7 @@ function XperiencePlatformPage() {
         </section>
 
         {/* How it Works Section */}
-        <section ref={worksRef} className="w-full bg-white py-6 md:py-8 lg:py-10 xl:py-12">
+        <section ref={worksRef} className="w-full bg-white py-2 md:py-4 lg:py-4 xl:py-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Main Heading */}
             <h2
@@ -2005,7 +2002,7 @@ function XperiencePlatformPage() {
               {/* Right Side - Image */}
               <div className="works-image w-full lg:w-[60%] flex items-center justify-center lg:justify-end pt-4 lg:-mr-16 xl:-mr-28">
                 <img
-                  src={getAssetPath('/img/Mask Group 120.png')}
+                  src={dashImg}
                   alt="How it Works Dashboard"
                   className="w-full h-auto lg:w-auto object-contain"
                   style={{ maxWidth: '850px', width: '100%', height: 'auto', opacity: 1 }}
@@ -2028,7 +2025,7 @@ function XperiencePlatformPage() {
         {/* Measured Impact Section */}
         <section
           ref={impactSectionRef}
-          className="relative py-6 md:py-10 lg:py-12 overflow-hidden"
+          className="relative py-2 md:py-4 lg:py-4 overflow-hidden"
           style={{
             backgroundImage: getBackgroundImageUrl('/img/Mask Group 138.png'),
             backgroundSize: 'cover',
@@ -2075,7 +2072,7 @@ function XperiencePlatformPage() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: '600',
-                    fontSize: 'clamp(56px, 7vw, 96px)',
+                    fontSize: 'clamp(46px, 6vw, 78px)',
                     lineHeight: '1',
                     color: '#682D99'
                   }}
@@ -2104,7 +2101,7 @@ function XperiencePlatformPage() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: '600',
-                    fontSize: 'clamp(56px, 7vw, 96px)',
+                    fontSize: 'clamp(46px, 6vw, 78px)',
                     lineHeight: '1',
                     color: '#682D99'
                   }}
@@ -2133,7 +2130,7 @@ function XperiencePlatformPage() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: '600',
-                    fontSize: 'clamp(56px, 7vw, 96px)',
+                    fontSize: 'clamp(46px, 6vw, 78px)',
                     lineHeight: '1',
                     color: '#682D99'
                   }}
@@ -2162,7 +2159,7 @@ function XperiencePlatformPage() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: '600',
-                    fontSize: 'clamp(56px, 7vw, 96px)',
+                    fontSize: 'clamp(46px, 6vw, 78px)',
                     lineHeight: '1',
                     color: '#682D99'
                   }}
@@ -2188,7 +2185,7 @@ function XperiencePlatformPage() {
         </section>
 
         {/* Technology Stack Section */}
-        <section ref={techStackRef} className="py-6 md:py-10 lg:py-12 bg-white">
+        <section ref={techStackRef} className="py-2 md:py-4 lg:py-4 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             {/* Title */}
             <h2
@@ -2208,7 +2205,7 @@ function XperiencePlatformPage() {
             {/* Cards Container */}
             <div className="relative">
               {/* Cards Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-4">
                 {[0, 1, 2].map((offset) => {
                   const actualIndex = (techStackIndex + offset) % techStackCards.length
                   const card = techStackCards[actualIndex]
@@ -2305,7 +2302,7 @@ function XperiencePlatformPage() {
         {/* Prepare for the Role Section */}
         <section
           ref={ctaSectionRef}
-          className="relative py-6 md:py-10 lg:py-12 overflow-hidden"
+          className="relative py-2 md:py-4 lg:py-4 overflow-hidden"
           style={{
             backgroundImage: getBackgroundImageUrl('/img/Group 41600.png'),
             backgroundSize: 'cover',

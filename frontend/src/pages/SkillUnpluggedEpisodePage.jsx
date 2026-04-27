@@ -150,9 +150,7 @@ function SkillUnpluggedEpisodePage() {
           >
             <div className="absolute right-5 top-5 h-[120px] w-[120px] rounded-full blur-2xl" style={{ backgroundColor: `${accent}22` }} />
 
-            <span className="inline-flex items-center rounded-full bg-[#0F172A] px-4 py-1.5 text-[11px] font-['DM_Sans',sans-serif] font-bold tracking-[0.12em] text-white uppercase">
-              The Skill Unplugged Series
-            </span>
+
             <p className="mt-4 font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] uppercase tracking-[0.1em] font-bold" style={{ color: accent }}>
               {episode.category}
             </p>
@@ -202,18 +200,7 @@ function SkillUnpluggedEpisodePage() {
                   {episode.desc} This episode breaks down the operating realities, mindset shifts, and decision frameworks professionals need to stay relevant in an AI-shaped world.
                 </p>
 
-                <div className="mt-6 flex items-end gap-1.5" aria-hidden="true">
-                  {Array.from({ length: 18 }).map((_, index) => (
-                    <span
-                      key={`wave-${index}`}
-                      className="w-1.5 rounded-full"
-                      style={{
-                        height: `${10 + ((index * 7) % 28)}px`,
-                        backgroundColor: `${accent}${index % 2 === 0 ? '66' : 'AA'}`,
-                      }}
-                    />
-                  ))}
-                </div>
+
               </article>
 
               <article className="border-b border-gray-100 pb-10 last:border-0 last:pb-0">

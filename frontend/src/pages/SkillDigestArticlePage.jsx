@@ -380,9 +380,7 @@ function SkillDigestArticlePage() {
               '--digest-accent-border': `${accent}33`,
             }}
           >
-            <div className="inline-flex items-center rounded-full bg-[#0F172A] px-4 py-1.5 text-[11px] font-['DM_Sans',sans-serif] font-bold tracking-[0.1em] text-white uppercase">
-              Skill Digest • Article {article.number}
-            </div>
+
             <h1 className="mt-4 font-['League_Spartan',sans-serif] text-[34px] sm:text-[42px] leading-[1.08] font-bold text-[#0F172A]">
               {article.title}
             </h1>

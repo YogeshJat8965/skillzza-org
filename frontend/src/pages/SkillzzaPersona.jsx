@@ -123,9 +123,9 @@ const SkillzzaPersona = () => {
 
           {/* Main Heading */}
           <h1
-            className="absolute persona-animate delay-2"
+            className="product-heading absolute persona-animate delay-2"
             style={{
-              top: '18.9%',
+              top: '25%',
               left: '11.67%',
               width: '40.4%',
               textAlign: 'left',
@@ -145,7 +145,7 @@ const SkillzzaPersona = () => {
           <p
             className="absolute persona-animate delay-3"
             style={{
-              top: '62.97%',
+              top: '50%',
               left: '11.67%',
               width: '33.85%',
               textAlign: 'left',
@@ -164,7 +164,7 @@ const SkillzzaPersona = () => {
           {/* CTA Buttons */}
           <div
             className="absolute flex items-center gap-4 persona-animate delay-4"
-            style={{ top: '77.36%', left: '11.67%' }}
+            style={{ top: '65%', left: '11.67%' }}
           >
             <Link
               to="/contact-us"
@@ -199,7 +199,7 @@ const SkillzzaPersona = () => {
       </section>
 
       {/* ── Section 1: The Hidden Gap ── */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-4">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
 
@@ -208,26 +208,26 @@ const SkillzzaPersona = () => {
               <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', lineHeight: '44px', color: '#0F1114', marginBottom: '28px' }}>
                 The Hidden Gap Between Qualified And Career-Ready
               </h2>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#4B5563', marginBottom: '12px' }}>
+              <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', marginBottom: '12px', lineHeight: '1.6' }}>
                 Modern organizations need professionals who can:
               </p>
-              <ul style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#4B5563', paddingLeft: '20px', marginBottom: '24px', listStyleType: 'disc' }}>
+              <ul style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', paddingLeft: '20px', marginBottom: '24px', listStyleType: 'disc', lineHeight: '1.6' }}>
                 <li>Think clearly in ambiguity</li>
                 <li>Communicate with confidence and credibility</li>
                 <li>Lead without authority</li>
                 <li>Navigate complex human and organizational dynamics</li>
               </ul>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#4B5563', marginBottom: '20px', lineHeight: '1.7' }}>
+              <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6', marginBottom: '24px' }}>
                 Yet most professionals enter these moments unprepared, learning through costly trial and error rather than deliberate practice. Skillzza Persona™ changes that.
               </p>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#4B5563', lineHeight: '1.7' }}>
+              <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6' }}>
                 We don't teach you about workplace behavior. We let you experience it, stepping into real roles, navigating real scenarios, and performing under real pressure, before the career moment actually arrives.
               </p>
             </div>
 
             {/* Right Column */}
             <div className="lg:w-1/2">
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#4B5563', lineHeight: '1.7', marginBottom: '24px' }}>
+              <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6', marginBottom: '24px' }}>
                 Technical skills may open doors, but careers are shaped by how people think, communicate, influence, and respond under pressure.
               </p>
               <img
@@ -240,8 +240,8 @@ const SkillzzaPersona = () => {
           </div> {/* end flex row */}
 
           {/* Designed For Section — full width below both columns */}
-          <div className="mt-16">
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#6B7280', marginBottom: '16px', letterSpacing: '0.5px' }}>
+          <div className="mt-6">
+            <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#6B7280', marginBottom: '16px', letterSpacing: '0.5px', lineHeight: '1.6' }}>
               Designed for
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-px" style={{ border: '1px solid #E5E7EB', borderRadius: '12px', overflow: 'hidden' }}>
@@ -255,7 +255,7 @@ const SkillzzaPersona = () => {
                   <span className="text-3xl" style={{ color: '#1F57C7' }}>{item.icon}</span>
                   <div>
                     <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '15px', color: '#0F1114' }}>{item.title}</p>
-                    <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '13px', color: '#6B7280' }}>{item.desc}</p>
+                    <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#6B7280', lineHeight: '1.6' }}>{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -266,9 +266,9 @@ const SkillzzaPersona = () => {
       </section>
 
       {/* ── Section 2: What Skillzza Persona Develops ── */}
-      <section style={{ backgroundColor: '#F9FAFB', paddingTop: '80px', paddingBottom: '80px' }}>
+      <section style={{ backgroundColor: '#F9FAFB', paddingTop: '16px', paddingBottom: '16px' }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '48px' }}>
+          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '20px' }}>
             What Skillzza Person Develops
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -296,7 +296,7 @@ const SkillzzaPersona = () => {
       </section>
 
       {/* ── Section 3: Career Moments You Can Practice Today ── */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-4">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Left: Image */}
@@ -313,10 +313,10 @@ const SkillzzaPersona = () => {
               <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', lineHeight: '44px', color: '#0F1114', marginBottom: '16px' }}>
                 Career Moments You Can Practice Today
               </h2>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '16px', color: '#4B5563', marginBottom: '20px', fontWeight: 500 }}>
+              <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', marginBottom: '20px', fontWeight: 500, lineHeight: '1.6' }}>
                 Imagine being able to rehearse:
               </p>
-              <ul style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#374151', lineHeight: '2', paddingLeft: '20px', listStyleType: 'disc' }}>
+              <ul style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#374151', lineHeight: '1.6', paddingLeft: '20px', listStyleType: 'disc' }}>
                 <li>Your first presentation to senior leadership, before your voice shakes</li>
                 <li>A difficult conversation with an underperforming team member, before you avoid it</li>
                 <li>Pitching your idea when you're the most junior person in the room, before you second-guess yourself</li>
@@ -329,14 +329,14 @@ const SkillzzaPersona = () => {
       </section>
 
       {/* ── Section 4: How Persona Works (Tabbed) ── */}
-      <section style={{ backgroundColor: '#F9FAFB', paddingTop: '80px', paddingBottom: '80px' }}>
+      <section style={{ backgroundColor: '#F9FAFB', paddingTop: '16px', paddingBottom: '16px' }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '40px' }}>
+          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '16px' }}>
             How Persona Works
           </h2>
 
           {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-0 mb-10" style={{ borderBottom: '2px solid #E5E7EB' }}>
+          <div className="flex flex-wrap justify-center gap-0 mb-4" style={{ borderBottom: '2px solid #E5E7EB' }}>
             {[
               'AI-Driven Role Immersion',
               'Adaptive AI Intelligence',
@@ -365,17 +365,17 @@ const SkillzzaPersona = () => {
               <div className="flex flex-col lg:flex-row gap-10 items-start">
                 <div className="lg:w-1/2">
                   <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>AI-Driven Role Immersion</h3>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#374151', fontWeight: 600, marginBottom: '12px' }}>
+                  <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#374151', fontWeight: 500, marginBottom: '12px', lineHeight: '1.6' }}>
                     Step into authentic, professionally mapped scenarios that match your career path:
                   </p>
-                  <ul style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#4B5563', lineHeight: '1.9', paddingLeft: '20px', listStyleType: 'disc' }}>
+                  <ul style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6', paddingLeft: '20px', listStyleType: 'disc' }}>
                     <li><strong>Product Managers</strong> leading tense cross-functional prioritization meetings</li>
                     <li><strong>Consultants</strong> presenting recommendations to skeptical C-suite executives</li>
                     <li><strong>Team Leads</strong> managing performance conversations and team conflict</li>
                     <li><strong>Account Managers</strong> recovering trust after a service failure</li>
                     <li><strong>First-Time Managers</strong> navigating the transition from peer to leader</li>
                   </ul>
-                  <p className="mt-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#6B7280', lineHeight: '1.7' }}>
+                  <p className="mt-6" style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#6B7280', lineHeight: '1.6' }}>
                     Each scenario is built on industry role benchmarks and real workplace challenges, not generic case studies.
                   </p>
                 </div>
@@ -388,10 +388,10 @@ const SkillzzaPersona = () => {
               <div className="flex flex-col lg:flex-row gap-10 items-start">
                 <div className="lg:w-1/2">
                   <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>Adaptive AI Intelligence</h3>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#374151', fontWeight: 600, marginBottom: '12px' }}>
+                  <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#374151', fontWeight: 500, marginBottom: '12px', lineHeight: '1.6' }}>
                     Our AI doesn't follow scripts—it responds intelligently to your every choice:
                   </p>
-                  <ul style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#4B5563', lineHeight: '1.9', paddingLeft: '20px', listStyleType: 'disc' }}>
+                  <ul style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6', paddingLeft: '20px', listStyleType: 'disc' }}>
                     <li><strong>Contextual Awareness:</strong> Understands the nuances of each situation</li>
                     <li><strong>Emotional Intelligence:</strong> Recognizes and responds to your communication style</li>
                     <li><strong>Dynamic Difficulty:</strong> Adjusts complexity based on your performance</li>
@@ -407,10 +407,10 @@ const SkillzzaPersona = () => {
               <div className="flex flex-col lg:flex-row gap-10 items-start">
                 <div className="lg:w-1/2">
                   <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>Behavioral Intelligence Tracking</h3>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#374151', fontWeight: 600, marginBottom: '12px' }}>
+                  <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#374151', fontWeight: 500, marginBottom: '12px', lineHeight: '1.6' }}>
                     Advanced analytics measure the soft skills that matter most:
                   </p>
-                  <ul style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#4B5563', lineHeight: '1.9', paddingLeft: '20px', listStyleType: 'disc' }}>
+                  <ul style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6', paddingLeft: '20px', listStyleType: 'disc' }}>
                     <li><strong>Communication Clarity:</strong> How effectively do you convey complex ideas?</li>
                     <li><strong>Leadership Presence:</strong> Can you influence without authority?</li>
                     <li><strong>Strategic Thinking:</strong> How well do you connect tactics to outcomes?</li>
@@ -426,10 +426,10 @@ const SkillzzaPersona = () => {
               <div className="flex flex-col lg:flex-row gap-10 items-start">
                 <div className="lg:w-1/2">
                   <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>Real-Time Coaching & Career Insights</h3>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', color: '#374151', fontWeight: 600, marginBottom: '12px' }}>
+                  <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#374151', fontWeight: 500, marginBottom: '12px', lineHeight: '1.6' }}>
                     Get immediate, actionable feedback that accelerates your growth:
                   </p>
-                  <ul style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#4B5563', lineHeight: '1.9', paddingLeft: '20px', listStyleType: 'disc' }}>
+                  <ul style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6', paddingLeft: '20px', listStyleType: 'disc' }}>
                     <li>Moment-by-moment insights on your communication effectiveness</li>
                     <li>Pattern recognition that identifies your natural strengths and blind spots</li>
                     <li>Personalized development paths targeting your specific growth areas</li>
@@ -454,7 +454,7 @@ const SkillzzaPersona = () => {
         backgroundColor: '#ffffff',
       }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
-          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '48px' }}>
+          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '20px' }}>
             The Impact: Proven Results Across Learners and Institutions
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -466,7 +466,7 @@ const SkillzzaPersona = () => {
             ].map((stat, i) => (
               <div key={i}>
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '42px', color: '#1F57C7', marginBottom: '8px' }}>{stat.number}</p>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: '#4B5563', lineHeight: '1.5' }}>{stat.label}</p>
+                <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6' }}>{stat.label}</p>
               </div>
             ))}
           </div>
@@ -482,7 +482,7 @@ const SkillzzaPersona = () => {
         backgroundColor: '#F59E0B',
       }}>
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '40px', lineHeight: '48px', color: '#0F1114', marginBottom: '32px' }}>
+          <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '40px', lineHeight: '48px', color: '#0F1114', marginBottom: '16px' }}>
             Prepare for the Role,<br />Before You Step Into It
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

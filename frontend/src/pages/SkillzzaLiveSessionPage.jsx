@@ -150,9 +150,7 @@ function SkillzzaLiveSessionPage() {
           >
             <div className="absolute right-5 top-5 h-[120px] w-[120px] rounded-full blur-2xl" style={{ backgroundColor: `${accent}22` }} />
 
-            <span className="inline-flex items-center rounded-full bg-[#0F172A] px-4 py-1.5 text-[11px] font-['DM_Sans',sans-serif] font-bold tracking-[0.12em] text-white uppercase">
-              Skillzza Live
-            </span>
+
             <p className="mt-4 font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] uppercase tracking-[0.1em] font-bold" style={{ color: accent }}>
               {session.category}
             </p>
