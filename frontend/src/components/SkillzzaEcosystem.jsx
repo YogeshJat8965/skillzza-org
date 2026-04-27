@@ -145,12 +145,14 @@ const SkillzzaEcosystem = () => {
           <img
             src={getAssetPath('/img/Group 37832.svg')}
             alt="Skillzza Ecosystem diagram showing five interconnected platforms: The Potential Meter (AI Skill Engine), Xperience Platform (Immersive Learning Labs), Talent Transformation (Career Mobility Pipeline), AI HackNex (Talent Marketplace), and Hirenest (Career Mobility Pipeline). Bottom process flow shows Assessment, Mentoring, Simulations, Project Showcase, and Get Hired."
-            className="w-full h-auto"
+            className="w-full"
             style={{
-              width: 'min(100%, 920px)',
+              width: 'min(100%, 1050px)',
+              aspectRatio: '1050 / 750',
               maxWidth: '100%',
               margin: '0 auto',
               display: 'block',
+              objectFit: 'contain',
             }}
           />
         </div>

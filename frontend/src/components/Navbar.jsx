@@ -46,7 +46,7 @@ const navItems = [
           'Personalized insights for your growth journey',
         ],
         ctaText: 'Assess Your Potential',
-        ctaLink: '/product/potential-meter',
+        ctaLink: null,
         illustrationId: 'potential-meter',
       },
       {
@@ -62,7 +62,7 @@ const navItems = [
           'Improve with role-specific recommendations',
         ],
         ctaText: 'Explore Simulations',
-        ctaLink: '/product/xperience-platform',
+        ctaLink: null,
         illustrationId: 'xperience-platform',
       },
       {
@@ -78,7 +78,7 @@ const navItems = [
           'Make smarter career and learning choices',
         ],
         ctaText: 'Explore Insights',
-        ctaLink: '/product/talent-intelligence',
+        ctaLink: null,
         illustrationId: 'talent-intelligence',
       },
       {
@@ -94,7 +94,7 @@ const navItems = [
           'Earn recognition and unlock opportunities',
         ],
         ctaText: 'Explore Hackathons',
-        ctaLink: '/product/ai-hacknex',
+        ctaLink: null,
         illustrationId: 'ai-hacknex',
       },
       {
@@ -110,7 +110,7 @@ const navItems = [
           'Stand out and get hired',
         ],
         ctaText: 'Explore Opportunities',
-        ctaLink: '/product/hirenest',
+        ctaLink: null,
         illustrationId: 'hirenest',
       },
       {
@@ -126,7 +126,7 @@ const navItems = [
           'Boost confidence and ace your next interview',
         ],
         ctaText: 'Start Roleplay',
-        ctaLink: '/explore/skillzza-persona',
+        ctaLink: null,
         illustrationId: 'skillzza-persona',
       },
     ],
@@ -164,7 +164,7 @@ const navItems = [
     studioLink: 'https://cognifyai.skillzza.com/',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
-    badge: 'K-12',
+    // badge: 'K-12',
     items: [
       { name: 'Vidya AI Virtual Internship', link: 'https://cognifyai.skillzza.com/', desc: 'Real-world AI, coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Flagship', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Skill Studio for Students', link: 'https://skillzza-club.vercel.app/', desc: 'Gamified AI-powered skill tracks — ML basics, robotics, sustainability, drone tech, quantum intro.', pill: 'Grades 6-12', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
@@ -1212,8 +1212,8 @@ const PlatformTabsDropdown = ({ navItem }) => {
               onMouseEnter={() => switchTab(i)}
               style={{
                 padding: '12px 14px',
-                borderLeft: i === activeTab ? '3px solid #7c3aed' : '3px solid transparent',
-                background: i === activeTab ? 'rgba(124,58,237,0.04)' : 'transparent',
+                borderLeft: i === activeTab ? '3px solid #BD1723' : '3px solid transparent',
+                background: i === activeTab ? 'rgba(189,23,35,0.04)' : 'transparent',
                 cursor: 'pointer',
                 transition: 'all 0.25s ease',
                 borderRadius: '0 8px 8px 0',
@@ -1223,7 +1223,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
             >
               <div style={{
                 fontSize: 13.5, fontWeight: 700, lineHeight: 1.3,
-                color: i === activeTab ? '#7c3aed' : '#0f172a',
+                color: i === activeTab ? '#BD1723' : '#0f172a',
                 transition: 'color 0.25s ease',
               }}>{t.name}</div>
               <div style={{
@@ -1248,7 +1248,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
             fontFamily: "'DM Sans', sans-serif",
           }}>
             {tab.heading}<br />
-            <span style={{ color: '#7c3aed' }}>{tab.headingHighlight}</span>
+            <span style={{ color: '#BD1723' }}>{tab.headingHighlight}</span>
           </h3>
 
           <p style={{
@@ -1261,12 +1261,12 @@ const PlatformTabsDropdown = ({ navItem }) => {
               <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
                 <div style={{
                   width: 20, height: 20, borderRadius: '50%',
-                  border: '1.5px solid #a78bfa',
+                  border: '1.5px solid #f87171',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   flexShrink: 0, marginTop: 1,
                 }}>
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                    <path d="M2 5L4.2 7L8 3" stroke="#7c3aed" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M2 5L4.2 7L8 3" stroke="#BD1723" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 <span style={{ fontSize: 12.5, color: '#374151', lineHeight: 1.5 }}>{b}</span>
@@ -1278,24 +1278,24 @@ const PlatformTabsDropdown = ({ navItem }) => {
             href={tab.ctaLink ? getRoutePath(tab.ctaLink) : undefined}
             style={{
               display: 'inline-flex', alignItems: 'center', gap: 8,
-              background: '#7c3aed', color: '#fff',
+              background: '#BD1723', color: '#fff',
               padding: '9px 20px', borderRadius: 10,
               fontSize: 13, fontWeight: 600,
               textDecoration: 'none',
               cursor: tab.ctaLink ? 'pointer' : 'default',
               transition: 'all 0.25s ease',
-              boxShadow: '0 4px 14px rgba(124,58,237,0.25)',
+              boxShadow: '0 4px 14px rgba(189,23,35,0.25)',
               alignSelf: 'flex-start',
             }}
             onMouseEnter={e => {
-              e.currentTarget.style.background = '#6d28d9';
+              e.currentTarget.style.background = '#99121c';
               e.currentTarget.style.transform = 'translateY(-1px)';
-              e.currentTarget.style.boxShadow = '0 6px 20px rgba(124,58,237,0.35)';
+              e.currentTarget.style.boxShadow = '0 6px 20px rgba(189,23,35,0.35)';
             }}
             onMouseLeave={e => {
-              e.currentTarget.style.background = '#7c3aed';
+              e.currentTarget.style.background = '#BD1723';
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 14px rgba(124,58,237,0.25)';
+              e.currentTarget.style.boxShadow = '0 4px 14px rgba(189,23,35,0.25)';
             }}
           >
             {tab.ctaText} <span style={{ fontSize: 16 }}>→</span>
@@ -1405,7 +1405,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
               style={{
                 width: '100%', height: 300, objectFit: 'contain',
                 borderRadius: 14,
-                filter: 'drop-shadow(0 8px 24px rgba(124,58,237,0.12))',
+                filter: 'drop-shadow(0 8px 24px rgba(189,23,35,0.12))',
                 transform: isPotentialMeter ? 'rotate(-3deg)' : 'rotate(0deg)',
                 transition: 'transform 0.3s ease',
               }}
@@ -1429,8 +1429,8 @@ const PlatformTabsDropdown = ({ navItem }) => {
             transition: 'all 0.25s ease',
           }}
           onMouseEnter={e => {
-            e.currentTarget.style.borderColor = 'rgba(124,58,237,0.3)';
-            e.currentTarget.style.boxShadow = '0 4px 16px rgba(124,58,237,0.08)';
+            e.currentTarget.style.borderColor = 'rgba(189,23,35,0.3)';
+            e.currentTarget.style.boxShadow = '0 4px 16px rgba(189,23,35,0.08)';
           }}
           onMouseLeave={e => {
             e.currentTarget.style.borderColor = '#e2e8f0';
@@ -1442,7 +1442,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
           </div>
           <div style={{
             width: 34, height: 34, borderRadius: '50%',
-            background: 'linear-gradient(135deg, #7c3aed, #a78bfa)',
+            background: 'linear-gradient(135deg, #BD1723, #f87171)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             color: '#fff', fontSize: 15, flexShrink: 0, marginLeft: 12,
           }}>→</div>
