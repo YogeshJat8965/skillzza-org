@@ -54,7 +54,7 @@ const footerSections = [
     links: [
       { name: 'Skill Blueprint', href: '/insights/skill-blueprint' },
       { name: 'The Skill Digest', href: '/insights/skill-digest' },
-      { name: 'Ai Talent Research Hub', href: '/insights/ai-talent-research-hub' },
+      { name: 'AI Talent Research Hub', href: '/insights/ai-talent-research-hub' },
       { name: 'The Skill Unplugged', href: '/insights/skill-unplugged-podcast' },
       { name: 'Skillzza Live', href: '/insights/skillzza-live' },
     ],

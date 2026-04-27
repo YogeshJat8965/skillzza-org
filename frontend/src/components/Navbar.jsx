@@ -24,7 +24,7 @@ const navItems = [
   {
     name: 'Platform',
     layout: 'platform-tabs',
-    width: 1180,
+    width: 1020,
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     bottomCta: {
@@ -1150,6 +1150,7 @@ const CompanyMegaDropdown = ({ navItem }) => (
 /* ═══════════════════════════════════════════════════════════════
    PLATFORM TABS DROPDOWN — Sidebar + Content + Illustration
    Matches the 6-tab reference design
+   Enhanced with per-tab animations and animated circle backgrounds
 ═══════════════════════════════════════════════════════════════ */
 
 /* ── Platform illustration images map ── */
@@ -1163,10 +1164,31 @@ const platformImageMap = {
   'skillzza-persona': platformImg6,
 };
 
+/* ── Per-tab entrance animation names (each tab gets a unique animation) ── */
+const tabAnimations = [
+  'szImgSlideUp',       // Potential Meter: slide up + slight rotate
+  'szImgZoomRotate',    // Xperience Platform: zoom + rotate in
+  'szImgFlipIn',        // Talent Intelligence: 3D flip in
+  'szImgBounceScale',   // AI HackNex: bounce scale
+  'szImgSwingIn',       // Hirenest: swing from top
+  'szImgElasticPop',    // Skillzza Persona: elastic pop
+];
+
+/* ── Per-tab accent colors for circle animations ── */
+const tabCircleColors = [
+  { ring1: 'rgba(124,58,237,0.18)', ring2: 'rgba(167,139,250,0.22)', ring3: 'rgba(139,92,246,0.12)', dot: '#a78bfa' },
+  { ring1: 'rgba(79,70,229,0.18)', ring2: 'rgba(99,102,241,0.20)', ring3: 'rgba(129,140,248,0.12)', dot: '#818cf8' },
+  { ring1: 'rgba(14,165,233,0.16)', ring2: 'rgba(56,189,248,0.20)', ring3: 'rgba(125,211,252,0.12)', dot: '#38bdf8' },
+  { ring1: 'rgba(245,158,11,0.18)', ring2: 'rgba(251,191,36,0.22)', ring3: 'rgba(253,224,71,0.12)', dot: '#fbbf24' },
+  { ring1: 'rgba(236,72,153,0.16)', ring2: 'rgba(244,114,182,0.20)', ring3: 'rgba(251,207,232,0.12)', dot: '#f472b6' },
+  { ring1: 'rgba(16,185,129,0.18)', ring2: 'rgba(52,211,153,0.22)', ring3: 'rgba(110,231,183,0.12)', dot: '#34d399' },
+];
+
 /* ── PlatformTabsDropdown (main component) ── */
 
 const PlatformTabsDropdown = ({ navItem }) => {
   const [activeTab, setActiveTab] = useState(0);
+  const [imgKey, setImgKey] = useState(0); // forces re-mount to replay animation
   const [isTransitioning, setIsTransitioning] = useState(false);
   const prevTab = useRef(0);
 
@@ -1176,20 +1198,24 @@ const PlatformTabsDropdown = ({ navItem }) => {
     prevTab.current = activeTab;
     setTimeout(() => {
       setActiveTab(index);
+      setImgKey(k => k + 1);
       setIsTransitioning(false);
-    }, 150);
+    }, 120);
   };
 
   const tab = navItem.tabs[activeTab];
+  const colors = tabCircleColors[activeTab] || tabCircleColors[0];
+  const animName = tabAnimations[activeTab] || 'szImgSlideUp';
+  const isPotentialMeter = activeTab === 0;
 
   return (
     <div>
-      <div style={{ display: 'flex', gap: 0, minHeight: 360 }}>
+      <div style={{ display: 'flex', gap: 0, minHeight: 340 }}>
         {/* ─── Left Sidebar ─── */}
         <div style={{
-          width: 240, flexShrink: 0,
+          width: 220, flexShrink: 0,
           borderRight: '1px solid #e2e8f0',
-          paddingRight: 20,
+          paddingRight: 14,
           display: 'flex', flexDirection: 'column', gap: 0,
         }}>
           {navItem.tabs.map((t, i) => (
@@ -1198,7 +1224,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
               onClick={() => switchTab(i)}
               onMouseEnter={() => switchTab(i)}
               style={{
-                padding: '14px 16px',
+                padding: '12px 14px',
                 borderLeft: i === activeTab ? '3px solid #7c3aed' : '3px solid transparent',
                 background: i === activeTab ? 'rgba(124,58,237,0.04)' : 'transparent',
                 cursor: 'pointer',
@@ -1207,12 +1233,12 @@ const PlatformTabsDropdown = ({ navItem }) => {
               }}
             >
               <div style={{
-                fontSize: 14, fontWeight: 700, lineHeight: 1.3,
+                fontSize: 13.5, fontWeight: 700, lineHeight: 1.3,
                 color: i === activeTab ? '#7c3aed' : '#0f172a',
                 transition: 'color 0.25s ease',
               }}>{t.name}</div>
               <div style={{
-                fontSize: 12, color: '#94a3b8', marginTop: 2,
+                fontSize: 11.5, color: '#94a3b8', marginTop: 2,
                 fontWeight: 400, lineHeight: 1.3,
               }}>{t.subtitle}</div>
             </div>
@@ -1221,14 +1247,14 @@ const PlatformTabsDropdown = ({ navItem }) => {
 
         {/* ─── Center Content ─── */}
         <div style={{
-          flex: 1, padding: '8px 28px',
+          flex: 1, padding: '8px 20px',
           display: 'flex', flexDirection: 'column', justifyContent: 'center',
           opacity: isTransitioning ? 0 : 1,
           transform: isTransitioning ? 'translateY(8px)' : 'translateY(0)',
-          transition: 'opacity 0.15s ease, transform 0.15s ease',
+          transition: 'opacity 0.12s ease, transform 0.12s ease',
         }}>
           <h3 style={{
-            fontSize: 28, fontWeight: 800, lineHeight: 1.25,
+            fontSize: 26, fontWeight: 800, lineHeight: 1.25,
             color: '#0f172a', margin: 0,
             fontFamily: "'DM Sans', sans-serif",
           }}>
@@ -1237,11 +1263,11 @@ const PlatformTabsDropdown = ({ navItem }) => {
           </h3>
 
           <p style={{
-            fontSize: 13.5, color: '#475569', lineHeight: 1.6,
-            margin: '14px 0 18px', maxWidth: 340,
+            fontSize: 13, color: '#475569', lineHeight: 1.6,
+            margin: '12px 0 16px', maxWidth: 320,
           }}>{tab.description}</p>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 22 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 18 }}>
             {tab.bullets.map((b, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
                 <div style={{
@@ -1254,7 +1280,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
                     <path d="M2 5L4.2 7L8 3" stroke="#7c3aed" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <span style={{ fontSize: 13, color: '#374151', lineHeight: 1.5 }}>{b}</span>
+                <span style={{ fontSize: 12.5, color: '#374151', lineHeight: 1.5 }}>{b}</span>
               </div>
             ))}
           </div>
@@ -1264,8 +1290,8 @@ const PlatformTabsDropdown = ({ navItem }) => {
             style={{
               display: 'inline-flex', alignItems: 'center', gap: 8,
               background: '#7c3aed', color: '#fff',
-              padding: '10px 22px', borderRadius: 10,
-              fontSize: 13.5, fontWeight: 600,
+              padding: '9px 20px', borderRadius: 10,
+              fontSize: 13, fontWeight: 600,
               textDecoration: 'none',
               cursor: tab.ctaLink ? 'pointer' : 'default',
               transition: 'all 0.25s ease',
@@ -1287,35 +1313,112 @@ const PlatformTabsDropdown = ({ navItem }) => {
           </a>
         </div>
 
-        {/* ─── Right Illustration ─── */}
-        <div className="sz-platform-illust" style={{
-          width: 340, flexShrink: 0, marginLeft: -8,
+        {/* ─── Right Illustration with Animated Circles ─── */}
+        <div className="sz-platform-illust" key={imgKey} style={{
+          width: 300, flexShrink: 0, marginLeft: -12,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           position: 'relative',
-          opacity: isTransitioning ? 0 : 1,
-          transform: isTransitioning ? 'scale(0.96) translateX(10px)' : 'scale(1) translateX(0)',
-          transition: 'opacity 0.2s ease, transform 0.25s cubic-bezier(0.34,1.56,0.64,1)',
+          overflow: 'visible',
         }}>
-          {/* Animated background orbs */}
-          <div className="sz-orb sz-orb-1" />
-          <div className="sz-orb sz-orb-2" />
-          <div className="sz-orb sz-orb-3" />
+          {/* ── Animated circle rings (like reference design) ── */}
+          <div className="sz-circle-ring sz-circle-ring-1" style={{
+            position: 'absolute',
+            width: 260, height: 260,
+            borderRadius: '50%',
+            border: `2px solid ${colors.ring1}`,
+            top: '50%', left: '50%',
+            transform: 'translate(-50%, -50%)',
+            animation: 'szRingPulse 4s ease-in-out infinite, szOrbitSpin 25s linear infinite',
+            pointerEvents: 'none',
+          }} />
+          <div className="sz-circle-ring sz-circle-ring-2" style={{
+            position: 'absolute',
+            width: 200, height: 200,
+            borderRadius: '50%',
+            border: `1.5px dashed ${colors.ring2}`,
+            top: '50%', left: '50%',
+            transform: 'translate(-50%, -50%)',
+            animation: 'szRingPulse 5s ease-in-out infinite 1s, szOrbitSpin 35s linear infinite reverse',
+            pointerEvents: 'none',
+          }} />
+          <div className="sz-circle-ring sz-circle-ring-3" style={{
+            position: 'absolute',
+            width: 320, height: 320,
+            borderRadius: '50%',
+            border: `1px solid ${colors.ring3}`,
+            top: '50%', left: '50%',
+            transform: 'translate(-50%, -50%)',
+            animation: 'szRingPulse 6s ease-in-out infinite 2s, szOrbitSpin 45s linear infinite',
+            pointerEvents: 'none',
+            opacity: 0.5,
+          }} />
+
+          {/* ── Floating orbit dots ── */}
+          <div style={{
+            position: 'absolute',
+            width: 8, height: 8, borderRadius: '50%',
+            background: colors.dot,
+            boxShadow: `0 0 12px ${colors.dot}`,
+            animation: 'szDotOrbit1 8s linear infinite',
+            pointerEvents: 'none',
+            zIndex: 3,
+          }} />
+          <div style={{
+            position: 'absolute',
+            width: 6, height: 6, borderRadius: '50%',
+            background: colors.dot,
+            opacity: 0.6,
+            boxShadow: `0 0 8px ${colors.dot}`,
+            animation: 'szDotOrbit2 12s linear infinite reverse',
+            pointerEvents: 'none',
+            zIndex: 3,
+          }} />
+          <div style={{
+            position: 'absolute',
+            width: 5, height: 5, borderRadius: '50%',
+            background: colors.dot,
+            opacity: 0.4,
+            boxShadow: `0 0 6px ${colors.dot}`,
+            animation: 'szDotOrbit3 15s linear infinite',
+            pointerEvents: 'none',
+            zIndex: 3,
+          }} />
+
+          {/* ── Background glow blob ── */}
+          <div style={{
+            position: 'absolute',
+            width: 180, height: 180,
+            borderRadius: '50%',
+            background: `radial-gradient(circle, ${colors.ring1} 0%, transparent 70%)`,
+            filter: 'blur(30px)',
+            top: '50%', left: '50%',
+            transform: 'translate(-50%, -50%)',
+            animation: 'szGlowBreath 4s ease-in-out infinite',
+            pointerEvents: 'none',
+            zIndex: 0,
+          }} />
+
           {/* Decorative sparkles */}
-          <div className="sz-sparkle" style={{ top: -6, right: 20, fontSize: 20, animationDelay: '0s' }}>✦</div>
-          <div className="sz-sparkle" style={{ top: 16, right: 50, fontSize: 11, animationDelay: '1.2s' }}>✦</div>
-          <div className="sz-sparkle" style={{ bottom: 30, right: 5, fontSize: 14, animationDelay: '2.4s' }}>✦</div>
-          {/* Dashed orbit rings */}
-          <div style={{ position: 'absolute', top: -10, right: -6, width: 110, height: 110, borderRadius: '50%', border: '1.5px dashed rgba(124,58,237,0.12)', animation: 'szOrbitSpin 20s linear infinite' }} />
-          <div style={{ position: 'absolute', bottom: -5, left: -10, width: 80, height: 80, borderRadius: '50%', border: '1px dashed rgba(124,58,237,0.08)', animation: 'szOrbitSpin 30s linear infinite reverse' }} />
-          {/* Image container */}
-          <div style={{ width: '100%', position: 'relative', zIndex: 1 }}>
+          <div className="sz-sparkle" style={{ top: -8, right: 15, fontSize: 18, animationDelay: '0s' }}>✦</div>
+          <div className="sz-sparkle" style={{ top: 14, right: 55, fontSize: 10, animationDelay: '1.2s' }}>✦</div>
+          <div className="sz-sparkle" style={{ bottom: 25, right: 0, fontSize: 13, animationDelay: '2.4s' }}>✦</div>
+          <div className="sz-sparkle" style={{ top: '40%', left: -8, fontSize: 12, animationDelay: '0.6s' }}>✧</div>
+          <div className="sz-sparkle" style={{ bottom: 10, left: 30, fontSize: 9, animationDelay: '1.8s' }}>✦</div>
+
+          {/* Image container with per-tab animation */}
+          <div style={{
+            width: '100%', position: 'relative', zIndex: 1,
+            animation: `${animName} 0.55s cubic-bezier(0.34,1.56,0.64,1) both`,
+          }}>
             <img
               src={platformImageMap[tab.illustrationId]}
               alt={tab.name}
               style={{
-                width: '100%', height: 340, objectFit: 'contain',
-                borderRadius: 16,
-                filter: 'drop-shadow(0 8px 24px rgba(124,58,237,0.10))',
+                width: '100%', height: 300, objectFit: 'contain',
+                borderRadius: 14,
+                filter: 'drop-shadow(0 8px 24px rgba(124,58,237,0.12))',
+                transform: isPotentialMeter ? 'rotate(-3deg)' : 'rotate(0deg)',
+                transition: 'transform 0.3s ease',
               }}
             />
           </div>
@@ -1327,12 +1430,12 @@ const PlatformTabsDropdown = ({ navItem }) => {
         <a
           href={getRoutePath(navItem.bottomCta.link)}
           style={{
-            marginTop: 16,
+            marginTop: 14,
             display: 'flex', alignItems: 'center', justifyContent: 'space-between',
             background: '#fafbfc',
             border: '1px solid #e2e8f0',
             borderRadius: 14,
-            padding: '14px 20px',
+            padding: '12px 18px',
             textDecoration: 'none',
             transition: 'all 0.25s ease',
           }}
@@ -1345,14 +1448,14 @@ const PlatformTabsDropdown = ({ navItem }) => {
             e.currentTarget.style.boxShadow = 'none';
           }}
         >
-          <div style={{ fontSize: 13.5, color: '#475569', lineHeight: 1.5 }}>
+          <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.5 }}>
             <strong style={{ color: '#0f172a', fontWeight: 700 }}>{navItem.bottomCta.text}</strong>{' : '}{navItem.bottomCta.sub}
           </div>
           <div style={{
-            width: 36, height: 36, borderRadius: '50%',
+            width: 34, height: 34, borderRadius: '50%',
             background: 'linear-gradient(135deg, #7c3aed, #a78bfa)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: '#fff', fontSize: 16, flexShrink: 0, marginLeft: 14,
+            color: '#fff', fontSize: 15, flexShrink: 0, marginLeft: 12,
           }}>→</div>
         </a>
       )}
