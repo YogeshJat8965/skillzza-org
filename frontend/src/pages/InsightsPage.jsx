@@ -133,7 +133,7 @@ function InsightsPage() {
 
   const breadcrumbMappings = {
     "Skill Blueprint": { left: "Case Studies", right: "Skill Blueprint" },
-    "The Skill Digest": { left: "Blog", right: "The Skillzz Digest" },
+    "The Skill Digest": { left: "Blog", right: "The Skill Digest" },
     "AI Talent Research Hub": { left: "Reports & Whitepapers", right: "AI Talent Research Hub" },
     "The Skill Unplugged Podcast Series (3R )": { left: "Skill Unplugged Podcast", right: "A Podcast series" },
     "Skillzza Live": { left: "Knowledge in Action", right: "Skillzza Live" }
@@ -462,16 +462,16 @@ function InsightsPage() {
               {skillUnpluggedEpisodes.map((card) => (
                 <div
                   key={card.id}
-                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1 cursor-pointer"
-                  role="button"
+                  className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1"
+                  /* role="button" removing interactivity */
                   tabIndex={0}
-                  onClick={() => openSkillUnpluggedEpisode(card.slug)}
-                  onKeyDown={(e) => {
+                  /* onClick={() => openSkillUnpluggedEpisode(card.slug)} */
+                  /* onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                       e.preventDefault();
                       openSkillUnpluggedEpisode(card.slug);
                     }
-                  }}
+                  }} */
                 >
                   <div className="w-full h-[250px] overflow-hidden relative">
                     <img
@@ -497,8 +497,8 @@ function InsightsPage() {
                       <ExpandableText
                         text={card.desc}
                         limit={170}
-                        forceReadMore={true}
-                        onReadMore={() => openSkillUnpluggedEpisode(card.slug)}
+                        forceReadMore={false}
+                        /* onReadMore={() => openSkillUnpluggedEpisode(card.slug)} */
                       />
                     </div>
                   </div>

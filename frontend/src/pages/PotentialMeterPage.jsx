@@ -178,7 +178,7 @@ export default function PotentialMeterPage() {
       {/* ── Hero Section ── */}
       <section className="relative w-full pt-[20px]">
 
-        {/* Gradient bg — covers from top to halfway through the image */}
+        {/* Gradient bg - covers from top to halfway through the image */}
         <div
           className="absolute top-0 left-0 w-full pointer-events-none"
           style={{
@@ -256,7 +256,7 @@ export default function PotentialMeterPage() {
             <img
               ref={imgRef}
               src={heroImg}
-              alt="Potential Meter AI — Assess, Analyze, Readiness, Roadmap"
+              alt="Potential Meter AI - Assess, Analyze, Readiness, Roadmap"
               className="w-full h-auto object-contain"
               onLoad={() => {
                 if (imgRef.current) setImgHeight(imgRef.current.offsetHeight);
@@ -344,7 +344,7 @@ export default function PotentialMeterPage() {
               The Problem We Solve
             </h2>
             <p className="font-['Lato',sans-serif] font-medium text-[#475569] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
-              Career decisions today are based on assumptions<br className="hidden md:block"/> — not real performance data.
+              Career decisions today are based on assumptions<br className="hidden md:block"/> - not real performance data.
             </p>
           </div>
 

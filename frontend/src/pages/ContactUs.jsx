@@ -12,6 +12,7 @@ function ContactUs() {
     countryCode: '+91',
     phone: '',
     linkedin: '',
+    message: '',
     experience: '',
     industry: '',
     achievements: '',
@@ -154,6 +155,9 @@ function ContactUs() {
 
                     <label className="cu-label" htmlFor="cu-linkedin">LinkedIn Profile URL</label>
                     <input className="cu-input" id="cu-linkedin" type="url" value={formData.linkedin} onChange={(e) => updateField('linkedin', e.target.value)} placeholder="https://linkedin.com/in/your-profile" />
+
+                    <label className="cu-label" htmlFor="cu-message">Message</label>
+                    <textarea className="cu-textarea" id="cu-message" value={formData.message} onChange={(e) => updateField('message', e.target.value)} placeholder="Your message here..." rows={4} />
                   </>
                 )}
 
@@ -262,7 +266,7 @@ function ContactUs() {
           position: relative;
           overflow: hidden;
           background: linear-gradient(135deg, #5a0b14 0%, #7d0f1a 48%, #8f1320 100%);
-          padding: 64px 24px 80px;
+          padding: 40px 24px 60px;
         }
 
         .cu-flow-bg-orb {
@@ -299,7 +303,7 @@ function ContactUs() {
         }
 
         .cu-flow-title {
-          margin: 0 0 36px;
+          margin: 0 0 20px;
           text-align: center;
           color: #f8fafc;
           font-size: clamp(34px, 4.8vw, 52px);
@@ -420,8 +424,8 @@ function ContactUs() {
         .cu-contact-title {
           margin: 0 0 20px;
           color: #0f172a;
-          font-size: 42px;
-          line-height: 1.08;
+          font-size: 24px;
+          line-height: 1.2;
           font-weight: 800;
           letter-spacing: -0.01em;
         }
@@ -473,8 +477,8 @@ function ContactUs() {
 
         .cu-form-title {
           margin: 0 0 22px;
-          font-size: 40px;
-          line-height: 1.1;
+          font-size: 24px;
+          line-height: 1.2;
           color: #0f172a;
           font-weight: 800;
         }
@@ -482,7 +486,7 @@ function ContactUs() {
         .cu-form {
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 4px;
         }
 
         .cu-helper {
@@ -493,20 +497,20 @@ function ContactUs() {
         }
 
         .cu-label {
-          font-size: 17px;
+          font-size: 15px;
           font-weight: 700;
           color: #334155;
-          margin-top: 10px;
+          margin-top: 8px;
         }
 
         .cu-input,
         .cu-code {
           width: 100%;
-          height: 56px;
+          height: 48px;
           border: 1px solid #d5dbe5;
-          border-radius: 10px;
+          border-radius: 8px;
           padding: 0 14px;
-          font-size: 20px;
+          font-size: 16px;
           color: #0f172a;
           background: #ffffff;
           outline: none;
@@ -527,11 +531,11 @@ function ContactUs() {
 
         .cu-textarea {
           width: 100%;
-          min-height: 164px;
+          min-height: 120px;
           border: 1px solid #d5dbe5;
-          border-radius: 10px;
+          border-radius: 8px;
           padding: 12px 14px;
-          font-size: 19px;
+          font-size: 16px;
           color: #0f172a;
           background: #ffffff;
           outline: none;
@@ -682,7 +686,7 @@ function ContactUs() {
           }
 
           .cu-contact-title {
-            font-size: 34px;
+            font-size: 22px;
           }
 
           .cu-step-connector {
@@ -692,11 +696,11 @@ function ContactUs() {
 
         @media (max-width: 780px) {
           .cu-flow-wrap {
-            padding: 52px 16px 66px;
+            padding: 32px 16px 48px;
           }
 
           .cu-flow-title {
-            margin-bottom: 26px;
+            margin-bottom: 16px;
           }
 
           .cu-steps--top {
@@ -716,7 +720,7 @@ function ContactUs() {
           }
 
           .cu-form-title {
-            font-size: 30px;
+            font-size: 22px;
           }
 
           .cu-contact-card {
@@ -724,7 +728,7 @@ function ContactUs() {
           }
 
           .cu-contact-title {
-            font-size: 28px;
+            font-size: 22px;
           }
 
           .cu-contact-item {

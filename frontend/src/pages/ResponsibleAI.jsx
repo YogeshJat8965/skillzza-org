@@ -23,10 +23,10 @@ const ResponsibleAI = () => {
               Ethical Intelligence for the Future of Work
             </h1>
             <p className="text-base md:text-lg text-gray-300 max-w-3xl leading-relaxed mb-4">
-              At Skillzza, we're shaping the future of workforce development through advanced, AI-driven technologies—built with responsibility, transparency, and equity at their core. We understand that with innovation comes a deep responsibility to design systems that are fair, explainable, and human-centric.
+              At Skillzza, we're shaping the future of workforce development through advanced, AI-driven technologies-built with responsibility, transparency, and equity at their core. We understand that with innovation comes a deep responsibility to design systems that are fair, explainable, and human-centric.
             </p>
             <p className="text-base md:text-lg text-gray-300 max-w-3xl leading-relaxed">
-              As AI becomes a transformative force across industries, Skillzza is committed to ensuring that this power is used to amplify opportunity, not inequality. Our Responsible AI framework is embedded in every layer of our platform—from talent simulations and assessments to personalized upskilling journeys and employer insights.
+              As AI becomes a transformative force across industries, Skillzza is committed to ensuring that this power is used to amplify opportunity, not inequality. Our Responsible AI framework is embedded in every layer of our platform-from talent simulations and assessments to personalized upskilling journeys and employer insights.
             </p>
           </div>
         </div>
@@ -38,7 +38,7 @@ const ResponsibleAI = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Commitment to Responsible AI</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
-              Responsible AI is more than a philosophy—it's a foundational element of how Skillzza designs and delivers impact. We are committed to:
+              Responsible AI is more than a philosophy-it's a foundational element of how Skillzza designs and delivers impact. We are committed to:
             </p>
           </div>
 
@@ -108,7 +108,7 @@ const ResponsibleAI = () => {
             <div className="bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <h3 className="text-3xl font-bold text-orange-500 mb-6 text-center">Explainability & Interpretability</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Every AI decision should be clear. Our models offer full visibility into how skills, roles, and experiences are matched—empowering users with actionable, understandable insights.
+                Every AI decision should be clear. Our models offer full visibility into how skills, roles, and experiences are matched-empowering users with actionable, understandable insights.
               </p>
             </div>
           </div>
@@ -118,7 +118,7 @@ const ResponsibleAI = () => {
             <div className="bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <h3 className="text-3xl font-bold text-blue-600 mb-6 text-center">Fairness by Design</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
-                We build bias-aware algorithms that focus solely on skills and potential—intentionally removing demographic identifiers to ensure equitable hiring and advancement opportunities.
+                We build bias-aware algorithms that focus solely on skills and potential-intentionally removing demographic identifiers to ensure equitable hiring and advancement opportunities.
               </p>
             </div>
             <div className="relative">
@@ -205,7 +205,7 @@ const ResponsibleAI = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Candidates</h3>
               <p className="text-gray-600">
-                To discover career pathways that reflect their potential—not just past experience.
+                To discover career pathways that reflect their potential-not just past experience.
               </p>
             </div>
 
@@ -256,10 +256,10 @@ const ResponsibleAI = () => {
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Building a Responsible Workforce Ecosystem</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Our platform spans the entire talent lifecycle—from career discovery and skill simulation to talent acquisition, upskilling, and retention. At every stage, Skillzza ensures that AI is deployed ethically to create inclusive, data-driven talent ecosystems that benefit both individuals and organizations.
+                Our platform spans the entire talent lifecycle-from career discovery and skill simulation to talent acquisition, upskilling, and retention. At every stage, Skillzza ensures that AI is deployed ethically to create inclusive, data-driven talent ecosystems that benefit both individuals and organizations.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                We believe that the future of work must be intelligent, inclusive, and equitable—and we're building that future today, powered by Responsible AI.
+                We believe that the future of work must be intelligent, inclusive, and equitable-and we're building that future today, powered by Responsible AI.
               </p>
             </div>
           </div>

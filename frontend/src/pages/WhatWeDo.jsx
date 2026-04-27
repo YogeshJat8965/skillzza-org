@@ -303,7 +303,7 @@ const WhatWeDo = () => {
                 scrollMarginTop: 80,
               }}
             >
-              {/* core.svg decorative — left side (Pillar 1) */}
+              {/* core.svg decorative - left side (Pillar 1) */}
               {pillar.decorLeft && (
                 <img
                   className="wwd-core-decor"

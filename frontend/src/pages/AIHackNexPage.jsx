@@ -683,7 +683,7 @@ function AIHackNexPage() {
             </div>
           </nav>
 
-          {/* Main Content — two-column layout */}
+          {/* Main Content - two-column layout */}
           <div className="flex flex-col lg:flex-row items-center lg:items-center gap-8 md:gap-10 lg:gap-4 xl:gap-0 max-w-[1920px] mx-auto">
             {/* ── Left Column: Text + Buttons ── */}
             <div className="w-full lg:w-[50%] xl:w-[45%] space-y-5 md:space-y-6 lg:space-y-7 z-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-32">
@@ -971,7 +971,7 @@ function AIHackNexPage() {
 
           {/* Content: Cards left + Image right */}
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 xl:gap-12 items-stretch">
-            {/* Left — 5 benefit cards in 2-col grid */}
+            {/* Left - 5 benefit cards in 2-col grid */}
             <div className="w-full lg:w-[48%] xl:w-[45%] grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 auto-rows-min">
               {[
                 {
@@ -1030,7 +1030,7 @@ function AIHackNexPage() {
               ))}
             </div>
 
-            {/* Right — Image with decorative accents */}
+            {/* Right - Image with decorative accents */}
             <div className="w-full lg:w-[52%] xl:w-[55%] relative hacknex-helps-image">
               {/* Red accent top-right */}
               <div
@@ -1130,7 +1130,7 @@ function AIHackNexPage() {
           {/* Tab content */}
           <div className="hacknex-cap-content">
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16">
-              {/* Left — text content */}
+              {/* Left - text content */}
               <div className="w-full lg:w-[50%] xl:w-[48%]">
                 {/* Tab title */}
                 <h3
@@ -1182,7 +1182,7 @@ function AIHackNexPage() {
                 ))}
               </div>
 
-              {/* Right — image */}
+              {/* Right - image */}
               <div className="w-full lg:w-[50%] xl:w-[52%] flex items-center justify-center">
                 <img
                   src={capabilitiesImg}

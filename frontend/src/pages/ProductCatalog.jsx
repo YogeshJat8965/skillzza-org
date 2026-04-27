@@ -46,7 +46,7 @@ const ProductCatalog = () => {
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Experience the Real World Before You Enter It</h2>
               <p className="text-lg text-gray-700">
-                The Xperience Platform brings immersive, job-aligned simulations to life—empowering learners with actionable experience that mirrors the intensity, ambiguity, and precision of actual industry roles. It transcends theoretical instruction to foster real-time decision-making and execution confidence.
+                The Xperience Platform brings immersive, job-aligned simulations to life-empowering learners with actionable experience that mirrors the intensity, ambiguity, and precision of actual industry roles. It transcends theoretical instruction to foster real-time decision-making and execution confidence.
               </p>
               <p className="text-base text-gray-700">
                 At Skillzza, we champion experiential competence as the cornerstone of future employability. Through challenge-based, domain-specific learning modules, individuals gain both the technical and human-centric capabilities demanded in the modern workplace.
@@ -97,7 +97,7 @@ const ProductCatalog = () => {
             <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-orange-500">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Approach</h3>
               <p className="text-base text-gray-700 leading-relaxed">
-                We operationalize experiential intelligence by embedding learners into high-fidelity simulations that replicate the nuance, pressure, and complexity of real-world job functions. This immersion cultivates agile problem-solving, adaptive execution, and domain-specific fluency—essential for thriving in dynamic professional environments.
+                We operationalize experiential intelligence by embedding learners into high-fidelity simulations that replicate the nuance, pressure, and complexity of real-world job functions. This immersion cultivates agile problem-solving, adaptive execution, and domain-specific fluency-essential for thriving in dynamic professional environments.
               </p>
             </div>
           </div>
@@ -116,7 +116,7 @@ const ProductCatalog = () => {
               </div>
               <div className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-purple-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Competency Acceleration Framework</h4>
-                <p className="text-gray-600 text-sm">Builds multi-dimensional fluency—technical acumen, critical thinking, and communication—in synchronized, measurable pathways.</p>
+                <p className="text-gray-600 text-sm">Builds multi-dimensional fluency-technical acumen, critical thinking, and communication-in synchronized, measurable pathways.</p>
               </div>
               <div className="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-green-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Real-Time Adaptive Feedback</h4>
@@ -142,7 +142,7 @@ const ProductCatalog = () => {
                 Potential Meter is Skillzza's precision diagnostic tool that decodes individual strengths, aspirations, and readiness across cognitive, emotional, and technical dimensions.
               </p>
               <p className="text-base text-gray-700">
-                More than an assessment—it's a strategic compass for personalized learning design, career direction, and growth optimization.
+                More than an assessment-it's a strategic compass for personalized learning design, career direction, and growth optimization.
               </p>
             </div>
             
@@ -245,7 +245,7 @@ const ProductCatalog = () => {
                 The Talent Intelligence Suite (TIS) is an integrated analytics engine that constructs deep, behavioral-talent graphs, enabling hyper-personalized role matching, future-readiness scoring, and predictive performance mapping.
               </p>
               <p className="text-base text-gray-700">
-                TIS is not just a profiling system—it's an intelligent decision accelerator for individuals, organizations, and institutions navigating high-stakes workforce planning.
+                TIS is not just a profiling system-it's an intelligent decision accelerator for individuals, organizations, and institutions navigating high-stakes workforce planning.
               </p>
             </div>
           </div>
@@ -293,7 +293,7 @@ const ProductCatalog = () => {
             <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-purple-500">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Approach</h3>
               <p className="text-base text-gray-700 leading-relaxed">
-                We synthesize behavioral analytics, performance data, and AI-driven inference to construct multidimensional talent profiles. This intelligence framework enables organizations and individuals to optimize role-fit, forecast potential, and drive informed workforce decisions at scale—with surgical accuracy.
+                We synthesize behavioral analytics, performance data, and AI-driven inference to construct multidimensional talent profiles. This intelligence framework enables organizations and individuals to optimize role-fit, forecast potential, and drive informed workforce decisions at scale-with surgical accuracy.
               </p>
             </div>
           </div>
@@ -338,7 +338,7 @@ const ProductCatalog = () => {
                 Hirenest is Skillzza's precision hiring ecosystem, built to bridge the delta between high-potential candidates and opportunity pipelines through real-time, data-backed insights.
               </p>
               <p className="text-base text-gray-700">
-                It facilitates strategic campus and early-career recruitment by delivering validated learner profiles equipped with performance benchmarks and project portfolios—making intelligent hiring truly scalable.
+                It facilitates strategic campus and early-career recruitment by delivering validated learner profiles equipped with performance benchmarks and project portfolios-making intelligent hiring truly scalable.
               </p>
             </div>
             
@@ -406,7 +406,7 @@ const ProductCatalog = () => {
               </div>
               <div className="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-teal-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">One-Click Profile Access</h4>
-                <p className="text-gray-600 text-sm">Hiring managers get a 360° view of candidate readiness—skills, simulations, soft skills, and project delivery.</p>
+                <p className="text-gray-600 text-sm">Hiring managers get a 360° view of candidate readiness-skills, simulations, soft skills, and project delivery.</p>
               </div>
               <div className="bg-gradient-to-br from-cyan-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-cyan-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Attrition Mitigation Engine</h4>
@@ -489,7 +489,7 @@ const ProductCatalog = () => {
             <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-red-500">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Approach</h3>
               <p className="text-base text-gray-700 leading-relaxed">
-                We architect high-stakes AI arenas where innovation, code fluency, and real-world relevance converge. Participants engage with mission-critical problem statements under competitive constraints—advancing not just technical depth but also innovation readiness, peer benchmarking, and public validation.
+                We architect high-stakes AI arenas where innovation, code fluency, and real-world relevance converge. Participants engage with mission-critical problem statements under competitive constraints-advancing not just technical depth but also innovation readiness, peer benchmarking, and public validation.
               </p>
             </div>
           </div>
@@ -531,7 +531,7 @@ const ProductCatalog = () => {
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Innovation & Capstone Studio</h2>
               <p className="text-lg text-gray-700">
-                The POC Hub empowers learners and researchers to transform innovative ideas into validated, functional prototypes—bridging academic exploration with enterprise-grade product thinking.
+                The POC Hub empowers learners and researchers to transform innovative ideas into validated, functional prototypes-bridging academic exploration with enterprise-grade product thinking.
               </p>
               <p className="text-base text-gray-700">
                 It serves as a crucible for interdisciplinary collaboration, real-world problem solving, and rapid innovation within controlled, outcome-driven cycles.
@@ -634,7 +634,7 @@ const ProductCatalog = () => {
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Virtual Incubation Center</h2>
               <p className="text-lg text-gray-700">
-                DeepTech Studio is Skillzza's borderless incubation hub designed to empower early-stage entrepreneurs with a digital-first model that accelerates idea validation, product-market fit, and fundraising potential—without physical limitations.
+                DeepTech Studio is Skillzza's borderless incubation hub designed to empower early-stage entrepreneurs with a digital-first model that accelerates idea validation, product-market fit, and fundraising potential-without physical limitations.
               </p>
               <p className="text-base text-gray-700">
                 It is tailored for founders in emerging tech domains seeking structure, guidance, and visibility from seed to scale.

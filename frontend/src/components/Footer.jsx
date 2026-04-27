@@ -223,7 +223,7 @@ const Footer = () => {
               </div>
             ))}
 
-            {/* ── Stay Connected — spans cols 4–6 (Insights + Company) ── */}
+            {/* ── Stay Connected - spans cols 4–6 (Insights + Company) ── */}
             <div className="footer-social-col" style={{ gridColumn: '4 / 6', marginTop: 36, marginLeft: '-15px' }}>
               <p style={{
                 fontWeight: 700,

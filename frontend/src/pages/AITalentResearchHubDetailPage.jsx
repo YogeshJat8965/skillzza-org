@@ -68,7 +68,7 @@ const GlobalCompensationContent = () => (
 
 const InDemandSkillsContent = () => (
  <div className="prose max-w-none font-['DM_Sans',sans-serif] text-gray-700">
- <h2 className="text-2xl font-bold mb-4 font-['League_Spartan',sans-serif] text-gray-900">Most In-Demand Skills for 2025</h2>
+ <h2 className="text-2xl font-bold mb-4 font-['League_Spartan',sans-serif] text-gray-900">Most In-Demand Skills for 2026</h2>
  <p className="mb-4">Explore the core technical skills, frameworks, and emerging specializations shaping the future of AI talent.</p>
 
  <h3 className="text-xl font-bold mt-6 mb-3 font-['League_Spartan',sans-serif] text-gray-900">Core Technical Skills & Languages</h3>
@@ -161,7 +161,7 @@ const FutureOutlookContent = () => (
 const CONTENT_MAP = {
  'executive-summary': { title:"2026 AI Talent & Salary Benchmark Report", Content: ExecutiveSummaryContent },
  'global-compensation': { title:"Global Compensation Landscape", Content: GlobalCompensationContent },
- 'in-demand-skills': { title:"Most In-Demand Skills for 2025", Content: InDemandSkillsContent },
+ 'in-demand-skills': { title:"Most In-Demand Skills for 2026", Content: InDemandSkillsContent },
  'recruitment-trends': { title:"Recruitment Trends & Strategies", Content: RecruitmentTrendsContent },
  'skills-gap-analysis': { title:"Skills Gap Analysis & Training Needs", Content: SkillsGapAnalysisContent },
  'future-outlook': { title:"Future Outlook & Predictions", Content: FutureOutlookContent }

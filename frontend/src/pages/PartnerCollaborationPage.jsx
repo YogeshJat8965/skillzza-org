@@ -158,7 +158,8 @@ function PartnerCollaborationPage() {
 
         .collab-hero__title {
           margin: 0;
-          font-size: 56px;
+          font-size: 38px;
+          font-family: 'DM Sans', sans-serif;
           font-weight: 900;
           line-height: 1.1;
           letter-spacing: -1px;
@@ -344,7 +345,7 @@ function PartnerCollaborationPage() {
           margin: 0;
         }
 
-        /* ===== DETAIL SECTION — CONTENT LEFT, IMAGE RIGHT ===== */
+        /* ===== DETAIL SECTION - CONTENT LEFT, IMAGE RIGHT ===== */
         .detail-section {
           background: #f5f5f5;
           padding: 60px 24px;
@@ -653,7 +654,7 @@ function PartnerCollaborationPage() {
           }
 
           .collab-hero__title {
-            font-size: clamp(38px, 10.5vw, 44px);
+            font-size: 38px;
             max-width: 100%;
             line-height: 1.06;
             letter-spacing: -0.6px;
@@ -686,7 +687,7 @@ function PartnerCollaborationPage() {
 
         @media (max-width: 420px) {
           .collab-hero__title {
-            font-size: clamp(34px, 11.2vw, 40px);
+            font-size: 38px;
           }
         }
 
@@ -776,7 +777,7 @@ function PartnerCollaborationPage() {
           </p>
         </section>
 
-        {/* Why Choose Skillzza — content left, image right */}
+        {/* Why Choose Skillzza - content left, image right */}
         <section className="detail-section">
           <div className="detail-section__inner">
             <div className="detail-section__content collab-animate anim-slide-left">
@@ -808,7 +809,7 @@ function PartnerCollaborationPage() {
           </div>
         </section>
 
-        {/* Future-First Partnerships — image left, content right */}
+        {/* Future-First Partnerships - image left, content right */}
         <section className="detail-section">
           <div className="detail-section__inner detail-section__inner--reverse">
             <div className="detail-section__content collab-animate anim-slide-right">
@@ -894,7 +895,7 @@ function PartnerCollaborationPage() {
           </p>
         </section>
 
-        {/* How We Empower Governments — content left, image right */}
+        {/* How We Empower Governments - content left, image right */}
         <section className="detail-section">
           <div className="detail-section__inner">
             <div className="detail-section__content collab-animate anim-slide-left">
@@ -926,7 +927,7 @@ function PartnerCollaborationPage() {
           </div>
         </section>
 
-        {/* Public-Private Partnerships — image left, content right */}
+        {/* Public-Private Partnerships - image left, content right */}
         <section className="detail-section">
           <div className="detail-section__inner detail-section__inner--reverse">
             <div className="detail-section__content collab-animate anim-slide-right">
@@ -957,7 +958,7 @@ function PartnerCollaborationPage() {
           </div>
         </section>
 
-        {/* Priority Focus Areas — content left, image right */}
+        {/* Priority Focus Areas - content left, image right */}
         <section className="detail-section">
           <div className="detail-section__inner">
             <div className="detail-section__content collab-animate anim-slide-left">
@@ -1032,12 +1033,12 @@ function PartnerCollaborationPage() {
           <p className="section-description-below__text collab-animate anim-fade-up">
             Skillzza partners with schools and educational institutions to equip young minds with
             essential 21st-century skills. Our programs go beyond traditional academics to inspire
-            innovation, creativity, and leadership—preparing students to become tomorrow's
+            innovation, creativity, and leadership-preparing students to become tomorrow's
             changemakers.
           </p>
         </section>
 
-        {/* Why Educational Institutions Choose Skillzza — image left, content right */}
+        {/* Why Educational Institutions Choose Skillzza - image left, content right */}
         <section className="detail-section">
           <div className="detail-section__inner detail-section__inner--reverse">
             <div className="detail-section__content collab-animate anim-slide-right">
@@ -1078,7 +1079,7 @@ function PartnerCollaborationPage() {
           </div>
         </section>
 
-        {/* Career & Educator Excellence — content left, image right */}
+        {/* Career & Educator Excellence - content left, image right */}
         <section className="detail-section">
           <div className="detail-section__inner">
             <div className="detail-section__content collab-animate anim-slide-left">
@@ -1109,7 +1110,7 @@ function PartnerCollaborationPage() {
           </div>
         </section>
 
-        {/* Comprehensive Program Offerings — image left, content right */}
+        {/* Comprehensive Program Offerings - image left, content right */}
         <section className="detail-section">
           <div className="detail-section__inner detail-section__inner--reverse">
             <div className="detail-section__content collab-animate anim-slide-right">
@@ -1161,7 +1162,7 @@ function PartnerCollaborationPage() {
                 <p className="cards-section__card-text">Building confidence, resilience, and social responsibility</p>
               </article>
             </div>
-            <p className="cards-section__cta collab-animate anim-fade-up">Let's shape the innovators and leaders of tomorrow—together.</p>
+            <p className="cards-section__cta collab-animate anim-fade-up">Let's shape the innovators and leaders of tomorrow-together.</p>
             <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
           </div>
         </section>

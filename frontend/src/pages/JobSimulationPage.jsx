@@ -1786,7 +1786,7 @@ function JobSimulationPage() {
           background: linear-gradient(135deg, #7c0a02 0%, #a61217 50%, #6b0700 100%);
           width: 92%;
           max-width: 1400px;
-          margin: 40px auto;
+          margin: 0 auto;
           border-radius: 12px;
           padding: 18px 28px 24px;
           justify-content: center;
@@ -1831,7 +1831,7 @@ function JobSimulationPage() {
 
       <section className="jsim-section">
 
-        {/* Wavy background image — positioned absolutely on the right */}
+        {/* Wavy background image - positioned absolutely on the right */}
         <img
           src={getAssetPath('/simulation/wavyImage.png')}
           alt=""
@@ -2148,15 +2148,17 @@ function JobSimulationPage() {
       </section>
 
       {/* ── BOTTOM CTA BANNER ── */}
-      <section className="jsim-cta-banner">
-        <ScrollReveal className="jsim-cta-text">
-          Join Skillzza And Transcend Traditional Learning <br />Step confidently into the future with skills that matter.
-        </ScrollReveal>
-        <ScrollReveal delay={150}>
-          <a href="https://portal.skillzza.com/" className="jsim-cta-btn">
-            Get Started Now!
-          </a>
-        </ScrollReveal>
+      <section style={{ backgroundColor: '#fafafa', padding: '60px 0' }}>
+        <section className="jsim-cta-banner">
+          <ScrollReveal className="jsim-cta-text">
+            Join Skillzza And Transcend Traditional Learning <br />Step confidently into the future with skills that matter.
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <a href="https://portal.skillzza.com/" className="jsim-cta-btn">
+              Get Started Now!
+            </a>
+          </ScrollReveal>
+        </section>
       </section>
     </>
   )

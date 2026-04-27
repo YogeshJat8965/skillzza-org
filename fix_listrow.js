@@ -42,7 +42,7 @@ const replacement = `const ListRowItem = ({ item, index, onComingSoon }) => {
         animationDelay: \`\${index * 30}ms\`,
       }}
     >
-      {/* Shimmer — fixed geometry */}
+      {/* Shimmer - fixed geometry */}
       <div
         className={hovered ? 'sz-shimmer-active' : ''}
         style={{

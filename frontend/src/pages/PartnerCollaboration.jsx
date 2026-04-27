@@ -27,7 +27,7 @@ const PartnerCollaboration = () => {
               Building Tomorrow's Workforce Together
             </p>
             <p className="text-base md:text-lg text-gray-300 max-w-3xl leading-relaxed mb-8">
-              Skillzza forges strategic alliances across sectors to drive meaningful skill development and innovation. Our collaborative approach delivers customized solutions that meet the unique needs of corporates, governments, and educational institutions—creating shared value and sustainable impact.
+              Skillzza forges strategic alliances across sectors to drive meaningful skill development and innovation. Our collaborative approach delivers customized solutions that meet the unique needs of corporates, governments, and educational institutions-creating shared value and sustainable impact.
             </p>
           </div>
         </div>
@@ -321,7 +321,7 @@ const PartnerCollaboration = () => {
               Empowering Students for Tomorrow's World
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Skillzza partners with schools and educational institutions to equip young minds with essential 21st-century skills. Our programs go beyond traditional academics to inspire innovation, creativity, and leadership—preparing students to become tomorrow's changemakers.
+              Skillzza partners with schools and educational institutions to equip young minds with essential 21st-century skills. Our programs go beyond traditional academics to inspire innovation, creativity, and leadership-preparing students to become tomorrow's changemakers.
             </p>
           </div>
 
@@ -448,7 +448,7 @@ const PartnerCollaboration = () => {
               ))}
             </div>
             <div className="text-center mt-8">
-              <p className="text-xl font-semibold">Let's shape the innovators and leaders of tomorrow—together.</p>
+              <p className="text-xl font-semibold">Let's shape the innovators and leaders of tomorrow-together.</p>
             </div>
           </div>
         </div>

@@ -577,7 +577,7 @@ const OurMethodology = () => {
         </h1>
       </section>
 
-      {/* Full-width banner image — no overlay */}
+      {/* Full-width banner image - no overlay */}
       <div ref={heroImageRef} className="method-hero-image-wrap meth-reveal meth-scale-up meth-delay-1" style={{ width: '100%', lineHeight: 0 }}>
         <img
           src={getAssetPath('/speaker.png')}
@@ -680,7 +680,7 @@ const OurMethodology = () => {
           }
         `}</style>
 
-        {/* core.svg — decorative background shape on the left */}
+        {/* core.svg - decorative background shape on the left */}
         <img
           className="method-core-shape"
           src={getAssetPath('/core.svg')}
@@ -745,7 +745,7 @@ const OurMethodology = () => {
         </div>
       </section>
 
-      {/* Implementation Methodology — Stepper */}
+      {/* Implementation Methodology - Stepper */}
       <ImplementationStepper />
     </>
   );

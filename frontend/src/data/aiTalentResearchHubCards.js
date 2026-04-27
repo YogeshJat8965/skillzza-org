@@ -18,7 +18,7 @@ export const aiTalentResearchHubCards = [
   {
     id: 3,
     tag: "RESEARCH HUB",
-    title: "Most In-Demand Skills for 2025",
+    title: "Most In-Demand Skills for 2026",
     desc: "Explore core technical skills, programming languages like Python, and emerging hot skills such as LLM Specialization.",
     image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80",
     slug: "in-demand-skills"

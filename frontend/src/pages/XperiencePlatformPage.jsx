@@ -1208,7 +1208,7 @@ function XperiencePlatformPage() {
                   }}
                 >
                   Experience the <br />
-                  <span style={{ fontWeight: '700' }}>Real World</span>—Before <br />
+                  <span style={{ fontWeight: '700' }}>Real World</span>-Before <br />
                   You Enter It
                 </h1>
 

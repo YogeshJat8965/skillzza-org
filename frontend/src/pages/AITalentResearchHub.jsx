@@ -658,7 +658,7 @@ const AITalentResearchHub = () => {
                 SKILLS ANALYSIS
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Most In-Demand Skills for 2025
+                Most In-Demand Skills for 2026
               </h2>
             </div>
 
@@ -1814,7 +1814,7 @@ const AITalentResearchHub = () => {
                 The AI talent market in 2025 represents both unprecedented opportunity and significant challenges. Organizations that successfully navigate talent acquisition, development, and retention will gain substantial competitive advantages. For professionals, the market offers exceptional financial rewards for those who develop the right combination of technical skills, business acumen, and ethical awareness.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                The key to success lies in understanding that AI talent management is not just about compensation—it's about creating environments where exceptional professionals can do their best work while contributing to responsible AI development that benefits society as a whole.
+                The key to success lies in understanding that AI talent management is not just about compensation-it's about creating environments where exceptional professionals can do their best work while contributing to responsible AI development that benefits society as a whole.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 As we move forward, the organizations and individuals who invest in continuous learning, ethical AI development, and human-centered approaches will define the future of this transformative technology landscape.

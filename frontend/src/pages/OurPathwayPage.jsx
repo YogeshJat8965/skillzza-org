@@ -401,7 +401,7 @@ function OurPathwayPage() {
             padding: '40px 24px 32px',
           }}
         >
-          {/* Text Content — Centered */}
+          {/* Text Content - Centered */}
           <div className="flex flex-col items-center text-center">
             {/* Main Heading */}
             <h1
@@ -546,7 +546,7 @@ function OurPathwayPage() {
             </div>
           </div>
 
-          {/* Puzzle Image — same width as content */}
+          {/* Puzzle Image - same width as content */}
           <div
             className="pathway-hero-image"
             style={{

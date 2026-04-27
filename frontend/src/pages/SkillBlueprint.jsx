@@ -51,7 +51,7 @@ const SkillBlueprint = () => {
                 <div className="lg:w-2/3">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">The Challenge</h3>
                   <p className="text-gray-700 leading-relaxed text-lg">
-                    In today's rapidly evolving business landscape, organizations face an unprecedented challenge: the skills their workforce possessed yesterday may not be sufficient for tomorrow's demands. Traditional approaches to identifying skill gaps often rely on annual reviews, manager assessments, and broad industry reports—methods that are slow, subjective, and frequently outdated by the time action is taken.
+                    In today's rapidly evolving business landscape, organizations face an unprecedented challenge: the skills their workforce possessed yesterday may not be sufficient for tomorrow's demands. Traditional approaches to identifying skill gaps often rely on annual reviews, manager assessments, and broad industry reports-methods that are slow, subjective, and frequently outdated by the time action is taken.
                   </p>
                 </div>
                 <div className="lg:w-1/3">
@@ -242,7 +242,7 @@ const SkillBlueprint = () => {
                 <div className="lg:w-2/3">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">The Revolution in Personal Development</h3>
                   <p className="text-gray-700 leading-relaxed text-lg">
-                    Traditional one-size-fits-all training programs are giving way to hyper-personalized learning experiences powered by AI. These systems recognize that every learner has unique strengths, preferences, career goals, and learning patterns—and adapt accordingly.
+                    Traditional one-size-fits-all training programs are giving way to hyper-personalized learning experiences powered by AI. These systems recognize that every learner has unique strengths, preferences, career goals, and learning patterns-and adapt accordingly.
                   </p>
                 </div>
                 <div className="lg:w-1/3">
@@ -681,7 +681,7 @@ const SkillBlueprint = () => {
               <div className="bg-gradient-to-r from-orange-500 to-red-500 p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold mb-4">Strategic Conclusion</h3>
                 <p className="text-lg text-orange-100">
-                  This case study demonstrates how forward-thinking organizations are using AI not just as a technological upgrade, but as a strategic advantage in developing their most valuable asset—their people.
+                  This case study demonstrates how forward-thinking organizations are using AI not just as a technological upgrade, but as a strategic advantage in developing their most valuable asset-their people.
                 </p>
               </div>
             </div>

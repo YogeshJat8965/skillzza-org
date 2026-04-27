@@ -16,7 +16,7 @@ import platformImg5 from '../assets/card grid/image 5.png';
 import platformImg6 from '../assets/card grid/image 6.png';
 
 /* ═══════════════════════════════════════════════════════════════
-   NAV DATA — enriched with gradient icons, descriptions, pills
+   NAV DATA - enriched with gradient icons, descriptions, pills
    All routes remain identical to the original navbar
 ═══════════════════════════════════════════════════════════════ */
 
@@ -137,7 +137,7 @@ const navItems = [
     name: 'Agentic AI',
     layout: 'agentic-ai',
     width: 820,
-    eyebrow: 'Agentic AI — autonomous skill & talent intelligence',
+    eyebrow: 'Agentic AI - autonomous skill & talent intelligence',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     badge: 'New',
@@ -152,33 +152,33 @@ const navItems = [
       { name: 'AgentMatch Recruiter', desc: 'Autonomous screening, ranking and shortlisting at scale.', icon: <Settings size={24} color="#BD1723" strokeWidth={1.5} />, pill: 'Agentic', pillColor: 'red' },
       { name: 'Workforce Intelligence Agent', desc: 'Real-time skill mapping across departments and campuses.', icon: <Microscope size={24} color="#BD1723" strokeWidth={1.5} />, pill: 'Beta', pillColor: 'purple' },
       { name: 'Multi-Agent Talent Orchestrator', desc: 'Coordinates assess → match → hire → upskill as one agentic flow.', icon: <Globe size={24} color="#8947B3" strokeWidth={1.5} />, pill: 'Soon', pillColor: 'red' },
-      { name: 'Skill Market Pulse', desc: 'Live labour market signal agent — trends, demand spikes, salary shifts.', icon: <Hexagon size={24} color="#8947B3" strokeWidth={1.5} />, pill: 'Live', pillColor: 'purple' },
+      { name: 'Skill Market Pulse', desc: 'Live labour market signal agent - trends, demand spikes, salary shifts.', icon: <Hexagon size={24} color="#8947B3" strokeWidth={1.5} />, pill: 'Live', pillColor: 'purple' },
     ],
   },
   */
   {
-    name: 'Vidya K-12',
+    name: 'Vedya K-12',
     layout: 'k12-vidya',
     width: 780,
-    eyebrow: 'K-12 Vidya AI — school intelligence ecosystem',
+    eyebrow: 'K-12 Vidya AI - school intelligence ecosystem',
     studioLink: 'https://cognifyai.skillzza.com/',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     // badge: 'K-12',
     items: [
       { name: 'Vidya AI Virtual Internship', link: 'https://cognifyai.skillzza.com/', desc: 'Real-world AI, coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Flagship', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Skill Studio for Students', link: 'https://skillzza-club.vercel.app/', desc: 'Gamified AI-powered skill tracks — ML basics, robotics, sustainability, drone tech, quantum intro.', pill: 'Grades 6-12', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Teacher AI Upskill Lab', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Structured AI literacy programme for educators — pedagogy, tools, classroom integration, assessments.', pill: 'CPD certified', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'CCMM — AI Maturity for Schools', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Continuous Capability & Maturity Model — benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Campus Connect — K12', link: 'https://cognifyai.skillzza.com/#', desc: 'Links top-performing school students directly to university and early internship pipelines.', pill: 'Bridge', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Future Founders Track', link: 'https://cognifyai.skillzza.com/#', desc: 'Entrepreneurship & innovation bootcamp — problem-solving, pitching, and startup thinking for teens.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Skill Studio for Students', link: 'https://skillzza-club.vercel.app/', desc: 'Gamified AI-powered skill tracks - ML basics, robotics, sustainability, drone tech, quantum intro.', pill: 'Grades 6-12', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Teacher AI Upskill Lab', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Structured AI literacy programme for educators - pedagogy, tools, classroom integration, assessments.', pill: 'CPD certified', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'CCMM - AI Maturity for Schools', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Continuous Capability & Maturity Model - benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Campus Connect - K12', link: 'https://cognifyai.skillzza.com/#', desc: 'Links top-performing school students directly to university and early internship pipelines.', pill: 'Bridge', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Future Founders Track', link: 'https://cognifyai.skillzza.com/#', desc: 'Entrepreneurship & innovation bootcamp - problem-solving, pitching, and startup thinking for teens.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
     ],
   },
   {
     name: 'School of Technology',
     layout: 'list-rows',
     width: 710,
-    eyebrow: 'The Deeptech Studio — Specialisations',
+    eyebrow: 'The Deeptech Studio - Specialisations',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
@@ -222,7 +222,7 @@ const navItems = [
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     cta: {
       text: 'Partner with Skillzza',
-      sub: '— universities, enterprises and governments building future-ready talent.',
+      sub: '- universities, enterprises and governments building future-ready talent.',
       link: '/contact-us',
     },
     companyItems: [
@@ -244,7 +244,7 @@ const navItems = [
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   PILL COLOUR PALETTE — vibrant with gradient-like feel
+   PILL COLOUR PALETTE - vibrant with gradient-like feel
 ═══════════════════════════════════════════════════════════════ */
 
 const pillColors = {
@@ -258,7 +258,7 @@ const pillColors = {
 };
 
 /* ───────────────────────────────────────────────────────────────
-   Pill — vibrant gradient badge
+   Pill - vibrant gradient badge
 ─────────────────────────────────────────────────────────────── */
 
 const Pill = ({ text, color = 'red' }) => {
@@ -286,13 +286,13 @@ const Pill = ({ text, color = 'red' }) => {
 };
 
 /* ───────────────────────────────────────────────────────────────
-   Eyebrow — premium section header with gradient accent line
+   Eyebrow - premium section header with gradient accent line
 ─────────────────────────────────────────────────────────────── */
 
 const Eyebrow = ({ text, dotColor, gradient }) => null;
 
 /* ───────────────────────────────────────────────────────────────
-   CtaBar — gradient CTA strip
+   CtaBar - gradient CTA strip
 ─────────────────────────────────────────────────────────────── */
 
 const CtaBar = ({ cta, gradient }) => {
@@ -454,7 +454,7 @@ const CtaBar = ({ cta, gradient }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   PREMIUM ICON — gradient container with shadow
+   PREMIUM ICON - gradient container with shadow
 ═══════════════════════════════════════════════════════════════ */
 
 const GradientIcon = ({ icon, gradient, shadow, size = 44, fontSize = 20 }) => (
@@ -479,7 +479,7 @@ const GradientIcon = ({ icon, gradient, shadow, size = 44, fontSize = 20 }) => (
 );
 
 /* ═══════════════════════════════════════════════════════════════
-   CARD GRID DROPDOWN — Products, Use Cases, Explore
+   CARD GRID DROPDOWN - Products, Use Cases, Explore
 ═══════════════════════════════════════════════════════════════ */
 
 const CardGridDropdown = ({ navItem, onComingSoon }) => (
@@ -532,7 +532,7 @@ const CardItem = ({ item, index, onComingSoon }) => {
         animationDelay: `${index * 40}ms`,
       }}
     >
-      {/* Shimmer — fixed geometry so white center stays off-screen when idle */}
+      {/* Shimmer - fixed geometry so white center stays off-screen when idle */}
       <div
         className={hovered ? 'sz-shimmer-active' : ''}
         style={{
@@ -590,7 +590,7 @@ const CardItem = ({ item, index, onComingSoon }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   LIST ROWS DROPDOWN — School of Technology, Insights
+   LIST ROWS DROPDOWN - School of Technology, Insights
 ═══════════════════════════════════════════════════════════════ */
 
 const ListRowsDropdown = ({ navItem, onComingSoon }) => {
@@ -643,7 +643,7 @@ const ListRowItem = ({ item, index, onComingSoon }) => {
         animationDelay: `${index * 30}ms`,
       }}
     >
-      {/* Shimmer — fixed geometry */}
+      {/* Shimmer - fixed geometry */}
       <div
         className={hovered ? 'sz-shimmer-active' : ''}
         style={{
@@ -700,7 +700,7 @@ const ListRowItem = ({ item, index, onComingSoon }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   COMPACT GRID DROPDOWN — Company
+   COMPACT GRID DROPDOWN - Company
 ═══════════════════════════════════════════════════════════════ */
 
 const CompactGridDropdown = ({ navItem }) => (
@@ -767,7 +767,7 @@ const CompactItem = ({ item, index }) => {
         borderRadius: '13px 13px 0 0',
       }} />
 
-      {/* Shimmer — fixed geometry */}
+      {/* Shimmer - fixed geometry */}
       <div
         className={hovered ? 'sz-shimmer-active' : ''}
         style={{
@@ -780,7 +780,7 @@ const CompactItem = ({ item, index }) => {
         }}
       />
 
-      {/* Content — DOM-order + position:relative guarantees above z:0 absolutes */}
+      {/* Content - DOM-order + position:relative guarantees above z:0 absolutes */}
       <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-start', gap: 13 }}>
 
         {item.icon && (
@@ -822,7 +822,7 @@ const CompactItem = ({ item, index }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   AgenticAIDropdown — agent flow + two-column list
+   AgenticAIDropdown - agent flow + two-column list
 ═══════════════════════════════════════════════════════════════ */
 
 const AgenticAIDropdown = ({ navItem }) => {
@@ -902,7 +902,7 @@ const AgenticAIDropdown = ({ navItem }) => {
         {/* Learner agents */}
         <div>
           <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, color: '#94a3b8', textTransform: 'uppercase', marginBottom: 8 }}>
-            AI Agents — Learner
+            AI Agents - Learner
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
             {navItem.learnerAgents.map(a => <AgentRow key={a.name} agent={a} />)}
@@ -911,7 +911,7 @@ const AgenticAIDropdown = ({ navItem }) => {
         {/* Enterprise agents */}
         <div>
           <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, color: '#94a3b8', textTransform: 'uppercase', marginBottom: 8 }}>
-            AI Agents — Enterprise & Campus
+            AI Agents - Enterprise & Campus
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
             {navItem.enterpriseAgents.map(a => <AgentRow key={a.name} agent={a} />)}
@@ -923,27 +923,12 @@ const AgenticAIDropdown = ({ navItem }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   K12VidyaDropdown — banner header + 3-column card grid
+   K12VidyaDropdown - banner header + 3-column card grid
 ═══════════════════════════════════════════════════════════════ */
 
 const K12VidyaDropdown = ({ navItem }) => (
   <div>
     <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} badge={navItem.badge} />
-    {/* Banner */}
-    <a href={navItem.studioLink || undefined} target={navItem.studioLink?.startsWith('http') ? '_blank' : undefined} rel={navItem.studioLink?.startsWith('http') ? 'noopener noreferrer' : undefined} style={{
-      background: 'linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%)',
-      border: '1px solid #d1fae5', borderRadius: 12,
-      padding: '10px 16px', marginBottom: 18,
-      display: 'flex', alignItems: 'center', gap: 10,
-      textDecoration: 'none',
-      cursor: navItem.studioLink ? 'pointer' : 'default',
-    }}>
-      <span style={{ fontSize: 20 }}>🏫</span>
-      <div>
-        <div style={{ fontSize: 12, fontWeight: 700, color: '#065f46' }}>Vidya AI Studio</div>
-        <div style={{ fontSize: 11, color: '#BD1723', lineHeight: 1.4 }}>AI-powered K-12 school intelligence — assessments, simulations & teacher upskilling.</div>
-      </div>
-    </a>
     {/* 3-col card grid */}
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
       {navItem.items.map((item, i) => <K12Card key={item.name} item={item} index={i} />)}
@@ -988,7 +973,7 @@ const K12Card = ({ item }) => {
         opacity: h ? 1 : 0,
         transition: 'opacity 0.28s ease',
       }} />
-      {/* Shimmer — fixed geometry */}
+      {/* Shimmer - fixed geometry */}
       <div className={h ? 'sz-shimmer-active' : ''} style={{
         position: 'absolute', top: 0, left: '-75%',
         width: '62%', height: '100%', zIndex: 0,
@@ -1020,7 +1005,7 @@ const K12Card = ({ item }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   ServicesGridDropdown — 3×2 service card grid + CTA
+   ServicesGridDropdown - 3×2 service card grid + CTA
 ═══════════════════════════════════════════════════════════════ */
 
 const ServicesGridDropdown = ({ navItem }) => (
@@ -1053,7 +1038,7 @@ const SvcCard = ({ item }) => {
         boxShadow: 'none',
       }}
     >
-      {/* Shimmer — fixed geometry */}
+      {/* Shimmer - fixed geometry */}
       <div className={h ? 'sz-shimmer-active' : ''} style={{
         position: 'absolute', top: 0, left: '-75%',
         width: '62%', height: '100%', zIndex: 0,
@@ -1090,7 +1075,7 @@ const SvcCard = ({ item }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   CompanyMegaDropdown — About + Services in one dropdown
+   CompanyMegaDropdown - About + Services in one dropdown
 ═══════════════════════════════════════════════════════════════ */
 
 const CompanyMegaDropdown = ({ navItem }) => (
@@ -1135,7 +1120,7 @@ const CompanyMegaDropdown = ({ navItem }) => (
 );
 
 /* ═══════════════════════════════════════════════════════════════
-   PLATFORM TABS DROPDOWN — Sidebar + Content + Illustration
+   PLATFORM TABS DROPDOWN - Sidebar + Content + Illustration
    Matches the 6-tab reference design
    Enhanced with per-tab animations and animated circle backgrounds
 ═══════════════════════════════════════════════════════════════ */
@@ -1453,7 +1438,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   MegaDropdown — dispatches to layout-specific component
+   MegaDropdown - dispatches to layout-specific component
 ═══════════════════════════════════════════════════════════════ */
 
 const MegaDropdown = ({ navItem, onComingSoon }) => {
@@ -1473,10 +1458,10 @@ const MegaDropdown = ({ navItem, onComingSoon }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   DesktopNavItem — hover-activated mega dropdown
+   DesktopNavItem - hover-activated mega dropdown
 ═══════════════════════════════════════════════════════════════ */
 
-/* Module-level singleton — tracks which dropdown is currently open so
+/* Module-level singleton - tracks which dropdown is currently open so
    switching between nav items is instant (no overlap / glitch). */
 let _activeNavClose = null;
 
@@ -1538,7 +1523,7 @@ const DesktopNavItem = ({ item, onComingSoon }) => {
     }, 160);
   };
 
-  // Close on outside click — no backdrop needed (backdrop was blocking hover on other nav items)
+  // Close on outside click - no backdrop needed (backdrop was blocking hover on other nav items)
   useEffect(() => {
     if (!open) return;
     const onOutside = (e) => {
@@ -1623,7 +1608,7 @@ const DesktopNavItem = ({ item, onComingSoon }) => {
         />
       </button>
 
-      {/* Dropdown panel — no backdrop, outside-click handled by document.mousedown */}
+      {/* Dropdown panel - no backdrop, outside-click handled by document.mousedown */}
       {open && (
         <div
           style={{
@@ -1669,7 +1654,7 @@ const DesktopNavItem = ({ item, onComingSoon }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   MobileNavItem — accordion with icons
+   MobileNavItem - accordion with icons
 ═══════════════════════════════════════════════════════════════ */
 
 const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
@@ -1829,7 +1814,7 @@ const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   NAVBAR — main component
+   NAVBAR - main component
 ═══════════════════════════════════════════════════════════════ */
 
 const Navbar = () => {
@@ -1918,7 +1903,7 @@ const Navbar = () => {
             >
               Book a Demo
             </a>
-            <a
+            {/* <a
               href={`${getRoutePath('/')}#ecosystem-diagram`}
               className="sz-cta-secondary"
               style={{
@@ -1935,7 +1920,7 @@ const Navbar = () => {
               }}
             >
               Product Tour
-            </a>
+            </a> */}
           </div>
 
           {/* Hamburger */}
@@ -2013,7 +1998,7 @@ const Navbar = () => {
               >
                 Book a Demo
               </a>
-              <a
+              {/* <a
                 href={`${getRoutePath('/')}#ecosystem-diagram`}
                 style={{
                   background: '#fff',
@@ -2028,7 +2013,7 @@ const Navbar = () => {
                 }}
               >
                 Product Tour
-              </a>
+              </a> */}
             </div>
           </div>
         )}
@@ -2163,7 +2148,7 @@ const Navbar = () => {
           animation: szCardIn 0.35s cubic-bezier(0.16,1,0.3,1) backwards;
         }
 
-        /* ── Card hover — icon spring ── */
+        /* ── Card hover - icon spring ── */
         .sz-card-item:hover .sz-nav-icon {
           animation: szIconPop 0.55s cubic-bezier(0.34,1.56,0.64,1) forwards !important;
         }
@@ -2195,12 +2180,12 @@ const Navbar = () => {
           animation-duration: 2.8s !important;
         }
 
-        /* ── List hover — icon ── */
+        /* ── List hover - icon ── */
         .sz-list-item:hover .sz-nav-icon {
           animation: szIconPop 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards !important;
         }
 
-        /* ── Compact hover — icon ── */
+        /* ── Compact hover - icon ── */
         .sz-compact-item:hover .sz-nav-icon,
         .sz-svc-card:hover .sz-svc-icon {
           animation: szIconPop 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards !important;

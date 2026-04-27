@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-/* ─── Module-level flag — resets on every page refresh,
+/* ─── Module-level flag - resets on every page refresh,
        but persists across client-side React Router navigations.
        sessionStorage / localStorage survive F5, so we avoid both. ── */
 let _dismissed = false;
@@ -218,7 +218,7 @@ const WelcomePopup = () => {
               width: 7, height: 7, borderRadius: '50%',
               background: '#00e5b0', flexShrink: 0, display: 'inline-block',
             }} />
-            Powered by Agentic AI — assess, simulate, match &amp; hire autonomously
+            Powered by Agentic AI - assess, simulate, match &amp; hire autonomously
           </div>
 
           {/* ── Heading ── */}

@@ -239,7 +239,7 @@ const SkillzzaPersona = () => {
 
           </div> {/* end flex row */}
 
-          {/* Designed For Section — full width below both columns */}
+          {/* Designed For Section - full width below both columns */}
           <div className="mt-6">
             <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#6B7280', marginBottom: '16px', letterSpacing: '0.5px', lineHeight: '1.6' }}>
               Designed for
@@ -389,7 +389,7 @@ const SkillzzaPersona = () => {
                 <div className="lg:w-1/2">
                   <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>Adaptive AI Intelligence</h3>
                   <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#374151', fontWeight: 500, marginBottom: '12px', lineHeight: '1.6' }}>
-                    Our AI doesn't follow scripts—it responds intelligently to your every choice:
+                    Our AI doesn't follow scripts-it responds intelligently to your every choice:
                   </p>
                   <ul style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6', paddingLeft: '20px', listStyleType: 'disc' }}>
                     <li><strong>Contextual Awareness:</strong> Understands the nuances of each situation</li>

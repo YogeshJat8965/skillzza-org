@@ -32,7 +32,7 @@ const OurPartners = () => {
         </div>
       </div>
 
-      {/* Row 1 — Scrolling Right to Left */}
+      {/* Row 1 - Scrolling Right to Left */}
       <div className="relative mb-6 sm:mb-8 h-[70px] sm:h-[90px] lg:h-[112px] w-full">
         <div className="absolute flex gap-4 sm:gap-6 lg:gap-8 animate-[scrollRTL_30s_linear_infinite]">
           {[...firstRowPartners, ...firstRowPartners, ...firstRowPartners].map((partner, i) => (
@@ -49,7 +49,7 @@ const OurPartners = () => {
              style={{ background: 'linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)' }}></div>
       </div>
 
-      {/* Row 2 — Scrolling Left to Right */}
+      {/* Row 2 - Scrolling Left to Right */}
       <div className="relative h-[70px] sm:h-[90px] lg:h-[112px] w-full">
         <div className="absolute flex gap-4 sm:gap-6 lg:gap-8 animate-[scrollLTR_30s_linear_infinite]">
           {[...secondRowPartners, ...secondRowPartners, ...secondRowPartners].map((partner, i) => (

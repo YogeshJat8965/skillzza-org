@@ -190,7 +190,7 @@ const Partnerships = () => {
       >
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32 w-full pt-2 sm:pt-3 lg:pt-4 pb-2 sm:pb-4 lg:pb-6">
           <div className="flex flex-col lg:flex-row gap-7 lg:gap-10 w-full items-center justify-center">
-            {/* Left — Content */}
+            {/* Left - Content */}
             <div
               ref={contentRef}
               className={`flex-1 max-w-xl lg:text-left text-center ${isVisible.content ? '' : 'opacity-0'}`}
@@ -212,7 +212,7 @@ const Partnerships = () => {
               </p>
             </div>
 
-            {/* Right — Cards */}
+            {/* Right - Cards */}
             <div
               ref={cardsRef}
               className="flex-1 w-full max-w-[620px] mx-auto lg:mx-0 gap-x-[12px]"

@@ -60,16 +60,16 @@ const SkillDigest = () => {
                     Beyond Grades: How AI-Powered Potential Meters are Redefining Talent Discovery
                   </h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    For decades, grades and test scores have been the primary indicators of student potential. But as industries evolve, these traditional benchmarks are proving insufficient to capture the true spectrum of human capability. Enter the AI-powered Potential Meter—a transformative tool that shifts the focus from what students have memorized to what they can actually achieve.
+                    For decades, grades and test scores have been the primary indicators of student potential. But as industries evolve, these traditional benchmarks are proving insufficient to capture the true spectrum of human capability. Enter the AI-powered Potential Meter-a transformative tool that shifts the focus from what students have memorized to what they can actually achieve.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     Unlike conventional assessments, AI-driven Potential Meters analyze skills, adaptability, creativity, and problem-solving through dynamic simulations and behavioral patterns. They don't just evaluate knowledge; they reveal how learners think, respond to challenges, and apply insights in real-world scenarios.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    This shift is especially crucial as employers seek individuals with transferable skills—collaboration, critical thinking, digital literacy—over rote knowledge. By mapping a learner's strengths and growth areas, AI-powered assessments create personalized career pathways while enabling institutions and recruiters to tap into previously overlooked talent.
+                    This shift is especially crucial as employers seek individuals with transferable skills-collaboration, critical thinking, digital literacy-over rote knowledge. By mapping a learner's strengths and growth areas, AI-powered assessments create personalized career pathways while enabling institutions and recruiters to tap into previously overlooked talent.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    In the future, grades will be just one part of the equation. The real differentiator will be how effectively we measure potential, not performance—and AI is making that vision a reality.
+                    In the future, grades will be just one part of the equation. The real differentiator will be how effectively we measure potential, not performance-and AI is making that vision a reality.
                   </p>
                 </div>
               </div>
@@ -96,13 +96,13 @@ const SkillDigest = () => {
                     Classroom learning is no longer enough. Today's students and professionals need hands-on, immersive experiences that mirror the challenges of real-world workplaces. This is where AI-powered Xperience Platforms are rewriting the rules of education and talent development.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    These platforms go beyond passive learning modules. They incorporate role-play simulations, gamified challenges, and industry-inspired projects, enabling learners to apply theory in dynamic environments. AI acts as a personalized guide—tracking performance, offering instant feedback, and recommending tailored learning journeys.
+                    These platforms go beyond passive learning modules. They incorporate role-play simulations, gamified challenges, and industry-inspired projects, enabling learners to apply theory in dynamic environments. AI acts as a personalized guide-tracking performance, offering instant feedback, and recommending tailored learning journeys.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     The biggest advantage? Learners build confidence, resilience, and practical problem-solving skills before entering the workforce. Employers, in turn, gain access to talent that is not just knowledgeable, but job-ready from day one.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    In the coming years, we'll see Xperience Platforms evolve into career laboratories, where learners can experiment, innovate, and showcase their capabilities. This is the future of education—learning by doing, powered by AI.
+                    In the coming years, we'll see Xperience Platforms evolve into career laboratories, where learners can experiment, innovate, and showcase their capabilities. This is the future of education-learning by doing, powered by AI.
                   </p>
                 </div>
               </div>
@@ -126,7 +126,7 @@ const SkillDigest = () => {
                     Campus Hiring 2.0: How AI Marketplaces are Matching Job-Ready Talent with Employers
                   </h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Campus recruitment has always been a high-stakes process—for students seeking opportunities and for employers scouting fresh talent. But traditional methods—resume shortlisting, aptitude tests, lengthy interviews—are often inefficient and biased. The rise of AI-powered hiring marketplaces like Hirenest is changing that.
+                    Campus recruitment has always been a high-stakes process-for students seeking opportunities and for employers scouting fresh talent. But traditional methods-resume shortlisting, aptitude tests, lengthy interviews-are often inefficient and biased. The rise of AI-powered hiring marketplaces like Hirenest is changing that.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     These platforms don't just collect resumes. They offer pre-assessed, job-ready talent pools, where students are evaluated through AI-driven skill tests, behavioral assessments, and project simulations. Employers can filter candidates based on role-specific requirements, making the process faster, fairer, and more data-driven.
@@ -135,7 +135,7 @@ const SkillDigest = () => {
                     For students, the benefit is clear: a level playing field. Instead of competing purely on grades or prestige of their institution, they are judged on skills, adaptability, and readiness. For employers, it means reducing hiring cycles, improving retention, and ensuring a better cultural fit.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    The future of campus hiring is about precision matching, not mass screening. AI marketplaces are bridging academia and industry—ensuring that the right talent finds the right opportunity at the right time.
+                    The future of campus hiring is about precision matching, not mass screening. AI marketplaces are bridging academia and industry-ensuring that the right talent finds the right opportunity at the right time.
                   </p>
                 </div>
               </div>
@@ -159,16 +159,16 @@ const SkillDigest = () => {
                     From Workforce to 'Skillforce': How AI is Driving the Next Wave of Talent Transformation
                   </h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    The workplace of tomorrow will look very different from today's. Automation, AI, and digital transformation are reshaping roles across industries. But instead of replacing humans, these shifts are emphasizing the need for a 'Skillforce'—a workforce built on continuous learning and adaptability.
+                    The workplace of tomorrow will look very different from today's. Automation, AI, and digital transformation are reshaping roles across industries. But instead of replacing humans, these shifts are emphasizing the need for a 'Skillforce'-a workforce built on continuous learning and adaptability.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     AI is at the heart of this transformation. It enables personalized upskilling by identifying skill gaps, recommending targeted learning, and even simulating future job roles. Talent transformation is no longer about one-time training programs; it's about lifelong learning ecosystems where employees evolve alongside technology.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Organizations that embrace this model gain a competitive edge—creating future-ready teams that can pivot with changing demands. For individuals, it means greater career resilience and the ability to thrive in multiple roles throughout their professional journey.
+                    Organizations that embrace this model gain a competitive edge-creating future-ready teams that can pivot with changing demands. For individuals, it means greater career resilience and the ability to thrive in multiple roles throughout their professional journey.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    The shift from workforce to skillforce is not just semantic—it's a mindset change. And AI is the catalyst that will ensure human potential keeps pace with technological disruption.
+                    The shift from workforce to skillforce is not just semantic-it's a mindset change. And AI is the catalyst that will ensure human potential keeps pace with technological disruption.
                   </p>
                 </div>
               </div>
@@ -192,13 +192,13 @@ const SkillDigest = () => {
                     AI Hackathons as the New Innovation Labs: Crowdsourcing the Future of Tech
                   </h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Innovation used to happen behind closed doors in R&D labs. Today, it's happening in open, collaborative spaces like AI hackathons. These high-energy events bring together coders, designers, entrepreneurs, and domain experts to solve real-world challenges—often in just 24 to 48 hours.
+                    Innovation used to happen behind closed doors in R&D labs. Today, it's happening in open, collaborative spaces like AI hackathons. These high-energy events bring together coders, designers, entrepreneurs, and domain experts to solve real-world challenges-often in just 24 to 48 hours.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     What makes AI hackathons powerful is the fusion of creativity, speed, and collaboration. By democratizing access to innovation, they allow students, startups, and professionals to co-create solutions that might otherwise take months in traditional setups. Companies and governments are also leveraging hackathons to tap into crowdsourced intelligence, often discovering breakthrough ideas and potential hires.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Platforms like AI HackNex are taking this a step further by aligning hackathon themes with pressing global issues—sustainability, healthcare, fintech, and smart cities. This transforms hackathons from coding contests into launchpads for impactful innovations.
+                    Platforms like AI HackNex are taking this a step further by aligning hackathon themes with pressing global issues-sustainability, healthcare, fintech, and smart cities. This transforms hackathons from coding contests into launchpads for impactful innovations.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
                     In the future, expect AI hackathons to serve as incubators for unicorn startups, testing grounds for emerging technologies, and gateways for young innovators to make their mark on the world.
