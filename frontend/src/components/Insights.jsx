@@ -174,11 +174,12 @@ const Insights = ({ showHero = false, showContent = true }) => {
         @media (min-width: 768px) {
           .insights-heading {
             font-size: clamp(30px, 3.2vw, 44px) !important;
-            margin-top: 10px !important;
+            margin-top: 0px !important;
+            margin-bottom: 16px !important;
           }
           .insights-view-btn {
-            margin-top: 10px !important;
-            margin-bottom: 28px !important;
+            margin-top: 0px !important;
+            margin-bottom: 24px !important;
             height: 44px !important;
             padding: 0 20px !important;
           }
@@ -189,17 +190,17 @@ const Insights = ({ showHero = false, showContent = true }) => {
           .insights-card-md {
             flex: 1;
             width: 100% !important; /* Reset inline width */
-            height: clamp(340px, 28vw, 420px) !important;
+            height: clamp(300px, 24vw, 380px) !important;
           }
           .insights-card-lg .insights-card-img {
             height: 200px !important;
           }
           .insights-card-md .insights-card-img {
-            height: 190px !important;
+            height: 170px !important;
           }
           .insights-card-lg > div:last-child,
           .insights-card-md > div:last-child {
-            padding: 20px !important;
+            padding: 16px 20px !important;
           }
           .insights-card-lg .insights-card-icon {
             margin-top: 16px !important;
@@ -211,11 +212,11 @@ const Insights = ({ showHero = false, showContent = true }) => {
           }
           .insights-card-md .insights-tag {
             width: auto !important;
-            height: 40px !important;
-            padding: 0 18px !important;
-            font-size: 14px !important;
-            margin-top: 14px !important;
-            margin-bottom: 16px !important;
+            height: 38px !important;
+            padding: 0 16px !important;
+            font-size: 13px !important;
+            margin-top: 8px !important;
+            margin-bottom: 12px !important;
           }
           .insights-card-lg h3 {
             font-size: 24px !important;
@@ -231,7 +232,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
             width: 100% !important;
             height: auto !important;
             min-height: 230px;
-            margin-top: 16px !important;
+            margin-top: 0px !important;
             padding: 22px 24px !important;
             gap: 20px !important;
           }
@@ -304,7 +305,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
             height: auto !important;
           }
           .insights-card-md .insights-card-img {
-            height: 260px !important;
+            height: 240px !important;
           }
           .insights-card-md .insights-card-img img {
             object-fit: cover !important;
@@ -314,21 +315,21 @@ const Insights = ({ showHero = false, showContent = true }) => {
             font-size: 18px !important;
           }
           .insights-card-md > div:last-child {
-            padding: 16px 20px !important;
+            padding: 12px 16px !important;
           }
           .insights-card-md .insights-tag {
             width: auto !important;
-            padding: 0 16px !important;
-            height: 34px !important;
-            font-size: 13px !important;
-            margin-bottom: 12px !important;
-            margin-top: 8px !important;
+            padding: 0 14px !important;
+            height: 32px !important;
+            font-size: 12px !important;
+            margin-bottom: 8px !important;
+            margin-top: 4px !important;
           }
           .insights-podcast {
             width: 100% !important;
             height: auto !important;
             margin-left: 0 !important;
-            margin-top: 24px !important;
+            margin-top: 10px !important;
             padding: 24px 20px !important;
             flex-direction: column !important;
             gap: 20px !important;
@@ -544,7 +545,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     }}
                   >
                     {/* Image */}
-                    <div className="insights-card-img" style={{ width: '100%', height: '380px', overflow: 'hidden' }}>
+                    <div className="insights-card-img" style={{ width: '100%', height: '320px', overflow: 'hidden' }}>
                       <img
                         src={getAssetPath('/img/Mask%20Group%20112.png')}
                         alt="AI Robot"
@@ -558,7 +559,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     </div>
 
                     {/* Content */}
-                    <div style={{ padding: '28px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ padding: '20px 24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       {/* Tag */}
                       <span
                         className="insights-tag"
@@ -575,8 +576,8 @@ const Insights = ({ showHero = false, showContent = true }) => {
                           fontSize: '18px',
                           fontWeight: 500,
                           color: '#FFFFFF',
-                          marginBottom: '20px',
-                          marginTop: '20px',
+                          marginBottom: '12px',
+                          marginTop: '4px',
                         }}
                       >
                         Research & Insights
@@ -642,7 +643,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     }}
                   >
                     {/* Image */}
-                    <div className="insights-card-img" style={{ width: '100%', height: '380px', overflow: 'hidden' }}>
+                    <div className="insights-card-img" style={{ width: '100%', height: '320px', overflow: 'hidden' }}>
                       <img
                         src={getAssetPath('/img/Mask%20Group%2098.png')}
                         alt="Digital Interface"
@@ -656,7 +657,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     </div>
 
                     {/* Content */}
-                    <div style={{ padding: '28px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ padding: '20px 24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       {/* Tag */}
                       <span
                         className="insights-tag"
@@ -673,8 +674,8 @@ const Insights = ({ showHero = false, showContent = true }) => {
                           fontSize: '18px',
                           fontWeight: 500,
                           color: '#FFFFFF',
-                          marginBottom: '20px',
-                          marginTop: '20px',
+                          marginBottom: '12px',
+                          marginTop: '4px',
                         }}
                       >
                         Research & Insights
@@ -734,6 +735,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                   ref={card4Ref}
                   className={`insights-podcast ${isVisible.card4 ? 'animate-flip-in-x delay-400' : 'opacity-0'}`}
                   style={{
+                    marginTop: '-22px', /* Adjust closer or further if needed, eg. -18px */
                     background: '#B6DFF5',
                     borderRadius: '12px',
                     padding: '36px 40px',

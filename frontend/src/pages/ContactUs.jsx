@@ -20,7 +20,7 @@ function ContactUs() {
   })
 
   const steps = [
-    { id: 1, label: 'Personal Information' },
+    { id: 1, label: 'Information' },
     { id: 2, label: 'Professional Background' },
     { id: 3, label: 'Interest & Motivation' },
     { id: 4, label: 'Engagement Preferences' },
@@ -222,10 +222,7 @@ function ContactUs() {
                   <div>
                     <h4 className="cu-contact-label">Headquarters</h4>
                     <p className="cu-contact-text">
-                      5th floor,wingA Statesman, House,<br />
-                      Barakhamba Road, Connaught Place,<br />
-                      Central Delhi, India , Civil Lines,<br />
-                      CENTRAL (Delhi) - 110001
+                      Registered Office Skillzza,WeWork India,Chromium, CTS No. 106/1–5 Jogeshwari–Vikhroli Link Road, Milind Nagar, Powai, Mumbai – 400076
                     </p>
                   </div>
                 </div>
@@ -238,7 +235,7 @@ function ContactUs() {
                   </div>
                   <div>
                     <h4 className="cu-contact-label">Phone</h4>
-                    <p className="cu-contact-text">+91 95959 57878</p>
+                    <p className="cu-contact-text">9136961978</p>
                   </div>
                 </div>
 
@@ -251,7 +248,7 @@ function ContactUs() {
                   </div>
                   <div>
                     <h4 className="cu-contact-label">Email</h4>
-                    <p className="cu-contact-text">Contact@ChamberofSmartManufacturingCouncil</p>
+                    <p className="cu-contact-text">contact@skillzza.com</p>
                   </div>
                 </div>
               </section>

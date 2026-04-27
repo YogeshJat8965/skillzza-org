@@ -156,10 +156,8 @@ const navItems = [
     ],
   },
   */
-  /* NEW */
-  /*
   {
-    name: 'Vedya',
+    name: 'Vidya K-12',
     layout: 'k12-vidya',
     width: 780,
     eyebrow: 'K-12 Vidya AI — school intelligence ecosystem',
@@ -176,7 +174,6 @@ const navItems = [
       { name: 'Future Founders Track', link: 'https://cognifyai.skillzza.com/#', desc: 'Entrepreneurship & innovation bootcamp — problem-solving, pitching, and startup thinking for teens.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
     ],
   },
-  */
   {
     name: 'School of Technology',
     layout: 'list-rows',
@@ -1000,16 +997,6 @@ const K12Card = ({ item }) => {
       }} />
       {/* Content above overlays */}
       <div style={{ position: 'relative' }}>
-        <div style={{
-          width: 36, height: 36, borderRadius: 9,
-          background: item.iconGradient || '#f1f5f9',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontSize: 17, flexShrink: 0,
-          boxShadow: h ? `0 6px 20px ${glowMid}` : item.iconShadow,
-          transition: 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease',
-          transform: h ? 'scale(1.15) rotate(-5deg)' : 'scale(1) rotate(0deg)',
-          marginBottom: 6,
-        }}>{item.icon}</div>
         <div style={{
           fontSize: 12.5, fontWeight: 700,
           color: h ? '#0f172a' : '#1e293b',

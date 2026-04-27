@@ -34,10 +34,10 @@ const footerSections = [
   {
     title: 'School of Technology',
     links: [
-      { name: 'The School of Al & Quantum Intelligence', href: '/academy/ai-quantum' },
+      { name: 'The School of Al & Quantum Intelligence', href: '#', disabled: true },
       { name: 'Global School Of Sustainability & Climate Action', href: '/academy/sustainability' },
-      { name: 'Centre Of Digital & Design Excellence', href: '/academy/digital-design' },
-      { name: 'Udaan - Aerial Intelligence', href: '/academy/udaan' },
+      { name: 'Centre Of Digital & Design Excellence', href: '#', disabled: true },
+      { name: 'Udaan - Aerial Intelligence', href: '#', disabled: true },
     ],
   },
   {
@@ -188,21 +188,35 @@ const Footer = () => {
                 }}>
                   {section.links.map((link) => (
                     <li key={link.name}>
-                      <a
-                        href={getRoutePath(link.href)}
-                        style={{
-                          fontSize: 12,
-                          color: '#1a1a1a',
-                          textDecoration: 'none',
-                          lineHeight: 1.5,
-                          display: 'block',
-                          transition: 'color 0.2s',
-                        }}
-                        onMouseEnter={(e) => (e.currentTarget.style.color = '#c0150a')}
-                        onMouseLeave={(e) => (e.currentTarget.style.color = '#1a1a1a')}
-                      >
-                        {link.name}
-                      </a>
+                      {link.disabled ? (
+                        <span
+                          style={{
+                            fontSize: 12,
+                            color: '#1a1a1a',
+                            lineHeight: 1.5,
+                            display: 'block',
+                            cursor: 'default',
+                          }}
+                        >
+                          {link.name}
+                        </span>
+                      ) : (
+                        <a
+                          href={getRoutePath(link.href)}
+                          style={{
+                            fontSize: 12,
+                            color: '#1a1a1a',
+                            textDecoration: 'none',
+                            lineHeight: 1.5,
+                            display: 'block',
+                            transition: 'color 0.2s',
+                          }}
+                          onMouseEnter={(e) => (e.currentTarget.style.color = '#c0150a')}
+                          onMouseLeave={(e) => (e.currentTarget.style.color = '#1a1a1a')}
+                        >
+                          {link.name}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>

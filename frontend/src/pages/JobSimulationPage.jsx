@@ -2150,7 +2150,7 @@ function JobSimulationPage() {
       {/* ── BOTTOM CTA BANNER ── */}
       <section className="jsim-cta-banner">
         <ScrollReveal className="jsim-cta-text">
-          Join Skillzza And Transcend Traditional Learning <br />Start your simulation today. Step confidently into the future with skills that matter.
+          Join Skillzza And Transcend Traditional Learning <br />Step confidently into the future with skills that matter.
         </ScrollReveal>
         <ScrollReveal delay={150}>
           <a href="https://portal.skillzza.com/" className="jsim-cta-btn">
