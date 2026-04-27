@@ -148,7 +148,7 @@ const navItems = [
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
       { name: 'Skill Blueprint', link: '/insights/skill-blueprint', desc: 'Real-world success stories in skill development', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'The Skillzza Digest', link: '/insights/skill-digest', desc: 'Insights, trends & game-changers shaping future skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'The Skillzz Digest', link: '/insights/skill-digest', desc: 'Insights, trends & game-changers shaping future skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'AI Talent Research Hub', link: '/insights/ai-talent-research-hub', desc: 'Reports & whitepapers on AI & workforce transformation', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Skill Unplugged Podcast', link: '/insights/skill-unplugged-podcast', desc: 'Raw, Real & Revolutionary talks on the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Skillzza Live — Knowledge in Action', link: '/insights/skillzza-live', desc: 'Interactive sessions bringing learning to life', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },

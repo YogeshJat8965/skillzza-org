@@ -119,23 +119,8 @@ function ContactUs() {
         <div className="cu-flow-inner">
           <h2 className="cu-flow-title">Join the Skillzza</h2>
 
-          <div className="cu-steps cu-steps--top" aria-label="Progress steps">
-            {steps.map((step, index) => {
-              const isActive = step.id === activeStep
-              const isPast = step.id < activeStep
-              return (
-                <div key={step.id} className="cu-step-row">
-                  <div className={`cu-step-dot ${isActive ? 'is-active' : ''} ${isPast ? 'is-past' : ''}`}>
-                    {String(step.id).padStart(2, '0')}
-                  </div>
-                  <div className={`cu-step-text ${isActive ? 'is-active' : ''}`}>
-                    {step.label}
-                  </div>
-                  {index < steps.length - 1 && <span className="cu-step-connector" aria-hidden="true" />}
-                </div>
-              )
-            })}
-          </div>
+
+
 
           <div className="cu-flow-grid">
             <section className="cu-form-card" aria-label="Contact form wizard">

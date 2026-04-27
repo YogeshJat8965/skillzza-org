@@ -133,7 +133,7 @@ function InsightsPage() {
 
   const breadcrumbMappings = {
     "Skill Blueprint": { left: "Case Studies", right: "Skill Blueprint" },
-    "The Skill Digest": { left: "Blog", right: "The Skillzza Digest" },
+    "The Skill Digest": { left: "Blog", right: "The Skillzz Digest" },
     "AI Talent Research Hub": { left: "Reports & Whitepapers", right: "AI Talent Research Hub" },
     "The Skill Unplugged Podcast Series (3R )": { left: "Skill Unplugged Podcast", right: "A Podcast series" },
     "Skillzza Live": { left: "Knowledge in Action", right: "Skillzza Live" }
@@ -160,12 +160,12 @@ function InsightsPage() {
       {/* Main Filter Section */}
       <section className="w-full px-4 md:px-8 mt-2 md:mt-4">
         <div className="max-w-[1440px] mx-auto flex flex-col items-center">
-          
+
           {/* Main Heading */}
-          
+
 
           {/* 5 Buttons wrapped for mobile and big screens alike */}
-          <div 
+          <div
             className="w-full hidden justify-center pt-2 pb-2 px-2 md:px-4 lg:px-0 insight-btn-container"
           >
             <div className="flex flex-wrap gap-3 md:gap-5 mx-auto w-full lg:w-auto justify-center items-center">
@@ -184,8 +184,8 @@ function InsightsPage() {
                       backgroundColor: isActive ? '#E11313' : '#FFFFFF',
                       color: isActive ? '#FFFFFF' : '#475569',
                       border: isActive ? '1px solid #E11313' : '1px solid #E2E8F0',
-                      boxShadow: isActive 
-                        ? '0px 12px 28px rgba(225, 19, 19, 0.35)' 
+                      boxShadow: isActive
+                        ? '0px 12px 28px rgba(225, 19, 19, 0.35)'
                         : '0px 4px 12px rgba(0, 0, 0, 0.04)',
                       transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                       cursor: 'pointer',
@@ -200,7 +200,7 @@ function InsightsPage() {
               })}
             </div>
           </div>
-          
+
           <div className="mt-2 text-left transistion-all duration-300 w-full max-w-[1440px] px-4">
             <p className="font-['DM_Sans',sans-serif] text-[18px] md:text-[20px] font-bold text-[#475569]">
               {tabDescriptions[activeTab]}
@@ -262,67 +262,67 @@ function InsightsPage() {
               ].map((card) => {
                 const isClickable = card.id === 1 || card.id === 2;
                 return (
-                <div 
-                  key={card.id} 
-                  className={`insight-card flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#F3F4F6] transition-all duration-400 ${
-                    isClickable ? "group hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] relative top-0 hover:-top-1 cursor-pointer" : ""
-                  }`}
-                  role={isClickable ? "button" : "article"}
-                  tabIndex={isClickable ? 0 : undefined}
-                  onClick={() => isClickable && openSkillBlueprintCaseStudy(card.slug)}
-                  onKeyDown={(e) => {
-                    if (isClickable && (e.key === 'Enter' || e.key === ' ')) {
-                      e.preventDefault();
-                      openSkillBlueprintCaseStudy(card.slug);
-                    }
-                  }}
-                >
-                  {/* Card Image */}
-                  <div className="w-full h-[250px] overflow-hidden relative">
-                    <img 
-                      src={card.image} 
-                      alt={card.title} 
-                      className={`w-full h-full object-cover transition-transform duration-700 ${isClickable ? 'group-hover:scale-110' : ''}`}
-                    />
-                    {/* Subtle gradient overlay on image */}
-                    {isClickable && (
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    )}
-                  </div>
-                  
-                  {/* Card Body */}
-                  <div className="p-7 sm:p-8 flex flex-col flex-grow bg-white">
-
-                    
-                    <h3 className={`font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 transition-colors duration-300 ${isClickable ? 'group-hover:text-[#E11313]' : ''}`}>
-                      {card.title}
-                    </h3>
-
-                    {card.subtitle && (
-                      <p className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[1.5] text-[#374151] mb-4">
-                        {card.subtitle}
-                      </p>
-                    )}
-                    
-                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-4">
-                      {isClickable ? (
-                        <ExpandableText
-                          text={card.desc}
-                          limit={210}
-                          forceReadMore={true}
-                          onReadMore={() => openSkillBlueprintCaseStudy(card.slug)}
-                        />
-                      ) : (
-                        <ExpandableText
-                          text={card.desc}
-                          limit={210}
-                          forceReadMore={true}
-                        />
+                  <div
+                    key={card.id}
+                    className={`insight-card flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#F3F4F6] transition-all duration-400 ${isClickable ? "group hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] relative top-0 hover:-top-1 cursor-pointer" : ""
+                      }`}
+                    role={isClickable ? "button" : "article"}
+                    tabIndex={isClickable ? 0 : undefined}
+                    onClick={() => isClickable && openSkillBlueprintCaseStudy(card.slug)}
+                    onKeyDown={(e) => {
+                      if (isClickable && (e.key === 'Enter' || e.key === ' ')) {
+                        e.preventDefault();
+                        openSkillBlueprintCaseStudy(card.slug);
+                      }
+                    }}
+                  >
+                    {/* Card Image */}
+                    <div className="w-full h-[250px] overflow-hidden relative">
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        className={`w-full h-full object-cover transition-transform duration-700 ${isClickable ? 'group-hover:scale-110' : ''}`}
+                      />
+                      {/* Subtle gradient overlay on image */}
+                      {isClickable && (
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       )}
                     </div>
+
+                    {/* Card Body */}
+                    <div className="p-7 sm:p-8 flex flex-col flex-grow bg-white">
+
+
+                      <h3 className={`font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 transition-colors duration-300 ${isClickable ? 'group-hover:text-[#E11313]' : ''}`}>
+                        {card.title}
+                      </h3>
+
+                      {card.subtitle && (
+                        <p className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[1.5] text-[#374151] mb-4">
+                          {card.subtitle}
+                        </p>
+                      )}
+
+                      <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-4">
+                        {isClickable ? (
+                          <ExpandableText
+                            text={card.desc}
+                            limit={210}
+                            forceReadMore={true}
+                            onReadMore={() => openSkillBlueprintCaseStudy(card.slug)}
+                          />
+                        ) : (
+                          <ExpandableText
+                            text={card.desc}
+                            limit={210}
+                            forceReadMore={true}
+                          />
+                        )}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              )})}
+                )
+              })}
             </div>
           )}
 
@@ -375,8 +375,8 @@ function InsightsPage() {
                   image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 }
               ].map((card) => (
-                <div 
-                  key={card.id} 
+                <div
+                  key={card.id}
                   className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1 cursor-pointer"
                   role="button"
                   tabIndex={0}
@@ -389,17 +389,17 @@ function InsightsPage() {
                   }}
                 >
                   <div className="w-full h-[250px] overflow-hidden relative">
-                    <img 
-                      src={card.image} 
-                      alt={card.title} 
+                    <img
+                      src={card.image}
+                      alt={card.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  
+
                   <div className="p-7 sm:p-8 flex flex-col flex-grow bg-white">
 
-                    
+
                     <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
                       {card.title}
                     </h3>
@@ -409,7 +409,7 @@ function InsightsPage() {
                         {card.subtitle}
                       </p>
                     )}
-                    
+
                     <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-4">
                       <ExpandableText
                         text={card.desc}
@@ -427,27 +427,27 @@ function InsightsPage() {
           {activeTab === 'AI Talent Research Hub' && (
             <div className="flex flex-wrap gap-8">
               {aiTalentResearchHubCards.map((card) => (
-                <div 
-                  key={card.id} 
+                <div
+                  key={card.id}
                   onClick={() => openResearchHubArticle(card.slug)}
                   className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1 cursor-pointer"
                 >
                   <div className="w-full h-[250px] overflow-hidden relative">
-                    <img 
-                      src={card.image} 
-                      alt={card.title} 
+                    <img
+                      src={card.image}
+                      alt={card.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  
+
                   <div className="p-7 sm:p-8 flex flex-col flex-grow bg-white">
 
-                    
+
                     <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
                       {card.title}
                     </h3>
-                    
+
                     <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6">
                       <ExpandableText text={card.desc} forceReadMore={true} />
                     </div>
@@ -460,8 +460,8 @@ function InsightsPage() {
           {activeTab === 'The Skill Unplugged Podcast Series (3R )' && (
             <div className="flex flex-wrap gap-8">
               {skillUnpluggedEpisodes.map((card) => (
-                <div 
-                  key={card.id} 
+                <div
+                  key={card.id}
                   className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1 cursor-pointer"
                   role="button"
                   tabIndex={0}
@@ -474,17 +474,17 @@ function InsightsPage() {
                   }}
                 >
                   <div className="w-full h-[250px] overflow-hidden relative">
-                    <img 
-                      src={card.image} 
-                      alt={card.title} 
+                    <img
+                      src={card.image}
+                      alt={card.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  
+
                   <div className="p-7 sm:p-8 flex flex-col flex-grow bg-white">
 
-                    
+
                     <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
                       {card.title}
                     </h3>
@@ -492,7 +492,7 @@ function InsightsPage() {
                     <p className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[1.5] text-[#374151] mb-4">
                       {card.category}
                     </p>
-                    
+
                     <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6">
                       <ExpandableText
                         text={card.desc}
@@ -510,8 +510,8 @@ function InsightsPage() {
           {activeTab === 'Skillzza Live' && (
             <div className="flex flex-wrap gap-8">
               {skillzzaLiveSessions.map((card) => (
-                <div 
-                  key={card.id} 
+                <div
+                  key={card.id}
                   className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1 cursor-pointer"
                   role="button"
                   tabIndex={0}
@@ -524,17 +524,17 @@ function InsightsPage() {
                   }}
                 >
                   <div className="w-full h-[250px] overflow-hidden relative">
-                    <img 
-                      src={card.image} 
-                      alt={card.title} 
+                    <img
+                      src={card.image}
+                      alt={card.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  
+
                   <div className="p-7 sm:p-8 flex flex-col flex-grow bg-white">
 
-                    
+
                     <h3 className="font-['League_Spartan',sans-serif] font-medium text-[26px] leading-[1.25] text-[#0F1114] mb-4 group-hover:text-[#E11313] transition-colors duration-300">
                       {card.title}
                     </h3>
@@ -542,7 +542,7 @@ function InsightsPage() {
                     <p className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[1.5] text-[#374151] mb-4">
                       {card.category}
                     </p>
-                    
+
                     <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6">
                       <ExpandableText
                         text={card.desc}

@@ -407,10 +407,10 @@ function OurPathwayPage() {
             <h1
               className="pathway-hero-heading"
               style={{
-                fontFamily: "'Inter', 'Segoe UI', sans-serif",
-                fontWeight: 900,
-                fontSize: '48px',
-                lineHeight: '1',
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: '1.16',
                 letterSpacing: '0%',
                 color: '#E11313',
                 filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
@@ -600,10 +600,10 @@ function OurPathwayPage() {
             </p>
             <h2
               style={{
-                fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
-                fontSize: '38px',
-                lineHeight: '1.05',
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: '1.16',
                 letterSpacing: '0%',
                 textAlign: 'center',
                 color: '#CF0C0C',
@@ -838,10 +838,10 @@ function OurPathwayPage() {
             </p>
             <h2
               style={{
-                fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
-                fontSize: '38px',
-                lineHeight: '1',
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: '1.16',
                 color: '#CF0C0C',
                 textShadow: '0px 4px 0px rgba(0, 0, 0, 0.25)',
               }}
@@ -973,10 +973,10 @@ function OurPathwayPage() {
             </p>
             <h2
               style={{
-                fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
-                fontSize: '38px',
-                lineHeight: '1',
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: '1.16',
                 color: '#CF0C0C',
                 textShadow: '0px 4px 0px rgba(0, 0, 0, 0.25)',
               }}
@@ -1135,10 +1135,10 @@ function OurPathwayPage() {
           </p>
           <h2
             style={{
-              fontFamily: "'Inter', 'Segoe UI', sans-serif",
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: 700,
-              fontSize: '38px',
-              lineHeight: 1,
+              fontSize: 'clamp(24px, 2.8vw, 52px)',
+              lineHeight: 1.16,
               color: '#C00F0F',
               textShadow: '0px 4px 0px rgba(0, 0, 0, 0.25)',
               marginBottom: '42px',
@@ -1226,10 +1226,10 @@ function OurPathwayPage() {
             </p>
             <h2
               style={{
-                fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
-                fontSize: '32px',
-                lineHeight: '1.05',
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: '1.16',
                 color: '#CF0C0C',
                 textShadow: '0px 4px 0px rgba(0, 0, 0, 0.25)',
                 marginBottom: '18px',
@@ -1410,10 +1410,10 @@ function OurPathwayPage() {
           >
             <h2
               style={{
-                fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
-                fontSize: '42px',
-                lineHeight: 1.1,
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: 1.16,
                 color: '#0B0B0B',
                 margin: 0,
                 textAlign: 'left',

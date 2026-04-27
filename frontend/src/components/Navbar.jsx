@@ -2,9 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import { HiMenu, HiX } from 'react-icons/hi';
 import {
-  Target, Globe, Handshake, UserCheck, Bot, BrainCircuit, Leaf, PaintBucket, 
-  Zap, Rocket, GraduationCap, ShieldAlert, BookOpen, PenTool, Microscope, 
-  Mic, Activity, BarChart3, Compass, Settings, Layers, Route, Briefcase, 
+  Target, Globe, Handshake, UserCheck, Bot, BrainCircuit, Leaf, PaintBucket,
+  Zap, Rocket, GraduationCap, ShieldAlert, BookOpen, PenTool, Microscope,
+  Mic, Activity, BarChart3, Compass, Settings, Layers, Route, Briefcase,
   FileText, School, Building, Hexagon
 } from 'lucide-react';
 import { getAssetPath, getRoutePath } from '../utils/assets';
@@ -68,7 +68,7 @@ const navItems = [
       {
         name: 'Talent Intelligence',
         subtitle: 'Talent insights engine',
-        link: null,
+        link: '/product/talent-intelligence',
         heading: 'Unlock data-driven',
         headingHighlight: 'talent insights. Stay ahead always.',
         description: 'Our talent intelligence engine analyzes skills, trends, and market data to help you make smarter learning and career decisions.',
@@ -78,13 +78,13 @@ const navItems = [
           'Make smarter career and learning choices',
         ],
         ctaText: 'Explore Insights',
-        ctaLink: null,
+        ctaLink: '/product/talent-intelligence',
         illustrationId: 'talent-intelligence',
       },
       {
         name: 'AI HackNex',
         subtitle: 'AI hackathons',
-        link: null,
+        link: '/product/ai-hacknex',
         heading: 'Compete. Build. Innovate.',
         headingHighlight: 'All with AI HackNex.',
         description: 'Join AI-powered hackathons, solve real-world challenges, and showcase your skills to top companies and opportunities.',
@@ -94,13 +94,13 @@ const navItems = [
           'Earn recognition and unlock opportunities',
         ],
         ctaText: 'Explore Hackathons',
-        ctaLink: null,
+        ctaLink: '/product/ai-hacknex',
         illustrationId: 'ai-hacknex',
       },
       {
         name: 'Hirenest',
         subtitle: 'Campus hiring marketplace',
-        link: null,
+        link: '/product/hirenest',
         heading: 'Connecting talent.',
         headingHighlight: 'Creating opportunities.',
         description: 'Hirenest is your campus hiring marketplace that connects students with top companies and the right opportunities.',
@@ -110,7 +110,7 @@ const navItems = [
           'Stand out and get hired',
         ],
         ctaText: 'Explore Opportunities',
-        ctaLink: null,
+        ctaLink: '/product/hirenest',
         illustrationId: 'hirenest',
       },
       {
@@ -208,7 +208,7 @@ const navItems = [
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
       { name: 'Skill Blueprint', link: '/insights/skill-blueprint', desc: 'Real-world success stories in skill development', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'The Skillzza Digest', link: '/insights/skill-digest', desc: 'Insights, trends & game-changers shaping future skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'The Skillzz Digest', link: '/insights/skill-digest', desc: 'Insights, trends & game-changers shaping future skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'AI Talent Research Hub', link: '/insights/ai-talent-research-hub', desc: 'Reports & whitepapers on AI & workforce transformation', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Skill Unplugged Podcast', link: '/insights/skill-unplugged-podcast', desc: 'Raw, Real & Revolutionary talks on the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Skillzza Live', link: '/insights/skillzza-live', desc: 'Interactive sessions bringing learning to life', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
@@ -598,14 +598,14 @@ const CardItem = ({ item, index, onComingSoon }) => {
 
 const ListRowsDropdown = ({ navItem, onComingSoon }) => {
   return (
-  <div style={{ position: 'relative' }}>
-    <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} gradient={navItem.accentGradient} />
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-      {navItem.items.map((item, i) => (
-        <ListRowItem key={item.name} item={item} index={i} onComingSoon={onComingSoon} />
-      ))}
+    <div style={{ position: 'relative' }}>
+      <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} gradient={navItem.accentGradient} />
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+        {navItem.items.map((item, i) => (
+          <ListRowItem key={item.name} item={item} index={i} onComingSoon={onComingSoon} />
+        ))}
+      </div>
     </div>
-  </div>
   );
 };
 
@@ -1219,9 +1219,9 @@ const PlatformTabsDropdown = ({ navItem }) => {
           display: 'flex', flexDirection: 'column', gap: 0,
         }}>
           {navItem.tabs.map((t, i) => (
-            <div
+            <a
               key={t.name}
-              onClick={() => switchTab(i)}
+              href={t.link ? getRoutePath(t.link) : undefined}
               onMouseEnter={() => switchTab(i)}
               style={{
                 padding: '12px 14px',
@@ -1230,6 +1230,8 @@ const PlatformTabsDropdown = ({ navItem }) => {
                 cursor: 'pointer',
                 transition: 'all 0.25s ease',
                 borderRadius: '0 8px 8px 0',
+                textDecoration: 'none',
+                display: 'block',
               }}
             >
               <div style={{
@@ -1241,7 +1243,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
                 fontSize: 11.5, color: '#94a3b8', marginTop: 2,
                 fontWeight: 400, lineHeight: 1.3,
               }}>{t.subtitle}</div>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -1690,8 +1692,8 @@ const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
   const mobileSubItems = item.items
     ? item.items
     : item.tabs
-    ? item.tabs.map(t => ({ name: t.name, link: t.link, desc: t.subtitle }))
-    : [...mobileCompanyItems, ...mobileServiceItems];
+      ? item.tabs.map(t => ({ name: t.name, link: t.link, desc: t.subtitle }))
+      : [...mobileCompanyItems, ...mobileServiceItems];
   const hasSubItems = mobileSubItems.length > 0;
 
   if (item.isDirectLink) {
@@ -1893,7 +1895,7 @@ const Navbar = () => {
               display: 'flex',
               alignItems: 'center',
               gap: 12,
-                justifyContent: 'center',
+              justifyContent: 'center',
               flexWrap: 'wrap',
             }}
           >
@@ -1909,7 +1911,7 @@ const Navbar = () => {
           {/* CTA buttons */}
           <div
             className="sz-cta-group"
-              style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 10 }}
+            style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 10 }}
           >
             <a
               href={getRoutePath('/book-demo')}

@@ -100,9 +100,10 @@ function AboutPage() {
         }
 
         .about-banner__headline {
-          font-size: clamp(24px, 3.2vw, 36px);
-          font-weight: 900;
-          line-height: 1.3;
+          font-family: 'DM Sans', sans-serif;
+          font-size: clamp(24px, 2.8vw, 52px);
+          font-weight: 700;
+          line-height: 1.16;
           margin: 0;
           max-width: 32ch;
         }

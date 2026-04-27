@@ -31,6 +31,21 @@ body {
   overflow-x: hidden;
 }
 
+/* ══════════════════════════════════════════════════════════════════
+   GLOBAL HEADING STANDARDIZATION
+   All h1/h2 headings site-wide must match the Home page Hero style:
+     font-family: 'DM Sans', sans-serif
+     font-weight: 700
+     font-size:   clamp(24px, 2.8vw, 52px) (responsive)
+     line-height: 1.16
+   Uses !important to override any per-page inline styles.
+   ══════════════════════════════════════════════════════════════════ */
+
+h1, h2 {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
 /* ── GLOBAL RESPONSIVE UTILITIES ─────────────────────────────────── */
 
 /* Prevent any element from exceeding viewport width */

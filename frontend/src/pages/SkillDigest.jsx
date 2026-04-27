@@ -7,17 +7,17 @@ const SkillDigest = () => {
       {/* Hero Section */}
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
-        style={{ 
+        style={{
           backgroundImage: getBackgroundImageUrl('/digestbannerImg.jpeg'),
           minHeight: '70vh'
         }}
       >
         <div className="absolute inset-0 bg-gray-900/70"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-white text-center mx-auto">
             <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
-              THE SKILLZZA DIGEST
+              The Skillzz Digest
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
               Insights That Shape Tomorrow
@@ -46,10 +46,10 @@ const SkillDigest = () => {
             <article className="mb-20">
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-1/2">
-                  <img 
-                    src={getAssetPath('/potential_meter_banner_img.png')} 
-                    alt="AI-Powered Potential Meters" 
-                    className="w-full h-80 object-cover rounded-2xl shadow-lg" 
+                  <img
+                    src={getAssetPath('/potential_meter_banner_img.png')}
+                    alt="AI-Powered Potential Meters"
+                    className="w-full h-80 object-cover rounded-2xl shadow-lg"
                   />
                 </div>
                 <div className="lg:w-1/2">
@@ -79,10 +79,10 @@ const SkillDigest = () => {
             <article className="mb-20">
               <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
                 <div className="lg:w-1/2">
-                  <img 
-                    src={getAssetPath('/platformslide1.png')} 
-                    alt="AI-Powered Experience Platforms" 
-                    className="w-full h-80 object-cover rounded-2xl shadow-lg" 
+                  <img
+                    src={getAssetPath('/platformslide1.png')}
+                    alt="AI-Powered Experience Platforms"
+                    className="w-full h-80 object-cover rounded-2xl shadow-lg"
                   />
                 </div>
                 <div className="lg:w-1/2">
@@ -112,10 +112,10 @@ const SkillDigest = () => {
             <article className="mb-20">
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-1/2">
-                  <img 
-                    src={getAssetPath('/insight_roles.jpg')} 
-                    alt="AI Marketplaces for Campus Hiring" 
-                    className="w-full h-80 object-cover rounded-2xl shadow-lg" 
+                  <img
+                    src={getAssetPath('/insight_roles.jpg')}
+                    alt="AI Marketplaces for Campus Hiring"
+                    className="w-full h-80 object-cover rounded-2xl shadow-lg"
                   />
                 </div>
                 <div className="lg:w-1/2">
@@ -145,10 +145,10 @@ const SkillDigest = () => {
             <article className="mb-20">
               <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
                 <div className="lg:w-1/2">
-                  <img 
-                    src={getAssetPath('/future_workspace.jpg')} 
-                    alt="Skillforce Transformation" 
-                    className="w-full h-80 object-cover rounded-2xl shadow-lg" 
+                  <img
+                    src={getAssetPath('/future_workspace.jpg')}
+                    alt="Skillforce Transformation"
+                    className="w-full h-80 object-cover rounded-2xl shadow-lg"
                   />
                 </div>
                 <div className="lg:w-1/2">
@@ -178,10 +178,10 @@ const SkillDigest = () => {
             <article className="mb-20">
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-1/2">
-                  <img 
-                    src={getAssetPath('/ai_hacknex_tile_img.png')} 
-                    alt="AI Hackathons as Innovation Labs" 
-                    className="w-full h-80 object-cover rounded-2xl shadow-lg" 
+                  <img
+                    src={getAssetPath('/ai_hacknex_tile_img.png')}
+                    alt="AI Hackathons as Innovation Labs"
+                    className="w-full h-80 object-cover rounded-2xl shadow-lg"
                   />
                 </div>
                 <div className="lg:w-1/2">
@@ -221,11 +221,11 @@ const SkillDigest = () => {
               Never Miss an Insight
             </h2>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Subscribe to The Skillzza Digest and get the latest insights on AI, workforce transformation, and the future of talent development delivered to your inbox.
+              Subscribe to The Skillzz Digest and get the latest insights on AI, workforce transformation, and the future of talent development delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="Enter your email address"
                 className="flex-1 px-6 py-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
@@ -282,8 +282,8 @@ const SkillDigest = () => {
               ].map((topic, index) => (
                 <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
                   <div className="h-48 overflow-hidden">
-                    <img 
-                      src={topic.image} 
+                    <img
+                      src={topic.image}
                       alt={topic.title}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
