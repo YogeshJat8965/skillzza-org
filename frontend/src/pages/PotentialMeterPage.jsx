@@ -210,7 +210,7 @@ export default function PotentialMeterPage() {
 
           {/* Main Heading */}
           <h1
-            className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] max-w-[1118px] text-[36px] leading-[42px] md:text-[48px] md:leading-[54px] lg:text-[56px] lg:leading-[64px] tracking-[-1.5px] mb-3"
+            className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] max-w-[1118px] text-[38px] leading-[46px] tracking-[-1.5px] mb-3"
           >
             Stop Guessing <span className="text-[#2563eb]">Career Potential.</span>
             <br />
@@ -395,7 +395,7 @@ export default function PotentialMeterPage() {
       </section>
 
       {/* ── What We Measure Section ── */}
-      <section className="relative w-full py-2 md:py-4 bg-white overflow-hidden">
+      <section className="relative w-full pt-2 md:pt-3 pb-0 md:pb-1 bg-white overflow-hidden">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -577,7 +577,7 @@ export default function PotentialMeterPage() {
       </section>
 
       {/* ── What You Get with Potential Meter Section ── */}
-      <section className="relative w-full py-2 md:py-4 bg-white overflow-hidden">
+      <section className="relative w-full pt-6 md:pt-8 pb-2 md:pb-4 bg-white overflow-hidden">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -630,11 +630,11 @@ export default function PotentialMeterPage() {
                 {tabData[activeGetTab].preHeading}
               </span>
               
-              <h3 className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] text-[32px] md:text-[40px] leading-tight tracking-[-1px] mb-4">
+              <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[18px] leading-tight tracking-[-1px] mb-4">
                 {tabData[activeGetTab].heading}
               </h3>
               
-              <p className="font-['Lato',sans-serif] font-medium text-[#71717B] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-8 whitespace-pre-line">
+              <p className="font-['Lato',sans-serif] font-medium text-[#71717B] text-[16px] leading-[1.6] mb-8 whitespace-pre-line">
                 {tabData[activeGetTab].intro}
               </p>
 
@@ -649,7 +649,7 @@ export default function PotentialMeterPage() {
                   {tabData[activeGetTab].features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-4">
                       <div className="w-[6px] h-[6px] rounded-full bg-[#71717B] mt-2.5 flex-shrink-0" />
-                      <span className="font-['Lato',sans-serif] text-[#71717B] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
+                      <span className="font-['Lato',sans-serif] text-[#71717B] text-[16px] leading-[1.6]">
                         {feature}
                       </span>
                     </li>
@@ -681,7 +681,7 @@ export default function PotentialMeterPage() {
                 <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#2563eb] text-[14px] uppercase tracking-wide mb-2 block">
                   PRICING:
                 </h4>
-                <p className="font-['Lato',sans-serif] font-medium text-[#71717B] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] whitespace-pre-line">
+                <p className="font-['Lato',sans-serif] font-medium text-[#71717B] text-[16px] leading-[1.6] whitespace-pre-line">
                   {tabData[activeGetTab].pricing}
                 </p>
               </div>
@@ -771,7 +771,7 @@ export default function PotentialMeterPage() {
       </section>
 
       {/* ── Call To Action Section ── */}
-      <section className="w-full bg-[#FBA93E] py-12 md:py-16 px-4 flex flex-col items-center justify-center text-center mt-auto overflow-hidden">
+      <section className="w-full bg-[#FBA93E] py-8 md:py-10 px-4 flex flex-col items-center justify-center text-center mt-auto overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -779,7 +779,7 @@ export default function PotentialMeterPage() {
           transition={{ duration: 0.6 }}
           className="w-full flex flex-col items-center justify-center"
         >
-          <h2 className="product-heading font-bold text-[#0F1114] tracking-[-1.5px] mb-4 md:mb-5">
+          <h2 className="font-['DM_Sans',sans-serif] font-bold text-[38px] leading-[46px] text-[#0F1114] tracking-[-1.5px] mb-4 md:mb-5">
             Upskill Smarter. Learn Faster.<br />Lead Confidently.
           </h2>
           <p className="font-['Lato',sans-serif] font-medium text-[#0F1114] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-7 md:mb-9">

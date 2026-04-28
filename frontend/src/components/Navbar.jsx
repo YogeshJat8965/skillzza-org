@@ -8,12 +8,19 @@ import {
   FileText, School, Building, Hexagon
 } from 'lucide-react';
 import { getAssetPath, getRoutePath } from '../utils/assets';
+import { aiTalentResearchHubCards } from '../data/aiTalentResearchHubCards';
+import { skillUnpluggedEpisodes } from '../data/skillUnpluggedEpisodes';
+import { skillzzaLiveSessions } from '../data/skillzzaLiveSessions';
 import platformImg1 from '../assets/card grid/image 1.png';
 import platformImg2 from '../assets/card grid/image 2.png';
 import platformImg3 from '../assets/card grid/image 3.png';
 import platformImg4 from '../assets/card grid/image 4.png';
 import platformImg5 from '../assets/card grid/image 5.png';
 import platformImg6 from '../assets/card grid/image 6.png';
+import sotAiImg from '../assets/card grid/School of Technology/school of Ai.png';
+import sotSustainImg from '../assets/card grid/School of Technology/gssca.jpeg';
+import sotDigitalImg from '../assets/card grid/School of Technology/Centre of Digital & Design Excellence.png';
+import sotAerialImg from '../assets/card grid/School of Technology/Institute of Aerial Intelligence.png';
 
 /* ═══════════════════════════════════════════════════════════════
    NAV DATA - enriched with gradient icons, descriptions, pills
@@ -70,7 +77,7 @@ const navItems = [
         subtitle: 'Talent insights engine',
         link: '/product/talent-intelligence',
         heading: 'Unlock data-driven',
-        headingHighlight: 'talent insights. Stay ahead always.',
+        headingHighlight: 'Talent insights. Stay ahead always.',
         description: 'Our talent intelligence engine analyzes skills, trends, and market data to help you make smarter learning and career decisions.',
         bullets: [
           'Discover in-demand skills and emerging trends',
@@ -176,19 +183,31 @@ const navItems = [
   },
   {
     name: 'School of Technology',
-    layout: 'list-rows',
-    width: 710,
-    eyebrow: 'The Deeptech Studio - Specialisations',
+    layout: 'image-card-grid',
+    width: 820,
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
-      { name: 'School of AI & Quantum Intelligence', link: null, desc: 'ML, neural architectures, quantum algorithms, agentic AI systems', pill: 'AI + Quantum', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Global School of Sustainability & Climate Action', link: 'https://globalschoolofsustainability.com/', desc: 'Green tech, carbon markets, ESG frameworks, climate data science', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Centre of Digital & Design Excellence', link: null, desc: 'UX/UI, VFX, generative AI art, immersive media, spatial design', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      // { name: 'School of EV & E-Mobility', link: null, desc: 'Electric vehicles, battery systems, smart transport, grid tech', pill: 'Beta', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Institute of Aerial Intelligence', link: null, desc: 'Drone systems, UAV operations, aerial data & AI navigation', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      // { name: 'Future Skill Academy', link: null, desc: 'Future-ready learning tracks for AI, product, and digital careers.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      // { name: 'Cybersecurity & Ethical AI School', link: null, desc: 'Threat intelligence, AI safety, responsible automation, governance', pill: 'New', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      {
+        titleLines: ['School of AI &', 'Quantum', 'Intelligence'],
+        image: sotAiImg,
+        link: null,
+      },
+      {
+        titleLines: ['Global School of', 'Sustainability &', 'Climate Action'],
+        image: sotSustainImg,
+        link: 'https://globalschoolofsustainability.com/',
+      },
+      {
+        titleLines: ['Centre of Digital', '& Design', 'Excellence'],
+        image: sotDigitalImg,
+        link: null,
+      },
+      {
+        titleLines: ['Institute of', 'Aerial', 'Intelligence'],
+        image: getAssetPath('/schoolEVMobilityTileImg.png'),
+        link: null,
+      },
     ],
   },
   {
@@ -198,18 +217,79 @@ const navItems = [
   },
   {
     name: 'Insights',
-    layout: 'list-rows',
-    width: 600,
-    eyebrow: 'Resources & Knowledge',
+    layout: 'insights-split',
+    width: 860,
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
-      { name: 'Skill Blueprint', link: '/insights/skill-blueprint', desc: 'Real-world success stories in skill development', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'The Skillzz Digest', link: '/insights/skill-digest', desc: 'Insights, trends & game-changers shaping future skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'AI Talent Research Hub', link: '/insights/ai-talent-research-hub', desc: 'Reports & whitepapers on AI & workforce transformation', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Skill Unplugged Podcast', link: '/insights/skill-unplugged-podcast', desc: 'Raw, Real & Revolutionary talks on the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Skillzza Live', link: '/insights/skillzza-live', desc: 'Interactive sessions bringing learning to life', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Agentic Workforce Index 2026', link: null, desc: 'Annual report on AI agent adoption across industries', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      {
+        name: 'Skill Blueprint',
+        link: '/insights/skill-blueprint',
+        desc: 'Real-world success stories in skill development',
+        iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
+        sideImages: [
+          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+      {
+        name: 'The Skillzz Digest',
+        link: '/insights/skill-digest',
+        desc: 'Insights, trends & game-changers shaping future skills',
+        iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
+        sideImages: [
+          'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+      {
+        name: 'AI Talent Research Hub',
+        link: '/insights/ai-talent-research-hub',
+        desc: 'Reports & whitepapers on AI & workforce transformation',
+        iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
+        sideImages: [
+          'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+      {
+        name: 'Skill Unplugged Podcast',
+        link: '/insights/skill-unplugged-podcast',
+        desc: 'Raw, Real & Revolutionary talks on the future of skills',
+        iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
+        sideImages: [
+          skillUnpluggedEpisodes[0]?.image,
+          skillUnpluggedEpisodes[1]?.image,
+        ].filter(Boolean),
+      },
+      {
+        name: 'Skillzza Live - Knowledge in Action',
+        link: '/insights/skillzza-live',
+        desc: 'Interactive sessions bringing learning to life',
+        iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
+        sideImages: [
+          skillzzaLiveSessions[0]?.image,
+          skillzzaLiveSessions[1]?.image,
+        ].filter(Boolean),
+      },
+      {
+        name: 'Agentic Workforce Index 2026',
+        link: null,
+        desc: 'Annual report on AI agent adoption across industries',
+        pill: 'New',
+        pillColor: 'purple',
+        iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)',
+        iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
+        sideImages: [
+          aiTalentResearchHubCards[2]?.image,
+          aiTalentResearchHubCards[3]?.image,
+        ].filter(Boolean),
+      },
     ],
   },
   {
@@ -235,10 +315,10 @@ const navItems = [
       { name: 'Press & Media', link: null, desc: 'News, features & brand resources', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
     ],
     serviceItems: [
-      { name: 'Institution Transformation', desc: 'Curriculum redesign & AI integration for universities.', link: null },
-      { name: 'Enterprise Skill Audit', desc: 'Workforce gap analysis & 90-day upskilling roadmap.', link: null },
-      { name: 'Govt & CSR Programmes', desc: 'National skill missions & youth employment schemes.', link: null },
-      { name: 'Talent Intelligence Reports', desc: 'Workforce analytics & sector skill signals.', link: null },
+      { name: 'Institution Transformation', desc: 'Curriculum redesign & AI integration for universities.', link: '/company/partnerships' },
+      { name: 'Enterprise Skill Audit', desc: 'Workforce gap analysis & 90-day upskilling roadmap.', link: '/company/partnerships' },
+      { name: 'Govt & CSR Programmes', desc: 'National skill missions & youth employment schemes.', link: '/company/partnerships' },
+      { name: 'Talent Intelligence Reports', desc: 'Workforce analytics & sector skill signals.', link: '/company/partnerships' },
     ],
   },
 ];
@@ -289,12 +369,49 @@ const Pill = ({ text, color = 'red' }) => {
    Eyebrow - premium section header with gradient accent line
 ─────────────────────────────────────────────────────────────── */
 
-const Eyebrow = ({ text, dotColor, gradient }) => null;
+const Eyebrow = ({ text, dotColor, gradient }) => (
+  <div
+    style={{
+      fontSize: 11,
+      fontWeight: 800,
+      letterSpacing: 1.5,
+      textTransform: 'uppercase',
+      marginBottom: 18,
+      padding: '12px 16px',
+      background: 'linear-gradient(135deg, #e4dafc 0%, #def1f7 50%, #daf4ef 100%)',
+      borderRadius: 10,
+      border: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      gap: 10,
+      position: 'relative',
+    }}
+  >
+    <span
+      style={{
+        width: 8,
+        height: 8,
+        borderRadius: '50%',
+        background: gradient || dotColor || '#BD1723',
+        flexShrink: 0,
+        boxShadow: `0 0 8px ${dotColor || '#BD1723'}40`,
+      }}
+    />
+    <span
+      style={{
+        color: '#0f172a',
+        letterSpacing: 1.5,
+        fontWeight: 800,
+      }}
+    >
+      {text}
+    </span>
+  </div>
+);
 
 /* ───────────────────────────────────────────────────────────────
    CtaBar - gradient CTA strip
 ─────────────────────────────────────────────────────────────── */
-
 const CtaBar = ({ cta, gradient }) => {
   const [hovered, setHovered] = useState(false);
 
@@ -695,6 +812,280 @@ const ListRowItem = ({ item, index, onComingSoon }) => {
           fontWeight: 600,
         }}>↗</div>
       )}
+    </a>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   IMAGE CARD GRID DROPDOWN - School of Technology
+═══════════════════════════════════════════════════════════════ */
+
+const ImageCardGridDropdown = ({ navItem, onComingSoon }) => (
+  <div>
+    {navItem.eyebrow ? (
+      <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} gradient={navItem.accentGradient} />
+    ) : null}
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+        gap: 14,
+      }}
+    >
+      {navItem.items.map((item, i) => (
+        <ImageCardItem key={`${item.titleLines?.join('-')}-${i}`} item={item} index={i} onComingSoon={onComingSoon} />
+      ))}
+    </div>
+  </div>
+);
+
+const ImageCardItem = ({ item, index, onComingSoon }) => {
+  const [hovered, setHovered] = useState(false);
+  const isExternal = item.link?.startsWith('http');
+
+  return (
+    <a
+      href={item.link ? (isExternal ? item.link : getRoutePath(item.link)) : undefined}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+      onClick={!item.link ? (e) => {
+        e.preventDefault();
+        onComingSoon?.(item.titleLines?.join(' ') || 'School of Technology');
+      } : undefined}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        position: 'relative',
+        height: 165,
+        borderRadius: 16,
+        overflow: 'hidden',
+        cursor: item.link ? 'pointer' : 'default',
+        textDecoration: 'none',
+        transition: 'all 0.32s cubic-bezier(0.34,1.2,0.64,1)',
+        transform: hovered ? 'translateY(-5px) scale(1.01)' : 'translateY(0) scale(1)',
+        boxShadow: hovered
+          ? '0 18px 30px rgba(15, 23, 42, 0.18)'
+          : '0 10px 24px rgba(15, 23, 42, 0.12)',
+      }}
+    >
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: `url(${item.image}) center / cover no-repeat`,
+          imageRendering: 'auto',
+          transform: 'none',
+          transition: 'none',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: hovered
+            ? 'linear-gradient(180deg, rgba(15,23,42,0.02) 0%, rgba(15,23,42,0.25) 75%, rgba(15,23,42,0.45) 100%)'
+            : 'linear-gradient(180deg, rgba(15,23,42,0.01) 0%, rgba(15,23,42,0.18) 75%, rgba(15,23,42,0.4) 100%)',
+          transition: 'background 0.35s ease',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          padding: 12,
+          display: 'flex',
+          alignItems: 'flex-end',
+        }}
+      >
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 12,
+            padding: '10px 12px',
+            borderRadius: 12,
+            background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.78))',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            boxShadow: '0 6px 16px rgba(15, 23, 42, 0.18)',
+          }}
+        >
+          <span
+            style={{
+              width: 32,
+              height: 32,
+              borderRadius: '50%',
+              background: '#ffffff',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#0f172a',
+              fontSize: 15,
+              fontWeight: 800,
+              flexShrink: 0,
+            }}
+          >
+            ➜
+          </span>
+          <div
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 14.5,
+              fontWeight: 600,
+              color: '#ffffff',
+              lineHeight: 1.28,
+              letterSpacing: 0.1,
+              textShadow: '0 2px 8px rgba(0,0,0,0.35)',
+            }}
+          >
+            {item.titleLines?.map((line, idx) => (
+              <div key={`${line}-${idx}`}>{line}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   INSIGHTS SPLIT DROPDOWN - list left, images right
+═══════════════════════════════════════════════════════════════ */
+
+const InsightsSplitDropdown = ({ navItem, onComingSoon }) => {
+  const initialImages = navItem.items.find(item => (item.sideImages || []).length > 0)?.sideImages || [];
+  const [activeImages, setActiveImages] = useState(initialImages);
+  const [activeDesc, setActiveDesc] = useState(navItem.items.find(item => item.desc)?.desc || '');
+  const [animKey, setAnimKey] = useState(0);
+
+  const handleHover = (item) => {
+    if (item.sideImages && item.sideImages.length > 0) {
+      setActiveImages(item.sideImages);
+    }
+    if (item.desc) {
+      setActiveDesc(item.desc);
+    }
+    setAnimKey((prev) => prev + 1);
+  };
+
+  return (
+    <div>
+      <style>{`
+        @keyframes insightsFadeUp {
+          from { opacity: 0; transform: translateY(12px) scale(0.98); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+      `}</style>
+      <div style={{ display: 'flex', gap: 24, alignItems: 'stretch' }}>
+        <div style={{ flex: '1 1 56%', minWidth: 0 }}>
+          {navItem.items.map((item, i) => (
+            <InsightsRowItem
+              key={item.name}
+              item={item}
+              index={i}
+              total={navItem.items.length}
+              onComingSoon={onComingSoon}
+              onHover={handleHover}
+            />
+          ))}
+        </div>
+        <div style={{ flex: '1 1 44%', display: 'flex', flexDirection: 'column', gap: 14 }}>
+          {(activeImages || []).slice(0, 2).map((src, idx) => (
+            <div
+              key={`${src}-${idx}-${animKey}`}
+              style={{
+                borderRadius: 14,
+                overflow: 'hidden',
+                boxShadow: '0 10px 24px rgba(15, 23, 42, 0.12)',
+                border: '1px solid #eef2f7',
+                opacity: 0,
+                transform: 'translateY(10px)',
+                animation: 'insightsFadeUp 360ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
+                animationDelay: `${idx * 220}ms`,
+              }}
+            >
+              <img
+                src={src}
+                alt="Insights preview"
+                style={{ width: '100%', height: 150, objectFit: 'cover', display: 'block' }}
+              />
+            </div>
+          ))}
+          {activeDesc ? (
+            <div
+              key={`${activeDesc}-${animKey}`}
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 12,
+                color: '#0f172a',
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                letterSpacing: 0.6,
+                lineHeight: 1.4,
+                padding: '6px 10px',
+                borderRadius: 10,
+                background: 'linear-gradient(135deg, #f1f5f9, #eef2ff)',
+                border: '1px solid #e2e8f0',
+                opacity: 0,
+                transform: 'translateY(10px)',
+                animation: 'insightsFadeUp 380ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
+                animationDelay: '520ms',
+              }}
+            >
+              {activeDesc}
+            </div>
+          ) : null}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const InsightsRowItem = ({ item, index, total, onComingSoon, onHover }) => {
+  const [hovered, setHovered] = useState(false);
+  const isExternal = item.link?.startsWith('http');
+
+  return (
+    <a
+      href={item.link ? (isExternal ? item.link : getRoutePath(item.link)) : undefined}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+      onClick={!item.link ? (e) => {
+        e.preventDefault();
+        onComingSoon?.(item.name);
+      } : undefined}
+      onMouseEnter={() => {
+        setHovered(true);
+        onHover?.(item);
+      }}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        display: 'block',
+        textDecoration: 'none',
+        padding: '12px 10px',
+        borderBottom: index === total - 1 ? 'none' : '1px solid #e7edf4',
+        borderRadius: 10,
+        background: hovered ? 'linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%)' : 'transparent',
+        boxShadow: hovered ? '0 6px 18px rgba(15, 23, 42, 0.08)' : 'none',
+        transform: hovered ? 'translateX(4px)' : 'translateX(0)',
+        transition: 'all 0.25s cubic-bezier(0.4,0,0.2,1)',
+      }}
+    >
+      <div
+        style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: 14.5,
+          fontWeight: 600,
+          color: hovered ? '#BD1723' : '#1f2937',
+          transition: 'color 0.2s ease',
+          marginBottom: 6,
+        }}
+      >
+        {item.name}
+      </div>
+      
     </a>
   );
 };
@@ -1446,6 +1837,8 @@ const MegaDropdown = ({ navItem, onComingSoon }) => {
     'platform-tabs': PlatformTabsDropdown,
     'card-grid': CardGridDropdown,
     'list-rows': ListRowsDropdown,
+    'insights-split': InsightsSplitDropdown,
+    'image-card-grid': ImageCardGridDropdown,
     'compact-grid': CompactGridDropdown,
     'agentic-ai': AgenticAIDropdown,
     'k12-vidya': K12VidyaDropdown,
