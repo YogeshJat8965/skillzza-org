@@ -453,7 +453,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                   }}
                 >
                   {/* Image */}
-                  <div className="insights-card-img" style={{ width: '100%', height: '320px', overflow: 'hidden' }}>
+                  <div className="insights-card-img" style={{ width: '100%', height: '340px', overflow: 'hidden' }}>
                     <img
                       src={getAssetPath('/img/Mask%20Group%2096.png')}
                       alt="AI Assistant"
@@ -467,15 +467,15 @@ const Insights = ({ showHero = false, showContent = true }) => {
                   </div>
 
                   {/* Content */}
-                  <div style={{ padding: '28px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ padding: '22px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                     {/* Icon */}
-                    <div className="insights-card-icon" style={{ marginBottom: '20px', marginTop: '20px' }}>
+                    <div className="insights-card-icon" style={{ marginBottom: '16px', marginTop: '16px' }}>
                       <img
                         src={getAssetPath('/img/Group%2034192.svg')}
                         alt="Icon"
                         style={{
-                          width: '56px',
-                          height: '56px',
+                          width: '52px',
+                          height: '52px',
                         }}
                       />
                     </div>
@@ -484,7 +484,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     <h3
                       style={{
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '26px',
+                        fontSize: '24px',
                         fontWeight: 600,
                         lineHeight: '1.4',
                         color: '#393939',
@@ -498,15 +498,15 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     {/* Button */}
                     <button
                       style={{
-                        marginBottom: '20px',
-                        width: '173px',
-                        height: '48px',
+                        marginBottom: '16px',
+                        width: '168px',
+                        height: '44px',
                         padding: '0 16px',
                         background: 'transparent',
                         border: '1px solid #0F1114',
                         borderRadius: '8px',
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '14px',
+                        fontSize: '13px',
                         fontWeight: 500,
                         color: '#0F1114',
                         cursor: 'pointer',
@@ -545,7 +545,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     }}
                   >
                     {/* Image */}
-                    <div className="insights-card-img" style={{ width: '100%', height: '320px', overflow: 'hidden' }}>
+                    <div className="insights-card-img" style={{ width: '100%', height: '340px', overflow: 'hidden' }}>
                       <img
                         src={getAssetPath('/img/Mask%20Group%20112.png')}
                         alt="AI Robot"
@@ -559,7 +559,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     </div>
 
                     {/* Content */}
-                    <div style={{ padding: '20px 24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ padding: '16px 20px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       {/* Tag */}
                       <span
                         className="insights-tag"
@@ -568,15 +568,15 @@ const Insights = ({ showHero = false, showContent = true }) => {
                           alignItems: 'center',
                           justifyContent: 'center',
                           alignSelf: 'flex-start',
-                          width: '206px',
-                          height: '50px',
+                          width: '190px',
+                          height: '44px',
                           background: '#E87444',
                           borderRadius: '20px',
                           fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '18px',
+                          fontSize: '16px',
                           fontWeight: 500,
                           color: '#FFFFFF',
-                          marginBottom: '12px',
+                          marginBottom: '10px',
                           marginTop: '4px',
                         }}
                       >
@@ -587,7 +587,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                       <h3
                         style={{
                           fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '28px',
+                          fontSize: '25px',
                           fontWeight: 600,
                           lineHeight: '1.3',
                           color: '#393939',
@@ -601,14 +601,14 @@ const Insights = ({ showHero = false, showContent = true }) => {
                       {/* Button */}
                       <button
                         style={{
-                          width: '188px',
-                          height: '48px',
+                          width: '172px',
+                          height: '44px',
                           padding: '0 16px',
                           background: 'transparent',
                           border: '1px solid #0F1114',
                           borderRadius: '8px',
                           fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '14px',
+                          fontSize: '13px',
                           fontWeight: 500,
                           color: '#0F1114',
                           cursor: 'pointer',
@@ -643,7 +643,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     }}
                   >
                     {/* Image */}
-                    <div className="insights-card-img" style={{ width: '100%', height: '320px', overflow: 'hidden' }}>
+                    <div className="insights-card-img" style={{ width: '100%', height: '340px', overflow: 'hidden' }}>
                       <img
                         src={getAssetPath('/img/Mask%20Group%2098.png')}
                         alt="Digital Interface"
@@ -657,7 +657,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     </div>
 
                     {/* Content */}
-                    <div style={{ padding: '20px 24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ padding: '16px 20px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       {/* Tag */}
                       <span
                         className="insights-tag"
@@ -666,15 +666,15 @@ const Insights = ({ showHero = false, showContent = true }) => {
                           alignItems: 'center',
                           justifyContent: 'center',
                           alignSelf: 'flex-start',
-                          width: '206px',
-                          height: '50px',
+                          width: '190px',
+                          height: '44px',
                           background: '#D02C2F',
                           borderRadius: '20px',
                           fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '18px',
+                          fontSize: '16px',
                           fontWeight: 500,
                           color: '#FFFFFF',
-                          marginBottom: '12px',
+                          marginBottom: '10px',
                           marginTop: '4px',
                         }}
                       >
@@ -771,7 +771,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     <h3
                       style={{
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '26px',
+                        fontSize: '24px',
                         fontWeight: 600,
                         lineHeight: '1.3',
                         color: '#393939',
@@ -810,13 +810,13 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     />
                     <button
                       style={{
-                        height: '48px',
+                          height: '44px',
                         padding: '0 16px',
                         background: 'transparent',
                         border: '1px solid #0F1114',
                         borderRadius: '8px',
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '14px',
+                          fontSize: '13px',
                         fontWeight: 500,
                         color: '#0F1114',
                         cursor: 'pointer',
