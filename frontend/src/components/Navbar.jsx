@@ -30,6 +30,10 @@ import insightsLive1 from '../assets/card grid/insights/skillzza-live 1.png';
 import insightsLive2 from '../assets/card grid/insights/skillzza-live 2.jpg.jpeg';
 import insightsTalent1 from '../assets/card grid/insights/-talent-research 1.png';
 import insightsTalent2 from '../assets/card grid/insights/-talent-research2.jpg.jpeg';
+import insightsBlueprint1 from '../assets/card grid/insights/From Scores to Skills blue.webp';
+import insightsBlueprint2 from '../assets/card grid/insights/AI-Powered Reskilling Initiatives blue.jpg.jpeg';
+import insightsDigest1 from '../assets/card grid/insights/digest 1.webp';
+import insightsDigest2 from '../assets/card grid/insights/digest 2.jpg.jpeg';
 
 /* ═══════════════════════════════════════════════════════════════
    NAV DATA - enriched with gradient icons, descriptions, pills
@@ -238,8 +242,8 @@ const navItems = [
         iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)',
         iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
         sideImages: [
-          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-          'https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          insightsBlueprint1,
+          insightsBlueprint2,
         ],
       },
       {
@@ -249,8 +253,8 @@ const navItems = [
         iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)',
         iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
         sideImages: [
-          'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-          'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          insightsDigest1,
+          insightsDigest2,
         ],
       },
       {
@@ -276,7 +280,7 @@ const navItems = [
         ],
       },
       {
-        name: 'Skillzza Live - Knowledge in Action',
+        name: 'Skillzza Live',
         link: '/insights/skillzza-live',
         desc: 'Interactive sessions bringing learning to life',
         iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)',
@@ -832,11 +836,23 @@ const ImageCardGridDropdown = ({ navItem, onComingSoon }) => (
     {navItem.eyebrow ? (
       <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} gradient={navItem.accentGradient} />
     ) : null}
+    <style>{`
+      @keyframes szCardRise {
+        0% { opacity: 0; transform: translateY(12px) scale(0.98); }
+        100% { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      @keyframes szInfoReveal {
+        0% { opacity: 0; transform: translateY(14px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+    `}</style>
     <div
       style={{
+        width: '90%',
+        margin: '0 auto',
         display: 'grid',
-        gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
-        gap: 14,
+        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+        gap: 16,
       }}
     >
       {navItem.items.map((item, i) => (
@@ -851,109 +867,103 @@ const ImageCardItem = ({ item, index, onComingSoon }) => {
   const isExternal = item.link?.startsWith('http');
 
   return (
-    <a
-      href={item.link ? (isExternal ? item.link : getRoutePath(item.link)) : undefined}
-      target={isExternal ? '_blank' : undefined}
-      rel={isExternal ? 'noopener noreferrer' : undefined}
-      onClick={!item.link ? (e) => {
-        e.preventDefault();
-        onComingSoon?.(item.titleLines?.join(' ') || 'School of Technology');
-      } : undefined}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        position: 'relative',
-        height: 165,
-        borderRadius: 16,
-        overflow: 'hidden',
-        cursor: item.link ? 'pointer' : 'default',
-        textDecoration: 'none',
-        transition: 'all 0.32s cubic-bezier(0.34,1.2,0.64,1)',
-        transform: hovered ? 'translateY(-5px) scale(1.01)' : 'translateY(0) scale(1)',
-        boxShadow: hovered
-          ? '0 18px 30px rgba(15, 23, 42, 0.18)'
-          : '0 10px 24px rgba(15, 23, 42, 0.12)',
-      }}
-    >
-      <div
+      <a
+        href={item.link ? (isExternal ? item.link : getRoutePath(item.link)) : undefined}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : undefined}
+        onClick={!item.link ? (e) => {
+          e.preventDefault();
+          onComingSoon?.(item.titleLines?.join(' ') || 'School of Technology');
+        } : undefined}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
         style={{
-          position: 'absolute',
-          inset: 0,
-          background: `url(${item.image}) center / cover no-repeat`,
-          imageRendering: 'auto',
-          transform: 'none',
-          transition: 'none',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: hovered
-            ? 'linear-gradient(180deg, rgba(15,23,42,0.02) 0%, rgba(15,23,42,0.25) 75%, rgba(15,23,42,0.45) 100%)'
-            : 'linear-gradient(180deg, rgba(15,23,42,0.01) 0%, rgba(15,23,42,0.18) 75%, rgba(15,23,42,0.4) 100%)',
-          transition: 'background 0.35s ease',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          padding: 12,
-          display: 'flex',
-          alignItems: 'flex-end',
+          position: 'relative',
+          borderRadius: 18,
+          overflow: 'hidden',
+          cursor: item.link ? 'pointer' : 'default',
+          textDecoration: 'none',
+          background: '#ffffff',
+          transition: 'all 0.32s cubic-bezier(0.34,1.2,0.64,1)',
+          transform: hovered ? 'translateY(-6px) scale(1.01)' : 'translateY(0) scale(1)',
+          boxShadow: hovered
+            ? '0 18px 32px rgba(15, 23, 42, 0.18)'
+            : '0 10px 24px rgba(15, 23, 42, 0.12)',
+          animation: 'szCardRise 520ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
+          animationDelay: `${index * 80}ms`,
+          opacity: 0,
+          border: '1px solid rgba(15, 23, 42, 0.06)',
         }}
       >
         <div
           style={{
-            width: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 12,
-            padding: '10px 12px',
-            borderRadius: 12,
-            background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.78))',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            boxShadow: '0 6px 16px rgba(15, 23, 42, 0.18)',
+            position: 'relative',
+            height: 155,
+            overflow: 'hidden',
           }}
         >
+          <img
+            src={item.image}
+            alt={item.titleLines?.join(' ') || 'School of Technology'}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: '50% 35%',
+              transform: hovered ? 'scale(1.03)' : 'scale(1)',
+              transition: 'transform 520ms cubic-bezier(0.22, 1, 0.36, 1)',
+            }}
+          />
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: 10,
+            padding: '10px 12px',
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,250,252,0.96))',
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 12.5,
+              fontWeight: 700,
+              color: '#0f172a',
+              lineHeight: 1.2,
+              letterSpacing: 0.1,
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              maxWidth: '100%',
+            }}
+          >
+            {item.titleLines?.join(' ')}
+          </div>
           <span
             style={{
-              width: 32,
-              height: 32,
+              width: 26,
+              height: 26,
               borderRadius: '50%',
-              background: '#ffffff',
+              background: hovered
+                ? 'linear-gradient(135deg,#BD1723,#8947B3)'
+                : 'linear-gradient(135deg,#cbd5f5,#e2e8f0)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: '#0f172a',
-              fontSize: 15,
+              color: hovered ? '#ffffff' : '#475569',
+              fontSize: 12,
               fontWeight: 800,
               flexShrink: 0,
+              boxShadow: hovered ? '0 8px 18px rgba(137,71,179,0.25)' : 'none',
+              transition: 'all 280ms ease',
             }}
           >
             ➜
           </span>
-          <div
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 14.5,
-              fontWeight: 600,
-              color: '#ffffff',
-              lineHeight: 1.28,
-              letterSpacing: 0.1,
-              textShadow: '0 2px 8px rgba(0,0,0,0.35)',
-            }}
-          >
-            {item.titleLines?.map((line, idx) => (
-              <div key={`${line}-${idx}`}>{line}</div>
-            ))}
-          </div>
         </div>
-      </div>
-    </a>
+      </a>
   );
 };
 

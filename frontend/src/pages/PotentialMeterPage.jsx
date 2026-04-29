@@ -336,7 +336,7 @@ export default function PotentialMeterPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
-          className="max-w-[1200px] w-full flex flex-col items-center"
+          className="max-w-[1120px] w-full flex flex-col items-center"
         >
           
           <div className="text-center mb-6 max-w-[800px]">
@@ -348,10 +348,10 @@ export default function PotentialMeterPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
             
             {/* Card 1: Students */}
-            <div className="bg-[#FAFBFD] p-8 md:p-10 rounded-2xl border border-transparent hover:bg-white hover:border-gray-100 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
+            <div className="bg-[#FAFBFD] p-6 md:p-7 rounded-2xl border border-transparent hover:bg-white hover:border-gray-100 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] mb-3 group-hover:text-[#2563eb] transition-colors">
                 Students
               </h3>
@@ -361,7 +361,7 @@ export default function PotentialMeterPage() {
             </div>
 
             {/* Card 2: Professionals */}
-            <div className="bg-[#FAFBFD] p-8 md:p-10 rounded-2xl border border-transparent hover:bg-white hover:border-gray-100 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
+            <div className="bg-[#FAFBFD] p-6 md:p-7 rounded-2xl border border-transparent hover:bg-white hover:border-gray-100 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] mb-3 group-hover:text-[#2563eb] transition-colors">
                 Professionals
               </h3>
@@ -371,7 +371,7 @@ export default function PotentialMeterPage() {
             </div>
 
             {/* Card 3: Institutions */}
-            <div className="bg-[#FAFBFD] p-8 md:p-10 rounded-2xl border border-transparent hover:bg-white hover:border-gray-100 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
+            <div className="bg-[#FAFBFD] p-6 md:p-7 rounded-2xl border border-transparent hover:bg-white hover:border-gray-100 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] mb-3 group-hover:text-[#2563eb] transition-colors">
                 Institutions
               </h3>
@@ -381,7 +381,7 @@ export default function PotentialMeterPage() {
             </div>
 
             {/* Card 4: Employers */}
-            <div className="bg-[#FAFBFD] p-8 md:p-10 rounded-2xl border border-transparent hover:bg-white hover:border-gray-100 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
+            <div className="bg-[#FAFBFD] p-6 md:p-7 rounded-2xl border border-transparent hover:bg-white hover:border-gray-100 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] mb-3 group-hover:text-[#2563eb] transition-colors">
                 Employers
               </h3>
@@ -401,7 +401,7 @@ export default function PotentialMeterPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10 md:mb-6 relative z-20"
+          className="text-center mb-6 md:mb-0 relative z-20"
         >
           <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#3C3C3C] text-[36px] md:text-[48px] tracking-[-1px]">
             What We Measure
@@ -413,10 +413,10 @@ export default function PotentialMeterPage() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8 }}
-          className="relative w-full flex items-center min-h-[750px]"
+          className="relative w-full flex items-center min-h-[620px]"
         >
           {/* Background Image Container sticking to the right edge */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[65%] max-w-[1144px] h-[705px] hidden md:flex justify-end opacity-20 md:opacity-100">
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[62%] max-w-[980px] h-[560px] hidden md:flex justify-end opacity-20 md:opacity-100">
              <img 
                src={measureImg} 
                alt="What we measure at Skillzza" 
@@ -425,44 +425,44 @@ export default function PotentialMeterPage() {
           </div>
 
           <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 md:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full lg:w-[60%]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 w-full lg:w-[58%]">
               
               {/* Card 1 */}
-              <div className="bg-[#FC962A] p-6 md:p-8 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
-                <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[20px] md:text-[22px] mb-3">
+              <div className="bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
+                <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[18px] md:text-[20px] mb-2">
                   AI-Based Skill Assessment
                 </h3>
-                <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
+                <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[15px] md:text-[clamp(14px,1.2vw,18px)] leading-[1.55]">
                   Applied, task-level technical<br className="hidden lg:block"/>competence
                 </p>
               </div>
 
               {/* Card 2 */}
-              <div className="bg-[#FC962A] p-6 md:p-8 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
-                <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[20px] md:text-[22px] mb-3">
+              <div className="bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
+                <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[18px] md:text-[20px] mb-2">
                   Cognitive & Behavioral<br/>Intelligence
                 </h3>
-                <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
+                <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[15px] md:text-[clamp(14px,1.2vw,18px)] leading-[1.55]">
                   Problem-solving, adaptability,<br className="hidden lg:block"/>communication
                 </p>
               </div>
 
                {/* Card 3 */}
-              <div className="bg-[#FC962A] p-6 md:p-8 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
-                <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[20px] md:text-[22px] mb-3">
+              <div className="bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
+                <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[18px] md:text-[20px] mb-2">
                   Career Readiness & Role Fit
                 </h3>
-                <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
+                <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[15px] md:text-[clamp(14px,1.2vw,18px)] leading-[1.55]">
                   Alignment with real-world job<br className="hidden lg:block"/>requirements
                 </p>
               </div>
 
                {/* Card 4 */}
-              <div className="bg-[#FC962A] p-6 md:p-8 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
-                <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[20px] md:text-[22px] mb-3">
+              <div className="bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
+                <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[18px] md:text-[20px] mb-2">
                   Soft Skills &<br/>Professional Maturity
                 </h3>
-                <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
+                <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[15px] md:text-[clamp(14px,1.2vw,18px)] leading-[1.55]">
                   Workplace effectiveness and<br className="hidden lg:block"/>growth readiness
                 </p>
               </div>
@@ -535,7 +535,7 @@ export default function PotentialMeterPage() {
                     {/* Step Card with accordion hover */}
                     <div
                       className="flex-1 w-full rounded-lg transition-all duration-300 flex flex-col justify-center text-left py-4 px-6 lg:px-8 bg-[#C9DBFF] hover:bg-[#F4F7FA] border border-transparent hover:border-gray-200"
-                      style={{ minHeight: '80px' }}
+                      style={{ minHeight: '68px' }}
                     >
                       <h3
                         className="font-['DM_Sans',sans-serif] font-semibold text-[18px] md:text-[20px] transition-colors text-[#245CE2]"
