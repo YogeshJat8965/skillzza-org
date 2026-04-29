@@ -7,7 +7,7 @@ import Insights from '../components/Insights';
 const ExecutiveSummaryContent = () => (
  <div className="prose max-w-none font-['DM_Sans',sans-serif] text-gray-700">
  <h2 className="text-2xl font-bold mb-4 font-['League_Spartan',sans-serif] text-gray-900">Executive Summary</h2>
- <p className="mb-4">The AI talent market in 2025 represents one of the most dynamic and high-stakes sectors in technology recruitment. AI professionals command a median salary of $160,000 annually, with specialized skills adding 25-45% premiums on top of base compensation, while professionals with AI skills earn 21% more than their peers in similar roles without those skills.</p>
+ <p className="mb-4">The AI talent market in 2026 represents one of the most dynamic and high-stakes sectors in technology recruitment. AI professionals command a median salary of $160,000 annually, with specialized skills adding 25-45% premiums on top of base compensation, while professionals with AI skills earn 21% more than their peers in similar roles without those skills.</p>
  <p className="mb-6">The landscape is characterized by unprecedented demand, significant wage premiums, and a clear bifurcation between entry-level opportunities and senior expert positions. Organizations are grappling with talent scarcity while professionals are navigating rapidly evolving skill requirements and career pathways.</p>
  
  <h3 className="text-xl font-bold mb-3 font-['League_Spartan',sans-serif] text-gray-900">Key Findings at a Glance:</h3>
@@ -23,7 +23,7 @@ const ExecutiveSummaryContent = () => (
 const GlobalCompensationContent = () => (
  <div className="prose max-w-none font-['DM_Sans',sans-serif] text-gray-700">
  <h2 className="text-2xl font-bold mb-4 font-['League_Spartan',sans-serif] text-gray-900">Global Compensation Landscape</h2>
- <p className="mb-4">The AI talent market in 2025 exhibits significant stratification across experience levels, specializations, and geographic regions.</p>
+ <p className="mb-4">The AI talent market in 2026 exhibits significant stratification across experience levels, specializations, and geographic regions.</p>
  
  <h3 className="text-xl font-bold mt-6 mb-3 font-['League_Spartan',sans-serif] text-gray-900">Base Salary Ranges by Experience Level</h3>
  <div className="overflow-x-auto mb-6">
@@ -154,7 +154,7 @@ const FutureOutlookContent = () => (
  <h3 className="text-xl font-bold mt-6 mb-3 font-['League_Spartan',sans-serif] text-gray-900">Strategic Recommendations</h3>
  <p className="mb-4"><strong>For Organizations:</strong> Build AI academies, develop competitive compensation strategies, and create flexible work arrangements.</p>
  <p className="mb-4"><strong>For Professionals:</strong> Focus on end-to-end skills, develop business acumen, and build strong technical networks.</p>
- <p className="mb-6"><strong>Conclusion:</strong> The AI talent market in 2025 offers tremendous opportunities. Success requires more than just compensation; it demands environments where exceptional professionals can contribute to responsible AI development that benefits society.</p>
+ <p className="mb-6"><strong>Conclusion:</strong> The AI talent market in 2026 offers tremendous opportunities. Success requires more than just compensation; it demands environments where exceptional professionals can contribute to responsible AI development that benefits society.</p>
  </div>
 );
 

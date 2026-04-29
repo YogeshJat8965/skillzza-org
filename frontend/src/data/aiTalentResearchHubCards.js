@@ -3,7 +3,7 @@ export const aiTalentResearchHubCards = [
     id: 1,
     tag: "RESEARCH HUB",
     title: "Executive Summary",
-    desc: "The AI talent market in 2025 represents one of the most dynamic sectors. Professionals command median salaries of $160,000 annually.",
+    desc: "The AI talent market in 2026 represents one of the most dynamic sectors. Professionals command median salaries of $160,000 annually.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     slug: "executive-summary"
   },

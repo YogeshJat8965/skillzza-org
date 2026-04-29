@@ -45,7 +45,7 @@ const AITalentResearchHub = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
               <div>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  The AI talent market in 2025 represents one of the most dynamic and high-stakes sectors in technology recruitment. AI professionals command a median salary of <strong>$160,000 annually</strong>, with specialized skills adding <strong>25-45% premiums</strong> on top of base compensation.
+                  The AI talent market in 2026 represents one of the most dynamic and high-stakes sectors in technology recruitment. AI professionals command a median salary of <strong>$160,000 annually</strong>, with specialized skills adding <strong>25-45% premiums</strong> on top of base compensation.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-6">
                   The landscape is characterized by unprecedented demand, significant wage premiums, and a clear bifurcation between entry-level opportunities and senior expert positions. Organizations are grappling with talent scarcity while professionals are navigating rapidly evolving skill requirements.
@@ -106,7 +106,7 @@ const AITalentResearchHub = () => {
             <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Overall Market Overview</h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                The AI talent market in 2025 exhibits significant stratification across experience levels, specializations, and geographic regions. The compensation structure reflects both the scarcity of qualified professionals and the transformative business impact of AI capabilities.
+                The AI talent market in 2026 exhibits significant stratification across experience levels, specializations, and geographic regions. The compensation structure reflects both the scarcity of qualified professionals and the transformative business impact of AI capabilities.
               </p>
             </div>
 
@@ -1811,7 +1811,7 @@ const AITalentResearchHub = () => {
             
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                The AI talent market in 2025 represents both unprecedented opportunity and significant challenges. Organizations that successfully navigate talent acquisition, development, and retention will gain substantial competitive advantages. For professionals, the market offers exceptional financial rewards for those who develop the right combination of technical skills, business acumen, and ethical awareness.
+                The AI talent market in 2026 represents both unprecedented opportunity and significant challenges. Organizations that successfully navigate talent acquisition, development, and retention will gain substantial competitive advantages. For professionals, the market offers exceptional financial rewards for those who develop the right combination of technical skills, business acumen, and ethical awareness.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 The key to success lies in understanding that AI talent management is not just about compensation-it's about creating environments where exceptional professionals can do their best work while contributing to responsible AI development that benefits society as a whole.

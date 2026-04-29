@@ -185,70 +185,70 @@ const Insights = ({ showHero = false, showContent = true }) => {
           }
           .insights-card-lg {
             width: clamp(260px, 25vw, 340px) !important;
-            height: clamp(420px, 33vw, 500px) !important;
+            height: auto !important;
           }
           .insights-card-md {
             flex: 1;
             width: 100% !important; /* Reset inline width */
-            height: clamp(300px, 24vw, 380px) !important;
+            height: auto !important;
           }
           .insights-card-lg .insights-card-img {
-            height: 200px !important;
+            height: 260px !important;
           }
           .insights-card-md .insights-card-img {
-            height: 170px !important;
+            height: 210px !important;
           }
           .insights-card-lg > div:last-child,
           .insights-card-md > div:last-child {
-            padding: 16px 20px !important;
+            padding: 12px 16px !important;
           }
           .insights-card-lg .insights-card-icon {
-            margin-top: 16px !important;
-            margin-bottom: 24px !important;
+            margin-top: 4px !important;
+            margin-bottom: 8px !important;
           }
           .insights-card-lg .insights-card-icon img {
-            width: 44px !important;
-            height: 44px !important;
+            width: 36px !important;
+            height: 36px !important;
           }
           .insights-card-md .insights-tag {
             width: auto !important;
-            height: 38px !important;
-            padding: 0 16px !important;
-            font-size: 13px !important;
-            margin-top: 8px !important;
-            margin-bottom: 12px !important;
+            height: 32px !important;
+            padding: 0 14px !important;
+            font-size: 12px !important;
+            margin-top: 4px !important;
+            margin-bottom: 8px !important;
           }
           .insights-card-lg h3 {
-            font-size: 24px !important;
+            font-size: 14px !important;
             line-height: 1.3 !important;
             padding-bottom: 16px !important;
           }
           .insights-card-md h3 {
-            font-size: 22px !important;
+            font-size: 14px !important;
             line-height: 1.25 !important;
-            padding-bottom: 14px !important;
+            padding-bottom: 10px !important;
           }
           .insights-podcast {
             width: 100% !important;
             height: auto !important;
-            min-height: 230px;
+            min-height: auto;
             margin-top: 0px !important;
             padding: 22px 24px !important;
             gap: 20px !important;
           }
           .insights-podcast .insights-tag {
             width: auto !important;
-            height: 38px !important;
-            padding: 0 18px !important;
-            font-size: 14px !important;
-            margin-bottom: 18px !important;
+            height: 34px !important;
+            padding: 0 16px !important;
+            font-size: 13px !important;
+            margin-bottom: 10px !important;
           }
           .insights-podcast h3 {
-            font-size: 24px !important;
+            font-size: 14px !important;
             line-height: 1.25 !important;
           }
           .insights-podcast p {
-            font-size: 16px !important;
+            font-size: 14px !important;
             line-height: 1.55 !important;
           }
           .insights-podcast .insights-podcast-right img {
@@ -291,8 +291,8 @@ const Insights = ({ showHero = false, showContent = true }) => {
             height: 36px !important;
           }
           .insights-card-lg .insights-card-icon {
-            margin-bottom: 12px !important;
-            margin-top: 8px !important;
+            margin-bottom: 8px !important;
+            margin-top: 4px !important;
           }
           .insights-card-lg h3 {
             font-size: 18px !important;
@@ -335,7 +335,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
             gap: 20px !important;
           }
           .insights-podcast .insights-tag {
-            margin-bottom: 20px !important;
+            margin-bottom: 10px !important;
           }
           .insights-podcast h3 {
             font-size: 20px !important;
@@ -469,7 +469,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                   {/* Content */}
                   <div style={{ padding: '22px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                     {/* Icon */}
-                    <div className="insights-card-icon" style={{ marginBottom: '16px', marginTop: '16px' }}>
+                    <div className="insights-card-icon" style={{ marginBottom: '8px', marginTop: '8px' }}>
                       <img
                         src={getAssetPath('/img/Group%2034192.svg')}
                         alt="Icon"
@@ -484,7 +484,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     <h3
                       style={{
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '24px',
+                        fontSize: '14px',
                         fontWeight: 600,
                         lineHeight: '1.4',
                         color: '#393939',
@@ -545,7 +545,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     }}
                   >
                     {/* Image */}
-                    <div className="insights-card-img" style={{ width: '100%', height: '340px', overflow: 'hidden' }}>
+                    <div className="insights-card-img" style={{ width: '100%', height: '210px', overflow: 'hidden' }}>
                       <img
                         src={getAssetPath('/img/Mask%20Group%20112.png')}
                         alt="AI Robot"
@@ -587,7 +587,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                       <h3
                         style={{
                           fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '25px',
+                          fontSize: '14px',
                           fontWeight: 600,
                           lineHeight: '1.3',
                           color: '#393939',
@@ -643,7 +643,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     }}
                   >
                     {/* Image */}
-                    <div className="insights-card-img" style={{ width: '100%', height: '340px', overflow: 'hidden' }}>
+                    <div className="insights-card-img" style={{ width: '100%', height: '210px', overflow: 'hidden' }}>
                       <img
                         src={getAssetPath('/img/Mask%20Group%2098.png')}
                         alt="Digital Interface"
@@ -685,7 +685,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                       <h3
                         style={{
                           fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '26px',
+                          fontSize: '14px',
                           fontWeight: 600,
                           lineHeight: '1.3',
                           color: '#393939',
@@ -738,7 +738,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     marginTop: '-22px', /* Adjust closer or further if needed, eg. -18px */
                     background: '#B6DFF5',
                     borderRadius: '12px',
-                    padding: '36px 40px',
+                    padding: '28px 32px',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '40px',
@@ -754,14 +754,14 @@ const Insights = ({ showHero = false, showContent = true }) => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         width: '206px',
-                        height: '50px',
+                        height: '40px',
                         background: '#4A9FD8',
                         borderRadius: '20px',
                         fontFamily: "'DM Sans', sans-serif",
                         fontSize: '18px',
                         fontWeight: 500,
                         color: '#FFFFFF',
-                        marginBottom: '50px',
+                        marginBottom: '12px',
                       }}
                     >
                       Podcast
@@ -771,11 +771,11 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     <h3
                       style={{
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '24px',
+                        fontSize: '14px',
                         fontWeight: 600,
                         lineHeight: '1.3',
                         color: '#393939',
-                        marginBottom: '16px',
+                        marginBottom: '8px',
                       }}
                     >
                       Skills DECODED:<br />
@@ -786,7 +786,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     <p
                       style={{
                         fontFamily: "'Lato', sans-serif",
-                        fontSize: '20px',
+                        fontSize: '16px',
                         fontWeight: 400,
                         lineHeight: '1.7',
                         color: '#393939',

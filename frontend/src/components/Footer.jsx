@@ -18,8 +18,18 @@ const footerSections = [
       { name: 'Talent Transformation', href: '/product/talent-intelligence' },
       { name: 'AI Hacknex', href: '/product/ai-hacknex' },
       { name: 'Hirenest', href: '/product/hirenest' },
-      { name: 'Agentic AI', href: '/product/ai-hacknex' },
       { name: 'Skill Persona', href: '/product/ai-hacknex' },
+    ],
+  },
+  {
+    title: 'Vedya K-12',
+    links: [
+      { name: 'Vidya AI Virtual Internship', href: 'https://cognifyai.skillzza.com/' },
+      { name: 'Skill Studio for Students', href: 'https://skillzza-club.vercel.app/' },
+      { name: 'Teacher AI Upskill Lab', href: 'https://cognifyai.skillzza.com/for-tutor.html' },
+      { name: 'CCMM - AI Maturity for Schools', href: 'https://cognifyai.skillzza.com/for-tutor.html' },
+      { name: 'Campus Connect - K12', href: 'https://cognifyai.skillzza.com/#' },
+      { name: 'Future Founders Track', href: 'https://cognifyai.skillzza.com/#' },
     ],
   },
   // {
@@ -44,6 +54,8 @@ const footerSections = [
     title: 'Explore',
     links: [
       { name: 'Job Simulations', href: '/explore/job-simulations' },
+      { name: 'Agentic AI', href: '/product/ai-hacknex' },
+      { name: 'Playground', href: '#' },
       // { name: 'Explore Domains', href: '/explore/domains' },
       // { name: 'Career Trajectory', href: '/explore/career-trajectory' },
       // { name: 'Skillzza Persona', href: '/explore/skillzza-persona' },
@@ -157,7 +169,7 @@ const Footer = () => {
           {/* ── RIGHT: 6 link columns ── */}
           <div className="footer-links-grid" style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(5, 1fr)',
+            gridTemplateColumns: 'repeat(6, 1fr)',
             columnGap: 24,
             rowGap: 0,
             alignItems: 'start',

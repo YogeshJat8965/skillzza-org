@@ -21,6 +21,15 @@ import sotAiImg from '../assets/card grid/School of Technology/school of Ai.png'
 import sotSustainImg from '../assets/card grid/School of Technology/gssca.jpeg';
 import sotDigitalImg from '../assets/card grid/School of Technology/Centre of Digital & Design Excellence.png';
 import sotAerialImg from '../assets/card grid/School of Technology/Institute of Aerial Intelligence.png';
+import companyRightImage from '../assets/card grid/company /image.png';
+import insightsAgentic1 from '../assets/card grid/insights/Agentic Workforce Index 2026 1.webp';
+import insightsAgentic2 from '../assets/card grid/insights/Agentic Workforce Index 2026 2.webp';
+import insightsPodcast1 from '../assets/card grid/insights/podcast 1.webp';
+import insightsPodcast2 from '../assets/card grid/insights/podcast 2.png';
+import insightsLive1 from '../assets/card grid/insights/skillzza-live 1.png';
+import insightsLive2 from '../assets/card grid/insights/skillzza-live 2.jpg.jpeg';
+import insightsTalent1 from '../assets/card grid/insights/-talent-research 1.png';
+import insightsTalent2 from '../assets/card grid/insights/-talent-research2.jpg.jpeg';
 
 /* ═══════════════════════════════════════════════════════════════
    NAV DATA - enriched with gradient icons, descriptions, pills
@@ -251,8 +260,8 @@ const navItems = [
         iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)',
         iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
         sideImages: [
-          'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80',
-          'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80',
+          insightsTalent1,
+          insightsTalent2,
         ],
       },
       {
@@ -262,9 +271,9 @@ const navItems = [
         iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)',
         iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
         sideImages: [
-          skillUnpluggedEpisodes[0]?.image,
-          skillUnpluggedEpisodes[1]?.image,
-        ].filter(Boolean),
+          insightsPodcast1,
+          insightsPodcast2,
+        ],
       },
       {
         name: 'Skillzza Live - Knowledge in Action',
@@ -273,22 +282,20 @@ const navItems = [
         iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)',
         iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
         sideImages: [
-          skillzzaLiveSessions[0]?.image,
-          skillzzaLiveSessions[1]?.image,
-        ].filter(Boolean),
+          insightsLive1,
+          insightsLive2,
+        ],
       },
       {
         name: 'Agentic Workforce Index 2026',
         link: null,
         desc: 'Annual report on AI agent adoption across industries',
-        pill: 'New',
-        pillColor: 'purple',
         iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)',
         iconShadow: '0 4px 12px rgba(189,23,35,0.12)',
         sideImages: [
-          aiTalentResearchHubCards[2]?.image,
-          aiTalentResearchHubCards[3]?.image,
-        ].filter(Boolean),
+          insightsAgentic1,
+          insightsAgentic2,
+        ],
       },
     ],
   },
@@ -957,15 +964,11 @@ const ImageCardItem = ({ item, index, onComingSoon }) => {
 const InsightsSplitDropdown = ({ navItem, onComingSoon }) => {
   const initialImages = navItem.items.find(item => (item.sideImages || []).length > 0)?.sideImages || [];
   const [activeImages, setActiveImages] = useState(initialImages);
-  const [activeDesc, setActiveDesc] = useState(navItem.items.find(item => item.desc)?.desc || '');
   const [animKey, setAnimKey] = useState(0);
 
   const handleHover = (item) => {
     if (item.sideImages && item.sideImages.length > 0) {
       setActiveImages(item.sideImages);
-    }
-    if (item.desc) {
-      setActiveDesc(item.desc);
     }
     setAnimKey((prev) => prev + 1);
   };
@@ -978,8 +981,8 @@ const InsightsSplitDropdown = ({ navItem, onComingSoon }) => {
           to { opacity: 1; transform: translateY(0) scale(1); }
         }
       `}</style>
-      <div style={{ display: 'flex', gap: 24, alignItems: 'stretch' }}>
-        <div style={{ flex: '1 1 56%', minWidth: 0 }}>
+      <div style={{ display: 'flex', gap: 0, alignItems: 'stretch' }}>
+        <div style={{ flex: '1 1 52%', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 0, paddingRight: 12 }}>
           {navItem.items.map((item, i) => (
             <InsightsRowItem
               key={item.name}
@@ -991,7 +994,7 @@ const InsightsSplitDropdown = ({ navItem, onComingSoon }) => {
             />
           ))}
         </div>
-        <div style={{ flex: '1 1 44%', display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <div style={{ flex: '1 1 48%', display: 'flex', flexDirection: 'column', gap: 14 }}>
           {(activeImages || []).slice(0, 2).map((src, idx) => (
             <div
               key={`${src}-${idx}-${animKey}`}
@@ -1009,34 +1012,10 @@ const InsightsSplitDropdown = ({ navItem, onComingSoon }) => {
               <img
                 src={src}
                 alt="Insights preview"
-                style={{ width: '100%', height: 150, objectFit: 'cover', display: 'block' }}
+                style={{ width: '100%', height: 190, objectFit: 'cover', display: 'block' }}
               />
             </div>
           ))}
-          {activeDesc ? (
-            <div
-              key={`${activeDesc}-${animKey}`}
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 12,
-                color: '#0f172a',
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: 0.6,
-                lineHeight: 1.4,
-                padding: '6px 10px',
-                borderRadius: 10,
-                background: 'linear-gradient(135deg, #f1f5f9, #eef2ff)',
-                border: '1px solid #e2e8f0',
-                opacity: 0,
-                transform: 'translateY(10px)',
-                animation: 'insightsFadeUp 380ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
-                animationDelay: '520ms',
-              }}
-            >
-              {activeDesc}
-            </div>
-          ) : null}
         </div>
       </div>
     </div>
@@ -1062,30 +1041,42 @@ const InsightsRowItem = ({ item, index, total, onComingSoon, onHover }) => {
       }}
       onMouseLeave={() => setHovered(false)}
       style={{
-        display: 'block',
+        padding: '12px 14px',
+        borderLeft: hovered ? '3px solid #BD1723' : '3px solid transparent',
+        background: hovered ? 'rgba(189,23,35,0.04)' : 'transparent',
+        cursor: 'pointer',
+        transition: 'all 0.25s ease',
+        borderRadius: '0 8px 8px 0',
         textDecoration: 'none',
-        padding: '12px 10px',
-        borderBottom: index === total - 1 ? 'none' : '1px solid #e7edf4',
-        borderRadius: 10,
-        background: hovered ? 'linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%)' : 'transparent',
-        boxShadow: hovered ? '0 6px 18px rgba(15, 23, 42, 0.08)' : 'none',
-        transform: hovered ? 'translateX(4px)' : 'translateX(0)',
-        transition: 'all 0.25s cubic-bezier(0.4,0,0.2,1)',
+        display: 'block',
       }}
     >
       <div
         style={{
           fontFamily: "'DM Sans', sans-serif",
-          fontSize: 14.5,
-          fontWeight: 600,
-          color: hovered ? '#BD1723' : '#1f2937',
-          transition: 'color 0.2s ease',
-          marginBottom: 6,
+          fontSize: 13.5,
+          fontWeight: 700,
+          color: hovered ? '#BD1723' : '#0f172a',
+          lineHeight: 1.3,
+          transition: 'color 0.25s ease',
         }}
       >
         {item.name}
       </div>
-      
+      {item.desc && (
+        <div style={{
+          fontSize: 11.5,
+          color: '#94a3b8',
+          marginTop: 2,
+          fontWeight: 400,
+          lineHeight: 1.3,
+        }}>
+          {item.desc}
+        </div>
+      )}
+      {item.pill && pillColors[item.pillColor] && (
+        <span style={{ alignSelf: 'flex-start', fontSize: 10, fontWeight: 600, padding: '2px 8px', borderRadius: 20, marginTop: 8, display: 'inline-block', ...pillColors[item.pillColor] }}>{item.pill}</span>
+      )}
     </a>
   );
 };
@@ -1474,12 +1465,11 @@ const CompanyMegaDropdown = ({ navItem }) => (
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: '1fr 1px 1fr',
+        gridTemplateColumns: 'minmax(0, 1.1fr) 1px minmax(0, 0.9fr)',
         gap: '24px',
       }}
     >
-      <div>
-        <Eyebrow text={navItem.companyEyebrow} dotColor={navItem.dotColor} gradient={navItem.accentGradient} />
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         <div
           style={{
             display: 'grid',
@@ -1487,26 +1477,35 @@ const CompanyMegaDropdown = ({ navItem }) => (
             gap: 12,
           }}
         >
-          {navItem.companyItems.map((item, i) => (
+          {(navItem.companyItems || []).map((item, i) => (
             <CompactItem key={item.name} item={item} index={i} />
           ))}
         </div>
+        {navItem.cta && (
+          <div style={{ marginTop: 'auto', paddingTop: '6px' }}>
+            <CtaBar cta={navItem.cta} accentGradient={navItem.accentGradient} />
+          </div>
+        )}
       </div>
 
       {/* Decorative Separator Line */}
       <div style={{ background: '#e2e8f0', width: '1px', alignSelf: 'stretch' }} />
 
-      <div>
-        <Eyebrow text={navItem.servicesEyebrow} dotColor={navItem.dotColor} gradient={navItem.accentGradient} />
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 10 }}>
-          {navItem.serviceItems.map((item, i) => (
+          {(navItem.serviceItems || []).map((item, i) => (
             <SvcCard key={item.name} item={item} index={i} />
           ))}
         </div>
+        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'flex-end', alignItems: 'center', paddingTop: '8px' }}>
+          <img 
+            src={companyRightImage} 
+            alt="Company" 
+            style={{ width: '100%', height: 'auto', borderRadius: '12px', objectFit: 'cover' }} 
+          />
+        </div>
       </div>
     </div>
-
-    {navItem.cta && <CtaBar cta={navItem.cta} accentGradient={navItem.accentGradient} />}
   </div>
 );
 
