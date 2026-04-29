@@ -1511,7 +1511,7 @@ const CompanyMegaDropdown = ({ navItem }) => (
           <img 
             src={companyRightImage} 
             alt="Company" 
-            style={{ width: '100%', height: 'auto', borderRadius: '12px', objectFit: 'cover' }} 
+            style={{ width: '92%', maxWidth: '360px', height: '285px', borderRadius: '12px', objectFit: 'cover' }} 
           />
         </div>
       </div>
