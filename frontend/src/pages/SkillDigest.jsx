@@ -17,7 +17,7 @@ const SkillDigest = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-white text-center mx-auto">
             <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
-              The Skillzz Digest
+              The Skillzza Digest
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
               Insights That Shape Tomorrow
@@ -221,7 +221,7 @@ const SkillDigest = () => {
               Never Miss an Insight
             </h2>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Subscribe to The Skillzz Digest and get the latest insights on AI, workforce transformation, and the future of talent development delivered to your inbox.
+              Subscribe to The Skillzza Digest and get the latest insights on AI, workforce transformation, and the future of talent development delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input

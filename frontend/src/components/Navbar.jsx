@@ -247,7 +247,7 @@ const navItems = [
         ],
       },
       {
-        name: 'The Skillzz Digest',
+        name: 'The Skillzza Digest',
         link: '/insights/skill-digest',
         desc: 'Insights, trends & game-changers shaping future skills',
         iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)',
