@@ -786,9 +786,12 @@ export default function PotentialMeterPage() {
             Skillzza Academy doesn't just teach skills<br />we build careers, capability, and confidence for the next decade.
           </p>
 
-          <button className="bg-[#2563eb] hover:bg-[#1d4ed8] transition-colors text-white font-['DM_Sans',sans-serif] font-semibold text-[15px] md:text-[16px] w-[260px] md:w-[320px] py-4 rounded-md mb-6 md:mb-8">
+          <Link 
+            to="/login"
+            className="flex items-center justify-center bg-[#2563eb] hover:bg-[#1d4ed8] transition-colors text-white font-['DM_Sans',sans-serif] font-semibold text-[15px] md:text-[16px] w-[260px] md:w-[320px] py-4 rounded-md mb-6 md:mb-8"
+          >
             Apply Now
-          </button>
+          </Link>
 
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 font-['DM_Sans',sans-serif] font-bold text-[13px] md:text-[15px] text-[#0F1114]">
             <span className="cursor-pointer hover:opacity-70 transition-opacity">Talk to an Academic Advisor</span>

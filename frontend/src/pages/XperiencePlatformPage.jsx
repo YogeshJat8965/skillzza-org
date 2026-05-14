@@ -1249,12 +1249,15 @@ function XperiencePlatformPage() {
                   </button>
 
                   {/* Explore Simulations Button */}
-                  <button
+                  <a
+                    href="https://portal.skillzza.com/internships"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hero-button px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 text-xs sm:text-sm lg:text-base font-semibold rounded-lg border-2 whitespace-nowrap"
-                    style={{ borderColor: '#71717A', color: '#71717A' }}
+                    style={{ borderColor: '#71717A', color: '#71717A', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                   >
                     Explore Simulations
-                  </button>
+                  </a>
 
                   {/* Book Demo Link */}
                   <button
@@ -1493,9 +1496,9 @@ function XperiencePlatformPage() {
                         className={`back-content relative z-10 text-white text-center ${flippedCards[index] ? '' : ''}`}
                         style={{
                           fontFamily: 'Lato, sans-serif',
-                          fontWeight: '400',
-                          fontSize: '15px',
-                          lineHeight: '1.5'
+                          fontWeight: '500',
+                          fontSize: '18px',
+                          lineHeight: '1.6'
                         }}
                       >
                         {card.content}
@@ -2017,12 +2020,15 @@ function XperiencePlatformPage() {
 
             {/* CTA Button */}
             <div className="works-cta flex justify-center mt-12 md:mt-16">
-              <button
+              <a
+                href="https://portal.skillzza.com/signup"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hero-button px-8 md:px-10 py-3 md:py-4 text-white text-base md:text-lg font-semibold rounded-lg shadow-lg"
-                style={{ backgroundColor: '#1F57C7' }}
+                style={{ backgroundColor: '#1F57C7', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
               >
                 Register for Free Internship
-              </button>
+              </a>
             </div>
           </div>
         </section>
@@ -2369,25 +2375,37 @@ function XperiencePlatformPage() {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-              <button
+              <a
+                href="https://portal.skillzza.com/internships"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cta-button px-10 py-4 text-white text-lg font-semibold rounded-lg shadow-lg hover:opacity-90 transition-all duration-300"
                 style={{
                   backgroundColor: '#1F57C7',
-                  minWidth: '230px'
+                  minWidth: '230px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
                 }}
               >
                 Explore Simulations
-              </button>
-              <button
+              </a>
+              <a
+                href="https://skillzza-org.vercel.app/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cta-button px-10 py-4 text-black text-lg font-semibold rounded-lg border-2 hover:bg-black hover:text-white transition-all duration-300"
                 style={{
                   borderColor: '#000000',
                   minWidth: '230px',
-                  backgroundColor: 'transparent'
+                  backgroundColor: 'transparent',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
                 }}
               >
                 Request a Demo
-              </button>
+              </a>
             </div>
           </div>
         </section>

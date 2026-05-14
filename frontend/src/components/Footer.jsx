@@ -85,12 +85,12 @@ const footerSections = [
 ];
 
 const socialLinks = [
-  { icon: <FaFacebookF />, label: 'Facebook', hover: '#1877f2' },
-  { icon: <FaLinkedinIn />, label: 'LinkedIn', hover: '#0a66c2' },
-  { icon: <FaInstagram />, label: 'Instagram', hover: '#e1306c' },
-  { icon: <PiXLogoBold />, label: 'Twitter', hover: '#000' },
-  { icon: <FaYoutube />, label: 'YouTube', hover: '#ff0000' },
-  { icon: <FaPinterest />, label: 'Pinterest', hover: '#e60023' },
+  { icon: <FaFacebookF />, label: 'Facebook', hover: '#1877f2', href: 'https://www.facebook.com/theskillzza' },
+  { icon: <FaLinkedinIn />, label: 'LinkedIn', hover: '#0a66c2', href: 'https://www.linkedin.com/company/theskillzza/?originalSubdomain=in' },
+  { icon: <FaInstagram />, label: 'Instagram', hover: '#e1306c', href: 'https://www.instagram.com/theskillzza/' },
+  { icon: <PiXLogoBold />, label: 'X', hover: '#000', href: 'https://x.com/TSkillzza' },
+  { icon: <FaYoutube />, label: 'YouTube', hover: '#ff0000', href: 'https://www.youtube.com/@theskillzza/featured' },
+  { icon: <FaPinterest />, label: 'Pinterest', hover: '#e60023', href: '#' },
 ];
 
 const Footer = () => {
@@ -213,8 +213,14 @@ const Footer = () => {
                           {link.name}
                         </span>
                       ) : (
+                        (() => {
+                          const isExternal = /^https?:\/\//.test(link.href);
+                          const href = isExternal ? link.href : getRoutePath(link.href);
+                          return (
                         <a
-                          href={getRoutePath(link.href)}
+                          href={href}
+                          target={isExternal ? '_blank' : undefined}
+                          rel={isExternal ? 'noopener noreferrer' : undefined}
                           style={{
                             fontSize: 12,
                             color: '#1a1a1a',
@@ -228,6 +234,8 @@ const Footer = () => {
                         >
                           {link.name}
                         </a>
+                          );
+                        })()
                       )}
                     </li>
                   ))}
@@ -250,8 +258,10 @@ const Footer = () => {
                 {socialLinks.map((s) => (
                   <a
                     key={s.label}
-                    href="#"
+                    href={s.href}
                     aria-label={s.label}
+                    target={s.href !== '#' ? '_blank' : undefined}
+                    rel={s.href !== '#' ? 'noopener noreferrer' : undefined}
                     style={{
                       fontSize: 28,
                       color: '#6b7280',

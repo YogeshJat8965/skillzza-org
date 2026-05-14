@@ -362,7 +362,7 @@ const SkillzzaPersona = () => {
           {/* Tab Content */}
           <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-sm">
             {activeHowTab === 0 && (
-              <div className="flex flex-col lg:flex-row gap-10 items-start">
+              <div className="flex flex-col lg:flex-row gap-10 items-center">
                 <div className="lg:w-1/2">
                   <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>AI-Driven Role Immersion</h3>
                   <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#374151', fontWeight: 500, marginBottom: '12px', lineHeight: '1.6' }}>
@@ -380,12 +380,12 @@ const SkillzzaPersona = () => {
                   </p>
                 </div>
                 <div className="lg:w-1/2">
-                  <img src={getAssetPath('/business-people-corporate-staff-meeting-with-envisional-graphic.jpg')} alt="AI Role Immersion" className="w-full h-72 object-cover rounded-xl shadow-md" />
+                  <img src={getAssetPath('/business-people-corporate-staff-meeting-with-envisional-graphic.jpg')} alt="AI Role Immersion" className="w-full h-72 object-cover object-center rounded-xl shadow-md" />
                 </div>
               </div>
             )}
             {activeHowTab === 1 && (
-              <div className="flex flex-col lg:flex-row gap-10 items-start">
+              <div className="flex flex-col lg:flex-row gap-10 items-center">
                 <div className="lg:w-1/2">
                   <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>Adaptive AI Intelligence</h3>
                   <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#374151', fontWeight: 500, marginBottom: '12px', lineHeight: '1.6' }}>
@@ -399,12 +399,12 @@ const SkillzzaPersona = () => {
                   </ul>
                 </div>
                 <div className="lg:w-1/2">
-                  <img src={adaptiveAiImg} alt="Adaptive AI" className="w-full h-72 object-cover rounded-xl shadow-md" />
+                  <img src={adaptiveAiImg} alt="Adaptive AI" className="w-full h-72 object-cover object-center rounded-xl shadow-md" />
                 </div>
               </div>
             )}
             {activeHowTab === 2 && (
-              <div className="flex flex-col lg:flex-row gap-10 items-start">
+              <div className="flex flex-col lg:flex-row gap-10 items-center">
                 <div className="lg:w-1/2">
                   <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>Behavioral Intelligence Tracking</h3>
                   <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#374151', fontWeight: 500, marginBottom: '12px', lineHeight: '1.6' }}>
@@ -418,12 +418,12 @@ const SkillzzaPersona = () => {
                   </ul>
                 </div>
                 <div className="lg:w-1/2">
-                  <img src={getAssetPath('/data_ai.jpg')} alt="Behavioral Tracking" className="w-full h-72 object-cover rounded-xl shadow-md" />
+                  <img src={getAssetPath('/data_ai.jpg')} alt="Behavioral Tracking" className="w-full h-72 object-cover object-center rounded-xl shadow-md" />
                 </div>
               </div>
             )}
             {activeHowTab === 3 && (
-              <div className="flex flex-col lg:flex-row gap-10 items-start">
+              <div className="flex flex-col lg:flex-row gap-10 items-center">
                 <div className="lg:w-1/2">
                   <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '24px', color: '#1F57C7', marginBottom: '16px' }}>Real-Time Coaching & Career Insights</h3>
                   <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#374151', fontWeight: 500, marginBottom: '12px', lineHeight: '1.6' }}>
@@ -437,7 +437,7 @@ const SkillzzaPersona = () => {
                   </ul>
                 </div>
                 <div className="lg:w-1/2">
-                  <img src={getAssetPath('/feedback_mentor.jpg')} alt="Real-Time Coaching" className="w-full h-72 object-cover rounded-xl shadow-md" />
+                  <img src={getAssetPath('/feedback_mentor.jpg')} alt="Real-Time Coaching" className="w-full h-72 object-cover object-center rounded-xl shadow-md" />
                 </div>
               </div>
             )}

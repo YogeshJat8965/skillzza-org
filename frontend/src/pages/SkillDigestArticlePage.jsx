@@ -181,8 +181,8 @@ function getReadTime(article) {
 const ArticleSection = ({ heading, paragraphs, index, accent }) => (
   <article className="digest-section-card" style={{ borderBottomColor: `${accent}30` }}>
     <div className="digest-section-head">
-      <span className="digest-section-index" style={{ backgroundColor: `${accent}1A`, color: accent }}>
-        {String(index + 1).padStart(2, '0')}
+      <span className="digest-section-index" style={{ backgroundColor: `${accent}1A`, color: accent, width: '28px', minWidth: '28px', height: '28px' }}>
+        <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: accent }}></span>
       </span>
       <h2>{heading}</h2>
     </div>
@@ -370,7 +370,7 @@ function SkillDigestArticlePage() {
               The Skill Digest
             </button>
             <span className="text-[#94A3B8]">/</span>
-            <span className="text-[#475569]">Article {article.number}</span>
+            <span className="text-[#475569]">Article</span>
           </div>
 
           <div
@@ -436,10 +436,10 @@ function SkillDigestArticlePage() {
                   {article.sections.map((section, index) => (
                     <div key={section.heading} className="flex items-start gap-3">
                       <span
-                        className="h-6 w-6 shrink-0 rounded-full inline-flex items-center justify-center text-[11px] font-bold mt-0.5"
+                        className="h-6 w-6 shrink-0 rounded-full inline-flex items-center justify-center mt-0.5"
                         style={{ backgroundColor: `${accent}1A`, color: accent }}
                       >
-                        {index + 1}
+                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: accent }}></span>
                       </span>
                       <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[1.5] text-[#334155]">{section.heading}</p>
                     </div>

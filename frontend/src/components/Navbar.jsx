@@ -322,14 +322,15 @@ const navItems = [
       { name: 'What We Do', link: '/company/what-we-do', desc: 'Products, programmes & impact', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
       { name: 'Our Pathway', link: '/company/pathway', desc: 'Roadmap for learners & partners', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
       { name: 'Partner Collaboration', link: '/company/partnerships', desc: 'Universities, enterprises, government & CSR partnerships', span: 2, iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
-      { name: 'Careers at Skillzza', link: '/contact-us', desc: 'Join the team building the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
+      { name: 'Careers at Skillzza', link: null, desc: 'Join the team building the future of skills', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
       { name: 'Press & Media', link: null, desc: 'News, features & brand resources', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
+      { name: 'Responsible AI', link: '/company/responsible-ai', desc: 'Our commitment to ethical AI', span: 2, iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
     ],
     serviceItems: [
-      { name: 'Institution Transformation', desc: 'Curriculum redesign & AI integration for universities.', link: '/company/partnerships' },
-      { name: 'Enterprise Skill Audit', desc: 'Workforce gap analysis & 90-day upskilling roadmap.', link: '/company/partnerships' },
-      { name: 'Govt & CSR Programmes', desc: 'National skill missions & youth employment schemes.', link: '/company/partnerships' },
-      { name: 'Talent Intelligence Reports', desc: 'Workforce analytics & sector skill signals.', link: '/company/partnerships' },
+      { name: 'Institution Transformation', desc: 'Curriculum redesign & AI integration for universities.', link: null },
+      { name: 'Enterprise Skill Audit', desc: 'Workforce gap analysis & 90-day upskilling roadmap.', link: null },
+      { name: 'Govt & CSR Programmes', desc: 'National skill missions & youth employment schemes.', link: null },
+      { name: 'Talent Intelligence Reports', desc: 'Workforce analytics & sector skill signals.', link: null },
     ],
   },
 ];
@@ -1492,7 +1493,7 @@ const CompanyMegaDropdown = ({ navItem }) => (
           ))}
         </div>
         {navItem.cta && (
-          <div style={{ marginTop: 'auto', paddingTop: '6px' }}>
+          <div style={{ paddingTop: '6px' }}>
             <CtaBar cta={navItem.cta} accentGradient={navItem.accentGradient} />
           </div>
         )}

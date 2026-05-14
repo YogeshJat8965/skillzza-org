@@ -778,7 +778,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                         marginBottom: '8px',
                       }}
                     >
-                      Skills DECODED:<br />
+                      Skills DECODED<br />
                       Conversations that matter.
                     </h3>
 

@@ -9,20 +9,31 @@ const Topbar = () => {
         {/* Left - Nav Links */}
         <div className="sz-topbar-links" style={{ display: "flex", alignItems: "center", gap: 20, flexWrap: "wrap" }}>
           {[
-            { label: "Interns", href: "#" },
-            { label: "K - 12", href: "https://cognify.skillzza.com" },
-            { label: "Universities", href: "https://portal.skillzza.com" },
-            { label: "Companies", href: "https://ciosherpacouncil.com" },
+            { label: "Interns", href: "https://portal.skillzza.com/" },
+            { label: "K - 12", href: "https://cognifyai.skillzza.com/" },
+            { label: "Universities", href: ""},
+            { label: "Companies", href: "" },
           ].map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              style={{ color: "#fff", textDecoration: "none", fontSize: 13, fontWeight: 500, letterSpacing: 0.2, opacity: 0.9, transition: "opacity 0.2s", whiteSpace: "nowrap" }}
-              onMouseEnter={e => e.target.style.opacity = 1}
-              onMouseLeave={e => e.target.style.opacity = 0.9}
-            >
-              {item.label}
-            </a>
+            item.href ? (
+              <a
+                key={item.label}
+                href={item.href}
+                target={/^https?:\/\//.test(item.href) ? "_blank" : undefined}
+                rel={/^https?:\/\//.test(item.href) ? "noopener noreferrer" : undefined}
+                style={{ color: "#fff", textDecoration: "none", fontSize: 13, fontWeight: 500, letterSpacing: 0.2, opacity: 0.9, transition: "opacity 0.2s", whiteSpace: "nowrap" }}
+                onMouseEnter={e => e.target.style.opacity = 1}
+                onMouseLeave={e => e.target.style.opacity = 0.9}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <span
+                key={item.label}
+                style={{ color: "#fff", fontSize: 13, fontWeight: 500, letterSpacing: 0.2, opacity: 0.9, whiteSpace: "nowrap", cursor: "default" }}
+              >
+                {item.label}
+              </span>
+            )
           ))}
         </div>
 

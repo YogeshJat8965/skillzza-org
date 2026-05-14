@@ -158,13 +158,13 @@ function PartnerCollaborationPage() {
 
         .collab-hero__title {
           margin: 0;
-          font-size: 38px;
+          font-size: clamp(42px, 6vw, 64px);
           font-family: 'DM Sans', sans-serif;
           font-weight: 900;
           line-height: 1.1;
           letter-spacing: -1px;
           color: #ffffff;
-          max-width: 520px;
+          max-width: 600px;
           text-shadow: 0 4px 24px rgba(0,0,0,0.35);
         }
 
