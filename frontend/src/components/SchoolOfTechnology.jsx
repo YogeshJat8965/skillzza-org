@@ -205,7 +205,7 @@ const SchoolOfTechnology = () => {
           }
         }
       `}</style>
-      <section className="w-full bg-white pt-0 pb-8 sm:pb-16 lg:pb-20">
+      <section id="school-of-technology" className="w-full bg-white pt-0 pb-8 sm:pb-16 lg:pb-20">
         <div className="sot-scale-shell">
           <div className="sot-scale-content">
             <div className="max-w-[1920px] mx-auto">

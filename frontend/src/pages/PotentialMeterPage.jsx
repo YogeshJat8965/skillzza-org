@@ -556,9 +556,14 @@ export default function PotentialMeterPage() {
 
               {/* Demo Video CTA */}
               <div className="mt-8 md:mt-10 md:pl-[112px] w-full">
-                <button className="w-full bg-[#1e4dbc] hover:bg-[#163a8f] transition-all duration-300 text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] py-4 rounded-md shadow-[0_8px_20px_rgba(30,77,188,0.2)]">
-                  See Platform Demo Video
-                </button>
+                <a 
+                  href="https://portal.skillzza.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full inline-block text-center bg-[#1e4dbc] hover:bg-[#163a8f] transition-all duration-300 text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] py-4 rounded-md shadow-[0_8px_20px_rgba(30,77,188,0.2)] no-underline"
+                >
+                  Take Demo
+                </a>
               </div>
 
             </div>

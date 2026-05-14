@@ -385,6 +385,7 @@ const SolutionSkillStudio = () => {
                             <button
                                 className="sss-cta transition-all duration-300 hover:opacity-90" onClick={() => {
                                     if (activeTab === 0) window.location.href = getRoutePath('/product/potential-meter');
+                                    if (activeTab === 1) window.location.href = getRoutePath('/product/xperience-platform');
                                     if (activeTab === 2) window.location.href = getRoutePath('/contact-us');
                                 }} style={{
                                     fontFamily: "'DM Sans', sans-serif",
@@ -403,6 +404,9 @@ const SolutionSkillStudio = () => {
                             </button>
                             <button
                                 className="sss-cta transition-all duration-300 hover:bg-purple-50"
+                                onClick={() => {
+                                    if (activeTab === 1) window.open('https://portal.skillzza.com/', '_blank');
+                                }}
                                 style={{
                                     fontFamily: "'DM Sans', sans-serif",
                                     fontSize: '15px',

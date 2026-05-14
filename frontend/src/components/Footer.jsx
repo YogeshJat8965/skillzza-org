@@ -45,7 +45,7 @@ const footerSections = [
     title: 'School of Technology',
     links: [
       { name: 'The School of Al & Quantum Intelligence', href: '#', disabled: true },
-      { name: 'Global School Of Sustainability & Climate Action', href: '/academy/sustainability' },
+      { name: 'Global School Of Sustainability & Climate Action', href: 'https://globalschoolofsustainability.com/' },
       { name: 'Centre Of Digital & Design Excellence', href: '#', disabled: true },
       { name: 'Udaan - Aerial Intelligence', href: '#', disabled: true },
     ],

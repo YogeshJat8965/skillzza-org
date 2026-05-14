@@ -327,7 +327,15 @@ const WelcomePopup = () => {
 
             {/* Secondary */}
             <a
-              href="/use-case/institutions"
+              href="#school-of-technology"
+              onClick={(e) => {
+                e.preventDefault();
+                dismiss();
+                setTimeout(() => {
+                  const el = document.getElementById('school-of-technology');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }, 360); // Wait for popup to close animation
+              }}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 5,
                 background: 'none',
