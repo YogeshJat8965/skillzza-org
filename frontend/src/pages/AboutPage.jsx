@@ -498,6 +498,113 @@ function AboutPage() {
           display: block;
           transition: none;
         }
+
+        /* ── Mobile-specific fixes (≤ 767px) ── */
+        @media (max-width: 767px) {
+          .about-banner__content {
+            padding: 36px 16px !important;
+          }
+
+          .about-banner__headline {
+            font-size: clamp(20px, 5.5vw, 26px) !important;
+            line-height: 1.25 !important;
+          }
+
+          .about-overview {
+            padding: 36px 16px 24px !important;
+          }
+
+          .about-overview__grid {
+            grid-template-columns: 1fr !important;
+            gap: 24px !important;
+          }
+
+          .about-overview__eyebrow {
+            font-size: 13px !important;
+          }
+
+          .about-overview__title,
+          .about-overview__body {
+            font-size: 14px !important;
+          }
+
+          .about-commitment {
+            padding: 24px 16px 40px !important;
+          }
+
+          .about-commitment__grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .about-commitment__image-wrapper {
+            width: 100% !important;
+            margin-right: 0 !important;
+            border-radius: 12px !important;
+            min-height: 200px !important;
+            order: -1;
+          }
+
+          .about-commitment__text {
+            max-width: 100% !important;
+            font-size: 14px !important;
+          }
+
+          .about-cta-strip {
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-top: 0 !important;
+            height: auto !important;
+            padding: 20px 16px !important;
+          }
+
+          .about-cta-strip__inner {
+            flex-direction: column !important;
+            gap: 12px !important;
+            text-align: center !important;
+          }
+
+          .about-cta-strip__text {
+            font-size: 14px !important;
+          }
+
+          .about-mv {
+            padding: 36px 16px !important;
+          }
+
+          .about-mv__container {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+          }
+
+          .about-mv__card {
+            padding: 32px 24px !important;
+            border-radius: 24px 0 24px 0 !important;
+          }
+
+          .about-mv__card--mission,
+          .about-mv__card--vision {
+            max-width: 100% !important;
+            min-height: auto !important;
+          }
+
+          .about-mv__heading {
+            font-size: 22px !important;
+          }
+
+          .about-mv__text {
+            font-size: 14px !important;
+          }
+
+          .about-core-values {
+            width: 100% !important;
+            margin-left: 0 !important;
+            padding: 20px 16px !important;
+          }
+
+          .about-core-values__image {
+            width: 100% !important;
+          }
+        }
       `}</style>
       <main className="about-banner-page">
         <section ref={bannerRef} className="about-banner about-reveal">

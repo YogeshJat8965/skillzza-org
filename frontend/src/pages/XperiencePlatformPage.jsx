@@ -1158,6 +1158,56 @@ function XperiencePlatformPage() {
         .cta-button:nth-child(2) {
           transition-delay: 1.2s;
         }
+
+        /* ── Mobile Responsive Fixes ── */
+        @media (max-width: 767px) {
+          .hero-heading {
+            font-size: clamp(22px, 6vw, 30px) !important;
+            line-height: 1.2 !important;
+          }
+          .section-heading {
+            font-size: clamp(20px, 5.5vw, 28px) !important;
+            line-height: 1.22 !important;
+          }
+          .capabilities-heading {
+            font-size: clamp(20px, 5.5vw, 28px) !important;
+          }
+          .philosophy-heading {
+            font-size: clamp(20px, 5.5vw, 28px) !important;
+          }
+          .works-heading {
+            font-size: clamp(20px, 5.5vw, 28px) !important;
+          }
+          .tech-heading {
+            font-size: clamp(20px, 5.5vw, 28px) !important;
+          }
+          .cta-heading {
+            font-size: clamp(20px, 5.5vw, 28px) !important;
+          }
+          
+          /* How it Works Mobile Adjustments */
+          .works-step {
+            gap: 12px !important;
+          }
+          .works-step-indicator {
+            width: 48px !important;
+            height: 48px !important;
+          }
+          .works-step-title {
+            white-space: normal !important;
+            font-size: 16px !important;
+            line-height: 1.3 !important;
+            text-align: left !important;
+          }
+          .works-step-card {
+            padding: 12px 16px !important;
+            min-height: auto !important;
+          }
+          .works-description {
+            margin-left: 16px !important;
+            margin-right: 16px !important;
+          }
+        }
       `}</style>
 
       <div className="min-h-screen bg-white">
@@ -1953,19 +2003,19 @@ function XperiencePlatformPage() {
                         <img
                           src={getAssetPath('/img/Group 41598.svg')}
                           alt={`Step ${step.number}`}
-                          className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 transition-opacity duration-300 group-hover:opacity-0"
+                          className="works-step-indicator w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 transition-opacity duration-300 group-hover:opacity-0"
                         />
                         {/* Hover state: Group 41597 */}
                         <img
                           src={getAssetPath('/img/Group 41597.svg')}
                           alt={`Step ${step.number} Active`}
-                          className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                          className="works-step-indicator w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
                         />
                       </div>
 
                       {/* Card */}
                       <div
-                        className="flex-1 rounded-lg transition-all duration-300 flex flex-col justify-center bg-[#E6D6EF] group-hover:bg-[#F8F8FF] group-hover:justify-start"
+                        className="works-step-card flex-1 rounded-lg transition-all duration-300 flex flex-col justify-center bg-[#E6D6EF] group-hover:bg-[#F8F8FF] group-hover:justify-start"
                         style={{
                           maxWidth: '600px',
                           minHeight: '80px',
@@ -1976,7 +2026,7 @@ function XperiencePlatformPage() {
                       >
                         {/* Title - Always Visible */}
                         <h3
-                          className="transition-all duration-300 text-center group-hover:text-left whitespace-nowrap"
+                          className="works-step-title transition-all duration-300 text-center group-hover:text-left"
                           style={{
                             fontFamily: 'DM Sans, sans-serif',
                             fontWeight: '600',

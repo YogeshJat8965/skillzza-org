@@ -233,6 +233,12 @@ const Hero = () => {
           white-space: nowrap;
         }
 
+        @media (max-width: 767px) {
+          .hero-heading-line {
+            white-space: normal !important;
+          }
+        }
+
         /* ===== Hero fluid responsive overrides ===== */
         @media (min-width: 768px) and (max-width: 1799px) {
           .hero-section {

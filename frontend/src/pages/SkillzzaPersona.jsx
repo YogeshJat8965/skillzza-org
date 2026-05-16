@@ -71,12 +71,61 @@ const SkillzzaPersona = () => {
           transform: translateY(-2px);
           box-shadow: 0 8px 20px rgba(55, 65, 81, 0.2);
         }
+
+        @media (max-width: 767px) {
+          .persona-hero-section {
+            height: auto !important;
+            min-height: 600px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            padding: 100px 20px 60px !important;
+          }
+          .persona-hero-content {
+            position: relative !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+            height: auto !important;
+            z-index: 10 !important;
+          }
+          .persona-hero-breadcrumb,
+          .persona-hero-heading,
+          .persona-hero-subtitle,
+          .persona-hero-cta {
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin-bottom: 24px !important;
+            text-align: center !important;
+          }
+          .persona-hero-heading {
+            font-size: clamp(24px, 8vw, 36px) !important;
+            line-height: 1.2 !important;
+            margin-top: 20px !important;
+          }
+          .persona-hero-subtitle {
+            font-size: 16px !important;
+            line-height: 1.5 !important;
+          }
+          .persona-hero-cta {
+            flex-direction: column !important;
+            gap: 12px !important;
+          }
+          .persona-hero-cta a {
+            width: 100% !important;
+            max-width: 320px !important;
+          }
+        }
       `}</style>
 
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden persona-hero-section"
         style={{
           width: '100%',
           height: 'clamp(400px, 47.4vw, 910px)',
@@ -106,10 +155,10 @@ const SkillzzaPersona = () => {
         </div>
 
         {/* Content layer */}
-        <div className="relative z-10 w-full h-full">
+        <div className="relative z-10 w-full h-full persona-hero-content">
           {/* Breadcrumb */}
           <nav
-            className="absolute persona-animate delay-1"
+            className="absolute persona-animate delay-1 persona-hero-breadcrumb"
             style={{ top: '13.4%', left: '11.67%' }}
           >
             <div className="flex items-center gap-2" style={{ color: '#71717A', fontSize: 'clamp(11px, 0.73vw, 14px)' }}>
@@ -123,7 +172,7 @@ const SkillzzaPersona = () => {
 
           {/* Main Heading */}
           <h1
-            className="product-heading absolute persona-animate delay-2"
+            className="product-heading absolute persona-animate delay-2 persona-hero-heading"
             style={{
               top: '25%',
               left: '11.67%',
@@ -143,7 +192,7 @@ const SkillzzaPersona = () => {
 
           {/* Subtitle */}
           <p
-            className="absolute persona-animate delay-3"
+            className="absolute persona-animate delay-3 persona-hero-subtitle"
             style={{
               top: '50%',
               left: '11.67%',
@@ -163,7 +212,7 @@ const SkillzzaPersona = () => {
 
           {/* CTA Buttons */}
           <div
-            className="absolute flex items-center gap-4 persona-animate delay-4"
+            className="absolute flex items-center gap-4 persona-animate delay-4 persona-hero-cta"
             style={{ top: '65%', left: '11.67%' }}
           >
             <Link

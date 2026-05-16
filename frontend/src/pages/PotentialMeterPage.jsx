@@ -210,7 +210,7 @@ export default function PotentialMeterPage() {
 
           {/* Main Heading */}
           <h1
-            className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] max-w-[1118px] text-[38px] leading-[46px] tracking-[-1.5px] mb-3"
+            className="pm-hero-heading font-['DM_Sans',sans-serif] font-bold text-[#0F1114] max-w-[1118px] text-[38px] leading-[46px] tracking-[-1.5px] mb-3"
           >
             Stop Guessing <span className="text-[#2563eb]">Career Potential.</span>
             <br />
@@ -237,7 +237,7 @@ export default function PotentialMeterPage() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="pm-hero-cta flex flex-wrap items-center gap-4 mb-6">
             <button className="bg-[#245CE2] hover:bg-[#1E4DBC] transition-colors text-white font-['DM_Sans',sans-serif] font-medium text-[15px] px-7 py-3 rounded">
               Start Free Skill Assessment
             </button>
@@ -413,7 +413,7 @@ export default function PotentialMeterPage() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8 }}
-          className="relative w-full flex items-center min-h-[620px]"
+          className="relative w-full flex items-center pm-measure-container" style={{ minHeight: '620px' }}
         >
           {/* Background Image Container sticking to the right edge */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[62%] max-w-[980px] h-[560px] hidden md:flex justify-end opacity-20 md:opacity-100">
@@ -625,7 +625,7 @@ export default function PotentialMeterPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative w-full mx-auto flex flex-col lg:flex-row items-center border border-gray-100/0 min-h-[700px]"
+          className="relative w-full mx-auto flex flex-col lg:flex-row items-center border border-gray-100/0 pm-get-container" style={{ minHeight: '700px' }}
         >
           
           {/* Active Content (Left Side) */}
@@ -784,7 +784,7 @@ export default function PotentialMeterPage() {
           transition={{ duration: 0.6 }}
           className="w-full flex flex-col items-center justify-center"
         >
-          <h2 className="font-['DM_Sans',sans-serif] font-bold text-[38px] leading-[46px] text-[#0F1114] tracking-[-1.5px] mb-4 md:mb-5">
+          <h2 className="pm-cta-heading font-['DM_Sans',sans-serif] font-bold text-[38px] leading-[46px] text-[#0F1114] tracking-[-1.5px] mb-4 md:mb-5">
             Upskill Smarter. Learn Faster.<br />Lead Confidently.
           </h2>
           <p className="font-['Lato',sans-serif] font-medium text-[#0F1114] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-7 md:mb-9">
@@ -808,4 +808,52 @@ export default function PotentialMeterPage() {
 
     </div>
   );
+}
+
+/* Mobile responsive styles for PotentialMeterPage - injected at module scope */
+if (typeof document !== 'undefined') {
+  const styleId = 'pm-mobile-styles';
+  if (!document.getElementById(styleId)) {
+    const style = document.createElement('style');
+    style.id = styleId;
+    style.textContent = `
+      @media (max-width: 767px) {
+        .pm-hero-heading {
+          font-size: clamp(22px, 6vw, 30px) !important;
+          line-height: 1.2 !important;
+          letter-spacing: -0.5px !important;
+        }
+        .pm-measure-container {
+          min-height: auto !important;
+        }
+        .pm-get-container {
+          min-height: auto !important;
+        }
+        .pm-cta-heading {
+          font-size: clamp(22px, 6vw, 30px) !important;
+          line-height: 1.2 !important;
+        }
+        .pm-hero-cta {
+          flex-direction: column !important;
+          align-items: center !important;
+          justify-content: center !important;
+          gap: 12px !important;
+          width: 100% !important;
+        }
+        .pm-hero-cta button {
+          width: 100% !important;
+          max-width: 320px !important;
+        }
+      }
+      @media (max-width: 480px) {
+        .pm-hero-heading {
+          font-size: 22px !important;
+        }
+        .pm-cta-heading {
+          font-size: 22px !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
 }

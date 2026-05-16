@@ -456,7 +456,25 @@ const LearnFramework = () => {
         .lf-zone { position: absolute; cursor: pointer; background: transparent; }
         .lf-zone:hover { background: transparent; }
         .lf-zone.active { background: transparent; outline: none; }
-        @media (max-width: 768px) { .lf-body { flex-direction: column; gap: 36px; } .lf-title { font-size: 24px; } .lf-item-title { font-size: 24px; } .lf-wrap { padding: 0 20px; } .lf-title-box { padding: 16px 24px; } }
+        @media (max-width: 768px) { 
+          .lf-body { flex-direction: column; gap: 36px; } 
+          .lf-title { font-size: 24px; } 
+          .lf-item-title { font-size: 24px; } 
+          .lf-wrap { padding: 0 20px; } 
+          .lf-title-box { padding: 16px 24px; } 
+          .lf-wheel-col { width: 100% !important; max-width: 280px !important; margin: 0 auto !important; } 
+          
+          .meth-hero-title {
+            font-size: 26px !important;
+            line-height: 1.3 !important;
+          }
+          .method-hero-image {
+            height: 320px !important;
+          }
+          .method-intro-section {
+            padding: 40px 20px !important;
+          }
+        }
       `}</style>
 
       <div className="lf-wrap">
@@ -467,7 +485,7 @@ const LearnFramework = () => {
 
         <div className="lf-body">
           {/* Left: image with invisible clickable overlay zones */}
-          <div ref={wheelRef} className="meth-reveal meth-slide-left meth-delay-1" style={{ flexShrink: 0, width: '360px', position: 'relative' }}>
+          <div ref={wheelRef} className="lf-wheel-col meth-reveal meth-slide-left meth-delay-1" style={{ flexShrink: 0, width: '360px', position: 'relative' }}>
             <img
               src={getAssetPath('/framework.png')}
               alt="LEARN Framework Wheel"
@@ -572,7 +590,7 @@ const OurMethodology = () => {
       {/* Hero Section */}
       {/* Top: white bg with title */}
       <section style={{ backgroundColor: '#fff', padding: '48px 24px 32px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
-        <h1 ref={heroTitleRef} className="meth-reveal meth-fade-up" style={{ fontSize: '38px', fontWeight: '700', color: '#111827', lineHeight: '1.25', letterSpacing: '-0.3px', margin: '0 auto', maxWidth: '700px' }}>
+        <h1 ref={heroTitleRef} className="meth-hero-title meth-reveal meth-fade-up" style={{ fontSize: '38px', fontWeight: '700', color: '#111827', lineHeight: '1.25', letterSpacing: '-0.3px', margin: '0 auto', maxWidth: '700px' }}>
           The Skillzza Learning Framework
         </h1>
       </section>
@@ -619,6 +637,14 @@ const OurMethodology = () => {
         }
         @media (max-width: 480px) {
           .method-hero-image { height: 240px !important; }
+        }
+      `}</style>
+      <style>{`
+        @media (max-width: 767px) {
+          .meth-hero-title {
+            font-size: clamp(24px, 6vw, 32px) !important;
+            padding: 0 16px !important;
+          }
         }
       `}</style>
 
