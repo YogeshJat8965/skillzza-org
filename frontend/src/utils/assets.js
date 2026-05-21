@@ -22,7 +22,7 @@ export const getBackgroundImageUrl = (path) => {
 /**
  * Helper function to get the correct route path with base URL
  * Used for navigation links in the app
- * @param {string} path - The route path (e.g., '/about', '/product/hirenest')
+ * @param {string} path - The route path (e.g., '/about', '/product/talent-twin')
  * @returns {string} - The full path with base URL
  */
 export const getRoutePath = (path) => {

@@ -58,12 +58,12 @@ const InstitutionsUseCase = () => {
           <div className="max-w-6xl mx-auto">
             <div className="space-y-16">
               
-              {/* Hirenest - Skillzza Recruit */}
+              {/* Talent Twin - Skillzza Recruit */}
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="flex flex-col lg:flex-row">
                   <div className="lg:w-1/2 p-8 lg:p-12">
                     <div className="flex items-center mb-6">
-                      <h3 className="text-2xl font-bold text-gray-900">Hirenest – Skillzza Recruit</h3>
+                      <h3 className="text-2xl font-bold text-gray-900">Talent Twin – Skillzza Recruit</h3>
                     </div>
                     <h4 className="text-xl font-semibold text-orange-600 mb-4">Campus-to-Career Placement Engine</h4>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -91,7 +91,7 @@ const InstitutionsUseCase = () => {
                   <div className="lg:w-1/2">
                     <img 
                       src={getAssetPath('/insight_roles.jpg')} 
-                      alt="Hirenest Skillzza Recruit" 
+                      alt="Talent Twin Skillzza Recruit" 
                       className="w-full h-full object-cover min-h-96" 
                     />
                   </div>

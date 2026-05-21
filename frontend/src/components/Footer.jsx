@@ -17,7 +17,7 @@ const footerSections = [
       { name: 'Xperience Platform', href: '/product/xperience-platform' },
       { name: 'Talent Transformation', href: '/product/talent-intelligence', disabled: true },
       { name: 'AI Hacknex', href: '/product/ai-hacknex', disabled: true },
-      { name: 'Hirenest', href: '/product/hirenest', disabled: true },
+      { name: 'Talent Twin', href: '/product/talent-twin', disabled: true },
       { name: 'Skill Persona', href: '/explore/skillzza-persona' },
     ],
   },

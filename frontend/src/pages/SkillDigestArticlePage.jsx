@@ -85,7 +85,7 @@ const digestArticles = {
       {
         heading: 'How AI Hiring Marketplaces Improve Match Quality',
         paragraphs: [
-          'Platforms such as Hirenest do more than aggregate resumes-they build pre-assessed, job-ready talent pools using AI-driven skill tests, behavioral assessments, and project simulations. Employers can filter candidates by role-specific capability, fit indicators, and readiness signals in real time.',
+          'Platforms such as Talent Twin do more than aggregate resumes-they build pre-assessed, job-ready talent pools using AI-driven skill tests, behavioral assessments, and project simulations. Employers can filter candidates by role-specific capability, fit indicators, and readiness signals in real time.',
           'This creates a faster, fairer, and significantly more data-driven hiring model.',
         ],
       },

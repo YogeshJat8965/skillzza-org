@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { getAssetPath, getBackgroundImageUrl, getRoutePath } from '../utils/assets';
-const Hirenest = () => {
+const TalentTwin = () => {
   const contactUsPath = getRoutePath('/contact-us');
 
   return (
@@ -19,7 +19,7 @@ const Hirenest = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
             <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
-              HIRENEST
+              Talent Twin
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
               The AI-Powered Campus Hiring Marketplace
@@ -39,7 +39,7 @@ const Hirenest = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Hirenest is a next-generation hiring marketplace designed to bridge the gap between academia and industry. By connecting employers with pre-assessed, job-ready students from colleges and universities, we eliminate inefficiencies in the hiring process and enable organizations to discover the right talent faster, smarter, and at scale.
+              Talent Twin is a next-generation hiring marketplace designed to bridge the gap between academia and industry. By connecting employers with pre-assessed, job-ready students from colleges and universities, we eliminate inefficiencies in the hiring process and enable organizations to discover the right talent faster, smarter, and at scale.
             </p>
           </div>
         </div>
@@ -146,7 +146,7 @@ const Hirenest = () => {
 
             <div className="text-center mt-12">
               <div className="inline-block px-8 py-4 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-full text-white font-bold text-xl">
-                Hirenest changes everything.
+                Talent Twin changes everything.
               </div>
             </div>
           </div>
@@ -183,7 +183,7 @@ const Hirenest = () => {
                   <div className="lg:w-1/2">
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">For Students: Showcase Your True Potential</h3>
                     <p className="text-lg text-gray-700 mb-6 italic">Beyond grades, beyond college rankings - your skills speak louder</p>
-                    <h4 className="text-xl font-semibold text-orange-600 mb-4">The Hirenest Student Advantage:</h4>
+                    <h4 className="text-xl font-semibold text-orange-600 mb-4">The Talent Twin Student Advantage:</h4>
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -223,7 +223,7 @@ const Hirenest = () => {
                   <div className="lg:w-1/2">
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">For Employers: Hire the Right Talent, Faster</h3>
                     <p className="text-lg text-gray-700 mb-6 italic">Access pre-qualified candidates who are ready to contribute from day one</p>
-                    <h4 className="text-xl font-semibold text-orange-600 mb-4">The Hirenest Employer Advantage:</h4>
+                    <h4 className="text-xl font-semibold text-orange-600 mb-4">The Talent Twin Employer Advantage:</h4>
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -263,7 +263,7 @@ const Hirenest = () => {
                   <div className="lg:w-1/2">
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">For Institutions: Elevate Your Placement Success</h3>
                     <p className="text-lg text-gray-700 mb-6 italic">Transform your students into industry-ready professionals</p>
-                    <h4 className="text-xl font-semibold text-orange-600 mb-4">The Hirenest Institution Advantage:</h4>
+                    <h4 className="text-xl font-semibold text-orange-600 mb-4">The Talent Twin Institution Advantage:</h4>
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -294,13 +294,13 @@ const Hirenest = () => {
         </div>
       </section>
 
-      {/* How Hirenest Works */}
+      {/* How Talent Twin Works */}
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                How Hirenest Works
+                How Talent Twin Works
               </h2>
               <p className="text-xl text-gray-600">From Assessment to Employment in 5 Simple Steps</p>
             </div>
@@ -348,7 +348,7 @@ const Hirenest = () => {
                       <li>• Interview readiness checklist and preparation materials</li>
                     </ul>
                     <div className="mt-4 p-3 bg-green-50 rounded-lg">
-                      <p className="text-green-800 font-semibold">Result: Market-ready student profiles in the Hirenest talent pool</p>
+                      <p className="text-green-800 font-semibold">Result: Market-ready student profiles in the Talent Twin talent pool</p>
                     </div>
                   </div>
                 </div>
@@ -658,7 +658,7 @@ const Hirenest = () => {
                 <div className="space-y-3 text-sm text-gray-700 mb-6">
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold">1</div>
-                    <span>Platform Demo (15 minutes) - See Hirenest in action</span>
+                    <span>Platform Demo (15 minutes) - See Talent Twin in action</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold">2</div>
@@ -741,7 +741,7 @@ const Hirenest = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Q: Is there any cost for students?</h4>
-                    <p className="text-gray-600 text-sm">A: Absolutely not. Hirenest is completely free for students - assessment, profile creation, job applications, everything.</p>
+                    <p className="text-gray-600 text-sm">A: Absolutely not. Talent Twin is completely free for students - assessment, profile creation, job applications, everything.</p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Q: What if I don't get placed immediately?</h4>
@@ -763,7 +763,7 @@ const Hirenest = () => {
                     <p className="text-gray-600 text-sm">A: Yes, enterprise clients can create custom assessments tailored to their role requirements and company culture.</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Q: What's the typical time-to-hire using Hirenest?</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">Q: What's the typical time-to-hire using Talent Twin?</h4>
                     <p className="text-gray-600 text-sm">A: Our clients typically reduce their campus hiring time by 50%, from 12-16 weeks to 6-8 weeks on average.</p>
                   </div>
                 </div>
@@ -779,7 +779,7 @@ const Hirenest = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Q: Will this replace our existing placement cell?</h4>
-                    <p className="text-gray-600 text-sm">A: No, Hirenest enhances your placement cell's capabilities by providing better tools, analytics, and employer connections.</p>
+                    <p className="text-gray-600 text-sm">A: No, Talent Twin enhances your placement cell's capabilities by providing better tools, analytics, and employer connections.</p>
                   </div>
                 </div>
               </div>
@@ -800,7 +800,7 @@ const Hirenest = () => {
                 Contact us & Support
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Ready to transform your hiring process? Our team is here to help you get started with Hirenest and answer any questions you might have.
+                Ready to transform your hiring process? Our team is here to help you get started with Talent Twin and answer any questions you might have.
               </p>
             </div>
 
@@ -887,7 +887,7 @@ const Hirenest = () => {
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">How can we help you?</label>
                       <textarea 
-                        placeholder="Tell us about your requirements, questions, or how you'd like to use Hirenest..." 
+                        placeholder="Tell us about your requirements, questions, or how you'd like to use Talent Twin..." 
                         rows="5"
                         className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white resize-none"
                       ></textarea>
@@ -977,4 +977,4 @@ const Hirenest = () => {
   );
 };
 
-export default Hirenest;
+export default TalentTwin;

@@ -100,7 +100,7 @@ const WhatWeDo = () => {
       image: getAssetPath('/talent.png'),
       imageLeft: false,
       screenBg: '#fff5f5',
-      description: 'HireNest bridges the gap between skill development and employment by connecting AI-verified, role-ready talent with enterprises, institutions, and employers seeking future-ready professionals.',
+      description: 'Talent Twin bridges the gap between skill development and employment by connecting AI-verified, role-ready talent with enterprises, institutions, and employers seeking future-ready professionals.',
       listTitle: 'Strategic expertise',
       items: [
         'AI-Verified Talent Profiles.',
@@ -268,7 +268,7 @@ const WhatWeDo = () => {
         <div style={{ maxWidth: '1020px', margin: '0 auto' }} className="wwd-reveal wwd-scale-up wwd-delay-2">
           <img
             src={getAssetPath('/maskgroup.png')}
-            alt="Assess Learn Simulate HireNest"
+            alt="Assess Learn Simulate Talent Twin"
             style={{ width: '100%', height: 'auto', objectFit: 'contain', display: 'block' }}
           />
         </div>

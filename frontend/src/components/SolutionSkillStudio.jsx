@@ -114,8 +114,8 @@ const SolutionSkillStudio = () => {
             image: aiHackNexImg,
         },
         {
-            label: 'Hirenest Recruit',
-            title: 'Hirenest Recruit',
+            label: 'Talent Twin Recruit',
+            title: 'Talent Twin Recruit',
             subtitle: 'AI-Powered Talent Marketplace Connecting Verified Skills with the Right Roles',
             bullets: [
                 'AI-matched, skill-verified talent pools.',

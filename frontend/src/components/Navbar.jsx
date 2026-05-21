@@ -118,12 +118,12 @@ const navItems = [
         illustrationId: 'ai-hacknex',
       },
       {
-        name: 'Hirenest',
+        name: 'Talent Twin',
         subtitle: 'Campus hiring marketplace',
-        link: '/product/hirenest',
+        link: '/product/talent-twin',
         heading: 'Connecting talent.',
         headingHighlight: 'Creating opportunities.',
-        description: 'Hirenest is your campus hiring marketplace that connects students with top companies and the right opportunities.',
+        description: 'Talent Twin is your campus hiring marketplace that connects students with top companies and the right opportunities.',
         bullets: [
           'Discover verified job & internship opportunities',
           'Connect with top recruiters',
@@ -131,7 +131,7 @@ const navItems = [
         ],
         ctaText: 'Explore Opportunities',
         ctaLink: null,
-        illustrationId: 'hirenest',
+        illustrationId: 'Talent Twin',
       },
       {
         name: 'Skillzza Persona',
@@ -1554,7 +1554,7 @@ const platformImageMap = {
   'xperience-platform': platformImg2,
   'talent-intelligence': platformImg3,
   'ai-hacknex': platformImg4,
-  'hirenest': platformImg5,
+  'Talent Twin': platformImg5,
   'skillzza-persona': platformImg6,
 };
 
@@ -1564,7 +1564,7 @@ const tabAnimations = [
   'szImgZoomRotate',    // Xperience Platform: zoom + rotate in
   'szImgFlipIn',        // Talent Intelligence: 3D flip in
   'szImgBounceScale',   // AI HackNex: bounce scale
-  'szImgSwingIn',       // Hirenest: swing from top
+  'szImgSwingIn',       // Talent Twin: swing from top
   'szImgElasticPop',    // Skillzza Persona: elastic pop
 ];
 

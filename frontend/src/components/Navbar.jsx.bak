@@ -49,7 +49,7 @@ const navItems = [
         pillColor: 'purple',
       },
       {
-        name: 'Hirenest Recruit',
+        name: 'Talent Twin Recruit',
         link: null,
         desc: 'College-to-campus hiring marketplace with pre-assessed student profiles.',
         pill: 'Marketplace',
