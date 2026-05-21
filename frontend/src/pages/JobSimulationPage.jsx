@@ -2223,7 +2223,7 @@ function JobSimulationPage() {
               </ul>
             </div>
             <div className="jsim-feature-image jsim-feature-image-1">
-              <img src="https://skillzza.com/assets/img/showcaseyourexpertise.jpg" alt="Showcase expertise" />
+              <img src={getAssetPath('/showcaseyourexpertise.jpg')} alt="Showcase expertise" />
             </div>
           </ScrollReveal>
 
@@ -2259,7 +2259,7 @@ function JobSimulationPage() {
               </ul>
             </div>
             <div className="jsim-feature-image jsim-feature-image-2">
-              <img src="https://skillzza.com/assets/img/hereHowitiswork.jpg" alt="Here's what sets us apart" />
+              <img src={getAssetPath('/hereHowitiswork.jpg')} alt="Here's what sets us apart" />
             </div>
           </ScrollReveal>
 
