@@ -22,7 +22,7 @@ const footerSections = [
     ],
   },
   {
-    title: 'Vedya K-12',
+    title: 'Skillzza K-12',
     links: [
       { name: 'Vidya AI Virtual Internship', href: 'https://cognifyai.skillzza.com/' },
       { name: 'Skill Studio for Students', href: 'https://skillzza-club.vercel.app/' },

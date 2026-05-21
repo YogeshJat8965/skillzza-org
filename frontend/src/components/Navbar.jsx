@@ -177,7 +177,7 @@ const navItems = [
   },
   */
   {
-    name: 'Vedya K-12',
+    name: 'Skillzza K-12',
     layout: 'k12-vidya',
     width: 780,
     eyebrow: 'K-12 Vidya AI - school intelligence ecosystem',
