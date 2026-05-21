@@ -1,13 +1,45 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import emailjs from '@emailjs/browser'
+
+const EMAILJS_SERVICE_ID  = 'service_nsgl2uu';
+const EMAILJS_TEMPLATE_ID = 'template_pglbqib';
+const EMAILJS_PUBLIC_KEY  = 'az9fXo9GHjA55BnEo';
 
 function SignUp() {
   const navigate = useNavigate()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    password: '',
+    confirm: ''
+  })
 
-  const handleSignUpSubmit = (e) => {
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id.replace('signup-', '')]: e.target.value })
+  }
+
+  const handleSignUpSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          full_name: formData.name,
+          work_email: formData.email,
+          organization: formData.company
+        },
+        EMAILJS_PUBLIC_KEY
+      )
+    } catch (err) {
+      console.error('EmailJS Error:', err)
+    }
+
     localStorage.setItem('skillzza_demo_auth', 'true')
     localStorage.setItem('skillzza_demo_auth_type', 'signup')
     setTimeout(() => {
@@ -32,19 +64,19 @@ function SignUp() {
 
             <form className="auth-form" onSubmit={handleSignUpSubmit}>
               <label htmlFor="signup-name" className="auth-label">Full name</label>
-              <input id="signup-name" className="auth-input" type="text" placeholder="Your full name" />
+              <input id="signup-name" className="auth-input" type="text" placeholder="Your full name" value={formData.name} onChange={handleChange} required />
 
               <label htmlFor="signup-email" className="auth-label">Work email</label>
-              <input id="signup-email" className="auth-input" type="email" placeholder="name@company.com" />
+              <input id="signup-email" className="auth-input" type="email" placeholder="name@company.com" value={formData.email} onChange={handleChange} required />
 
               <label htmlFor="signup-company" className="auth-label">Organization</label>
-              <input id="signup-company" className="auth-input" type="text" placeholder="Organization name" />
+              <input id="signup-company" className="auth-input" type="text" placeholder="Organization name" value={formData.company} onChange={handleChange} required />
 
               <label htmlFor="signup-password" className="auth-label">Password</label>
-              <input id="signup-password" className="auth-input" type="password" placeholder="Create a strong password" />
+              <input id="signup-password" className="auth-input" type="password" placeholder="Create a strong password" value={formData.password} onChange={handleChange} required />
 
               <label htmlFor="signup-confirm" className="auth-label">Confirm password</label>
-              <input id="signup-confirm" className="auth-input" type="password" placeholder="Re-enter password" />
+              <input id="signup-confirm" className="auth-input" type="password" placeholder="Re-enter password" value={formData.confirm} onChange={handleChange} required />
 
               <label className="auth-check auth-check--terms">
                 <input type="checkbox" />
