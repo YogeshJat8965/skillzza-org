@@ -859,14 +859,15 @@ function JobSimulationPage() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-        /* ── Section wrapper: pure white, relative so we can drop the wavy img ── */
+        /* ── Section wrapper: relative so we can drop the wavy img ── */
         .jsim-section {
           position: relative;
           width: 100%;
-          background-color: #ffffff;
-          padding: 72px 24px 88px;
+          background: linear-gradient(135deg, #FFF9F5 0%, #FFFDFB 50%, #FAF6FF 100%);
+          padding: 80px 24px 88px;
           box-sizing: border-box;
           overflow: hidden;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.03);
         }
 
         /* ── Wavy decorative image ── */
@@ -880,6 +881,7 @@ function JobSimulationPage() {
           object-position: center;
           pointer-events: none;
           user-select: none;
+          opacity: 0.85;
         }
 
         /* ── Content on top of background ── */
@@ -893,12 +895,11 @@ function JobSimulationPage() {
           align-items: center;
         }
 
-        /* ── Title ── */
         .jsim-heading {
-          font-family: 'Inter', sans-serif;
+          font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 38px;
-          line-height: 1.25;
+          font-size: clamp(24px, 2.8vw, 52px);
+          line-height: 1.2;
           color: #0F1114;
           text-align: center;
           margin: 0 0 28px 0;
@@ -908,9 +909,9 @@ function JobSimulationPage() {
         .jsim-description {
           font-family: 'Inter', sans-serif;
           font-weight: 400;
-          font-size: 16px;
-          line-height: 1.75;
-          color: #555b6e;
+          font-size: 16.5px;
+          line-height: 1.8;
+          color: #475569;
           text-align: center;
           max-width: 800px;
           margin: 0 0 56px 0;
@@ -991,26 +992,56 @@ function JobSimulationPage() {
         /* ── Mobile ── */
         @media (max-width: 768px) {
           .jsim-wavy { display: none; }
-          .jsim-heading { font-size: 26px; }
+          .jsim-section {
+            padding: 56px 16px 64px;
+          }
+          .jsim-heading {
+            font-size: 26px !important;
+            line-height: 1.3 !important;
+            letter-spacing: -0.8px !important;
+            margin-bottom: 20px !important;
+          }
+          .jsim-description {
+            font-size: 15px !important;
+            line-height: 1.7 !important;
+            color: #475569 !important;
+            margin-bottom: 40px !important;
+            text-align: center !important;
+            padding: 0 8px !important;
+          }
           .jsim-cards-row {
             flex-direction: column;
             align-items: center;
-            gap: 24px;
+            gap: 16px;
+          }
+          .jsim-cards-row > * {
+            width: 100%;
+            max-width: 280px;
           }
           .jsim-card {
-            width: 320px;
-            max-width: 100%;
-            height: 280px;
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            min-height: 170px !important;
             box-sizing: border-box;
             margin: 0 auto;
-            padding: 32px 20px;
+            padding: 20px 16px !important;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            border-radius: 14px !important;
           }
-          .jsim-stat-number { font-size: 56px; }
+          .jsim-stat-number { 
+            font-size: 38px !important; 
+            margin: 0 0 8px 0 !important;
+          }
+          .jsim-stat-label {
+            font-size: 14px !important;
+            margin: 0 0 6px 0 !important;
+          }
           .jsim-stat-desc {
-            white-space: normal; /* Removes hard line breaks on mobile for better text flow */
+            font-size: 13px !important;
+            white-space: normal;
           }
           .jsim-card-accent::after { right: -8px; bottom: -8px; }
         }
@@ -1062,9 +1093,10 @@ function JobSimulationPage() {
         }
 
         .sol-title {
-          font-family: 'Inter', sans-serif;
+          font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 36px;
+          font-size: clamp(24px, 2.8vw, 52px);
+          line-height: 1.2;
           color: #222222;
           margin: 0 0 16px 0;
         }
@@ -1215,9 +1247,8 @@ function JobSimulationPage() {
           .sol-header {
             margin-bottom: 40px;
           }
-          .sol-title {
-            font-size: 28px;
-          }
+          .sol-title { font-size: 28px; }
+          .sol-subtitle { font-size: 16px; }
           .sol-content {
             flex-direction: column;
             gap: 40px;
@@ -1228,9 +1259,10 @@ function JobSimulationPage() {
             gap: 20px;
           }
           .sol-card {
-            width: 320px;
-            max-width: 100%;
-            height: 280px;
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+            min-height: 220px;
             box-sizing: border-box;
             padding: 24px;
             display: flex;
@@ -1279,9 +1311,10 @@ function JobSimulationPage() {
         }
 
         .discover-title {
-          font-family: 'Inter', sans-serif;
+          font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 40px;
+          font-size: clamp(24px, 2.8vw, 52px);
+          line-height: 1.2;
           color: #333333;
           margin: 0 0 20px 0;
           letter-spacing: -0.5px;
@@ -1371,8 +1404,16 @@ function JobSimulationPage() {
           .discover-select {
             width: 100%;
           }
-          .discover-title {
-            font-size: 32px;
+          .discover-title { font-size: 28px; }
+          .discover-subtitle-blue {
+            font-size: 16px;
+          }
+          .discover-subtitle-body {
+            font-size: 16px;
+            margin-bottom: 32px;
+          }
+          .discover-section {
+            padding: 56px 16px;
           }
         }
 
@@ -1580,6 +1621,22 @@ function JobSimulationPage() {
         @media (max-width: 600px) {
           .sim-cards-grid {
             grid-template-columns: 1fr;
+            gap: 18px;
+          }
+          .sim-card-image-wrap {
+            height: 160px;
+          }
+          .sim-card-logo-box {
+            width: 120px;
+            height: 52px;
+            padding: 8px 12px;
+          }
+          .sim-card-title {
+            min-height: auto;
+            margin-bottom: 16px;
+          }
+          .sim-card-body {
+            padding: 18px;
           }
         }
 
@@ -1611,8 +1668,10 @@ function JobSimulationPage() {
         }
 
         .jsim-banner-text h2 {
-          font-size: 40px;
-          font-weight: 600;
+          font-family: 'DM Sans', sans-serif;
+          font-size: clamp(24px, 2.8vw, 52px);
+          font-weight: 700;
+          line-height: 1.2;
           margin: 0 0 24px 0;
         }
 
@@ -1658,16 +1717,45 @@ function JobSimulationPage() {
           .jsim-banner-content {
             flex-direction: column;
             text-align: center;
-            padding: 40px 24px 0 24px; /* padding top but 0 bottom for image */
+            padding: 40px 24px 0 24px !important;
           }
           .jsim-banner-image-wrapper {
-            position: relative;
-            right: 0;
-            height: auto;
-            margin-top: 30px;
+            position: relative !important;
+            right: 0 !important;
+            top: 0 !important;
+            height: auto !important;
+            margin-top: 10px !important;
+            display: flex !important;
+            justify-content: center !important;
+            width: 100% !important;
           }
           .jsim-banner-img {
-            max-height: 300px;
+            height: auto !important;
+            max-height: 220px !important;
+            width: auto !important;
+            display: block !important;
+            margin: 0 auto !important;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .jsim-banner-content {
+            padding: 32px 16px 0 16px !important;
+          }
+          .jsim-banner-text h2 {
+            font-size: 24px !important;
+            margin-bottom: 16px !important;
+          }
+          .jsim-banner-text p {
+            font-size: 15px !important;
+            margin-bottom: 12px !important;
+            line-height: 1.5 !important;
+          }
+          .jsim-banner-image-wrapper {
+            margin-top: 8px !important;
+          }
+          .jsim-banner-img {
+            max-height: 180px !important;
           }
         }
 
@@ -1705,10 +1793,11 @@ function JobSimulationPage() {
         }
 
         .jsim-feature-text h2 {
-          font-family: 'Inter', sans-serif;
-          font-size: 36px;
-          font-weight: 600;
+          font-family: 'DM Sans', sans-serif;
+          font-size: clamp(24px, 2.8vw, 52px);
+          font-weight: 700;
           color: #333333;
+          line-height: 1.2;
           margin-bottom: 24px;
         }
 
@@ -1777,6 +1866,36 @@ function JobSimulationPage() {
           }
           .jsim-feature-container {
             gap: 60px;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .jsim-feature-section {
+            padding: 56px 16px;
+          }
+          .jsim-feature-container {
+            gap: 48px;
+          }
+          .jsim-feature-text h2 {
+            font-size: 28px;
+          }
+          .jsim-feature-text p,
+          .jsim-feature-list li {
+            font-size: 16px;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .jsim-cta-banner {
+            width: calc(100% - 32px);
+            padding: 18px 20px 22px;
+          }
+          .jsim-cta-text {
+            font-size: 16px;
+          }
+          .jsim-cta-btn {
+            width: 100%;
+            text-align: center;
           }
         }
 

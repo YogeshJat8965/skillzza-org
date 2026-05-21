@@ -27,7 +27,7 @@ const ContactBar = () => {
         </div>
         <div className="hidden md:flex items-center space-x-4">
           <a href="#" className="text-red-600 font-bold hover:underline whitespace-nowrap">
-            Register For Free Internship!
+            Register For Internship!
           </a>
           <div className="h-4 border-l border-gray-300"></div>
           <div className="flex items-center space-x-4 text-gray-600 text-base">

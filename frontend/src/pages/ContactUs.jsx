@@ -121,7 +121,7 @@ function ContactUs() {
         <div className="cu-flow-bg-orb cu-flow-bg-orb--two" />
 
         <div className="cu-flow-inner">
-          <h2 className="cu-flow-title">Join the Skillzza</h2>
+          <h2 className="cu-flow-title">Join Skillzza</h2>
 
 
 

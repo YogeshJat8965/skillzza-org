@@ -75,10 +75,10 @@ const SkillzzaPersona = () => {
         @media (max-width: 767px) {
           .persona-hero-section {
             height: auto !important;
-            min-height: 600px !important;
+            min-height: auto !important; /* Make sure it wraps tightly on mobile screens! */
             display: flex !important;
             flex-direction: column !important;
-            padding: 100px 20px 60px !important;
+            padding: 24px 20px 40px !important; /* Clean tight top padding removes the massive space under navbar! */
           }
           .persona-hero-content {
             position: relative !important;
@@ -118,6 +118,65 @@ const SkillzzaPersona = () => {
           .persona-hero-cta a {
             width: 100% !important;
             max-width: 320px !important;
+          }
+        }
+
+        /* ── Final CTA Section Responsive Layout (Skillzza Persona Page) ── */
+        .persona-final-cta {
+          padding-top: 80px;
+          padding-bottom: 80px;
+        }
+        .persona-cta-heading {
+          font-family: 'DM Sans', sans-serif;
+          font-weight: 700;
+          font-size: clamp(24px, 2.8vw, 52px);
+          line-height: 1.2;
+          color: #0F1114;
+          margin-bottom: 16px;
+        }
+        .persona-cta-buttons {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 16px;
+        }
+        .persona-cta-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 15px;
+          font-weight: 600;
+          padding: 16px 36px;
+          border-radius: 8px;
+          min-width: 220px;
+          transition: all 0.3s ease;
+        }
+
+        @media (max-width: 767px) {
+          .persona-final-cta {
+            padding-top: 48px !important;
+            padding-bottom: 48px !important;
+          }
+          .persona-cta-heading {
+            font-size: clamp(24px, 2.8vw, 52px) !important;
+            line-height: 1.2 !important;
+            margin-bottom: 24px !important;
+          }
+          .persona-cta-buttons {
+            flex-direction: column !important; /* Stack buttons cleanly */
+            gap: 12px !important;
+            width: 100% !important;
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+          }
+          .persona-cta-btn {
+            width: 100% !important; /* Full width native touch buttons */
+            max-width: 280px !important;
+            min-width: 0 !important;
+            padding: 12px 24px !important; /* Elegant tighter vertical height */
+            border-radius: 8px !important;
+            font-size: 15px !important;
           }
         }
       `}</style>
@@ -215,9 +274,8 @@ const SkillzzaPersona = () => {
             className="absolute flex items-center gap-4 persona-animate delay-4 persona-hero-cta"
             style={{ top: '65%', left: '11.67%' }}
           >
-            <Link
-              to="/contact-us"
-              className="inline-flex items-center justify-center text-white font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg"
+            <div
+              className="inline-flex items-center justify-center text-white font-semibold rounded-lg opacity-85"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 'clamp(12px, 0.83vw, 16px)',
@@ -225,13 +283,14 @@ const SkillzzaPersona = () => {
                 height: 'clamp(42px, 3.125vw, 60px)',
                 background: '#4543D9 0% 0% no-repeat padding-box',
                 borderRadius: '8px',
+                cursor: 'not-allowed',
+                pointerEvents: 'none',
               }}
             >
               Start Your Free Persona
-            </Link>
-            <Link
-              to="/book-demo"
-              className="persona-cta-outline inline-flex items-center justify-center font-semibold rounded-lg"
+            </div>
+            <div
+              className="inline-flex items-center justify-center font-semibold rounded-lg opacity-85"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 'clamp(12px, 0.83vw, 16px)',
@@ -239,10 +298,13 @@ const SkillzzaPersona = () => {
                 padding: '0 clamp(20px, 1.56vw, 30px)',
                 borderRadius: '8px',
                 color: '#374151',
+                border: '1.5px solid #374151',
+                cursor: 'not-allowed',
+                pointerEvents: 'none',
               }}
             >
               Book a Demo
-            </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -254,7 +316,7 @@ const SkillzzaPersona = () => {
 
             {/* Left Column */}
             <div className="lg:w-1/2">
-              <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', lineHeight: '44px', color: '#0F1114', marginBottom: '28px' }}>
+              <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2', color: '#0F1114', marginBottom: '28px' }}>
                 The Hidden Gap Between Qualified And Career-Ready
               </h2>
               <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', marginBottom: '12px', lineHeight: '1.6' }}>
@@ -317,7 +379,7 @@ const SkillzzaPersona = () => {
       {/* ── Section 2: What Skillzza Persona Develops ── */}
       <section style={{ backgroundColor: '#F9FAFB', paddingTop: '16px', paddingBottom: '16px' }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '20px' }}>
+          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2', color: '#0F1114', marginBottom: '20px' }}>
             What Skillzza Person Develops
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -359,7 +421,7 @@ const SkillzzaPersona = () => {
 
             {/* Right: Content */}
             <div className="lg:w-7/12">
-              <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', lineHeight: '44px', color: '#0F1114', marginBottom: '16px' }}>
+              <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2', color: '#0F1114', marginBottom: '16px' }}>
                 Career Moments You Can Practice Today
               </h2>
               <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', marginBottom: '20px', fontWeight: 500, lineHeight: '1.6' }}>
@@ -380,7 +442,7 @@ const SkillzzaPersona = () => {
       {/* ── Section 4: How Persona Works (Tabbed) ── */}
       <section style={{ backgroundColor: '#F9FAFB', paddingTop: '16px', paddingBottom: '16px' }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '16px' }}>
+          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2', color: '#0F1114', marginBottom: '16px' }}>
             How Persona Works
           </h2>
 
@@ -503,7 +565,7 @@ const SkillzzaPersona = () => {
         backgroundColor: '#ffffff',
       }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
-          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '36px', color: '#0F1114', marginBottom: '20px' }}>
+          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2', color: '#0F1114', marginBottom: '20px' }}>
             The Impact: Proven Results Across Learners and Institutions
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -523,7 +585,7 @@ const SkillzzaPersona = () => {
       </section>
 
       {/* ── Final CTA ── */}
-      <section className="py-20" style={{
+      <section className="persona-final-cta" style={{
         backgroundImage: `url(${getAssetPath('/Group%2041612.png')})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
@@ -531,34 +593,26 @@ const SkillzzaPersona = () => {
         backgroundColor: '#F59E0B',
       }}>
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '40px', lineHeight: '48px', color: '#0F1114', marginBottom: '16px' }}>
-            Prepare for the Role,<br />Before You Step Into It
+          <h2 className="persona-cta-heading">
+            Prepare for the Role,<br className="hidden md:block" />Before You Step Into It
           </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="persona-cta-buttons">
             <Link
               to="/contact-us"
-              className="inline-flex items-center justify-center text-white font-semibold rounded-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
+              className="persona-cta-btn text-white transition-all hover:shadow-xl hover:-translate-y-0.5"
               style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '15px',
-                padding: '16px 36px',
                 backgroundColor: '#1F57C7',
-                borderRadius: '8px',
               }}
             >
               Start Your Journey
             </Link>
             <Link
               to="/book-demo"
-              className="inline-flex items-center justify-center font-semibold rounded-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
+              className="persona-cta-btn transition-all hover:shadow-xl hover:-translate-y-0.5"
               style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '15px',
-                padding: '15px 36px',
                 backgroundColor: 'transparent',
                 color: '#0F1114',
                 border: '1.5px solid #0F1114',
-                borderRadius: '8px',
               }}
             >
               Book a Demo

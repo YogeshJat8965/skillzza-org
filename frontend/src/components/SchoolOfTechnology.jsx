@@ -52,6 +52,15 @@ const SchoolOfTechnology = () => {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (showPopup) {
+      const timer = setTimeout(() => {
+        setShowPopup(false);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [showPopup]);
+
   return (
     <>
       <style>{`
@@ -205,7 +214,7 @@ const SchoolOfTechnology = () => {
           }
         }
       `}</style>
-      <section id="school-of-technology" className="w-full bg-white pt-0 pb-8 sm:pb-16 lg:pb-20">
+      <section id="school-of-technology" className="w-full bg-white pt-0 pb-16 sm:pb-16 lg:pb-20">
         <div className="sot-scale-shell">
           <div className="sot-scale-content">
             <div className="max-w-[1920px] mx-auto">
@@ -233,7 +242,7 @@ const SchoolOfTechnology = () => {
                     className={`sot-heading mb-4 ${isVisible.heading ? 'animate-fade-in-right' : 'opacity-0'}`}
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '42px',
+                      fontSize: 'clamp(24px, 2.8vw, 52px)',
                       fontWeight: 700,
                       lineHeight: '1.2',
                       color: '#0F1114',
@@ -366,16 +375,12 @@ const SchoolOfTechnology = () => {
       {/* Coming Soon Popup Modal */}
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white rounded-lg p-8 max-w-sm w-full shadow-2xl transform transition-all animate-pop-in">
-            <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-[#D4EDFA] rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-[#713593]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2 font-['DM_Sans']">Coming Soon!</h3>
-              <p className="text-gray-600 mb-6 font-['Lato']">We're working hard to bring this area of expertise to you. Stay tuned!</p>
+          <div className="bg-white rounded-3xl p-8 max-w-sm w-full shadow-2xl transform transition-all animate-pop-in">
+            <div className="flex flex-col items-center text-center py-4">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6 font-['DM_Sans']">Coming Soon!</h3>
               <button
                 onClick={() => setShowPopup(false)}
-                className="px-6 py-2 bg-[#713593] text-white rounded-full font-semibold hover:bg-opacity-90 transition-colors font-['DM_Sans']"
+                className="px-8 py-2 bg-[#713593] text-white rounded-full font-semibold hover:bg-opacity-90 transition-colors font-['DM_Sans']"
               >
                 Got it
               </button>

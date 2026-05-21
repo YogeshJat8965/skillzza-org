@@ -231,25 +231,48 @@ const SolutionSkillStudio = () => {
                 }
 
                 @media (max-width: 767px) {
+                  .sss-tabs-container {
+                    display: grid !important;
+                    grid-template-columns: repeat(2, 1fr) !important;
+                    gap: 8px !important;
+                    padding: 10px !important;
+                  }
                   .sss-tab-btn {
-                                        font-size: 11px !important;
-                    padding: 8px 14px !important;
+                    font-size: 12px !important;
+                    padding: 8px 6px !important;
+                    min-width: 0 !important;
+                    width: 100% !important;
+                    white-space: normal !important;
+                    word-break: break-word !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    line-height: 1.2 !important;
+                    height: 48px !important;
+                    flex: none !important;
+                  }
+                  .sss-tab-btn:last-child {
+                    grid-column: span 2 !important;
                   }
                   .sss-content-box {
-                    padding: 20px 16px !important;
+                    padding: 24px 16px !important;
                   }
                   .sss-title {
-                                        font-size: 21px !important;
+                    font-size: 22px !important;
+                    text-align: center !important;
                   }
                   .sss-subtitle {
                     font-size: 14px !important;
+                    text-align: center !important;
                   }
                   .sss-bullet {
                     font-size: 13px !important;
                   }
                   .sss-cta {
-                    font-size: 13px !important;
-                    padding: 10px 20px !important;
+                    font-size: 14px !important;
+                    padding: 12px 20px !important;
+                    width: 100% !important;
+                    text-align: center !important;
                   }
                 }
             `}</style>
@@ -277,7 +300,7 @@ const SolutionSkillStudio = () => {
                 className={`max-w-[1580px] mx-auto px-4 sm:px-8 lg:px-[173px] ${isVisible.tabs ? 'animate-scale-in-up' : 'opacity-0'}`}
             >
                 <div
-                    className="flex flex-wrap justify-center gap-3 sm:gap-5 md:gap-6 py-3 md:py-4 px-3 sm:px-6"
+                    className="sss-tabs-container flex flex-wrap justify-center gap-3 sm:gap-5 md:gap-6 py-3 md:py-4 px-3 sm:px-6"
                     style={{
                         background: '#F4F4F5',
                         mixBlendMode: 'multiply',

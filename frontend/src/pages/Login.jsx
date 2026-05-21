@@ -21,8 +21,7 @@ function Login() {
       <div className="auth-bg-orb auth-bg-orb--two" />
       <div className="auth-grid">
         <section className="auth-brand">
-          <p className="auth-kicker">Welcome back</p>
-          <h1 className="auth-title">Sign in to your Skillzza account</h1>
+          <h1 className="auth-title">Sign in to Skillzza</h1>
           <p className="auth-copy">
             Continue your learning and collaboration journey with a secure, modern workspace.
           </p>
@@ -175,13 +174,30 @@ function Login() {
 
         .auth-points {
           margin: 24px 0 0;
-          padding-left: 22px;
+          padding-left: 0;
+          list-style: none;
           display: grid;
-          gap: 10px;
+          gap: 12px;
           color: rgba(255, 255, 255, 0.96);
           font-size: 16px;
           line-height: 1.5;
           text-shadow: 0 1px 6px rgba(92, 29, 6, 0.22);
+        }
+
+        .auth-points li {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+        }
+
+        .auth-points li::before {
+          content: '';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #7dd3fc;
+          flex-shrink: 0;
+          margin-top: 7px;
         }
 
         .auth-card-wrap {

@@ -181,7 +181,7 @@ function getReadTime(article) {
 const ArticleSection = ({ heading, paragraphs, index, accent }) => (
   <article className="digest-section-card" style={{ borderBottomColor: `${accent}30` }}>
     <div className="digest-section-head">
-      <span className="digest-section-index" style={{ backgroundColor: `${accent}1A`, color: accent, width: '28px', minWidth: '28px', height: '28px' }}>
+      <span className="hidden md:inline-flex digest-section-index" style={{ backgroundColor: `${accent}1A`, color: accent, width: '28px', minWidth: '28px', height: '28px' }}>
         <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: accent }}></span>
       </span>
       <h2>{heading}</h2>
@@ -245,10 +245,17 @@ function SkillDigestArticlePage() {
                       radial-gradient(1000px 380px at 100% 10%, rgba(207, 44, 46, 0.10), transparent 60%),
                       linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
           border: 1px solid var(--digest-accent-border);
-          border-radius: 28px;
+          border-radius: 16px;
           box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
-          padding: 28px;
+          padding: 20px;
           animation: digestFadeUp 0.55s ease-out both;
+        }
+
+        @media (min-width: 640px) {
+          .digest-hero {
+            border-radius: 28px;
+            padding: 28px;
+          }
         }
 
         .digest-layout {
@@ -261,13 +268,25 @@ function SkillDigestArticlePage() {
         .digest-main {
           display: flex;
           flex-direction: column;
-          gap: 36px;
+          gap: 28px;
+        }
+
+        @media (min-width: 640px) {
+          .digest-main {
+            gap: 36px;
+          }
         }
 
         .digest-section-card {
           border-bottom: 1px solid #e8edf5;
-          padding-bottom: 32px;
+          padding-bottom: 24px;
           animation: digestFadeUp 0.55s ease-out both;
+        }
+
+        @media (min-width: 640px) {
+          .digest-section-card {
+            padding-bottom: 32px;
+          }
         }
 
         .digest-section-card:last-child {
@@ -298,18 +317,31 @@ function SkillDigestArticlePage() {
         .digest-section-card h2 {
           margin: 0;
           font-family: 'DM Sans', sans-serif;
-          font-size: 24px;
+          font-size: 20px;
           font-weight: 700;
           line-height: 1.25;
           color: #0f172a;
         }
 
+        @media (min-width: 640px) {
+          .digest-section-card h2 {
+            font-size: 24px;
+          }
+        }
+
         .digest-section-card p {
           margin: 0 0 12px;
           font-family: 'DM Sans', sans-serif;
-          font-size: 16px;
-          line-height: 1.75;
+          font-size: 15px;
+          line-height: 1.7;
           color: #334155;
+        }
+
+        @media (min-width: 640px) {
+          .digest-section-card p {
+            font-size: 16px;
+            line-height: 1.75;
+          }
         }
 
         .digest-section-card p:last-child {
@@ -365,12 +397,12 @@ function SkillDigestArticlePage() {
 
       <section className="w-full px-4 md:px-8 mt-6">
         <div className="max-w-[1300px] mx-auto">
-          <div className="text-[14px] font-['DM_Sans',sans-serif] mb-3 flex items-center gap-2">
-            <button className="text-[#0070AC] font-bold hover:underline" onClick={() => navigate('/insights/skill-digest')}>
+          <div className="text-[14px] font-['DM_Sans',sans-serif] mb-3 flex flex-wrap items-center gap-y-1.5 gap-x-2">
+            <button className="text-[#0070AC] font-bold hover:underline" onClick={() => navigate('/insights/skill-digest')} style={{ whiteSpace: 'nowrap' }}>
               The Skill Digest
             </button>
-            <span className="text-[#94A3B8]">/</span>
-            <span className="text-[#475569]">Article</span>
+            <span className="text-[#94A3B8]" style={{ whiteSpace: 'nowrap' }}>/</span>
+            <span className="text-[#475569]">{article.title}</span>
           </div>
 
           <div
@@ -381,16 +413,16 @@ function SkillDigestArticlePage() {
             }}
           >
 
-            <h1 className="mt-4 font-['League_Spartan',sans-serif] text-[34px] sm:text-[42px] leading-[1.08] font-bold text-[#0F172A]">
+            <h1 className="mt-3 sm:mt-4 font-['DM_Sans',sans-serif] text-[clamp(24px,2.8vw,52px)] leading-[1.2] font-bold text-[#0F172A]">
               {article.title}
             </h1>
-            <p className="mt-3 font-['DM_Sans',sans-serif] text-[18px] leading-[1.5] font-semibold text-[#334155]">
+            <p className="mt-2 sm:mt-3 font-['DM_Sans',sans-serif] text-[15px] sm:text-[18px] leading-[1.4] sm:leading-[1.5] font-semibold text-[#334155]">
               {article.subtitle}
             </p>
 
-            <div className="mt-5 flex flex-wrap gap-2">
+            <div className="mt-4 sm:mt-5 flex flex-wrap gap-2">
               <span
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.08em]"
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em]"
                 style={{ backgroundColor: `${accent}1A`, color: accent }}
               >
                 <Clock3 size={14} />

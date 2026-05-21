@@ -180,7 +180,7 @@ const Partnerships = () => {
         }
         @media (max-width: 767px) {
           .partnerships-wrapper-section {
-            margin-top: -40px;
+            margin-top: 0px !important;
           }
         }
       `}</style>
@@ -196,7 +196,11 @@ const Partnerships = () => {
               className={`flex-1 max-w-xl lg:text-left text-center ${isVisible.content ? '' : 'opacity-0'}`}
             >
               <h2
-                className={`partnerships-heading mb-4 sm:mb-5 font-[DM_Sans] text-[#0F1114] font-bold leading-tight text-[46px] ${isVisible.content ? 'partner-blur-reveal' : 'opacity-0'}`}
+                className={`partnerships-heading mb-4 sm:mb-5 text-[#0F1114] font-bold leading-tight ${isVisible.content ? 'partner-blur-reveal' : 'opacity-0'}`}
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 'clamp(24px, 2.8vw, 52px)',
+                }}
               >
                 Partnerships For <br className="hidden sm:block" />Impact
               </h2>
