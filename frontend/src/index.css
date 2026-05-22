@@ -25,6 +25,7 @@ html.lenis {
 
 html {
   scroll-behavior: auto;
+  overflow-x: hidden;
 }
 
 body {
@@ -561,7 +562,7 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
   100% { opacity: 1; transform: scale(1); }
 }
 
-/* Tab 4: Hirenest - swing in from top */
+/* Tab 4: Talent Twin - swing in from top */
 @keyframes szImgSwingIn {
   0% { opacity: 0; transform: translateY(-60px) rotate(-8deg) scale(0.85); transform-origin: top center; }
   40% { opacity: 0.9; transform: translateY(10px) rotate(4deg) scale(1.03); }
@@ -608,4 +609,291 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
 @keyframes szDotOrbit3 {
   0%   { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg)   translateX(160px) rotate(0deg); }
   100% { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(360deg) translateX(160px) rotate(-360deg); }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVENESS FIXES (≤ 767px)
+   Desktop layout is COMPLETELY UNTOUCHED.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── GLOBAL MOBILE TYPOGRAPHY ── */
+@media (max-width: 767px) {
+  h1 {
+    font-size: clamp(22px, 6vw, 32px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.5px !important;
+    word-break: break-word;
+  }
+  h2 {
+    font-size: clamp(20px, 5.5vw, 28px) !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.3px !important;
+    word-break: break-word;
+  }
+  h3 {
+    font-size: clamp(16px, 4.5vw, 22px) !important;
+    line-height: 1.25 !important;
+  }
+}
+
+/* ── POTENTIAL METER PAGE ── */
+@media (max-width: 767px) {
+  /* Hero section */
+  .min-h-screen > section:first-child {
+    padding-top: 12px !important;
+  }
+  
+  /* What We Measure - remove min-height */
+  section .min-h-\[620px\] {
+    min-height: auto !important;
+  }
+  
+  /* What You Get - remove min-height */
+  .min-h-\[700px\] {
+    min-height: auto !important;
+  }
+  
+  /* CTA buttons row - stack on very small screens */
+  .flex.items-center.gap-4 > button {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* ── CONTACT US PAGE ── */
+@media (max-width: 767px) {
+  /* Hero section heading */
+  .cu-flow-wrap + section h1,
+  main > section:first-child h1 {
+    font-size: clamp(28px, 7vw, 40px) !important;
+    transform: none !important;
+  }
+  
+  /* Hero section min-height */
+  main > section:first-child {
+    min-height: 320px !important;
+  }
+  
+  main > section:first-child > div:last-child {
+    padding: 0 16px !important;
+  }
+}
+
+/* ── ABOUT PAGE ── */
+@media (max-width: 767px) {
+  .about-banner__content {
+    padding: 40px 16px !important;
+  }
+  
+  .about-overview {
+    padding: 40px 16px 24px !important;
+  }
+  
+  .about-overview__grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  
+  .about-commitment {
+    padding: 24px 16px 40px !important;
+  }
+  
+  .about-commitment__grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .about-commitment__image-wrapper {
+    width: 100% !important;
+    margin-right: 0 !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+  }
+  
+  .about-cta-strip {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    padding: 20px 16px !important;
+    height: auto !important;
+  }
+  
+  .about-cta-strip__inner {
+    flex-direction: column !important;
+    gap: 12px !important;
+    text-align: center !important;
+  }
+  
+  .about-cta-strip__text {
+    font-size: 14px !important;
+  }
+  
+  .about-mv {
+    padding: 40px 16px !important;
+  }
+  
+  .about-mv__container {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  .about-mv__card {
+    padding: 32px 24px !important;
+    border-radius: 24px 0 24px 0 !important;
+  }
+  
+  .about-mv__card--mission,
+  .about-mv__card--vision {
+    max-width: 100% !important;
+    min-height: auto !important;
+  }
+  
+  .about-core-values {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 20px 16px !important;
+  }
+  
+  .about-core-values__image {
+    width: 100% !important;
+  }
+}
+
+/* ── METHODOLOGY PAGE ── */
+@media (max-width: 767px) {
+  /* Hero title */
+  .method-intro-section h2 {
+    font-size: 24px !important;
+  }
+  
+  /* Stat pills */
+  .method-stat-pills > div {
+    font-size: 13px !important;
+    padding: 8px 16px !important;
+  }
+  
+  /* LEARN Framework - image column */
+  .lf-body > div:first-child {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+  
+  .lf-body {
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+  
+  /* Stepper - smaller on mobile */
+  .imp-stepper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px !important;
+  }
+  
+  .imp-step {
+    min-width: 64px !important;
+  }
+  
+  /* Core principles heading */
+  .method-core-grid {
+    padding: 0 16px !important;
+  }
+}
+
+/* ── SOLUTION SKILL STUDIO ── */
+@media (max-width: 767px) {
+  .sss-tab-btn {
+    min-width: 0 !important;
+    white-space: normal !important;
+    padding: 8px 10px !important;
+    font-size: 11px !important;
+  }
+}
+
+/* ── WELCOME POPUP MOBILE ── */
+@media (max-width: 767px) {
+  /* Make popup fit mobile screens */
+  .fixed.inset-0 > div[style*="maxWidth"] {
+    max-width: 92vw !important;
+    margin: 0 auto !important;
+    padding: 24px 16px !important;
+  }
+}
+
+/* ── FOOTER MOBILE ── */
+@media (max-width: 767px) {
+  .footer-main-wrap {
+    padding: 28px 16px 24px !important;
+  }
+  
+  .footer-outer {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .footer-links-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    margin-left: 0 !important;
+    margin-top: 16px !important;
+    gap: 16px !important;
+  }
+  
+  .footer-social-col {
+    grid-column: 1 / -1 !important;
+    margin-left: 0 !important;
+    margin-top: 16px !important;
+  }
+  
+  .footer-bottom-bar {
+    padding: 14px 16px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   EXTRA-SMALL SCREENS (≤ 480px) - Fine-tuning
+   ══════════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  /* Global heading further reduction */
+  h1 {
+    font-size: clamp(20px, 5.5vw, 26px) !important;
+  }
+  h2 {
+    font-size: clamp(18px, 5vw, 24px) !important;
+  }
+  
+  /* CTA buttons - full width stack */
+  .flex.items-center.gap-4 {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .flex.items-center.gap-4 > button,
+  .flex.items-center.gap-4 > a {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  /* About MV cards - tighter padding */
+  .about-mv__card {
+    padding: 24px 18px !important;
+  }
+  
+  .about-mv__heading {
+    font-size: 22px !important;
+  }
+  
+  .about-mv__text {
+    font-size: 14px !important;
+  }
+  
+  /* Methodology stepper */
+  .imp-step {
+    min-width: 56px !important;
+  }
+  
+  .imp-phase-num {
+    font-size: 7px !important;
+  }
 }

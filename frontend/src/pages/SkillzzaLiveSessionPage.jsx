@@ -130,19 +130,20 @@ function SkillzzaLiveSessionPage() {
 
       <section className="w-full px-4 md:px-8 mt-6">
         <div className="max-w-[1300px] mx-auto">
-          <div className="mb-4 flex items-center gap-2 text-[14px] font-['DM_Sans',sans-serif]">
+          <div className="mb-4 flex flex-wrap items-center gap-y-1.5 gap-x-2 text-[14px] font-['DM_Sans',sans-serif]">
             <button
               onClick={() => navigate('/insights/skillzza-live')}
               className="text-[#0070AC] font-bold hover:underline"
+              style={{ whiteSpace: 'nowrap' }}
             >
               Skillzza Live
             </button>
-            <span className="text-[#94A3B8]">/</span>
+            <span className="text-[#94A3B8]" style={{ whiteSpace: 'nowrap' }}>/</span>
             <span className="text-[#475569]">{session.title}</span>
           </div>
 
           <div
-            className="rounded-[24px] border p-6 sm:p-8 lg:p-10 shadow-[0_14px_30px_rgba(15,23,42,0.06)] relative overflow-hidden"
+            className="rounded-[16px] sm:rounded-[24px] border p-5 sm:p-8 lg:p-10 shadow-[0_14px_30px_rgba(15,23,42,0.06)] relative overflow-hidden"
             style={{
               borderColor: `${accent}40`,
               background: `radial-gradient(900px 260px at 0% 0%, ${accent}1F 0%, transparent 58%), linear-gradient(135deg, #ffffff 0%, #f4faff 55%, #f8fcff 100%)`,
@@ -150,37 +151,36 @@ function SkillzzaLiveSessionPage() {
           >
             <div className="absolute right-5 top-5 h-[120px] w-[120px] rounded-full blur-2xl" style={{ backgroundColor: `${accent}22` }} />
 
-
-            <p className="mt-4 font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] uppercase tracking-[0.1em] font-bold" style={{ color: accent }}>
+            <p className="mt-2 sm:mt-4 font-['DM_Sans',sans-serif] text-[13px] sm:text-[15px] uppercase tracking-[0.1em] font-bold" style={{ color: accent }}>
               {session.category}
             </p>
-            <h1 className="mt-4 font-['League_Spartan',sans-serif] text-[36px] sm:text-[44px] leading-[1.05] font-bold text-[#0F172A]">
+            <h1 className="mt-3 sm:mt-4 font-['League_Spartan',sans-serif] text-[25px] sm:text-[36px] md:text-[44px] leading-[1.1] font-bold text-[#0F172A]">
               {session.title}
             </h1>
-            <h2 className="mt-3 font-['DM_Sans',sans-serif] text-[18px] sm:text-[22px] leading-[1.4] font-semibold text-[#334155]">
+            <h2 className="mt-2 sm:mt-3 font-['DM_Sans',sans-serif] text-[15px] sm:text-[18px] md:text-[22px] leading-[1.4] font-semibold text-[#334155]">
               {session.subtitle}
             </h2>
-            <p className="mt-6 max-w-[980px] font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#475569]">
+            <p className="mt-4 sm:mt-6 max-w-[980px] font-['DM_Sans',sans-serif] text-[14px] sm:text-[16px] leading-[1.7] sm:leading-[1.75] text-[#475569]">
               {context.whyNow}
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-5 sm:mt-6 flex flex-wrap gap-2">
               <span
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.08em]"
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em]"
                 style={{ backgroundColor: `${accent}18`, color: accent }}
               >
                 <CalendarClock size={14} />
                 {durationFromId(session.id)}
               </span>
               <span
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.08em]"
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em]"
                 style={{ backgroundColor: `${accent}18`, color: accent }}
               >
                 <Radio size={14} />
                 Session {session.id}
               </span>
               <span
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.08em]"
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em]"
                 style={{ backgroundColor: `${accent}18`, color: accent }}
               >
                 <Sparkles size={14} />
@@ -190,17 +190,17 @@ function SkillzzaLiveSessionPage() {
           </div>
 
           <div className="mt-8 mb-16 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-8 items-start">
-            <div className="space-y-12">
-              <article className="border-b border-gray-100 pb-10 last:border-0 last:pb-0">
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
-                  <h3 className="font-['League_Spartan',sans-serif] text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Session Focus</h3>
+            <div className="space-y-8 md:space-y-12">
+              <article className="border-b border-gray-100 pb-8 md:pb-10 last:border-0 last:pb-0">
+                <div className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6">
+                  <span className="hidden md:inline-block h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
+                  <h3 className="font-['League_Spartan',sans-serif] text-[21px] sm:text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Session Focus</h3>
                 </div>
-                <p className="font-['DM_Sans',sans-serif] text-[16px] leading-[1.8] text-[#334155]">
+                <p className="font-['DM_Sans',sans-serif] text-[15px] sm:text-[16px] leading-[1.7] sm:leading-[1.8] text-[#334155]">
                   {session.desc} This live format is designed for active participation, practical translation, and immediate workplace application of AI skills.
                 </p>
 
-                <div className="mt-6 flex items-end gap-1.5" aria-hidden="true">
+                <div className="mt-5 sm:mt-6 flex items-end gap-1.5" aria-hidden="true">
                   {Array.from({ length: 16 }).map((_, index) => (
                     <span
                       key={`pulse-${index}`}
@@ -214,14 +214,14 @@ function SkillzzaLiveSessionPage() {
                 </div>
               </article>
 
-              <article className="border-b border-gray-100 pb-10 last:border-0 last:pb-0">
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
-                  <h3 className="font-['League_Spartan',sans-serif] text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Learning Outcomes</h3>
+              <article className="border-b border-gray-100 pb-8 md:pb-10 last:border-0 last:pb-0">
+                <div className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6">
+                  <span className="hidden md:inline-block h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
+                  <h3 className="font-['League_Spartan',sans-serif] text-[21px] sm:text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Learning Outcomes</h3>
                 </div>
-                <ul className="space-y-4 pl-0 list-none">
+                <ul className="space-y-2.5 sm:space-y-4 pl-0 list-none">
                   {context.takeaways.map((point) => (
-                    <li key={point} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[16px] leading-[1.8] text-[#334155]">
+                    <li key={point} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[15px] sm:text-[16px] leading-[1.65] sm:leading-[1.8] text-[#334155]">
                       <span className="mt-2.5 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
                       <span>{point}</span>
                     </li>
@@ -229,14 +229,14 @@ function SkillzzaLiveSessionPage() {
                 </ul>
               </article>
 
-              <article className="border-b border-gray-100 pb-10 last:border-0 last:pb-0">
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
-                  <h3 className="font-['League_Spartan',sans-serif] text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Hands-on Exercises</h3>
+              <article className="border-b border-gray-100 pb-8 md:pb-10 last:border-0 last:pb-0">
+                <div className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6">
+                  <span className="hidden md:inline-block h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
+                  <h3 className="font-['League_Spartan',sans-serif] text-[21px] sm:text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Hands-on Exercises</h3>
                 </div>
-                <ul className="space-y-4 pl-0 list-none">
+                <ul className="space-y-2.5 sm:space-y-4 pl-0 list-none">
                   {context.exercises.map((exercise) => (
-                    <li key={exercise} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[16px] leading-[1.8] text-[#334155]">
+                    <li key={exercise} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[15px] sm:text-[16px] leading-[1.65] sm:leading-[1.8] text-[#334155]">
                       <span className="mt-2.5 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
                       <span>{exercise}</span>
                     </li>
@@ -251,14 +251,14 @@ function SkillzzaLiveSessionPage() {
                 style={{ borderColor: `${accent}33` }}
               >
                 <p className="font-['DM_Sans',sans-serif] text-[13px] uppercase tracking-[0.08em] text-[#64748B] font-bold">Live Track</p>
-                <p className="mt-2 font-['DM_Sans',sans-serif] text-[18px] leading-[1.45] font-semibold text-[#0F172A]">{session.category}</p>
-                <p className="mt-2 font-['DM_Sans',sans-serif] text-[15px] leading-[1.65] text-[#475569]">
+                <p className="mt-2 font-['DM_Sans',sans-serif] text-[17px] sm:text-[18px] leading-[1.45] font-semibold text-[#0F172A]">{session.category}</p>
+                <p className="mt-1.5 sm:mt-2 font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] leading-[1.6] sm:leading-[1.65] text-[#475569]">
                   Session {session.id} of {skillzzaLiveSessions.length}
                 </p>
 
                 <div className="flex mt-4">
                   <button
-                    className="w-full sm:w-fit rounded-xl px-5 py-2.5 text-white font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+                    className="w-full rounded-xl px-5 py-2.5 text-white font-['DM_Sans',sans-serif] font-semibold inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-center"
                     style={{ backgroundColor: accent }}
                   >
                     <Activity size={18} />
@@ -274,15 +274,15 @@ function SkillzzaLiveSessionPage() {
                   style={{ borderColor: `${accent}33`, backgroundColor: `${accent}11` }}
                 >
                   <p className="font-['DM_Sans',sans-serif] text-[12px] uppercase tracking-[0.08em] font-bold" style={{ color: accent }}>Next Session</p>
-                  <p className="mt-2 font-['DM_Sans',sans-serif] text-[18px] leading-[1.4] font-semibold text-[#0F172A]">{nextSession.title}</p>
-                  <p className="mt-2 font-['DM_Sans',sans-serif] text-[14px] leading-[1.6] text-[#475569]">{nextSession.subtitle}</p>
+                  <p className="mt-2 font-['DM_Sans',sans-serif] text-[17px] sm:text-[18px] leading-[1.4] font-semibold text-[#0F172A]">{nextSession.title}</p>
+                  <p className="mt-1.5 sm:mt-2 font-['DM_Sans',sans-serif] text-[13.5px] sm:text-[14px] leading-[1.6] text-[#475569]">{nextSession.subtitle}</p>
                 </button>
               )}
 
               <div className="flex">
                 <button
                   onClick={() => navigate('/insights/skillzza-live')}
-                  className="w-full sm:w-fit rounded-xl px-5 py-3 text-white font-['DM_Sans',sans-serif] font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full rounded-xl px-5 py-3 text-white font-['DM_Sans',sans-serif] font-semibold hover:opacity-90 transition-opacity text-center"
                   style={{ backgroundColor: accent }}
                 >
                   Back to All Live Sessions

@@ -2,7 +2,6 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Lenis from 'lenis'
 
-import WelcomePopup from './components/WelcomePopup'
 import Home from './pages/Home'
 import DevelopersPage from './pages/DevelopersPage'
 import About from './pages/About'
@@ -22,7 +21,7 @@ import StudentsUseCase from './pages/StudentsUseCase'
 import InstitutionsUseCase from './pages/InstitutionsUseCase'
 import EnterprisesUseCase from './pages/EnterprisesUseCase'
 import GovernmentUseCase from './pages/GovernmentUseCase'
-import Hirenest from './pages/Hirenest'
+import TalentTwin from './pages/Hirenest'
 import PotentialMeter from './pages/PotentialMeter'
 import XperiencePlatform from './pages/XperiencePlatform'
 import TalentIntelligence from './pages/TalentIntelligence'
@@ -101,7 +100,6 @@ export default function App() {
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors">
       <ScrollToTopOnRouteChange />
-      <WelcomePopup />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/developers/team" element={<DevelopersPage />} />
@@ -130,7 +128,7 @@ export default function App() {
         <Route path="/use-case/enterprises" element={<EnterprisesUseCase />} />
         <Route path="/use-case/government" element={<GovernmentUseCase />} />
 
-        <Route path="/product/hirenest" element={<ProductComingSoon />} />
+        <Route path="/product/talent-twin" element={<TalentTwin />} />
         <Route path="/product/potential-meter" element={<PotentialMeterPage />} />
         <Route path="/product/xperience-platform" element={<XperiencePlatformPage />} />
         <Route path="/product/talent-intelligence" element={<ProductComingSoon />} />

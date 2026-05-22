@@ -109,8 +109,8 @@ const MethodologyStats = () => {
     <section ref={sectionRef} style={{ background: '#C01421', fontFamily: "'Inter', sans-serif", overflow: 'hidden' }}>
       <style>{`
         .mds-heading {
-          text-align: center; color: #fff; font-size: 42px; font-weight: 700;
-          line-height: 1.3; letter-spacing: -0.3px; margin: 0; padding: 40px 24px 0;
+          text-align: center; color: #fff; font-family: 'DM Sans', sans-serif; font-size: clamp(24px, 2.8vw, 52px); font-weight: 700;
+          line-height: 1.2; letter-spacing: -0.3px; margin: 0; padding: 40px 24px 0;
         }
         .mds-grid {
           display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 32px;
@@ -300,9 +300,17 @@ const ImplementationStepper = () => {
           .imp-phase-tag { font-size: 8px; }
         }
         @media (max-width: 480px) {
+          .imp-wrap { padding: 0 16px; }
+          .imp-stepper {
+            justify-content: space-between;
+            overflow-x: hidden;
+            overflow-y: visible;
+            padding-top: 6px;
+          }
           .imp-circle { width: 28px; height: 28px; }
-          .imp-line { top: 13px; }
-          .imp-step-name { display: none; }
+          .imp-line { top: 14px; }
+          .imp-step-name, .imp-phase-num { display: none !important; }
+          .imp-step { min-width: 48px; }
         }
       `}</style>
 
@@ -446,7 +454,7 @@ const LearnFramework = () => {
         /* ── FIX: increased max-width from 1080px to 1200px ── */
         .lf-wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
         .lf-title-box { border-radius: 6px; padding: 22px 56px; text-align: center; margin: 0 auto 60px; display: table; }
-        .lf-title { font-family: 'Playfair Display', Georgia, serif; font-size: 34px; font-weight: 800; color: #0f0f1a; line-height: 1.25; margin: 0; letter-spacing: -0.3px; }
+        .lf-title { font-family: 'DM Sans', sans-serif; font-size: clamp(24px, 2.8vw, 52px); font-weight: 700; color: #0f0f1a; line-height: 1.2; margin: 0; letter-spacing: -0.3px; }
         .lf-body { display: flex; gap: 64px; align-items: center; }
         .lf-right { flex: 1; }
         .lf-item-title { font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 700; color: #6d28d9; line-height: 1.2; margin: 0 0 18px; }
@@ -456,7 +464,25 @@ const LearnFramework = () => {
         .lf-zone { position: absolute; cursor: pointer; background: transparent; }
         .lf-zone:hover { background: transparent; }
         .lf-zone.active { background: transparent; outline: none; }
-        @media (max-width: 768px) { .lf-body { flex-direction: column; gap: 36px; } .lf-title { font-size: 24px; } .lf-item-title { font-size: 24px; } .lf-wrap { padding: 0 20px; } .lf-title-box { padding: 16px 24px; } }
+        @media (max-width: 768px) { 
+          .lf-body { flex-direction: column; gap: 36px; } 
+          .lf-title { font-size: 24px; } 
+          .lf-item-title { font-size: 24px; } 
+          .lf-wrap { padding: 0 20px; } 
+          .lf-title-box { padding: 16px 24px; } 
+          .lf-wheel-col { width: 100% !important; max-width: 280px !important; margin: 0 auto !important; } 
+          
+          .meth-hero-title {
+            font-size: 26px !important;
+            line-height: 1.3 !important;
+          }
+          .method-hero-image {
+            height: 320px !important;
+          }
+          .method-intro-section {
+            padding: 40px 20px !important;
+          }
+        }
       `}</style>
 
       <div className="lf-wrap">
@@ -466,8 +492,26 @@ const LearnFramework = () => {
         </div>
 
         <div className="lf-body">
+          {/* Mobile Tab Selector */}
+          <div className="flex md:hidden justify-center items-center gap-3.5 mb-2 w-full px-2" style={{ zIndex: 10, position: 'relative' }}>
+            {learnData.map((d, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActive(idx)}
+                className={`w-11 h-11 rounded-full flex items-center justify-center font-bold text-[18px] transition-all duration-300 ${
+                  active === idx
+                    ? 'bg-[#6d28d9] text-white shadow-md scale-110'
+                    : 'bg-white text-gray-600 border border-gray-250 hover:bg-gray-50'
+                }`}
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                {d.letter}
+              </button>
+            ))}
+          </div>
+
           {/* Left: image with invisible clickable overlay zones */}
-          <div ref={wheelRef} className="meth-reveal meth-slide-left meth-delay-1" style={{ flexShrink: 0, width: '360px', position: 'relative' }}>
+          <div ref={wheelRef} className="lf-wheel-col meth-reveal meth-slide-left meth-delay-1" style={{ flexShrink: 0, width: '360px', position: 'relative' }}>
             <img
               src={getAssetPath('/framework.png')}
               alt="LEARN Framework Wheel"
@@ -488,7 +532,7 @@ const LearnFramework = () => {
           </div>
 
           {/* Right: content panel updates on click */}
-          <div ref={contentRef} className="lf-right meth-reveal meth-slide-right meth-delay-2">
+          <div ref={contentRef} className="lf-right meth-reveal meth-slide-right meth-delay-2 w-full">
             <h3 className="lf-item-title">{item.title}</h3>
             <p className="lf-item-desc">{item.desc}</p>
             <div>
@@ -572,7 +616,7 @@ const OurMethodology = () => {
       {/* Hero Section */}
       {/* Top: white bg with title */}
       <section style={{ backgroundColor: '#fff', padding: '48px 24px 32px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
-        <h1 ref={heroTitleRef} className="meth-reveal meth-fade-up" style={{ fontSize: '38px', fontWeight: '700', color: '#111827', lineHeight: '1.25', letterSpacing: '-0.3px', margin: '0 auto', maxWidth: '700px' }}>
+        <h1 ref={heroTitleRef} className="meth-hero-title meth-reveal meth-fade-up" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', fontWeight: '700', color: '#111827', lineHeight: '1.2', letterSpacing: '-0.3px', margin: '0 auto', maxWidth: '700px' }}>
           The Skillzza Learning Framework
         </h1>
       </section>
@@ -594,7 +638,7 @@ const OurMethodology = () => {
           Transforming Potential Through<br />Science-Backed Learning
         </h2> */}
         <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.75', maxWidth: '100%', margin: '0 auto 40px' }}>
-          We believe that effective skill development requires more than traditional training approaches. Our methodology integrates cognitive science, <br /> industry insights, and adaptive technology to create learning experiences that deliver measurable, lasting results.
+          We believe that effective skill development requires more than traditional training approaches. Our methodology integrates cognitive science, <br className="hidden md:inline" /> industry insights, and adaptive technology to create learning experiences that deliver measurable, lasting results.
         </p>
         <div className="method-stat-pills" style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', justifyContent: 'center', width: '100%', margin: '0 auto' }}>
           {['85%+ Skill Acquisition', '90%+ Learner Satisfaction', '75%+ Career Advancement', '95%+ Employer Satisfaction'].map((stat, i) => (
@@ -619,6 +663,14 @@ const OurMethodology = () => {
         }
         @media (max-width: 480px) {
           .method-hero-image { height: 240px !important; }
+        }
+      `}</style>
+      <style>{`
+        @media (max-width: 767px) {
+          .meth-hero-title {
+            font-size: clamp(24px, 6vw, 32px) !important;
+            padding: 0 16px !important;
+          }
         }
       `}</style>
 
@@ -663,19 +715,31 @@ const OurMethodology = () => {
 
           @media (max-width: 768px) {
             .method-core-grid {
-              grid-template-columns: 1fr;
+              grid-template-columns: 1fr 1fr !important;
               gap: 12px;
               padding: 0 16px;
             }
 
             .method-core-card {
-              padding: 30px 16px 24px;
+              padding: 24px 12px 20px;
             }
 
             .method-core-shape {
               top: 58% !important;
               height: 56% !important;
               opacity: 0.55;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .method-core-grid {
+              gap: 8px;
+            }
+            .method-core-card {
+              padding: 20px 10px 16px !important;
+            }
+            .method-core-card p {
+              font-size: 12px !important;
             }
           }
         `}</style>
@@ -701,7 +765,7 @@ const OurMethodology = () => {
 
         {/* Title */}
         <h2 ref={coreTitleRef} className="meth-reveal meth-fade-up" style={{
-          textAlign: 'center', fontSize: '36px', fontWeight: '700',
+          textAlign: 'center', fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', fontWeight: '700',
           color: '#111', marginBottom: '32px', letterSpacing: '-0.3px',
         }}>
           Our Core Principles

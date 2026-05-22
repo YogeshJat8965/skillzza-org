@@ -248,7 +248,8 @@ function InsightsPage() {
                   slug: 'scores-to-skills-ai-inclusive-hiring',
                   title: "From Scores to Skills",
                   desc: "Learn how modern enterprises are shifting from traditional score-based filtering to AI-powered skill assessments, significantly improving hiring inclusivity, reducing bias, and finding the right organizational fit for every role.",
-                  image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                  objectPosition: "center 20%"
                 },
                 {
                   id: 5,
@@ -282,6 +283,7 @@ function InsightsPage() {
                         src={card.image}
                         alt={card.title}
                         className={`w-full h-full object-cover transition-transform duration-700 ${isClickable ? 'group-hover:scale-110' : ''}`}
+                        style={{ objectPosition: card.objectPosition || 'center' }}
                       />
                       {/* Subtle gradient overlay on image */}
                       {isClickable && (

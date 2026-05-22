@@ -233,12 +233,12 @@ const caseStudyContent = {
 }
 
 const SectionCard = ({ title, children, accent = '#CF2C2E' }) => (
-  <article className="border-b border-gray-100 pb-10 last:border-0 last:pb-0">
-    <div className="flex items-center gap-4 mb-6">
-      <span className="h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
-      <h3 className="font-['League_Spartan',sans-serif] text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">{title}</h3>
+  <article className="border-b border-gray-100 pb-8 md:pb-10 last:border-0 last:pb-0">
+    <div className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6">
+      <span className="hidden md:inline-block h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
+      <h3 className="font-['DM_Sans',sans-serif] text-[21px] sm:text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">{title}</h3>
     </div>
-    <div className="font-['DM_Sans',sans-serif] text-[16px] md:text-[17px] leading-[1.85] text-[#334155] space-y-5">
+    <div className="font-['DM_Sans',sans-serif] text-[15px] sm:text-[16px] md:text-[17px] leading-[1.7] sm:leading-[1.85] text-[#334155] space-y-4 sm:space-y-5">
       {children}
     </div>
   </article>
@@ -302,19 +302,20 @@ function InsightCaseStudyPage() {
 
       <section className="w-full px-4 md:px-8 mt-6">
         <div className="max-w-[1280px] mx-auto">
-          <div className="mb-4 flex items-center gap-2 text-[14px] font-['DM_Sans',sans-serif]">
+          <div className="mb-4 flex flex-wrap items-center gap-y-1.5 gap-x-2 text-[14px] font-['DM_Sans',sans-serif]">
             <button
               onClick={() => navigate('/insights/skill-blueprint')}
               className="text-[#0070AC] font-bold hover:underline"
+              style={{ whiteSpace: 'nowrap' }}
             >
               Skill Blueprint
             </button>
-            <span className="text-[#94A3B8]">/</span>
+            <span className="text-[#94A3B8]" style={{ whiteSpace: 'nowrap' }}>/</span>
             <span className="text-[#475569]">{data.title}</span>
           </div>
 
           <div
-            className="rounded-[24px] border p-6 sm:p-8 lg:p-10 shadow-[0_14px_30px_rgba(15,23,42,0.06)] relative overflow-hidden"
+            className="rounded-[16px] sm:rounded-[24px] border p-5 sm:p-8 lg:p-10 shadow-[0_14px_30px_rgba(15,23,42,0.06)] relative overflow-hidden"
             style={{
               borderColor: `${accent}33`,
               background: `radial-gradient(800px 240px at 0% 0%, ${accent}1A 0%, transparent 58%), linear-gradient(135deg, #ffffff 0%, #fffaf7 56%, #f8faff 100%)`,
@@ -322,29 +323,27 @@ function InsightCaseStudyPage() {
           >
             <div className="absolute right-6 top-6 h-[110px] w-[110px] rounded-full blur-2xl" style={{ backgroundColor: `${accent}22` }} />
 
-
-
-            <p className="mt-4 font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] uppercase tracking-[0.1em] font-bold" style={{ color: accent }}>
+            <p className="mt-2 sm:mt-4 font-['DM_Sans',sans-serif] text-[13px] sm:text-[15px] uppercase tracking-[0.1em] font-bold" style={{ color: accent }}>
               {data.category}
             </p>
-            <p className="mt-2 font-['DM_Sans',sans-serif] text-[15px] text-[#475569]">
+            <p className="mt-1 sm:mt-2 font-['DM_Sans',sans-serif] text-[13px] sm:text-[15px] text-[#475569]">
               {data.categorySubtitle}
             </p>
-            <h1 className="mt-4 font-['League_Spartan',sans-serif] text-[36px] sm:text-[44px] leading-[1.05] font-bold text-[#0F172A]">
+            <h1 className="mt-3 sm:mt-4 font-['DM_Sans',sans-serif] text-[clamp(24px,2.8vw,52px)] leading-[1.2] font-bold text-[#0F172A]">
               {data.title}
             </h1>
-            <h2 className="mt-3 font-['DM_Sans',sans-serif] text-[18px] sm:text-[22px] leading-[1.4] font-semibold text-[#334155]">
+            <h2 className="mt-2 sm:mt-3 font-['DM_Sans',sans-serif] text-[15px] sm:text-[18px] md:text-[22px] leading-[1.4] font-semibold text-[#334155]">
               {data.subtitle}
             </h2>
-            <p className="mt-6 max-w-[1000px] font-['DM_Sans',sans-serif] text-[16px] leading-[1.75] text-[#475569]">
+            <p className="mt-4 sm:mt-6 max-w-[1000px] font-['DM_Sans',sans-serif] text-[14px] sm:text-[16px] leading-[1.7] sm:leading-[1.75] text-[#475569]">
               {data.intro}
             </p>
 
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="mt-5 sm:mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
               {data.highlights.map((item) => (
-                <div key={item.label} className="rounded-xl border p-3" style={{ borderColor: `${accent}33`, backgroundColor: softAccent }}>
-                  <p className="font-['DM_Sans',sans-serif] text-[20px] font-bold leading-none" style={{ color: accent }}>{item.value}</p>
-                  <p className="font-['DM_Sans',sans-serif] text-[12px] text-[#475569] mt-1">{item.label}</p>
+                <div key={item.label} className="rounded-xl border p-2.5 sm:p-3" style={{ borderColor: `${accent}33`, backgroundColor: softAccent }}>
+                  <p className="font-['DM_Sans',sans-serif] text-[16px] sm:text-[20px] font-bold leading-none" style={{ color: accent }}>{item.value}</p>
+                  <p className="font-['DM_Sans',sans-serif] text-[10px] sm:text-[12px] text-[#475569] mt-1 sm:mt-1.5">{item.label}</p>
                 </div>
               ))}
             </div>
@@ -512,19 +511,19 @@ function InsightCaseStudyPage() {
               </>
             )}
 
-            <article className="rounded-2xl border p-6" style={{ borderColor: `${accent}33`, backgroundColor: softAccent }}>
+            <article className="rounded-2xl border p-5 sm:p-6" style={{ borderColor: `${accent}33`, backgroundColor: softAccent }}>
               <p className="font-['DM_Sans',sans-serif] text-[13px] uppercase tracking-[0.08em] font-bold" style={{ color: accent }}>AI Readiness Signal</p>
               <ul className="mt-3 space-y-3 pl-0 list-none">
                 {strategicSignals.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
-                    <span className="mt-1" style={{ color: accent }}><BrainCircuit size={15} /></span>
-                    <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[1.55] text-[#334155]">{item}</span>
+                    <span className="mt-1 flex-shrink-0" style={{ color: accent }}><BrainCircuit size={15} /></span>
+                    <span className="font-['DM_Sans',sans-serif] text-[13.5px] sm:text-[14px] leading-[1.5] sm:leading-[1.55] text-[#334155]">{item}</span>
                   </li>
                 ))}
               </ul>
             </article>
 
-            <article className="rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm mt-8">
+            <article className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 md:p-8 shadow-sm mt-8">
               <p className="font-['DM_Sans',sans-serif] text-[15px] text-[#475569] mb-4">
                 Explore the other Skill Blueprint case study for a complete AI-powered workforce transformation perspective.
               </p>

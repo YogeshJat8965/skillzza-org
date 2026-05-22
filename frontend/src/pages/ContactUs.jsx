@@ -65,6 +65,7 @@ function ContactUs() {
   return (
     <main style={{ background: '#ffffff', minHeight: '100vh' }}>
       <section
+        className="cu-hero-section"
         style={{
           position: 'relative',
           minHeight: '480px',
@@ -85,6 +86,7 @@ function ContactUs() {
         />
 
         <div
+          className="cu-hero-content"
           style={{
             position: 'relative',
             zIndex: 1,
@@ -95,6 +97,7 @@ function ContactUs() {
           }}
         >
           <h1
+            className="cu-hero-heading"
             style={{
               margin: 0,
               color: '#ffffff',
@@ -118,7 +121,7 @@ function ContactUs() {
         <div className="cu-flow-bg-orb cu-flow-bg-orb--two" />
 
         <div className="cu-flow-inner">
-          <h2 className="cu-flow-title">Join the Skillzza</h2>
+          <h2 className="cu-flow-title">Join Skillzza</h2>
 
 
 
@@ -785,6 +788,29 @@ function ContactUs() {
 
           .cu-prev-btn {
             min-width: 108px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .cu-hero-section {
+            min-height: 320px !important;
+          }
+          .cu-hero-content {
+            padding: 0 16px !important;
+          }
+          .cu-hero-heading {
+            font-size: clamp(28px, 7vw, 40px) !important;
+            transform: none !important;
+            max-width: 100% !important;
+          }
+          .cu-flow-title {
+            font-size: clamp(24px, 5.5vw, 34px) !important;
+          }
+          .cu-phone-row {
+            grid-template-columns: 1fr !important;
+          }
+          .cu-code {
+            width: 100% !important;
           }
         }
       `}</style>

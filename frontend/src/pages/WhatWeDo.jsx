@@ -100,7 +100,7 @@ const WhatWeDo = () => {
       image: getAssetPath('/talent.png'),
       imageLeft: false,
       screenBg: '#fff5f5',
-      description: 'HireNest bridges the gap between skill development and employment by connecting AI-verified, role-ready talent with enterprises, institutions, and employers seeking future-ready professionals.',
+      description: 'Talent Twin bridges the gap between skill development and employment by connecting AI-verified, role-ready talent with enterprises, institutions, and employers seeking future-ready professionals.',
       listTitle: 'Strategic expertise',
       items: [
         'AI-Verified Talent Profiles.',
@@ -178,23 +178,61 @@ const WhatWeDo = () => {
             margin-left: 0 !important;
           }
           .pillar-tabs {
-            justify-content: center !important;
-            flex-wrap: wrap !important;
-            overflow-x: visible !important;
-            padding: 12px 0 !important;
-            gap: 10px !important;
+            justify-content: flex-start !important;
+            flex-wrap: nowrap !important;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            padding: 12px 16px !important;
+            gap: 8px !important;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+          }
+          .pillar-tabs::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
           }
           .pillar-tabs > button {
-            flex: 1 1 calc(50% - 10px) !important;
-            max-width: calc(50% - 10px) !important;
-            min-width: 150px !important;
-            text-align: center !important;
+            flex: 0 0 auto !important;
+            max-width: none !important;
+            min-width: auto !important;
+            white-space: nowrap !important;
+            padding: 8px 16px !important;
+            font-size: 13.5px !important;
           }
-        }
-        @media (max-width: 480px) {
-          .pillar-tabs > button {
-            flex-basis: 100% !important;
-            max-width: 100% !important;
+          .wwd-hero-title {
+            font-size: 25px !important;
+            line-height: 1.3 !important;
+            padding: 0 12px;
+          }
+          .wwd-hero-desc {
+            font-size: 14px !important;
+            margin-bottom: 32px !important;
+            padding: 0 12px;
+          }
+          .wwd-pillars-title {
+            font-size: 28px !important;
+          }
+          .wwd-screenshot-wrapper {
+            width: 100% !important;
+            margin-left: 0 !important;
+            padding: 16px !important;
+          }
+          .wwd-text-col {
+            width: 100% !important;
+            padding: 0 16px !important;
+          }
+          .wwd-text-col h3 {
+            font-size: 24px !important;
+            margin-bottom: 12px !important;
+          }
+          .wwd-text-col p {
+            font-size: 14px !important;
+            line-height: 1.65 !important;
+          }
+          .wwd-text-col ul li {
+            font-size: 14px !important;
+          }
+          .wwd-wrap-pad {
+            padding: 0 20px !important;
           }
         }
       `}</style>
@@ -211,17 +249,17 @@ const WhatWeDo = () => {
         overflow: 'hidden',
       }}>
         <h1 style={{
-          fontSize: '34px', fontWeight: '700', color: '#0f172a',
-          lineHeight: '1.25', margin: '0 auto 18px', maxWidth: '760px',
+          fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', fontWeight: '700', color: '#0f172a',
+          lineHeight: '1.2', margin: '0 auto 18px', maxWidth: '760px',
           letterSpacing: '-0.3px',
-        }} className="wwd-reveal wwd-fade-up">
-          Bridging Education and Employment with <br /> Role-Ready Skills
+        }} className="wwd-reveal wwd-fade-up wwd-hero-title">
+          Bridging Education and Employment with <br className="hidden md:inline" /> Role-Ready Skills
         </h1>
 
         <p style={{
           fontSize: '15px', color: '#64748b', lineHeight: '1.75',
           maxWidth: '580px', margin: '0 auto 52px',
-        }} className="wwd-reveal wwd-fade-up wwd-delay-1">
+        }} className="wwd-reveal wwd-fade-up wwd-delay-1 wwd-hero-desc">
           Bridging the gap between education and employment, Skillzza empowers professionals,
           institutions, and enterprises with real-world capabilities. We combine AI-driven intelligence,
           immersive learning, and role-based simulations to create a future-ready workforce.
@@ -230,7 +268,7 @@ const WhatWeDo = () => {
         <div style={{ maxWidth: '1020px', margin: '0 auto' }} className="wwd-reveal wwd-scale-up wwd-delay-2">
           <img
             src={getAssetPath('/maskgroup.png')}
-            alt="Assess Learn Simulate HireNest"
+            alt="Assess Learn Simulate Talent Twin"
             style={{ width: '100%', height: 'auto', objectFit: 'contain', display: 'block' }}
           />
         </div>
@@ -238,11 +276,11 @@ const WhatWeDo = () => {
 
       {/* ── Four Core Pillars Section ── */}
       <section style={{ background: '#fff', fontFamily: 'Inter, sans-serif', paddingBottom: 80 }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 48px' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 48px' }} className="wwd-wrap-pad">
 
           {/* Header */}
           <div style={{ textAlign: 'center', padding: '64px 0 48px' }} className="wwd-reveal wwd-fade-up">
-            <h2 style={{ fontSize: 42, fontWeight: 800, color: '#111827', lineHeight: 1.2, margin: 0 }}>
+            <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', fontWeight: 800, color: '#111827', lineHeight: 1.2, margin: 0 }} className="wwd-pillars-title">
               The Four Core Pillars
             </h2>
           </div>
@@ -324,7 +362,7 @@ const WhatWeDo = () => {
               )}
 
               {/* Screenshot */}
-              <div style={{
+              <div className="wwd-screenshot-wrapper" style={{
                 flex: '0 0 52%',
                 position: 'relative',
                 zIndex: 1,
@@ -344,7 +382,7 @@ const WhatWeDo = () => {
               </div>
 
               {/* Text */}
-              <div style={{ flex: 1, zIndex: 1 }}>
+              <div className="wwd-text-col" style={{ flex: 1, zIndex: 1 }}>
                 <h3 style={{
                   fontSize: 32, fontWeight: 800, color: pillar.titleColor,
                   marginBottom: 16, lineHeight: 1.2, fontFamily: 'Inter, sans-serif',

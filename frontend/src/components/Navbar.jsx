@@ -21,7 +21,7 @@ import sotAiImg from '../assets/card grid/School of Technology/school of Ai.png'
 import sotSustainImg from '../assets/card grid/School of Technology/gssca.jpeg';
 import sotDigitalImg from '../assets/card grid/School of Technology/Centre of Digital & Design Excellence.png';
 import sotAerialImg from '../assets/card grid/School of Technology/Institute of Aerial Intelligence.png';
-import companyRightImage from '../assets/card grid/company /image.png';
+import companyRightImage from '../assets/card grid/WhatsApp Image 2026-04-25 at 6.49.26 PM.jpeg';
 import insightsAgentic1 from '../assets/card grid/insights/Agentic Workforce Index 2026 1.webp';
 import insightsAgentic2 from '../assets/card grid/insights/Agentic Workforce Index 2026 2.webp';
 import insightsPodcast1 from '../assets/card grid/insights/podcast 1.webp';
@@ -30,7 +30,7 @@ import insightsLive1 from '../assets/card grid/insights/skillzza-live 1.png';
 import insightsLive2 from '../assets/card grid/insights/skillzza-live 2.jpg.jpeg';
 import insightsTalent1 from '../assets/card grid/insights/-talent-research 1.png';
 import insightsTalent2 from '../assets/card grid/insights/-talent-research2.jpg.jpeg';
-import insightsBlueprint1 from '../assets/card grid/insights/From Scores to Skills blue.webp';
+import insightsBlueprint1 from '../assets/card grid/insights/From Scores to Skills premium.png';
 import insightsBlueprint2 from '../assets/card grid/insights/AI-Powered Reskilling Initiatives blue.jpg.jpeg';
 import insightsDigest1 from '../assets/card grid/insights/digest 1.webp';
 import insightsDigest2 from '../assets/card grid/insights/digest 2.jpg.jpeg';
@@ -118,12 +118,12 @@ const navItems = [
         illustrationId: 'ai-hacknex',
       },
       {
-        name: 'Hirenest',
+        name: 'Talent Twin',
         subtitle: 'Campus hiring marketplace',
-        link: '/product/hirenest',
+        link: '/product/talent-twin',
         heading: 'Connecting talent.',
         headingHighlight: 'Creating opportunities.',
-        description: 'Hirenest is your campus hiring marketplace that connects students with top companies and the right opportunities.',
+        description: 'Talent Twin is your campus hiring marketplace that connects students with top companies and the right opportunities.',
         bullets: [
           'Discover verified job & internship opportunities',
           'Connect with top recruiters',
@@ -131,7 +131,7 @@ const navItems = [
         ],
         ctaText: 'Explore Opportunities',
         ctaLink: null,
-        illustrationId: 'hirenest',
+        illustrationId: 'Talent Twin',
       },
       {
         name: 'Skillzza Persona',
@@ -177,7 +177,7 @@ const navItems = [
   },
   */
   {
-    name: 'Vedya K-12',
+    name: 'Skillzza K-12',
     layout: 'k12-vidya',
     width: 780,
     eyebrow: 'K-12 Vidya AI - school intelligence ecosystem',
@@ -189,7 +189,7 @@ const navItems = [
       { name: 'Vidya AI Virtual Internship', link: 'https://cognifyai.skillzza.com/', desc: 'Real-world AI, coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Flagship', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Skill Studio for Students', link: 'https://skillzza-club.vercel.app/', desc: 'Gamified AI-powered skill tracks - ML basics, robotics, sustainability, drone tech, quantum intro.', pill: 'Grades 6-12', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Teacher AI Upskill Lab', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Structured AI literacy programme for educators - pedagogy, tools, classroom integration, assessments.', pill: 'CPD certified', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'CCMM - AI Maturity for Schools', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Continuous Capability & Maturity Model - benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'CCMM - AI Maturity for Schools', link: 'https://cognifyai.skillzza.com/for-school.html', desc: 'Continuous Capability & Maturity Model - benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Campus Connect - K12', link: 'https://cognifyai.skillzza.com/#', desc: 'Links top-performing school students directly to university and early internship pipelines.', pill: 'Bridge', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Future Founders Track', link: 'https://cognifyai.skillzza.com/#', desc: 'Entrepreneurship & innovation bootcamp - problem-solving, pitching, and startup thinking for teens.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
     ],
@@ -314,7 +314,7 @@ const navItems = [
     cta: {
       text: 'Partner with Skillzza',
       sub: '- universities, enterprises and governments building future-ready talent.',
-      link: '/contact-us',
+      link: '/company/partnerships',
     },
     companyItems: [
       { name: 'About Us', link: '/company/about', desc: 'Our story, mission & vision', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)' },
@@ -327,10 +327,10 @@ const navItems = [
       { name: 'Responsible AI', link: '/company/responsible-ai', desc: 'Our commitment to ethical AI', span: 2, iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)' },
     ],
     serviceItems: [
-      { name: 'Institution Transformation', desc: 'Curriculum redesign & AI integration for universities.', link: null },
-      { name: 'Enterprise Skill Audit', desc: 'Workforce gap analysis & 90-day upskilling roadmap.', link: null },
-      { name: 'Govt & CSR Programmes', desc: 'National skill missions & youth employment schemes.', link: null },
-      { name: 'Talent Intelligence Reports', desc: 'Workforce analytics & sector skill signals.', link: null },
+      { name: 'Institution Transformation', desc: 'Curriculum redesign & AI integration for universities.', link: '/company/partnerships#education' },
+      { name: 'Enterprise Skill Audit', desc: 'Workforce gap analysis & 90-day upskilling roadmap.', link: '/company/partnerships#corporate' },
+      { name: 'Govt & CSR Programmes', desc: 'National skill missions & youth employment schemes.', link: '/company/partnerships#government' },
+      { name: 'Talent Intelligence Reports', desc: 'Workforce analytics & sector skill signals.', link: '/company/partnerships#partner' },
     ],
   },
 ];
@@ -424,7 +424,7 @@ const Eyebrow = ({ text, dotColor, gradient }) => (
 /* ───────────────────────────────────────────────────────────────
    CtaBar - gradient CTA strip
 ─────────────────────────────────────────────────────────────── */
-const CtaBar = ({ cta, gradient }) => {
+const CtaBar = ({ cta, gradient, onClose }) => {
   const [hovered, setHovered] = useState(false);
 
   if (cta.secondary) {
@@ -446,6 +446,7 @@ const CtaBar = ({ cta, gradient }) => {
           <a
             key={btn.text}
             href={getRoutePath(btn.link)}
+            onClick={() => onClose?.()}
             className="sz-dual-cta"
             style={{
               background: 'linear-gradient(120deg, #ffffff 0%, #fef2f2 35%, #f3e8ff 70%, #ffffff 100%)',
@@ -535,6 +536,7 @@ const CtaBar = ({ cta, gradient }) => {
   return (
     <a
       href={getRoutePath(cta.link)}
+      onClick={() => onClose?.()}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
@@ -1113,7 +1115,7 @@ const CompactGridDropdown = ({ navItem }) => (
   </div>
 );
 
-const CompactItem = ({ item, index }) => {
+const CompactItem = ({ item, index, onClose }) => {
   const [hovered, setHovered] = useState(false);
   const glowRaw = item.iconGradient
     ? `rgba(${item.iconGradient.includes('fee2e2') ? '239,68,68' :
@@ -1127,7 +1129,13 @@ const CompactItem = ({ item, index }) => {
   return (
     <a
       href={item.link ? getRoutePath(item.link) : undefined}
-      onClick={!item.link ? e => e.preventDefault() : undefined}
+      onClick={(e) => {
+        if (!item.link) {
+          e.preventDefault();
+          return;
+        }
+        onClose?.();
+      }}
       className="sz-compact-item"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -1319,17 +1327,17 @@ const AgenticAIDropdown = ({ navItem }) => {
    K12VidyaDropdown - banner header + 3-column card grid
 ═══════════════════════════════════════════════════════════════ */
 
-const K12VidyaDropdown = ({ navItem }) => (
+const K12VidyaDropdown = ({ navItem, onClose }) => (
   <div>
     <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} badge={navItem.badge} />
     {/* 3-col card grid */}
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
-      {navItem.items.map((item, i) => <K12Card key={item.name} item={item} index={i} />)}
+      {navItem.items.map((item, i) => <K12Card key={item.name} item={item} index={i} onClose={onClose} />)}
     </div>
   </div>
 );
 
-const K12Card = ({ item }) => {
+const K12Card = ({ item, onClose }) => {
   const [h, setH] = useState(false);
   const glowRaw = item.iconShadow?.match(/rgba\([^)]+\)/)?.[0] || 'rgba(20,184,166,0.15)';
   const glowMid = glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.22)');
@@ -1339,7 +1347,13 @@ const K12Card = ({ item }) => {
       href={item.link || undefined}
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? 'noopener noreferrer' : undefined}
-      onClick={!item.link ? e => e.preventDefault() : undefined}
+      onClick={(e) => {
+        if (!item.link) {
+          e.preventDefault();
+          return;
+        }
+        onClose?.();
+      }}
       onMouseEnter={() => setH(true)}
       onMouseLeave={() => setH(false)}
       style={{
@@ -1411,11 +1425,18 @@ const ServicesGridDropdown = ({ navItem }) => (
   </div>
 );
 
-const SvcCard = ({ item }) => {
+const SvcCard = ({ item, onClose }) => {
   const [h, setH] = useState(false);
   return (
     <a
       href={item.link || undefined}
+      onClick={(e) => {
+        if (!item.link) {
+          e.preventDefault();
+          return;
+        }
+        onClose?.();
+      }}
       className="sz-svc-card"
       onMouseEnter={() => setH(true)}
       onMouseLeave={() => setH(false)}
@@ -1471,7 +1492,7 @@ const SvcCard = ({ item }) => {
    CompanyMegaDropdown - About + Services in one dropdown
 ═══════════════════════════════════════════════════════════════ */
 
-const CompanyMegaDropdown = ({ navItem }) => (
+const CompanyMegaDropdown = ({ navItem, onClose }) => (
   <div>
     <div
       style={{
@@ -1489,12 +1510,12 @@ const CompanyMegaDropdown = ({ navItem }) => (
           }}
         >
           {(navItem.companyItems || []).map((item, i) => (
-            <CompactItem key={item.name} item={item} index={i} />
+            <CompactItem key={item.name} item={item} index={i} onClose={onClose} />
           ))}
         </div>
         {navItem.cta && (
           <div style={{ paddingTop: '6px' }}>
-            <CtaBar cta={navItem.cta} accentGradient={navItem.accentGradient} />
+            <CtaBar cta={navItem.cta} accentGradient={navItem.accentGradient} onClose={onClose} />
           </div>
         )}
       </div>
@@ -1505,7 +1526,7 @@ const CompanyMegaDropdown = ({ navItem }) => (
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 10 }}>
           {(navItem.serviceItems || []).map((item, i) => (
-            <SvcCard key={item.name} item={item} index={i} />
+            <SvcCard key={item.name} item={item} index={i} onClose={onClose} />
           ))}
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'flex-end', alignItems: 'center', paddingTop: '8px' }}>
@@ -1533,7 +1554,7 @@ const platformImageMap = {
   'xperience-platform': platformImg2,
   'talent-intelligence': platformImg3,
   'ai-hacknex': platformImg4,
-  'hirenest': platformImg5,
+  'Talent Twin': platformImg5,
   'skillzza-persona': platformImg6,
 };
 
@@ -1543,7 +1564,7 @@ const tabAnimations = [
   'szImgZoomRotate',    // Xperience Platform: zoom + rotate in
   'szImgFlipIn',        // Talent Intelligence: 3D flip in
   'szImgBounceScale',   // AI HackNex: bounce scale
-  'szImgSwingIn',       // Hirenest: swing from top
+  'szImgSwingIn',       // Talent Twin: swing from top
   'szImgElasticPop',    // Skillzza Persona: elastic pop
 ];
 
@@ -1646,15 +1667,13 @@ const PlatformTabsDropdown = ({ navItem }) => {
             {tab.bullets.map((b, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
                 <div style={{
-                  width: 20, height: 20, borderRadius: '50%',
-                  border: '1.5px solid #f87171',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  flexShrink: 0, marginTop: 1,
-                }}>
-                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                    <path d="M2 5L4.2 7L8 3" stroke="#BD1723" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
+                  width: 6, height: 6, borderRadius: '50%',
+                  backgroundColor: '#BD1723',
+                  flexShrink: 0,
+                  marginTop: 6,
+                  marginLeft: 4,
+                  marginRight: 4
+                }} />
                 <span style={{ fontSize: 12.5, color: '#374151', lineHeight: 1.5 }}>{b}</span>
               </div>
             ))}
@@ -1842,7 +1861,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
    MegaDropdown - dispatches to layout-specific component
 ═══════════════════════════════════════════════════════════════ */
 
-const MegaDropdown = ({ navItem, onComingSoon }) => {
+const MegaDropdown = ({ navItem, onComingSoon, onClose }) => {
   const renderers = {
     'platform-tabs': PlatformTabsDropdown,
     'card-grid': CardGridDropdown,
@@ -1857,7 +1876,7 @@ const MegaDropdown = ({ navItem, onComingSoon }) => {
   };
   const Renderer = renderers[navItem.layout];
   if (!Renderer) return null;
-  return <Renderer navItem={navItem} onComingSoon={onComingSoon} />;
+  return <Renderer navItem={navItem} onComingSoon={onComingSoon} onClose={onClose} />;
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -2047,7 +2066,7 @@ const DesktopNavItem = ({ item, onComingSoon }) => {
             />
             {/* Content */}
             <div style={{ padding: '22px 24px 20px' }}>
-              <MegaDropdown navItem={item} onComingSoon={onComingSoon} />
+              <MegaDropdown navItem={item} onComingSoon={onComingSoon} onClose={() => setOpen(false)} />
             </div>
           </div>
         </div>
@@ -2065,7 +2084,10 @@ const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
   const mobileServiceItems = item.serviceItems || [];
   const isCompanyMenu = item.name === 'Company' && mobileCompanyItems.length > 0;
   const mobileSubItems = item.items
-    ? item.items
+    ? item.items.map((subItem) => ({
+        ...subItem,
+        name: subItem.name || subItem.titleLines?.join(' '),
+      }))
     : item.tabs
       ? item.tabs.map(t => ({ name: t.name, link: t.link, desc: t.subtitle }))
       : [...mobileCompanyItems, ...mobileServiceItems];
@@ -2224,6 +2246,15 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
   const [comingSoonText, setComingSoonText] = useState('');
+
+  useEffect(() => {
+    if (comingSoonText) {
+      const timer = setTimeout(() => {
+        setComingSoonText('');
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [comingSoonText]);
 
   return (
     <>
@@ -2429,7 +2460,7 @@ const Navbar = () => {
             position: 'fixed',
             inset: 0,
             zIndex: 1200,
-            background: 'rgba(15, 23, 42, 0.42)',
+            background: 'rgba(0, 0, 0, 0.5)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -2440,34 +2471,53 @@ const Navbar = () => {
             onClick={(e) => e.stopPropagation()}
             style={{
               minWidth: 280,
-              maxWidth: 460,
-              borderRadius: 16,
+              maxWidth: 380,
+              width: '100%',
+              borderRadius: 24,
               background: '#ffffff',
-              border: '1px solid rgba(189,23,35,0.22)',
-              boxShadow: '0 28px 60px rgba(15,23,42,0.26)',
-              overflow: 'hidden',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+              padding: '36px 24px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center',
+              animation: 'szIconPop 0.3s ease-out',
             }}
           >
-            <div style={{ height: 3, background: 'linear-gradient(135deg, #BD1723, #8947B3)' }} />
-            <div style={{ padding: '16px 18px 14px' }}>
-              <div style={{ fontSize: 16, fontWeight: 800, color: '#7f1d1d', marginBottom: 6 }}>Coming Soon</div>
-              <div style={{ fontSize: 13, color: '#334155', lineHeight: 1.5 }}>{comingSoonText}</div>
-              <button
-                onClick={() => setComingSoonText('')}
-                style={{
-                  marginTop: 12,
-                  border: 'none',
-                  borderRadius: 10,
-                  padding: '8px 12px',
-                  background: 'linear-gradient(135deg, #fee2e2, #f3e8ff)',
-                  color: '#7f1d1d',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                }}
-              >
-                Close
-              </button>
-            </div>
+            <h3
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: '24px',
+                fontWeight: 700,
+                color: '#0F1114',
+                margin: '0 0 24px 0',
+              }}
+            >
+              Coming Soon!
+            </h3>
+            <button
+              onClick={() => setComingSoonText('')}
+              style={{
+                border: 'none',
+                borderRadius: '9999px',
+                padding: '10px 32px',
+                background: '#713593',
+                color: '#ffffff',
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: '15px',
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.opacity = '0.9';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.opacity = '1';
+              }}
+            >
+              Got it
+            </button>
           </div>
         </div>
       )}

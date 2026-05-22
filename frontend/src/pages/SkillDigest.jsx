@@ -126,7 +126,7 @@ const SkillDigest = () => {
                     Campus Hiring 2.0: How AI Marketplaces are Matching Job-Ready Talent with Employers
                   </h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Campus recruitment has always been a high-stakes process-for students seeking opportunities and for employers scouting fresh talent. But traditional methods-resume shortlisting, aptitude tests, lengthy interviews-are often inefficient and biased. The rise of AI-powered hiring marketplaces like Hirenest is changing that.
+                    Campus recruitment has always been a high-stakes process-for students seeking opportunities and for employers scouting fresh talent. But traditional methods-resume shortlisting, aptitude tests, lengthy interviews-are often inefficient and biased. The rise of AI-powered hiring marketplaces like Talent Twin is changing that.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     These platforms don't just collect resumes. They offer pre-assessed, job-ready talent pools, where students are evaluated through AI-driven skill tests, behavioral assessments, and project simulations. Employers can filter candidates based on role-specific requirements, making the process faster, fairer, and more data-driven.

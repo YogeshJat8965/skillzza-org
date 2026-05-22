@@ -323,7 +323,7 @@ const ProductCatalog = () => {
         </div>
       </section>
 
-      {/* Hirenest */}
+      {/* Talent Twin */}
       <section className="bg-gradient-to-br from-green-50 to-white py-16">
         <div className="container mx-auto px-6">
           {/* Content and Image Grid */}
@@ -331,11 +331,11 @@ const ProductCatalog = () => {
             {/* Content - Left */}
             <div className="space-y-4">
               <div className="inline-block px-6 py-2 bg-green-500 rounded-full text-sm font-semibold text-white mb-4">
-                HIRENEST
+                Talent Twin
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Hire Smarter, Faster, and Better</h2>
               <p className="text-lg text-gray-700">
-                Hirenest is Skillzza's precision hiring ecosystem, built to bridge the delta between high-potential candidates and opportunity pipelines through real-time, data-backed insights.
+                Talent Twin is Skillzza's precision hiring ecosystem, built to bridge the delta between high-potential candidates and opportunity pipelines through real-time, data-backed insights.
               </p>
               <p className="text-base text-gray-700">
                 It facilitates strategic campus and early-career recruitment by delivering validated learner profiles equipped with performance benchmarks and project portfolios-making intelligent hiring truly scalable.
@@ -344,7 +344,7 @@ const ProductCatalog = () => {
             
             {/* Image - Right */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src={getAssetPath('/career_mentoring_img.jpg')} alt="Hirenest" className="w-full h-96 object-cover" />
+              <img src={getAssetPath('/career_mentoring_img.jpg')} alt="Talent Twin" className="w-full h-96 object-cover" />
             </div>
           </div>
 

@@ -22,6 +22,16 @@ function XperiencePlatformPage() {
   const worksRef = useRef(null)
   const techStackRef = useRef(null)
   const ctaSectionRef = useRef(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkIsMobile()
+    window.addEventListener('resize', checkIsMobile)
+    return () => window.removeEventListener('resize', checkIsMobile)
+  }, [])
 
   // Hero Section Scroll Animation
   useEffect(() => {
@@ -441,7 +451,7 @@ function XperiencePlatformPage() {
 
   const nextTechStack = () => {
     setTechStackIndex((prev) => {
-      const maxIndex = techStackCards.length - 3
+      const maxIndex = isMobile ? techStackCards.length - 1 : techStackCards.length - 3
       return prev < maxIndex ? prev + 1 : prev
     })
   }
@@ -936,10 +946,65 @@ function XperiencePlatformPage() {
           transform: translateY(0);
         }
         
+        /* Default / Desktop Styles for Philosophy cards (Pristine & Untouched!) */
+        .philosophy-track {
+          display: flex;
+          transition: transform 0.7s ease-in-out;
+          gap: 24px !important;
+          transform: translateX(calc(-1 * var(--current-slide) * (100% / 3))) !important;
+        }
+        
         .philosophy-card {
           opacity: 0;
           transform: scale(0.9);
           transition: all 1.3s cubic-bezier(0.16, 1, 0.3, 1);
+          width: calc(33.333% - 12px) !important;
+          min-width: 380px !important;
+          max-width: none !important;
+        }
+        
+        .philosophy-card-inner {
+          width: 100% !important;
+          height: 210px !important;
+        }
+        
+        .philosophy-card-title {
+          font-size: clamp(18px, 1.6vw, 24px) !important;
+          line-height: 1.4 !important;
+          white-space: normal !important; /* ALLOW natural wrapping to prevent text overflow on desktop */
+          padding-left: 24px !important;
+          padding-right: 24px !important;
+        }
+        
+        /* Mobile-Only Overrides for Philosophy cards (100% Isolated!) */
+        @media (max-width: 767px) {
+          .philosophy-track {
+            gap: 0px !important; /* Zero gap ensures perfect 100% translations on mobile */
+            transform: translateX(calc(-1 * var(--current-slide) * 100%)) !important;
+          }
+          
+          .philosophy-card {
+            width: 100% !important;
+            min-width: 100% !important;
+            max-width: 100% !important;
+            padding-left: 12px !important; /* Safe margin from phone screen edges */
+            padding-right: 12px !important;
+            box-sizing: border-box !important;
+          }
+          
+          .philosophy-card-inner {
+            width: 100% !important;
+            height: 135px !important; /* Shorter card height as requested */
+            padding: 16px !important;
+          }
+          
+          .philosophy-card-title {
+            font-size: 15px !important;
+            line-height: 1.4 !important;
+            white-space: normal !important; /* ALLOW text wrapping on mobile so title is NOT clipped! */
+            padding-left: 4px !important;
+            padding-right: 4px !important;
+          }
         }
         
         .philosophy-card.active {
@@ -968,6 +1033,22 @@ function XperiencePlatformPage() {
         .philosophy-description.active {
           opacity: 1;
           transform: translateY(0);
+        }
+        
+        /* Measured Impact Section - Number sizing and premium styling */
+        .impact-number {
+          font-family: 'DM Sans', sans-serif !important;
+          font-weight: 700 !important;
+          font-size: 42px !important; /* Beautiful impact size on mobile */
+          line-height: 1 !important;
+          color: #682D99 !important;
+          transition: transform 0.3s ease;
+        }
+        
+        @media (min-width: 768px) {
+          .impact-number {
+            font-size: 64px !important; /* Extremely premium, huge and impactful size on desktop screens */
+          }
         }
         
         .philosophy-arrows {
@@ -1064,14 +1145,33 @@ function XperiencePlatformPage() {
         
         /* Technology Stack Section Animations */
         .tech-heading {
-          opacity: 0;
-          transform: translateY(-30px);
-          transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+          opacity: 1 !important; /* Instant visibility on mobile ensures no clipping/invisible headings */
+          transform: none !important;
+          font-family: 'DM Sans', sans-serif !important;
+          font-weight: 700 !important;
+          font-size: clamp(24px, 2.8vw, 52px) !important;
+          line-height: 1.2 !important;
+          color: #0F1114 !important;
+          margin-top: 16px !important;
+          margin-bottom: 16px !important;
+          text-align: center !important;
         }
         
-        .tech-heading.active {
-          opacity: 1;
-          transform: translateY(0);
+        @media (min-width: 768px) {
+          .tech-heading {
+            opacity: 0 !important; /* Keep original transition fade flow on desktop */
+            transform: translateY(-30px) !important;
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            font-size: clamp(24px, 2.8vw, 52px) !important;
+            line-height: 1.2 !important;
+            margin-top: 28px !important;
+            margin-bottom: 24px !important;
+          }
+          
+          .tech-heading.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+          }
         }
         
         .tech-card {
@@ -1158,6 +1258,143 @@ function XperiencePlatformPage() {
         .cta-button:nth-child(2) {
           transition-delay: 1.2s;
         }
+
+        /* ── Prepare for the Role Section Layout Classes ── */
+        .role-prep-section {
+          min-height: 610px;
+          padding-top: 48px;
+          padding-bottom: 48px;
+        }
+        .role-prep-heading {
+          font-family: 'DM Sans', sans-serif;
+          font-weight: 700;
+          font-size: clamp(24px, 2.8vw, 52px);
+          line-height: 1.2;
+          letter-spacing: -1.6px;
+          color: #0F1114;
+          margin-bottom: 16px;
+        }
+        .role-prep-subheading {
+          font-family: 'Lato', sans-serif;
+          font-weight: 400;
+          font-size: clamp(14px, 1.2vw, 20px);
+          line-height: 1.6;
+          color: #71717B;
+          margin-bottom: 24px;
+        }
+        .role-prep-image {
+          max-width: 880px;
+          width: 100%;
+          height: auto;
+          margin-bottom: 24px;
+        }
+        .role-prep-buttons {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 24px;
+        }
+        .role-prep-btn {
+          min-width: 230px;
+          padding: 16px 40px;
+          font-size: 18px;
+          font-weight: 600;
+          border-radius: 8px;
+        }
+
+        /* ── Mobile Responsive Fixes ── */
+        @media (max-width: 767px) {
+          .role-prep-section {
+            min-height: auto !important; /* Tight height on mobile! */
+            padding-top: 36px !important;
+            padding-bottom: 36px !important;
+          }
+          
+          .role-prep-heading {
+            font-size: 24px !important; /* Sleek heading on mobile */
+            line-height: 1.3 !important;
+            letter-spacing: -0.8px !important;
+            margin-bottom: 12px !important;
+            text-align: center !important;
+          }
+          
+          .role-prep-subheading {
+            font-size: 15px !important; /* Beautiful smaller text on mobile */
+            line-height: 1.5 !important;
+            margin-bottom: 20px !important;
+            text-align: center !important;
+          }
+          
+          .role-prep-image {
+            max-width: 280px !important; /* Extremely elegant smaller image on mobile to save vertical space! */
+            margin-bottom: 24px !important;
+          }
+          
+          .role-prep-buttons {
+            flex-direction: column !important; /* Stack buttons cleanly on mobile */
+            gap: 12px !important; /* Elegant spacing between buttons */
+            width: 100% !important;
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+          }
+          
+          .role-prep-btn {
+            width: 100% !important; /* Full-width buttons on mobile for standard premium UI */
+            max-width: 280px !important;
+            min-width: 0 !important;
+            padding: 12px 24px !important; /* Tighter padding for mobile buttons */
+            font-size: 15px !important;
+            border-radius: 8px !important;
+          }
+
+          .hero-heading {
+            font-size: clamp(22px, 6vw, 30px) !important;
+            line-height: 1.2 !important;
+          }
+          .section-heading {
+            font-size: clamp(20px, 5.5vw, 28px) !important;
+            line-height: 1.22 !important;
+          }
+          .capabilities-heading {
+            font-size: clamp(20px, 5.5vw, 28px) !important;
+          }
+          .philosophy-heading {
+            font-size: clamp(20px, 5.5vw, 28px) !important;
+          }
+          .works-heading {
+            font-size: clamp(20px, 5.5vw, 28px) !important;
+          }
+          .tech-heading {
+            font-size: clamp(20px, 5.5vw, 28px) !important;
+          }
+          .cta-heading {
+            font-size: clamp(20px, 5.5vw, 28px) !important;
+          }
+          
+          /* How it Works Mobile Adjustments */
+          .works-step {
+            gap: 12px !important;
+          }
+          .works-step-indicator {
+            width: 48px !important;
+            height: 48px !important;
+          }
+          .works-step-title {
+            white-space: normal !important;
+            font-size: 16px !important;
+            line-height: 1.3 !important;
+            text-align: left !important;
+          }
+          .works-step-card {
+            padding: 12px 16px !important;
+            min-height: auto !important;
+          }
+          .works-description {
+            margin-left: 16px !important;
+            margin-right: 16px !important;
+          }
+        }
       `}</style>
 
       <div className="min-h-screen bg-white">
@@ -1205,7 +1442,8 @@ function XperiencePlatformPage() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: '700',
-                    fontSize: '38px',
+                    fontSize: 'clamp(24px, 2.8vw, 52px)',
+                    lineHeight: '1.2',
                     letterSpacing: 'clamp(-1.5px, -0.15vw, -2.1px)',
                     color: '#0F1114'
                   }}
@@ -1221,12 +1459,12 @@ function XperiencePlatformPage() {
                   style={{
                     maxWidth: '100%',
                     textAlign: 'left',
-                    fontFamily: 'DM Sans, sans-serif',
-                    fontWeight: '500',
-                    fontSize: 'clamp(14px, 1.4vw, 18px)',
-                    lineHeight: 'clamp(22px, 2vw, 28px)',
+                    fontFamily: "'Lato', sans-serif",
+                    fontWeight: 400,
+                    fontSize: isMobile ? '16px' : 'clamp(14px, 1.2vw, 20px)',
+                    lineHeight: '1.6',
                     letterSpacing: '0px',
-                    color: '#71717A',
+                    color: '#71717B',
                     opacity: 1
                   }}
                 >
@@ -1300,12 +1538,12 @@ function XperiencePlatformPage() {
               <div className="w-full lg:w-1/2 space-y-6 md:space-y-8 px-4 sm:px-6 md:px-8 lg:px-0 lg:pr-16 xl:pr-24 2xl:pr-32 slide-in-right">
                 <p
                   style={{
-                    fontFamily: 'Lato, sans-serif',
-                    fontWeight: '400',
-                    fontSize: '15px',
-                    lineHeight: 'clamp(26px, 2.5vw, 40px)',
+                    fontFamily: "'Lato', sans-serif",
+                    fontWeight: 400,
+                    fontSize: isMobile ? '16px' : 'clamp(14px, 1.2vw, 20px)',
+                    lineHeight: '1.6',
                     letterSpacing: '0px',
-                    color: '#71717A',
+                    color: '#71717B',
                     textAlign: 'left'
                   }}
                 >
@@ -1314,12 +1552,12 @@ function XperiencePlatformPage() {
 
                 <p
                   style={{
-                    fontFamily: 'Lato, sans-serif',
-                    fontWeight: '400',
-                    fontSize: '15px',
-                    lineHeight: 'clamp(26px, 2.5vw, 40px)',
+                    fontFamily: "'Lato', sans-serif",
+                    fontWeight: 400,
+                    fontSize: isMobile ? '16px' : 'clamp(14px, 1.2vw, 20px)',
+                    lineHeight: '1.6',
                     letterSpacing: '0px',
-                    color: '#71717A',
+                    color: '#71717B',
                     textAlign: 'left'
                   }}
                 >
@@ -1339,9 +1577,9 @@ function XperiencePlatformPage() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',
-                fontSize: '38px',
-                lineHeight: 'clamp(32px, 4vw, 60px)',
-                color: '#000000'
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: '1.2',
+                color: '#0F1114'
               }}
             >
               Built for every stakeholder in<br className="sm:hidden" /> workforce readiness
@@ -1542,9 +1780,9 @@ function XperiencePlatformPage() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',
-                fontSize: '38px',
-                lineHeight: 'clamp(40px, 4.5vw, 72px)',
-                color: '#121212',
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: '1.2',
+                color: '#0F1114',
                 textTransform: 'capitalize',
                 letterSpacing: '0px'
               }}
@@ -1652,9 +1890,9 @@ function XperiencePlatformPage() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',
-                fontSize: '38px',
-                lineHeight: 'clamp(40px, 4.5vw, 72px)',
-                color: '#393939',
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: '1.2',
+                color: '#0F1114',
                 textTransform: 'capitalize',
                 letterSpacing: '0px'
               }}
@@ -1769,9 +2007,9 @@ function XperiencePlatformPage() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',
-                fontSize: '38px',
-                lineHeight: 'clamp(44px, 4.5vw, 72px)',
-                color: '#393939',
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: '1.2',
+                color: '#0F1114',
                 textTransform: 'capitalize',
                 letterSpacing: '0px'
               }}
@@ -1783,35 +2021,32 @@ function XperiencePlatformPage() {
             <div className="mb-4 md:mb-6">
               <div className="overflow-hidden">
                 <div
-                  className="flex transition-transform duration-700 ease-in-out gap-4 md:gap-6"
-                  style={{ transform: `translateX(-${currentSlide * (100 / 3)}%)` }}
+                  className="philosophy-track flex transition-transform duration-700 ease-in-out gap-4 md:gap-6"
+                  style={{
+                    '--current-slide': currentSlide,
+                    transform: `translateX(-${currentSlide * (100 / 3)}%)`
+                  }}
                 >
                   {[...philosophyCards, ...philosophyCards].map((card, index) => (
                     <div
                       key={index}
                       className="philosophy-card flex-shrink-0"
-                      style={{ width: 'calc(33.333% + 10px)', minWidth: '380px' }}
                     >
                       <div
-                        className="rounded-lg flex items-center justify-center p-6 md:p-8"
+                        className="rounded-lg flex items-center justify-center p-6 md:p-8 philosophy-card-inner"
                         style={{
-                          width: '100%',
-                          height: '210px',
                           backgroundColor: card.bgColor,
                           opacity: 0.73
                         }}
                       >
                         <h3
-                          className="px-6 md:px-8"
+                          className="philosophy-card-title px-6 md:px-8"
                           style={{
                             fontFamily: 'DM Sans, sans-serif',
                             fontWeight: '600',
-                            fontSize: 'clamp(18px, 1.6vw, 24px)',
-                            lineHeight: '40px',
                             letterSpacing: '-0.7px',
                             color: '#000000',
-                            textAlign: 'center',
-                            whiteSpace: 'nowrap'
+                            textAlign: 'center'
                           }}
                         >
                           {card.title}
@@ -1878,8 +2113,8 @@ function XperiencePlatformPage() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',
-                fontSize: '38px',
-                lineHeight: 'clamp(44px, 4.5vw, 74px)',
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: '1.2',
                 letterSpacing: '-1.6px',
                 color: '#0F1114'
               }}
@@ -1953,19 +2188,19 @@ function XperiencePlatformPage() {
                         <img
                           src={getAssetPath('/img/Group 41598.svg')}
                           alt={`Step ${step.number}`}
-                          className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 transition-opacity duration-300 group-hover:opacity-0"
+                          className="works-step-indicator w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 transition-opacity duration-300 group-hover:opacity-0"
                         />
                         {/* Hover state: Group 41597 */}
                         <img
                           src={getAssetPath('/img/Group 41597.svg')}
                           alt={`Step ${step.number} Active`}
-                          className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                          className="works-step-indicator w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
                         />
                       </div>
 
                       {/* Card */}
                       <div
-                        className="flex-1 rounded-lg transition-all duration-300 flex flex-col justify-center bg-[#E6D6EF] group-hover:bg-[#F8F8FF] group-hover:justify-start"
+                        className="works-step-card flex-1 rounded-lg transition-all duration-300 flex flex-col justify-center bg-[#E6D6EF] group-hover:bg-[#F8F8FF] group-hover:justify-start"
                         style={{
                           maxWidth: '600px',
                           minHeight: '80px',
@@ -1976,7 +2211,7 @@ function XperiencePlatformPage() {
                       >
                         {/* Title - Always Visible */}
                         <h3
-                          className="transition-all duration-300 text-center group-hover:text-left whitespace-nowrap"
+                          className="works-step-title transition-all duration-300 text-center group-hover:text-left"
                           style={{
                             fontFamily: 'DM Sans, sans-serif',
                             fontWeight: '600',
@@ -2065,9 +2300,9 @@ function XperiencePlatformPage() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',
-                fontSize: '38px',
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
                 lineHeight: '1.2',
-                color: '#000000',
+                color: '#0F1114',
                 letterSpacing: '0px'
               }}
             >
@@ -2078,16 +2313,7 @@ function XperiencePlatformPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 lg:gap-20">
               {/* Stat 1: 3X */}
               <div className="text-center impact-stat">
-                <div
-                  className="mb-4"
-                  style={{
-                    fontFamily: 'DM Sans, sans-serif',
-                    fontWeight: '600',
-                    fontSize: 'clamp(46px, 6vw, 46px)',
-                    lineHeight: '1',
-                    color: '#682D99'
-                  }}
-                >
+                <div className="impact-number mb-4">
                   {Math.round(animatedNumbers.num1)}X
                 </div>
                 <p
@@ -2107,16 +2333,7 @@ function XperiencePlatformPage() {
 
               {/* Stat 2: 65% */}
               <div className="text-center impact-stat">
-                <div
-                  className="mb-4"
-                  style={{
-                    fontFamily: 'DM Sans, sans-serif',
-                    fontWeight: '600',
-                    fontSize: 'clamp(46px, 6vw, 46px)',
-                    lineHeight: '1',
-                    color: '#682D99'
-                  }}
-                >
+                <div className="impact-number mb-4">
                   {Math.round(animatedNumbers.num2)}%
                 </div>
                 <p
@@ -2136,16 +2353,7 @@ function XperiencePlatformPage() {
 
               {/* Stat 3: 50% */}
               <div className="text-center impact-stat">
-                <div
-                  className="mb-4"
-                  style={{
-                    fontFamily: 'DM Sans, sans-serif',
-                    fontWeight: '600',
-                    fontSize: 'clamp(46px, 6vw, 46px)',
-                    lineHeight: '1',
-                    color: '#682D99'
-                  }}
-                >
+                <div className="impact-number mb-4">
                   {Math.round(animatedNumbers.num3)}%
                 </div>
                 <p
@@ -2165,16 +2373,7 @@ function XperiencePlatformPage() {
 
               {/* Stat 4: 40% */}
               <div className="text-center impact-stat">
-                <div
-                  className="mb-4"
-                  style={{
-                    fontFamily: 'DM Sans, sans-serif',
-                    fontWeight: '600',
-                    fontSize: 'clamp(46px, 6vw, 46px)',
-                    lineHeight: '1',
-                    color: '#682D99'
-                  }}
-                >
+                <div className="impact-number mb-4">
                   {Math.round(animatedNumbers.num4)}%
                 </div>
                 <p
@@ -2199,116 +2398,178 @@ function XperiencePlatformPage() {
         <section ref={techStackRef} className="py-2 md:py-4 lg:py-4 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             {/* Title */}
-            <h2
-              className="tech-heading text-center mb-6 md:mb-8"
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontWeight: '700',
-                fontSize: '38px',
-                lineHeight: '1.2',
-                color: '#000000',
-                letterSpacing: '0px',
-                marginTop: '28px'
-              }}
-            >
-              Our Technology Stack..Built on Scalable,<br />Secure, Intelligence-Driven Architecture
+            <h2 className="tech-heading text-center mb-6 md:mb-8">
+              Our Technology Stack: Built on Scalable,<br className="hidden md:block" /> Secure, Intelligence-Driven Architecture
             </h2>
 
             {/* Cards Container */}
-            <div className="relative">
-              {/* Cards Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-4">
-                {[0, 1, 2].map((offset) => {
-                  const actualIndex = (techStackIndex + offset) % techStackCards.length
-                  const card = techStackCards[actualIndex]
-
-                  return (
+            <div className="relative overflow-hidden mb-4">
+              {isMobile ? (
+                /* Mobile: Horizontal Slider - One card at a time */
+                <div
+                  className="tech-track flex transition-transform duration-700 ease-in-out"
+                  style={{
+                    transform: `translateX(-${techStackIndex * 100}%)`,
+                    gap: '0px'
+                  }}
+                >
+                  {techStackCards.map((card, index) => (
                     <div
-                      key={`${techStackIndex}-${offset}`}
-                      className="tech-card p-6 rounded-lg"
-                      style={{
-                        background: '#F4F4F5',
-                        minHeight: '300px'
-                      }}
+                      key={index}
+                      className="w-full flex-shrink-0 px-3"
+                      style={{ boxSizing: 'border-box' }}
                     >
-                      {/* Icon */}
-                      <div className="mb-6">
-                        <img
-                          src={getAssetPath(`/img/${card.icon}`)}
-                          alt={card.title}
-                          className="w-auto h-auto"
+                      <div
+                        className="tech-card p-6 rounded-lg"
+                        style={{
+                          background: '#F4F4F5',
+                          minHeight: '220px',
+                          height: 'auto'
+                        }}
+                      >
+                        {/* Icon */}
+                        <div className="mb-4">
+                          <img
+                            src={getAssetPath(`/img/${card.icon}`)}
+                            alt={card.title}
+                            className="w-auto h-auto"
+                            style={{
+                              width: '60px',
+                              height: '60px',
+                              opacity: 1
+                            }}
+                          />
+                        </div>
+
+                        {/* Title */}
+                        <h3
+                          className="mb-2"
                           style={{
-                            width: offset === 0 ? '86px' : offset === 1 ? '94px' : '120px',
-                            height: offset === 0 ? '92px' : offset === 1 ? '94px' : '90px',
-                            opacity: 1
+                            fontFamily: 'DM Sans, sans-serif',
+                            fontWeight: '600',
+                            fontSize: '18px',
+                            lineHeight: '26px',
+                            letterSpacing: '-0.5px',
+                            color: '#000000',
+                            textAlign: 'left'
                           }}
-                        />
+                        >
+                          {card.title}
+                        </h3>
+
+                        {/* Description */}
+                        <p
+                          style={{
+                            fontFamily: 'Lato, sans-serif',
+                            fontWeight: '400',
+                            fontSize: '14px',
+                            lineHeight: '20px',
+                            letterSpacing: '-0.3px',
+                            color: '#71717B',
+                            textAlign: 'left'
+                          }}
+                        >
+                          {card.description}
+                        </p>
                       </div>
-
-                      {/* Title */}
-                      <h3
-                        className="mb-3"
-                        style={{
-                          fontFamily: 'DM Sans, sans-serif',
-                          fontWeight: '600',
-                          fontSize: 'clamp(20px, 1.8vw, 24px)',
-                          lineHeight: 'clamp(28px, 2.4vw, 32px)',
-                          letterSpacing: '-0.5px',
-                          color: '#000000',
-                          textAlign: 'left',
-                          marginTop: '6px'
-                        }}
-                      >
-                        {card.title}
-                      </h3>
-
-                      {/* Description */}
-                      <p
-                        style={{
-                          fontFamily: 'Lato, sans-serif',
-                          fontWeight: '400',
-                          fontSize: '15px',
-                          lineHeight: 'clamp(24px, 2vw, 28px)',
-                          letterSpacing: '-0.3px',
-                          color: '#71717B',
-                          textAlign: 'left',
-                          marginTop: '2px'
-                        }}
-                      >
-                        {card.description}
-                      </p>
                     </div>
-                  )
-                })}
-              </div>
+                  ))}
+                </div>
+              ) : (
+                /* Desktop: Original sliding grid (Perfect & Untouched!) */
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                  {[0, 1, 2].map((offset) => {
+                    const actualIndex = (techStackIndex + offset) % techStackCards.length
+                    const card = techStackCards[actualIndex]
 
-              {/* Navigation Arrows */}
-              <div className="tech-arrows flex justify-end gap-4">
-                <button
-                  onClick={prevTechStack}
-                  disabled={techStackIndex === 0}
-                  className="w-12 h-12 rounded-full flex items-center justify-center hover:opacity-70 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:opacity-30"
-                  aria-label="Previous"
-                >
-                  <img
-                    src={getAssetPath('/img/Group 41596.svg')}
-                    alt="Previous"
-                    className="w-full h-full"
-                  />
-                </button>
-                <button
-                  onClick={nextTechStack}
-                  disabled={techStackIndex >= techStackCards.length - 3}
-                  className="w-12 h-12 rounded-full flex items-center justify-center hover:opacity-70 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:opacity-30"
-                  aria-label="Next"
-                >
-                  <img
-                    src={getAssetPath('/img/Group 41595.svg')}
-                    alt="Next"
-                    className="w-full h-full"
-                  />
-                </button>
-              </div>
+                    return (
+                      <div
+                        key={`${techStackIndex}-${offset}`}
+                        className="tech-card p-6 rounded-lg"
+                        style={{
+                          background: '#F4F4F5',
+                          minHeight: '300px'
+                        }}
+                      >
+                        {/* Icon */}
+                        <div className="mb-6">
+                          <img
+                            src={getAssetPath(`/img/${card.icon}`)}
+                            alt={card.title}
+                            className="w-auto h-auto"
+                            style={{
+                              width: offset === 0 ? '86px' : offset === 1 ? '94px' : '120px',
+                              height: offset === 0 ? '92px' : offset === 1 ? '94px' : '90px',
+                              opacity: 1
+                            }}
+                          />
+                        </div>
+
+                        {/* Title */}
+                        <h3
+                          className="mb-3"
+                          style={{
+                            fontFamily: 'DM Sans, sans-serif',
+                            fontWeight: '600',
+                            fontSize: 'clamp(20px, 1.8vw, 24px)',
+                            lineHeight: 'clamp(28px, 2.4vw, 32px)',
+                            letterSpacing: '-0.5px',
+                            color: '#000000',
+                            textAlign: 'left',
+                            marginTop: '6px'
+                          }}
+                        >
+                          {card.title}
+                        </h3>
+
+                        {/* Description */}
+                        <p
+                          style={{
+                            fontFamily: 'Lato, sans-serif',
+                            fontWeight: '400',
+                            fontSize: '15px',
+                            lineHeight: 'clamp(24px, 2vw, 28px)',
+                            letterSpacing: '-0.3px',
+                            color: '#71717B',
+                            textAlign: 'left',
+                            marginTop: '2px'
+                          }}
+                        >
+                          {card.description}
+                        </p>
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
+
+            {/* Navigation Arrows */}
+            <div className="tech-arrows flex justify-end gap-4">
+              <button
+                onClick={prevTechStack}
+                disabled={techStackIndex === 0}
+                className="w-12 h-12 rounded-full flex items-center justify-center hover:opacity-70 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:opacity-30"
+                aria-label="Previous"
+              >
+                <img
+                  src={getAssetPath('/img/Group 41596.svg')}
+                  alt="Previous"
+                  className="w-full h-full"
+                />
+              </button>
+              <button
+                onClick={nextTechStack}
+                disabled={techStackIndex >= (isMobile ? techStackCards.length - 1 : techStackCards.length - 3)}
+                className="w-12 h-12 rounded-full flex items-center justify-center hover:opacity-70 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:opacity-30"
+                aria-label="Next"
+              >
+                <img
+                  src={getAssetPath('/img/Group 41595.svg')}
+                  alt="Next"
+                  className="w-full h-full"
+                />
+              </button>
             </div>
           </div>
         </section>
@@ -2316,47 +2577,22 @@ function XperiencePlatformPage() {
         {/* Prepare for the Role Section */}
         <section
           ref={ctaSectionRef}
-          className="relative pt-2 pb-2 md:pt-4 md:pb-3 lg:pt-4 lg:pb-3 overflow-hidden"
+          className="role-prep-section relative overflow-hidden"
           style={{
             backgroundImage: getBackgroundImageUrl('/img/Group 41600.png'),
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            minHeight: '610px'
+            backgroundRepeat: 'no-repeat'
           }}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             {/* Heading */}
-            <h2
-              className="cta-heading text-center mb-6"
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontWeight: '700',
-                fontSize: '38px',
-                lineHeight: 'clamp(38px, 4vw, 56px)',
-                letterSpacing: '-1.6px',
-                color: '#000000',
-                maxWidth: '1265px',
-                margin: '0 auto 16px'
-              }}
-            >
+            <h2 className="cta-heading role-prep-heading text-center mb-6">
               Prepare for the role - before you are hired
             </h2>
 
             {/* Subheading */}
-            <p
-              className="cta-subheading text-center mb-6 md:mb-8"
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontWeight: '500',
-                fontSize: '20px',
-                lineHeight: '40px',
-                letterSpacing: '0px',
-                color: '#000000',
-                maxWidth: '747px',
-                margin: '0 auto 24px'
-              }}
-            >
+            <p className="cta-subheading role-prep-subheading text-center mb-6 md:mb-8">
               Experience builds confidence. Simulation builds capability.
             </p>
 
@@ -2365,24 +2601,19 @@ function XperiencePlatformPage() {
               <img
                 src={getAssetPath('/img/Mask Group 122.png')}
                 alt="Platform Dashboard"
-                className="w-full h-auto"
-                style={{
-                  maxWidth: '880px',
-                  height: 'auto'
-                }}
+                className="role-prep-image h-auto"
               />
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+            <div className="role-prep-buttons flex justify-center items-center">
               <a
                 href="https://portal.skillzza.com/internships"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cta-button px-10 py-4 text-white text-lg font-semibold rounded-lg shadow-lg hover:opacity-90 transition-all duration-300"
+                className="cta-button role-prep-btn text-white font-semibold shadow-lg hover:opacity-90 transition-all duration-300"
                 style={{
                   backgroundColor: '#1F57C7',
-                  minWidth: '230px',
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -2394,10 +2625,9 @@ function XperiencePlatformPage() {
                 href="https://skillzza-org.vercel.app/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cta-button px-10 py-4 text-black text-lg font-semibold rounded-lg border-2 hover:bg-black hover:text-white transition-all duration-300"
+                className="cta-button role-prep-btn text-black font-semibold border-2 hover:bg-black hover:text-white transition-all duration-300"
                 style={{
                   borderColor: '#000000',
-                  minWidth: '230px',
                   backgroundColor: 'transparent',
                   display: 'inline-flex',
                   alignItems: 'center',

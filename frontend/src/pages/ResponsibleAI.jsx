@@ -3,10 +3,71 @@ import React from 'react';
 import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
 const ResponsibleAI = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen responsible-ai-page">
+      <style>{`
+        @media (max-width: 768px) {
+          .responsible-ai-page section {
+            padding-top: 36px !important;
+            padding-bottom: 36px !important;
+          }
+          .ra-hero {
+            padding-top: 48px !important;
+            padding-bottom: 48px !important;
+          }
+          .responsible-ai-page .ra-hero {
+            min-height: 52vh !important;
+          }
+          .responsible-ai-page .ra-hero h1 {
+            font-size: 26px !important;
+            line-height: 1.2 !important;
+          }
+          .responsible-ai-page .ra-hero p {
+            font-size: 14px !important;
+            line-height: 1.55 !important;
+          }
+          .responsible-ai-page .ra-kicker {
+            font-size: 11px !important;
+            padding: 6px 12px !important;
+            margin-bottom: 16px !important;
+          }
+          .responsible-ai-page h2 {
+            font-size: 22px !important;
+            line-height: 1.25 !important;
+          }
+          .responsible-ai-page h3 {
+            font-size: 18px !important;
+            line-height: 1.3 !important;
+          }
+          .responsible-ai-page .ra-card {
+            padding: 20px !important;
+          }
+          .responsible-ai-page .ra-card p {
+            font-size: 14px !important;
+          }
+          .responsible-ai-page .ra-pillars img {
+            height: 200px !important;
+          }
+          .responsible-ai-page .ra-hci img {
+            height: 200px !important;
+          }
+          .responsible-ai-page .ra-ecosystem img {
+            height: 220px !important;
+          }
+          .responsible-ai-page .ra-cta h2 {
+            font-size: 22px !important;
+          }
+          .responsible-ai-page .ra-cta p {
+            font-size: 14px !important;
+          }
+          .responsible-ai-page .ra-cta button {
+            font-size: 14px !important;
+            padding: 10px 18px !important;
+          }
+        }
+      `}</style>
       {/* Hero Section */}
       <section
-        className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
+        className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat ra-hero"
         style={{ 
           backgroundImage: getBackgroundImageUrl('/AIDataEngineergooglecloud.png'),
           minHeight: '60vh'
@@ -16,10 +77,10 @@ const ResponsibleAI = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-white">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6 ra-kicker">
               RESPONSIBLE AI AT SKILLZZA
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
               Ethical Intelligence for the Future of Work
             </h1>
             <p className="text-base md:text-lg text-gray-300 max-w-3xl leading-relaxed mb-4">
@@ -36,14 +97,14 @@ const ResponsibleAI = () => {
       <section className="bg-white py-16">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Commitment to Responsible AI</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>Our Commitment to Responsible AI</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
               Responsible AI is more than a philosophy-it's a foundational element of how Skillzza designs and delivers impact. We are committed to:
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl ra-card">
               <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -55,7 +116,7 @@ const ResponsibleAI = () => {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl ra-card">
               <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -68,7 +129,7 @@ const ResponsibleAI = () => {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl ra-card">
               <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -90,22 +151,22 @@ const ResponsibleAI = () => {
       </section>
 
       {/* Five Pillars Section */}
-      <section className="bg-gray-100 py-16">
+      <section className="bg-gray-100 py-16 ra-pillars">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">The Five Pillars of Responsible AI at Skillzza</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>The Five Pillars of Responsible AI at Skillzza</h2>
           </div>
 
           {/* Pillar 1: Explainability & Interpretability */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="relative">
+          <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
+            <div className="w-full lg:w-1/2 relative">
               <img 
                 src={getAssetPath('/aIdataAnalyticsDecisions_tile.jpg')} 
                 alt="Explainability & Interpretability" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <h3 className="text-3xl font-bold text-orange-500 mb-6 text-center">Explainability & Interpretability</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Every AI decision should be clear. Our models offer full visibility into how skills, roles, and experiences are matched-empowering users with actionable, understandable insights.
@@ -114,14 +175,14 @@ const ResponsibleAI = () => {
           </div>
 
           {/* Pillar 2: Fairness by Design */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <div className="flex flex-col-reverse lg:flex-row gap-12 items-center mb-16">
+            <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <h3 className="text-3xl font-bold text-blue-600 mb-6 text-center">Fairness by Design</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
                 We build bias-aware algorithms that focus solely on skills and potential-intentionally removing demographic identifiers to ensure equitable hiring and advancement opportunities.
               </p>
             </div>
-            <div className="relative">
+            <div className="w-full lg:w-1/2 relative">
               <img 
                 src={getAssetPath('/transformskill_futureset.png')} 
                 alt="Fairness by Design" 
@@ -131,15 +192,15 @@ const ResponsibleAI = () => {
           </div>
 
           {/* Pillar 3: Model Robustness */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="relative">
+          <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
+            <div className="w-full lg:w-1/2 relative">
               <img 
                 src={getAssetPath('/data_ai.jpg')}
                 alt="Model Robustness" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <h3 className="text-3xl font-bold text-green-600 mb-6 text-center">Model Robustness</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our systems are trained on dynamic, diverse datasets to ensure accuracy, reliability, and scalability across regions, industries, and workforce segments.
@@ -148,14 +209,14 @@ const ResponsibleAI = () => {
           </div>
 
           {/* Pillar 4: Data Rights & Privacy */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <div className="flex flex-col-reverse lg:flex-row gap-12 items-center mb-16">
+            <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <h3 className="text-3xl font-bold text-purple-600 mb-6 text-center">Data Rights & Privacy</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Respecting data sovereignty is non-negotiable. We uphold strict compliance with global privacy regulations and maintain transparency in how we collect, use, and protect user data.
               </p>
             </div>
-            <div className="relative">
+            <div className="w-full lg:w-1/2 relative">
               <img 
                 src={getAssetPath('/citizen_data_privacy_tile.png')} 
                 alt="Data Rights & Privacy" 
@@ -165,15 +226,15 @@ const ResponsibleAI = () => {
           </div>
 
           {/* Pillar 5: Accountability & Governance */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="relative">
+          <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
+            <div className="w-full lg:w-1/2 relative">
               <img 
                 src={getAssetPath('/regulatorycompliance_tile.png')} 
                 alt="Accountability & Governance" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg" 
               />
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <h3 className="text-3xl font-bold text-red-600 mb-6 text-center">Accountability & Governance</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
                 From internal audits to external ethics reviews, our AI systems are continuously monitored and improved through a rigorous governance framework.
@@ -184,10 +245,10 @@ const ResponsibleAI = () => {
       </section>
 
       {/* Human-Centric Intelligence Section */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-16 ra-hci">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Human-Centric Intelligence</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>Human-Centric Intelligence</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
               Skillzza's AI is designed to enhance human decision-making, not automate it blindly. By surfacing skill-based, data-driven recommendations, we empower:
             </p>
@@ -195,7 +256,7 @@ const ResponsibleAI = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* For Candidates */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl ra-card">
               <div className="mb-6">
                 <img 
                   src={getAssetPath('/forstudentuse.jpg')} 
@@ -210,7 +271,7 @@ const ResponsibleAI = () => {
             </div>
 
             {/* For Employers */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl ra-card">
               <div className="mb-6">
                 <img 
                   src={getAssetPath('/forproffession.jpg')} 
@@ -225,7 +286,7 @@ const ResponsibleAI = () => {
             </div>
 
             {/* For Employees */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl ra-card">
               <div className="mb-6">
                 <img 
                   src={getAssetPath('/upskilling_forAi_tile_img.jpeg')} 
@@ -243,7 +304,7 @@ const ResponsibleAI = () => {
       </section>
 
       {/* Building Responsible Workforce Ecosystem */}
-      <section className="bg-gray-100 py-16">
+      <section className="bg-gray-100 py-16 ra-ecosystem">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
@@ -254,7 +315,7 @@ const ResponsibleAI = () => {
               />
             </div>
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Building a Responsible Workforce Ecosystem</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>Building a Responsible Workforce Ecosystem</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our platform spans the entire talent lifecycle-from career discovery and skill simulation to talent acquisition, upskilling, and retention. At every stage, Skillzza ensures that AI is deployed ethically to create inclusive, data-driven talent ecosystems that benefit both individuals and organizations.
               </p>
@@ -267,17 +328,17 @@ const ResponsibleAI = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16 bg-cover bg-center" style={{ backgroundImage: getBackgroundImageUrl('/cta_banner.png') }}>
+      <section className="relative py-16 bg-cover bg-center ra-cta" style={{ backgroundImage: getBackgroundImageUrl('/cta_banner.png') }}>
         <div className="absolute inset-0 bg-orange-500/90"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
             Join Us in Building Ethical AI for the Future of Work
           </h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Partner with Skillzza to create AI solutions that are not just powerful, but also principled, transparent, and purposeful.
           </p>
           <button className="bg-white text-orange-500 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
-            Learn More About Our Standards
+            Learn More
           </button>
         </div>
       </section>

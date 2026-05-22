@@ -151,10 +151,10 @@ const Hero = () => {
         
         @keyframes scrollLeft {
           0% {
-            transform: translateX(100%);
+            transform: translateX(0);
           }
           100% {
-            transform: translateX(-100%);
+            transform: translateX(-50%);
           }
         }
         
@@ -166,8 +166,7 @@ const Hero = () => {
         
         .scroll-content {
           display: flex;
-          animation: scrollLeft 30s linear infinite;
-          animation-delay: -15s;
+          animation: scrollLeft 15s linear infinite;
         }
         
         .scroll-content:hover {
@@ -231,6 +230,12 @@ const Hero = () => {
         .hero-heading-line {
           display: block;
           white-space: nowrap;
+        }
+
+        @media (max-width: 767px) {
+          .hero-heading-line {
+            white-space: normal !important;
+          }
         }
 
         /* ===== Hero fluid responsive overrides ===== */
@@ -341,7 +346,7 @@ const Hero = () => {
                 {/* Start Your Journey Button */}
                 <button
                   className="hover-lift"
-                  onClick={() => { window.location.href = getRoutePath('/contact-us'); }}
+                  onClick={() => { window.location.href = getRoutePath('/login'); }}
                   style={{
                     background: 'linear-gradient(90deg, #CF2C2E 0%, #C72C2E 54.7%, #FBA93E 100%)',
                     borderRadius: '8px',
@@ -409,7 +414,7 @@ const Hero = () => {
             className="hero-scroll-strip scroll-container"
             style={{
               position: isMobile ? 'absolute' : 'relative',
-              bottom: isMobile ? '100px' : 'auto',
+              bottom: isMobile ? '40px' : 'auto',
               left: isMobile ? '0' : 'auto',
               zIndex: 30,
               width: '100vw',

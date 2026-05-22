@@ -173,7 +173,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
         /* ===== Fluid Responsive Overrides (Desktop/Tablet) ===== */
         @media (min-width: 768px) {
           .insights-heading {
-            font-size: clamp(30px, 3.2vw, 44px) !important;
+            font-size: clamp(24px, 2.8vw, 52px) !important;
             margin-top: 0px !important;
             margin-bottom: 16px !important;
           }
@@ -278,31 +278,35 @@ const Insights = ({ showHero = false, showContent = true }) => {
           .insights-card-lg {
             width: 100% !important;
             height: auto !important;
+            display: block !important;
           }
           .insights-card-lg .insights-card-img {
-            height: 260px !important;
+            height: 200px !important;
           }
           .insights-card-lg .insights-card-img img {
             object-fit: cover !important;
             object-position: center center !important;
           }
           .insights-card-lg .insights-card-icon img {
-            width: 36px !important;
-            height: 36px !important;
+            width: 32px !important;
+            height: 32px !important;
           }
           .insights-card-lg .insights-card-icon {
-            margin-bottom: 8px !important;
+            margin-bottom: 6px !important;
             margin-top: 4px !important;
           }
           .insights-card-lg h3 {
             font-size: 18px !important;
+            margin-bottom: 16px !important;
           }
           .insights-card-lg > div:last-child {
-            padding: 16px 20px !important;
+            padding: 12px 16px !important;
+            display: block !important;
           }
           .insights-card-md {
             width: 100% !important;
             height: auto !important;
+            display: block !important;
           }
           .insights-card-md .insights-card-img {
             height: 240px !important;
@@ -313,9 +317,11 @@ const Insights = ({ showHero = false, showContent = true }) => {
           }
           .insights-card-md h3 {
             font-size: 18px !important;
+            margin-bottom: 16px !important;
           }
           .insights-card-md > div:last-child {
             padding: 12px 16px !important;
+            display: block !important;
           }
           .insights-card-md .insights-tag {
             width: auto !important;
@@ -399,6 +405,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                   className={`insights-heading mb-4 md:mb-6 ${isVisible.heading ? 'animate-fade-in-left' : 'opacity-0'}`}
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
+                    fontSize: 'clamp(24px, 2.8vw, 52px)',
                     fontWeight: 700,
                     lineHeight: '1.2',
                     color: '#0F1114',

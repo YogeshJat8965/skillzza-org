@@ -65,7 +65,7 @@ const EnterprisesUseCase = () => {
                     <div className="flex items-center mb-6">
                       <h3 className="text-2xl font-bold text-gray-900">Intelligent Talent Acquisition</h3>
                     </div>
-                    <h4 className="text-xl font-semibold text-orange-600 mb-4">Hirenest & Skillzza Marketplace Integration</h4>
+                    <h4 className="text-xl font-semibold text-orange-600 mb-4">Talent Twin & Skillzza Marketplace Integration</h4>
                     <ul className="space-y-3 text-gray-700 mb-6">
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>

@@ -174,6 +174,30 @@ export default function PotentialMeterPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <style>{`
+        .pm-measure-card {
+          min-height: 165px !important;
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: center !important;
+        }
+        @media (max-width: 1023px) {
+          .pm-get-container {
+            min-height: auto !important;
+          }
+          .pm-get-content {
+            padding-bottom: 16px !important;
+          }
+          .pm-get-graphic {
+            height: 250px !important;
+            margin-top: 0px !important;
+            margin-bottom: 20px !important;
+          }
+          .pm-get-graphic-inner {
+            background-position: center center !important;
+          }
+        }
+      `}</style>
 
       {/* ── Hero Section ── */}
       <section className="relative w-full pt-[20px]">
@@ -210,7 +234,8 @@ export default function PotentialMeterPage() {
 
           {/* Main Heading */}
           <h1
-            className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] max-w-[1118px] text-[38px] leading-[46px] tracking-[-1.5px] mb-3"
+            className="pm-hero-heading font-['DM_Sans',sans-serif] font-bold text-[#0F1114] max-w-[1118px] mb-3"
+            style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}
           >
             Stop Guessing <span className="text-[#2563eb]">Career Potential.</span>
             <br />
@@ -237,7 +262,7 @@ export default function PotentialMeterPage() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="pm-hero-cta flex flex-wrap items-center gap-4 mb-6">
             <button className="bg-[#245CE2] hover:bg-[#1E4DBC] transition-colors text-white font-['DM_Sans',sans-serif] font-medium text-[15px] px-7 py-3 rounded">
               Start Free Skill Assessment
             </button>
@@ -278,7 +303,7 @@ export default function PotentialMeterPage() {
           transition={{ duration: 0.6 }}
           className="max-w-[1400px] w-full flex flex-col items-center text-center"
         >
-          <h2 className="product-heading font-medium text-white tracking-[-0.5px] mb-3">
+          <h2 className="product-heading font-semibold text-white mb-3" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
             Real Outcomes. Measurable Impact.
           </h2>
           <p className="font-['Lato',sans-serif] font-normal text-white/90 text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-8 max-w-[800px]">
@@ -340,7 +365,7 @@ export default function PotentialMeterPage() {
         >
           
           <div className="text-center mb-6 max-w-[800px]">
-            <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] text-[36px] md:text-[48px] tracking-[-1px] mb-4">
+            <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] mb-4" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
               The Problem We Solve
             </h2>
             <p className="font-['Lato',sans-serif] font-medium text-[#475569] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
@@ -403,7 +428,7 @@ export default function PotentialMeterPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-6 md:mb-0 relative z-20"
         >
-          <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#3C3C3C] text-[36px] md:text-[48px] tracking-[-1px]">
+          <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#3C3C3C]" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
             What We Measure
           </h2>
         </motion.div>
@@ -413,7 +438,7 @@ export default function PotentialMeterPage() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8 }}
-          className="relative w-full flex items-center min-h-[620px]"
+          className="relative w-full flex items-center pm-measure-container" style={{ minHeight: '620px' }}
         >
           {/* Background Image Container sticking to the right edge */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[62%] max-w-[980px] h-[560px] hidden md:flex justify-end opacity-20 md:opacity-100">
@@ -428,7 +453,7 @@ export default function PotentialMeterPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 w-full lg:w-[58%]">
               
               {/* Card 1 */}
-              <div className="bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
+              <div className="pm-measure-card bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
                 <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[18px] md:text-[20px] mb-2">
                   AI-Based Skill Assessment
                 </h3>
@@ -438,7 +463,7 @@ export default function PotentialMeterPage() {
               </div>
 
               {/* Card 2 */}
-              <div className="bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
+              <div className="pm-measure-card bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
                 <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[18px] md:text-[20px] mb-2">
                   Cognitive & Behavioral<br/>Intelligence
                 </h3>
@@ -448,7 +473,7 @@ export default function PotentialMeterPage() {
               </div>
 
                {/* Card 3 */}
-              <div className="bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
+              <div className="pm-measure-card bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
                 <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[18px] md:text-[20px] mb-2">
                   Career Readiness & Role Fit
                 </h3>
@@ -458,7 +483,7 @@ export default function PotentialMeterPage() {
               </div>
 
                {/* Card 4 */}
-              <div className="bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
+              <div className="pm-measure-card bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
                 <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[18px] md:text-[20px] mb-2">
                   Soft Skills &<br/>Professional Maturity
                 </h3>
@@ -482,7 +507,7 @@ export default function PotentialMeterPage() {
           className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8"
         >
           
-          <h2 className="font-['DM_Sans',sans-serif] font-semibold text-center text-[#0F1114] text-[36px] md:text-[48px] tracking-[-1px] mb-4 md:mb-6">
+          <h2 className="font-['DM_Sans',sans-serif] font-bold text-center text-[#0F1114] mb-4 md:mb-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
             How The Platform Works
           </h2>
 
@@ -591,7 +616,7 @@ export default function PotentialMeterPage() {
           className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-4"
         >
           
-          <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] text-[36px] md:text-[42px] tracking-[-1px] mb-4">
+          <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] mb-4" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
             What You Get with Potential Meter
           </h2>
           <p className="font-['Lato',sans-serif] font-normal text-[#71717B] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] max-w-2xl mx-auto mb-10">
@@ -625,11 +650,11 @@ export default function PotentialMeterPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative w-full mx-auto flex flex-col lg:flex-row items-center border border-gray-100/0 min-h-[700px]"
+          className="relative w-full mx-auto flex flex-col lg:flex-row items-center border border-gray-100/0 pm-get-container" style={{ minHeight: '700px' }}
         >
           
           {/* Active Content (Left Side) */}
-          <div className="w-full lg:w-[55%] xl:w-[50%] pl-4 sm:pl-8 lg:pl-[6%] xl:pl-[12%] pr-4 sm:pr-8 lg:pr-8 pb-16 lg:pb-0 relative z-10">
+          <div className="pm-get-content w-full lg:w-[55%] xl:w-[50%] pl-4 sm:pl-8 lg:pl-[6%] xl:pl-[12%] pr-4 sm:pr-8 lg:pr-8 pb-16 lg:pb-0 relative z-10">
             <div className="max-w-[750px] animate-fadeIn transition-opacity duration-500">
               <span className="font-['DM_Sans',sans-serif] font-bold text-[#2563eb] text-[13px] tracking-[1px] uppercase mb-4 block">
                 {tabData[activeGetTab].preHeading}
@@ -709,9 +734,9 @@ export default function PotentialMeterPage() {
           </div>
 
           {/* Graphic Container (Right Side) */}
-          <div className="w-full lg:w-[50%] xl:w-[50%] lg:absolute right-0 top-1/2 lg:-translate-y-1/2 flex justify-end h-[400px] lg:h-[700px] mt-8 lg:mt-0">
+          <div className="pm-get-graphic w-full lg:w-[50%] xl:w-[50%] lg:absolute right-0 top-1/2 lg:-translate-y-1/2 flex justify-end h-[400px] lg:h-[700px] mt-8 lg:mt-0">
              <div 
-               className="w-full h-full"
+               className="pm-get-graphic-inner w-full h-full"
                style={{ 
                  background: `url(${whatsGetImg}) right center / contain no-repeat` 
                }}
@@ -734,7 +759,7 @@ export default function PotentialMeterPage() {
             
             {/* Left side: Heading */}
             <div className="w-full md:w-[35%] lg:w-[30%]">
-              <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] text-[40px] md:text-[52px] tracking-[-1px] md:sticky top-24">
+              <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] md:sticky top-24" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
                 FAQ's
               </h2>
             </div>
@@ -747,7 +772,7 @@ export default function PotentialMeterPage() {
                     className="w-full flex justify-between items-center text-left focus:outline-none group"
                     onClick={() => setActiveFaq(activeFaq === index ? null : index)}
                   >
-                    <span className="font-['DM_Sans',sans-serif] font-semibold text-[#000000] text-[18px] md:text-[20px] pr-8 group-hover:text-[#2563eb] transition-colors">
+                    <span className="font-['DM_Sans',sans-serif] font-semibold text-[#000000] text-[15px] md:text-[20px] pr-8 group-hover:text-[#2563eb] transition-colors">
                       {faq.question}
                     </span>
                     <span className="flex-shrink-0 text-black group-hover:text-[#2563eb] transition-colors">
@@ -763,7 +788,7 @@ export default function PotentialMeterPage() {
                     </span>
                   </button>
                   <div className={`overflow-hidden transition-all duration-300 ease-in-out ${activeFaq === index ? 'max-h-[300px] mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <p className="font-['Lato',sans-serif] font-normal text-[#71717B] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] pr-4 md:pr-12">
+                    <p className="font-['Lato',sans-serif] font-normal text-[#71717B] text-[14px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] pr-4 md:pr-12">
                       {faq.answer}
                     </p>
                   </div>
@@ -784,7 +809,10 @@ export default function PotentialMeterPage() {
           transition={{ duration: 0.6 }}
           className="w-full flex flex-col items-center justify-center"
         >
-          <h2 className="font-['DM_Sans',sans-serif] font-bold text-[38px] leading-[46px] text-[#0F1114] tracking-[-1.5px] mb-4 md:mb-5">
+          <h2
+            className="pm-cta-heading font-['DM_Sans',sans-serif] font-bold text-[#0F1114] mb-4 md:mb-5"
+            style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}
+          >
             Upskill Smarter. Learn Faster.<br />Lead Confidently.
           </h2>
           <p className="font-['Lato',sans-serif] font-medium text-[#0F1114] text-[16px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-7 md:mb-9">
@@ -798,9 +826,9 @@ export default function PotentialMeterPage() {
             Apply Now
           </Link>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 font-['DM_Sans',sans-serif] font-bold text-[13px] md:text-[15px] text-[#0F1114]">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 font-['DM_Sans',sans-serif] font-bold text-[13px] md:text-[15px] text-[#0F1114]">
             <span className="cursor-pointer hover:opacity-70 transition-opacity">Talk to an Academic Advisor</span>
-            <span className="text-[16px] md:text-[18px] font-medium opacity-80">|</span>
+            <span className="hidden sm:inline text-[16px] md:text-[18px] font-medium opacity-80">|</span>
             <span className="cursor-pointer hover:opacity-70 transition-opacity">Download Academy Brochure</span>
           </div>
         </motion.div>
@@ -808,4 +836,52 @@ export default function PotentialMeterPage() {
 
     </div>
   );
+}
+
+/* Mobile responsive styles for PotentialMeterPage - injected at module scope */
+if (typeof document !== 'undefined') {
+  const styleId = 'pm-mobile-styles';
+  if (!document.getElementById(styleId)) {
+    const style = document.createElement('style');
+    style.id = styleId;
+    style.textContent = `
+      @media (max-width: 767px) {
+        .pm-hero-heading {
+          font-size: clamp(22px, 6vw, 30px) !important;
+          line-height: 1.2 !important;
+          letter-spacing: -0.5px !important;
+        }
+        .pm-measure-container {
+          min-height: auto !important;
+        }
+        .pm-get-container {
+          min-height: auto !important;
+        }
+        .pm-cta-heading {
+          font-size: clamp(22px, 6vw, 30px) !important;
+          line-height: 1.2 !important;
+        }
+        .pm-hero-cta {
+          flex-direction: column !important;
+          align-items: center !important;
+          justify-content: center !important;
+          gap: 12px !important;
+          width: 100% !important;
+        }
+        .pm-hero-cta button {
+          width: 100% !important;
+          max-width: 320px !important;
+        }
+      }
+      @media (max-width: 480px) {
+        .pm-hero-heading {
+          font-size: 22px !important;
+        }
+        .pm-cta-heading {
+          font-size: 22px !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
 }

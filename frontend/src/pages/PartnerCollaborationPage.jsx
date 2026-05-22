@@ -185,9 +185,10 @@ function PartnerCollaborationPage() {
 
         .collab-partners__heading {
           margin: 0 auto 20px;
-          font-size: 36px;
-          font-weight: 800;
-          line-height: 1.15;
+          font-family: 'DM Sans', sans-serif;
+          font-size: clamp(24px, 2.8vw, 52px);
+          font-weight: 700;
+          line-height: 1.2;
           color: #0f172a;
           text-align: center;
         }
@@ -305,11 +306,13 @@ function PartnerCollaborationPage() {
 
         .section-banner__title {
           margin: 0;
-          font-size: 36px;
-          font-weight: 800;
+          font-family: 'DM Sans', sans-serif;
+          font-size: clamp(24px, 2.8vw, 52px);
+          font-weight: 700;
           color: #f3ad3a;
           text-shadow: 0 3px 16px rgba(0, 0, 0, 0.5);
           letter-spacing: -0.01em;
+          line-height: 1.2;
         }
 
         .section-banner__subtitle {
@@ -370,8 +373,9 @@ function PartnerCollaborationPage() {
 
         .detail-section__heading {
           margin: 0 0 22px;
-          font-size: 36px;
-          font-weight: 800;
+          font-family: 'DM Sans', sans-serif;
+          font-size: clamp(24px, 2.8vw, 52px);
+          font-weight: 700;
           color: #0f172a;
           line-height: 1.2;
         }
@@ -455,8 +459,9 @@ function PartnerCollaborationPage() {
 
         .cards-section__heading {
           margin: 0 0 clamp(28px, 4vw, 44px);
-          font-size: 36px;
-          font-weight: 800;
+          font-family: 'DM Sans', sans-serif;
+          font-size: clamp(24px, 2.8vw, 52px);
+          font-weight: 700;
           color: #0f172a;
         }
 
@@ -589,10 +594,11 @@ function PartnerCollaborationPage() {
 
         .collab-cta__title {
           margin: 0;
-          font-size: 36px;
-          font-weight: 800;
+          font-family: 'DM Sans', sans-serif;
+          font-size: clamp(24px, 2.8vw, 52px);
+          font-weight: 700;
           color: #f3ad3a;
-          line-height: 1.15;
+          line-height: 1.2;
           letter-spacing: -0.01em;
         }
 
@@ -660,8 +666,26 @@ function PartnerCollaborationPage() {
             letter-spacing: -0.6px;
           }
 
+          .collab-hero__title-line {
+            white-space: normal !important;
+          }
+
           .collab-partners {
-            padding: 36px 16px 48px;
+            padding: 36px 16px 48px !important;
+          }
+
+          .collab-partners__heading, .detail-section__heading, .cards-section__heading, .collab-cta__title, .section-banner__title {
+            font-size: 24px !important;
+            line-height: 1.25 !important;
+          }
+
+          .collab-partners__intro, .section-description-below__text, .collab-cta__text {
+            font-size: 15px !important;
+            line-height: 1.6 !important;
+          }
+
+          .section-banner__subtitle {
+            font-size: 18px !important;
           }
 
           .collab-partners__grid {
@@ -675,8 +699,20 @@ function PartnerCollaborationPage() {
 
           .collab-partners__card-title {
             min-height: 64px;
-            font-size: 24px;
+            font-size: 20px !important;
             padding: 14px 10px;
+          }
+
+          .detail-section {
+            padding: 32px 16px !important;
+          }
+
+          .cards-section {
+            padding: 36px 16px !important;
+          }
+
+          .collab-cta {
+            padding: 36px 16px !important;
           }
 
           .cards-section__grid {
@@ -685,19 +721,18 @@ function PartnerCollaborationPage() {
           }
         }
 
-        @media (max-width: 420px) {
+        @media (max-width: 480px) {
           .collab-hero__title {
-            font-size: 38px;
+            font-size: 32px !important;
           }
-        }
-
-        @media (max-width: 520px) {
           .collab-partners__grid {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr !important;
           }
-
           .cards-section__grid {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr !important;
+          }
+          .collab-partners__card-title {
+            font-size: 18px !important;
           }
         }
       `}</style>

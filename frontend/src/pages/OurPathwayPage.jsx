@@ -188,6 +188,12 @@ function OurPathwayPage() {
 
         /* ── Mobile Responsive (< 768px) ── */
         @media (max-width: 768px) {
+          section.pathway-reveal {
+            padding-top: 36px !important;
+            padding-bottom: 36px !important;
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+          }
           .pathway-hero-heading {
             font-size: 20px !important;
             line-height: 1.2 !important;
@@ -289,6 +295,23 @@ function OurPathwayPage() {
             width: 100% !important;
             max-width: 380px !important;
           }
+          .pathway-highlight-icon-box {
+            width: 64px !important;
+            height: 64px !important;
+            border-radius: 14px !important;
+            background: #ffffff !important;
+            border: 1px solid #e5e7eb !important;
+            box-shadow: 0 6px 16px rgba(15, 16, 18, 0.12) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            flex-shrink: 0 !important;
+          }
+          .pathway-highlight-icon-img {
+            width: 40px !important;
+            height: 40px !important;
+            image-rendering: auto !important;
+          }
           .pathway-partnership-pills {
             flex-direction: column !important;
             align-items: stretch !important;
@@ -305,55 +328,88 @@ function OurPathwayPage() {
             flex-direction: column !important;
             border-radius: 16px !important;
             padding: 12px !important;
-            gap: 10px !important;
           }
           .pathway-tab-btn {
             width: 100% !important;
             height: auto !important;
             padding: 14px !important;
-            font-size: 18px !important;
+            font-size: 16px !important;
             border-radius: 12px !important;
+          }
+          .pathway-get-started-kicker {
+            font-size: 12px !important;
+            letter-spacing: 1px !important;
+          }
+          .pathway-get-started-title {
+            font-size: 17px !important;
+            line-height: 1.25 !important;
+            margin-bottom: 12px !important;
+          }
+          .pathway-get-started-heading {
+            font-size: 15px !important;
+          }
+          .pathway-get-started-list {
+            font-size: 12px !important;
+            line-height: 1.4 !important;
+            gap: 8px !important;
+          }
+          .pathway-get-started-card {
+            border-radius: 24px !important;
+            margin-bottom: -36px !important;
           }
           .pathway-tab-content {
             flex-direction: column !important;
           }
           .pathway-tab-content > div:first-child {
-            min-height: 220px !important;
+            min-height: 0 !important;
+            height: auto !important;
+            flex: 0 0 auto !important;
           }
           .pathway-tab-content > div:last-child {
-            padding: 24px 20px !important;
+            padding: 10px 12px 12px !important;
+            gap: 8px !important;
+            flex: 0 0 auto !important;
+            min-height: 0 !important;
+            margin-top: 0 !important;
+          }
+          .pathway-tab-image {
+            max-height: 180px !important;
+            height: auto !important;
+            object-fit: cover !important;
+            border-top-right-radius: 25px !important;
+            border-bottom-left-radius: 0 !important;
           }
           .pathway-cta-inner {
             flex-direction: column !important;
-            padding: 32px 20px 0 !important;
+            padding: 24px 16px 0 !important;
             text-align: center !important;
           }
           .pathway-cta-inner h2 {
-            font-size: 20px !important;
+            font-size: 18px !important;
             text-align: center !important;
           }
           .pathway-cta-inner > div:first-child {
             flex: unset !important;
-            padding: 20px 0 !important;
+            padding: 14px 0 !important;
           }
           .pathway-cta-buttons {
             flex-direction: column !important;
             align-items: center !important;
-            gap: 14px !important;
+            gap: 10px !important;
             width: 100% !important;
           }
           .pathway-cta-buttons button {
             width: 100% !important;
             max-width: 320px !important;
             white-space: normal !important;
-            font-size: 16px !important;
-            padding: 14px 20px !important;
+            font-size: 14px !important;
+            padding: 12px 18px !important;
           }
           .pathway-cta-image {
             width: 100% !important;
             flex: unset !important;
-            height: 280px !important;
-            margin: -30px auto -40px auto !important;
+            height: 220px !important;
+            margin: -12px auto -24px auto !important;
           }
           .pathway-cta-image > img:first-child {
             width: 100% !important;
@@ -423,9 +479,7 @@ function OurPathwayPage() {
                 overflow: 'hidden',
               }}
             >
-              Transforming Lives Through
-              <br />
-              SDG-Aligned Skills Development
+              Transforming Lives Through <br className="hidden md:inline" /> SDG-Aligned Skills Development
             </h1>
 
             {/* Subheading */}
@@ -435,11 +489,10 @@ function OurPathwayPage() {
                 fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 400,
                 fontSize: '20px',
-                lineHeight: '1',
+                lineHeight: '1.3',
                 letterSpacing: '0%',
                 color: '#0F1114',
                 marginTop: '16px',
-                whiteSpace: 'nowrap',
               }}
             >
               Empowering Communities. Bridging Gaps.. Building Futures...
@@ -586,14 +639,14 @@ function OurPathwayPage() {
             <p
               style={{
                 fontFamily: "'Inter', 'Segoe UI', sans-serif",
-                fontWeight: 400,
-                fontSize: '20px',
-                lineHeight: '1',
-                letterSpacing: '2px',
+                fontWeight: 600,
+                fontSize: '16px',
+                lineHeight: '1.2',
+                letterSpacing: '1.5px',
                 textTransform: 'uppercase',
                 textAlign: 'center',
-                color: '#0F0F0F',
-                marginBottom: '12px',
+                color: '#6b7280',
+                marginBottom: '10px',
               }}
             >
               Our Commitment
@@ -627,17 +680,12 @@ function OurPathwayPage() {
                 width: '100%',
                 maxWidth: '1000px',
                 margin: '0 auto',
+                padding: '0 16px',
               }}
             >
-              <span style={{ display: 'block', whiteSpace: 'nowrap' }}>
-                At Skillzza, we believe that quality education and decent work opportunities are fundamental human rights.
-              </span>
-              <span style={{ display: 'block', whiteSpace: 'nowrap' }}>
-                Our SDG-aligned pathway is designed to create lasting impact across communities while
-              </span>
-              <span style={{ display: 'block', whiteSpace: 'nowrap' }}>
-                addressing critical global challenges.
-              </span>
+              At Skillzza, we believe that quality education and decent work opportunities are fundamental human rights.
+              <br className="hidden md:inline" /> Our SDG-aligned pathway is designed to create lasting impact across communities while
+              <br className="hidden md:inline" /> addressing critical global challenges.
             </p>
           </div>
 
@@ -822,6 +870,7 @@ function OurPathwayPage() {
           {/* Section headings */}
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <p
+              className="pathway-get-started-kicker"
               style={{
                 fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 600,
@@ -837,6 +886,7 @@ function OurPathwayPage() {
               The Pathway Difference
             </p>
             <h2
+              className="pathway-get-started-title"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
@@ -896,6 +946,7 @@ function OurPathwayPage() {
                 }}
               >
                 <div
+                  className="pathway-highlight-icon-box"
                   style={{
                     width: '75px',
                     height: '75px',
@@ -905,11 +956,13 @@ function OurPathwayPage() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    flexShrink: 0,
                   }}
                 >
                   <img
                     src={item.icon}
                     alt={item.title}
+                    className="pathway-highlight-icon-img"
                     style={{ width: '36px', height: '36px', objectFit: 'contain' }}
                   />
                 </div>
@@ -960,13 +1013,14 @@ function OurPathwayPage() {
             <p
               style={{
                 fontFamily: "'Inter', 'Segoe UI', sans-serif",
-                fontWeight: 400,
-                fontSize: '38px',
-                lineHeight: '1',
-                letterSpacing: '0%',
+                fontWeight: 600,
+                fontSize: '16px',
+                lineHeight: '1.2',
+                letterSpacing: '1.5px',
+                textTransform: 'uppercase',
                 textAlign: 'center',
-                color: '#0F0F0F',
-                marginBottom: '12px',
+                color: '#6b7280',
+                marginBottom: '10px',
               }}
             >
               Who We Serve
@@ -1124,10 +1178,13 @@ function OurPathwayPage() {
           <p
             style={{
               fontFamily: "'Inter', 'Segoe UI', sans-serif",
-              fontWeight: 400,
-              fontSize: '38px',
-              lineHeight: 1,
-              color: '#0F0F0F',
+              fontWeight: 600,
+              fontSize: '16px',
+              lineHeight: '1.2',
+              letterSpacing: '1.5px',
+              textTransform: 'uppercase',
+              textAlign: 'center',
+              color: '#6b7280',
               marginBottom: '10px',
             }}
           >
@@ -1290,6 +1347,7 @@ function OurPathwayPage() {
           </div>
 
           <div
+            className="pathway-get-started-card pathway-tab-content"
             style={{
               width: '100%',
               backgroundColor: '#FFFFFF',
@@ -1301,6 +1359,7 @@ function OurPathwayPage() {
             }}
           >
             <div
+              className="pathway-tab-media"
               style={{
                 flex: '1 1 460px',
                 minHeight: '456px',
@@ -1309,6 +1368,7 @@ function OurPathwayPage() {
               <img
                 src={activeTabContent.image}
                 alt={`${activeTabContent.heading} visual`}
+                className="pathway-tab-image"
                 style={{
                   width: '100%',
                   height: '100%',
@@ -1336,10 +1396,12 @@ function OurPathwayPage() {
                   fontSize: '26px',
                   color: '#8A0303',
                 }}
+                className="pathway-get-started-heading"
               >
                 {activeTabContent.heading}
               </div>
               <ul
+                className="pathway-get-started-list"
                 style={{
                   listStyle: 'none',
                   padding: 0,
@@ -1431,8 +1493,8 @@ function OurPathwayPage() {
               }}
             >
               {[
-                { label: "Apply Now - It's Free", to: '/signup' },
-                { label: 'Schedule Counseling Call', to: '/contact-us' },
+                { label: "Apply Now", to: '/signup' },
+                { label: 'Schedule Call', to: '/contact-us' },
               ].map((item) => (
                 <Link
                   key={item.label}
