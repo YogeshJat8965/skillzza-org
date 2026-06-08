@@ -17,10 +17,10 @@ import platformImg3 from '../assets/card grid/image 3.png';
 import platformImg4 from '../assets/card grid/image 4.png';
 import platformImg5 from '../assets/card grid/image 5.png';
 import platformImg6 from '../assets/card grid/image 6.png';
-import sotAiImg from '../assets/card grid/School of Technology/school of Ai.png';
-import sotSustainImg from '../assets/card grid/School of Technology/gssca.jpeg';
-import sotDigitalImg from '../assets/card grid/School of Technology/Centre of Digital & Design Excellence.png';
-import sotAerialImg from '../assets/card grid/School of Technology/Institute of Aerial Intelligence.png';
+import sot1Img from '../assets/card grid/School of Technology/1.png';
+import sot2Img from '../assets/card grid/School of Technology/2.png';
+import sot3Img from '../assets/card grid/School of Technology/3.png';
+import sot4Img from '../assets/card grid/School of Technology/4.png';
 import companyRightImage from '../assets/card grid/WhatsApp Image 2026-04-25 at 6.49.26 PM.jpeg';
 
 // K-12 Dropdown images
@@ -30,18 +30,18 @@ import k12Img3 from '../assets/card grid/K-12/3.png';
 import k12Img4 from '../assets/card grid/K-12/4.png';
 import k12Img5 from '../assets/card grid/K-12/5.png';
 import k12Img6 from '../assets/card grid/K-12/6.png';
-import insightsAgentic1 from '../assets/card grid/insights/Agentic Workforce Index 2026 1.webp';
-import insightsAgentic2 from '../assets/card grid/insights/Agentic Workforce Index 2026 2.webp';
-import insightsPodcast1 from '../assets/card grid/insights/podcast 1.webp';
-import insightsPodcast2 from '../assets/card grid/insights/podcast 2.png';
-import insightsLive1 from '../assets/card grid/insights/skillzza-live 1.png';
-import insightsLive2 from '../assets/card grid/insights/skillzza-live 2.jpg.jpeg';
-import insightsTalent1 from '../assets/card grid/insights/-talent-research 1.png';
-import insightsTalent2 from '../assets/card grid/insights/-talent-research2.jpg.jpeg';
-import insightsBlueprint1 from '../assets/card grid/insights/From Scores to Skills premium.png';
-import insightsBlueprint2 from '../assets/card grid/insights/AI-Powered Reskilling Initiatives blue.jpg.jpeg';
-import insightsDigest1 from '../assets/card grid/insights/digest 1.webp';
-import insightsDigest2 from '../assets/card grid/insights/digest 2.jpg.jpeg';
+import insightsAgentic1 from '../assets/card grid/insights/1agentic.png';
+import insightsAgentic2 from '../assets/card grid/insights/2agentic.png';
+import insightsPodcast1 from '../assets/card grid/insights/1podcast.png';
+import insightsPodcast2 from '../assets/card grid/insights/2podcast.png';
+import insightsLive1 from '../assets/card grid/insights/1skillzzaLive.png';
+import insightsLive2 from '../assets/card grid/insights/2skillzzaLive.png';
+import insightsTalent1 from '../assets/card grid/insights/1researchhub.png';
+import insightsTalent2 from '../assets/card grid/insights/2researchhub.png';
+import insightsBlueprint1 from '../assets/card grid/insights/1skillBlueprint.png';
+import insightsBlueprint2 from '../assets/card grid/insights/2skillBlueprint.png';
+import insightsDigest1 from '../assets/card grid/insights/1skillzzaDigest.png';
+import insightsDigest2 from '../assets/card grid/insights/2skillzzaDigest.png';
 
 /* ═══════════════════════════════════════════════════════════════
    NAV DATA - enriched with gradient icons, descriptions, pills
@@ -200,11 +200,11 @@ const navItems = [
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
       { name: 'Vidya AI', link: 'https://cognifyai.skillzza.com/', desc: 'Vedya is Cognify AI\'s dedicated AI Co-Pilot built exclusively for K-12 learning ecosystems.', pill: 'Flagship', pillColor: 'red', imagePos: 'left' },
-      { name: 'Virtual Internship', link: 'https://cognifyai.skillzza.com/', desc: 'Real-world AI coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Grades 6-12', pillColor: 'red', imagePos: 'left' },
-      { name: 'AI Playground', link: 'https://cognifyai.skillzza.com/#', desc: 'An interactive innovation hub for exploring AI tools, creativity, and emerging technologies.', pill: 'CPD certified', pillColor: 'red', imagePos: 'left', bgTint: '#fffbeb' },
-      { name: 'Skill studio', link: 'https://skillzza-club.vercel.app/', desc: 'Immersive future skills programs focused on AI, creativity, coding, and innovation.', pill: 'Assessment', pillColor: 'red', imagePos: 'left' },
+      { name: 'Virtual Internship', link: 'https://cognifyai.skillzza.com/', desc: 'Real-world AI coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Grades 6-12', pillColor: 'purple', imagePos: 'left' },
+      { name: 'AI Playground', link: 'https://cognifyai.skillzza.com/#', desc: 'An interactive innovation hub for exploring AI tools, creativity, and emerging technologies.', pill: 'CPD certified', pillColor: 'red', imagePos: 'left' },
+      { name: 'Skill studio', link: 'https://skillzza-club.vercel.app/', desc: 'Immersive future skills programs focused on AI, creativity, coding, and innovation.', pill: 'Assessment', pillColor: 'purple', imagePos: 'left' },
       { name: 'Teacher AI Upskilling Lab', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Empowering educators with practical AI skills and modern digital pedagogy.', pill: 'Bridge', pillColor: 'red', imagePos: 'left' },
-      { name: 'CCMM AI Maturity for Schools', link: 'https://cognifyai.skillzza.com/for-school.html', desc: 'A strategic framework to assess and accelerate AI readiness in schools.', pill: 'New', pillColor: 'red', imagePos: 'left', bgTint: '#f0f4ff' },
+      { name: 'CCMM AI Maturity for Schools', link: 'https://cognifyai.skillzza.com/for-school.html', desc: 'A strategic framework to assess and accelerate AI readiness in schools.', pill: 'New', pillColor: 'purple', imagePos: 'left' },
     ],
   },
   {
@@ -215,23 +215,23 @@ const navItems = [
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
       {
-        titleLines: ['School of AI &', 'Quantum', 'Intelligence'],
-        image: sotAiImg,
+        titleLines: ['School of AI & Quantum Intelligence'],
+        image: sot1Img,
         link: null,
       },
       {
-        titleLines: ['Global School of', 'Sustainability &', 'Climate Action'],
-        image: sotSustainImg,
+        titleLines: ['Global School of Sustainability & Climate Action'],
+        image: sot2Img,
         link: 'https://globalschoolofsustainability.com/',
       },
       {
-        titleLines: ['Centre of Digital', '& Design', 'Excellence'],
-        image: sotDigitalImg,
+        titleLines: ['Centre of Digital & Design Excellence'],
+        image: sot3Img,
         link: null,
       },
       {
-        titleLines: ['Institute of', 'Aerial', 'Intelligence'],
-        image: getAssetPath('/schoolEVMobilityTileImg.png'),
+        titleLines: ['Institute of Aerial Intelligence'],
+        image: sot4Img,
         link: null,
       },
     ],
@@ -244,7 +244,7 @@ const navItems = [
   {
     name: 'Insights',
     layout: 'insights-split',
-    width: 860,
+    width: 1020,
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
@@ -319,14 +319,14 @@ const navItems = [
   {
     name: 'Company',
     layout: 'company-mega',
-    width: 810,
+    width: 960,
     companyEyebrow: 'About Skillzza',
     servicesEyebrow: 'Services & Consulting',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     cta: {
       text: 'Partner with Skillzza',
-      sub: '- universities, enterprises and governments building future-ready talent.',
+      sub: 'universities, enterprises and governments building future-ready talent.',
       link: '/company/partnerships',
     },
     companyItems: [
@@ -881,6 +881,22 @@ const ImageCardGridDropdown = ({ navItem, onComingSoon }) => (
 const ImageCardItem = ({ item, index, onComingSoon }) => {
   const [hovered, setHovered] = useState(false);
   const isExternal = item.link?.startsWith('http');
+  const titleStr = item.titleLines?.join(' ') || 'School of Technology';
+
+  let bg, color, svg;
+  if (titleStr.includes('AI & Quantum')) {
+    bg = '#f3e8ff'; color = '#8947B3';
+    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line><text x="12" y="16" fontSize="9" fontWeight="800" textAnchor="middle" fill="currentColor" stroke="none">AI</text></svg>;
+  } else if (titleStr.includes('Sustainability')) {
+    bg = '#dcfce7'; color = '#16a34a';
+    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>;
+  } else if (titleStr.includes('Digital & Design')) {
+    bg = '#e0e7ff'; color = '#2563eb';
+    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="m10 14 2.5-2.5a1.41 1.41 0 0 1 2 2L12 16"/></svg>;
+  } else {
+    bg = '#f3e8ff'; color = '#8947B3';
+    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 14v4"/><path d="M12 18h4"/><path d="M12 18H8"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="m8 8 3.5 3.5"/><path d="m12.5 12.5 3.5 3.5"/><path d="m16 8-3.5 3.5"/><path d="m11.5 12.5-3.5 3.5"/></svg>;
+  }
 
   return (
       <a
@@ -889,7 +905,7 @@ const ImageCardItem = ({ item, index, onComingSoon }) => {
         rel={isExternal ? 'noopener noreferrer' : undefined}
         onClick={!item.link ? (e) => {
           e.preventDefault();
-          onComingSoon?.(item.titleLines?.join(' ') || 'School of Technology');
+          onComingSoon?.(titleStr);
         } : undefined}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -920,7 +936,7 @@ const ImageCardItem = ({ item, index, onComingSoon }) => {
         >
           <img
             src={item.image}
-            alt={item.titleLines?.join(' ') || 'School of Technology'}
+            alt={titleStr}
             style={{
               width: '100%',
               height: '100%',
@@ -936,44 +952,58 @@ const ImageCardItem = ({ item, index, onComingSoon }) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: 10,
-            padding: '10px 12px',
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,250,252,0.96))',
+            gap: 12,
+            padding: '10px 14px',
+            background: '#ffffff',
           }}
         >
-          <div
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 12.5,
-              fontWeight: 700,
-              color: '#0f172a',
-              lineHeight: 1.2,
-              letterSpacing: 0.1,
-              whiteSpace: 'nowrap',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              maxWidth: '100%',
-            }}
-          >
-            {item.titleLines?.join(' ')}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0, flex: 1 }}>
+            <div
+              style={{
+                width: 34,
+                height: 34,
+                borderRadius: 8,
+                background: bg,
+                color: color,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
+              }}
+            >
+              {svg}
+            </div>
+            <div
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 13.5,
+                fontWeight: 700,
+                color: '#0f172a',
+                lineHeight: 1.3,
+                letterSpacing: 0,
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+              }}
+            >
+              {titleStr}
+            </div>
           </div>
           <span
             style={{
-              width: 26,
-              height: 26,
+              width: 28,
+              height: 28,
               borderRadius: '50%',
-              background: hovered
-                ? 'linear-gradient(135deg,#BD1723,#8947B3)'
-                : 'linear-gradient(135deg,#cbd5f5,#e2e8f0)',
+              background: bg,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: hovered ? '#ffffff' : '#475569',
-              fontSize: 12,
+              color: color,
+              fontSize: 14,
               fontWeight: 800,
               flexShrink: 0,
-              boxShadow: hovered ? '0 8px 18px rgba(137,71,179,0.25)' : 'none',
               transition: 'all 280ms ease',
+              transform: hovered ? 'translateX(2px)' : 'translateX(0)',
             }}
           >
             ➜
@@ -988,67 +1018,32 @@ const ImageCardItem = ({ item, index, onComingSoon }) => {
 ═══════════════════════════════════════════════════════════════ */
 
 const InsightsSplitDropdown = ({ navItem, onComingSoon }) => {
-  const initialImages = navItem.items.find(item => (item.sideImages || []).length > 0)?.sideImages || [];
-  const [activeImages, setActiveImages] = useState(initialImages);
-  const [animKey, setAnimKey] = useState(0);
-
-  const handleHover = (item) => {
-    if (item.sideImages && item.sideImages.length > 0) {
-      setActiveImages(item.sideImages);
-    }
-    setAnimKey((prev) => prev + 1);
-  };
-
   return (
     <div>
       <style>{`
-        @keyframes insightsFadeUp {
-          from { opacity: 0; transform: translateY(12px) scale(0.98); }
-          to { opacity: 1; transform: translateY(0) scale(1); }
+        @keyframes szInsightsRise {
+          0% { opacity: 0; transform: translateY(12px) scale(0.98); }
+          100% { opacity: 1; transform: translateY(0) scale(1); }
         }
       `}</style>
-      <div style={{ display: 'flex', gap: 0, alignItems: 'stretch' }}>
-        <div style={{ flex: '1 1 52%', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 0, paddingRight: 12 }}>
-          {navItem.items.map((item, i) => (
-            <InsightsRowItem
-              key={item.name}
-              item={item}
-              index={i}
-              total={navItem.items.length}
-              onComingSoon={onComingSoon}
-              onHover={handleHover}
-            />
-          ))}
-        </div>
-        <div style={{ flex: '1 1 48%', display: 'flex', flexDirection: 'column', gap: 14 }}>
-          {(activeImages || []).slice(0, 2).map((src, idx) => (
-            <div
-              key={`${src}-${idx}-${animKey}`}
-              style={{
-                borderRadius: 14,
-                overflow: 'hidden',
-                boxShadow: '0 10px 24px rgba(15, 23, 42, 0.12)',
-                border: '1px solid #eef2f7',
-                opacity: 0,
-                transform: 'translateY(10px)',
-                animation: 'insightsFadeUp 360ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
-                animationDelay: `${idx * 220}ms`,
-              }}
-            >
-              <img
-                src={src}
-                alt="Insights preview"
-                style={{ width: '100%', height: 190, objectFit: 'cover', display: 'block' }}
-              />
-            </div>
-          ))}
-        </div>
+      <div
+        style={{
+          width: '100%',
+          margin: '0 auto',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+          gap: 16,
+        }}
+      >
+        {navItem.items.map((item, i) => (
+          <InsightsGridCard key={item.name} item={item} index={i} onComingSoon={onComingSoon} />
+        ))}
       </div>
     </div>
   );
 };
 
-const InsightsRowItem = ({ item, index, total, onComingSoon, onHover }) => {
+const InsightsGridCard = ({ item, index, onComingSoon }) => {
   const [hovered, setHovered] = useState(false);
   const isExternal = item.link?.startsWith('http');
 
@@ -1061,48 +1056,47 @@ const InsightsRowItem = ({ item, index, total, onComingSoon, onHover }) => {
         e.preventDefault();
         onComingSoon?.(item.name);
       } : undefined}
-      onMouseEnter={() => {
-        setHovered(true);
-        onHover?.(item);
-      }}
+      onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        padding: '12px 14px',
-        borderLeft: hovered ? '3px solid #BD1723' : '3px solid transparent',
-        background: hovered ? 'rgba(189,23,35,0.04)' : 'transparent',
+        display: 'flex',
+        flexDirection: 'column',
+        borderRadius: 12,
+        padding: 20,
+        background: '#ffffff',
+        border: '1px solid #f1f5f9',
+        boxShadow: hovered ? '0 12px 24px rgba(15, 23, 42, 0.08)' : '0 4px 6px rgba(15, 23, 42, 0.02)',
         cursor: 'pointer',
-        transition: 'all 0.25s ease',
-        borderRadius: '0 8px 8px 0',
         textDecoration: 'none',
-        display: 'block',
+        transition: 'all 0.3s ease',
+        transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
+        animation: 'szInsightsRise 400ms ease forwards',
+        animationDelay: `${index * 50}ms`,
+        opacity: 0,
       }}
     >
-      <div
-        style={{
-          fontFamily: "'DM Sans', sans-serif",
-          fontSize: 13.5,
-          fontWeight: 700,
-          color: hovered ? '#BD1723' : '#0f172a',
-          lineHeight: 1.3,
-          transition: 'color 0.25s ease',
-        }}
-      >
+      <div style={{ fontSize: 16, fontWeight: 700, color: '#0f172a', marginBottom: 6, fontFamily: 'Inter, system-ui, sans-serif' }}>
         {item.name}
       </div>
-      {item.desc && (
-        <div style={{
-          fontSize: 11.5,
-          color: '#94a3b8',
-          marginTop: 2,
-          fontWeight: 400,
-          lineHeight: 1.3,
-        }}>
-          {item.desc}
-        </div>
-      )}
-      {item.pill && pillColors[item.pillColor] && (
-        <span style={{ alignSelf: 'flex-start', fontSize: 10, fontWeight: 600, padding: '2px 8px', borderRadius: 20, marginTop: 8, display: 'inline-block', ...pillColors[item.pillColor] }}>{item.pill}</span>
-      )}
+      <div style={{ fontSize: 12, color: '#64748b', marginBottom: 16, fontFamily: 'Inter, system-ui, sans-serif', minHeight: 36 }}>
+        {item.desc}
+      </div>
+      
+      <div style={{ display: 'flex', gap: 8, marginBottom: 16, height: 110 }}>
+        {item.sideImages && item.sideImages.map((img, i) => (
+          <div key={i} style={{ flex: 1, borderRadius: 8, overflow: 'hidden' }}>
+            <img 
+              src={img} 
+              alt="" 
+              style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease', transform: hovered ? 'scale(1.05)' : 'scale(1)' }} 
+            />
+          </div>
+        ))}
+      </div>
+
+      <div style={{ fontSize: 13, fontWeight: 600, color: '#6D28D9', display: 'flex', alignItems: 'center', gap: 4 }}>
+        Learn more <span style={{ transition: 'transform 0.2s', transform: hovered ? 'translateX(4px)' : 'translateX(0)' }}>→</span>
+      </div>
     </a>
   );
 };
@@ -1348,9 +1342,9 @@ const K12Header = ({ text }) => (
       gap: 12,
       padding: '10px 20px',
       background: '#f1f5f9',
-      borderRadius: '50px',
+      borderRadius: '12px',
       marginBottom: 20,
-      width: 'fit-content',
+      width: '100%',
     }}
   >
     <div
@@ -1405,10 +1399,10 @@ const K12Card = ({ item, index, onClose }) => {
   const cardImages = [k12Img1, k12Img2, k12Img3, k12Img4, k12Img5, k12Img6];
   const cardImage = cardImages[index] || k12Img1;
   const imgLeft = item.imagePos === 'left';
-  const isItalic = item.name === 'AI Playground' || item.name === 'CCMM AI Maturity for Schools';
+  const isItalic = false;
 
   const renderBadgeIcon = (pill) => {
-    const sc = '#BD1723';
+    const sc = item.pillColor === 'red' ? '#BD1723' : '#8947B3';
     const props = { xmlns: 'http://www.w3.org/2000/svg', width: 14, height: 14, viewBox: '0 0 24 24', fill: 'none', stroke: sc, strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round', style: { flexShrink: 0 } };
     if (pill === 'Flagship') return <svg {...props}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>;
     if (pill === 'Grades 6-12') return <svg {...props}><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" /></svg>;
@@ -1438,7 +1432,7 @@ const K12Card = ({ item, index, onClose }) => {
       {item.pill && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '8px' }}>
           {renderBadgeIcon(item.pill)}
-          <span style={{ fontSize: '11px', fontWeight: 700, color: '#BD1723', fontFamily: 'Inter, system-ui, sans-serif' }}>
+          <span style={{ fontSize: '11px', fontWeight: 700, color: item.pillColor === 'red' ? '#BD1723' : '#8947B3', fontFamily: 'Inter, system-ui, sans-serif' }}>
             {item.pill}
           </span>
         </div>
@@ -1456,7 +1450,7 @@ const K12Card = ({ item, index, onClose }) => {
       onMouseLeave={() => setH(false)}
       style={{
         display: 'flex', flexDirection: 'row', alignItems: 'stretch',
-        background: item.bgTint || '#ffffff',
+        background: '#ffffff',
         borderRadius: '14px',
         border: h ? '1px solid #cbd5e1' : '1px solid #e8edf3',
         textDecoration: 'none', overflow: 'hidden', position: 'relative',
@@ -1550,57 +1544,169 @@ const SvcCard = ({ item, onClose }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   CompanyMegaDropdown - About + Services in one dropdown
+   CompanyMegaDropdown
 ═══════════════════════════════════════════════════════════════ */
 
-const CompanyMegaDropdown = ({ navItem, onClose }) => (
-  <div>
-    <div
+const CompanyLeftCard = ({ item, onClose }) => {
+  const [h, setH] = useState(false);
+  
+  const bg = '#f3e8ff';
+  const color = '#8947B3';
+
+  let svg;
+  switch (item.name) {
+    case 'About Us': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="8" width="4" height="12"/><rect x="10" y="8" width="4" height="12"/><rect x="16" y="8" width="4" height="12"/><path d="M2 20h20"/><path d="M12 3 2 8h20Z"/></svg>; break;
+    case 'Our Methodology': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>; break;
+    case 'What We Do': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>; break;
+    case 'Our Pathway': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg>; break;
+    case 'Partner Collaboration': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3-6 6"/><path d="m14 10-2-2"/><path d="m12 12-2-2"/><path d="m10 14-2-2"/><path d="m8 16-2-2"/><path d="m6 18-2-2"/><path d="M4 20l-1 1"/><path d="m3 21 2 2"/><path d="M5 23l1-1"/></svg>; break;
+    case 'Careers at Skillzza': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>; break;
+    case 'Press & Media': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>; break;
+    case 'Responsible AI': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>; break;
+  }
+
+  return (
+    <a
+      href={item.link ? getRoutePath(item.link) : undefined}
+      onClick={(e) => {
+        if (!item.link) { e.preventDefault(); return; }
+        onClose?.();
+      }}
+      onMouseEnter={() => setH(true)}
+      onMouseLeave={() => setH(false)}
       style={{
-        display: 'grid',
-        gridTemplateColumns: 'minmax(0, 1.1fr) 1px minmax(0, 0.9fr)',
-        gap: '24px',
+        display: 'flex', alignItems: 'center', gap: 12,
+        padding: '14px 16px', borderRadius: 14,
+        background: h ? 'linear-gradient(145deg, #ffffff 0%, #fcf7ff 100%)' : '#ffffff',
+        border: h ? '1px solid #e9d5ff' : '1px solid #f1f5f9',
+        boxShadow: h ? '0 10px 25px rgba(137, 71, 179, 0.08)' : 'none',
+        textDecoration: 'none',
+        gridColumn: item.span ? `span ${item.span}` : 'span 1',
+        height: '100%',
+        boxSizing: 'border-box',
+        transition: 'all 0.3s',
+        transform: h ? 'translateY(-2px)' : 'translateY(0)',
       }}
     >
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: 12,
-          }}
-        >
+      <div style={{ width: 36, height: 36, borderRadius: 10, background: bg, color: color, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+        {svg}
+      </div>
+      <div>
+        <div style={{ fontSize: 13.5, fontWeight: 700, color: '#0f172a', marginBottom: 1 }}>{item.name}</div>
+        <div style={{ fontSize: 11, color: '#64748b' }}>{item.desc}</div>
+      </div>
+    </a>
+  );
+};
+
+const CompanyRightCard = ({ item, onClose }) => {
+  const [h, setH] = useState(false);
+  
+  const bg = '#f3e8ff';
+  const color = '#8947B3';
+
+  let svg;
+  switch (item.name) {
+    case 'Institution Transformation': svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>; break;
+    case 'Enterprise Skill Audit': svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><circle cx="18" cy="18" r="3"/><line x1="20" y1="20" x2="22" y2="22"/></svg>; break;
+    case 'Govt & CSR Programmes': svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="8" width="4" height="12"/><rect x="10" y="8" width="4" height="12"/><rect x="16" y="8" width="4" height="12"/><path d="M2 20h20"/><path d="M12 3 2 8h20Z"/></svg>; break;
+    case 'Talent Intelligence Reports': svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M12 18a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M12 14v4"/><path d="M12 14h-4"/></svg>; break;
+  }
+
+  return (
+    <a
+      href={item.link ? getRoutePath(item.link) : undefined}
+      onClick={(e) => {
+        if (!item.link) { e.preventDefault(); return; }
+        onClose?.();
+      }}
+      onMouseEnter={() => setH(true)}
+      onMouseLeave={() => setH(false)}
+      style={{
+        display: 'flex', alignItems: 'center', gap: 12,
+        padding: '10px 14px', borderRadius: 12,
+        background: h ? 'linear-gradient(145deg, #ffffff 0%, #fcf7ff 100%)' : '#ffffff',
+        border: h ? '1px solid #e9d5ff' : '1px solid #f1f5f9',
+        textDecoration: 'none',
+        boxShadow: h ? '0 10px 25px rgba(137, 71, 179, 0.08)' : 'none',
+        transition: 'all 0.3s',
+        transform: h ? 'translateY(-2px)' : 'translateY(0)',
+      }}
+    >
+      <div style={{ width: 34, height: 34, borderRadius: 10, background: bg, color: color, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+        {svg}
+      </div>
+      <div>
+        <div style={{ fontSize: 13.5, fontWeight: 700, color: '#0f172a', marginBottom: 1 }}>{item.name}</div>
+        <div style={{ fontSize: 11, color: '#64748b' }}>{item.desc}</div>
+      </div>
+    </a>
+  );
+};
+
+const CompanyMegaDropdown = ({ navItem, onClose }) => {
+  const [hCta, setHCta] = useState(false);
+
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.1fr) 1px minmax(0, 0.9fr)', gap: 18 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10, justifyContent: 'space-between' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridAutoRows: '1fr', gap: 10 }}>
           {(navItem.companyItems || []).map((item, i) => (
-            <CompactItem key={item.name} item={item} index={i} onClose={onClose} />
+            <CompanyLeftCard key={item.name} item={item} onClose={onClose} />
           ))}
         </div>
-        {navItem.cta && (
-          <div style={{ paddingTop: '6px' }}>
-            <CtaBar cta={navItem.cta} accentGradient={navItem.accentGradient} onClose={onClose} />
+        {/* CTA Row directly in grid */}
+        <a
+          href={navItem.cta.link}
+          onClick={() => onClose?.()}
+          onMouseEnter={() => setHCta(true)}
+          onMouseLeave={() => setHCta(false)}
+          style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+            padding: '14px 18px', background: '#f8fafc', borderRadius: 14,
+            border: '1px solid #f1f5f9', textDecoration: 'none',
+            transition: 'all 0.3s',
+            transform: hCta ? 'translateY(-2px)' : 'translateY(0)',
+            boxShadow: hCta ? '0 8px 16px rgba(15, 23, 42, 0.04)' : 'none',
+            marginTop: 'auto'
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <div style={{ width: 36, height: 36, borderRadius: 10, background: '#f3e8ff', color: '#8947B3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div style={{ fontSize: 13, color: '#0f172a' }}>
+              <span style={{ fontWeight: 700 }}>{navItem.cta.text}</span> - <span style={{ color: '#64748b' }}>{navItem.cta.sub}</span>
+            </div>
           </div>
-        )}
+          <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'linear-gradient(135deg, #BD1723, #8947B3)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'transform 0.3s', transform: hCta ? 'translateX(3px)' : 'translateX(0)' }}>
+            →
+          </div>
+        </a>
       </div>
 
       {/* Decorative Separator Line */}
-      <div style={{ background: '#e2e8f0', width: '1px', alignSelf: 'stretch' }} />
+      <div style={{ background: '#f1f5f9', width: '1px', alignSelf: 'stretch' }} />
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 10 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {(navItem.serviceItems || []).map((item, i) => (
-            <SvcCard key={item.name} item={item} index={i} onClose={onClose} />
+            <CompanyRightCard key={item.name} item={item} onClose={onClose} />
           ))}
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'flex-end', alignItems: 'center', paddingTop: '8px' }}>
+        
+        {/* Assessment Ad Image */}
+        <div style={{ display: 'flex', flex: 1, alignItems: 'flex-end', marginTop: 4 }}>
           <img 
             src={companyRightImage} 
-            alt="Company" 
-            style={{ width: '92%', maxWidth: '360px', height: '285px', borderRadius: '12px', objectFit: 'cover' }} 
+            alt="Assessment Ad" 
+            style={{ width: '100%', borderRadius: 14, objectFit: 'contain', objectPosition: 'bottom' }} 
           />
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 /* ═══════════════════════════════════════════════════════════════
    PLATFORM TABS DROPDOWN - Sidebar + Content + Illustration
