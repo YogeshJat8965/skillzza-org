@@ -22,6 +22,14 @@ import sotSustainImg from '../assets/card grid/School of Technology/gssca.jpeg';
 import sotDigitalImg from '../assets/card grid/School of Technology/Centre of Digital & Design Excellence.png';
 import sotAerialImg from '../assets/card grid/School of Technology/Institute of Aerial Intelligence.png';
 import companyRightImage from '../assets/card grid/WhatsApp Image 2026-04-25 at 6.49.26 PM.jpeg';
+
+// K-12 Dropdown images
+import k12Img1 from '../assets/card grid/K-12/1.png';
+import k12Img2 from '../assets/card grid/K-12/2.png';
+import k12Img3 from '../assets/card grid/K-12/3.png';
+import k12Img4 from '../assets/card grid/K-12/4.png';
+import k12Img5 from '../assets/card grid/K-12/5.png';
+import k12Img6 from '../assets/card grid/K-12/6.png';
 import insightsAgentic1 from '../assets/card grid/insights/Agentic Workforce Index 2026 1.webp';
 import insightsAgentic2 from '../assets/card grid/insights/Agentic Workforce Index 2026 2.webp';
 import insightsPodcast1 from '../assets/card grid/insights/podcast 1.webp';
@@ -185,19 +193,18 @@ const navItems = [
   {
     name: 'Skillzza K-12',
     layout: 'k12-vidya',
-    width: 780,
-    eyebrow: 'K-12 Vidya AI - school intelligence ecosystem',
+    width: 1020,
+    eyebrow: 'k-12 - Vidya Ai - School intelligence ecosystem',
     studioLink: 'https://cognifyai.skillzza.com/',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
-    // badge: 'K-12',
     items: [
-      { name: 'Vidya AI Virtual Internship', link: 'https://cognifyai.skillzza.com/', desc: 'Real-world AI, coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Flagship', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Skill Studio for Students', link: 'https://skillzza-club.vercel.app/', desc: 'Gamified AI-powered skill tracks - ML basics, robotics, sustainability, drone tech, quantum intro.', pill: 'Grades 6-12', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Teacher AI Upskill Lab', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Structured AI literacy programme for educators - pedagogy, tools, classroom integration, assessments.', pill: 'CPD certified', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'CCMM - AI Maturity for Schools', link: 'https://cognifyai.skillzza.com/for-school.html', desc: 'Continuous Capability & Maturity Model - benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Campus Connect - K12', link: 'https://cognifyai.skillzza.com/#', desc: 'Links top-performing school students directly to university and early internship pipelines.', pill: 'Bridge', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Future Founders Track', link: 'https://cognifyai.skillzza.com/#', desc: 'Entrepreneurship & innovation bootcamp - problem-solving, pitching, and startup thinking for teens.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Vidya AI', link: 'https://cognifyai.skillzza.com/', desc: 'Vedya is Cognify AI\'s dedicated AI Co-Pilot built exclusively for K-12 learning ecosystems.', pill: 'Flagship', pillColor: 'red', imagePos: 'left' },
+      { name: 'Virtual Internship', link: 'https://cognifyai.skillzza.com/', desc: 'Real-world AI coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Grades 6-12', pillColor: 'red', imagePos: 'left' },
+      { name: 'AI Playground', link: 'https://cognifyai.skillzza.com/#', desc: 'An interactive innovation hub for exploring AI tools, creativity, and emerging technologies.', pill: 'CPD certified', pillColor: 'red', imagePos: 'left', bgTint: '#fffbeb' },
+      { name: 'Skill studio', link: 'https://skillzza-club.vercel.app/', desc: 'Immersive future skills programs focused on AI, creativity, coding, and innovation.', pill: 'Assessment', pillColor: 'red', imagePos: 'left' },
+      { name: 'Teacher AI Upskilling Lab', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Empowering educators with practical AI skills and modern digital pedagogy.', pill: 'Bridge', pillColor: 'red', imagePos: 'left' },
+      { name: 'CCMM AI Maturity for Schools', link: 'https://cognifyai.skillzza.com/for-school.html', desc: 'A strategic framework to assess and accelerate AI readiness in schools.', pill: 'New', pillColor: 'red', imagePos: 'left', bgTint: '#f0f4ff' },
     ],
   },
   {
@@ -1333,86 +1340,134 @@ const AgenticAIDropdown = ({ navItem }) => {
    K12VidyaDropdown - banner header + 3-column card grid
 ═══════════════════════════════════════════════════════════════ */
 
+const K12Header = ({ text }) => (
+  <div
+    style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: 12,
+      padding: '10px 20px',
+      background: '#f1f5f9',
+      borderRadius: '50px',
+      marginBottom: 20,
+      width: 'fit-content',
+    }}
+  >
+    <div
+      style={{
+        width: 24,
+        height: 24,
+        borderRadius: '50%',
+        background: '#fca5a5',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexShrink: 0,
+      }}
+    >
+      <div
+        style={{
+          width: 12,
+          height: 12,
+          borderRadius: '50%',
+          background: '#dc2626',
+        }}
+      />
+    </div>
+    <span
+      style={{
+        fontSize: '14.5px',
+        fontWeight: 700,
+        color: '#0f172a',
+        fontFamily: 'Inter, system-ui, sans-serif',
+      }}
+    >
+      {text}
+    </span>
+  </div>
+);
+
 const K12VidyaDropdown = ({ navItem, onClose }) => (
   <div>
-    <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} badge={navItem.badge} />
-    {/* 3-col card grid */}
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
-      {navItem.items.map((item, i) => <K12Card key={item.name} item={item} index={i} onClose={onClose} />)}
+    <K12Header text={navItem.eyebrow} />
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 14 }}>
+      {navItem.items.map((item, i) => (
+        <K12Card key={item.name} item={item} index={i} onClose={onClose} />
+      ))}
     </div>
   </div>
 );
 
-const K12Card = ({ item, onClose }) => {
+const K12Card = ({ item, index, onClose }) => {
   const [h, setH] = useState(false);
-  const glowRaw = item.iconShadow?.match(/rgba\([^)]+\)/)?.[0] || 'rgba(20,184,166,0.15)';
-  const glowMid = glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.22)');
   const isExternal = item.link?.startsWith('http');
+
+  const cardImages = [k12Img1, k12Img2, k12Img3, k12Img4, k12Img5, k12Img6];
+  const cardImage = cardImages[index] || k12Img1;
+  const imgLeft = item.imagePos === 'left';
+  const isItalic = item.name === 'AI Playground' || item.name === 'CCMM AI Maturity for Schools';
+
+  const renderBadgeIcon = (pill) => {
+    const sc = '#BD1723';
+    const props = { xmlns: 'http://www.w3.org/2000/svg', width: 14, height: 14, viewBox: '0 0 24 24', fill: 'none', stroke: sc, strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round', style: { flexShrink: 0 } };
+    if (pill === 'Flagship') return <svg {...props}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>;
+    if (pill === 'Grades 6-12') return <svg {...props}><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" /></svg>;
+    if (pill === 'CPD certified') return <svg {...props}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 11 2 2 4-4" /></svg>;
+    if (pill === 'Assessment') return <svg {...props}><rect x="8" y="2" width="8" height="4" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="M9 12h6M9 16h6" /></svg>;
+    if (pill === 'Bridge') return <svg {...props}><path d="M3 12h18M3 18h18M6 12v6M18 12v6M12 12v6M9 12v6M15 12v6" /></svg>;
+    if (pill === 'New') return <svg {...props}><circle cx="12" cy="12" r="10" /><polygon points="12 8 13.5 11 16.5 11.5 14.25 13.5 15 16.5 12 15 9 16.5 9.75 13.5 7.5 11.5 10.5 11 12 8" /></svg>;
+    return null;
+  };
+
+  const imageBlock = (
+    <div style={{ width: '42%', minHeight: '160px', flexShrink: 0, overflow: 'hidden', position: 'relative', borderRadius: imgLeft ? '14px 0 0 14px' : '0 14px 14px 0' }}>
+      <img src={cardImage} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block', transition: 'transform 0.5s ease', transform: h ? 'scale(1.06)' : 'scale(1)' }} />
+    </div>
+  );
+
+  const contentBlock = (
+    <div style={{ flex: 1, padding: '14px 15px 12px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minWidth: 0 }}>
+      <div>
+        <div style={{ fontSize: '15px', fontWeight: 700, color: '#0f172a', lineHeight: 1.2, marginBottom: '6px', fontFamily: 'Inter, system-ui, sans-serif', fontStyle: isItalic ? 'italic' : 'normal' }}>
+          {item.name}
+        </div>
+        <div style={{ fontSize: '11.5px', color: '#475569', lineHeight: 1.5, fontFamily: 'Inter, system-ui, sans-serif' }}>
+          {item.desc}
+        </div>
+      </div>
+      {item.pill && (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '8px' }}>
+          {renderBadgeIcon(item.pill)}
+          <span style={{ fontSize: '11px', fontWeight: 700, color: '#BD1723', fontFamily: 'Inter, system-ui, sans-serif' }}>
+            {item.pill}
+          </span>
+        </div>
+      )}
+    </div>
+  );
+
   return (
     <a
       href={item.link || undefined}
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? 'noopener noreferrer' : undefined}
-      onClick={(e) => {
-        if (!item.link) {
-          e.preventDefault();
-          return;
-        }
-        onClose?.();
-      }}
+      onClick={(e) => { if (!item.link || item.link === '#') { e.preventDefault(); return; } onClose?.(); }}
       onMouseEnter={() => setH(true)}
       onMouseLeave={() => setH(false)}
       style={{
-        display: 'flex', flexDirection: 'column', gap: 8,
-        padding: '13px 13px 11px', borderRadius: 12,
-        border: h
-          ? `1.5px solid ${glowMid}`
-          : '1px solid #f0f4f8',
-        background: h
-          ? `linear-gradient(145deg,#ffffff,${glowRaw.replace(/,[\s]*[\d.]+\)/, ',0.06)')})`
-          : '#f4f5f7',
+        display: 'flex', flexDirection: 'row', alignItems: 'stretch',
+        background: item.bgTint || '#ffffff',
+        borderRadius: '14px',
+        border: h ? '1px solid #cbd5e1' : '1px solid #e8edf3',
         textDecoration: 'none', overflow: 'hidden', position: 'relative',
-        cursor: item.link ? 'pointer' : 'default',
-        transition: 'all 0.3s cubic-bezier(0.34,1.2,0.64,1)',
-        transform: h ? 'translateY(-6px) scale(1.025)' : 'translateY(0) scale(1)',
-        boxShadow: 'none',
+        cursor: (item.link && item.link !== '#') ? 'pointer' : 'default',
+        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+        transform: h ? 'translateY(-3px)' : 'translateY(0)',
+        boxShadow: h ? '0 8px 20px rgba(0, 0, 0, 0.08)' : '0 1px 3px rgba(0, 0, 0, 0.04)',
+        minHeight: '160px',
       }}
     >
-      {/* Gradient top bar */}
-      <div style={{
-        position: 'absolute', top: 0, left: 0, right: 0, height: 2,
-        borderRadius: '12px 12px 0 0', zIndex: 0,
-        background: item.iconGradient || 'linear-gradient(135deg,#00e5b0,#38d9f5)',
-        opacity: h ? 1 : 0,
-        transition: 'opacity 0.28s ease',
-      }} />
-      {/* Shimmer - fixed geometry */}
-      <div className={h ? 'sz-shimmer-active' : ''} style={{
-        position: 'absolute', top: 0, left: '-75%',
-        width: '62%', height: '100%', zIndex: 0,
-        background: 'linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent)',
-        pointerEvents: 'none', transform: 'skewX(-12deg)',
-      }} />
-      {/* Content above overlays */}
-      <div style={{ position: 'relative' }}>
-        <div style={{
-          fontSize: 12.5, fontWeight: 700,
-          color: h ? '#0f172a' : '#1e293b',
-          lineHeight: 1.2, transition: 'color 0.2s ease',
-        }}>{item.name}</div>
-        {item.desc && (
-          <div style={{
-            fontSize: 11.5, color: h ? '#4b6280' : '#5a7394',
-            marginTop: 4, lineHeight: 1.5,
-            transition: 'color 0.2s ease',
-          }}>
-            {item.desc}
-          </div>
-        )}
-        {item.pill && pillColors[item.pillColor] && (
-          <span style={{ alignSelf: 'flex-start', fontSize: 10, fontWeight: 600, padding: '1px 7px', borderRadius: 20, marginTop: 8, display: 'inline-block', ...pillColors[item.pillColor] }}>{item.pill}</span>
-        )}
-      </div>
+      {imgLeft ? <>{imageBlock}{contentBlock}</> : <>{contentBlock}{imageBlock}</>}
     </a>
   );
 };
