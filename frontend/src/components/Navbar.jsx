@@ -5,7 +5,7 @@ import {
   Target, Globe, Handshake, UserCheck, Bot, BrainCircuit, Leaf, PaintBucket,
   Zap, Rocket, GraduationCap, ShieldAlert, BookOpen, PenTool, Microscope,
   Mic, Activity, BarChart3, Compass, Settings, Layers, Route, Briefcase,
-  FileText, School, Building, Hexagon
+  FileText, School, Building, Hexagon, Gauge, Lightbulb, Users, MessageSquare, BookA, Clock
 } from 'lucide-react';
 import { getAssetPath, getRoutePath } from '../utils/assets';
 import { aiTalentResearchHubCards } from '../data/aiTalentResearchHubCards';
@@ -57,6 +57,7 @@ const navItems = [
         name: 'The Potential Meter',
         subtitle: 'AI skill assessment engine',
         link: '/product/potential-meter',
+        icon: <Gauge size={22} strokeWidth={2} />,
         heading: 'Discover your true potential with',
         headingHighlight: 'AI-powered assessments.',
         description: 'Our intelligent assessment engine maps your skills, strengths, and growth areas to help you make better career decisions.',
@@ -73,6 +74,7 @@ const navItems = [
         name: 'Xperience Platform',
         subtitle: 'Job simulations',
         link: '/product/xperience-platform',
+        icon: <Briefcase size={22} strokeWidth={2} />,
         heading: 'Practice real roles.',
         headingHighlight: 'Build real confidence.',
         description: 'Our job simulations platform lets you experience real-world roles, solve industry challenges, and get AI-powered feedback to improve.',
@@ -89,6 +91,7 @@ const navItems = [
         name: 'Talent Intelligence',
         subtitle: 'Talent insights engine',
         link: '/product/talent-intelligence',
+        icon: <Lightbulb size={22} strokeWidth={2} />,
         heading: 'Unlock data-driven',
         headingHighlight: 'Talent insights. Stay ahead always.',
         description: 'Our talent intelligence engine analyzes skills, trends, and market data to help you make smarter learning and career decisions.',
@@ -105,6 +108,7 @@ const navItems = [
         name: 'AI HackNex',
         subtitle: 'AI hackathons',
         link: '/product/ai-hacknex',
+        icon: <BookA size={22} strokeWidth={2} />,
         heading: 'Compete. Build. Innovate.',
         headingHighlight: 'All with AI HackNex.',
         description: 'Join AI-powered hackathons, solve real-world challenges, and showcase your skills to top companies and opportunities.',
@@ -121,6 +125,7 @@ const navItems = [
         name: 'Talent Twin',
         subtitle: 'Campus hiring marketplace',
         link: '/product/talent-twin',
+        icon: <Users size={22} strokeWidth={2} />,
         heading: 'Connecting talent.',
         headingHighlight: 'Creating opportunities.',
         description: 'Talent Twin is your campus hiring marketplace that connects students with top companies and the right opportunities.',
@@ -137,6 +142,7 @@ const navItems = [
         name: 'Skillzza Persona',
         subtitle: 'AI roleplay simulator',
         link: '/explore/skillzza-persona',
+        icon: <MessageSquare size={22} strokeWidth={2} />,
         heading: 'Practice like real.',
         headingHighlight: 'Prepare for your AI interview.',
         description: 'Skillzza Persona is your AI agent that simulates real interviews, provides smart feedback, and helps you improve with every practice.',
@@ -1628,15 +1634,30 @@ const PlatformTabsDropdown = ({ navItem }) => {
                 display: 'block',
               }}
             >
-              <div style={{
-                fontSize: 13.5, fontWeight: 700, lineHeight: 1.3,
-                color: i === activeTab ? '#BD1723' : '#0f172a',
-                transition: 'color 0.25s ease',
-              }}>{t.name}</div>
-              <div style={{
-                fontSize: 11.5, color: '#94a3b8', marginTop: 2,
-                fontWeight: 400, lineHeight: 1.3,
-              }}>{t.subtitle}</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                {t.icon && (
+                  <div style={{
+                    color: i === activeTab ? '#BD1723' : '#8947B3',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    transition: 'color 0.25s ease',
+                  }}>
+                    {t.icon}
+                  </div>
+                )}
+                <div>
+                  <div style={{
+                    fontSize: 13.5, fontWeight: 700, lineHeight: 1.3,
+                    color: i === activeTab ? '#BD1723' : '#0f172a',
+                    transition: 'color 0.25s ease',
+                  }}>{t.name}</div>
+                  <div style={{
+                    fontSize: 11.5, color: '#94a3b8', marginTop: 2,
+                    fontWeight: 400, lineHeight: 1.3,
+                  }}>{t.subtitle}</div>
+                </div>
+              </div>
             </a>
           ))}
         </div>
@@ -1842,8 +1863,19 @@ const PlatformTabsDropdown = ({ navItem }) => {
             e.currentTarget.style.boxShadow = 'none';
           }}
         >
-          <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.5 }}>
-            <strong style={{ color: '#0f172a', fontWeight: 700 }}>{navItem.bottomCta.text}</strong>{' : '}{navItem.bottomCta.sub}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+            <div style={{
+              width: 38, height: 38, borderRadius: '50%',
+              background: '#f3e8ff', color: '#8947B3',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              flexShrink: 0
+            }}>
+              <Clock size={20} strokeWidth={2} />
+            </div>
+            <div>
+              <div style={{ fontSize: 13, color: '#0f172a', fontWeight: 700, lineHeight: 1.3 }}>{navItem.bottomCta.text}</div>
+              <div style={{ fontSize: 11.5, color: '#64748b', marginTop: 2, lineHeight: 1.3 }}>{navItem.bottomCta.sub}</div>
+            </div>
           </div>
           <div style={{
             width: 34, height: 34, borderRadius: '50%',
