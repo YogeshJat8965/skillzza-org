@@ -7,13 +7,13 @@ const ProductCatalog = () => {
       {/* Hero Section */}
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
-        style={{ 
+        style={{
           backgroundImage: getBackgroundImageUrl('/transformskill_futureset.png'),
           minHeight: '60vh'
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/70"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-white">
             <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
@@ -38,7 +38,7 @@ const ProductCatalog = () => {
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img src={getAssetPath('/transformskill_futureset.png')} alt="Xperience Platform" className="w-full h-full object-cover" />
             </div>
-            
+
             {/* Content - Right */}
             <div className="space-y-4">
               <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-4">
@@ -145,7 +145,7 @@ const ProductCatalog = () => {
                 More than an assessment-it's a strategic compass for personalized learning design, career direction, and growth optimization.
               </p>
             </div>
-            
+
             {/* Image - Right */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img src={getAssetPath('/potential_meter_right_img.png')} alt="Potential Meter" className="w-full h-96 object-cover" />
@@ -234,7 +234,7 @@ const ProductCatalog = () => {
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img src={getAssetPath('/DataIntelligence_tile.png')} alt="Talent Intelligence Suite" className="w-full h-96 object-cover" />
             </div>
-            
+
             {/* Content - Right */}
             <div className="space-y-4">
               <div className="inline-block px-6 py-2 bg-purple-500 rounded-full text-sm font-semibold text-white mb-4">
@@ -323,7 +323,7 @@ const ProductCatalog = () => {
         </div>
       </section>
 
-      {/* Talent Twin */}
+      {/* Talent Twin*/}
       <section className="bg-gradient-to-br from-green-50 to-white py-16">
         <div className="container mx-auto px-6">
           {/* Content and Image Grid */}
@@ -335,13 +335,13 @@ const ProductCatalog = () => {
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Hire Smarter, Faster, and Better</h2>
               <p className="text-lg text-gray-700">
-                Talent Twin is Skillzza's precision hiring ecosystem, built to bridge the delta between high-potential candidates and opportunity pipelines through real-time, data-backed insights.
+                Talent Twinis Skillzza's precision hiring ecosystem, built to bridge the delta between high-potential candidates and opportunity pipelines through real-time, data-backed insights.
               </p>
               <p className="text-base text-gray-700">
                 It facilitates strategic campus and early-career recruitment by delivering validated learner profiles equipped with performance benchmarks and project portfolios-making intelligent hiring truly scalable.
               </p>
             </div>
-            
+
             {/* Image - Right */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img src={getAssetPath('/career_mentoring_img.jpg')} alt="Talent Twin" className="w-full h-96 object-cover" />
@@ -430,7 +430,7 @@ const ProductCatalog = () => {
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img src={getAssetPath('/step_slide_img.jpg')} alt="AI HackNex" className="w-full h-96 object-cover" />
             </div>
-            
+
             {/* Content - Right */}
             <div className="space-y-4">
               <div className="inline-block px-6 py-2 bg-red-500 rounded-full text-sm font-semibold text-white mb-4">
@@ -537,7 +537,7 @@ const ProductCatalog = () => {
                 It serves as a crucible for interdisciplinary collaboration, real-world problem solving, and rapid innovation within controlled, outcome-driven cycles.
               </p>
             </div>
-            
+
             {/* Image - Right */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img src={getAssetPath('/innovations_data_tile.jpg')} alt="POC Hub" className="w-full h-96 object-cover" />
@@ -626,7 +626,7 @@ const ProductCatalog = () => {
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img src={getAssetPath('/startuplaunchpad_img.jpg')} alt="DeepTech Studio" className="w-full h-full object-cover" />
             </div>
-            
+
             {/* Content - Right */}
             <div className="space-y-4">
               <div className="inline-block px-6 py-2 bg-cyan-500 rounded-full text-sm font-semibold text-white mb-4">

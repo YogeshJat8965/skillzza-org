@@ -7,13 +7,13 @@ const EnterprisesUseCase = () => {
       {/* Hero Section */}
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-purple-400 to-blue-500"
-        style={{ 
+        style={{
           backgroundImage: getBackgroundImageUrl('/for_corporate_only_img.jpg'),
           minHeight: '70vh'
         }}
       >
         <div className="absolute inset-0 bg-gray-900/70"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
             <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
@@ -57,7 +57,7 @@ const EnterprisesUseCase = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="space-y-16">
-              
+
               {/* Intelligent Talent Acquisition */}
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="flex flex-col lg:flex-row">
@@ -65,7 +65,7 @@ const EnterprisesUseCase = () => {
                     <div className="flex items-center mb-6">
                       <h3 className="text-2xl font-bold text-gray-900">Intelligent Talent Acquisition</h3>
                     </div>
-                    <h4 className="text-xl font-semibold text-orange-600 mb-4">Talent Twin & Skillzza Marketplace Integration</h4>
+                    <h4 className="text-xl font-semibold text-orange-600 mb-4">Talent Twin& Skillzza Marketplace Integration</h4>
                     <ul className="space-y-3 text-gray-700 mb-6">
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -89,10 +89,10 @@ const EnterprisesUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/insight_roles.jpg')} 
-                      alt="Intelligent Talent Acquisition" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/insight_roles.jpg')}
+                      alt="Intelligent Talent Acquisition"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -129,10 +129,10 @@ const EnterprisesUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/transformskill_futureset.png')} 
-                      alt="Strategic Workforce Development" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/transformskill_futureset.png')}
+                      alt="Strategic Workforce Development"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -169,10 +169,10 @@ const EnterprisesUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/Hackathons_header_img.png')} 
-                      alt="Innovation Engagement Platform" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/Hackathons_header_img.png')}
+                      alt="Innovation Engagement Platform"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -209,10 +209,10 @@ const EnterprisesUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/engaing_learning.jpg')} 
-                      alt="Custom Learning Experiences" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/engaing_learning.jpg')}
+                      alt="Custom Learning Experiences"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -249,10 +249,10 @@ const EnterprisesUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/platformslide1.png')} 
-                      alt="Talent Pipeline Development" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/platformslide1.png')}
+                      alt="Talent Pipeline Development"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -289,10 +289,10 @@ const EnterprisesUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/datadriveninsights_ico.png')} 
-                      alt="Strategic Talent Intelligence" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/datadriveninsights_ico.png')}
+                      alt="Strategic Talent Intelligence"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>

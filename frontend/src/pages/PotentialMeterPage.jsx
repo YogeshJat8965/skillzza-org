@@ -266,9 +266,9 @@ export default function PotentialMeterPage() {
             <button className="bg-[#245CE2] hover:bg-[#1E4DBC] transition-colors text-white font-['DM_Sans',sans-serif] font-medium text-[15px] px-7 py-3 rounded">
               Start Free Skill Assessment
             </button>
-            <button className="bg-white border border-[#E4E4E7] hover:bg-gray-50 transition-colors text-[#0F1114] font-['DM_Sans',sans-serif] font-medium text-[15px] px-7 py-3 rounded">
+            <Link to="/contact-us" className="bg-white border border-[#E4E4E7] hover:bg-gray-50 transition-colors text-[#0F1114] font-['DM_Sans',sans-serif] font-medium text-[15px] px-7 py-3 rounded">
               Book Demo
-            </button>
+            </Link>
           </div>
 
           {/* Hero Image */}
@@ -581,14 +581,12 @@ export default function PotentialMeterPage() {
 
               {/* Demo Video CTA */}
               <div className="mt-8 md:mt-10 md:pl-[112px] w-full">
-                <a 
-                  href="https://portal.skillzza.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <Link 
+                  to="/contact-us" 
                   className="w-full inline-block text-center bg-[#1e4dbc] hover:bg-[#163a8f] transition-all duration-300 text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] py-4 rounded-md shadow-[0_8px_20px_rgba(30,77,188,0.2)] no-underline"
                 >
                   Take Demo
-                </a>
+                </Link>
               </div>
 
             </div>

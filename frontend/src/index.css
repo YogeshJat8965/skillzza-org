@@ -42,7 +42,8 @@ body {
    Uses !important to override any per-page inline styles.
    ══════════════════════════════════════════════════════════════════ */
 
-h1, h2 {
+h1,
+h2 {
   font-family: 'DM Sans', sans-serif !important;
   font-weight: 700 !important;
 }
@@ -50,7 +51,11 @@ h1, h2 {
 /* ── GLOBAL RESPONSIVE UTILITIES ─────────────────────────────────── */
 
 /* Prevent any element from exceeding viewport width */
-img, video, iframe, embed, object {
+img,
+video,
+iframe,
+embed,
+object {
   max-width: 100%;
 }
 
@@ -83,6 +88,7 @@ img, video, iframe, embed, object {
     flex-direction: column-reverse !important;
     display: flex !important;
   }
+
   .hero-img-col {
     position: relative !important;
     width: 100% !important;
@@ -92,27 +98,33 @@ img, video, iframe, embed, object {
     height: 380px !important;
     justify-content: center !important;
   }
+
   .hero-img-col img {
     height: 100% !important;
     max-height: 380px !important;
     margin-top: 0 !important;
   }
+
   .hero-text-col {
     padding: 32px 20px 40px !important;
     margin-top: 0 !important;
     text-align: center !important;
   }
+
   .hero-text-col h1 {
     font-size: 28px !important;
     margin-bottom: 14px !important;
   }
+
   .hero-text-col p {
     font-size: 14px !important;
     margin-bottom: 20px !important;
   }
+
   .hero-btns {
     justify-content: center !important;
   }
+
   .feature-strip {
     position: relative !important;
     bottom: unset !important;
@@ -124,12 +136,15 @@ img, video, iframe, embed, object {
   .hero-text-col h1 {
     font-size: 22px !important;
   }
+
   .hero-text-col {
     padding: 24px 16px 36px !important;
   }
+
   .hero-img-col {
     height: 340px !important;
   }
+
   .hero-img-col img {
     max-height: 340px !important;
   }
@@ -139,9 +154,11 @@ img, video, iframe, embed, object {
   .hero-text-col h1 {
     font-size: 40px !important;
   }
+
   .hero-text-col {
     padding: 0px 40px 120px !important;
   }
+
   .hero-img-col {
     width: 42% !important;
   }
@@ -153,14 +170,17 @@ img, video, iframe, embed, object {
     flex-direction: column !important;
     height: auto !important;
   }
+
   .challenge-img {
     width: 100% !important;
     height: 200px !important;
     min-height: unset !important;
   }
+
   .challenge-stats {
     padding: 20px 16px !important;
   }
+
   .challenge-grid {
     grid-template-columns: 1fr 1fr !important;
   }
@@ -179,6 +199,7 @@ img, video, iframe, embed, object {
     padding: 24px !important;
     gap: 24px !important;
   }
+
   .studio-right-img {
     width: 100% !important;
     flex: unset !important;
@@ -190,6 +211,7 @@ img, video, iframe, embed, object {
   .studio-content-row {
     gap: 24px !important;
   }
+
   .studio-right-img {
     max-width: 320px !important;
   }
@@ -200,11 +222,13 @@ img, video, iframe, embed, object {
   .school-row {
     flex-direction: column !important;
   }
+
   .school-img-col {
     width: 100% !important;
     min-height: 200px !important;
     height: 220px !important;
   }
+
   .school-text-col {
     padding: 24px 20px !important;
   }
@@ -217,6 +241,7 @@ img, video, iframe, embed, object {
     gap: 24px !important;
     padding: 0 16px !important;
   }
+
   .partner-cards {
     grid-template-columns: 1fr 1fr !important;
   }
@@ -234,14 +259,17 @@ img, video, iframe, embed, object {
     flex-direction: column !important;
     padding-top: 0 !important;
   }
+
   .partner-cta-img-col {
     width: 100% !important;
     flex: unset !important;
   }
+
   .partner-cta-img-col img {
     height: 220px !important;
     border-radius: 0 !important;
   }
+
   .partner-cta-form-col {
     padding: 24px 20px 40px !important;
   }
@@ -258,18 +286,22 @@ img, video, iframe, embed, object {
   .insights-row {
     flex-direction: column !important;
   }
+
   .insights-left-col {
     width: 100% !important;
   }
+
   .insights-grid {
     grid-template-columns: 1fr 1fr !important;
   }
+
   .insights-podcast-card {
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 16px !important;
     padding: 20px !important;
   }
+
   .insights-podcast-action {
     align-items: flex-start !important;
   }
@@ -279,6 +311,7 @@ img, video, iframe, embed, object {
   .insights-grid {
     grid-template-columns: 1fr !important;
   }
+
   .insights-podcast-card {
     padding: 16px !important;
   }
@@ -298,40 +331,49 @@ img, video, iframe, embed, object {
     flex-direction: column !important;
     padding-top: 24px !important;
   }
+
   .partner-cta-img-col {
     flex: 0 0 auto !important;
   }
+
   .partner-cta-img-col img {
     max-height: 320px !important;
     object-fit: contain !important;
   }
+
   .partner-cta-form-col {
     padding: 24px 20px 40px !important;
     text-align: left !important;
   }
+
   .partner-cta-form-col h2 {
     font-size: 24px !important;
     line-height: 1.3 !important;
     margin-bottom: 12px !important;
   }
+
   .partner-cta-form-col p {
     font-size: 14px !important;
     margin-bottom: 20px !important;
   }
 }
+
 @media (max-width: 480px) {
   .partner-cta-img-col img {
     max-height: 260px !important;
   }
+
   .partner-phone-row {
     flex-direction: column !important;
     gap: 10px !important;
   }
+
   .partner-country-code {
     width: 100% !important;
     min-width: 0 !important;
     box-sizing: border-box;
   }
+
   .partner-mobile-input {
     width: 100% !important;
     box-sizing: border-box;
@@ -340,6 +382,7 @@ img, video, iframe, embed, object {
 
 /* ── GENERAL PAGE HERO SECTIONS (Tailwind-based pages) ── */
 @media (max-width: 640px) {
+
   /* Reduce hero min-height on very small screens */
   section[style*="minHeight: '70vh'"],
   section[style*="minHeight: '600px'"] {
@@ -349,10 +392,12 @@ img, video, iframe, embed, object {
 
 /* ── PREVENT HORIZONTAL SCROLL from fixed-width inline elements ── */
 @media (max-width: 768px) {
+
   /* Ensure all direct children of body can't cause overflow */
-  #root > div {
+  #root>div {
     overflow-x: hidden;
   }
+
   /* Studio tabs should wrap so no option stays hidden */
   .tabs-row {
     justify-content: center !important;
@@ -361,6 +406,7 @@ img, video, iframe, embed, object {
     padding-bottom: 4px;
     gap: 10px !important;
   }
+
   .tabs-row button {
     flex: 1 1 calc(50% - 10px);
     max-width: calc(50% - 10px);
@@ -381,6 +427,7 @@ img, video, iframe, embed, object {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
 *::-webkit-scrollbar {
   display: none;
 }
@@ -397,12 +444,28 @@ body {
 
 /* ── Global Typography System ──────────────────────────────────── */
 /* Headings: DM Sans font family */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'DM Sans', sans-serif !important;
 }
 
 /* Body text: Lato font family */
-p, span, a, li, td, th, label, input, textarea, select, button, div {
+p,
+span,
+a,
+li,
+td,
+th,
+label,
+input,
+textarea,
+select,
+button,
+div {
   font-family: 'Lato', sans-serif !important;
 }
 
@@ -459,6 +522,7 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
 }
 
 @layer components {
+
   /* ── PRODUCT PAGES UNIFIED HEADING SIZES ── */
   .product-heading {
     font-family: 'DM Sans', sans-serif !important;
@@ -479,6 +543,7 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
 .sz-platform-illust {
   perspective: 1000px;
 }
+
 .sz-orb {
   position: absolute;
   border-radius: 50%;
@@ -488,24 +553,34 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
   animation: szOrbFloat 8s infinite alternate ease-in-out;
   pointer-events: none;
 }
+
 .sz-orb-1 {
-  width: 180px; height: 180px;
+  width: 180px;
+  height: 180px;
   background: rgba(124, 58, 237, 0.25);
-  top: -20px; left: -20px;
+  top: -20px;
+  left: -20px;
 }
+
 .sz-orb-2 {
-  width: 140px; height: 140px;
+  width: 140px;
+  height: 140px;
   background: rgba(167, 139, 250, 0.2);
-  bottom: -10px; right: 10px;
+  bottom: -10px;
+  right: 10px;
   animation-delay: -3s;
 }
+
 .sz-orb-3 {
-  width: 100px; height: 100px;
+  width: 100px;
+  height: 100px;
   background: rgba(139, 92, 246, 0.15);
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   animation-delay: -5s;
 }
+
 .sz-sparkle {
   position: absolute;
   color: #c4b5fd;
@@ -514,101 +589,272 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
   animation: szSparklePulse 3s infinite ease-in-out;
   pointer-events: none;
 }
+
 @keyframes szOrbFloat {
-  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
-  100% { transform: translate(15px, -15px) scale(1.1); opacity: 0.8; }
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translate(15px, -15px) scale(1.1);
+    opacity: 0.8;
+  }
 }
+
 @keyframes szSparklePulse {
-  0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
-  50% { opacity: 0.8; transform: scale(1.2) rotate(15deg); }
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2) rotate(15deg);
+  }
 }
+
 @keyframes szOrbitSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ── PLATFORM DROPDOWN: Per-Tab Image Entrance Animations ── */
 
 /* Tab 0: Potential Meter - gentle slide up with subtle rotate */
 @keyframes szImgSlideUp {
-  0% { opacity: 0; transform: translateY(40px) rotate(3deg) scale(0.92); }
-  60% { opacity: 1; transform: translateY(-6px) rotate(-1deg) scale(1.02); }
-  100% { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translateY(40px) rotate(3deg) scale(0.92);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-6px) rotate(-1deg) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
 }
 
 /* Tab 1: Xperience Platform - zoom + rotate in */
 @keyframes szImgZoomRotate {
-  0% { opacity: 0; transform: scale(0.3) rotate(-15deg); }
-  50% { opacity: 0.8; transform: scale(1.08) rotate(3deg); }
-  75% { opacity: 1; transform: scale(0.97) rotate(-1deg); }
-  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-15deg);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08) rotate(3deg);
+  }
+
+  75% {
+    opacity: 1;
+    transform: scale(0.97) rotate(-1deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 /* Tab 2: Talent Intelligence - 3D flip in from left */
 @keyframes szImgFlipIn {
-  0% { opacity: 0; transform: perspective(600px) rotateY(-70deg) translateX(-40px); }
-  50% { opacity: 0.7; transform: perspective(600px) rotateY(10deg) translateX(8px); }
-  75% { opacity: 1; transform: perspective(600px) rotateY(-4deg) translateX(-2px); }
-  100% { opacity: 1; transform: perspective(600px) rotateY(0deg) translateX(0); }
+  0% {
+    opacity: 0;
+    transform: perspective(600px) rotateY(-70deg) translateX(-40px);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: perspective(600px) rotateY(10deg) translateX(8px);
+  }
+
+  75% {
+    opacity: 1;
+    transform: perspective(600px) rotateY(-4deg) translateX(-2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(600px) rotateY(0deg) translateX(0);
+  }
 }
 
 /* Tab 3: AI HackNex - energetic bounce scale */
 @keyframes szImgBounceScale {
-  0% { opacity: 0; transform: scale(0.15); }
-  40% { opacity: 1; transform: scale(1.18); }
-  60% { transform: scale(0.9); }
-  75% { transform: scale(1.06); }
-  87% { transform: scale(0.97); }
-  100% { opacity: 1; transform: scale(1); }
+  0% {
+    opacity: 0;
+    transform: scale(0.15);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+
+  60% {
+    transform: scale(0.9);
+  }
+
+  75% {
+    transform: scale(1.06);
+  }
+
+  87% {
+    transform: scale(0.97);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-/* Tab 4: Talent Twin - swing in from top */
+/* Tab 4: Talent Twin- swing in from top */
 @keyframes szImgSwingIn {
-  0% { opacity: 0; transform: translateY(-60px) rotate(-8deg) scale(0.85); transform-origin: top center; }
-  40% { opacity: 0.9; transform: translateY(10px) rotate(4deg) scale(1.03); }
-  60% { transform: translateY(-4px) rotate(-2deg) scale(0.99); }
-  80% { transform: translateY(2px) rotate(1deg) scale(1.01); }
-  100% { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) rotate(-8deg) scale(0.85);
+    transform-origin: top center;
+  }
+
+  40% {
+    opacity: 0.9;
+    transform: translateY(10px) rotate(4deg) scale(1.03);
+  }
+
+  60% {
+    transform: translateY(-4px) rotate(-2deg) scale(0.99);
+  }
+
+  80% {
+    transform: translateY(2px) rotate(1deg) scale(1.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
 }
 
 /* Tab 5: Skillzza Persona - elastic pop */
 @keyframes szImgElasticPop {
-  0% { opacity: 0; transform: scale(0) rotate(12deg); }
-  30% { opacity: 1; transform: scale(1.2) rotate(-5deg); }
-  50% { transform: scale(0.88) rotate(3deg); }
-  65% { transform: scale(1.08) rotate(-2deg); }
-  78% { transform: scale(0.96) rotate(1deg); }
-  90% { transform: scale(1.02) rotate(0deg); }
-  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(12deg);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1.2) rotate(-5deg);
+  }
+
+  50% {
+    transform: scale(0.88) rotate(3deg);
+  }
+
+  65% {
+    transform: scale(1.08) rotate(-2deg);
+  }
+
+  78% {
+    transform: scale(0.96) rotate(1deg);
+  }
+
+  90% {
+    transform: scale(1.02) rotate(0deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 /* ── PLATFORM DROPDOWN: Animated Circle Ring Effects ── */
 
 @keyframes szRingPulse {
-  0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
-  50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.06); }
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.06);
+  }
 }
 
 @keyframes szGlowBreath {
-  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(0.9); }
-  50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.1); }
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 }
 
 /* ── Orbiting Dots - travel in circular paths around the image ── */
 
 @keyframes szDotOrbit1 {
-  0%   { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg)   translateX(130px) rotate(0deg); }
-  100% { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(360deg) translateX(130px) rotate(-360deg); }
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(130px) rotate(0deg);
+  }
+
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(360deg) translateX(130px) rotate(-360deg);
+  }
 }
 
 @keyframes szDotOrbit2 {
-  0%   { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg)   translateX(100px) rotate(0deg); }
-  100% { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg); }
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+  }
+
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+  }
 }
 
 @keyframes szDotOrbit3 {
-  0%   { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg)   translateX(160px) rotate(0deg); }
-  100% { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(360deg) translateX(160px) rotate(-360deg); }
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(160px) rotate(0deg);
+  }
+
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(360deg) translateX(160px) rotate(-360deg);
+  }
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -624,12 +870,14 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
     letter-spacing: -0.5px !important;
     word-break: break-word;
   }
+
   h2 {
     font-size: clamp(20px, 5.5vw, 28px) !important;
     line-height: 1.22 !important;
     letter-spacing: -0.3px !important;
     word-break: break-word;
   }
+
   h3 {
     font-size: clamp(16px, 4.5vw, 22px) !important;
     line-height: 1.25 !important;
@@ -638,23 +886,24 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
 
 /* ── POTENTIAL METER PAGE ── */
 @media (max-width: 767px) {
+
   /* Hero section */
-  .min-h-screen > section:first-child {
+  .min-h-screen>section:first-child {
     padding-top: 12px !important;
   }
-  
+
   /* What We Measure - remove min-height */
   section .min-h-\[620px\] {
     min-height: auto !important;
   }
-  
+
   /* What You Get - remove min-height */
   .min-h-\[700px\] {
     min-height: auto !important;
   }
-  
+
   /* CTA buttons row - stack on very small screens */
-  .flex.items-center.gap-4 > button {
+  .flex.items-center.gap-4>button {
     padding-left: 20px !important;
     padding-right: 20px !important;
     font-size: 14px !important;
@@ -663,19 +912,20 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
 
 /* ── CONTACT US PAGE ── */
 @media (max-width: 767px) {
+
   /* Hero section heading */
-  .cu-flow-wrap + section h1,
-  main > section:first-child h1 {
+  .cu-flow-wrap+section h1,
+  main>section:first-child h1 {
     font-size: clamp(28px, 7vw, 40px) !important;
     transform: none !important;
   }
-  
+
   /* Hero section min-height */
-  main > section:first-child {
+  main>section:first-child {
     min-height: 320px !important;
   }
-  
-  main > section:first-child > div:last-child {
+
+  main>section:first-child>div:last-child {
     padding: 0 16px !important;
   }
 }
@@ -685,31 +935,31 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
   .about-banner__content {
     padding: 40px 16px !important;
   }
-  
+
   .about-overview {
     padding: 40px 16px 24px !important;
   }
-  
+
   .about-overview__grid {
     grid-template-columns: 1fr !important;
     gap: 24px !important;
   }
-  
+
   .about-commitment {
     padding: 24px 16px 40px !important;
   }
-  
+
   .about-commitment__grid {
     grid-template-columns: 1fr !important;
   }
-  
+
   .about-commitment__image-wrapper {
     width: 100% !important;
     margin-right: 0 !important;
     border-radius: 12px !important;
     overflow: hidden;
   }
-  
+
   .about-cta-strip {
     width: 100% !important;
     margin-left: 0 !important;
@@ -717,43 +967,43 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
     padding: 20px 16px !important;
     height: auto !important;
   }
-  
+
   .about-cta-strip__inner {
     flex-direction: column !important;
     gap: 12px !important;
     text-align: center !important;
   }
-  
+
   .about-cta-strip__text {
     font-size: 14px !important;
   }
-  
+
   .about-mv {
     padding: 40px 16px !important;
   }
-  
+
   .about-mv__container {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
   }
-  
+
   .about-mv__card {
     padding: 32px 24px !important;
     border-radius: 24px 0 24px 0 !important;
   }
-  
+
   .about-mv__card--mission,
   .about-mv__card--vision {
     max-width: 100% !important;
     min-height: auto !important;
   }
-  
+
   .about-core-values {
     width: 100% !important;
     margin-left: 0 !important;
     padding: 20px 16px !important;
   }
-  
+
   .about-core-values__image {
     width: 100% !important;
   }
@@ -761,40 +1011,41 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
 
 /* ── METHODOLOGY PAGE ── */
 @media (max-width: 767px) {
+
   /* Hero title */
   .method-intro-section h2 {
     font-size: 24px !important;
   }
-  
+
   /* Stat pills */
-  .method-stat-pills > div {
+  .method-stat-pills>div {
     font-size: 13px !important;
     padding: 8px 16px !important;
   }
-  
+
   /* LEARN Framework - image column */
-  .lf-body > div:first-child {
+  .lf-body>div:first-child {
     width: 100% !important;
     max-width: 280px !important;
     margin: 0 auto !important;
   }
-  
+
   .lf-body {
     flex-direction: column !important;
     gap: 28px !important;
   }
-  
+
   /* Stepper - smaller on mobile */
   .imp-stepper {
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 8px !important;
   }
-  
+
   .imp-step {
     min-width: 64px !important;
   }
-  
+
   /* Core principles heading */
   .method-core-grid {
     padding: 0 16px !important;
@@ -813,8 +1064,9 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
 
 /* ── WELCOME POPUP MOBILE ── */
 @media (max-width: 767px) {
+
   /* Make popup fit mobile screens */
-  .fixed.inset-0 > div[style*="maxWidth"] {
+  .fixed.inset-0>div[style*="maxWidth"] {
     max-width: 92vw !important;
     margin: 0 auto !important;
     padding: 24px 16px !important;
@@ -826,24 +1078,24 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
   .footer-main-wrap {
     padding: 28px 16px 24px !important;
   }
-  
+
   .footer-outer {
     grid-template-columns: 1fr !important;
   }
-  
+
   .footer-links-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     margin-left: 0 !important;
     margin-top: 16px !important;
     gap: 16px !important;
   }
-  
+
   .footer-social-col {
     grid-column: 1 / -1 !important;
     margin-left: 0 !important;
     margin-top: 16px !important;
   }
-  
+
   .footer-bottom-bar {
     padding: 14px 16px !important;
     flex-direction: column !important;
@@ -856,43 +1108,46 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
    EXTRA-SMALL SCREENS (≤ 480px) - Fine-tuning
    ══════════════════════════════════════════════════════════════════ */
 @media (max-width: 480px) {
+
   /* Global heading further reduction */
   h1 {
     font-size: clamp(20px, 5.5vw, 26px) !important;
   }
+
   h2 {
     font-size: clamp(18px, 5vw, 24px) !important;
   }
-  
+
   /* CTA buttons - full width stack */
   .flex.items-center.gap-4 {
     flex-direction: column !important;
     width: 100% !important;
   }
-  .flex.items-center.gap-4 > button,
-  .flex.items-center.gap-4 > a {
+
+  .flex.items-center.gap-4>button,
+  .flex.items-center.gap-4>a {
     width: 100% !important;
     text-align: center !important;
   }
-  
+
   /* About MV cards - tighter padding */
   .about-mv__card {
     padding: 24px 18px !important;
   }
-  
+
   .about-mv__heading {
     font-size: 22px !important;
   }
-  
+
   .about-mv__text {
     font-size: 14px !important;
   }
-  
+
   /* Methodology stepper */
   .imp-step {
     min-width: 56px !important;
   }
-  
+
   .imp-phase-num {
     font-size: 7px !important;
   }

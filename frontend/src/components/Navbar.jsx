@@ -136,7 +136,7 @@ const navItems = [
         icon: <Users size={22} strokeWidth={2} />,
         heading: 'Connecting talent.',
         headingHighlight: 'Creating opportunities.',
-        description: 'Talent Twin is your campus hiring marketplace that connects students with top companies and the right opportunities.',
+        description: 'Talent Twinis your campus hiring marketplace that connects students with top companies and the right opportunities.',
         bullets: [
           'Discover verified job & internship opportunities',
           'Connect with top recruiters',
@@ -889,127 +889,127 @@ const ImageCardItem = ({ item, index, onComingSoon }) => {
     svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line><text x="12" y="16" fontSize="9" fontWeight="800" textAnchor="middle" fill="currentColor" stroke="none">AI</text></svg>;
   } else if (titleStr.includes('Sustainability')) {
     bg = '#dcfce7'; color = '#16a34a';
-    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>;
+    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" /><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" /></svg>;
   } else if (titleStr.includes('Digital & Design')) {
     bg = '#e0e7ff'; color = '#2563eb';
-    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="m10 14 2.5-2.5a1.41 1.41 0 0 1 2 2L12 16"/></svg>;
+    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="3" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /><path d="m10 14 2.5-2.5a1.41 1.41 0 0 1 2 2L12 16" /></svg>;
   } else {
     bg = '#f3e8ff'; color = '#8947B3';
-    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 14v4"/><path d="M12 18h4"/><path d="M12 18H8"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="m8 8 3.5 3.5"/><path d="m12.5 12.5 3.5 3.5"/><path d="m16 8-3.5 3.5"/><path d="m11.5 12.5-3.5 3.5"/></svg>;
+    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" /><path d="M12 14v4" /><path d="M12 18h4" /><path d="M12 18H8" /><circle cx="6" cy="6" r="2" /><circle cx="18" cy="6" r="2" /><circle cx="6" cy="18" r="2" /><circle cx="18" cy="18" r="2" /><path d="m8 8 3.5 3.5" /><path d="m12.5 12.5 3.5 3.5" /><path d="m16 8-3.5 3.5" /><path d="m11.5 12.5-3.5 3.5" /></svg>;
   }
 
   return (
-      <a
-        href={item.link ? (isExternal ? item.link : getRoutePath(item.link)) : undefined}
-        target={isExternal ? '_blank' : undefined}
-        rel={isExternal ? 'noopener noreferrer' : undefined}
-        onClick={!item.link ? (e) => {
-          e.preventDefault();
-          onComingSoon?.(titleStr);
-        } : undefined}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+    <a
+      href={item.link ? (isExternal ? item.link : getRoutePath(item.link)) : undefined}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+      onClick={!item.link ? (e) => {
+        e.preventDefault();
+        onComingSoon?.(titleStr);
+      } : undefined}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        position: 'relative',
+        borderRadius: 18,
+        overflow: 'hidden',
+        cursor: item.link ? 'pointer' : 'default',
+        textDecoration: 'none',
+        background: '#ffffff',
+        transition: 'all 0.32s cubic-bezier(0.34,1.2,0.64,1)',
+        transform: hovered ? 'translateY(-6px) scale(1.01)' : 'translateY(0) scale(1)',
+        boxShadow: hovered
+          ? '0 18px 32px rgba(15, 23, 42, 0.18)'
+          : '0 10px 24px rgba(15, 23, 42, 0.12)',
+        animation: 'szCardRise 520ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
+        animationDelay: `${index * 80}ms`,
+        opacity: 0,
+        border: '1px solid rgba(15, 23, 42, 0.06)',
+      }}
+    >
+      <div
         style={{
           position: 'relative',
-          borderRadius: 18,
+          height: 155,
           overflow: 'hidden',
-          cursor: item.link ? 'pointer' : 'default',
-          textDecoration: 'none',
-          background: '#ffffff',
-          transition: 'all 0.32s cubic-bezier(0.34,1.2,0.64,1)',
-          transform: hovered ? 'translateY(-6px) scale(1.01)' : 'translateY(0) scale(1)',
-          boxShadow: hovered
-            ? '0 18px 32px rgba(15, 23, 42, 0.18)'
-            : '0 10px 24px rgba(15, 23, 42, 0.12)',
-          animation: 'szCardRise 520ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
-          animationDelay: `${index * 80}ms`,
-          opacity: 0,
-          border: '1px solid rgba(15, 23, 42, 0.06)',
         }}
       >
-        <div
+        <img
+          src={item.image}
+          alt={titleStr}
           style={{
-            position: 'relative',
-            height: 155,
-            overflow: 'hidden',
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: '50% 35%',
+            transform: hovered ? 'scale(1.03)' : 'scale(1)',
+            transition: 'transform 520ms cubic-bezier(0.22, 1, 0.36, 1)',
           }}
-        >
-          <img
-            src={item.image}
-            alt={titleStr}
+        />
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: 12,
+          padding: '10px 14px',
+          background: '#ffffff',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0, flex: 1 }}>
+          <div
             style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              objectPosition: '50% 35%',
-              transform: hovered ? 'scale(1.03)' : 'scale(1)',
-              transition: 'transform 520ms cubic-bezier(0.22, 1, 0.36, 1)',
-            }}
-          />
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: 12,
-            padding: '10px 14px',
-            background: '#ffffff',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0, flex: 1 }}>
-            <div
-              style={{
-                width: 34,
-                height: 34,
-                borderRadius: 8,
-                background: bg,
-                color: color,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0,
-              }}
-            >
-              {svg}
-            </div>
-            <div
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 13.5,
-                fontWeight: 700,
-                color: '#0f172a',
-                lineHeight: 1.3,
-                letterSpacing: 0,
-                whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-              }}
-            >
-              {titleStr}
-            </div>
-          </div>
-          <span
-            style={{
-              width: 28,
-              height: 28,
-              borderRadius: '50%',
+              width: 34,
+              height: 34,
+              borderRadius: 8,
               background: bg,
+              color: color,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: color,
-              fontSize: 14,
-              fontWeight: 800,
               flexShrink: 0,
-              transition: 'all 280ms ease',
-              transform: hovered ? 'translateX(2px)' : 'translateX(0)',
             }}
           >
-            ➜
-          </span>
+            {svg}
+          </div>
+          <div
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 13.5,
+              fontWeight: 700,
+              color: '#0f172a',
+              lineHeight: 1.3,
+              letterSpacing: 0,
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          >
+            {titleStr}
+          </div>
         </div>
-      </a>
+        <span
+          style={{
+            width: 28,
+            height: 28,
+            borderRadius: '50%',
+            background: bg,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: color,
+            fontSize: 14,
+            fontWeight: 800,
+            flexShrink: 0,
+            transition: 'all 280ms ease',
+            transform: hovered ? 'translateX(2px)' : 'translateX(0)',
+          }}
+        >
+          ➜
+        </span>
+      </div>
+    </a>
   );
 };
 
@@ -1081,14 +1081,14 @@ const InsightsGridCard = ({ item, index, onComingSoon }) => {
       <div style={{ fontSize: 12, color: '#64748b', marginBottom: 16, fontFamily: 'Inter, system-ui, sans-serif', minHeight: 36 }}>
         {item.desc}
       </div>
-      
+
       <div style={{ display: 'flex', gap: 8, marginBottom: 16, height: 110 }}>
         {item.sideImages && item.sideImages.map((img, i) => (
           <div key={i} style={{ flex: 1, borderRadius: 8, overflow: 'hidden' }}>
-            <img 
-              src={img} 
-              alt="" 
-              style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease', transform: hovered ? 'scale(1.05)' : 'scale(1)' }} 
+            <img
+              src={img}
+              alt=""
+              style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease', transform: hovered ? 'scale(1.05)' : 'scale(1)' }}
             />
           </div>
         ))}
@@ -1549,20 +1549,20 @@ const SvcCard = ({ item, onClose }) => {
 
 const CompanyLeftCard = ({ item, onClose }) => {
   const [h, setH] = useState(false);
-  
+
   const bg = '#f3e8ff';
   const color = '#8947B3';
 
   let svg;
   switch (item.name) {
-    case 'About Us': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="8" width="4" height="12"/><rect x="10" y="8" width="4" height="12"/><rect x="16" y="8" width="4" height="12"/><path d="M2 20h20"/><path d="M12 3 2 8h20Z"/></svg>; break;
-    case 'Our Methodology': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>; break;
-    case 'What We Do': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>; break;
-    case 'Our Pathway': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg>; break;
-    case 'Partner Collaboration': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3-6 6"/><path d="m14 10-2-2"/><path d="m12 12-2-2"/><path d="m10 14-2-2"/><path d="m8 16-2-2"/><path d="m6 18-2-2"/><path d="M4 20l-1 1"/><path d="m3 21 2 2"/><path d="M5 23l1-1"/></svg>; break;
-    case 'Careers at Skillzza': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>; break;
-    case 'Press & Media': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>; break;
-    case 'Responsible AI': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>; break;
+    case 'About Us': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="8" width="4" height="12" /><rect x="10" y="8" width="4" height="12" /><rect x="16" y="8" width="4" height="12" /><path d="M2 20h20" /><path d="M12 3 2 8h20Z" /></svg>; break;
+    case 'Our Methodology': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /><circle cx="12" cy="12" r="3" /></svg>; break;
+    case 'What We Do': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m7.5 4.27 9 5.15" /><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5" /><path d="M12 22V12" /></svg>; break;
+    case 'Our Pathway': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="19" r="3" /><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" /><circle cx="18" cy="5" r="3" /></svg>; break;
+    case 'Partner Collaboration': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3" /><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" /><path d="m21 3-6 6" /><path d="m14 10-2-2" /><path d="m12 12-2-2" /><path d="m10 14-2-2" /><path d="m8 16-2-2" /><path d="m6 18-2-2" /><path d="M4 20l-1 1" /><path d="m3 21 2 2" /><path d="M5 23l1-1" /></svg>; break;
+    case 'Careers at Skillzza': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>; break;
+    case 'Press & Media': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z" /><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" /></svg>; break;
+    case 'Responsible AI': svg = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></svg>; break;
   }
 
   return (
@@ -1601,16 +1601,16 @@ const CompanyLeftCard = ({ item, onClose }) => {
 
 const CompanyRightCard = ({ item, onClose }) => {
   const [h, setH] = useState(false);
-  
+
   const bg = '#f3e8ff';
   const color = '#8947B3';
 
   let svg;
   switch (item.name) {
-    case 'Institution Transformation': svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>; break;
-    case 'Enterprise Skill Audit': svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><circle cx="18" cy="18" r="3"/><line x1="20" y1="20" x2="22" y2="22"/></svg>; break;
-    case 'Govt & CSR Programmes': svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="8" width="4" height="12"/><rect x="10" y="8" width="4" height="12"/><rect x="16" y="8" width="4" height="12"/><path d="M2 20h20"/><path d="M12 3 2 8h20Z"/></svg>; break;
-    case 'Talent Intelligence Reports': svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M12 18a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M12 14v4"/><path d="M12 14h-4"/></svg>; break;
+    case 'Institution Transformation': svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" /></svg>; break;
+    case 'Enterprise Skill Audit': svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /><circle cx="18" cy="18" r="3" /><line x1="20" y1="20" x2="22" y2="22" /></svg>; break;
+    case 'Govt & CSR Programmes': svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="8" width="4" height="12" /><rect x="10" y="8" width="4" height="12" /><rect x="16" y="8" width="4" height="12" /><path d="M2 20h20" /><path d="M12 3 2 8h20Z" /></svg>; break;
+    case 'Talent Intelligence Reports': svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><path d="M12 18a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" /><path d="M12 14v4" /><path d="M12 14h-4" /></svg>; break;
   }
 
   return (
@@ -1673,7 +1673,7 @@ const CompanyMegaDropdown = ({ navItem, onClose }) => {
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <div style={{ width: 36, height: 36, borderRadius: 10, background: '#f3e8ff', color: '#8947B3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
             </div>
             <div style={{ fontSize: 13, color: '#0f172a' }}>
               <span style={{ fontWeight: 700 }}>{navItem.cta.text}</span> - <span style={{ color: '#64748b' }}>{navItem.cta.sub}</span>
@@ -1694,13 +1694,13 @@ const CompanyMegaDropdown = ({ navItem, onClose }) => {
             <CompanyRightCard key={item.name} item={item} onClose={onClose} />
           ))}
         </div>
-        
+
         {/* Assessment Ad Image */}
         <div style={{ display: 'flex', flex: 1, alignItems: 'flex-end', marginTop: 4 }}>
-          <img 
-            src={companyRightImage} 
-            alt="Assessment Ad" 
-            style={{ width: '100%', borderRadius: 14, objectFit: 'contain', objectPosition: 'bottom' }} 
+          <img
+            src={companyRightImage}
+            alt="Assessment Ad"
+            style={{ width: '100%', borderRadius: 14, objectFit: 'contain', objectPosition: 'bottom' }}
           />
         </div>
       </div>
@@ -2278,9 +2278,9 @@ const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
   const isCompanyMenu = item.name === 'Company' && mobileCompanyItems.length > 0;
   const mobileSubItems = item.items
     ? item.items.map((subItem) => ({
-        ...subItem,
-        name: subItem.name || subItem.titleLines?.join(' '),
-      }))
+      ...subItem,
+      name: subItem.name || subItem.titleLines?.join(' '),
+    }))
     : item.tabs
       ? item.tabs.map(t => ({ name: t.name, link: t.link, desc: t.subtitle }))
       : [...mobileCompanyItems, ...mobileServiceItems];

@@ -9,13 +9,13 @@ const TalentTwin = () => {
       {/* Hero Section */}
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-blue-400 to-purple-500"
-        style={{ 
+        style={{
           backgroundImage: getBackgroundImageUrl('/insight_roles.jpg'),
           minHeight: '70vh'
         }}
       >
         <div className="absolute inset-0 bg-gray-900/70"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
             <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
@@ -39,7 +39,7 @@ const TalentTwin = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Talent Twin is a next-generation hiring marketplace designed to bridge the gap between academia and industry. By connecting employers with pre-assessed, job-ready students from colleges and universities, we eliminate inefficiencies in the hiring process and enable organizations to discover the right talent faster, smarter, and at scale.
+              Talent Twinis a next-generation hiring marketplace designed to bridge the gap between academia and industry. By connecting employers with pre-assessed, job-ready students from colleges and universities, we eliminate inefficiencies in the hiring process and enable organizations to discover the right talent faster, smarter, and at scale.
             </p>
           </div>
         </div>
@@ -146,7 +146,7 @@ const TalentTwin = () => {
 
             <div className="text-center mt-12">
               <div className="inline-block px-8 py-4 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-full text-white font-bold text-xl">
-                Talent Twin changes everything.
+                Talent Twinchanges everything.
               </div>
             </div>
           </div>
@@ -174,16 +174,16 @@ const TalentTwin = () => {
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 lg:p-12">
                 <div className="flex flex-col lg:flex-row items-center gap-8">
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/forstudentuse.jpg')} 
-                      alt="For Students" 
-                      className="w-full h-80 object-cover rounded-2xl shadow-lg" 
+                    <img
+                      src={getAssetPath('/forstudentuse.jpg')}
+                      alt="For Students"
+                      className="w-full h-80 object-cover rounded-2xl shadow-lg"
                     />
                   </div>
                   <div className="lg:w-1/2">
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">For Students: Showcase Your True Potential</h3>
                     <p className="text-lg text-gray-700 mb-6 italic">Beyond grades, beyond college rankings - your skills speak louder</p>
-                    <h4 className="text-xl font-semibold text-orange-600 mb-4">The Talent Twin Student Advantage:</h4>
+                    <h4 className="text-xl font-semibold text-orange-600 mb-4">The Talent TwinStudent Advantage:</h4>
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -214,16 +214,16 @@ const TalentTwin = () => {
               <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 lg:p-12">
                 <div className="flex flex-col lg:flex-row-reverse items-center gap-8">
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/for_corporate_only_img.jpg')} 
-                      alt="For Employers" 
-                      className="w-full h-80 object-cover rounded-2xl shadow-lg" 
+                    <img
+                      src={getAssetPath('/for_corporate_only_img.jpg')}
+                      alt="For Employers"
+                      className="w-full h-80 object-cover rounded-2xl shadow-lg"
                     />
                   </div>
                   <div className="lg:w-1/2">
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">For Employers: Hire the Right Talent, Faster</h3>
                     <p className="text-lg text-gray-700 mb-6 italic">Access pre-qualified candidates who are ready to contribute from day one</p>
-                    <h4 className="text-xl font-semibold text-orange-600 mb-4">The Talent Twin Employer Advantage:</h4>
+                    <h4 className="text-xl font-semibold text-orange-600 mb-4">The Talent TwinEmployer Advantage:</h4>
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -254,16 +254,16 @@ const TalentTwin = () => {
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 lg:p-12">
                 <div className="flex flex-col lg:flex-row items-center gap-8">
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/for_universities_banner.jpeg')} 
-                      alt="For Institutions" 
-                      className="w-full h-80 object-cover rounded-2xl shadow-lg" 
+                    <img
+                      src={getAssetPath('/for_universities_banner.jpeg')}
+                      alt="For Institutions"
+                      className="w-full h-80 object-cover rounded-2xl shadow-lg"
                     />
                   </div>
                   <div className="lg:w-1/2">
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">For Institutions: Elevate Your Placement Success</h3>
                     <p className="text-lg text-gray-700 mb-6 italic">Transform your students into industry-ready professionals</p>
-                    <h4 className="text-xl font-semibold text-orange-600 mb-4">The Talent Twin Institution Advantage:</h4>
+                    <h4 className="text-xl font-semibold text-orange-600 mb-4">The Talent TwinInstitution Advantage:</h4>
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -294,13 +294,13 @@ const TalentTwin = () => {
         </div>
       </section>
 
-      {/* How Talent Twin Works */}
+      {/* How Talent TwinWorks */}
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                How Talent Twin Works
+                How Talent TwinWorks
               </h2>
               <p className="text-xl text-gray-600">From Assessment to Employment in 5 Simple Steps</p>
             </div>
@@ -348,7 +348,7 @@ const TalentTwin = () => {
                       <li>• Interview readiness checklist and preparation materials</li>
                     </ul>
                     <div className="mt-4 p-3 bg-green-50 rounded-lg">
-                      <p className="text-green-800 font-semibold">Result: Market-ready student profiles in the Talent Twin talent pool</p>
+                      <p className="text-green-800 font-semibold">Result: Market-ready student profiles in the Talent Twintalent pool</p>
                     </div>
                   </div>
                 </div>
@@ -658,7 +658,7 @@ const TalentTwin = () => {
                 <div className="space-y-3 text-sm text-gray-700 mb-6">
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold">1</div>
-                    <span>Platform Demo (15 minutes) - See Talent Twin in action</span>
+                    <span>Platform Demo (15 minutes) - See Talent Twinin action</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold">2</div>
@@ -741,7 +741,7 @@ const TalentTwin = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Q: Is there any cost for students?</h4>
-                    <p className="text-gray-600 text-sm">A: Absolutely not. Talent Twin is completely free for students - assessment, profile creation, job applications, everything.</p>
+                    <p className="text-gray-600 text-sm">A: Absolutely not. Talent Twinis completely free for students - assessment, profile creation, job applications, everything.</p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Q: What if I don't get placed immediately?</h4>
@@ -779,7 +779,7 @@ const TalentTwin = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Q: Will this replace our existing placement cell?</h4>
-                    <p className="text-gray-600 text-sm">A: No, Talent Twin enhances your placement cell's capabilities by providing better tools, analytics, and employer connections.</p>
+                    <p className="text-gray-600 text-sm">A: No, Talent Twinenhances your placement cell's capabilities by providing better tools, analytics, and employer connections.</p>
                   </div>
                 </div>
               </div>
@@ -800,7 +800,7 @@ const TalentTwin = () => {
                 Contact us & Support
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Ready to transform your hiring process? Our team is here to help you get started with Talent Twin and answer any questions you might have.
+                Ready to transform your hiring process? Our team is here to help you get started with Talent Twinand answer any questions you might have.
               </p>
             </div>
 
@@ -841,33 +841,33 @@ const TalentTwin = () => {
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Request a Call Back</h3>
                     <p className="text-gray-600">Fill out the form below and our team will get back to you within 24 hours.</p>
                   </div>
-                  
+
                   <form className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
-                        <input 
-                          type="text" 
-                          placeholder="Enter your full name" 
+                        <input
+                          type="text"
+                          placeholder="Enter your full name"
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white"
                         />
                       </div>
                       <div>
                         <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
-                        <input 
-                          type="email" 
-                          placeholder="Enter your email address" 
+                        <input
+                          type="email"
+                          placeholder="Enter your email address"
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white"
                         />
                       </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
-                        <input 
-                          type="tel" 
-                          placeholder="Enter your phone number" 
+                        <input
+                          type="tel"
+                          placeholder="Enter your phone number"
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white"
                         />
                       </div>
@@ -883,28 +883,28 @@ const TalentTwin = () => {
                         </select>
                       </div>
                     </div>
-                    
+
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">How can we help you?</label>
-                      <textarea 
-                        placeholder="Tell us about your requirements, questions, or how you'd like to use Talent Twin..." 
+                      <textarea
+                        placeholder="Tell us about your requirements, questions, or how you'd like to use Talent Twin..."
                         rows="5"
                         className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white resize-none"
                       ></textarea>
                     </div>
-                    
+
                     <div className="flex items-start space-x-3">
-                      <input 
-                        type="checkbox" 
-                        id="consent" 
+                      <input
+                        type="checkbox"
+                        id="consent"
                         className="mt-1 w-4 h-4 text-orange-500 border-gray-300 rounded focus:ring-orange-500"
                       />
                       <label htmlFor="consent" className="text-sm text-gray-600">
                         I agree to receive communications from Skillzza and understand that I can unsubscribe at any time.
                       </label>
                     </div>
-                    
-                    <button 
+
+                    <button
                       type="submit"
                       className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white py-4 rounded-xl hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
@@ -921,7 +921,7 @@ const TalentTwin = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Actions</h3>
                 <p className="text-gray-600">Get started immediately with these popular options</p>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <button className="group bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200 hover:border-blue-300 transition-all duration-300 hover:shadow-lg">
                   <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
@@ -930,7 +930,7 @@ const TalentTwin = () => {
                   <h4 className="font-bold text-gray-900 mb-2">Student Assessment</h4>
                   <p className="text-sm text-gray-600">Start your free assessment now</p>
                 </button>
-                
+
                 <button onClick={() => { window.location.href = contactUsPath; }} className="group bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-xl border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-lg">
                   <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     <span className="text-white text-xl">🏢</span>
@@ -938,7 +938,7 @@ const TalentTwin = () => {
                   <h4 className="font-bold text-gray-900 mb-2">Employer Demo</h4>
                   <p className="text-sm text-gray-600">Book a 15-minute demo</p>
                 </button>
-                
+
                 <button onClick={() => { window.location.href = contactUsPath; }} className="group bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200 hover:border-purple-300 transition-all duration-300 hover:shadow-lg">
                   <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     <span className="text-white text-xl">🏫</span>

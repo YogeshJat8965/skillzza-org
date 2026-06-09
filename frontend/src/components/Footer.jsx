@@ -24,10 +24,10 @@ const footerSections = [
   {
     title: 'Skillzza K-12',
     links: [
-      { name: 'Vidya AI Virtual Internship', href: 'https://cognifyai.skillzza.com/' },
-      { name: 'Skill Studio for Students', href: 'https://skillzza-club.vercel.app/' },
+      { name: 'Vidya AI', href: 'https://cognifyai.skillzza.com/' },
+      { name: 'Skill Studio', href: 'https://skillzza-club.vercel.app/' },
       { name: 'Teacher AI Upskill Lab', href: 'https://cognifyai.skillzza.com/for-tutor.html' },
-      { name: 'CCMM - AI Maturity for Schools', href: 'https://cognifyai.skillzza.com/for-school.html' },
+      { name: 'CCMM', href: 'https://cognifyai.skillzza.com/for-school.html' },
       { name: 'Campus Connect - K12', href: 'https://cognifyai.skillzza.com/#' },
       { name: 'Future Founders Track', href: 'https://cognifyai.skillzza.com/#' },
     ],
@@ -217,23 +217,23 @@ const Footer = () => {
                           const isExternal = /^https?:\/\//.test(link.href);
                           const href = isExternal ? link.href : getRoutePath(link.href);
                           return (
-                        <a
-                          href={href}
-                          target={isExternal ? '_blank' : undefined}
-                          rel={isExternal ? 'noopener noreferrer' : undefined}
-                          style={{
-                            fontSize: 12,
-                            color: '#1a1a1a',
-                            textDecoration: 'none',
-                            lineHeight: 1.5,
-                            display: 'block',
-                            transition: 'color 0.2s',
-                          }}
-                          onMouseEnter={(e) => (e.currentTarget.style.color = '#c0150a')}
-                          onMouseLeave={(e) => (e.currentTarget.style.color = '#1a1a1a')}
-                        >
-                          {link.name}
-                        </a>
+                            <a
+                              href={href}
+                              target={isExternal ? '_blank' : undefined}
+                              rel={isExternal ? 'noopener noreferrer' : undefined}
+                              style={{
+                                fontSize: 12,
+                                color: '#1a1a1a',
+                                textDecoration: 'none',
+                                lineHeight: 1.5,
+                                display: 'block',
+                                transition: 'color 0.2s',
+                              }}
+                              onMouseEnter={(e) => (e.currentTarget.style.color = '#c0150a')}
+                              onMouseLeave={(e) => (e.currentTarget.style.color = '#1a1a1a')}
+                            >
+                              {link.name}
+                            </a>
                           );
                         })()
                       )}

@@ -100,7 +100,7 @@ const WhatWeDo = () => {
       image: getAssetPath('/talent.png'),
       imageLeft: false,
       screenBg: '#fff5f5',
-      description: 'Talent Twin bridges the gap between skill development and employment by connecting AI-verified, role-ready talent with enterprises, institutions, and employers seeking future-ready professionals.',
+      description: 'Talent Twinbridges the gap between skill development and employment by connecting AI-verified, role-ready talent with enterprises, institutions, and employers seeking future-ready professionals.',
       listTitle: 'Strategic expertise',
       items: [
         'AI-Verified Talent Profiles.',
