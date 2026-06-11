@@ -7,16 +7,16 @@ const StudentsUseCase = () => {
       {/* Hero Section */}
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-blue-400 to-purple-500"
-        style={{ 
+        style={{
           backgroundImage: getBackgroundImageUrl('/forstudentuse.jpg'),
           minHeight: '70vh'
         }}
       >
         <div className="absolute inset-0 bg-gray-900/70"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               FOR STUDENTS
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
@@ -25,7 +25,7 @@ const StudentsUseCase = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-yellow-300">
               Building Tomorrow's Leaders Today
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
               Transform your career trajectory through experience-based learning that goes beyond traditional education. Skillzza empowers students to discover their potential, develop marketable skills, and secure career opportunities with confidence.
             </p>
           </div>
@@ -42,7 +42,7 @@ const StudentsUseCase = () => {
             <div className="inline-block px-8 py-3 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-full text-white font-semibold mb-8">
               Precision-Engineered Career Solutions
             </div>
-            <p className="text-lg text-gray-500 font-medium mb-6">
+            <p className="text-xl text-gray-600 font-medium mb-6">
               For Students | Universities | Enterprises | Governments
             </p>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -57,7 +57,7 @@ const StudentsUseCase = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="space-y-16">
-              
+
               {/* Skillzza Persona */}
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="flex flex-col lg:flex-row">
@@ -89,21 +89,21 @@ const StudentsUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/ai_hacknex_tile_img.png')} 
-                      alt="Skillzza Persona" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/ai_hacknex_tile_img.png')}
+                      alt="Skillzza Persona"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
               </div>
 
-              {/* Xperience Platform */}
+              {/* Talent Twin */}
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="flex flex-col lg:flex-row-reverse">
                   <div className="lg:w-1/2 p-8 lg:p-12">
                     <div className="flex items-center mb-6">
-                      <h3 className="text-2xl font-bold text-gray-900">Xperience Platform</h3>
+                      <h3 className="text-2xl font-bold text-gray-900">Talent Twin</h3>
                     </div>
                     <h4 className="text-xl font-semibold text-orange-600 mb-4">Virtual Career Immersion Program</h4>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -129,10 +129,10 @@ const StudentsUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/platformslide1.png')} 
-                      alt="Xperience Platform" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/platformslide1.png')}
+                      alt="Talent Twin"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -169,10 +169,10 @@ const StudentsUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/potential_meter_banner_img.png')} 
-                      alt="The Potential Meter" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/potential_meter_banner_img.png')}
+                      alt="The Potential Meter"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -209,10 +209,10 @@ const StudentsUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/Hackathons_header_img.png')} 
-                      alt="Hackathon Arena" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/Hackathons_header_img.png')}
+                      alt="Hackathon Arena"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -249,10 +249,10 @@ const StudentsUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/transformskill_futureset.png')} 
-                      alt="Talent Intelligence Suite" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/transformskill_futureset.png')}
+                      alt="Talent Intelligence Suite"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -289,10 +289,10 @@ const StudentsUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/insight_roles.jpg')} 
-                      alt="Skillzza Marketplace" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/insight_roles.jpg')}
+                      alt="Skillzza Marketplace"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -315,17 +315,17 @@ const StudentsUseCase = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl border border-green-200">
                 <div className="text-4xl font-bold text-green-600 mb-4">89%</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Placement Rate</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Placement Rate</h3>
                 <p className="text-gray-600">within 12 months of program completion</p>
               </div>
               <div className="text-center bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200">
                 <div className="text-4xl font-bold text-orange-600 mb-4">35%</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Higher Starting Salaries</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Higher Starting Salaries</h3>
                 <p className="text-gray-600">compared to traditional graduates</p>
               </div>
               <div className="text-center bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-200">
                 <div className="text-4xl font-bold text-purple-600 mb-4">92%</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Employer Satisfaction</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Employer Satisfaction</h3>
                 <p className="text-gray-600">with Skillzza-trained hires</p>
               </div>
             </div>
@@ -345,23 +345,23 @@ const StudentsUseCase = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center bg-white p-6 rounded-2xl shadow-lg">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Precision & Personalization</h3>
-                <p className="text-gray-600 text-sm">Every solution is tailored to specific needs, whether individual career development or organizational transformation objectives.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Precision & Personalization</h3>
+                <p className="text-gray-600 text-base">Every solution is tailored to specific needs, whether individual career development or organizational transformation objectives.</p>
               </div>
 
               <div className="text-center bg-white p-6 rounded-2xl shadow-lg">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Scale & Impact</h3>
-                <p className="text-gray-600 text-sm">Proven ability to deliver results from individual learners to million-citizen national programs.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Scale & Impact</h3>
+                <p className="text-gray-600 text-base">Proven ability to deliver results from individual learners to million-citizen national programs.</p>
               </div>
 
               <div className="text-center bg-white p-6 rounded-2xl shadow-lg">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Innovation & Evidence</h3>
-                <p className="text-gray-600 text-sm">Cutting-edge AI technology combined with rigorous measurement of outcomes and continuous improvement.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation & Evidence</h3>
+                <p className="text-gray-600 text-base">Cutting-edge AI technology combined with rigorous measurement of outcomes and continuous improvement.</p>
               </div>
 
               <div className="text-center bg-white p-6 rounded-2xl shadow-lg">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Partnership & Support</h3>
-                <p className="text-gray-600 text-sm">Comprehensive support throughout implementation, from strategy development to outcome measurement.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Partnership & Support</h3>
+                <p className="text-gray-600 text-base">Comprehensive support throughout implementation, from strategy development to outcome measurement.</p>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ const DigitalDesign = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-purple-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-purple-500 rounded-full text-base font-semibold text-white mb-6">
               DIGITAL & DESIGN EXCELLENCE
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
@@ -25,7 +25,7 @@ const DigitalDesign = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-pink-300">
               Innovation Through Design & Technology
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
               Master the convergence of design thinking and digital innovation. Our programs blend creativity with cutting-edge technology to prepare you for the future of digital experiences, from Web 3.0 and metaverse to human-centered design solutions.
             </p>
           </div>
@@ -54,7 +54,7 @@ const DigitalDesign = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Digital Fluency Tracks</h3>
-                        <p className="text-lg text-blue-600">Web 3.0, Metaverse, Blockchain & Cloud-Native Systems</p>
+                        <p className="text-xl text-blue-600">Web 3.0, Metaverse, Blockchain & Cloud-Native Systems</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -65,7 +65,7 @@ const DigitalDesign = () => {
                       <li>• <strong>Digital Transformation:</strong> Enterprise modernization and digital strategy</li>
                     </ul>
                     <div className="bg-blue-100 p-4 rounded-xl border border-blue-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Duration:</strong> 15 months | <strong>Format:</strong> Immersive Labs | <strong>Certification:</strong> Industry-Recognized
                       </p>
                     </div>
@@ -90,7 +90,7 @@ const DigitalDesign = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Design Innovation Lab</h3>
-                        <p className="text-lg text-pink-600">UI/UX, Product Design & Creative Problem-solving Workshops</p>
+                        <p className="text-xl text-pink-600">UI/UX, Product Design & Creative Problem-solving Workshops</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -101,7 +101,7 @@ const DigitalDesign = () => {
                       <li>• <strong>Design Leadership:</strong> Team management, design culture, and strategic thinking</li>
                     </ul>
                     <div className="bg-pink-100 p-4 rounded-xl border border-pink-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Format:</strong> Studio-based Learning | <strong>Projects:</strong> Real Client Work | <strong>Mentorship:</strong> Design Leaders
                       </p>
                     </div>
@@ -126,7 +126,7 @@ const DigitalDesign = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Smart Industry Pods</h3>
-                        <p className="text-lg text-orange-600">Industry 4.0 Simulations with Robotics & Automation</p>
+                        <p className="text-xl text-orange-600">Industry 4.0 Simulations with Robotics & Automation</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -137,7 +137,7 @@ const DigitalDesign = () => {
                       <li>• <strong>Supply Chain 4.0:</strong> Transparent, efficient, and resilient networks</li>
                     </ul>
                     <div className="bg-orange-100 p-4 rounded-xl border border-orange-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Equipment:</strong> Industrial-grade Hardware | <strong>Partnerships:</strong> Manufacturing Leaders | <strong>Outcome:</strong> Industry Certification
                       </p>
                     </div>
@@ -162,7 +162,7 @@ const DigitalDesign = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Human-Centered Design Hub</h3>
-                        <p className="text-lg text-green-600">Design Thinking for Business, Education & Social Impact</p>
+                        <p className="text-xl text-green-600">Design Thinking for Business, Education & Social Impact</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -173,7 +173,7 @@ const DigitalDesign = () => {
                       <li>• <strong>Impact Measurement:</strong> Evaluating design effectiveness and social outcomes</li>
                     </ul>
                     <div className="bg-green-100 p-4 rounded-xl border border-green-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Approach:</strong> Human-Centered | <strong>Projects:</strong> Social Impact Focus | <strong>Network:</strong> Global NGOs & Foundations
                       </p>
                     </div>
@@ -198,7 +198,7 @@ const DigitalDesign = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Digital Storytelling Studio</h3>
-                        <p className="text-lg text-purple-600">Blending Creativity, Tech, and Media for Global Communication</p>
+                        <p className="text-xl text-purple-600">Blending Creativity, Tech, and Media for Global Communication</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -209,7 +209,7 @@ const DigitalDesign = () => {
                       <li>• <strong>Global Reach:</strong> Cross-cultural communication and localization</li>
                     </ul>
                     <div className="bg-purple-100 p-4 rounded-xl border border-purple-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Facilities:</strong> Professional Studio Equipment | <strong>Distribution:</strong> Global Media Partners | <strong>Showcase:</strong> International Festivals
                       </p>
                     </div>
@@ -258,13 +258,13 @@ const DigitalDesign = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-pink-600">12 Months</span>
-                  <p className="text-sm text-gray-500">Portfolio-focused | Industry Projects</p>
+                  <p className="text-base text-gray-600">Portfolio-focused | Industry Projects</p>
                 </div>
               </div>
 
               {/* Full-Stack Developer Track */}
               <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-blue-300 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-base font-semibold">
                   MOST POPULAR
                 </div>
                 <div className="text-center mb-6">
@@ -283,7 +283,7 @@ const DigitalDesign = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-blue-600">15 Months</span>
-                  <p className="text-sm text-gray-500">Code-intensive | Real Projects</p>
+                  <p className="text-base text-gray-600">Code-intensive | Real Projects</p>
                 </div>
               </div>
 
@@ -305,7 +305,7 @@ const DigitalDesign = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-purple-600">18 Months</span>
-                  <p className="text-sm text-gray-500">Interdisciplinary | Exhibition Required</p>
+                  <p className="text-base text-gray-600">Interdisciplinary | Exhibition Required</p>
                 </div>
               </div>
             </div>
@@ -329,32 +329,32 @@ const DigitalDesign = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🏢</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Tech Giants</h4>
-                <p className="text-sm text-gray-600">Google, Apple, Microsoft, Meta partnerships</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Tech Giants</h4>
+                <p className="text-base text-gray-600">Google, Apple, Microsoft, Meta partnerships</p>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🎨</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Design Studios</h4>
-                <p className="text-sm text-gray-600">IDEO, Pentagram, Frog Design collaborations</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Design Studios</h4>
+                <p className="text-base text-gray-600">IDEO, Pentagram, Frog Design collaborations</p>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🚀</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Startups</h4>
-                <p className="text-sm text-gray-600">Y Combinator, Techstars portfolio companies</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Startups</h4>
+                <p className="text-base text-gray-600">Y Combinator, Techstars portfolio companies</p>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🌍</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Global NGOs</h4>
-                <p className="text-sm text-gray-600">UN, Gates Foundation, social impact projects</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Global NGOs</h4>
+                <p className="text-base text-gray-600">UN, Gates Foundation, social impact projects</p>
               </div>
             </div>
           </div>
@@ -369,7 +369,7 @@ const DigitalDesign = () => {
               Ready to Shape Digital Experiences?
             </h2>
             <p className="text-xl mb-4">Join the next generation of digital creators and innovators</p>
-            <p className="text-lg mb-8 opacity-90">Where creativity meets cutting-edge technology</p>
+            <p className="text-xl mb-8 opacity-90">Where creativity meets cutting-edge technology</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button className="bg-white text-purple-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
@@ -385,7 +385,7 @@ const DigitalDesign = () => {
 
             <div className="mt-8">
               <p className="text-xl font-bold">Design the future. Code the impossible.</p>
-              <p className="text-lg">Start your creative-tech journey today.</p>
+              <p className="text-xl">Start your creative-tech journey today.</p>
             </div>
           </div>
         </div>

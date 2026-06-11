@@ -199,10 +199,10 @@ const SchoolOfTechnology = () => {
             font-size: 28px !important;
           }
           .sot-subheading {
-            font-size: 17px !important;
+            font-size: 19px !important;
           }
           .sot-description {
-            font-size: 14px !important;
+            font-size: 16px !important;
             margin-bottom: 24px !important;
           }
           .sot-expertise-heading {
@@ -210,7 +210,7 @@ const SchoolOfTechnology = () => {
           }
           .sot-tag {
             padding: 8px 16px !important;
-            font-size: 13px !important;
+            font-size: 15px !important;
           }
         }
       `}</style>
@@ -260,7 +260,7 @@ const SchoolOfTechnology = () => {
                       fontSize: '22px',
                       fontWeight: 600,
                       lineHeight: '1.2',
-                      color: '#71717B',
+                      color: '#52525B',
                     }}
                   >
                     Elevate Your Expertise with Future-Ready Skills
@@ -272,10 +272,10 @@ const SchoolOfTechnology = () => {
                     className={`sot-description mb-12 ${isVisible.description ? 'animate-fade-in-up delay-200' : 'opacity-0'}`}
                     style={{
                       fontFamily: "'Lato', sans-serif",
-                      fontSize: '17px',
+                      fontSize: '19px',
                       fontWeight: 400,
                       lineHeight: '1.6',
-                      color: '#71717B',
+                      color: '#52525B',
                     }}
                   >
                     Experience the perfect blend of theoretical knowledge and practical application. Our programs don't just teach you to adapt to change, they position you to lead transformation in your field.
@@ -309,7 +309,7 @@ const SchoolOfTechnology = () => {
                         borderRadius: '25px',
                         padding: '12px 24px',
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '16px',
+                        fontSize: '18px',
                         fontWeight: 500,
                         color: '#0F1114',
                       }}
@@ -326,7 +326,7 @@ const SchoolOfTechnology = () => {
                         borderRadius: '25px',
                         padding: '12px 24px',
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '16px',
+                        fontSize: '18px',
                         fontWeight: 500,
                         color: '#0F1114',
                         textDecoration: 'none'
@@ -342,7 +342,7 @@ const SchoolOfTechnology = () => {
                         borderRadius: '25px',
                         padding: '12px 24px',
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '16px',
+                        fontSize: '18px',
                         fontWeight: 500,
                         color: '#0F1114',
                       }}
@@ -357,7 +357,7 @@ const SchoolOfTechnology = () => {
                         borderRadius: '25px',
                         padding: '12px 24px',
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '16px',
+                        fontSize: '18px',
                         fontWeight: 500,
                         color: '#0F1114',
                       }}

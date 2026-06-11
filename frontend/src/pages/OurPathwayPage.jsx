@@ -202,13 +202,13 @@ function OurPathwayPage() {
             display: block !important;
           }
           .pathway-hero-subheading {
-            font-size: 16px !important;
+            font-size: 18px !important;
             line-height: 1.3 !important;
             white-space: normal !important;
             margin-top: 12px !important;
           }
           .pathway-hero-description {
-            font-size: 16px !important;
+            font-size: 18px !important;
             line-height: 1.4 !important;
             -webkit-line-clamp: unset !important;
             overflow: visible !important;
@@ -224,7 +224,7 @@ function OurPathwayPage() {
             width: 100% !important;
             max-width: 320px !important;
             padding: 14px 28px !important;
-            font-size: 17px !important;
+            font-size: 19px !important;
             white-space: normal !important;
           }
           .pathway-hero-image {
@@ -240,11 +240,11 @@ function OurPathwayPage() {
             margin-bottom: 12px !important;
           }
           section h3 {
-            font-size: 18px !important;
+            font-size: 20px !important;
             line-height: 1.25 !important;
           }
           section p {
-            font-size: 16px !important;
+            font-size: 18px !important;
             line-height: 1.5 !important;
           }
           section span {
@@ -252,13 +252,13 @@ function OurPathwayPage() {
             display: inline !important;
           }
           .pathway-section-subtitle {
-            font-size: 16px !important;
+            font-size: 18px !important;
           }
           .pathway-section-title {
             font-size: 20px !important;
           }
           .pathway-section-desc {
-            font-size: 16px !important;
+            font-size: 18px !important;
             margin-top: 10px !important;
           }
           .pathway-section-desc span {
@@ -282,11 +282,11 @@ function OurPathwayPage() {
             gap: 16px !important;
           }
           .pathway-highlight-row h3 {
-            font-size: 16px !important;
+            font-size: 18px !important;
             margin-bottom: 8px !important;
           }
           .pathway-highlight-row p {
-            font-size: 15px !important;
+            font-size: 17px !important;
           }
           .pathway-serve-grid {
             grid-template-columns: 1fr !important;
@@ -333,23 +333,23 @@ function OurPathwayPage() {
             width: 100% !important;
             height: auto !important;
             padding: 14px !important;
-            font-size: 16px !important;
+            font-size: 18px !important;
             border-radius: 12px !important;
           }
           .pathway-get-started-kicker {
-            font-size: 12px !important;
+            font-size: 14px !important;
             letter-spacing: 1px !important;
           }
           .pathway-get-started-title {
-            font-size: 17px !important;
+            font-size: 19px !important;
             line-height: 1.25 !important;
             margin-bottom: 12px !important;
           }
           .pathway-get-started-heading {
-            font-size: 15px !important;
+            font-size: 17px !important;
           }
           .pathway-get-started-list {
-            font-size: 12px !important;
+            font-size: 14px !important;
             line-height: 1.4 !important;
             gap: 8px !important;
           }
@@ -385,7 +385,7 @@ function OurPathwayPage() {
             text-align: center !important;
           }
           .pathway-cta-inner h2 {
-            font-size: 18px !important;
+            font-size: 20px !important;
             text-align: center !important;
           }
           .pathway-cta-inner > div:first-child {
@@ -402,7 +402,7 @@ function OurPathwayPage() {
             width: 100% !important;
             max-width: 320px !important;
             white-space: normal !important;
-            font-size: 14px !important;
+            font-size: 16px !important;
             padding: 12px 18px !important;
           }
           .pathway-cta-image {
@@ -429,7 +429,7 @@ function OurPathwayPage() {
             font-size: 20px !important;
           }
           .pathway-hero-description {
-            font-size: 16px !important;
+            font-size: 18px !important;
           }
           .pathway-cards-grid {
             grid-template-columns: repeat(2, 1fr) !important;
@@ -441,7 +441,7 @@ function OurPathwayPage() {
             width: 400px !important;
           }
           .pathway-tab-btn {
-            font-size: 16px !important;
+            font-size: 18px !important;
             width: 240px !important;
           }
         }
@@ -504,7 +504,7 @@ function OurPathwayPage() {
               style={{
                 fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 400,
-                fontSize: '16px',
+                fontSize: '18px',
                 lineHeight: '1.35',
                 color: '#3F3F46',
                 marginTop: '12px',
@@ -549,7 +549,7 @@ function OurPathwayPage() {
                     style={{
                       fontFamily: "'Inter', 'Segoe UI', sans-serif",
                       padding: '16px 52px',
-                      fontSize: '16px',
+                      fontSize: '18px',
                       fontWeight: 600,
                       color: '#FFFFFF',
                       borderRadius: '9999px',
@@ -575,7 +575,7 @@ function OurPathwayPage() {
                     style={{
                       fontFamily: "'Inter', 'Segoe UI', sans-serif",
                       padding: '16px 52px',
-                      fontSize: '16px',
+                      fontSize: '18px',
                       fontWeight: 600,
                       color: '#FFFFFF',
                       borderRadius: '9999px',
@@ -640,12 +640,12 @@ function OurPathwayPage() {
               style={{
                 fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 600,
-                fontSize: '16px',
+                fontSize: '18px',
                 lineHeight: '1.2',
                 letterSpacing: '1.5px',
                 textTransform: 'uppercase',
                 textAlign: 'center',
-                color: '#6b7280',
+                color: '#4b5563',
                 marginBottom: '10px',
               }}
             >
@@ -671,7 +671,7 @@ function OurPathwayPage() {
                 fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 300,
                 fontStyle: 'normal',
-                fontSize: '16px',
+                fontSize: '18px',
                 lineHeight: '1.6',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -824,7 +824,7 @@ function OurPathwayPage() {
                       style={{
                         fontFamily: "'Inter', 'Segoe UI', sans-serif",
                         fontWeight: '700',
-                        fontSize: '17px',
+                        fontSize: '19px',
                         lineHeight: '1.25',
                         color: '#890404',
                         margin: 0,
@@ -840,7 +840,7 @@ function OurPathwayPage() {
                     style={{
                       fontFamily: "'Inter', 'Segoe UI', sans-serif",
                       fontWeight: '400',
-                      fontSize: '13px',
+                      fontSize: '15px',
                       lineHeight: '1.45',
                       marginTop: '2px',
                       textAlign: 'left',
@@ -874,12 +874,12 @@ function OurPathwayPage() {
               style={{
                 fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 600,
-                fontSize: '16px',
+                fontSize: '18px',
                 lineHeight: '1.2',
                 letterSpacing: '1.5px',
                 textTransform: 'uppercase',
                 textAlign: 'center',
-                color: '#6b7280',
+                color: '#4b5563',
                 marginBottom: '10px',
               }}
             >
@@ -983,7 +983,7 @@ function OurPathwayPage() {
                     style={{
                       fontFamily: "'Inter', 'Segoe UI', sans-serif",
                       fontWeight: 400,
-                      fontSize: '15px',
+                      fontSize: '17px',
                       lineHeight: '1.45',
                       color: '#181818',
                       maxWidth: '420px',
@@ -1014,12 +1014,12 @@ function OurPathwayPage() {
               style={{
                 fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 600,
-                fontSize: '16px',
+                fontSize: '18px',
                 lineHeight: '1.2',
                 letterSpacing: '1.5px',
                 textTransform: 'uppercase',
                 textAlign: 'center',
-                color: '#6b7280',
+                color: '#4b5563',
                 marginBottom: '10px',
               }}
             >
@@ -1179,12 +1179,12 @@ function OurPathwayPage() {
             style={{
               fontFamily: "'Inter', 'Segoe UI', sans-serif",
               fontWeight: 600,
-              fontSize: '16px',
+              fontSize: '18px',
               lineHeight: '1.2',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
               textAlign: 'center',
-              color: '#6b7280',
+              color: '#4b5563',
               marginBottom: '10px',
             }}
           >
@@ -1230,7 +1230,7 @@ function OurPathwayPage() {
                   boxShadow: '0px 8px 18px rgba(0, 0, 0, 0.25)',
                   fontFamily: "'Inter', 'Segoe UI', sans-serif",
                   fontWeight: 600,
-                  fontSize: '16px',
+                  fontSize: '18px',
                   color: '#FFFFFF',
                   textDecoration: 'none',
                   display: 'inline-block',
@@ -1270,12 +1270,12 @@ function OurPathwayPage() {
               style={{
                 fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 fontWeight: 600,
-                fontSize: '16px',
+                fontSize: '18px',
                 lineHeight: '1.2',
                 letterSpacing: '1.5px',
                 textTransform: 'uppercase',
                 textAlign: 'center',
-                color: '#6b7280',
+                color: '#4b5563',
                 marginBottom: '10px',
               }}
             >
@@ -1328,7 +1328,7 @@ function OurPathwayPage() {
                     textAlign: 'center',
                     fontFamily: "'Inter', 'Segoe UI', sans-serif",
                     fontWeight: 600,
-                    fontSize: '18px',
+                    fontSize: '20px',
                     color: isActive ? '#FFFFFF' : '#8A0303',
                     display: 'flex',
                     alignItems: 'center',
@@ -1410,7 +1410,7 @@ function OurPathwayPage() {
                   flexDirection: 'column',
                   gap: '14px',
                   fontFamily: "'Inter', 'Segoe UI', sans-serif",
-                  fontSize: '16px',
+                  fontSize: '18px',
                   color: '#181818',
                 }}
               >
@@ -1503,7 +1503,7 @@ function OurPathwayPage() {
                   style={{
                     fontFamily: "'Inter', 'Segoe UI', sans-serif",
                     fontWeight: 600,
-                    fontSize: '16px',
+                    fontSize: '18px',
                     color: '#FFFFFF',
                     backgroundColor: '#CF0C0C',
                     borderRadius: '999px',
@@ -1600,8 +1600,8 @@ function OurPathwayPage() {
           >
             <div style={{ height: 3, background: 'linear-gradient(135deg, #BD1723, #8947B3)' }} />
             <div style={{ padding: '16px 18px 14px' }}>
-              <div style={{ fontSize: 16, fontWeight: 800, color: '#7f1d1d', marginBottom: 6 }}>Coming Soon</div>
-              <div style={{ fontSize: 13, color: '#334155', lineHeight: 1.5 }}>The Potential Meter is coming soon.</div>
+              <div style={{ fontSize: 18, fontWeight: 800, color: '#7f1d1d', marginBottom: 6 }}>Coming Soon</div>
+              <div style={{ fontSize: 15, color: '#334155', lineHeight: 1.5 }}>The Potential Meter is coming soon.</div>
               <button
                 onClick={() => setShowPotentialComingSoon(false)}
                 style={{

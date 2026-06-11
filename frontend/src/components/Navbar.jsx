@@ -21,7 +21,7 @@ import sot1Img from '../assets/card grid/School of Technology/1.png';
 import sot2Img from '../assets/card grid/School of Technology/2.png';
 import sot3Img from '../assets/card grid/School of Technology/3.png';
 import sot4Img from '../assets/card grid/School of Technology/4.png';
-import companyRightImage from '../assets/card grid/WhatsApp Image 2026-04-25 at 6.49.26 PM.jpeg';
+
 
 // K-12 Dropdown images
 import k12Img1 from '../assets/card grid/K-12/1.png';
@@ -56,8 +56,8 @@ const navItems = [
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     bottomCta: {
-      text: 'Start your free skill assessment',
-      sub: 'discover your strengths in under 10 minutes.',
+      text: 'Start your free skill assessment discover your strengths in under 10 minutes.',
+      // sub: '',
       link: '/product/potential-meter',
     },
     tabs: [
@@ -79,7 +79,7 @@ const navItems = [
         illustrationId: 'potential-meter',
       },
       {
-        name: 'Xperience Platform',
+        name: 'Talent Twin',
         subtitle: 'Job simulations',
         link: '/product/xperience-platform',
         icon: <Briefcase size={22} strokeWidth={2} />,
@@ -94,23 +94,6 @@ const navItems = [
         ctaText: 'Explore Simulations',
         ctaLink: null,
         illustrationId: 'xperience-platform',
-      },
-      {
-        name: 'Talent Intelligence',
-        subtitle: 'Talent insights engine',
-        link: '/product/talent-intelligence',
-        icon: <Lightbulb size={22} strokeWidth={2} />,
-        heading: 'Unlock data-driven',
-        headingHighlight: 'Talent insights. Stay ahead always.',
-        description: 'Our talent intelligence engine analyzes skills, trends, and market data to help you make smarter learning and career decisions.',
-        bullets: [
-          'Discover in-demand skills and emerging trends',
-          'Compare your skills with top performers',
-          'Make smarter career and learning choices',
-        ],
-        ctaText: 'Explore Insights',
-        ctaLink: null,
-        illustrationId: 'talent-intelligence',
       },
       {
         name: 'AI HackNex',
@@ -129,14 +112,16 @@ const navItems = [
         ctaLink: null,
         illustrationId: 'ai-hacknex',
       },
+
+
       {
-        name: 'Talent Twin',
+        name: 'Hire Twin',
         subtitle: 'Campus hiring marketplace',
         link: '/product/talent-twin',
         icon: <Users size={22} strokeWidth={2} />,
         heading: 'Connecting talent.',
         headingHighlight: 'Creating opportunities.',
-        description: 'Talent Twinis your campus hiring marketplace that connects students with top companies and the right opportunities.',
+        description: 'Hire Twinis your campus hiring marketplace that connects students with top companies and the right opportunities.',
         bullets: [
           'Discover verified job & internship opportunities',
           'Connect with top recruiters',
@@ -144,7 +129,7 @@ const navItems = [
         ],
         ctaText: 'Explore Opportunities',
         ctaLink: null,
-        illustrationId: 'Talent Twin',
+        illustrationId: 'Hire Twin',
       },
       {
         name: 'Skillzza Persona',
@@ -162,6 +147,23 @@ const navItems = [
         ctaText: 'Start Roleplay',
         ctaLink: null,
         illustrationId: 'skillzza-persona',
+      },
+      {
+        name: 'Talent Intelligence',
+        subtitle: 'Talent insights engine',
+        link: '/product/talent-intelligence',
+        icon: <Lightbulb size={22} strokeWidth={2} />,
+        heading: 'Unlock data-driven',
+        headingHighlight: 'Talent insights. Stay ahead always.',
+        description: 'Our talent intelligence engine analyzes skills, trends, and market data to help you make smarter learning and career decisions.',
+        bullets: [
+          'Discover in-demand skills and emerging trends',
+          'Compare your skills with top performers',
+          'Make smarter career and learning choices',
+        ],
+        ctaText: 'Explore Insights',
+        ctaLink: null,
+        illustrationId: 'talent-intelligence',
       },
     ],
   },
@@ -191,20 +193,20 @@ const navItems = [
   },
   */
   {
-    name: 'Skillzza K-12',
-    layout: 'k12-vidya',
-    width: 1020,
-    eyebrow: 'k-12 - Vidya Ai - School intelligence ecosystem',
+    name: 'K-12',
+    layout: 'k12-Vedhya',
+    width: 1120,
+    eyebrow: 'SkillzzaK-12',
     studioLink: 'https://cognifyai.skillzza.com/',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
-      { name: 'Vidya AI', link: 'https://cognifyai.skillzza.com/', desc: 'Vedya is Cognify AI\'s dedicated AI Co-Pilot built exclusively for K-12 learning ecosystems.', pill: 'Flagship', pillColor: 'red', imagePos: 'left' },
-      { name: 'Virtual Internship', link: 'https://cognifyai.skillzza.com/', desc: 'Real-world AI coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Grades 6-12', pillColor: 'purple', imagePos: 'left' },
-      { name: 'AI Playground', link: 'https://cognifyai.skillzza.com/#', desc: 'An interactive innovation hub for exploring AI tools, creativity, and emerging technologies.', pill: 'CPD certified', pillColor: 'red', imagePos: 'left' },
-      { name: 'Skill studio', link: 'https://skillzza-club.vercel.app/', desc: 'Immersive future skills programs focused on AI, creativity, coding, and innovation.', pill: 'Assessment', pillColor: 'purple', imagePos: 'left' },
-      { name: 'Teacher AI Upskilling Lab', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Empowering educators with practical AI skills and modern digital pedagogy.', pill: 'Bridge', pillColor: 'red', imagePos: 'left' },
-      { name: 'CCMM AI Maturity for Schools', link: 'https://cognifyai.skillzza.com/for-school.html', desc: 'A strategic framework to assess and accelerate AI readiness in schools.', pill: 'New', pillColor: 'purple', imagePos: 'left' },
+      { name: 'Skill Studio', link: 'https://skillzza-club.vercel.app/', desc: 'Immersive future skills programs focused on AI, creativity, coding, and innovation.', imagePos: 'left' },
+      { name: 'Virtual Internship', link: 'https://cognifyai.skillzza.com/', desc: 'Real-world AI coding and deeptech internship simulations designed for school students aged 13-18.', imagePos: 'left' },
+      { name: 'AI Playground', link: 'https://cognifyai.skillzza.com/#', desc: 'An interactive innovation hub for exploring AI tools, creativity, and emerging technologies.', imagePos: 'left' },
+      { name: 'Vedya AI', link: 'https://cognifyai.skillzza.com/', desc: 'AI Co-Pilot built exclusively for K-12 learning ecosystems.', imagePos: 'left' },
+      { name: 'Immersive Learning for Teachers', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Empowering educators with practical AI skills and modern digital pedagogy.', imagePos: 'left' },
+      { name: 'Cognitive Computing for Maturity Models', link: 'https://cognifyai.skillzza.com/for-school.html', desc: 'A strategic framework to assess and accelerate AI readiness in schools.', imagePos: 'left' },
     ],
   },
   {
@@ -373,7 +375,7 @@ const Pill = ({ text, color = 'red' }) => {
       style={{
         display: 'inline-flex',
         alignItems: 'center',
-        fontSize: 10,
+        fontSize: 12,
         fontWeight: 700,
         padding: '3px 10px',
         borderRadius: 20,
@@ -397,7 +399,7 @@ const Pill = ({ text, color = 'red' }) => {
 const Eyebrow = ({ text, dotColor, gradient }) => (
   <div
     style={{
-      fontSize: 11,
+      fontSize: 13,
       fontWeight: 800,
       letterSpacing: 1.5,
       textTransform: 'uppercase',
@@ -504,8 +506,8 @@ const CtaBar = ({ cta, gradient, onClose }) => {
               }}
             />
             <div style={{ minWidth: 0, position: 'relative', zIndex: 1 }}>
-              <div style={{ fontSize: 13, color: '#0f172a', fontWeight: 700, lineHeight: 1.3 }}>{btn.text}</div>
-              <div style={{ fontSize: 11.5, color: '#64748b', marginTop: 3, lineHeight: 1.35 }}>{btn.sub}</div>
+              <div style={{ fontSize: 15, color: '#0f172a', fontWeight: 700, lineHeight: 1.3 }}>{btn.text}</div>
+              <div style={{ fontSize: 13.5, color: '#475569', marginTop: 3, lineHeight: 1.35 }}>{btn.sub}</div>
             </div>
             <div
               className="sz-dual-cta-icon"
@@ -518,7 +520,7 @@ const CtaBar = ({ cta, gradient, onClose }) => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#fff',
-                fontSize: 14,
+                fontSize: 16,
                 flexShrink: 0,
                 boxShadow: '0 2px 8px rgba(189,23,35,0.20)',
                 position: 'relative',
@@ -531,7 +533,7 @@ const CtaBar = ({ cta, gradient, onClose }) => {
                   position: 'absolute',
                   top: -4,
                   right: -3,
-                  fontSize: 10,
+                  fontSize: 12,
                   color: '#fde68a',
                   textShadow: '0 0 8px rgba(253,230,138,0.9)',
                 }}
@@ -570,7 +572,7 @@ const CtaBar = ({ cta, gradient, onClose }) => {
         boxShadow: hovered ? '0 4px 16px rgba(189,23,35,0.06)' : 'none',
       }}
     >
-      <div style={{ fontSize: 12.5, color: '#64748b', lineHeight: 1.5 }}>
+      <div style={{ fontSize: 14.5, color: '#475569', lineHeight: 1.5 }}>
         <strong style={{ color: '#1e293b', fontWeight: 600 }}>{cta.text}</strong> {cta.sub}
       </div>
       <div
@@ -583,7 +585,7 @@ const CtaBar = ({ cta, gradient, onClose }) => {
           alignItems: 'center',
           justifyContent: 'center',
           color: '#fff',
-          fontSize: 14,
+          fontSize: 16,
           flexShrink: 0,
           marginLeft: 14,
           boxShadow: '0 2px 8px rgba(189,23,35,0.20)',
@@ -832,8 +834,8 @@ const ListRowItem = ({ item, index, onComingSoon }) => {
         </div>
       ) : (
         <div style={{
-          color: hovered ? '#475569' : '#cbd5e1',
-          fontSize: 15, flexShrink: 0,
+          color: hovered ? '#334155' : '#cbd5e1',
+          fontSize: 17, flexShrink: 0,
           transition: 'all 0.28s cubic-bezier(0.34,1.56,0.64,1)',
           transform: hovered ? 'translate(2px,-2px) rotate(-45deg)' : 'translate(0,0) rotate(0deg)',
           fontWeight: 600,
@@ -976,7 +978,7 @@ const ImageCardItem = ({ item, index, onComingSoon }) => {
           <div
             style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 13.5,
+              fontSize: 15.5,
               fontWeight: 700,
               color: '#0f172a',
               lineHeight: 1.3,
@@ -999,7 +1001,7 @@ const ImageCardItem = ({ item, index, onComingSoon }) => {
             alignItems: 'center',
             justifyContent: 'center',
             color: color,
-            fontSize: 14,
+            fontSize: 16,
             fontWeight: 800,
             flexShrink: 0,
             transition: 'all 280ms ease',
@@ -1075,10 +1077,10 @@ const InsightsGridCard = ({ item, index, onComingSoon }) => {
         opacity: 0,
       }}
     >
-      <div style={{ fontSize: 16, fontWeight: 700, color: '#0f172a', marginBottom: 6, fontFamily: 'Inter, system-ui, sans-serif' }}>
+      <div style={{ fontSize: 18, fontWeight: 700, color: '#0f172a', marginBottom: 6, fontFamily: 'Inter, system-ui, sans-serif' }}>
         {item.name}
       </div>
-      <div style={{ fontSize: 12, color: '#64748b', marginBottom: 16, fontFamily: 'Inter, system-ui, sans-serif', minHeight: 36 }}>
+      <div style={{ fontSize: 14, color: '#475569', marginBottom: 16, fontFamily: 'Inter, system-ui, sans-serif', minHeight: 36 }}>
         {item.desc}
       </div>
 
@@ -1094,7 +1096,7 @@ const InsightsGridCard = ({ item, index, onComingSoon }) => {
         ))}
       </div>
 
-      <div style={{ fontSize: 13, fontWeight: 600, color: '#6D28D9', display: 'flex', alignItems: 'center', gap: 4 }}>
+      <div style={{ fontSize: 15, fontWeight: 600, color: '#6D28D9', display: 'flex', alignItems: 'center', gap: 4 }}>
         Learn more <span style={{ transition: 'transform 0.2s', transform: hovered ? 'translateX(4px)' : 'translateX(0)' }}>→</span>
       </div>
     </a>
@@ -1197,7 +1199,7 @@ const CompactItem = ({ item, index, onClose }) => {
             style={{
               width: 28, height: 28, borderRadius: 8,
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 13,
+              fontSize: 15,
               background: item.iconGradient || '#f1f5f9',
               flexShrink: 0, marginTop: 1,
               transition: 'transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease',
@@ -1264,19 +1266,19 @@ const AgenticAIDropdown = ({ navItem }) => {
           transition: 'all 0.28s cubic-bezier(0.34,1.56,0.64,1)',
         }} />
         <span style={{
-          fontSize: 18, lineHeight: 1,
+          fontSize: 20, lineHeight: 1,
           display: 'inline-block',
           transition: 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1)',
           transform: h ? 'scale(1.18) rotate(-6deg)' : 'scale(1) rotate(0deg)',
         }}>{agent.icon}</span>
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2 }}>
-            <span style={{ fontSize: 13, fontWeight: 700, color: h ? '#065f46' : '#1e293b', transition: 'color 0.2s' }}>{agent.name}</span>
+            <span style={{ fontSize: 15, fontWeight: 700, color: h ? '#065f46' : '#1e293b', transition: 'color 0.2s' }}>{agent.name}</span>
             {agent.pill && pc[agent.pillColor] && (
-              <span style={{ fontSize: 10, fontWeight: 600, padding: '1px 7px', borderRadius: 20, ...pc[agent.pillColor] }}>{agent.pill}</span>
+              <span style={{ fontSize: 12, fontWeight: 600, padding: '1px 7px', borderRadius: 20, ...pc[agent.pillColor] }}>{agent.pill}</span>
             )}
           </div>
-          <div style={{ fontSize: 11.5, color: h ? '#374f6b' : '#5a7394', lineHeight: 1.45, transition: 'color 0.2s' }}>{agent.desc}</div>
+          <div style={{ fontSize: 13.5, color: h ? '#374f6b' : '#5a7394', lineHeight: 1.45, transition: 'color 0.2s' }}>{agent.desc}</div>
         </div>
       </div>
     );
@@ -1295,12 +1297,12 @@ const AgenticAIDropdown = ({ navItem }) => {
         {navItem.agentFlow.map((step, i) => (
           <span key={step} style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
             <span style={{
-              fontSize: 11, fontWeight: 600, color: '#BD1723',
+              fontSize: 13, fontWeight: 600, color: '#BD1723',
               padding: '2px 10px', borderRadius: 20,
               background: 'rgba(189,23,35,0.08)', border: '1px solid rgba(189,23,35,0.15)',
             }}>{step}</span>
             {i < navItem.agentFlow.length - 1 && (
-              <span style={{ color: '#e4909a', fontSize: 12, fontWeight: 700 }}>→</span>
+              <span style={{ color: '#e4909a', fontSize: 14, fontWeight: 700 }}>→</span>
             )}
           </span>
         ))}
@@ -1309,7 +1311,7 @@ const AgenticAIDropdown = ({ navItem }) => {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
         {/* Learner agents */}
         <div>
-          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, color: '#94a3b8', textTransform: 'uppercase', marginBottom: 8 }}>
+          <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1, color: '#94a3b8', textTransform: 'uppercase', marginBottom: 8 }}>
             AI Agents - Learner
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -1318,7 +1320,7 @@ const AgenticAIDropdown = ({ navItem }) => {
         </div>
         {/* Enterprise agents */}
         <div>
-          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, color: '#94a3b8', textTransform: 'uppercase', marginBottom: 8 }}>
+          <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1, color: '#94a3b8', textTransform: 'uppercase', marginBottom: 8 }}>
             AI Agents - Enterprise & Campus
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -1331,7 +1333,7 @@ const AgenticAIDropdown = ({ navItem }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   K12VidyaDropdown - banner header + 3-column card grid
+   K12VedhyaDropdown - banner header + 3-column card grid
 ═══════════════════════════════════════════════════════════════ */
 
 const K12Header = ({ text }) => (
@@ -1370,7 +1372,7 @@ const K12Header = ({ text }) => (
     </div>
     <span
       style={{
-        fontSize: '14.5px',
+        fontSize: '16.5px',
         fontWeight: 700,
         color: '#0f172a',
         fontFamily: 'Inter, system-ui, sans-serif',
@@ -1381,9 +1383,8 @@ const K12Header = ({ text }) => (
   </div>
 );
 
-const K12VidyaDropdown = ({ navItem, onClose }) => (
+const K12VedhyaDropdown = ({ navItem, onClose }) => (
   <div>
-    <K12Header text={navItem.eyebrow} />
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 14 }}>
       {navItem.items.map((item, i) => (
         <K12Card key={item.name} item={item} index={i} onClose={onClose} />
@@ -1414,25 +1415,25 @@ const K12Card = ({ item, index, onClose }) => {
   };
 
   const imageBlock = (
-    <div style={{ width: '42%', minHeight: '160px', flexShrink: 0, overflow: 'hidden', position: 'relative', borderRadius: imgLeft ? '14px 0 0 14px' : '0 14px 14px 0' }}>
-      <img src={cardImage} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block', transition: 'transform 0.5s ease', transform: h ? 'scale(1.06)' : 'scale(1)' }} />
+    <div style={{ width: '45%', minHeight: '100px', flexShrink: 0, overflow: 'hidden', position: 'relative', borderRadius: imgLeft ? '14px 0 0 14px' : '0 14px 14px 0', transform: 'translateZ(0)' }}>
+      <img src={cardImage} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block', transition: 'transform 0.5s ease', transform: h ? 'scale(1.06)' : 'scale(1)', backfaceVisibility: 'hidden', imageRendering: '-webkit-optimize-contrast' }} />
     </div>
   );
 
   const contentBlock = (
     <div style={{ flex: 1, padding: '14px 15px 12px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minWidth: 0 }}>
       <div>
-        <div style={{ fontSize: '15px', fontWeight: 700, color: '#0f172a', lineHeight: 1.2, marginBottom: '6px', fontFamily: 'Inter, system-ui, sans-serif', fontStyle: isItalic ? 'italic' : 'normal' }}>
+        <div style={{ fontSize: '17px', fontWeight: 700, color: '#0f172a', lineHeight: 1.2, marginBottom: '6px', fontFamily: 'Inter, system-ui, sans-serif', fontStyle: isItalic ? 'italic' : 'normal' }}>
           {item.name}
         </div>
-        <div style={{ fontSize: '11.5px', color: '#475569', lineHeight: 1.5, fontFamily: 'Inter, system-ui, sans-serif' }}>
+        <div style={{ fontSize: '13.5px', color: '#334155', lineHeight: 1.5, fontFamily: 'Inter, system-ui, sans-serif' }}>
           {item.desc}
         </div>
       </div>
       {item.pill && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '8px' }}>
           {renderBadgeIcon(item.pill)}
-          <span style={{ fontSize: '11px', fontWeight: 700, color: item.pillColor === 'red' ? '#BD1723' : '#8947B3', fontFamily: 'Inter, system-ui, sans-serif' }}>
+          <span style={{ fontSize: '13px', fontWeight: 700, color: item.pillColor === 'red' ? '#BD1723' : '#8947B3', fontFamily: 'Inter, system-ui, sans-serif' }}>
             {item.pill}
           </span>
         </div>
@@ -1534,7 +1535,7 @@ const SvcCard = ({ item, onClose }) => {
             marginBottom: 3, lineHeight: 1.2, transition: 'color 0.2s ease',
           }}>{item.name}</div>
           <div style={{
-            fontSize: item.icon ? 11 : 12, color: h ? '#374f6b' : '#64748b',
+            fontSize: item.icon ? 11 : 12, color: h ? '#374f6b' : '#475569',
             lineHeight: 1.45, transition: 'color 0.2s ease',
           }}>{item.desc}</div>
         </div>
@@ -1592,8 +1593,8 @@ const CompanyLeftCard = ({ item, onClose }) => {
         {svg}
       </div>
       <div>
-        <div style={{ fontSize: 13.5, fontWeight: 700, color: '#0f172a', marginBottom: 1 }}>{item.name}</div>
-        <div style={{ fontSize: 11, color: '#64748b' }}>{item.desc}</div>
+        <div style={{ fontSize: 15.5, fontWeight: 700, color: '#0f172a', marginBottom: 1 }}>{item.name}</div>
+        <div style={{ fontSize: 13, color: '#475569' }}>{item.desc}</div>
       </div>
     </a>
   );
@@ -1637,8 +1638,8 @@ const CompanyRightCard = ({ item, onClose }) => {
         {svg}
       </div>
       <div>
-        <div style={{ fontSize: 13.5, fontWeight: 700, color: '#0f172a', marginBottom: 1 }}>{item.name}</div>
-        <div style={{ fontSize: 11, color: '#64748b' }}>{item.desc}</div>
+        <div style={{ fontSize: 15.5, fontWeight: 700, color: '#0f172a', marginBottom: 1 }}>{item.name}</div>
+        <div style={{ fontSize: 13, color: '#475569' }}>{item.desc}</div>
       </div>
     </a>
   );
@@ -1675,8 +1676,8 @@ const CompanyMegaDropdown = ({ navItem, onClose }) => {
             <div style={{ width: 36, height: 36, borderRadius: 10, background: '#f3e8ff', color: '#8947B3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
             </div>
-            <div style={{ fontSize: 13, color: '#0f172a' }}>
-              <span style={{ fontWeight: 700 }}>{navItem.cta.text}</span> - <span style={{ color: '#64748b' }}>{navItem.cta.sub}</span>
+            <div style={{ fontSize: 15, color: '#0f172a' }}>
+              <span style={{ fontWeight: 700 }}>{navItem.cta.text}</span> - <span style={{ color: '#475569' }}>{navItem.cta.sub}</span>
             </div>
           </div>
           <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'linear-gradient(135deg, #BD1723, #8947B3)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'transform 0.3s', transform: hCta ? 'translateX(3px)' : 'translateX(0)' }}>
@@ -1688,7 +1689,7 @@ const CompanyMegaDropdown = ({ navItem, onClose }) => {
       {/* Decorative Separator Line */}
       <div style={{ background: '#f1f5f9', width: '1px', alignSelf: 'stretch' }} />
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10, height: '100%' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {(navItem.serviceItems || []).map((item, i) => (
             <CompanyRightCard key={item.name} item={item} onClose={onClose} />
@@ -1696,11 +1697,11 @@ const CompanyMegaDropdown = ({ navItem, onClose }) => {
         </div>
 
         {/* Assessment Ad Image */}
-        <div style={{ display: 'flex', flex: 1, alignItems: 'flex-end', marginTop: 4 }}>
+        <div style={{ display: 'flex', flex: 1, marginTop: 4, position: 'relative', minHeight: 200 }}>
           <img
-            src={companyRightImage}
-            alt="Assessment Ad"
-            style={{ width: '100%', borderRadius: 14, objectFit: 'contain', objectPosition: 'bottom' }}
+            src={getAssetPath('/img/upskilling.webp')}
+            alt="Company Feature"
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: 14, objectFit: 'contain', objectPosition: 'bottom' }}
           />
         </div>
       </div>
@@ -1721,17 +1722,17 @@ const platformImageMap = {
   'xperience-platform': platformImg2,
   'talent-intelligence': platformImg3,
   'ai-hacknex': platformImg4,
-  'Talent Twin': platformImg5,
+  'Hire Twin': platformImg5,
   'skillzza-persona': platformImg6,
 };
 
 /* ── Per-tab entrance animation names (each tab gets a unique animation) ── */
 const tabAnimations = [
   'szImgSlideUp',       // Potential Meter: slide up + slight rotate
-  'szImgZoomRotate',    // Xperience Platform: zoom + rotate in
+  'szImgZoomRotate',    // Talent Twin: zoom + rotate in
   'szImgFlipIn',        // Talent Intelligence: 3D flip in
   'szImgBounceScale',   // AI HackNex: bounce scale
-  'szImgSwingIn',       // Talent Twin: swing from top
+  'szImgSwingIn',       // Hire Twin: swing from top
   'szImgElasticPop',    // Skillzza Persona: elastic pop
 ];
 
@@ -1774,7 +1775,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
       <div style={{ display: 'flex', gap: 0, minHeight: 340 }}>
         {/* ─── Left Sidebar ─── */}
         <div style={{
-          width: 220, flexShrink: 0,
+          width: 260, flexShrink: 0,
           borderRight: '1px solid #e2e8f0',
           paddingRight: 14,
           display: 'flex', flexDirection: 'column', gap: 0,
@@ -1809,12 +1810,12 @@ const PlatformTabsDropdown = ({ navItem }) => {
                 )}
                 <div>
                   <div style={{
-                    fontSize: 13.5, fontWeight: 700, lineHeight: 1.3,
+                    fontSize: 15.5, fontWeight: 700, lineHeight: 1.3,
                     color: i === activeTab ? '#BD1723' : '#0f172a',
                     transition: 'color 0.25s ease',
                   }}>{t.name}</div>
                   <div style={{
-                    fontSize: 11.5, color: '#94a3b8', marginTop: 2,
+                    fontSize: 13.5, color: '#94a3b8', marginTop: 2,
                     fontWeight: 400, lineHeight: 1.3,
                   }}>{t.subtitle}</div>
                 </div>
@@ -1841,7 +1842,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
           </h3>
 
           <p style={{
-            fontSize: 13, color: '#475569', lineHeight: 1.6,
+            fontSize: 15, color: '#334155', lineHeight: 1.6,
             margin: '12px 0 16px', maxWidth: 320,
           }}>{tab.description}</p>
 
@@ -1856,7 +1857,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
                   marginLeft: 4,
                   marginRight: 4
                 }} />
-                <span style={{ fontSize: 12.5, color: '#374151', lineHeight: 1.5 }}>{b}</span>
+                <span style={{ fontSize: 14.5, color: '#374151', lineHeight: 1.5 }}>{b}</span>
               </div>
             ))}
           </div>
@@ -1867,7 +1868,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
               display: 'inline-flex', alignItems: 'center', gap: 8,
               background: '#BD1723', color: '#fff',
               padding: '9px 20px', borderRadius: 10,
-              fontSize: 13, fontWeight: 600,
+              fontSize: 15, fontWeight: 600,
               textDecoration: 'none',
               cursor: tab.ctaLink ? 'pointer' : 'default',
               transition: 'all 0.25s ease',
@@ -1885,7 +1886,7 @@ const PlatformTabsDropdown = ({ navItem }) => {
               e.currentTarget.style.boxShadow = '0 4px 14px rgba(189,23,35,0.25)';
             }}
           >
-            {tab.ctaText} <span style={{ fontSize: 16 }}>→</span>
+            {tab.ctaText} <span style={{ fontSize: 18 }}>→</span>
           </a>
         </div>
 
@@ -1975,11 +1976,11 @@ const PlatformTabsDropdown = ({ navItem }) => {
           }} />
 
           {/* Decorative sparkles */}
-          <div className="sz-sparkle" style={{ top: -8, right: 15, fontSize: 18, animationDelay: '0s' }}>✦</div>
-          <div className="sz-sparkle" style={{ top: 14, right: 55, fontSize: 10, animationDelay: '1.2s' }}>✦</div>
-          <div className="sz-sparkle" style={{ bottom: 25, right: 0, fontSize: 13, animationDelay: '2.4s' }}>✦</div>
-          <div className="sz-sparkle" style={{ top: '40%', left: -8, fontSize: 12, animationDelay: '0.6s' }}>✧</div>
-          <div className="sz-sparkle" style={{ bottom: 10, left: 30, fontSize: 9, animationDelay: '1.8s' }}>✦</div>
+          <div className="sz-sparkle" style={{ top: -8, right: 15, fontSize: 20, animationDelay: '0s' }}>✦</div>
+          <div className="sz-sparkle" style={{ top: 14, right: 55, fontSize: 12, animationDelay: '1.2s' }}>✦</div>
+          <div className="sz-sparkle" style={{ bottom: 25, right: 0, fontSize: 15, animationDelay: '2.4s' }}>✦</div>
+          <div className="sz-sparkle" style={{ top: '40%', left: -8, fontSize: 14, animationDelay: '0.6s' }}>✧</div>
+          <div className="sz-sparkle" style={{ bottom: 10, left: 30, fontSize: 11, animationDelay: '1.8s' }}>✦</div>
 
           {/* Image container with per-tab animation */}
           <div style={{
@@ -2034,15 +2035,15 @@ const PlatformTabsDropdown = ({ navItem }) => {
               <Clock size={20} strokeWidth={2} />
             </div>
             <div>
-              <div style={{ fontSize: 13, color: '#0f172a', fontWeight: 700, lineHeight: 1.3 }}>{navItem.bottomCta.text}</div>
-              <div style={{ fontSize: 11.5, color: '#64748b', marginTop: 2, lineHeight: 1.3 }}>{navItem.bottomCta.sub}</div>
+              <div style={{ fontSize: 15, color: '#0f172a', fontWeight: 700, lineHeight: 1.3 }}>{navItem.bottomCta.text}</div>
+              <div style={{ fontSize: 13.5, color: '#475569', marginTop: 2, lineHeight: 1.3 }}>{navItem.bottomCta.sub}</div>
             </div>
           </div>
           <div style={{
             width: 34, height: 34, borderRadius: '50%',
             background: 'linear-gradient(135deg, #BD1723, #f87171)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: '#fff', fontSize: 15, flexShrink: 0, marginLeft: 12,
+            color: '#fff', fontSize: 17, flexShrink: 0, marginLeft: 12,
           }}>→</div>
         </a>
       )}
@@ -2063,7 +2064,7 @@ const MegaDropdown = ({ navItem, onComingSoon, onClose }) => {
     'image-card-grid': ImageCardGridDropdown,
     'compact-grid': CompactGridDropdown,
     'agentic-ai': AgenticAIDropdown,
-    'k12-vidya': K12VidyaDropdown,
+    'k12-Vedhya': K12VedhyaDropdown,
     'services-grid': ServicesGridDropdown,
     'company-mega': CompanyMegaDropdown,
   };
@@ -2095,9 +2096,9 @@ const DesktopNavItem = ({ item, onComingSoon }) => {
           alignItems: 'center',
           gap: 5,
           padding: '8px 14px',
-          fontSize: 13.5,
+          fontSize: 15.5,
           fontWeight: 500,
-          color: '#475569',
+          color: '#334155',
           background: 'none',
           border: 'none',
           borderRadius: 8,
@@ -2113,7 +2114,7 @@ const DesktopNavItem = ({ item, onComingSoon }) => {
           e.currentTarget.style.background = 'rgba(189,23,35,0.04)';
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.color = '#475569';
+          e.currentTarget.style.color = '#334155';
           e.currentTarget.style.background = 'none';
         }}
       >
@@ -2178,9 +2179,9 @@ const DesktopNavItem = ({ item, onComingSoon }) => {
           alignItems: 'center',
           gap: 5,
           padding: '8px 14px',
-          fontSize: 13.5,
+          fontSize: 15.5,
           fontWeight: 500,
-          color: open ? '#BD1723' : '#475569',
+          color: open ? '#BD1723' : '#334155',
           background: open ? 'rgba(189,23,35,0.04)' : 'none',
           border: 'none',
           borderRadius: 8,
@@ -2197,7 +2198,7 @@ const DesktopNavItem = ({ item, onComingSoon }) => {
             style={{
               display: 'inline-flex',
               alignItems: 'center',
-              fontSize: 10,
+              fontSize: 12,
               fontWeight: 700,
               lineHeight: 1,
               padding: '2px 7px',
@@ -2214,7 +2215,7 @@ const DesktopNavItem = ({ item, onComingSoon }) => {
         )}
         <IoIosArrowDown
           style={{
-            fontSize: 11,
+            fontSize: 13,
             marginLeft: 1,
             opacity: 0.5,
             transition: 'transform 0.3s cubic-bezier(0.4,0,0.2,1)',
@@ -2297,7 +2298,7 @@ const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '14px 20px',
-          fontSize: 14,
+          fontSize: 16,
           fontWeight: 600,
           color: '#1e293b',
           background: 'none',
@@ -2322,7 +2323,7 @@ const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '14px 20px',
-          fontSize: 14,
+          fontSize: 16,
           fontWeight: 600,
           color: '#1e293b',
           background: 'none',
@@ -2335,7 +2336,7 @@ const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
         {hasSubItems && (
           <IoIosArrowDown
             style={{
-              fontSize: 14,
+              fontSize: 16,
               transition: 'transform 0.3s cubic-bezier(0.4,0,0.2,1)',
               transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
               color: '#94a3b8',
@@ -2363,8 +2364,8 @@ const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
                 alignItems: 'center',
                 gap: 12,
                 padding: '10px 24px',
-                fontSize: 13,
-                color: '#475569',
+                fontSize: 15,
+                color: '#334155',
                 textDecoration: 'none',
               }}
             >
@@ -2377,7 +2378,7 @@ const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: 14,
+                    fontSize: 16,
                     background: sub.iconGradient || '#f1f5f9',
                   }}
                 >
@@ -2415,8 +2416,8 @@ const MobileNavItem = ({ item, open, onToggle, onClose, onComingSoon }) => {
                     alignItems: 'center',
                     gap: 12,
                     padding: '10px 24px',
-                    fontSize: 13,
-                    color: '#475569',
+                    fontSize: 15,
+                    color: '#334155',
                     textDecoration: 'none',
                   }}
                 >
@@ -2520,7 +2521,7 @@ const Navbar = () => {
                 color: '#fff',
                 padding: '9px 22px',
                 borderRadius: 8,
-                fontSize: 13,
+                fontSize: 15,
                 fontWeight: 700,
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
@@ -2538,7 +2539,7 @@ const Navbar = () => {
                 color: '#BD1723',
                 padding: '9px 22px',
                 borderRadius: 8,
-                fontSize: 13,
+                fontSize: 15,
                 fontWeight: 700,
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
@@ -2617,7 +2618,7 @@ const Navbar = () => {
                   color: '#fff',
                   padding: '11px 22px',
                   borderRadius: 8,
-                  fontSize: 14,
+                  fontSize: 16,
                   fontWeight: 700,
                   textDecoration: 'none',
                   textAlign: 'center',
@@ -2632,7 +2633,7 @@ const Navbar = () => {
                   color: '#BD1723',
                   padding: '11px 22px',
                   borderRadius: 8,
-                  fontSize: 14,
+                  fontSize: 16,
                   fontWeight: 700,
                   textDecoration: 'none',
                   textAlign: 'center',
@@ -2697,7 +2698,7 @@ const Navbar = () => {
                 background: '#713593',
                 color: '#ffffff',
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: '15px',
+                fontSize: '17px',
                 fontWeight: 600,
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',

@@ -147,7 +147,7 @@ function AboutPage() {
           display: inline-flex;
           align-items: center;
           gap: 16px;
-          font-size: 15px;
+          font-size: 17px;
           letter-spacing: 0.22em;
           text-transform: uppercase;
           font-weight: 400;
@@ -164,14 +164,14 @@ function AboutPage() {
         }
 
         .about-overview__title {
-          font-size: 16px !important;
+          font-size: 18px !important;
           line-height: 1.75;
           color: #1a1a1a;
           font-weight: 400;
         }
 
         .about-overview__body {
-          font-size: 16px;
+          font-size: 18px;
           line-height: 1.75;
           color: #1a1a1a;
         }
@@ -202,7 +202,7 @@ function AboutPage() {
         }
 
         .about-commitment__text {
-          font-size: 16px;
+          font-size: 18px;
           line-height: 1.75;
           color: #1a1a1a;
           max-width: 520px;
@@ -284,7 +284,7 @@ function AboutPage() {
           background: #f2a93b;
           color: #111111;
           font-family: 'Inter', 'Segoe UI', sans-serif;
-          font-size: 16px;
+          font-size: 18px;
           font-weight: 600;
           line-height: 1;
           padding: 8px 14px;
@@ -388,7 +388,7 @@ function AboutPage() {
 
         .about-mv__text {
           margin: 0;
-          font-size: 15.5px;
+          font-size: 17.5px;
           line-height: 1.55;
           font-weight: 400;
         }
@@ -453,7 +453,7 @@ function AboutPage() {
 
           .about-cta-strip__button {
             min-width: 78px;
-            font-size: 16px;
+            font-size: 18px;
             padding: 8px 10px;
           }
 
@@ -520,12 +520,12 @@ function AboutPage() {
           }
 
           .about-overview__eyebrow {
-            font-size: 13px !important;
+            font-size: 15px !important;
           }
 
           .about-overview__title,
           .about-overview__body {
-            font-size: 14px !important;
+            font-size: 16px !important;
             line-height: 1.7 !important;
           }
 
@@ -552,7 +552,7 @@ function AboutPage() {
 
           .about-commitment__text {
             max-width: 100% !important;
-            font-size: 14px !important;
+            font-size: 16px !important;
             line-height: 1.7 !important;
           }
 
@@ -571,7 +571,7 @@ function AboutPage() {
           }
 
           .about-cta-strip__text {
-            font-size: 14.5px !important;
+            font-size: 16.5px !important;
             line-height: 1.4 !important;
           }
 
@@ -609,7 +609,7 @@ function AboutPage() {
           }
 
           .about-mv__text {
-            font-size: 14px !important;
+            font-size: 16px !important;
             line-height: 1.6 !important;
           }
 
@@ -701,7 +701,7 @@ function AboutPage() {
               </article>
               <div className="about-mv__chip--yellow" aria-hidden="true" />
             </div>
-            
+
             <div className="about-mv__right">
               <div className="about-mv__chip" aria-hidden="true" />
               <article className="about-mv__card about-mv__card--vision">
@@ -715,7 +715,7 @@ function AboutPage() {
                   with the knowledge, experience, and innovation to lead in their fields.
                 </p>
                 <p className="about-mv__text">
-                  We aspire to be a global leader in <strong>skill development, talent transformation, and sustainable education</strong>,
+                  We aspire to be a global leader in <strong>skill development, Talent Intelligence, and sustainable education</strong>,
                   driving a positive impact on industries and communities.
                 </p>
               </article>

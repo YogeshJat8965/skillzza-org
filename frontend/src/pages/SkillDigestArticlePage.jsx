@@ -39,14 +39,14 @@ const digestArticles = {
   },
   'immersive-learning-ai-xperience-platforms': {
     number: '02',
-    title: 'Immersive Learning: How AI-Powered Experience Platforms are Shaping Future-Ready Talent',
+    title: 'Immersive Learning: How AI-Powered ETalent Twins are Shaping Future-Ready Talent',
     subtitle: 'Learning by doing in high-context simulated environments',
     sections: [
       {
         heading: 'Why Traditional Learning Is No Longer Enough',
         paragraphs: [
           'Classroom learning alone cannot prepare today\'s students and professionals for complex, fast-changing workplace demands. Learners now need hands-on, immersive practice that reflects real decisions, trade-offs, and consequences.',
-          'AI-powered Xperience Platforms are addressing this gap by turning passive content consumption into active skill rehearsal.',
+          'AI-powered Talent Twins are addressing this gap by turning passive content consumption into active skill rehearsal.',
         ],
       },
       {
@@ -60,7 +60,7 @@ const digestArticles = {
         heading: 'The Next Phase: Career Laboratories',
         paragraphs: [
           'For employers, this model unlocks talent that is not just academically prepared but job-ready from day one. For learners, it creates a low-risk, high-growth space to experiment, iterate, and showcase capability.',
-          'Over time, AI-powered Xperience Platforms will evolve into full career laboratories where innovation, execution, and skill visibility converge-making experiential learning the default model for workforce readiness.',
+          'Over time, AI-powered Talent Twins will evolve into full career laboratories where innovation, execution, and skill visibility converge-making experiential learning the default model for workforce readiness.',
         ],
       },
     ],
@@ -85,7 +85,7 @@ const digestArticles = {
       {
         heading: 'How AI Hiring Marketplaces Improve Match Quality',
         paragraphs: [
-          'Platforms such as Talent Twindo more than aggregate resumes-they build pre-assessed, job-ready talent pools using AI-driven skill tests, behavioral assessments, and project simulations. Employers can filter candidates by role-specific capability, fit indicators, and readiness signals in real time.',
+          'Platforms such as Hire Twindo more than aggregate resumes-they build pre-assessed, job-ready talent pools using AI-driven skill tests, behavioral assessments, and project simulations. Employers can filter candidates by role-specific capability, fit indicators, and readiness signals in real time.',
           'This creates a faster, fairer, and significantly more data-driven hiring model.',
         ],
       },
@@ -105,7 +105,7 @@ const digestArticles = {
   },
   'from-workforce-to-skillforce-ai-transformation': {
     number: '04',
-    title: "From Workforce to 'Skillforce': How AI is Driving the Next Wave of Talent Transformation",
+    title: "From Workforce to 'Skillforce': How AI is Driving the Next Wave of Talent Intelligence",
     subtitle: 'Continuous learning as the operating model for modern organizations',
     sections: [
       {
@@ -118,7 +118,7 @@ const digestArticles = {
       {
         heading: 'AI as the Engine of Ongoing Upskilling',
         paragraphs: [
-          'AI enables personalized upskilling by identifying skill gaps, recommending targeted interventions, and simulating future role requirements. Talent transformation is no longer a one-time learning event; it becomes a living, adaptive ecosystem where people and systems co-evolve.',
+          'AI enables personalized upskilling by identifying skill gaps, recommending targeted interventions, and simulating future role requirements. Talent Intelligence is no longer a one-time learning event; it becomes a living, adaptive ecosystem where people and systems co-evolve.',
           'Individuals gain career resilience across multiple role transitions, while organizations build teams that can pivot quickly without losing execution momentum.',
         ],
       },
@@ -220,7 +220,7 @@ function SkillDigestArticlePage() {
         <section className="w-full px-4 md:px-8 mt-8">
           <div className="max-w-[980px] mx-auto rounded-2xl border border-[#E2E8F0] bg-white p-8 text-center">
             <h1 className="font-['DM_Sans',sans-serif] text-[30px] font-bold text-[#0F172A] mb-3">Article not found</h1>
-            <p className="font-['DM_Sans',sans-serif] text-[16px] text-[#475569] mb-6">
+            <p className="font-['DM_Sans',sans-serif] text-[18px] text-[#334155] mb-6">
               This Skill Digest article is unavailable right now.
             </p>
             <button
@@ -309,7 +309,7 @@ function SkillDigestArticlePage() {
           align-items: center;
           justify-content: center;
           font-family: 'DM Sans', sans-serif;
-          font-size: 12px;
+          font-size: 14px;
           font-weight: 800;
           letter-spacing: 0.08em;
         }
@@ -332,14 +332,14 @@ function SkillDigestArticlePage() {
         .digest-section-card p {
           margin: 0 0 12px;
           font-family: 'DM Sans', sans-serif;
-          font-size: 15px;
+          font-size: 17px;
           line-height: 1.7;
           color: #334155;
         }
 
         @media (min-width: 640px) {
           .digest-section-card p {
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.75;
           }
         }
@@ -369,7 +369,7 @@ function SkillDigestArticlePage() {
           border-radius: 12px;
           padding: 10px;
           font-family: 'DM Sans', sans-serif;
-          font-size: 13px;
+          font-size: 15px;
           color: #334155;
         }
 
@@ -397,12 +397,12 @@ function SkillDigestArticlePage() {
 
       <section className="w-full px-4 md:px-8 mt-6">
         <div className="max-w-[1300px] mx-auto">
-          <div className="text-[14px] font-['DM_Sans',sans-serif] mb-3 flex flex-wrap items-center gap-y-1.5 gap-x-2">
+          <div className="text-[16px] font-['DM_Sans',sans-serif] mb-3 flex flex-wrap items-center gap-y-1.5 gap-x-2">
             <button className="text-[#0070AC] font-bold hover:underline" onClick={() => navigate('/insights/skill-digest')} style={{ whiteSpace: 'nowrap' }}>
               The Skill Digest
             </button>
             <span className="text-[#94A3B8]" style={{ whiteSpace: 'nowrap' }}>/</span>
-            <span className="text-[#475569]">{article.title}</span>
+            <span className="text-[#334155]">{article.title}</span>
           </div>
 
           <div
@@ -416,27 +416,27 @@ function SkillDigestArticlePage() {
             <h1 className="mt-3 sm:mt-4 font-['DM_Sans',sans-serif] text-[clamp(24px,2.8vw,52px)] leading-[1.2] font-bold text-[#0F172A]">
               {article.title}
             </h1>
-            <p className="mt-2 sm:mt-3 font-['DM_Sans',sans-serif] text-[15px] sm:text-[18px] leading-[1.4] sm:leading-[1.5] font-semibold text-[#334155]">
+            <p className="mt-2 sm:mt-3 font-['DM_Sans',sans-serif] text-[17px] sm:text-[20px] leading-[1.4] sm:leading-[1.5] font-semibold text-[#334155]">
               {article.subtitle}
             </p>
 
             <div className="mt-4 sm:mt-5 flex flex-wrap gap-2">
               <span
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em]"
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] sm:text-[14px] font-bold uppercase tracking-[0.08em]"
                 style={{ backgroundColor: `${accent}1A`, color: accent }}
               >
                 <Clock3 size={14} />
                 {getReadTime(article)}
               </span>
               <span
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.08em]"
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[14px] font-bold uppercase tracking-[0.08em]"
                 style={{ backgroundColor: `${accent}1A`, color: accent }}
               >
                 <Layers3 size={14} />
                 {article.sections.length} sections
               </span>
               <span
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.08em]"
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[14px] font-bold uppercase tracking-[0.08em]"
                 style={{ backgroundColor: `${accent}1A`, color: accent }}
               >
                 <Flame size={14} />
@@ -454,16 +454,16 @@ function SkillDigestArticlePage() {
 
             <aside className="digest-aside">
               <div className="border-l-2 pl-5 py-1" style={{ borderColor: accent }}>
-                <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-4">Quick Highlights</h3>
+                <h3 className="font-['DM_Sans',sans-serif] text-[20px] font-bold text-[#0F172A] mb-4">Quick Highlights</h3>
                 <div className="space-y-3">
                   {article.highlights.map((item) => (
-                    <div key={item} className="font-['DM_Sans',sans-serif] text-[15px] font-medium text-[#475569]">{item}</div>
+                    <div key={item} className="font-['DM_Sans',sans-serif] text-[17px] font-medium text-[#334155]">{item}</div>
                   ))}
                 </div>
               </div>
 
               <div className="border-l-2 pl-5 py-1" style={{ borderColor: accent }}>
-                <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-4">Topic Map</h3>
+                <h3 className="font-['DM_Sans',sans-serif] text-[20px] font-bold text-[#0F172A] mb-4">Topic Map</h3>
                 <div className="space-y-3">
                   {article.sections.map((section, index) => (
                     <div key={section.heading} className="flex items-start gap-3">
@@ -473,14 +473,14 @@ function SkillDigestArticlePage() {
                       >
                         <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: accent }}></span>
                       </span>
-                      <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[1.5] text-[#334155]">{section.heading}</p>
+                      <p className="font-['DM_Sans',sans-serif] text-[16px] leading-[1.5] text-[#334155]">{section.heading}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="border-l-2 p-4" style={{ borderColor: accent }}>
-                <h3 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">Continue Reading</h3>
+                <h3 className="font-['DM_Sans',sans-serif] text-[20px] font-bold text-[#0F172A] mb-3">Continue Reading</h3>
                 <div className="flex flex-col gap-3">
                   {nextArticle && (
                     <button

@@ -12,10 +12,10 @@ import { IoMdMail } from 'react-icons/io';
 
 const ContactBar = () => {
   return (
-    <div className="bg-zinc-50 text-sm text-gray-800 py-2 border-b">
+    <div className="bg-zinc-50 text-base text-gray-800 py-2 border-b">
       <div style={{ maxWidth: 1400, margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
         <div className="flex items-center space-x-2">
-          <IoLogoWhatsapp className="text-green-500 text-lg" />
+          <IoLogoWhatsapp className="text-green-500 text-xl" />
           <a
             href="https://wa.me/919130901979"
             target="_blank"
@@ -30,7 +30,7 @@ const ContactBar = () => {
             Register For Internship!
           </a>
           <div className="h-4 border-l border-gray-300"></div>
-          <div className="flex items-center space-x-4 text-gray-600 text-base">
+          <div className="flex items-center space-x-4 text-gray-600 text-lg">
             <a
               href="https://www.facebook.com/theskillzza"
               target="_blank"

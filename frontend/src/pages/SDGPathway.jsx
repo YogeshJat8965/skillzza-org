@@ -18,17 +18,17 @@ const SDGPathway = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-white">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               SDG ALIGNED PATHWAY
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
               Transforming Lives Through<br />
               SDG-Aligned Skills Development
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-3xl leading-relaxed mb-4">
+            <p className="text-xl md:text-xl text-gray-200 max-w-3xl leading-relaxed mb-4">
               Empowering Communities. Bridging Gaps. Building Futures...
             </p>
-            <p className="text-base md:text-lg text-gray-300 max-w-3xl leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed mb-8">
               Join thousands who have transformed their lives through our inclusive, impact-driven skill development programs aligned with UN Sustainable Development Goals.
             </p>
           </div>
@@ -39,7 +39,7 @@ const SDGPathway = () => {
       <section className="bg-white py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-6">
+            <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-6">
               OUR SDG COMMITMENT
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -55,11 +55,11 @@ const SDGPathway = () => {
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-orange-500 font-bold text-xs">4</span>
+                  <span className="text-orange-500 font-bold text-sm">4</span>
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">SDG 4: Quality Education</h3>
-              <p className="text-gray-700 text-center text-sm leading-relaxed">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">SDG 4: Quality Education</h3>
+              <p className="text-gray-700 text-center text-base leading-relaxed">
                 Ensuring inclusive and equitable quality education
               </p>
             </div>
@@ -68,11 +68,11 @@ const SDGPathway = () => {
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-orange-500 font-bold text-xs">5</span>
+                  <span className="text-orange-500 font-bold text-sm">5</span>
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">SDG 5: Gender Equality</h3>
-              <p className="text-gray-700 text-center text-sm leading-relaxed">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">SDG 5: Gender Equality</h3>
+              <p className="text-gray-700 text-center text-base leading-relaxed">
                 Empowering women and girls through economic opportunities
               </p>
             </div>
@@ -81,11 +81,11 @@ const SDGPathway = () => {
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-orange-500 font-bold text-xs">8</span>
+                  <span className="text-orange-500 font-bold text-sm">8</span>
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">SDG 8: Decent Work</h3>
-              <p className="text-gray-700 text-center text-sm leading-relaxed">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">SDG 8: Decent Work</h3>
+              <p className="text-gray-700 text-center text-base leading-relaxed">
                 Promoting inclusive economic growth and decent work for all
               </p>
             </div>
@@ -94,11 +94,11 @@ const SDGPathway = () => {
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-orange-500 font-bold text-xs">10</span>
+                  <span className="text-orange-500 font-bold text-sm">10</span>
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">SDG 10: Reduced Inequalities</h3>
-              <p className="text-gray-700 text-center text-sm leading-relaxed">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">SDG 10: Reduced Inequalities</h3>
+              <p className="text-gray-700 text-center text-base leading-relaxed">
                 Reducing inequality within and among countries
               </p>
             </div>
@@ -110,7 +110,7 @@ const SDGPathway = () => {
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-6">
+            <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-6">
               OUR APPROACH
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -119,7 +119,7 @@ const SDGPathway = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Beyond Traditional Training - Creating Systemic Change
             </p>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mt-4">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mt-4">
               Unlike conventional skill development programs, our SDG-aligned pathway integrates:
             </p>
           </div>
@@ -293,7 +293,7 @@ const SDGPathway = () => {
                 <h3 className={`text-xl font-bold text-${group.color}-600 mb-6`}>{group.title}</h3>
                 <ul className="space-y-3">
                   {group.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start space-x-3 text-gray-700 text-sm">
+                    <li key={itemIndex} className="flex items-start space-x-3 text-gray-700 text-base">
                       <div className={`w-2 h-2 bg-${group.color}-500 rounded-full mt-2 flex-shrink-0`}></div>
                       <span>{item}</span>
                     </li>
@@ -324,8 +324,8 @@ const SDGPathway = () => {
                 PS
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Priya Sharma</h3>
-              <p className="text-sm text-gray-500 mb-4 text-center">From Homemaker to Tech Professional</p>
-              <p className="text-gray-700 leading-relaxed text-sm">
+              <p className="text-base text-gray-600 mb-4 text-center">From Homemaker to Tech Professional</p>
+              <p className="text-gray-700 leading-relaxed text-base">
                 "Skillzza's women-focused tech program gave me the confidence and skills to restart my career after a 5-year break. Today, I'm a senior software developer earning 3x my previous salary."
               </p>
             </div>
@@ -336,8 +336,8 @@ const SDGPathway = () => {
                 RP
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Raj Patel</h3>
-              <p className="text-sm text-gray-500 mb-4 text-center">Rural Entrepreneur</p>
-              <p className="text-gray-700 leading-relaxed text-sm">
+              <p className="text-base text-gray-600 mb-4 text-center">Rural Entrepreneur</p>
+              <p className="text-gray-700 leading-relaxed text-base">
                 "The agritech program helped me modernize my farming practice. I now use IoT sensors and have increased my crop yield by 40% while reducing water usage."
               </p>
             </div>
@@ -348,8 +348,8 @@ const SDGPathway = () => {
                 AK
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Aisha Khan</h3>
-              <p className="text-sm text-gray-500 mb-4 text-center">Breaking Barriers</p>
-              <p className="text-gray-700 leading-relaxed text-sm">
+              <p className="text-base text-gray-600 mb-4 text-center">Breaking Barriers</p>
+              <p className="text-gray-700 leading-relaxed text-base">
                 "As a first-generation college graduate, Skillzza's financial services program opened doors I never knew existed. I now run my own financial consulting firm."
               </p>
             </div>
@@ -375,8 +375,8 @@ const SDGPathway = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <div className="w-8 h-8 bg-white rounded-lg"></div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">UN Partners</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">UN Partners</h3>
+              <ul className="space-y-2 text-base text-gray-600">
                 <li>UNESCO for curriculum development</li>
                 <li>ILO for decent work standards</li>
                 <li>UN Women for gender equality initiatives</li>
@@ -388,8 +388,8 @@ const SDGPathway = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <div className="w-8 h-8 bg-white rounded-lg"></div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Government Collaborations</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Government Collaborations</h3>
+              <ul className="space-y-2 text-base text-gray-600">
                 <li>Ministry of Skill Development alignment</li>
                 <li>State government partnership programs</li>
                 <li>Policy advocacy and implementation</li>
@@ -401,8 +401,8 @@ const SDGPathway = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <div className="w-8 h-8 bg-white rounded-lg"></div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Industry Partners</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Partners</h3>
+              <ul className="space-y-2 text-base text-gray-600">
                 <li>Fortune 500 companies for placement</li>
                 <li>Startups for innovation projects</li>
                 <li>Social enterprises for community impact</li>
@@ -414,8 +414,8 @@ const SDGPathway = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <div className="w-8 h-8 bg-white rounded-lg"></div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Educational Institutions</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Educational Institutions</h3>
+              <ul className="space-y-2 text-base text-gray-600">
                 <li>Universities for academic credit transfer</li>
                 <li>Research institutions for impact studies</li>
                 <li>International institutions for global exposure</li>
@@ -429,7 +429,7 @@ const SDGPathway = () => {
       <section className="bg-gradient-to-br from-gray-50 to-white py-20 relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-6">
+            <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-6">
               GET STARTED
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -467,10 +467,10 @@ const SDGPathway = () => {
                     "Start your transformation journey"
                   ].map((step, index) => (
                     <div key={index} className="text-center">
-                      <div className="w-12 h-12 bg-yellow-400 text-gray-900 rounded-full flex items-center justify-center font-bold text-lg mb-4 mx-auto">
+                      <div className="w-12 h-12 bg-yellow-400 text-gray-900 rounded-full flex items-center justify-center font-bold text-xl mb-4 mx-auto">
                         {index + 1}
                       </div>
-                      <p className="text-sm text-gray-900">{step}</p>
+                      <p className="text-base text-gray-900">{step}</p>
                     </div>
                   ))}
                 </div>
@@ -488,10 +488,10 @@ const SDGPathway = () => {
                     "Measure and report SDG impact"
                   ].map((step, index) => (
                     <div key={index} className="text-center">
-                      <div className="w-12 h-12 bg-green-400 text-gray-900 rounded-full flex items-center justify-center font-bold text-lg mb-4 mx-auto">
+                      <div className="w-12 h-12 bg-green-400 text-gray-900 rounded-full flex items-center justify-center font-bold text-xl mb-4 mx-auto">
                         {index + 1}
                       </div>
-                      <p className="text-sm text-gray-900">{step}</p>
+                      <p className="text-base text-gray-900">{step}</p>
                     </div>
                   ))}
                 </div>
@@ -509,10 +509,10 @@ const SDGPathway = () => {
                     "Track community transformation"
                   ].map((step, index) => (
                     <div key={index} className="text-center">
-                      <div className="w-12 h-12 bg-purple-400 text-gray-900 rounded-full flex items-center justify-center font-bold text-lg mb-4 mx-auto">
+                      <div className="w-12 h-12 bg-purple-400 text-gray-900 rounded-full flex items-center justify-center font-bold text-xl mb-4 mx-auto">
                         {index + 1}
                       </div>
-                      <p className="text-sm text-gray-900">{step}</p>
+                      <p className="text-base text-gray-900">{step}</p>
                     </div>
                   ))}
                 </div>
@@ -530,7 +530,7 @@ const SDGPathway = () => {
               Join the Movement
             </h2>
             <p className="text-xl mb-4">Be Part of the Solution</p>
-            <p className="text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
               Ready to Transform Your Life? Our next cohort starts in 30 days. Limited seats available.
             </p>
 
@@ -588,7 +588,7 @@ const SDGPathway = () => {
               }
             ].map((faq, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-2xl">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Q: {faq.question}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Q: {faq.question}</h3>
                 <p className="text-gray-700 leading-relaxed">A: {faq.answer}</p>
               </div>
             ))}
@@ -602,7 +602,7 @@ const SDGPathway = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Skillzza SDG Pathway - Where Your Success Becomes the World's Progress
           </h2>
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
+          <div className="flex flex-wrap justify-center gap-6 text-base text-gray-300">
             <span>United Nations Sustainable Development Goals Supporter</span>
             <span>•</span>
             <span>Certified B-Corporation</span>

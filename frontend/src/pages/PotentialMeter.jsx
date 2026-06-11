@@ -18,7 +18,7 @@ const PotentialMeter = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               THE POTENTIAL METER
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
@@ -27,7 +27,7 @@ const PotentialMeter = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-yellow-300">
               Beyond Traditional Testing: Discover What You're Truly Capable Of
             </h2>
-             <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
+             <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
                The Potential Meter is a next-generation talent and capability assessment framework designed to unlock true human potential. It goes beyond conventional evaluations by combining advanced analytics, behavioral insights, and adaptive simulations to provide a holistic view of an individual's skills, aspirations, and growth trajectory.
              </p>
              
@@ -40,7 +40,7 @@ const PotentialMeter = () => {
                </button>
              </div>
              
-             <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-300">
+             <div className="flex flex-wrap justify-center gap-8 text-base text-gray-300">
                <div className="flex items-center space-x-2">
                  <span className="w-2 h-2 bg-green-400 rounded-full"></span>
                  <span>No registration required</span>
@@ -65,19 +65,19 @@ const PotentialMeter = () => {
              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
                <div className="group">
                  <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">2M+</div>
-                 <div className="text-lg opacity-90">Professionals Assessed</div>
+                 <div className="text-xl opacity-90">Professionals Assessed</div>
                </div>
                <div className="group">
                  <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">95%</div>
-                 <div className="text-lg opacity-90">Accuracy Rate</div>
+                 <div className="text-xl opacity-90">Accuracy Rate</div>
                </div>
                <div className="group">
                  <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">50M+</div>
-                 <div className="text-lg opacity-90">Global Benchmarks</div>
+                 <div className="text-xl opacity-90">Global Benchmarks</div>
                </div>
                <div className="group">
                  <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
-                 <div className="text-lg opacity-90">Fortune 1000 Companies</div>
+                 <div className="text-xl opacity-90">Fortune 1000 Companies</div>
                </div>
              </div>
            </div>
@@ -103,7 +103,7 @@ const PotentialMeter = () => {
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
                       <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-red-600 text-sm">✗</span>
+                        <span className="text-red-600 text-base">✗</span>
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">Traditional Assessments Measure Past Learning</h4>
@@ -112,7 +112,7 @@ const PotentialMeter = () => {
                     </div>
                     <div className="flex items-start space-x-4">
                       <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-red-600 text-sm">✗</span>
+                        <span className="text-red-600 text-base">✗</span>
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">Focus on Knowledge Recall</h4>
@@ -121,7 +121,7 @@ const PotentialMeter = () => {
                     </div>
                     <div className="flex items-start space-x-4">
                       <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-red-600 text-sm">✗</span>
+                        <span className="text-red-600 text-base">✗</span>
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">Evaluate Today's Skills</h4>
@@ -131,7 +131,7 @@ const PotentialMeter = () => {
                   </div>
                   
                   <div className="mt-8 p-6 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl border border-orange-200">
-                    <p className="text-lg font-semibold text-gray-900 mb-2">The Reality Check:</p>
+                    <p className="text-xl font-semibold text-gray-900 mb-2">The Reality Check:</p>
                     <p className="text-gray-700">
                       <span className="font-bold text-orange-600">65%</span> of today's students will work in jobs that don't yet exist
                     </p>
@@ -166,7 +166,7 @@ const PotentialMeter = () => {
               <h3 className="text-xl font-semibold text-orange-600 mb-8">
                 The Science of Human Potential
               </h3>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
                 We've cracked the code on measuring what matters most – your untapped potential. Our proprietary AI engine combines:
               </p>
             </div>
@@ -471,7 +471,7 @@ const PotentialMeter = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Students & Recent Graduates</h3>
-                        <p className="text-lg text-blue-600 italic">"From Campus Confusion to Career Clarity"</p>
+                        <p className="text-xl text-blue-600 italic">"From Campus Confusion to Career Clarity"</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -481,7 +481,7 @@ const PotentialMeter = () => {
                       <li>• Make informed career decisions with confidence</li>
                     </ul>
                     <div className="bg-blue-50 p-4 rounded-xl border border-blue-200">
-                      <p className="text-sm text-gray-700 italic">
+                      <p className="text-base text-gray-700 italic">
                         <strong>Success Story:</strong> "The Potential Meter revealed my untapped analytical thinking abilities. I switched from general business to data science and landed a role at Google within 6 months of graduation." - Sarah Chen, Data Scientist
                       </p>
                     </div>
@@ -506,7 +506,7 @@ const PotentialMeter = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Young Professionals</h3>
-                        <p className="text-lg text-green-600 italic">"From Career Plateau to Exponential Growth"</p>
+                        <p className="text-xl text-green-600 italic">"From Career Plateau to Exponential Growth"</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -516,7 +516,7 @@ const PotentialMeter = () => {
                       <li>• Accelerate promotion timelines</li>
                     </ul>
                     <div className="bg-green-50 p-4 rounded-xl border border-green-200">
-                      <p className="text-sm text-gray-700 italic">
+                      <p className="text-base text-gray-700 italic">
                         <strong>Success Story:</strong> "My potential assessment showed strong strategic thinking but weak stakeholder management. After 6 months of targeted development, I was promoted to VP at 28." - Marcus Rodriguez, VP Strategy
                       </p>
                     </div>
@@ -541,7 +541,7 @@ const PotentialMeter = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Organizations & HR Leaders</h3>
-                        <p className="text-lg text-purple-600 italic">"From Talent Guesswork to Strategic Workforce Intelligence"</p>
+                        <p className="text-xl text-purple-600 italic">"From Talent Guesswork to Strategic Workforce Intelligence"</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -551,7 +551,7 @@ const PotentialMeter = () => {
                       <li>• Build future-ready leadership pipelines</li>
                     </ul>
                     <div className="bg-purple-50 p-4 rounded-xl border border-purple-200">
-                      <p className="text-sm text-gray-700 italic">
+                      <p className="text-base text-gray-700 italic">
                         <strong>Success Story:</strong> "Using Potential Meter for campus recruitment, we increased new hire performance by 40% and reduced first-year attrition by 60%." - Jennifer Walsh, CHRO, Fortune 500
                       </p>
                     </div>
@@ -576,7 +576,7 @@ const PotentialMeter = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Career Changers & Re-entrants</h3>
-                        <p className="text-lg text-orange-600 italic">"From Industry Uncertainty to Confident Transition"</p>
+                        <p className="text-xl text-orange-600 italic">"From Industry Uncertainty to Confident Transition"</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -620,7 +620,7 @@ const PotentialMeter = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Proprietary Algorithms</h3>
-                <ul className="space-y-2 text-gray-700 text-sm">
+                <ul className="space-y-2 text-gray-700 text-base">
                   <li>• 7 years of R&D with leading psychologists</li>
                   <li>• Trained on 10M+ assessment data points</li>
                   <li>• 95% accuracy in career success prediction</li>
@@ -636,7 +636,7 @@ const PotentialMeter = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Academic Partnerships</h3>
-                <ul className="space-y-2 text-gray-700 text-sm">
+                <ul className="space-y-2 text-gray-700 text-base">
                   <li>• Validated by Stanford Psychology Department</li>
                   <li>• Research collaboration with MIT Sloan</li>
                   <li>• Endorsed by Harvard Business School faculty</li>
@@ -652,7 +652,7 @@ const PotentialMeter = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Global Recognition</h3>
-                <ul className="space-y-2 text-gray-700 text-sm">
+                <ul className="space-y-2 text-gray-700 text-base">
                   <li>• Winner: HR Tech Innovation Award 2024</li>
                   <li>• Featured: World Economic Forum Report</li>
                   <li>• Certified: ISO 27001 Data Security</li>
@@ -763,7 +763,7 @@ const PotentialMeter = () => {
 
               {/* Professional Package */}
               <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-2xl border-2 border-orange-300 text-center relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white px-4 py-2 rounded-full text-base font-semibold">
                   MOST POPULAR
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Package</h3>
@@ -826,7 +826,7 @@ const PotentialMeter = () => {
                 <p className="text-gray-700 mb-4 italic">
                   "The most accurate predictor of career success I've encountered in 20 years of talent development."
                 </p>
-                <div className="text-sm">
+                <div className="text-base">
                   <p className="font-semibold text-gray-900">Dr. Angela Mitchell</p>
                   <p className="text-gray-600">Former VP Talent Development, Microsoft</p>
                 </div>
@@ -845,7 +845,7 @@ const PotentialMeter = () => {
                 <p className="text-gray-700 mb-4 italic">
                   "Game-changing insights that our traditional hiring process completely missed."
                 </p>
-                <div className="text-sm">
+                <div className="text-base">
                   <p className="font-semibold text-gray-900">David Park</p>
                   <p className="text-gray-600">CEO, TechFlow Ventures</p>
                 </div>
@@ -864,7 +864,7 @@ const PotentialMeter = () => {
                 <p className="text-gray-700 mb-4 italic">
                   "My Potential Meter report was more insightful than 5 years of performance reviews."
                 </p>
-                <div className="text-sm">
+                <div className="text-base">
                   <p className="font-semibold text-gray-900">Rachel Kumar</p>
                   <p className="text-gray-600">Senior Consultant, McKinsey</p>
                 </div>
@@ -876,20 +876,20 @@ const PotentialMeter = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-8">Media Coverage</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="bg-white p-4 rounded-xl shadow-lg">
-                  <p className="text-sm font-semibold text-gray-900">Forbes</p>
-                  <p className="text-xs text-gray-600">"Top 10 HR Tech Innovations"</p>
+                  <p className="text-base font-semibold text-gray-900">Forbes</p>
+                  <p className="text-sm text-gray-600">"Top 10 HR Tech Innovations"</p>
                 </div>
                 <div className="bg-white p-4 rounded-xl shadow-lg">
-                  <p className="text-sm font-semibold text-gray-900">Harvard Business Review</p>
-                  <p className="text-xs text-gray-600">Case Study Featured</p>
+                  <p className="text-base font-semibold text-gray-900">Harvard Business Review</p>
+                  <p className="text-sm text-gray-600">Case Study Featured</p>
                 </div>
                 <div className="bg-white p-4 rounded-xl shadow-lg">
-                  <p className="text-sm font-semibold text-gray-900">Wall Street Journal</p>
-                  <p className="text-xs text-gray-600">"Future of Career Development"</p>
+                  <p className="text-base font-semibold text-gray-900">Wall Street Journal</p>
+                  <p className="text-sm text-gray-600">"Future of Career Development"</p>
                 </div>
                 <div className="bg-white p-4 rounded-xl shadow-lg">
-                  <p className="text-sm font-semibold text-gray-900">TED Talk</p>
-                  <p className="text-xs text-gray-600">"Science of Unlocking Potential"</p>
+                  <p className="text-base font-semibold text-gray-900">TED Talk</p>
+                  <p className="text-sm text-gray-600">"Science of Unlocking Potential"</p>
                 </div>
               </div>
             </div>
@@ -940,7 +940,7 @@ const PotentialMeter = () => {
               Ready to Discover What You're Truly Capable Of?
             </h2>
             <p className="text-xl mb-4">Join 2M+ professionals who've unlocked their potential</p>
-            <p className="text-lg mb-8 opacity-90">No registration required. Instant results. Money-back guarantee.</p>
+            <p className="text-xl mb-8 opacity-90">No registration required. Instant results. Money-back guarantee.</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
@@ -953,10 +953,10 @@ const PotentialMeter = () => {
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Our Promise</h3>
-              <p className="text-lg">
+              <p className="text-xl">
                 "If The Potential Meter doesn't reveal at least 3 actionable insights that could transform your career trajectory, we'll refund your money – no questions asked."
               </p>
-              <p className="text-sm mt-4 opacity-90">That's how confident we are in our ability to unlock your potential.</p>
+              <p className="text-base mt-4 opacity-90">That's how confident we are in our ability to unlock your potential.</p>
             </div>
 
             <div className="mt-12">
@@ -979,7 +979,7 @@ const PotentialMeter = () => {
 
             <div className="mt-8">
               <p className="text-xl font-bold">The future belongs to those who understand their potential.</p>
-              <p className="text-lg">Discover yours today.</p>
+              <p className="text-xl">Discover yours today.</p>
             </div>
           </div>
         </div>

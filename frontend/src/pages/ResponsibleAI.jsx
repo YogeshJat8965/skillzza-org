@@ -22,11 +22,11 @@ const ResponsibleAI = () => {
             line-height: 1.2 !important;
           }
           .responsible-ai-page .ra-hero p {
-            font-size: 14px !important;
+            font-size: 16px !important;
             line-height: 1.55 !important;
           }
           .responsible-ai-page .ra-kicker {
-            font-size: 11px !important;
+            font-size: 13px !important;
             padding: 6px 12px !important;
             margin-bottom: 16px !important;
           }
@@ -35,14 +35,14 @@ const ResponsibleAI = () => {
             line-height: 1.25 !important;
           }
           .responsible-ai-page h3 {
-            font-size: 18px !important;
+            font-size: 20px !important;
             line-height: 1.3 !important;
           }
           .responsible-ai-page .ra-card {
             padding: 20px !important;
           }
           .responsible-ai-page .ra-card p {
-            font-size: 14px !important;
+            font-size: 16px !important;
           }
           .responsible-ai-page .ra-pillars img {
             height: 200px !important;
@@ -57,10 +57,10 @@ const ResponsibleAI = () => {
             font-size: 22px !important;
           }
           .responsible-ai-page .ra-cta p {
-            font-size: 14px !important;
+            font-size: 16px !important;
           }
           .responsible-ai-page .ra-cta button {
-            font-size: 14px !important;
+            font-size: 16px !important;
             padding: 10px 18px !important;
           }
         }
@@ -77,16 +77,16 @@ const ResponsibleAI = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-white">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6 ra-kicker">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6 ra-kicker">
               RESPONSIBLE AI AT SKILLZZA
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
               Ethical Intelligence for the Future of Work
             </h1>
-            <p className="text-base md:text-lg text-gray-300 max-w-3xl leading-relaxed mb-4">
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed mb-4">
               At Skillzza, we're shaping the future of workforce development through advanced, AI-driven technologies-built with responsibility, transparency, and equity at their core. We understand that with innovation comes a deep responsibility to design systems that are fair, explainable, and human-centric.
             </p>
-            <p className="text-base md:text-lg text-gray-300 max-w-3xl leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
               As AI becomes a transformative force across industries, Skillzza is committed to ensuring that this power is used to amplify opportunity, not inequality. Our Responsible AI framework is embedded in every layer of our platform-from talent simulations and assessments to personalized upskilling journeys and employer insights.
             </p>
           </div>
@@ -98,7 +98,7 @@ const ResponsibleAI = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>Our Commitment to Responsible AI</h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
               Responsible AI is more than a philosophy-it's a foundational element of how Skillzza designs and delivers impact. We are committed to:
             </p>
           </div>
@@ -143,7 +143,7 @@ const ResponsibleAI = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Through strategic collaborations with global ethics boards and workforce policy leaders, we ensure that our AI not only meets the highest standards but evolves with societal and regulatory expectations.
             </p>
           </div>
@@ -168,7 +168,7 @@ const ResponsibleAI = () => {
             </div>
             <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <h3 className="text-3xl font-bold text-orange-500 mb-6 text-center">Explainability & Interpretability</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-xl text-gray-700 leading-relaxed">
                 Every AI decision should be clear. Our models offer full visibility into how skills, roles, and experiences are matched-empowering users with actionable, understandable insights.
               </p>
             </div>
@@ -178,7 +178,7 @@ const ResponsibleAI = () => {
           <div className="flex flex-col-reverse lg:flex-row gap-12 items-center mb-16">
             <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <h3 className="text-3xl font-bold text-blue-600 mb-6 text-center">Fairness by Design</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-xl text-gray-700 leading-relaxed">
                 We build bias-aware algorithms that focus solely on skills and potential-intentionally removing demographic identifiers to ensure equitable hiring and advancement opportunities.
               </p>
             </div>
@@ -202,7 +202,7 @@ const ResponsibleAI = () => {
             </div>
             <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <h3 className="text-3xl font-bold text-green-600 mb-6 text-center">Model Robustness</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-xl text-gray-700 leading-relaxed">
                 Our systems are trained on dynamic, diverse datasets to ensure accuracy, reliability, and scalability across regions, industries, and workforce segments.
               </p>
             </div>
@@ -212,7 +212,7 @@ const ResponsibleAI = () => {
           <div className="flex flex-col-reverse lg:flex-row gap-12 items-center mb-16">
             <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <h3 className="text-3xl font-bold text-purple-600 mb-6 text-center">Data Rights & Privacy</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-xl text-gray-700 leading-relaxed">
                 Respecting data sovereignty is non-negotiable. We uphold strict compliance with global privacy regulations and maintain transparency in how we collect, use, and protect user data.
               </p>
             </div>
@@ -236,7 +236,7 @@ const ResponsibleAI = () => {
             </div>
             <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <h3 className="text-3xl font-bold text-red-600 mb-6 text-center">Accountability & Governance</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-xl text-gray-700 leading-relaxed">
                 From internal audits to external ethics reviews, our AI systems are continuously monitored and improved through a rigorous governance framework.
               </p>
             </div>
@@ -249,7 +249,7 @@ const ResponsibleAI = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>Human-Centric Intelligence</h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
               Skillzza's AI is designed to enhance human decision-making, not automate it blindly. By surfacing skill-based, data-driven recommendations, we empower:
             </p>
           </div>
@@ -316,10 +316,10 @@ const ResponsibleAI = () => {
             </div>
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>Building a Responsible Workforce Ecosystem</h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-xl text-gray-700 leading-relaxed">
                 Our platform spans the entire talent lifecycle-from career discovery and skill simulation to talent acquisition, upskilling, and retention. At every stage, Skillzza ensures that AI is deployed ethically to create inclusive, data-driven talent ecosystems that benefit both individuals and organizations.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-xl text-gray-700 leading-relaxed">
                 We believe that the future of work must be intelligent, inclusive, and equitable-and we're building that future today, powered by Responsible AI.
               </p>
             </div>

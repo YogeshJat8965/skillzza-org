@@ -672,8 +672,8 @@ function AIHackNexPage() {
           {/* Breadcrumb */}
           <nav className="hacknex-breadcrumb mb-6 md:mb-8 lg:mb-10 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32 max-w-[1920px] mx-auto">
             <div
-              className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm lg:text-base font-semibold"
-              style={{ color: '#71717B', opacity: 0.76, fontFamily: 'Lato, sans-serif' }}
+              className="flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base lg:text-lg font-semibold"
+              style={{ color: '#52525B', opacity: 0.76, fontFamily: 'Lato, sans-serif' }}
             >
               <Link to="/" className="hover:opacity-70 transition-opacity">Home</Link>
               <span>&gt;</span>
@@ -734,7 +734,7 @@ function AIHackNexPage() {
               <div className="flex flex-wrap items-center gap-4 md:gap-5 pt-1 md:pt-3 hacknex-hero-buttons">
                 {/* Register Now button */}
                 <button
-                  className="hacknex-register-btn px-6 md:px-8 lg:px-9 py-3 md:py-3.5 lg:py-4 text-white text-sm sm:text-[15px] lg:text-base font-semibold rounded-lg shadow-lg whitespace-nowrap cursor-pointer border-none"
+                  className="hacknex-register-btn px-6 md:px-8 lg:px-9 py-3 md:py-3.5 lg:py-4 text-white text-base sm:text-[17px] lg:text-lg font-semibold rounded-lg shadow-lg whitespace-nowrap cursor-pointer border-none"
                   style={{ fontFamily: 'DM Sans, sans-serif' }}
                 >
                   Register Now
@@ -742,7 +742,7 @@ function AIHackNexPage() {
 
                 {/* Explore Challenges link */}
                 <button
-                  className="hacknex-explore-link flex items-center gap-1.5 text-sm sm:text-[15px] lg:text-base font-semibold bg-transparent border-none cursor-pointer whitespace-nowrap"
+                  className="hacknex-explore-link flex items-center gap-1.5 text-base sm:text-[17px] lg:text-lg font-semibold bg-transparent border-none cursor-pointer whitespace-nowrap"
                   style={{ fontFamily: 'DM Sans, sans-serif' }}
                 >
                   <span className="underline decoration-1 underline-offset-4">Explore Challenges</span>
@@ -963,7 +963,7 @@ function AIHackNexPage() {
               fontWeight: '400',
               fontSize: 'clamp(14px, 1.2vw, 18px)',
               lineHeight: 'clamp(20px, 1.8vw, 28px)',
-              color: '#71717A',
+              color: '#52525B',
             }}
           >
             From Skill Development to Industry &amp; Community Recognition
@@ -1101,7 +1101,7 @@ function AIHackNexPage() {
                     className="w-8 h-8 md:w-10 md:h-10 lg:w-11 lg:h-11"
                   />
                   <span
-                    className="text-xs md:text-sm lg:text-[15px] font-semibold text-left whitespace-pre-line"
+                    className="text-sm md:text-base lg:text-[17px] font-semibold text-left whitespace-pre-line"
                     style={{ color: '#0F1114' }}
                   >
                     {tab.label}
@@ -1379,7 +1379,7 @@ function AIHackNexPage() {
 
           {/* Join the Challenge button */}
           <button
-            className="px-8 md:px-10 lg:px-12 py-3.5 md:py-4 text-white text-sm md:text-base lg:text-lg font-semibold rounded-lg border-none cursor-pointer shadow-lg"
+            className="px-8 md:px-10 lg:px-12 py-3.5 md:py-4 text-white text-base md:text-lg lg:text-xl font-semibold rounded-lg border-none cursor-pointer shadow-lg"
             style={{
               backgroundColor: '#1F57C7',
               fontFamily: 'DM Sans, sans-serif',

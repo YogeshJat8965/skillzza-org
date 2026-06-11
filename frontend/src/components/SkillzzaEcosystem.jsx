@@ -75,86 +75,60 @@ const SkillzzaEcosystem = () => {
         }
       `}</style>
       <section id="ecosystem-diagram"
-        className="w-full pt-4 pb-8 lg:pt-6 lg:pb-12 overflow-hidden bg-white"
-        style={{
-          background: 'linear-gradient(180deg, #FFFFFF 0%, #F3EBF9 35%, #E8D8F0 55%, #F3EBF9 80%, #FFFFFF 100%)',
-          position: 'relative',
-        }}
+        className="w-full pt-4 pb-8 lg:pt-6 lg:pb-12 overflow-hidden bg-white flex justify-center"
       >
-        {/* Gradient Overlays from Right and Bottom */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: 'linear-gradient(to left, rgba(223, 195, 235, 0.8) 0%, transparent 30%)',
-            pointerEvents: 'none',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: 'linear-gradient(to top, rgba(223, 195, 235, 0.8) 0%, transparent 30%)',
-            pointerEvents: 'none',
-          }}
-        />
-        {/* Section Header */}
-        <div
-          ref={headerRef}
-          className={`max-w-[1920px] mx-auto px-6 sm:px-12 lg:px-24 xl:px-32 text-center mb-10 lg:mb-14 ${isVisible.header ? 'animate-fade-in-zoom' : 'opacity-0'}`}
-          style={{ position: 'relative', zIndex: 1 }}
-        >
-          <h2
-            className="mb-3"
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 'clamp(24px, 2.8vw, 52px)',
-              fontWeight: 700,
-              lineHeight: 1.2,
-              color: '#0F1114',
-            }}
+        <div style={{ position: 'relative', width: '92%', maxWidth: '1440px', margin: '0 auto' }}>
+          {/* Section Header */}
+          <div
+            ref={headerRef}
+            className={`w-full text-center ${isVisible.header ? 'animate-fade-in-zoom' : 'opacity-0'}`}
+            style={{ position: 'absolute', top: '5%', left: 0, right: 0, zIndex: 10, padding: '0 20px' }}
           >
-            Skill Ecosystem
-          </h2>
-          <p
-            style={{
-              fontFamily: "'Lato', sans-serif",
-              fontSize: 'clamp(16px, 2vw, 20px)',
-              fontWeight: 400,
-              lineHeight: 1.6,
-              color: '#71717B',
-              fontStyle: 'italic',
-            }}
-          >
-            Empowering Every Learner, Every Step of the Way
-          </p>
-        </div>
+            <h2
+              className="mb-2 sm:mb-3"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 'clamp(20px, 2.8vw, 48px)',
+                fontWeight: 700,
+                lineHeight: 1.2,
+                color: '#0F1114',
+              }}
+            >
+              Skill Ecosystem
+            </h2>
+            <p
+              style={{
+                fontFamily: "'Lato', sans-serif",
+                fontSize: 'clamp(14px, 2vw, 20px)',
+                fontWeight: 400,
+                lineHeight: 1.6,
+                color: '#52525B',
+                fontStyle: 'italic',
+              }}
+            >
+              Empowering Every Learner, Every Step of the Way
+            </p>
+          </div>
 
-        {/* Ecosystem Diagram - Using the actual design SVG */}
-        <div
-          ref={diagramRef}
-          className={`max-w-[1260px] mx-auto px-4 sm:px-8 lg:px-12 ${isVisible.diagram ? 'animate-slide-in-from-bottom' : 'opacity-0'}`}
-          style={{ position: 'relative', zIndex: 1 }}
-        >
-          <img
-            src={getAssetPath('/img/Group 37832.svg')}
-            alt="Skillzza Ecosystem diagram showing five interconnected platforms: The Potential Meter (AI Skill Engine), Xperience Platform (Immersive Learning Labs), Talent Transformation (Career Mobility Pipeline), AI HackNex (Talent Marketplace), and Talent Twin(Career Mobility Pipeline). Bottom process flow shows Assessment, Mentoring, Simulations, Project Showcase, and Get Hired."
-            className="w-full"
-            style={{
-              width: 'min(100%, 1050px)',
-              aspectRatio: '1050 / 750',
-              maxWidth: '100%',
-              margin: '0 auto',
-              display: 'block',
-              objectFit: 'contain',
-            }}
-          />
+          {/* Ecosystem Diagram */}
+          <div
+            ref={diagramRef}
+            className={`w-full ${isVisible.diagram ? 'animate-slide-in-from-bottom' : 'opacity-0'}`}
+            style={{ position: 'relative', zIndex: 1 }}
+          >
+            <img
+              src={getAssetPath('/img/Group 37832.jpeg')}
+              alt="Skillzza Ecosystem diagram showing five interconnected platforms: The Potential Meter (AI Skill Engine), Talent Twin (Immersive Learning Labs), Talent Intelligence (Career Mobility Pipeline), AI HackNex (Talent Marketplace), and Hire Twin(Career Mobility Pipeline). Bottom process flow shows Assessment, Mentoring, Simulations, Project Showcase, and Get Hired."
+              className="w-full"
+              style={{
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+                objectFit: 'contain',
+                borderRadius: '16px',
+              }}
+            />
+          </div>
         </div>
       </section>
     </>

@@ -14,20 +14,20 @@ const footerSections = [
     title: 'Platforms',
     links: [
       { name: 'The Potential Meter', href: '/product/potential-meter' },
-      { name: 'Xperience Platform', href: '/product/xperience-platform' },
-      { name: 'Talent Transformation', href: '/product/talent-intelligence', disabled: true },
+      { name: 'Talent Twin', href: '/product/xperience-platform' },
       { name: 'AI Hacknex', href: '/product/ai-hacknex', disabled: true },
-      { name: 'Talent Twin', href: '/product/talent-twin', disabled: true },
+      { name: 'Hire Twin', href: '/product/talent-twin', disabled: true },
       { name: 'Skill Persona', href: '/explore/skillzza-persona' },
+      { name: 'Talent Intelligence', href: '/product/talent-intelligence', disabled: true },
     ],
   },
   {
-    title: 'Skillzza K-12',
+    title: 'K-12',
     links: [
-      { name: 'Vidya AI', href: 'https://cognifyai.skillzza.com/' },
+      { name: 'Vedya AI', href: 'https://cognifyai.skillzza.com/' },
       { name: 'Skill Studio', href: 'https://skillzza-club.vercel.app/' },
-      { name: 'Teacher AI Upskill Lab', href: 'https://cognifyai.skillzza.com/for-tutor.html' },
-      { name: 'CCMM', href: 'https://cognifyai.skillzza.com/for-school.html' },
+      { name: 'Immersive Learning for Teachers', href: 'https://cognifyai.skillzza.com/for-tutor.html' },
+      { name: 'Cognitive Computing for Maturity Models', href: 'https://cognifyai.skillzza.com/for-school.html' },
       { name: 'Campus Connect - K12', href: 'https://cognifyai.skillzza.com/#' },
       { name: 'Future Founders Track', href: 'https://cognifyai.skillzza.com/#' },
     ],
@@ -47,7 +47,7 @@ const footerSections = [
       { name: 'The School of Al & Quantum Intelligence', href: '#', disabled: true },
       { name: 'Global School Of Sustainability & Climate Action', href: 'https://globalschoolofsustainability.com/' },
       { name: 'Centre Of Digital & Design Excellence', href: '#', disabled: true },
-      { name: 'Udaan - Aerial Intelligence', href: '#', disabled: true },
+      { name: 'Udaan - Institute of Aerial Intelligence', href: '#', disabled: true },
     ],
   },
   {
@@ -55,7 +55,7 @@ const footerSections = [
     links: [
       { name: 'Job Simulations', href: '/explore/job-simulations' },
       { name: 'Agentic AI', href: '/product/ai-hacknex', disabled: true },
-      { name: 'Playground', href: '#', disabled: true },
+      // { name: 'Playground', href: '#', disabled: true },
       // { name: 'Explore Domains', href: '/explore/domains' },
       // { name: 'Career Trajectory', href: '/explore/career-trajectory' },
       // { name: 'Skillzza Persona', href: '/explore/skillzza-persona' },
@@ -130,7 +130,7 @@ const Footer = () => {
             <div>
               <p style={{
                 fontWeight: 700,
-                fontSize: 13,
+                fontSize: 15,
                 color: '#1a1a1a',
                 margin: '0 0 6px 0',
                 lineHeight: 1.4,
@@ -138,7 +138,7 @@ const Footer = () => {
                 Registered Office
               </p>
               <p style={{
-                fontSize: 12,
+                fontSize: 14,
                 color: '#1a1a1a',
                 lineHeight: 1.7,
                 margin: 0,
@@ -153,14 +153,14 @@ const Footer = () => {
             <div>
               <p style={{
                 fontWeight: 700,
-                fontSize: 13,
+                fontSize: 15,
                 color: '#1a1a1a',
                 margin: '0 0 6px 0',
                 lineHeight: 1.4,
               }}>
                 Our Presence
               </p>
-              <p style={{ fontSize: 12, color: '#1a1a1a', margin: 0, lineHeight: 1.7 }}>
+              <p style={{ fontSize: 14, color: '#1a1a1a', margin: 0, lineHeight: 1.7 }}>
                 Mumbai | Thane | Raipur | Delhi
               </p>
             </div>
@@ -181,7 +181,7 @@ const Footer = () => {
                 {/* Section heading */}
                 <p style={{
                   fontWeight: 700,
-                  fontSize: 13,
+                  fontSize: 15,
                   color: '#1a1a1a',
                   margin: '0 0 16px 0',
                   lineHeight: 1.35,
@@ -203,7 +203,7 @@ const Footer = () => {
                       {link.disabled ? (
                         <span
                           style={{
-                            fontSize: 12,
+                            fontSize: 14,
                             color: '#1a1a1a',
                             lineHeight: 1.5,
                             display: 'block',
@@ -222,7 +222,7 @@ const Footer = () => {
                               target={isExternal ? '_blank' : undefined}
                               rel={isExternal ? 'noopener noreferrer' : undefined}
                               style={{
-                                fontSize: 12,
+                                fontSize: 14,
                                 color: '#1a1a1a',
                                 textDecoration: 'none',
                                 lineHeight: 1.5,
@@ -247,7 +247,7 @@ const Footer = () => {
             <div className="footer-social-col" style={{ gridColumn: '4 / 6', marginTop: 36, marginLeft: '-15px' }}>
               <p style={{
                 fontWeight: 700,
-                fontSize: 13,
+                fontSize: 15,
                 color: '#1a1a1a',
                 margin: '0 0 14px 0',
                 lineHeight: 1.35,
@@ -264,13 +264,13 @@ const Footer = () => {
                     rel={s.href !== '#' ? 'noopener noreferrer' : undefined}
                     style={{
                       fontSize: 28,
-                      color: '#6b7280',
+                      color: '#4b5563',
                       display: 'flex',
                       alignItems: 'center',
                       transition: 'color 0.2s',
                     }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = s.hover)}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#6b7280')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#4b5563')}
                   >
                     {s.icon}
                   </a>
@@ -296,13 +296,14 @@ const Footer = () => {
             { name: 'Terms & Conditions', href: '/terms' },
             { name: 'Disclaimer', href: '/disclaimer' },
             { name: 'Privacy Policy', href: '/privacy-policy' },
+            { name: 'Cookies Policy', href: '/cookie-policy' },
           ].map((link) => (
             <a
               key={link.name}
               href={getRoutePath(link.href)}
               style={{
                 color: '#fff',
-                fontSize: 12.5,
+                fontSize: 14.5,
                 fontWeight: 400,
                 textDecoration: 'none',
                 opacity: 0.92,
@@ -316,7 +317,7 @@ const Footer = () => {
             </a>
           ))}
         </div>
-        <p style={{ color: '#fff', fontSize: 12.5, fontWeight: 400, margin: 0, opacity: 0.92 }}>
+        <p style={{ color: '#fff', fontSize: 14.5, fontWeight: 400, margin: 0, opacity: 0.92 }}>
           Edgespark IT Ventures Pvt.
         </p>
       </div>
@@ -360,10 +361,10 @@ const Footer = () => {
           }
           .footer-links-grid p {
             margin-bottom: 10px !important;
-            font-size: 15px !important;
+            font-size: 17px !important;
           }
           .footer-links-grid a {
-            font-size: 12.5px !important;
+            font-size: 14.5px !important;
             line-height: 1.45 !important;
             white-space: normal !important;
             word-break: break-word !important;

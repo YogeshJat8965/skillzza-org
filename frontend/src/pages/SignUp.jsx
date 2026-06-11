@@ -156,7 +156,7 @@ function SignUp() {
           text-transform: uppercase;
           letter-spacing: 1.3px;
           font-weight: 700;
-          font-size: 13px;
+          font-size: 15px;
           text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
         }
 
@@ -209,8 +209,8 @@ function SignUp() {
         .auth-card-sub {
           position: relative;
           margin: 8px 0 0;
-          color: #475569;
-          font-size: 15px;
+          color: #334155;
+          font-size: 17px;
         }
 
         .auth-form {
@@ -223,7 +223,7 @@ function SignUp() {
         .auth-label {
           margin-top: 8px;
           color: #334155;
-          font-size: 13px;
+          font-size: 15px;
           font-weight: 700;
         }
 
@@ -233,7 +233,7 @@ function SignUp() {
           border-radius: 12px;
           padding: 0 14px;
           color: #0f172a;
-          font-size: 15px;
+          font-size: 17px;
           background: #fff;
           outline: none;
           transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
@@ -249,8 +249,8 @@ function SignUp() {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          color: #475569;
-          font-size: 13px;
+          color: #334155;
+          font-size: 15px;
           font-weight: 600;
           cursor: pointer;
         }
@@ -272,7 +272,7 @@ function SignUp() {
           border-radius: 12px;
           background: linear-gradient(135deg, #f97316, #dc2626);
           color: #fff;
-          font-size: 16px;
+          font-size: 18px;
           font-weight: 700;
           letter-spacing: 0.2px;
           cursor: pointer;
@@ -288,8 +288,8 @@ function SignUp() {
 
         .auth-switch {
           margin: 18px 0 0;
-          color: #475569;
-          font-size: 14px;
+          color: #334155;
+          font-size: 16px;
           font-weight: 600;
           text-align: center;
         }

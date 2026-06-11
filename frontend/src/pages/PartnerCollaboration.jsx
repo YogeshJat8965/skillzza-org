@@ -7,26 +7,26 @@ const PartnerCollaboration = () => {
       {/* Hero Section */}
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat"
-        style={{ 
+        style={{
           backgroundImage: getBackgroundImageUrl('/partner-bg.png'),
           minHeight: '70vh'
         }}
       >
         <div className="absolute inset-0 bg-gray-900/70"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-white">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               STRATEGIC PARTNERSHIPS
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
               Strategic Partnerships That<br />
               Transform Futures
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-3xl leading-relaxed mb-4">
+            <p className="text-xl md:text-xl text-gray-200 max-w-3xl leading-relaxed mb-4">
               Building Tomorrow's Workforce Together
             </p>
-            <p className="text-base md:text-lg text-gray-300 max-w-3xl leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed mb-8">
               Skillzza forges strategic alliances across sectors to drive meaningful skill development and innovation. Our collaborative approach delivers customized solutions that meet the unique needs of corporates, governments, and educational institutions-creating shared value and sustainable impact.
             </p>
           </div>
@@ -37,7 +37,7 @@ const PartnerCollaboration = () => {
       <section className="bg-white py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-6">
+            <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-6">
               CORPORATE PARTNERSHIPS
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -53,7 +53,7 @@ const PartnerCollaboration = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-12 text-center">
               Why Choose Skillzza as Your Learning Partner?
             </h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Tailored Workforce Solutions */}
               <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300">
@@ -163,18 +163,18 @@ const PartnerCollaboration = () => {
                   description: "Community-focused programs that create social value while engaging employees"
                 },
                 {
-                  title: "Skillzza Xperience Platform",
+                  title: "Talent Twin",
                   description: "Immersive virtual simulations for hands-on learning and assessment"
                 }
               ].map((model, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                  <h4 className="text-lg font-bold text-gray-900 mb-3">{model.title}</h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">{model.description}</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-3">{model.title}</h4>
+                  <p className="text-gray-600 text-base leading-relaxed">{model.description}</p>
                 </div>
               ))}
             </div>
             <div className="text-center mt-8">
-              <p className="text-lg font-semibold text-gray-900">
+              <p className="text-xl font-semibold text-gray-900">
                 Ready to build a workforce that's skilled for today and prepared for tomorrow?
               </p>
             </div>
@@ -186,7 +186,7 @@ const PartnerCollaboration = () => {
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-6">
+            <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-6">
               GOVERNMENT PARTNERSHIPS
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -202,7 +202,7 @@ const PartnerCollaboration = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-12 text-center">
               How We Empower Governments:
             </h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
@@ -253,7 +253,7 @@ const PartnerCollaboration = () => {
                     {area.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-sm">{item}</span>
+                        <span className="text-base">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -277,8 +277,8 @@ const PartnerCollaboration = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mb-4 mx-auto">
                     <div className="w-8 h-8 bg-white rounded-full"></div>
                   </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">{focus.title}</h4>
-                  <p className="text-sm text-gray-600">{focus.description}</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">{focus.title}</h4>
+                  <p className="text-base text-gray-600">{focus.description}</p>
                 </div>
               ))}
             </div>
@@ -295,11 +295,11 @@ const PartnerCollaboration = () => {
                 { step: "4", title: "Impact Measurement", description: "Continuous monitoring and evaluation for sustainable success" }
               ].map((process, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-12 h-12 bg-white text-red-600 rounded-full flex items-center justify-center font-bold text-lg mb-4 mx-auto">
+                  <div className="w-12 h-12 bg-white text-red-600 rounded-full flex items-center justify-center font-bold text-xl mb-4 mx-auto">
                     {process.step}
                   </div>
-                  <h4 className="text-lg font-bold mb-2">{process.title}</h4>
-                  <p className="text-sm text-red-100">{process.description}</p>
+                  <h4 className="text-xl font-bold mb-2">{process.title}</h4>
+                  <p className="text-base text-red-100">{process.description}</p>
                 </div>
               ))}
             </div>
@@ -314,7 +314,7 @@ const PartnerCollaboration = () => {
       <section className="bg-white py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-6">
+            <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-6">
               EDUCATIONAL PARTNERSHIPS
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -330,7 +330,7 @@ const PartnerCollaboration = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-12 text-center">
               Why Educational Institutions Choose Skillzza:
             </h3>
-            
+
             {/* First row with 3 items */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
               {[
@@ -365,7 +365,7 @@ const PartnerCollaboration = () => {
                     {area.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-sm">{item}</span>
+                        <span className="text-base">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -399,7 +399,7 @@ const PartnerCollaboration = () => {
                     {area.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-sm">{item}</span>
+                        <span className="text-base">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -421,8 +421,8 @@ const PartnerCollaboration = () => {
                 { title: "Teacher Excellence Programs", description: "Educator training and curriculum enhancement" }
               ].map((program, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                  <h4 className="text-lg font-bold text-gray-900 mb-3">{program.title}</h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">{program.description}</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-3">{program.title}</h4>
+                  <p className="text-gray-600 text-base leading-relaxed">{program.description}</p>
                 </div>
               ))}
             </div>
@@ -442,8 +442,8 @@ const PartnerCollaboration = () => {
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
                     <div className="w-8 h-8 bg-white rounded-full"></div>
                   </div>
-                  <h4 className="text-lg font-bold mb-2">{commitment.title}</h4>
-                  <p className="text-sm text-red-100">{commitment.description}</p>
+                  <h4 className="text-xl font-bold mb-2">{commitment.title}</h4>
+                  <p className="text-base text-red-100">{commitment.description}</p>
                 </div>
               ))}
             </div>
@@ -464,10 +464,10 @@ const PartnerCollaboration = () => {
             <p className="text-xl mb-4">
               Contact us today to explore how we can create impactful, sustainable skill development programs tailored to your unique needs and goals.
             </p>
-            <p className="text-lg mb-8 font-semibold">
+            <p className="text-xl mb-8 font-semibold">
               Together, we're not just building skills, we're building futures.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-red-600 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                 Start Partnership Discussion

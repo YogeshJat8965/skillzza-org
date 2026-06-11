@@ -16,7 +16,7 @@ const Sustainability = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-green-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-green-500 rounded-full text-base font-semibold text-white mb-6">
               SUSTAINABILITY SCHOOL
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
@@ -25,7 +25,7 @@ const Sustainability = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-green-300">
               Climate Action & Environmental Innovation
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
               Lead the charge in building a sustainable future. Our comprehensive programs combine environmental science, green technology, and climate policy to prepare you for careers that make a real difference in addressing global climate challenges.
             </p>
           </div>
@@ -54,7 +54,7 @@ const Sustainability = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Green Skills Curriculum</h3>
-                        <p className="text-lg text-green-600">Renewable Energy, Circular Economy & Climate Finance</p>
+                        <p className="text-xl text-green-600">Renewable Energy, Circular Economy & Climate Finance</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -65,7 +65,7 @@ const Sustainability = () => {
                       <li>• <strong>Sustainable Business:</strong> Triple Bottom Line and Impact Measurement</li>
                     </ul>
                     <div className="bg-green-100 p-4 rounded-xl border border-green-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Duration:</strong> 12 months | <strong>Format:</strong> Blended Learning | <strong>Certification:</strong> UNEP Recognized
                       </p>
                     </div>
@@ -90,7 +90,7 @@ const Sustainability = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Sustainability by Design Labs</h3>
-                        <p className="text-lg text-blue-600">Practical Projects on Waste Management & ESG Solutions</p>
+                        <p className="text-xl text-blue-600">Practical Projects on Waste Management & ESG Solutions</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -101,7 +101,7 @@ const Sustainability = () => {
                       <li>• <strong>Supply Chain Sustainability:</strong> Ethical sourcing and carbon footprint reduction</li>
                     </ul>
                     <div className="bg-blue-100 p-4 rounded-xl border border-blue-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Format:</strong> Hands-on Labs | <strong>Projects:</strong> Real Industry Challenges | <strong>Outcome:</strong> Certified Solutions
                       </p>
                     </div>
@@ -126,7 +126,7 @@ const Sustainability = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Climate Action Incubator</h3>
-                        <p className="text-lg text-orange-600">Student-driven Initiatives for Local & Global Impact</p>
+                        <p className="text-xl text-orange-600">Student-driven Initiatives for Local & Global Impact</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -137,7 +137,7 @@ const Sustainability = () => {
                       <li>• <strong>Impact Measurement:</strong> Track and scale environmental benefits</li>
                     </ul>
                     <div className="bg-orange-100 p-4 rounded-xl border border-orange-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Support:</strong> Seed Funding Available | <strong>Network:</strong> Global Climate Leaders | <strong>Timeline:</strong> 6-18 months
                       </p>
                     </div>
@@ -162,7 +162,7 @@ const Sustainability = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Policy & Impact Forum</h3>
-                        <p className="text-lg text-purple-600">Dialogue with Policymakers, NGOs & Industry Leaders</p>
+                        <p className="text-xl text-purple-600">Dialogue with Policymakers, NGOs & Industry Leaders</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -173,7 +173,7 @@ const Sustainability = () => {
                       <li>• <strong>Advocacy Training:</strong> Effective communication and policy influence</li>
                     </ul>
                     <div className="bg-purple-100 p-4 rounded-xl border border-purple-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Access:</strong> High-level Decision Makers | <strong>Format:</strong> Monthly Forums | <strong>Outcome:</strong> Policy Influence Skills
                       </p>
                     </div>
@@ -198,7 +198,7 @@ const Sustainability = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Carbon Innovation Hub</h3>
-                        <p className="text-lg text-gray-600">Experimentation with Net-zero, Carbon Capture & Green Tech</p>
+                        <p className="text-xl text-gray-600">Experimentation with Net-zero, Carbon Capture & Green Tech</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -209,7 +209,7 @@ const Sustainability = () => {
                       <li>• <strong>Offset Development:</strong> Nature-based and technological carbon credits</li>
                     </ul>
                     <div className="bg-gray-100 p-4 rounded-xl border border-gray-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Equipment:</strong> Advanced Lab Facilities | <strong>Partnerships:</strong> Leading Research Institutes | <strong>Focus:</strong> Breakthrough Innovation
                       </p>
                     </div>
@@ -258,13 +258,13 @@ const Sustainability = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-blue-600">18 Months</span>
-                  <p className="text-sm text-gray-500">Research-focused | Thesis Required</p>
+                  <p className="text-base text-gray-600">Research-focused | Thesis Required</p>
                 </div>
               </div>
 
               {/* Green Business Track */}
               <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-green-300 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-full text-base font-semibold">
                   MOST POPULAR
                 </div>
                 <div className="text-center mb-6">
@@ -283,7 +283,7 @@ const Sustainability = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-green-600">12 Months</span>
-                  <p className="text-sm text-gray-500">Business-focused | Industry Projects</p>
+                  <p className="text-base text-gray-600">Business-focused | Industry Projects</p>
                 </div>
               </div>
 
@@ -305,7 +305,7 @@ const Sustainability = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-purple-600">15 Months</span>
-                  <p className="text-sm text-gray-500">Policy-focused | Internship Included</p>
+                  <p className="text-base text-gray-600">Policy-focused | Internship Included</p>
                 </div>
               </div>
             </div>
@@ -329,32 +329,32 @@ const Sustainability = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🌍</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">UN Environment</h4>
-                <p className="text-sm text-gray-600">Official partnership for SDG implementation</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">UN Environment</h4>
+                <p className="text-base text-gray-600">Official partnership for SDG implementation</p>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🏭</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Global Companies</h4>
-                <p className="text-sm text-gray-600">Sustainability projects with Fortune 500</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Global Companies</h4>
+                <p className="text-base text-gray-600">Sustainability projects with Fortune 500</p>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🔬</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Research Institutes</h4>
-                <p className="text-sm text-gray-600">Collaboration with leading climate labs</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Research Institutes</h4>
+                <p className="text-base text-gray-600">Collaboration with leading climate labs</p>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🏛️</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Policy Organizations</h4>
-                <p className="text-sm text-gray-600">Direct access to climate policymakers</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Policy Organizations</h4>
+                <p className="text-base text-gray-600">Direct access to climate policymakers</p>
               </div>
             </div>
           </div>
@@ -369,7 +369,7 @@ const Sustainability = () => {
               Ready to Lead the Climate Revolution?
             </h2>
             <p className="text-xl mb-4">Join the global movement for environmental sustainability</p>
-            <p className="text-lg mb-8 opacity-90">Be part of the solution to the world's greatest challenge</p>
+            <p className="text-xl mb-8 opacity-90">Be part of the solution to the world's greatest challenge</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button className="bg-white text-green-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
@@ -385,7 +385,7 @@ const Sustainability = () => {
 
             <div className="mt-8">
               <p className="text-xl font-bold">The planet needs leaders. Be one of them.</p>
-              <p className="text-lg">Start your sustainability journey today.</p>
+              <p className="text-xl">Start your sustainability journey today.</p>
             </div>
           </div>
         </div>

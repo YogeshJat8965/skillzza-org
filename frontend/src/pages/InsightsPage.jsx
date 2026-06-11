@@ -43,7 +43,7 @@ function ExpandableText({ text, limit = 155, onReadMore, forceReadMore = false }
       {!isExpanded && (
         <button
           onClick={handleReadMore}
-          className="absolute bottom-0 right-0 bg-white pl-2 text-[#E11313] hover:underline font-bold text-[14px] leading-[1.6]"
+          className="absolute bottom-0 right-0 bg-white pl-2 text-[#E11313] hover:underline font-bold text-[16px] leading-[1.6]"
         >
           Read more
         </button>
@@ -52,7 +52,7 @@ function ExpandableText({ text, limit = 155, onReadMore, forceReadMore = false }
       {isExpanded && !onReadMore && (
         <button
           onClick={handleReadLess}
-          className="mt-1 block text-[#E11313] hover:underline font-bold text-[14px]"
+          className="mt-1 block text-[#E11313] hover:underline font-bold text-[16px]"
         >
           Read less
         </button>
@@ -146,12 +146,12 @@ function InsightsPage() {
 
       {/* Breadcrumbs */}
       <div className="bg-transparent pt-6 pb-2 px-4 md:px-8 w-full">
-        <div className="max-w-[1440px] mx-auto border-b-2 border-dotted border-gray-500 pb-3 flex items-center gap-2 text-[14px] md:text-[16px] font-['DM_Sans',sans-serif]">
+        <div className="max-w-[1440px] mx-auto border-b-2 border-dotted border-gray-500 pb-3 flex items-center gap-2 text-[16px] md:text-[18px] font-['DM_Sans',sans-serif]">
           <span className="text-[#0070AC] font-bold">
             {breadcrumbMappings[activeTab]?.left || "Home"}
           </span>
-          <span className="text-gray-500">/</span>
-          <span className="text-[#475569]">
+          <span className="text-gray-600">/</span>
+          <span className="text-[#334155]">
             {breadcrumbMappings[activeTab]?.right || "Insights"}
           </span>
         </div>
@@ -175,14 +175,14 @@ function InsightsPage() {
                   <button
                     key={tab}
                     onClick={() => handleTabClick(tab)}
-                    className={`insight-category-btn whitespace-normal md:whitespace-nowrap text-[14px] md:text-[17px] px-[16px] md:px-[36px] py-[10px] md:py-[18px] ${isActive ? 'active' : ''}`}
+                    className={`insight-category-btn whitespace-normal md:whitespace-nowrap text-[16px] md:text-[19px] px-[16px] md:px-[36px] py-[10px] md:py-[18px] ${isActive ? 'active' : ''}`}
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 600,
                       textAlign: 'center',
                       borderRadius: '999px',
                       backgroundColor: isActive ? '#E11313' : '#FFFFFF',
-                      color: isActive ? '#FFFFFF' : '#475569',
+                      color: isActive ? '#FFFFFF' : '#334155',
                       border: isActive ? '1px solid #E11313' : '1px solid #E2E8F0',
                       boxShadow: isActive
                         ? '0px 12px 28px rgba(225, 19, 19, 0.35)'
@@ -202,7 +202,7 @@ function InsightsPage() {
           </div>
 
           <div className="mt-2 text-left transistion-all duration-300 w-full max-w-[1440px] px-4">
-            <p className="font-['DM_Sans',sans-serif] text-[18px] md:text-[20px] font-bold text-[#475569]">
+            <p className="font-['DM_Sans',sans-serif] text-[20px] md:text-[20px] font-bold text-[#334155]">
               {tabDescriptions[activeTab]}
             </p>
           </div>
@@ -300,12 +300,12 @@ function InsightsPage() {
                       </h3>
 
                       {card.subtitle && (
-                        <p className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[1.5] text-[#374151] mb-4">
+                        <p className="font-['DM_Sans',sans-serif] font-semibold text-[18px] leading-[1.5] text-[#374151] mb-4">
                           {card.subtitle}
                         </p>
                       )}
 
-                      <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-4">
+                      <div className="font-['DM_Sans',sans-serif] font-medium text-[18px] leading-[1.6] text-[#334155] mb-4">
                         {isClickable ? (
                           <ExpandableText
                             text={card.desc}
@@ -345,7 +345,7 @@ function InsightsPage() {
                   tag: "THE SKILL DIGEST",
                   title: "Immersive Learning",
                   slug: 'immersive-learning-ai-xperience-platforms',
-                  subtitle: 'How AI-Powered Experience Platforms are Shaping Future-Ready Talent',
+                  subtitle: 'How AI-Powered ETalent Twins are Shaping Future-Ready Talent',
                   desc: 'Classroom learning is no longer enough. Today\'s students and professionals need hands-on, immersive experiences that mirror the challenges of real-world workplaces.',
                   image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
@@ -363,7 +363,7 @@ function InsightsPage() {
                   tag: "THE SKILL DIGEST",
                   title: "From Workforce to Skillforce",
                   slug: 'from-workforce-to-skillforce-ai-transformation',
-                  subtitle: 'How AI is Driving the Next Wave of Talent Transformation',
+                  subtitle: 'How AI is Driving the Next Wave of Talent Intelligence',
                   desc: 'Automation, AI, and digital transformation are reshaping roles across industries. The next frontier is a skillforce built on continuous learning and adaptability.',
                   image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
@@ -407,12 +407,12 @@ function InsightsPage() {
                     </h3>
 
                     {card.subtitle && (
-                      <p className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[1.5] text-[#374151] mb-4">
+                      <p className="font-['DM_Sans',sans-serif] font-semibold text-[18px] leading-[1.5] text-[#374151] mb-4">
                         {card.subtitle}
                       </p>
                     )}
 
-                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-4">
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[18px] leading-[1.6] text-[#334155] mb-4">
                       <ExpandableText
                         text={card.desc}
                         limit={190}
@@ -450,7 +450,7 @@ function InsightsPage() {
                       {card.title}
                     </h3>
 
-                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6">
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[18px] leading-[1.6] text-[#334155] mb-6">
                       <ExpandableText text={card.desc} forceReadMore={true} />
                     </div>
                   </div>
@@ -467,13 +467,13 @@ function InsightsPage() {
                   className="insight-card group flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] max-w-[450px] lg:max-w-none bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-400 border border-[#F3F4F6] relative top-0 hover:-top-1"
                   /* role="button" removing interactivity */
                   tabIndex={0}
-                  /* onClick={() => openSkillUnpluggedEpisode(card.slug)} */
-                  /* onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      openSkillUnpluggedEpisode(card.slug);
-                    }
-                  }} */
+                /* onClick={() => openSkillUnpluggedEpisode(card.slug)} */
+                /* onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openSkillUnpluggedEpisode(card.slug);
+                  }
+                }} */
                 >
                   <div className="w-full h-[250px] overflow-hidden relative">
                     <img
@@ -491,16 +491,16 @@ function InsightsPage() {
                       {card.title}
                     </h3>
 
-                    <p className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[1.5] text-[#374151] mb-4">
+                    <p className="font-['DM_Sans',sans-serif] font-semibold text-[18px] leading-[1.5] text-[#374151] mb-4">
                       {card.category}
                     </p>
 
-                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6">
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[18px] leading-[1.6] text-[#334155] mb-6">
                       <ExpandableText
                         text={card.desc}
                         limit={170}
                         forceReadMore={false}
-                        /* onReadMore={() => openSkillUnpluggedEpisode(card.slug)} */
+                      /* onReadMore={() => openSkillUnpluggedEpisode(card.slug)} */
                       />
                     </div>
                   </div>
@@ -541,11 +541,11 @@ function InsightsPage() {
                       {card.title}
                     </h3>
 
-                    <p className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[1.5] text-[#374151] mb-4">
+                    <p className="font-['DM_Sans',sans-serif] font-semibold text-[18px] leading-[1.5] text-[#374151] mb-4">
                       {card.category}
                     </p>
 
-                    <div className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-[1.6] text-[#475569] mb-6">
+                    <div className="font-['DM_Sans',sans-serif] font-medium text-[18px] leading-[1.6] text-[#334155] mb-6">
                       <ExpandableText
                         text={card.desc}
                         limit={170}

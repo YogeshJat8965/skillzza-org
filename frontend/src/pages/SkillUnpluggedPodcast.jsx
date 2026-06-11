@@ -16,13 +16,13 @@ const SkillUnpluggedPodcast = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               THE SKILL UNPLUGGED SERIES
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
               3R Talks: Raw, Real & Revolutionary
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
               Bold conversations shaping the future of skills
             </p>
           </div>
@@ -34,7 +34,7 @@ const SkillUnpluggedPodcast = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-6">
+              <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-6">
                 FEATURED SERIES
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -88,7 +88,7 @@ const SkillUnpluggedPodcast = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block px-6 py-2 bg-gradient-to-r from-orange-100 to-yellow-100 rounded-full text-sm font-semibold text-orange-700 mb-6 shadow-md">
+              <div className="inline-block px-6 py-2 bg-gradient-to-r from-orange-100 to-yellow-100 rounded-full text-base font-semibold text-orange-700 mb-6 shadow-md">
                 TECH ROLES
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -134,7 +134,7 @@ const SkillUnpluggedPodcast = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block px-6 py-2 bg-yellow-100 rounded-full text-sm font-semibold text-yellow-600 mb-6">
+              <div className="inline-block px-6 py-2 bg-yellow-100 rounded-full text-base font-semibold text-yellow-600 mb-6">
                 PROFESSIONS
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -208,7 +208,7 @@ const SkillUnpluggedPodcast = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block px-6 py-2 bg-gradient-to-r from-red-100 to-orange-100 rounded-full text-sm font-semibold text-red-700 mb-6 shadow-md">
+              <div className="inline-block px-6 py-2 bg-gradient-to-r from-red-100 to-orange-100 rounded-full text-base font-semibold text-red-700 mb-6 shadow-md">
                 ETHICS & SOCIETY
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -218,43 +218,43 @@ const SkillUnpluggedPodcast = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-gradient-to-br from-white to-red-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-red-100 hover:border-red-300">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Women in AI & Tech</h3>
-                <p className="text-sm text-gray-700">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Women in AI & Tech</h3>
+                <p className="text-base text-gray-700">
                   Closing the gender gap and amplifying diverse voices.
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-white to-orange-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-orange-100 hover:border-orange-300">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">AI & Mental Health</h3>
-                <p className="text-sm text-gray-700">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">AI & Mental Health</h3>
+                <p className="text-base text-gray-700">
                   Balancing opportunity with emotional well-being.
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-white to-yellow-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-yellow-100 hover:border-yellow-300">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">AI & Climate Action</h3>
-                <p className="text-sm text-gray-700">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">AI & Climate Action</h3>
+                <p className="text-base text-gray-700">
                   Harnessing intelligence to fight the climate crisis.
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-white to-amber-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-amber-100 hover:border-amber-300">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Ethical AI: Beyond Compliance</h3>
-                <p className="text-sm text-gray-700">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Ethical AI: Beyond Compliance</h3>
+                <p className="text-base text-gray-700">
                   Responsible innovation as a competitive edge.
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-white to-rose-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-rose-100 hover:border-rose-300">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">AI & Data Privacy</h3>
-                <p className="text-sm text-gray-700">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">AI & Data Privacy</h3>
+                <p className="text-base text-gray-700">
                   Navigating trust, security, and regulation.
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-white to-orange-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-orange-100 hover:border-orange-300">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Government & AI Regulation</h3>
-                <p className="text-sm text-gray-700">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Government & AI Regulation</h3>
+                <p className="text-base text-gray-700">
                   Balancing innovation with public good.
                 </p>
               </div>
@@ -268,7 +268,7 @@ const SkillUnpluggedPodcast = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block px-6 py-2 bg-pink-100 rounded-full text-sm font-semibold text-pink-600 mb-6">
+              <div className="inline-block px-6 py-2 bg-pink-100 rounded-full text-base font-semibold text-pink-600 mb-6">
                 CULTURE & CREATIVITY
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -324,7 +324,7 @@ const SkillUnpluggedPodcast = () => {
             <button className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
               Get Notified When We Launch
             </button>
-            <p className="text-sm text-orange-100 mt-6">
+            <p className="text-base text-orange-100 mt-6">
               Coming Soon • Follow us for updates
             </p>
           </div>

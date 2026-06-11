@@ -69,8 +69,8 @@ function ProductComingSoon() {
           style={{ 
             margin: 0, 
             fontFamily: 'Lato, sans-serif',
-            fontSize: '16px', 
-            color: '#475569', 
+            fontSize: '18px', 
+            color: '#334155', 
             lineHeight: '1.6',
             maxWidth: '380px'
           }}

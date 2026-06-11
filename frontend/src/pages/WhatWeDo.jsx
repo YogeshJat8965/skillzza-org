@@ -100,7 +100,7 @@ const WhatWeDo = () => {
       image: getAssetPath('/talent.png'),
       imageLeft: false,
       screenBg: '#fff5f5',
-      description: 'Talent Twinbridges the gap between skill development and employment by connecting AI-verified, role-ready talent with enterprises, institutions, and employers seeking future-ready professionals.',
+      description: 'Hire Twinbridges the gap between skill development and employment by connecting AI-verified, role-ready talent with enterprises, institutions, and employers seeking future-ready professionals.',
       listTitle: 'Strategic expertise',
       items: [
         'AI-Verified Talent Profiles.',
@@ -196,7 +196,7 @@ const WhatWeDo = () => {
             min-width: auto !important;
             white-space: nowrap !important;
             padding: 8px 16px !important;
-            font-size: 13.5px !important;
+            font-size: 15.5px !important;
           }
           .wwd-hero-title {
             font-size: 25px !important;
@@ -204,7 +204,7 @@ const WhatWeDo = () => {
             padding: 0 12px;
           }
           .wwd-hero-desc {
-            font-size: 14px !important;
+            font-size: 16px !important;
             margin-bottom: 32px !important;
             padding: 0 12px;
           }
@@ -225,11 +225,11 @@ const WhatWeDo = () => {
             margin-bottom: 12px !important;
           }
           .wwd-text-col p {
-            font-size: 14px !important;
+            font-size: 16px !important;
             line-height: 1.65 !important;
           }
           .wwd-text-col ul li {
-            font-size: 14px !important;
+            font-size: 16px !important;
           }
           .wwd-wrap-pad {
             padding: 0 20px !important;
@@ -257,7 +257,7 @@ const WhatWeDo = () => {
         </h1>
 
         <p style={{
-          fontSize: '15px', color: '#64748b', lineHeight: '1.75',
+          fontSize: '17px', color: '#475569', lineHeight: '1.75',
           maxWidth: '580px', margin: '0 auto 52px',
         }} className="wwd-reveal wwd-fade-up wwd-delay-1 wwd-hero-desc">
           Bridging the gap between education and employment, Skillzza empowers professionals,
@@ -268,7 +268,7 @@ const WhatWeDo = () => {
         <div style={{ maxWidth: '1020px', margin: '0 auto' }} className="wwd-reveal wwd-scale-up wwd-delay-2">
           <img
             src={getAssetPath('/maskgroup.png')}
-            alt="Assess Learn Simulate Talent Twin"
+            alt="Assess Learn Simulate Hire Twin"
             style={{ width: '100%', height: 'auto', objectFit: 'contain', display: 'block' }}
           />
         </div>
@@ -310,7 +310,7 @@ const WhatWeDo = () => {
                   border: 'none',
                   cursor: 'pointer',
                   fontFamily: 'Inter, sans-serif',
-                  fontSize: 14,
+                  fontSize: 16,
                   fontWeight: activeTab === i ? 700 : 500,
                   background: p.tabBg,
                   color: p.tabColor,
@@ -389,15 +389,15 @@ const WhatWeDo = () => {
                 }}>
                   {pillar.title}
                 </h3>
-                <p style={{ fontSize: 15, color: '#4b5563', lineHeight: 1.7, marginBottom: 24 }}>
+                <p style={{ fontSize: 17, color: '#4b5563', lineHeight: 1.7, marginBottom: 24 }}>
                   {pillar.description}
                 </p>
-                <p style={{ fontSize: 15, fontWeight: 700, color: '#111827', marginBottom: 12 }}>
+                <p style={{ fontSize: 17, fontWeight: 700, color: '#111827', marginBottom: 12 }}>
                   {pillar.listTitle}
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
                   {pillar.items.map((item, j) => (
-                    <li key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: 15, color: '#374151' }}>
+                    <li key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: 17, color: '#374151' }}>
                       <span style={{
                         width: 7, height: 7, borderRadius: '50%', background: pillar.titleColor,
                         flexShrink: 0, marginTop: 7,
@@ -437,22 +437,22 @@ const WhatWeDo = () => {
             <h2 style={{ fontSize: 36, fontWeight: 700, color: "#1f2937", lineHeight: 1.25, marginBottom: 16, fontFamily: "Inter, sans-serif" }}>
               Partner with us<br />To make a Difference
             </h2>
-            <p style={{ fontSize: 15, color: "#4b5563", marginBottom: 28, lineHeight: 1.6, maxWidth: 400, fontFamily: "Inter, sans-serif" }}>
+            <p style={{ fontSize: 17, color: "#4b5563", marginBottom: 28, lineHeight: 1.6, maxWidth: 400, fontFamily: "Inter, sans-serif" }}>
               Connect with our industry experts for a personalised consultation. Let's explore how our solutions can revolutionise your growth.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 14, maxWidth: 420 }}>
-              <input placeholder="Name*" style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }} />
-              <input placeholder="Email*" style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }} />
+              <input placeholder="Name*" style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 17, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }} />
+              <input placeholder="Email*" style={{ width: "100%", padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 17, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif", boxSizing: "border-box" }} />
               <div className="partner-phone-row" style={{ display: "flex", gap: 12 }}>
-                <div className="partner-country-code" style={{ display: "flex", alignItems: "center", gap: 4, padding: "13px 16px", borderRadius: 6, background: "#fff", color: "#1f2937", fontSize: 14, minWidth: 100, fontFamily: "Inter, sans-serif" }}>
-                  <span>India</span><span style={{ color: "#9ca3af", marginLeft: 4 }}>+91</span>
+                <div className="partner-country-code" style={{ display: "flex", alignItems: "center", gap: 4, padding: "13px 16px", borderRadius: 6, background: "#fff", color: "#1f2937", fontSize: 16, minWidth: 100, fontFamily: "Inter, sans-serif" }}>
+                  <span>India</span><span style={{ color: "#6b7280", marginLeft: 4 }}>+91</span>
                 </div>
-                <input className="partner-mobile-input" placeholder="Mobile Number*" style={{ flex: 1, padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 15, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif" }} />
+                <input className="partner-mobile-input" placeholder="Mobile Number*" style={{ flex: 1, padding: "13px 16px", borderRadius: 6, border: "none", outline: "none", fontSize: 17, background: "#fff", color: "#1f2937", fontFamily: "Inter, sans-serif" }} />
               </div>
               <button
                 onMouseEnter={e => e.currentTarget.style.opacity = "0.9"}
                 onMouseLeave={e => e.currentTarget.style.opacity = "1"}
-                style={{ width: "100%", padding: "14px", borderRadius: 6, background: "#1f2937", color: "#fff", border: "none", fontSize: 16, fontWeight: 600, cursor: "pointer", fontFamily: "Inter, sans-serif", marginTop: 4, transition: "opacity 0.2s" }}>
+                style={{ width: "100%", padding: "14px", borderRadius: 6, background: "#1f2937", color: "#fff", border: "none", fontSize: 18, fontWeight: 600, cursor: "pointer", fontFamily: "Inter, sans-serif", marginTop: 4, transition: "opacity 0.2s" }}>
                 Get Started
               </button>
             </div>
@@ -468,16 +468,16 @@ const WhatWeDo = () => {
           <div className="insights-row" style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
             <div className="insights-left-col" style={{ display: "flex", flexDirection: "column", width: 280, flexShrink: 0, alignSelf: "stretch" }}>
               <h2 style={{ fontSize: 42, fontWeight: 800, marginBottom: 20, color: "#111827", fontFamily: "Inter, sans-serif", letterSpacing: "-0.5px" }}>Insights</h2>
-              <button style={{ border: "1.5px solid #d1d5db", background: "#fff", padding: "10px 20px", borderRadius: 8, fontSize: 14, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", marginBottom: 24, fontFamily: "Inter, sans-serif" }}>View all the resources</button>
+              <button style={{ border: "1.5px solid #d1d5db", background: "#fff", padding: "10px 20px", borderRadius: 8, fontSize: 16, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", marginBottom: 24, fontFamily: "Inter, sans-serif" }}>View all the resources</button>
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#ede9fe", display: "flex", flexDirection: "column", flex: 1 }}>
                 <div style={{ background: "#1a1a2e", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", position: "relative", flexShrink: 0 }}>
                   <img src={getAssetPath("/insight-blog.png")} alt="Blog" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} onError={e => { e.target.style.display = "none"; }} />
-                  <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.15)", backdropFilter: "blur(4px)", borderRadius: 6, padding: "4px 10px", fontSize: 11, fontWeight: 700, color: "#fff", fontFamily: "Inter, sans-serif" }}>AI Assistant</div>
+                  <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.15)", backdropFilter: "blur(4px)", borderRadius: 6, padding: "4px 10px", fontSize: 13, fontWeight: 700, color: "#fff", fontFamily: "Inter, sans-serif" }}>AI Assistant</div>
                 </div>
                 <div style={{ padding: "20px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
                   <img src={getAssetPath("/pen.svg")} alt="Blog" style={{ width: 40, height: 40, marginBottom: 12 }} />
-                  <h4 style={{ fontSize: 16, fontWeight: 700, color: "#111827", marginBottom: 16, lineHeight: 1.5, flex: 1, fontFamily: "Inter, sans-serif" }}>Skill Gaps to Skill Maps: The Future of Adaptive Career Assessment with AI</h4>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Read the Blog</button>
+                  <h4 style={{ fontSize: 18, fontWeight: 700, color: "#111827", marginBottom: 16, lineHeight: 1.5, flex: 1, fontFamily: "Inter, sans-serif" }}>Skill Gaps to Skill Maps: The Future of Adaptive Career Assessment with AI</h4>
+                  <button style={{ border: "1.5px solid #6b7280", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 15, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Read the Blog</button>
                 </div>
               </div>
             </div>
@@ -487,9 +487,9 @@ const WhatWeDo = () => {
                   <img src={getAssetPath("/insight-robot.png")} alt="AI Robot" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
                 </div>
                 <div style={{ padding: "18px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, background: "#f5a623", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
-                  <h4 style={{ fontSize: 17, fontWeight: 700, color: "#111827", marginBottom: 16, flex: 1, lineHeight: 1.4, fontFamily: "Inter, sans-serif" }}>2026 AI Talent & Salary Benchmark Report</h4>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Read the reports</button>
+                  <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 14, fontWeight: 600, background: "#f5a623", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
+                  <h4 style={{ fontSize: 19, fontWeight: 700, color: "#111827", marginBottom: 16, flex: 1, lineHeight: 1.4, fontFamily: "Inter, sans-serif" }}>2026 AI Talent & Salary Benchmark Report</h4>
+                  <button style={{ border: "1.5px solid #6b7280", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 15, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Read the reports</button>
                 </div>
               </div>
               <div style={{ borderRadius: 16, overflow: "hidden", background: "#fce7f3", display: "flex", flexDirection: "column" }}>
@@ -497,20 +497,20 @@ const WhatWeDo = () => {
                   <img src={getAssetPath("/insight-future.png")} alt="Future of Work" style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }} />
                 </div>
                 <div style={{ padding: "18px 20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, background: "#e02020", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
-                  <h4 style={{ fontSize: 17, fontWeight: 700, color: "#111827", marginBottom: 16, flex: 1, lineHeight: 1.4, fontFamily: "Inter, sans-serif" }}>The Skill Blueprint AI & The Future of Work</h4>
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Explore the Case studies</button>
+                  <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 20, fontSize: 14, fontWeight: 600, background: "#e02020", color: "#fff", marginBottom: 12, alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Research & Insights</span>
+                  <h4 style={{ fontSize: 19, fontWeight: 700, color: "#111827", marginBottom: 16, flex: 1, lineHeight: 1.4, fontFamily: "Inter, sans-serif" }}>The Skill Blueprint AI & The Future of Work</h4>
+                  <button style={{ border: "1.5px solid #6b7280", background: "#fff", padding: "9px 18px", borderRadius: 8, fontSize: 15, fontWeight: 500, color: "#374151", cursor: "pointer", alignSelf: "flex-start", fontFamily: "Inter, sans-serif" }}>Explore the Case studies</button>
                 </div>
               </div>
               <div className="insights-podcast-card" style={{ gridColumn: "1 / -1", borderRadius: 16, background: "#cffafe", padding: "28px 32px", display: "flex", alignItems: "center", gap: 24 }}>
                 <div style={{ flex: 1 }}>
-                  <span style={{ display: "inline-block", background: "#22d3ee", color: "#fff", fontSize: 12, fontWeight: 600, padding: "5px 14px", borderRadius: 20, marginBottom: 14, fontFamily: "Inter, sans-serif" }}>Podcast</span>
+                  <span style={{ display: "inline-block", background: "#22d3ee", color: "#fff", fontSize: 14, fontWeight: 600, padding: "5px 14px", borderRadius: 20, marginBottom: 14, fontFamily: "Inter, sans-serif" }}>Podcast</span>
                   <h4 style={{ fontSize: 22, fontWeight: 700, marginBottom: 10, color: "#111827", lineHeight: 1.3, fontFamily: "Inter, sans-serif" }}>Skills DECODED:<br />Conversations that matter.</h4>
-                  <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.6, marginBottom: 0, maxWidth: 480, fontFamily: "Inter, sans-serif" }}>Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.</p>
+                  <p style={{ fontSize: 16, color: "#4b5563", lineHeight: 1.6, marginBottom: 0, maxWidth: 480, fontFamily: "Inter, sans-serif" }}>Tune in to The Skillzza Talks podcast where leaders, innovators, and changemakers unpack the skills reshaping careers, industries, and societies. Practical, insightful, and future-ready.</p>
                 </div>
                 <div className="insights-podcast-action" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, flexShrink: 0 }}>
                   <img src={getAssetPath("/mic.svg")} alt="Podcast" style={{ width: 72, height: 72 }} />
-                  <button style={{ border: "1.5px solid #9ca3af", background: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#374151", cursor: "pointer", whiteSpace: "nowrap", fontFamily: "Inter, sans-serif" }}>Listen now</button>
+                  <button style={{ border: "1.5px solid #6b7280", background: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 15, fontWeight: 500, color: "#374151", cursor: "pointer", whiteSpace: "nowrap", fontFamily: "Inter, sans-serif" }}>Listen now</button>
                 </div>
               </div>
             </div>

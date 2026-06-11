@@ -143,7 +143,7 @@ const Partnerships = () => {
             font-size: 28px !important;
           }
           .partnerships-desc {
-            font-size: 15px !important;
+            font-size: 17px !important;
           }
           .partner-cards-grid {
             grid-template-columns: 1fr 1fr !important;
@@ -155,10 +155,10 @@ const Partnerships = () => {
             padding: 16px !important;
           }
           .partner-card-item h3 {
-            font-size: 14px !important;
+            font-size: 16px !important;
           }
           .partner-card-item p {
-            font-size: 12px !important;
+            font-size: 14px !important;
           }
           .partner-card-item .partner-card-icon {
             width: 32px !important;
@@ -205,12 +205,12 @@ const Partnerships = () => {
                 Partnerships For <br className="hidden sm:block" />Impact
               </h2>
               <p
-                className={`partnerships-desc mb-4 sm:mb-5 font-[Lato] text-[#71717B] font-normal leading-relaxed text-[18px] ${isVisible.content ? 'partner-text-slide partner-text-slide-d1' : 'opacity-0'}`}
+                className={`partnerships-desc mb-4 sm:mb-5 font-[Lato] text-[#52525B] font-normal leading-relaxed text-[20px] ${isVisible.content ? 'partner-text-slide partner-text-slide-d1' : 'opacity-0'}`}
               >
                 At Skillzza, we believe that collaboration is the cornerstone of impactful change. By joining forces, we aim to bridge skill gaps and create a future-ready workforce.
               </p>
               <p
-                className={`partnerships-desc font-[Lato] text-[#71717B] font-normal leading-relaxed text-[18px] ${isVisible.content ? 'partner-text-slide partner-text-slide-d2' : 'opacity-0'}`}
+                className={`partnerships-desc font-[Lato] text-[#52525B] font-normal leading-relaxed text-[20px] ${isVisible.content ? 'partner-text-slide partner-text-slide-d2' : 'opacity-0'}`}
               >
                 Together, we can shape a world where education and skills are accessible to all, fostering innovation and sustainable growth.
               </p>
@@ -246,14 +246,14 @@ const Partnerships = () => {
                       />
                     </div>
                     <h3
-                      className="mb-2 sm:mb-2 font-[DM_Sans] font-semibold leading-tight text-sm sm:text-base lg:text-[18px] transition-colors duration-300"
+                      className="mb-2 sm:mb-2 font-[DM_Sans] font-semibold leading-tight text-base sm:text-lg lg:text-[20px] transition-colors duration-300"
                       style={{ color: hoveredCard === card.id ? '#FFFFFF' : '#0F1114' }}
                     >
                       {card.title}
                     </h3>
                     <p
-                      className="font-[Lato] font-normal leading-normal text-xs sm:text-[14px] lg:text-[15px] transition-colors duration-300"
-                      style={{ color: hoveredCard === card.id ? '#FFFFFF' : '#71717B' }}
+                      className="font-[Lato] font-normal leading-normal text-sm sm:text-[16px] lg:text-[17px] transition-colors duration-300"
+                      style={{ color: hoveredCard === card.id ? '#FFFFFF' : '#52525B' }}
                     >
                       {card.description}
                     </p>

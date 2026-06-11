@@ -120,7 +120,7 @@ const MethodologyStats = () => {
           font-size: 64px; font-weight: 700; color: #fff;
           line-height: 1; margin: 0 0 10px 0; letter-spacing: -0.5px;
         }
-        .mds-desc { font-size: 13.5px; line-height: 1.55; margin: 0; color: #fff; }
+        .mds-desc { font-size: 15.5px; line-height: 1.55; margin: 0; color: #fff; }
         .mds-desc-bold  { font-weight: 700; }
         .mds-desc-light { font-weight: 400; color: rgba(255,255,255,0.88); }
         .mds-strip { height: 5px; background: linear-gradient(90deg, #f5a623 0%, #FDB913 100%); }
@@ -134,7 +134,7 @@ const MethodologyStats = () => {
           .mds-grid { grid-template-columns: 1fr 1fr; }
           .mds-col  { padding: 20px 20px 28px; }
           .mds-stat { font-size: 40px; letter-spacing: -1px; }
-          .mds-desc { font-size: 12px; }
+          .mds-desc { font-size: 14px; }
         }
       `}</style>
 
@@ -239,18 +239,18 @@ const ImplementationStepper = () => {
 
         /* phase label below circle */
         .imp-phase-tag {
-          font-size: 9px; font-weight: 700; color: #7c3aed;
+          font-size: 11px; font-weight: 700; color: #7c3aed;
           letter-spacing: 0.5px; text-transform: uppercase;
           margin-top: 10px; text-align: center; line-height: 1.3;
           white-space: pre-line;
         }
         .imp-phase-num {
-          font-size: 9px; font-weight: 600; color: #9ca3af;
+          font-size: 11px; font-weight: 600; color: #6b7280;
           letter-spacing: 0.5px; text-transform: uppercase;
           margin-top: 8px; text-align: center;
         }
         .imp-step-name {
-          font-size: 11px; font-weight: active ? 600 : 400; color: #374151;
+          font-size: 13px; font-weight: active ? 600 : 400; color: #374151;
           text-align: center; margin-top: 4px; line-height: 1.4;
           white-space: pre-line;
         }
@@ -266,7 +266,7 @@ const ImplementationStepper = () => {
 
         .imp-panel-tag {
           display: inline-block; background: #7c3aed; color: #fff;
-          font-size: 11px; font-weight: 700; letter-spacing: 1px;
+          font-size: 13px; font-weight: 700; letter-spacing: 1px;
           padding: 5px 14px; border-radius: 20px; margin-bottom: 20px;
           text-transform: uppercase;
         }
@@ -276,7 +276,7 @@ const ImplementationStepper = () => {
         }
         .imp-bullet {
           display: flex; align-items: flex-start; gap: 10px;
-          margin-bottom: 12px; font-size: 13.5px; color: #374151; line-height: 1.55;
+          margin-bottom: 12px; font-size: 15.5px; color: #374151; line-height: 1.55;
         }
         .imp-bullet-dot {
           width: 6px; height: 6px; border-radius: 50%;
@@ -296,8 +296,8 @@ const ImplementationStepper = () => {
           .imp-panel-img { height: 200px; }
           .imp-panel-heading { font-size: 24px; }
           .imp-title { font-size: 26px; }
-          .imp-step-name { font-size: 10px; }
-          .imp-phase-tag { font-size: 8px; }
+          .imp-step-name { font-size: 12px; }
+          .imp-phase-tag { font-size: 10px; }
         }
         @media (max-width: 480px) {
           .imp-wrap { padding: 0 16px; }
@@ -458,9 +458,9 @@ const LearnFramework = () => {
         .lf-body { display: flex; gap: 64px; align-items: center; }
         .lf-right { flex: 1; }
         .lf-item-title { font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 700; color: #6d28d9; line-height: 1.2; margin: 0 0 18px; }
-        .lf-item-desc { font-family: 'Source Sans 3', sans-serif; font-size: 15px; color: #4b5563; line-height: 1.75; margin: 0 0 22px; }
-        .lf-bullet { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; font-family: 'Source Sans 3', sans-serif; font-size: 14.5px; color: #374151; line-height: 1.65; }
-        .lf-dot { width: 6px; height: 6px; border-radius: 50%; background: #6b7280; flex-shrink: 0; margin-top: 8px; }
+        .lf-item-desc { font-family: 'Source Sans 3', sans-serif; font-size: 17px; color: #4b5563; line-height: 1.75; margin: 0 0 22px; }
+        .lf-bullet { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; font-family: 'Source Sans 3', sans-serif; font-size: 16.5px; color: #374151; line-height: 1.65; }
+        .lf-dot { width: 6px; height: 6px; border-radius: 50%; background: #4b5563; flex-shrink: 0; margin-top: 8px; }
         .lf-zone { position: absolute; cursor: pointer; background: transparent; }
         .lf-zone:hover { background: transparent; }
         .lf-zone.active { background: transparent; outline: none; }
@@ -498,7 +498,7 @@ const LearnFramework = () => {
               <button
                 key={idx}
                 onClick={() => setActive(idx)}
-                className={`w-11 h-11 rounded-full flex items-center justify-center font-bold text-[18px] transition-all duration-300 ${
+                className={`w-11 h-11 rounded-full flex items-center justify-center font-bold text-[20px] transition-all duration-300 ${
                   active === idx
                     ? 'bg-[#6d28d9] text-white shadow-md scale-110'
                     : 'bg-white text-gray-600 border border-gray-250 hover:bg-gray-50'
@@ -617,7 +617,7 @@ const OurMethodology = () => {
       {/* Top: white bg with title */}
       <section style={{ backgroundColor: '#fff', padding: '48px 24px 32px', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>
         <h1 ref={heroTitleRef} className="meth-hero-title meth-reveal meth-fade-up" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', fontWeight: '700', color: '#111827', lineHeight: '1.2', letterSpacing: '-0.3px', margin: '0 auto', maxWidth: '700px' }}>
-          The Skillzza Learning Framework
+          Our Methodology
         </h1>
       </section>
 
@@ -637,7 +637,7 @@ const OurMethodology = () => {
         {/* <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#111', lineHeight: '1.25', margin: '0 auto 20px', maxWidth: '100%' }}>
           Transforming Potential Through<br />Science-Backed Learning
         </h2> */}
-        <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.75', maxWidth: '100%', margin: '0 auto 40px' }}>
+        <p style={{ fontSize: '17px', color: '#555', lineHeight: '1.75', maxWidth: '100%', margin: '0 auto 40px' }}>
           We believe that effective skill development requires more than traditional training approaches. Our methodology integrates cognitive science, <br className="hidden md:inline" /> industry insights, and adaptive technology to create learning experiences that deliver measurable, lasting results.
         </p>
         <div className="method-stat-pills" style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', justifyContent: 'center', width: '100%', margin: '0 auto' }}>
@@ -645,7 +645,7 @@ const OurMethodology = () => {
             <div key={i} style={{
               padding: '10px 24px', borderRadius: '50px',
               backgroundColor: '#e8f4fd', color: '#2c6fad',
-              fontSize: '16px', fontWeight: '500',
+              fontSize: '18px', fontWeight: '500',
             }}>
               <strong>{stat.split(' ')[0]}</strong> {stat.split(' ').slice(1).join(' ')}
             </div>
@@ -739,7 +739,7 @@ const OurMethodology = () => {
               padding: 20px 10px 16px !important;
             }
             .method-core-card p {
-              font-size: 12px !important;
+              font-size: 14px !important;
             }
           }
         `}</style>
@@ -777,7 +777,7 @@ const OurMethodology = () => {
           {/* Card 1 – Competency-Based Progression */}
           <div className="method-core-card">
             <img src={getAssetPath('/badge.svg')} alt="Competency-Based Progression" style={{ width: '52px', height: '52px' }} />
-            <p style={{ marginTop: '14px', fontSize: '13.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
+            <p style={{ marginTop: '14px', fontSize: '15.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
               Competency-Based<br />Progression
             </p>
           </div>
@@ -785,7 +785,7 @@ const OurMethodology = () => {
           {/* Card 2 – Industry-Academic Convergence */}
           <div className="method-core-card">
             <img src={getAssetPath('/bag.svg')} alt="Industry-Academic Convergence" style={{ width: '52px', height: '52px' }} />
-            <p style={{ marginTop: '14px', fontSize: '13.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
+            <p style={{ marginTop: '14px', fontSize: '15.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
               Industry-Academic<br />Convergence
             </p>
           </div>
@@ -793,7 +793,7 @@ const OurMethodology = () => {
           {/* Card 3 – Cognitive Load Optimization */}
           <div className="method-core-card">
             <img src={getAssetPath('/brain.svg')} alt="Cognitive Load Optimization" style={{ width: '52px', height: '52px' }} />
-            <p style={{ marginTop: '14px', fontSize: '13.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
+            <p style={{ marginTop: '14px', fontSize: '15.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
               Cognitive Load<br />Optimization
             </p>
           </div>
@@ -801,7 +801,7 @@ const OurMethodology = () => {
           {/* Card 4 – Cultural and Contextual Relevance */}
           <div className="method-core-card">
             <img src={getAssetPath('/world.svg')} alt="Cultural and Contextual Relevance" style={{ width: '52px', height: '52px' }} />
-            <p style={{ marginTop: '14px', fontSize: '13.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
+            <p style={{ marginTop: '14px', fontSize: '15.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
               Cultural and Contextual<br />Relevance
             </p>
           </div>

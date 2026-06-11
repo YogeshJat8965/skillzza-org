@@ -59,7 +59,7 @@ const Hero = () => {
   const stripTextStyle = {
     fontSize: isMobile ? '14px' : '18px',
     fontWeight: '500',
-    color: '#6B7280',
+    color: '#4B5563',
     lineHeight: '1.4',
     whiteSpace: 'nowrap',
   };
@@ -328,10 +328,10 @@ const Hero = () => {
                 className={`hero-subheading mb-8 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}
                 style={{
                   fontFamily: "'Lato', sans-serif",
-                  fontSize: isMobile ? '16px' : 'clamp(14px, 1.2vw, 20px)',
+                  fontSize: isMobile ? '16px' : 'clamp(14px, 1.2vw, 21px)',
                   fontWeight: 400,
                   lineHeight: '1.6',
-                  color: '#71717B',
+                  color: '#515158ff',
                   animationDelay: '0.4s',
                 }}
               >

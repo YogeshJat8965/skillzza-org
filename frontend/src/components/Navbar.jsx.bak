@@ -42,14 +42,14 @@ const navItems = [
         pillColor: 'red',
       },
       {
-        name: 'Xperience Platform',
+        name: 'Talent Twin',
         link: null,
         desc: 'Immersive job simulations across domains to build real skills & portfolios.',
         pill: 'Flagship',
         pillColor: 'purple',
       },
       {
-        name: 'Talent TwinRecruit',
+        name: 'Hire Twin',
         link: null,
         desc: 'College-to-campus hiring marketplace with pre-assessed student profiles.',
         pill: 'Marketplace',
@@ -100,18 +100,18 @@ const navItems = [
   /*
   {
     name: 'Skillzza K-12',
-    layout: 'k12-vidya',
+    layout: 'k12-Vedhya',
     width: 780,
-    eyebrow: 'K-12 Vidya AI - school intelligence ecosystem',
+    eyebrow: 'K-12 Vedya AI - school intelligence ecosystem',
     studioLink: 'https://cognifyai.skillzza.com/',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     badge: 'K-12',
     items: [
-      { name: 'Vidya AI Virtual Internship', link: 'https://cognifyai.skillzza.com/', desc: 'Real-world AI, coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Flagship', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Vedya AI Virtual Internship', link: 'https://cognifyai.skillzza.com/', desc: 'Real-world AI, coding and deeptech internship simulations designed for school students aged 13-18.', pill: 'Flagship', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Skill Studio for Students', link: 'https://skillzza-club.vercel.app/', desc: 'Gamified AI-powered skill tracks - ML basics, robotics, sustainability, drone tech, quantum intro.', pill: 'Grades 6-12', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'Teacher AI Upskill Lab', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Structured AI literacy programme for educators - pedagogy, tools, classroom integration, assessments.', pill: 'CPD certified', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
-      { name: 'CCMM - AI Maturity for Schools', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Continuous Capability & Maturity Model - benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Immersive Learning for Teachers', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Structured AI literacy programme for educators - pedagogy, tools, classroom integration, assessments.', pill: 'CPD certified', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
+      { name: 'Cognitive Computing for Maturity Models - AI Maturity for Schools', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Continuous Capability & Maturity Model - benchmarks school AI readiness across 5 dimensions.', pill: 'Assessment', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Campus Connect - K12', link: 'https://cognifyai.skillzza.com/#', desc: 'Links top-performing school students directly to university and early internship pipelines.', pill: 'Bridge', pillColor: 'red', iconGradient: 'linear-gradient(135deg, #fce8eb, #f7d1d6)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
       { name: 'Future Founders Track', link: 'https://cognifyai.skillzza.com/#', desc: 'Entrepreneurship & innovation bootcamp - problem-solving, pitching, and startup thinking for teens.', pill: 'New', pillColor: 'purple', iconGradient: 'linear-gradient(135deg, #f4eaf9, #e0c8f0)', iconShadow: '0 4px 12px rgba(189,23,35,0.12)' },
     ],
@@ -120,7 +120,7 @@ const navItems = [
   {
     name: 'School of Technology',
     layout: 'list-rows',
-    width: 710,
+    width: 710,Skillzza K-12
     eyebrow: 'The Deeptech Studio - Specialisations',
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
@@ -905,10 +905,10 @@ const AgenticAIDropdown = ({ navItem }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   K12VidyaDropdown - banner header + 3-column card grid
+   K12VedhyaDropdown - banner header + 3-column card grid
 ═══════════════════════════════════════════════════════════════ */
 
-const K12VidyaDropdown = ({ navItem }) => (
+const K12VedhyaDropdown = ({ navItem }) => (
   <div>
     <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} badge={navItem.badge} />
     {/* Banner */}
@@ -922,7 +922,7 @@ const K12VidyaDropdown = ({ navItem }) => (
     }}>
       <span style={{ fontSize: 20 }}>🏫</span>
       <div>
-        <div style={{ fontSize: 12, fontWeight: 700, color: '#065f46' }}>Vidya AI Studio</div>
+        <div style={{ fontSize: 12, fontWeight: 700, color: '#065f46' }}>Vedya AI Studio</div>
         <div style={{ fontSize: 11, color: '#BD1723', lineHeight: 1.4 }}>AI-powered K-12 school intelligence - assessments, simulations & teacher upskilling.</div>
       </div>
     </a>
@@ -1133,7 +1133,7 @@ const MegaDropdown = ({ navItem, onComingSoon }) => {
     'list-rows': ListRowsDropdown,
     'compact-grid': CompactGridDropdown,
     'agentic-ai': AgenticAIDropdown,
-    'k12-vidya': K12VidyaDropdown,
+    'k12-Vedhya': K12VedhyaDropdown,
     'services-grid': ServicesGridDropdown,
     'company-mega': CompanyMegaDropdown,
   };

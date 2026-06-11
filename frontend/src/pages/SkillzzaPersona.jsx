@@ -108,7 +108,7 @@ const SkillzzaPersona = () => {
             margin-top: 20px !important;
           }
           .persona-hero-subtitle {
-            font-size: 16px !important;
+            font-size: 18px !important;
             line-height: 1.5 !important;
           }
           .persona-hero-cta {
@@ -145,7 +145,7 @@ const SkillzzaPersona = () => {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          font-size: 15px;
+          font-size: 17px;
           font-weight: 600;
           padding: 16px 36px;
           border-radius: 8px;
@@ -176,7 +176,7 @@ const SkillzzaPersona = () => {
             min-width: 0 !important;
             padding: 12px 24px !important; /* Elegant tighter vertical height */
             border-radius: 8px !important;
-            font-size: 15px !important;
+            font-size: 17px !important;
           }
         }
       `}</style>
@@ -220,7 +220,7 @@ const SkillzzaPersona = () => {
             className="absolute persona-animate delay-1 persona-hero-breadcrumb"
             style={{ top: '13.4%', left: '11.67%' }}
           >
-            <div className="flex items-center gap-2" style={{ color: '#71717A', fontSize: 'clamp(11px, 0.73vw, 14px)' }}>
+            <div className="flex items-center gap-2" style={{ color: '#52525B', fontSize: 'clamp(11px, 0.73vw, 14px)' }}>
               <Link to="/" className="hover:opacity-70 transition-opacity">Home</Link>
               <span>&gt;</span>
               <span className="hover:opacity-70 transition-opacity">Products</span>
@@ -262,7 +262,7 @@ const SkillzzaPersona = () => {
               fontSize: 'clamp(13px, 1.25vw, 24px)',
               lineHeight: 'clamp(18px, 1.875vw, 36px)',
               letterSpacing: '0px',
-              color: '#71717A',
+              color: '#52525B',
               opacity: 1,
             }}
           >
@@ -352,7 +352,7 @@ const SkillzzaPersona = () => {
 
           {/* Designed For Section - full width below both columns */}
           <div className="mt-6">
-            <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#6B7280', marginBottom: '16px', letterSpacing: '0.5px', lineHeight: '1.6' }}>
+            <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', marginBottom: '16px', letterSpacing: '0.5px', lineHeight: '1.6' }}>
               Designed for
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-px" style={{ border: '1px solid #E5E7EB', borderRadius: '12px', overflow: 'hidden' }}>
@@ -365,8 +365,8 @@ const SkillzzaPersona = () => {
                 <div key={i} className="flex items-center gap-4 bg-white p-6" style={{ borderBottom: i < 2 ? '1px solid #E5E7EB' : 'none', borderRight: i % 2 === 0 ? '1px solid #E5E7EB' : 'none' }}>
                   <span className="text-3xl" style={{ color: '#1F57C7' }}>{item.icon}</span>
                   <div>
-                    <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '15px', color: '#0F1114' }}>{item.title}</p>
-                    <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#6B7280', lineHeight: '1.6' }}>{item.desc}</p>
+                    <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '17px', color: '#0F1114' }}>{item.title}</p>
+                    <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6' }}>{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -389,7 +389,7 @@ const SkillzzaPersona = () => {
               'Emotional & Social Intelligence',
             ].map((skill, i) => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '16px', color: '#1F57C7' }}>{skill}</p>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '18px', color: '#1F57C7' }}>{skill}</p>
               </div>
             ))}
           </div>
@@ -399,7 +399,7 @@ const SkillzzaPersona = () => {
               'Workplace Adaptability & Resilience',
             ].map((skill, i) => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '16px', color: '#1F57C7' }}>{skill}</p>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '18px', color: '#1F57C7' }}>{skill}</p>
               </div>
             ))}
           </div>
@@ -457,10 +457,10 @@ const SkillzzaPersona = () => {
               <button
                 key={i}
                 onClick={() => setActiveHowTab(i)}
-                className="px-6 py-3 text-sm font-semibold transition-all"
+                className="px-6 py-3 text-base font-semibold transition-all"
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  color: activeHowTab === i ? '#1F57C7' : '#6B7280',
+                  color: activeHowTab === i ? '#1F57C7' : '#4B5563',
                   borderBottom: activeHowTab === i ? '3px solid #1F57C7' : '3px solid transparent',
                   marginBottom: '-2px',
                 }}
@@ -486,7 +486,7 @@ const SkillzzaPersona = () => {
                     <li><strong>Account Managers</strong> recovering trust after a service failure</li>
                     <li><strong>First-Time Managers</strong> navigating the transition from peer to leader</li>
                   </ul>
-                  <p className="mt-6" style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#6B7280', lineHeight: '1.6' }}>
+                  <p className="mt-6" style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6' }}>
                     Each scenario is built on industry role benchmarks and real workplace challenges, not generic case studies.
                   </p>
                 </div>

@@ -16,13 +16,13 @@ const SkillzzaLive = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-white">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               SKILLZZA LIVE
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
               Knowledge in Action
             </h1>
-            <p className="text-base md:text-lg text-gray-300 max-w-3xl leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
               Interactive Sessions Bringing Learning to Life Through Professional Development and Industry Excellence
             </p>
           </div>
@@ -46,8 +46,8 @@ const SkillzzaLive = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">Live Workshop: Building Your First AI Model</h3>
-                <p className="text-gray-600 text-center text-sm">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 text-center">Live Workshop: Building Your First AI Model</h3>
+                <p className="text-gray-600 text-center text-base">
                   No-Code to Pro-Code
                 </p>
               </div>
@@ -58,8 +58,8 @@ const SkillzzaLive = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">Interactive Tutorial: Machine Learning Basics in Action</h3>
-                <p className="text-gray-600 text-center text-sm">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 text-center">Interactive Tutorial: Machine Learning Basics in Action</h3>
+                <p className="text-gray-600 text-center text-base">
                   Hands-on learning experience
                 </p>
               </div>
@@ -70,8 +70,8 @@ const SkillzzaLive = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">Skill-Building Session: Prompt Engineering & AI Prompt Patterns</h3>
-                <p className="text-gray-600 text-center text-sm">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 text-center">Skill-Building Session: Prompt Engineering & AI Prompt Patterns</h3>
+                <p className="text-gray-600 text-center text-base">
                   Master AI communication
                 </p>
               </div>
@@ -82,8 +82,8 @@ const SkillzzaLive = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">Live Coding Lab: Developing Your Own AI Chatbot</h3>
-                <p className="text-gray-600 text-center text-sm">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 text-center">Live Coding Lab: Developing Your Own AI Chatbot</h3>
+                <p className="text-gray-600 text-center text-base">
                   Build conversational AI
                 </p>
               </div>
@@ -94,8 +94,8 @@ const SkillzzaLive = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">Workshop: Data Visualization & Storytelling with AI Tools</h3>
-                <p className="text-gray-600 text-center text-sm">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 text-center">Workshop: Data Visualization & Storytelling with AI Tools</h3>
+                <p className="text-gray-600 text-center text-base">
                   Transform data into insights
                 </p>
               </div>
@@ -371,7 +371,7 @@ const SkillzzaLive = () => {
             <p className="text-xl mb-10 leading-relaxed">
               Join our interactive sessions and be part of a transformative learning experience that brings AI knowledge to life.
             </p>
-            <button className="bg-white text-orange-600 font-bold py-4 px-10 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 text-lg">
+            <button className="bg-white text-orange-600 font-bold py-4 px-10 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 text-xl">
               Join the Waitlist Now
             </button>
           </div>

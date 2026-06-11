@@ -82,7 +82,7 @@ const PartnerForm = () => {
             To make a Difference
           </h2>
 
-          <p className="mb-6 sm:mb-7 md:mb-8 font-[Lato] text-[#414040] font-normal leading-relaxed text-base sm:text-lg md:text-[18px] lg:text-[20px] max-w-[440px]">
+          <p className="mb-6 sm:mb-7 md:mb-8 font-[Lato] text-[#414040] font-normal leading-relaxed text-lg sm:text-xl md:text-[20px] lg:text-[20px] max-w-[440px]">
             Connect with our industry experts for a personalised consultation. Let's explore how our solutions can revolutionise your growth.
           </p>
 
@@ -94,7 +94,7 @@ const PartnerForm = () => {
                 </svg>
               </div>
               <h3 className="font-[DM_Sans] text-[#065F46] font-bold text-xl mb-2">Thank you!</h3>
-              <p className="font-[Lato] text-[#047857] text-base leading-relaxed">
+              <p className="font-[Lato] text-[#047857] text-lg leading-relaxed">
                 Your partnership inquiry has been received. Our team will get in touch with you shortly.
               </p>
             </div>
@@ -109,7 +109,7 @@ const PartnerForm = () => {
                   onChange={handleChange}
                   required
                   disabled={loading}
-                  className="w-full h-[50px] sm:h-[55px] px-4 sm:px-5 bg-white border-none rounded-lg text-base text-[#71717B] font-[Lato] outline-none disabled:opacity-60"
+                  className="w-full h-[50px] sm:h-[55px] px-4 sm:px-5 bg-white border-none rounded-lg text-lg text-[#52525B] font-[Lato] outline-none disabled:opacity-60"
                 />
               </div>
 
@@ -122,7 +122,7 @@ const PartnerForm = () => {
                   onChange={handleChange}
                   required
                   disabled={loading}
-                  className="w-full h-[50px] sm:h-[55px] px-4 sm:px-5 bg-white border-none rounded-lg text-base text-[#71717B] font-[Lato] outline-none disabled:opacity-60"
+                  className="w-full h-[50px] sm:h-[55px] px-4 sm:px-5 bg-white border-none rounded-lg text-lg text-[#52525B] font-[Lato] outline-none disabled:opacity-60"
                 />
               </div>
 
@@ -132,7 +132,7 @@ const PartnerForm = () => {
                   value={formData.countryCode}
                   onChange={handleChange}
                   disabled={loading}
-                  className="w-[85px] sm:w-[95px] h-[50px] sm:h-[55px] px-2 sm:px-3 bg-white border-none rounded-lg text-sm text-[#71717B] font-[Lato] outline-none cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2371717B%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:10px_10px] bg-[position:right_10px_center] bg-no-repeat pr-6 disabled:opacity-60"
+                  className="w-[85px] sm:w-[95px] h-[50px] sm:h-[55px] px-2 sm:px-3 bg-white border-none rounded-lg text-base text-[#52525B] font-[Lato] outline-none cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2371717B%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:10px_10px] bg-[position:right_10px_center] bg-no-repeat pr-6 disabled:opacity-60"
                 >
                   <option value="+91">🇮🇳 +91</option>
                   <option value="+1">🇺🇸 +1</option>
@@ -147,20 +147,20 @@ const PartnerForm = () => {
                   onChange={handleChange}
                   required
                   disabled={loading}
-                  className="flex-1 min-w-0 h-[50px] sm:h-[55px] px-4 sm:px-5 bg-white border-none rounded-lg text-base text-[#71717B] font-[Lato] outline-none disabled:opacity-60"
+                  className="flex-1 min-w-0 h-[50px] sm:h-[55px] px-4 sm:px-5 bg-white border-none rounded-lg text-lg text-[#52525B] font-[Lato] outline-none disabled:opacity-60"
                 />
               </div>
 
               {/* Error Message */}
               {error && (
-                <p className="text-red-500 text-sm mb-3 font-[Lato]">{error}</p>
+                <p className="text-red-500 text-base mb-3 font-[Lato]">{error}</p>
               )}
 
               <div className="mt-5 sm:mt-6">
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full h-[50px] sm:h-[55px] bg-black text-white text-base sm:text-lg font-medium font-[Lato] border-none rounded-lg cursor-pointer hover:bg-[#1a1a1a] transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full h-[50px] sm:h-[55px] bg-black text-white text-lg sm:text-xl font-medium font-[Lato] border-none rounded-lg cursor-pointer hover:bg-[#1a1a1a] transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {loading ? (
                     <>

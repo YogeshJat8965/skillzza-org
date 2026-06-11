@@ -374,7 +374,7 @@ function ContactUs() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          font-size: 18px;
+          font-size: 20px;
           line-height: 1;
           font-weight: 600;
           background: transparent;
@@ -466,7 +466,7 @@ function ContactUs() {
         .cu-contact-label {
           margin: 0 0 6px;
           color: #0f172a;
-          font-size: 18px;
+          font-size: 20px;
           font-weight: 700;
           line-height: 1.2;
         }
@@ -474,7 +474,7 @@ function ContactUs() {
         .cu-contact-text {
           margin: 0;
           color: #334155;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 1.45;
         }
 
@@ -494,13 +494,13 @@ function ContactUs() {
 
         .cu-helper {
           margin: 2px 0 0;
-          font-size: 14px;
-          color: #475569;
+          font-size: 16px;
+          color: #334155;
           font-weight: 600;
         }
 
         .cu-label {
-          font-size: 15px;
+          font-size: 17px;
           font-weight: 700;
           color: #334155;
           margin-top: 8px;
@@ -513,7 +513,7 @@ function ContactUs() {
           border: 1px solid #d5dbe5;
           border-radius: 8px;
           padding: 0 14px;
-          font-size: 16px;
+          font-size: 18px;
           color: #0f172a;
           background: #ffffff;
           outline: none;
@@ -521,7 +521,7 @@ function ContactUs() {
         }
 
         .cu-input::placeholder {
-          color: #9ca3af;
+          color: #6b7280;
         }
 
         .cu-input:focus,
@@ -538,7 +538,7 @@ function ContactUs() {
           border: 1px solid #d5dbe5;
           border-radius: 8px;
           padding: 12px 14px;
-          font-size: 16px;
+          font-size: 18px;
           color: #0f172a;
           background: #ffffff;
           outline: none;
@@ -561,7 +561,7 @@ function ContactUs() {
           align-items: center;
           gap: 12px;
           color: #334155;
-          font-size: 18px;
+          font-size: 20px;
           font-weight: 500;
         }
 
@@ -598,7 +598,7 @@ function ContactUs() {
           border: none;
           border-radius: 8px;
           background: #d1d5db;
-          color: #475569;
+          color: #334155;
           font-size: 21px;
           font-weight: 700;
           cursor: pointer;
@@ -637,7 +637,7 @@ function ContactUs() {
         .cu-success {
           margin: 12px 2px 0;
           color: #065f46;
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 600;
         }
 
@@ -745,26 +745,26 @@ function ContactUs() {
           }
 
           .cu-contact-label {
-            font-size: 16px;
+            font-size: 18px;
           }
 
           .cu-contact-text {
-            font-size: 14px;
+            font-size: 16px;
           }
 
           .cu-label {
-            font-size: 14px;
+            font-size: 16px;
           }
 
           .cu-helper {
-            font-size: 13px;
+            font-size: 15px;
           }
 
           .cu-input,
           .cu-textarea,
           .cu-code {
             height: 48px;
-            font-size: 16px;
+            font-size: 18px;
           }
 
           .cu-textarea,
@@ -773,13 +773,13 @@ function ContactUs() {
           }
 
           .cu-checkitem {
-            font-size: 16px;
+            font-size: 18px;
           }
 
           .cu-prev-btn,
           .cu-next-btn {
             height: 46px;
-            font-size: 18px;
+            font-size: 20px;
           }
 
           .cu-next-btn {

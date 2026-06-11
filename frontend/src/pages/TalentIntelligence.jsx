@@ -18,7 +18,7 @@ const TalentIntelligence = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               TALENT INTELLIGENCE SUITE
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
@@ -27,7 +27,7 @@ const TalentIntelligence = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-yellow-300">
               Power Smarter Workforce Decisions with 360° Talent Intelligence
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
               Transform your workforce strategy with comprehensive talent analytics, predictive insights, and intelligent matching. Make data-driven decisions that drive organizational success and employee growth.
             </p>
           </div>
@@ -41,19 +41,19 @@ const TalentIntelligence = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
               <div className="group">
                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">5M+</div>
-                <div className="text-lg opacity-90">Talent Profiles</div>
+                <div className="text-xl opacity-90">Talent Profiles</div>
               </div>
               <div className="group">
                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">1000+</div>
-                <div className="text-lg opacity-90">Enterprise Clients</div>
+                <div className="text-xl opacity-90">Enterprise Clients</div>
               </div>
               <div className="group">
                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">95%</div>
-                <div className="text-lg opacity-90">Prediction Accuracy</div>
+                <div className="text-xl opacity-90">Prediction Accuracy</div>
               </div>
               <div className="group">
                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">60%</div>
-                <div className="text-lg opacity-90">Faster Hiring</div>
+                <div className="text-xl opacity-90">Faster Hiring</div>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ const TalentIntelligence = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Complete Workforce Skill Mapping</h3>
-                        <p className="text-lg text-orange-600">& Gap Analysis</p>
+                        <p className="text-xl text-orange-600">& Gap Analysis</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -93,7 +93,7 @@ const TalentIntelligence = () => {
                       <li>• <strong>Benchmarking:</strong> Compare your talent capabilities against industry standards</li>
                     </ul>
                     <div className="bg-orange-100 p-4 rounded-xl border border-orange-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Coverage:</strong> 500+ Skills | <strong>Assessment:</strong> Continuous | <strong>Accuracy:</strong> 95%+ | <strong>Updates:</strong> Real-time
                       </p>
                     </div>
@@ -125,7 +125,7 @@ const TalentIntelligence = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Role-Specific Upskilling Pathways</h3>
-                        <p className="text-lg text-blue-600">Aligned with Business Needs</p>
+                        <p className="text-xl text-blue-600">Aligned with Business Needs</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -136,7 +136,7 @@ const TalentIntelligence = () => {
                       <li>• <strong>Adaptive Recommendations:</strong> AI-powered suggestions based on role evolution</li>
                     </ul>
                     <div className="bg-blue-100 p-4 rounded-xl border border-blue-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Pathways:</strong> 200+ Role-specific | <strong>Completion:</strong> 85% average | <strong>ROI:</strong> 3.5x training investment
                       </p>
                     </div>
@@ -161,7 +161,7 @@ const TalentIntelligence = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Predictive Talent Analytics</h3>
-                        <p className="text-lg text-green-600">For Succession Planning</p>
+                        <p className="text-xl text-green-600">For Succession Planning</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -172,7 +172,7 @@ const TalentIntelligence = () => {
                       <li>• <strong>Leadership Pipeline:</strong> Build robust succession plans for critical roles</li>
                     </ul>
                     <div className="bg-green-100 p-4 rounded-xl border border-green-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Accuracy:</strong> 92% prediction rate | <strong>Timeline:</strong> 6-24 months | <strong>Coverage:</strong> All employee levels
                       </p>
                     </div>
@@ -197,7 +197,7 @@ const TalentIntelligence = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Behavioral Intelligence Matching</h3>
-                        <p className="text-lg text-purple-600">For Optimal Team Performance</p>
+                        <p className="text-xl text-purple-600">For Optimal Team Performance</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -208,7 +208,7 @@ const TalentIntelligence = () => {
                       <li>• <strong>Cultural Fit Analysis:</strong> Ensure alignment with organizational values</li>
                     </ul>
                     <div className="bg-purple-100 p-4 rounded-xl border border-purple-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Profiles:</strong> 16 personality types | <strong>Team Performance:</strong> +35% improvement | <strong>Retention:</strong> +40% increase
                       </p>
                     </div>
@@ -233,7 +233,7 @@ const TalentIntelligence = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Real-time Dashboard</h3>
-                        <p className="text-lg text-indigo-600">For HR and L&D Decision-making</p>
+                        <p className="text-xl text-indigo-600">For HR and L&D Decision-making</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -244,7 +244,7 @@ const TalentIntelligence = () => {
                       <li>• <strong>Mobile Access:</strong> Key metrics available anywhere, anytime</li>
                     </ul>
                     <div className="bg-indigo-100 p-4 rounded-xl border border-indigo-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Updates:</strong> Real-time | <strong>Customization:</strong> Fully configurable | <strong>Access:</strong> Role-based permissions
                       </p>
                     </div>
@@ -284,7 +284,7 @@ const TalentIntelligence = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Strategic Workforce Planning</h3>
                   <p className="text-gray-600">Align talent strategy with business objectives</p>
                 </div>
-                <ul className="space-y-2 text-gray-700 mb-6 text-sm">
+                <ul className="space-y-2 text-gray-700 mb-6 text-base">
                   <li>• Future skill demand forecasting</li>
                   <li>• Workforce capacity planning</li>
                   <li>• Budget optimization</li>
@@ -292,7 +292,7 @@ const TalentIntelligence = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-orange-600">25%</span>
-                  <p className="text-sm text-gray-500">Reduction in hiring costs</p>
+                  <p className="text-base text-gray-600">Reduction in hiring costs</p>
                 </div>
               </div>
 
@@ -305,7 +305,7 @@ const TalentIntelligence = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Smart Talent Acquisition</h3>
                   <p className="text-gray-600">Find and hire the right talent faster</p>
                 </div>
-                <ul className="space-y-2 text-gray-700 mb-6 text-sm">
+                <ul className="space-y-2 text-gray-700 mb-6 text-base">
                   <li>• AI-powered candidate matching</li>
                   <li>• Bias-free hiring processes</li>
                   <li>• Predictive hiring success</li>
@@ -313,7 +313,7 @@ const TalentIntelligence = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-blue-600">60%</span>
-                  <p className="text-sm text-gray-500">Faster time-to-hire</p>
+                  <p className="text-base text-gray-600">Faster time-to-hire</p>
                 </div>
               </div>
 
@@ -326,7 +326,7 @@ const TalentIntelligence = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Performance Optimization</h3>
                   <p className="text-gray-600">Maximize individual and team performance</p>
                 </div>
-                <ul className="space-y-2 text-gray-700 mb-6 text-sm">
+                <ul className="space-y-2 text-gray-700 mb-6 text-base">
                   <li>• Performance prediction models</li>
                   <li>• Personalized development plans</li>
                   <li>• Real-time feedback systems</li>
@@ -334,7 +334,7 @@ const TalentIntelligence = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-green-600">40%</span>
-                  <p className="text-sm text-gray-500">Performance improvement</p>
+                  <p className="text-base text-gray-600">Performance improvement</p>
                 </div>
               </div>
 
@@ -347,7 +347,7 @@ const TalentIntelligence = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Intelligent L&D</h3>
                   <p className="text-gray-600">Optimize learning investments and outcomes</p>
                 </div>
-                <ul className="space-y-2 text-gray-700 mb-6 text-sm">
+                <ul className="space-y-2 text-gray-700 mb-6 text-base">
                   <li>• Skill gap-based training</li>
                   <li>• Learning ROI measurement</li>
                   <li>• Adaptive learning paths</li>
@@ -355,7 +355,7 @@ const TalentIntelligence = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-purple-600">3.5x</span>
-                  <p className="text-sm text-gray-500">Training ROI improvement</p>
+                  <p className="text-base text-gray-600">Training ROI improvement</p>
                 </div>
               </div>
 
@@ -368,7 +368,7 @@ const TalentIntelligence = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Leadership Pipeline</h3>
                   <p className="text-gray-600">Build robust succession plans</p>
                 </div>
-                <ul className="space-y-2 text-gray-700 mb-6 text-sm">
+                <ul className="space-y-2 text-gray-700 mb-6 text-base">
                   <li>• High-potential identification</li>
                   <li>• Leadership readiness assessment</li>
                   <li>• Development planning</li>
@@ -376,7 +376,7 @@ const TalentIntelligence = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-red-600">90%</span>
-                  <p className="text-sm text-gray-500">Internal promotion success</p>
+                  <p className="text-base text-gray-600">Internal promotion success</p>
                 </div>
               </div>
 
@@ -389,7 +389,7 @@ const TalentIntelligence = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">D&I Analytics</h3>
                   <p className="text-gray-600">Drive inclusive workforce decisions</p>
                 </div>
-                <ul className="space-y-2 text-gray-700 mb-6 text-sm">
+                <ul className="space-y-2 text-gray-700 mb-6 text-base">
                   <li>• Bias detection in processes</li>
                   <li>• Diversity metrics tracking</li>
                   <li>• Inclusive team formation</li>
@@ -397,7 +397,7 @@ const TalentIntelligence = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-indigo-600">50%</span>
-                  <p className="text-sm text-gray-500">Improvement in D&I metrics</p>
+                  <p className="text-base text-gray-600">Improvement in D&I metrics</p>
                 </div>
               </div>
             </div>
@@ -480,7 +480,7 @@ const TalentIntelligence = () => {
               Transform Your Workforce Strategy Today
             </h2>
             <p className="text-xl mb-4">Join 1000+ organizations making smarter talent decisions with AI-powered intelligence</p>
-            <p className="text-lg mb-8 opacity-90">Experience the power of 360° talent analytics and predictive insights</p>
+            <p className="text-xl mb-8 opacity-90">Experience the power of 360° talent analytics and predictive insights</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button onClick={() => { window.location.href = contactUsPath; }} className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
@@ -496,7 +496,7 @@ const TalentIntelligence = () => {
 
             <div className="mt-8">
               <p className="text-xl font-bold">Power smarter workforce decisions.</p>
-              <p className="text-lg">Unlock the full potential of your talent with 360° intelligence.</p>
+              <p className="text-xl">Unlock the full potential of your talent with 360° intelligence.</p>
             </div>
           </div>
         </div>

@@ -175,7 +175,7 @@ export default function DevelopersPage() {
                         <p className="text-xl md:text-2xl mb-8 font-light">
                             The brilliant minds crafting the future of skill-based learning through innovative technology
                         </p>
-                        <div className="flex flex-wrap justify-center gap-6 text-sm">
+                        <div className="flex flex-wrap justify-center gap-6 text-base">
                             <div className="flex items-center gap-2">
                                 <FaCode className="text-yellow-400" />
                                 <span>Innovative Solutions</span>
@@ -199,7 +199,7 @@ export default function DevelopersPage() {
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Development Team</h2>
                         <div className="h-1 w-16 bg-red-600 mx-auto mb-6"></div>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Meet the innovative developers who transform educational concepts into cutting-edge digital experiences, 
                             combining technical expertise with creative vision to build the future of learning.
                         </p>
@@ -237,11 +237,11 @@ export default function DevelopersPage() {
                                         <p className="text-red-600 font-semibold mb-2">{developer.role}</p>
                                         <p className="text-gray-600 mb-4">{developer.expertise}</p>
                                         <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
-                                            <span className="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">
+                                            <span className="bg-red-100 text-red-800 text-sm font-semibold px-3 py-1 rounded-full">
                                                 {developer.experience}
                                             </span>
                                         </div>
-                                        <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                                        <p className="text-gray-700 text-base leading-relaxed mb-4">
                                             {developer.bio.substring(0, 150)}...
                                         </p>
                                         <div className="flex flex-col sm:flex-row gap-3">
@@ -292,7 +292,7 @@ export default function DevelopersPage() {
                                 <h3 className="text-xl font-bold text-gray-800">{selectedDeveloper.name}</h3>
                                 <button
                                     onClick={closeModal}
-                                    className="text-gray-400 hover:text-gray-600 transition-colors text-2xl font-bold"
+                                    className="text-gray-500 hover:text-gray-600 transition-colors text-2xl font-bold"
                                     aria-label="Close modal"
                                 >
                                     ×
@@ -315,7 +315,7 @@ export default function DevelopersPage() {
                                         <h3 className="text-xl font-bold mb-2">{selectedDeveloper.name}</h3>
                                         <p className="text-yellow-300 font-semibold mb-4">{selectedDeveloper.role}</p>
                                         <div className="bg-white bg-opacity-20 p-4 rounded-lg mb-6">
-                                            <p className="text-sm italic">"{selectedDeveloper.quote}"</p>
+                                            <p className="text-base italic">"{selectedDeveloper.quote}"</p>
                                         </div>
                                         
                                         {/* Social Links */}
@@ -349,22 +349,22 @@ export default function DevelopersPage() {
                                 {/* Right Column - Detailed Info */}
                                 <div className="md:w-2/3 p-8">
                                     <div className="mb-6">
-                                        <h4 className="text-lg font-bold text-gray-800 mb-3 flex items-center">
+                                        <h4 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
                                             <FaLightbulb className="text-red-600 mr-2" />
                                             About {selectedDeveloper.name.split(' ')[0]}
                                         </h4>
-                                        <p className="text-gray-600 leading-relaxed text-sm">{selectedDeveloper.bio}</p>
+                                        <p className="text-gray-600 leading-relaxed text-base">{selectedDeveloper.bio}</p>
                                     </div>
 
                                     {/* Skills */}
                                     <div className="mb-6">
-                                        <h4 className="text-lg font-bold text-gray-800 mb-3 flex items-center">
+                                        <h4 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
                                             <FaCode className="text-red-600 mr-2" />
                                             Technical Skills
                                         </h4>
                                         <div className="flex flex-wrap gap-2">
                                             {selectedDeveloper.skills.map((skill, index) => (
-                                                <span key={index} className="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs font-medium">
+                                                <span key={index} className="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-sm font-medium">
                                                     {skill}
                                                 </span>
                                             ))}
@@ -373,15 +373,15 @@ export default function DevelopersPage() {
 
                                     {/* Achievements */}
                                     <div className="mb-6">
-                                        <h4 className="text-lg font-bold text-gray-800 mb-3 flex items-center">
+                                        <h4 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
                                             <FaRocket className="text-red-600 mr-2" />
                                             Key Achievements
                                         </h4>
                                         <ul className="space-y-2">
                                             {selectedDeveloper.achievements.map((achievement, index) => (
                                                 <li key={index} className="flex items-start">
-                                                    <span className="text-red-500 mr-3 mt-1 text-sm">✓</span>
-                                                    <span className="text-gray-600 text-sm">{achievement}</span>
+                                                    <span className="text-red-500 mr-3 mt-1 text-base">✓</span>
+                                                    <span className="text-gray-600 text-base">{achievement}</span>
                                                 </li>
                                             ))}
                                         </ul>
@@ -390,23 +390,23 @@ export default function DevelopersPage() {
                                     {/* Tools and Hobbies */}
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div>
-                                            <h5 className="font-bold text-gray-800 mb-2 text-sm">Favorite Tools</h5>
+                                            <h5 className="font-bold text-gray-800 mb-2 text-base">Favorite Tools</h5>
                                             <div className="flex flex-wrap gap-2">
                                                 {selectedDeveloper.favoriteTools.map((tool, index) => (
-                                                    <span key={index} className="bg-red-100 text-red-800 px-2 py-1 rounded text-xs font-medium">
+                                                    <span key={index} className="bg-red-100 text-red-800 px-2 py-1 rounded text-sm font-medium">
                                                         {tool}
                                                     </span>
                                                 ))}
                                             </div>
                                         </div>
                                         <div>
-                                            <h5 className="font-bold text-gray-800 mb-2 flex items-center text-sm">
+                                            <h5 className="font-bold text-gray-800 mb-2 flex items-center text-base">
                                                 <FaCoffee className="mr-2 text-gray-600" />
                                                 When Not Coding
                                             </h5>
                                             <div className="flex flex-wrap gap-2">
                                                 {selectedDeveloper.hobbies.map((hobby, index) => (
-                                                    <span key={index} className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">
+                                                    <span key={index} className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm font-medium">
                                                         {hobby}
                                                     </span>
                                                 ))}
@@ -454,7 +454,7 @@ export default function DevelopersPage() {
                                             <h3 className="text-2xl font-bold mb-2">{selectedDeveloper.name}</h3>
                                             <p className="text-yellow-300 font-semibold mb-4">{selectedDeveloper.role}</p>
                                             <div className="bg-white bg-opacity-20 p-4 rounded-lg mb-6">
-                                                <p className="text-sm italic">"{selectedDeveloper.quote}"</p>
+                                                <p className="text-base italic">"{selectedDeveloper.quote}"</p>
                                             </div>
                                             
                                             {/* Social Links */}
@@ -505,7 +505,7 @@ export default function DevelopersPage() {
                                             </h4>
                                             <div className="flex flex-wrap gap-2">
                                                 {selectedDeveloper.skills.map((skill, index) => (
-                                                    <span key={index} className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                                                    <span key={index} className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-base font-medium">
                                                         {skill}
                                                     </span>
                                                 ))}
@@ -534,7 +534,7 @@ export default function DevelopersPage() {
                                                 <h5 className="font-bold text-gray-800 mb-3">Favorite Tools</h5>
                                                 <div className="flex flex-wrap gap-2">
                                                     {selectedDeveloper.favoriteTools.map((tool, index) => (
-                                                        <span key={index} className="bg-red-100 text-red-800 px-2 py-1 rounded text-xs font-medium">
+                                                        <span key={index} className="bg-red-100 text-red-800 px-2 py-1 rounded text-sm font-medium">
                                                             {tool}
                                                         </span>
                                                     ))}
@@ -547,7 +547,7 @@ export default function DevelopersPage() {
                                                 </h5>
                                                 <div className="flex flex-wrap gap-2">
                                                     {selectedDeveloper.hobbies.map((hobby, index) => (
-                                                        <span key={index} className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">
+                                                        <span key={index} className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm font-medium">
                                                             {hobby}
                                                         </span>
                                                     ))}

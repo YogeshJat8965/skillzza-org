@@ -26,7 +26,7 @@ const OurPartners = () => {
           <h2 className="mb-3 sm:mb-4 font-[DM_Sans] text-[#0F1114] font-bold leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-[48px]">
             Our Partners
           </h2>
-          <p className="font-[Lato] text-[#71717B] font-normal leading-relaxed text-base sm:text-lg lg:text-xl">
+          <p className="font-[Lato] text-[#52525B] font-normal leading-relaxed text-lg sm:text-xl lg:text-xl">
             Take your skill transformation to the next level.
           </p>
         </div>

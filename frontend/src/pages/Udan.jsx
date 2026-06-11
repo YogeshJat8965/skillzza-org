@@ -16,7 +16,7 @@ const Udan = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-indigo-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-indigo-500 rounded-full text-base font-semibold text-white mb-6">
               UDAN - AERIAL INTELLIGENCE
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
@@ -25,7 +25,7 @@ const Udan = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-blue-300">
               Aerial Intelligence School
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
               Soar into the future of aerial technology and unmanned systems. Our comprehensive programs cover drone innovation, aerial data intelligence, and aerospace applications, preparing you for leadership in the rapidly expanding drone and aviation industry.
             </p>
           </div>
@@ -54,7 +54,7 @@ const Udan = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Drone Innovation Labs</h3>
-                        <p className="text-lg text-indigo-600">UAV Design, Simulation, and Piloting Skills</p>
+                        <p className="text-xl text-indigo-600">UAV Design, Simulation, and Piloting Skills</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -65,7 +65,7 @@ const Udan = () => {
                       <li>• <strong>Payload Integration:</strong> Cameras, sensors, and specialized equipment</li>
                     </ul>
                     <div className="bg-indigo-100 p-4 rounded-xl border border-indigo-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Duration:</strong> 12 months | <strong>Format:</strong> Hands-on Labs | <strong>Certification:</strong> FAA Part 107 & Beyond
                       </p>
                     </div>
@@ -90,7 +90,7 @@ const Udan = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Aerial Data Intelligence Hub</h3>
-                        <p className="text-lg text-green-600">AI-driven Mapping, Surveillance & Geospatial Analytics</p>
+                        <p className="text-xl text-green-600">AI-driven Mapping, Surveillance & Geospatial Analytics</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -101,7 +101,7 @@ const Udan = () => {
                       <li>• <strong>Data Processing:</strong> Real-time analytics and cloud-based platforms</li>
                     </ul>
                     <div className="bg-green-100 p-4 rounded-xl border border-green-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Focus:</strong> AI & Data Science | <strong>Tools:</strong> Industry-Standard Software | <strong>Outcome:</strong> Data Intelligence Expertise
                       </p>
                     </div>
@@ -126,7 +126,7 @@ const Udan = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Defense & Disaster Response Pods</h3>
-                        <p className="text-lg text-red-600">Drone Applications for National Security & Crisis Management</p>
+                        <p className="text-xl text-red-600">Drone Applications for National Security & Crisis Management</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -137,7 +137,7 @@ const Udan = () => {
                       <li>• <strong>Mission Planning:</strong> Strategic deployment and tactical operations</li>
                     </ul>
                     <div className="bg-red-100 p-4 rounded-xl border border-red-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Partnerships:</strong> Defense Contractors | <strong>Clearance:</strong> Security Clearance Support | <strong>Training:</strong> Military-Grade Standards
                       </p>
                     </div>
@@ -162,7 +162,7 @@ const Udan = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Aerial Commerce Arena</h3>
-                        <p className="text-lg text-purple-600">Drone Delivery, Logistics, and Commercial Deployment</p>
+                        <p className="text-xl text-purple-600">Drone Delivery, Logistics, and Commercial Deployment</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -173,7 +173,7 @@ const Udan = () => {
                       <li>• <strong>Customer Experience:</strong> Service design, tracking, and quality assurance</li>
                     </ul>
                     <div className="bg-purple-100 p-4 rounded-xl border border-purple-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Industry:</strong> E-commerce Focus | <strong>Partners:</strong> Amazon, UPS, FedEx | <strong>Outcome:</strong> Commercial Deployment Skills
                       </p>
                     </div>
@@ -198,7 +198,7 @@ const Udan = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Aviation & Aerospace Connect</h3>
-                        <p className="text-lg text-blue-600">Exposure to Global Aerospace Innovation Networks</p>
+                        <p className="text-xl text-blue-600">Exposure to Global Aerospace Innovation Networks</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -209,7 +209,7 @@ const Udan = () => {
                       <li>• <strong>Future Mobility:</strong> Urban air mobility, flying cars, and space tourism</li>
                     </ul>
                     <div className="bg-blue-100 p-4 rounded-xl border border-blue-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Network:</strong> Global Aerospace Leaders | <strong>Opportunities:</strong> Internships & Research | <strong>Vision:</strong> Next-Gen Aviation
                       </p>
                     </div>
@@ -258,13 +258,13 @@ const Udan = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-indigo-600">15 Months</span>
-                  <p className="text-sm text-gray-500">Engineering-focused | Hardware Labs</p>
+                  <p className="text-base text-gray-600">Engineering-focused | Hardware Labs</p>
                 </div>
               </div>
 
               {/* Aerial Data Science Track */}
               <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-green-300 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-full text-base font-semibold">
                   MOST POPULAR
                 </div>
                 <div className="text-center mb-6">
@@ -283,7 +283,7 @@ const Udan = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-green-600">12 Months</span>
-                  <p className="text-sm text-gray-500">Data-focused | AI/ML Intensive</p>
+                  <p className="text-base text-gray-600">Data-focused | AI/ML Intensive</p>
                 </div>
               </div>
 
@@ -305,7 +305,7 @@ const Udan = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-purple-600">10 Months</span>
-                  <p className="text-sm text-gray-500">Business-focused | Industry Partnerships</p>
+                  <p className="text-base text-gray-600">Business-focused | Industry Partnerships</p>
                 </div>
               </div>
             </div>
@@ -329,32 +329,32 @@ const Udan = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🛡️</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Defense & Security</h4>
-                <p className="text-sm text-gray-600">Military, law enforcement, and security applications</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Defense & Security</h4>
+                <p className="text-base text-gray-600">Military, law enforcement, and security applications</p>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🌾</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Agriculture</h4>
-                <p className="text-sm text-gray-600">Precision farming, crop monitoring, and optimization</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Agriculture</h4>
+                <p className="text-base text-gray-600">Precision farming, crop monitoring, and optimization</p>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🏗️</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Construction</h4>
-                <p className="text-sm text-gray-600">Site surveying, progress monitoring, and inspection</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Construction</h4>
+                <p className="text-base text-gray-600">Site surveying, progress monitoring, and inspection</p>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">📦</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Logistics</h4>
-                <p className="text-sm text-gray-600">Delivery services, inventory, and supply chain</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Logistics</h4>
+                <p className="text-base text-gray-600">Delivery services, inventory, and supply chain</p>
               </div>
             </div>
           </div>
@@ -369,7 +369,7 @@ const Udan = () => {
               Ready to Take Flight in Aerial Intelligence?
             </h2>
             <p className="text-xl mb-4">Join the aerial revolution and shape the future of unmanned systems</p>
-            <p className="text-lg mb-8 opacity-90">The sky is not the limit – it's your playground</p>
+            <p className="text-xl mb-8 opacity-90">The sky is not the limit – it's your playground</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button className="bg-white text-indigo-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
@@ -385,7 +385,7 @@ const Udan = () => {
 
             <div className="mt-8">
               <p className="text-xl font-bold">The future flies with those who dare to innovate.</p>
-              <p className="text-lg">Soar with Udan – Aerial Intelligence School.</p>
+              <p className="text-xl">Soar with Udan – Aerial Intelligence School.</p>
             </div>
           </div>
         </div>

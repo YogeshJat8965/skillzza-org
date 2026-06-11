@@ -16,7 +16,7 @@ const GovernmentUseCase = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               FOR GOVERNMENT
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
@@ -25,7 +25,7 @@ const GovernmentUseCase = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-yellow-300">
               Driving Inclusive Economic Growth Through Strategic Workforce Development
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
               Partner with Skillzza to create large-scale, sustainable skill development programs that drive economic growth, reduce unemployment, and build competitive advantage for your region or nation.
             </p>
           </div>
@@ -42,7 +42,7 @@ const GovernmentUseCase = () => {
             <div className="inline-block px-8 py-3 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-full text-white font-semibold mb-8">
               Precision-Engineered Career Solutions
             </div>
-            <p className="text-lg text-gray-500 font-medium mb-6">
+            <p className="text-xl text-gray-600 font-medium mb-6">
               For Students | Universities | Enterprises | Governments
             </p>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -315,22 +315,22 @@ const GovernmentUseCase = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl border border-green-200">
                 <div className="text-4xl font-bold text-green-600 mb-4">2.5M</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Citizens Skilled</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Citizens Skilled</h3>
                 <p className="text-gray-600">across priority sectors</p>
               </div>
               <div className="text-center bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200">
                 <div className="text-4xl font-bold text-orange-600 mb-4">65%</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Employment Rate</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Employment Rate</h3>
                 <p className="text-gray-600">improvement in participating regions</p>
               </div>
               <div className="text-center bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-200">
                 <div className="text-4xl font-bold text-purple-600 mb-4">40%</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">GDP Increase</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">GDP Increase</h3>
                 <p className="text-gray-600">in regional GDP through enhanced workforce capability</p>
               </div>
               <div className="text-center bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-200">
                 <div className="text-4xl font-bold text-blue-600 mb-4">85%</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Satisfaction Rate</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Satisfaction Rate</h3>
                 <p className="text-gray-600">from citizens participating in programs</p>
               </div>
             </div>
@@ -358,7 +358,7 @@ const GovernmentUseCase = () => {
                   alt="Quality Education" 
                   className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
                 />
-                <p className="text-sm font-semibold text-gray-700">Quality Education</p>
+                <p className="text-base font-semibold text-gray-700">Quality Education</p>
               </div>
               <div className="text-center">
                 <img 
@@ -366,7 +366,7 @@ const GovernmentUseCase = () => {
                   alt="Decent Work" 
                   className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
                 />
-                <p className="text-sm font-semibold text-gray-700">Decent Work & Economic Growth</p>
+                <p className="text-base font-semibold text-gray-700">Decent Work & Economic Growth</p>
               </div>
               <div className="text-center">
                 <img 
@@ -374,7 +374,7 @@ const GovernmentUseCase = () => {
                   alt="Industry Innovation" 
                   className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
                 />
-                <p className="text-sm font-semibold text-gray-700">Industry, Innovation & Infrastructure</p>
+                <p className="text-base font-semibold text-gray-700">Industry, Innovation & Infrastructure</p>
               </div>
               <div className="text-center">
                 <img 
@@ -382,7 +382,7 @@ const GovernmentUseCase = () => {
                   alt="Reduced Inequalities" 
                   className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
                 />
-                <p className="text-sm font-semibold text-gray-700">Reduced Inequalities</p>
+                <p className="text-base font-semibold text-gray-700">Reduced Inequalities</p>
               </div>
               <div className="text-center">
                 <img 
@@ -390,7 +390,7 @@ const GovernmentUseCase = () => {
                   alt="Climate Action" 
                   className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
                 />
-                <p className="text-sm font-semibold text-gray-700">Climate Action</p>
+                <p className="text-base font-semibold text-gray-700">Climate Action</p>
               </div>
               <div className="text-center">
                 <img 
@@ -398,7 +398,7 @@ const GovernmentUseCase = () => {
                   alt="Partnerships" 
                   className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
                 />
-                <p className="text-sm font-semibold text-gray-700">Partnerships for the Goals</p>
+                <p className="text-base font-semibold text-gray-700">Partnerships for the Goals</p>
               </div>
             </div>
           </div>
@@ -417,23 +417,23 @@ const GovernmentUseCase = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center bg-white p-6 rounded-2xl shadow-lg">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Precision & Personalization</h3>
-                <p className="text-gray-600 text-sm">Every solution is tailored to specific needs, whether individual career development or organizational transformation objectives.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Precision & Personalization</h3>
+                <p className="text-gray-600 text-base">Every solution is tailored to specific needs, whether individual career development or organizational transformation objectives.</p>
               </div>
 
               <div className="text-center bg-white p-6 rounded-2xl shadow-lg">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Scale & Impact</h3>
-                <p className="text-gray-600 text-sm">Proven ability to deliver results from individual learners to million-citizen national programs.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Scale & Impact</h3>
+                <p className="text-gray-600 text-base">Proven ability to deliver results from individual learners to million-citizen national programs.</p>
               </div>
 
               <div className="text-center bg-white p-6 rounded-2xl shadow-lg">      
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Innovation & Evidence</h3>
-                <p className="text-gray-600 text-sm">Cutting-edge AI technology combined with rigorous measurement of outcomes and continuous improvement.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation & Evidence</h3>
+                <p className="text-gray-600 text-base">Cutting-edge AI technology combined with rigorous measurement of outcomes and continuous improvement.</p>
               </div>
 
               <div className="text-center bg-white p-6 rounded-2xl shadow-lg">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Partnership & Support</h3>
-                <p className="text-gray-600 text-sm">Comprehensive support throughout implementation, from strategy development to outcome measurement.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Partnership & Support</h3>
+                <p className="text-gray-600 text-base">Comprehensive support throughout implementation, from strategy development to outcome measurement.</p>
               </div>
             </div>
           </div>

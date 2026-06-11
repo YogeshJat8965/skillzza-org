@@ -16,13 +16,13 @@ const CareerTrajectory = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               CAREER TRAJECTORY
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
               Your Structured Roadmap to Career Success
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
               Bring together industry-relevant job simulations, providing a structured roadmap to help you secure your ideal entry-level role.
             </p>
           </div>
@@ -106,19 +106,19 @@ const CareerTrajectory = () => {
                     From software development to AI engineering, build your tech career with hands-on simulations.
                   </p>
                   <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Software Developer</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>AI/ML Engineer</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Data Scientist</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>DevOps Engineer</span>
                     </div>
@@ -144,19 +144,19 @@ const CareerTrajectory = () => {
                     Build strategic thinking and leadership skills through real business scenarios and case studies.
                   </p>
                   <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Business Analyst</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Marketing Manager</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Product Manager</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Consultant</span>
                     </div>
@@ -182,19 +182,19 @@ const CareerTrajectory = () => {
                     Develop your creative portfolio through real design challenges and client projects.
                   </p>
                   <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>UX/UI Designer</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Graphic Designer</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Animation Artist</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Creative Director</span>
                     </div>
@@ -220,19 +220,19 @@ const CareerTrajectory = () => {
                     Master financial analysis, risk management, and investment strategies through real market scenarios.
                   </p>
                   <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Financial Analyst</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Investment Banker</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Risk Manager</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Portfolio Manager</span>
                     </div>
@@ -258,19 +258,19 @@ const CareerTrajectory = () => {
                     Gain experience in healthcare administration, research, and patient care through realistic simulations.
                   </p>
                   <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Healthcare Administrator</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Clinical Research Associate</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Medical Writer</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Health Informatics Specialist</span>
                     </div>
@@ -296,19 +296,19 @@ const CareerTrajectory = () => {
                     Learn to build and scale businesses through startup simulations and real entrepreneurial challenges.
                   </p>
                   <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Startup Founder</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Business Development Manager</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Innovation Manager</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
+                    <div className="flex items-center text-base text-gray-700">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       <span>Venture Capital Analyst</span>
                     </div>
@@ -348,7 +348,7 @@ const CareerTrajectory = () => {
                     <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-2xl border border-yellow-200">
                       <h3 className="text-xl font-bold text-gray-900 mb-3">Months 1-3: Foundation</h3>
                       <p className="text-gray-700 mb-4">Complete skill assessments, choose your career path, and begin foundational learning.</p>
-                      <ul className="text-sm text-gray-600 space-y-1">
+                      <ul className="text-base text-gray-600 space-y-1">
                         <li>• Career assessment & goal setting</li>
                         <li>• Core skill development</li>
                         <li>• Industry fundamentals</li>
@@ -367,7 +367,7 @@ const CareerTrajectory = () => {
                     <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-2xl border border-yellow-200">
                       <h3 className="text-xl font-bold text-gray-900 mb-3">Months 4-6: Simulation</h3>
                       <p className="text-gray-700 mb-4">Engage in job simulations, build practical skills, and start building your portfolio.</p>
-                      <ul className="text-sm text-gray-600 space-y-1">
+                      <ul className="text-base text-gray-600 space-y-1">
                         <li>• Job simulation participation</li>
                         <li>• Portfolio development</li>
                         <li>• Peer collaboration projects</li>
@@ -382,7 +382,7 @@ const CareerTrajectory = () => {
                     <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-2xl border border-yellow-200">
                       <h3 className="text-xl font-bold text-gray-900 mb-3">Months 7-9: Specialization</h3>
                       <p className="text-gray-700 mb-4">Focus on advanced simulations, earn certifications, and connect with industry mentors.</p>
-                      <ul className="text-sm text-gray-600 space-y-1">
+                      <ul className="text-base text-gray-600 space-y-1">
                         <li>• Advanced skill certification</li>
                         <li>• Mentorship program</li>
                         <li>• Industry networking</li>
@@ -401,7 +401,7 @@ const CareerTrajectory = () => {
                     <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-2xl border border-yellow-200">
                       <h3 className="text-xl font-bold text-gray-900 mb-3">Months 10-12: Launch</h3>
                       <p className="text-gray-700 mb-4">Job search preparation, interview practice, and securing your ideal entry-level position.</p>
-                      <ul className="text-sm text-gray-600 space-y-1">
+                      <ul className="text-base text-gray-600 space-y-1">
                         <li>• Resume & portfolio optimization</li>
                         <li>• Interview preparation</li>
                         <li>• Job placement support</li>
@@ -433,32 +433,32 @@ const CareerTrajectory = () => {
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center">
                   <span className="text-2xl">📊</span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Skill Proficiency</h3>
-                <p className="text-gray-600 text-sm">Measure your technical and soft skill development</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Skill Proficiency</h3>
+                <p className="text-gray-600 text-base">Measure your technical and soft skill development</p>
               </div>
 
               <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
                   <span className="text-2xl">🎯</span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Simulation Completion</h3>
-                <p className="text-gray-600 text-sm">Track your progress through job simulations</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Simulation Completion</h3>
+                <p className="text-gray-600 text-base">Track your progress through job simulations</p>
               </div>
 
               <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
                   <span className="text-2xl">🏆</span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Certifications Earned</h3>
-                <p className="text-gray-600 text-sm">Validate your expertise with industry credentials</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Certifications Earned</h3>
+                <p className="text-gray-600 text-base">Validate your expertise with industry credentials</p>
               </div>
 
               <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal-400 to-green-500 rounded-full flex items-center justify-center">
                   <span className="text-2xl">💼</span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Job Readiness Score</h3>
-                <p className="text-gray-600 text-sm">Overall assessment of your employment readiness</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Job Readiness Score</h3>
+                <p className="text-gray-600 text-base">Overall assessment of your employment readiness</p>
               </div>
             </div>
           </div>
@@ -483,7 +483,7 @@ const CareerTrajectory = () => {
                 Schedule Career Consultation
               </button>
             </div>
-            <p className="text-lg mt-8 font-semibold">
+            <p className="text-xl mt-8 font-semibold">
               Your Future Starts Today
             </p>
             <p className="text-orange-100 mt-2">

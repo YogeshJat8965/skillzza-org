@@ -56,7 +56,7 @@ const StatItem = ({ stat, active }) => {
     lineHeight: 1,
   };
   const accentStyle = { color: '#00e5b0', fontStyle: 'normal' };
-  const labelStyle = { fontSize: 11, color: '#8892a4', marginTop: 5, lineHeight: 1.4 };
+  const labelStyle = { fontSize: 13, color: '#8892a4', marginTop: 5, lineHeight: 1.4 };
 
   return (
     <div style={{ textAlign: 'center' }}>

@@ -16,13 +16,13 @@ const SkillBlueprint = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               INSIGHTS
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
               AI & The Future of Work
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
               Exploring how technology is revolutionizing skill development and transforming the way organizations approach workforce transformation.
             </p>
           </div>
@@ -34,7 +34,7 @@ const SkillBlueprint = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-6">
+              <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-6">
                 CASE STUDY 1
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -50,7 +50,7 @@ const SkillBlueprint = () => {
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-2/3">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">The Challenge</h3>
-                  <p className="text-gray-700 leading-relaxed text-lg">
+                  <p className="text-gray-700 leading-relaxed text-xl">
                     In today's rapidly evolving business landscape, organizations face an unprecedented challenge: the skills their workforce possessed yesterday may not be sufficient for tomorrow's demands. Traditional approaches to identifying skill gaps often rely on annual reviews, manager assessments, and broad industry reports-methods that are slow, subjective, and frequently outdated by the time action is taken.
                   </p>
                 </div>
@@ -100,8 +100,8 @@ const SkillBlueprint = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <h5 className="text-lg font-bold text-gray-900 mb-3">Skills Intelligence Engine</h5>
-                    <ul className="space-y-2 text-sm text-gray-600">
+                    <h5 className="text-xl font-bold text-gray-900 mb-3">Skills Intelligence Engine</h5>
+                    <ul className="space-y-2 text-base text-gray-600">
                       <li>• Analyzes job descriptions, project requirements, and industry trends</li>
                       <li>• Maps current employee skills through work history and certifications</li>
                       <li>• Identifies emerging skill demands through real-time market analysis</li>
@@ -116,8 +116,8 @@ const SkillBlueprint = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <h5 className="text-lg font-bold text-gray-900 mb-3">Gap Detection Algorithm</h5>
-                    <ul className="space-y-2 text-sm text-gray-600">
+                    <h5 className="text-xl font-bold text-gray-900 mb-3">Gap Detection Algorithm</h5>
+                    <ul className="space-y-2 text-base text-gray-600">
                       <li>• Compares individual skill profiles against future role requirements</li>
                       <li>• Prioritizes skill gaps based on business impact and urgency</li>
                       <li>• Segments employees into reskilling cohorts</li>
@@ -132,8 +132,8 @@ const SkillBlueprint = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <h5 className="text-lg font-bold text-gray-900 mb-3">Dynamic Learning System</h5>
-                    <ul className="space-y-2 text-sm text-gray-600">
+                    <h5 className="text-xl font-bold text-gray-900 mb-3">Dynamic Learning System</h5>
+                    <ul className="space-y-2 text-base text-gray-600">
                       <li>• Suggests targeted training programs tailored to learning styles</li>
                       <li>• Adjusts recommendations based on progress</li>
                       <li>• Integrates multiple learning formats</li>
@@ -196,21 +196,21 @@ const SkillBlueprint = () => {
                   <div className="space-y-4">
                     <div>
                       <h5 className="font-semibold text-gray-900 mb-2">Data-Driven Precision</h5>
-                      <p className="text-gray-700 text-sm">AI eliminated guesswork, providing specific, actionable insights about skill requirements</p>
+                      <p className="text-gray-700 text-base">AI eliminated guesswork, providing specific, actionable insights about skill requirements</p>
                     </div>
                     <div>
                       <h5 className="font-semibold text-gray-900 mb-2">Personalization at Scale</h5>
-                      <p className="text-gray-700 text-sm">Each employee received a customized reskilling pathway</p>
+                      <p className="text-gray-700 text-base">Each employee received a customized reskilling pathway</p>
                     </div>
                   </div>
                   <div className="space-y-4">
                     <div>
                       <h5 className="font-semibold text-gray-900 mb-2">Continuous Adaptation</h5>
-                      <p className="text-gray-700 text-sm">The system evolved with changing business needs and individual progress</p>
+                      <p className="text-gray-700 text-base">The system evolved with changing business needs and individual progress</p>
                     </div>
                     <div>
                       <h5 className="font-semibold text-gray-900 mb-2">Leadership Commitment</h5>
-                      <p className="text-gray-700 text-sm">C-suite support ensured adequate resources and organizational buy-in</p>
+                      <p className="text-gray-700 text-base">C-suite support ensured adequate resources and organizational buy-in</p>
                     </div>
                   </div>
                 </div>
@@ -225,7 +225,7 @@ const SkillBlueprint = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-6">
+              <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-6">
                 CASE STUDY 2
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -241,7 +241,7 @@ const SkillBlueprint = () => {
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-2/3">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">The Revolution in Personal Development</h3>
-                  <p className="text-gray-700 leading-relaxed text-lg">
+                  <p className="text-gray-700 leading-relaxed text-xl">
                     Traditional one-size-fits-all training programs are giving way to hyper-personalized learning experiences powered by AI. These systems recognize that every learner has unique strengths, preferences, career goals, and learning patterns-and adapt accordingly.
                   </p>
                 </div>
@@ -276,7 +276,7 @@ const SkillBlueprint = () => {
               </div>
 
               {/* The Personalization Engine */}
-              <h5 className="text-lg font-bold text-gray-900 mb-6">The Personalization Engine:</h5>
+              <h5 className="text-xl font-bold text-gray-900 mb-6">The Personalization Engine:</h5>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg">
@@ -286,8 +286,8 @@ const SkillBlueprint = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h6 className="text-lg font-bold text-gray-900 mb-3">Individual Learning Profile</h6>
-                  <ul className="space-y-2 text-sm text-gray-600">
+                  <h6 className="text-xl font-bold text-gray-900 mb-3">Individual Learning Profile</h6>
+                  <ul className="space-y-2 text-base text-gray-600">
                     <li>• Analyzes learning history and preferences</li>
                     <li>• Assesses current skill levels through adaptive testing</li>
                     <li>• Maps career aspirations and growth trajectories</li>
@@ -303,8 +303,8 @@ const SkillBlueprint = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h6 className="text-lg font-bold text-gray-900 mb-3">Dynamic Content Curation</h6>
-                  <ul className="space-y-2 text-sm text-gray-600">
+                  <h6 className="text-xl font-bold text-gray-900 mb-3">Dynamic Content Curation</h6>
+                  <ul className="space-y-2 text-base text-gray-600">
                     <li>• Selects from 10,000+ learning resources</li>
                     <li>• Adjusts content difficulty based on comprehension</li>
                     <li>• Incorporates various media types</li>
@@ -320,8 +320,8 @@ const SkillBlueprint = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h6 className="text-lg font-bold text-gray-900 mb-3">Adaptive Learning Pathways</h6>
-                  <ul className="space-y-2 text-sm text-gray-600">
+                  <h6 className="text-xl font-bold text-gray-900 mb-3">Adaptive Learning Pathways</h6>
+                  <ul className="space-y-2 text-base text-gray-600">
                     <li>• Creates unique learning sequences</li>
                     <li>• Adjusts pace based on progress</li>
                     <li>• Introduces reinforcement activities</li>
@@ -338,10 +338,10 @@ const SkillBlueprint = () => {
                 <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
                   <div className="flex items-center mb-4">
                     <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold mr-3">1</div>
-                    <h5 className="text-lg font-bold text-gray-900">Foundation Building</h5>
+                    <h5 className="text-xl font-bold text-gray-900">Foundation Building</h5>
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">Months 1-3</p>
-                  <ul className="space-y-2 text-sm text-gray-700">
+                  <p className="text-base text-gray-600 mb-3">Months 1-3</p>
+                  <ul className="space-y-2 text-base text-gray-700">
                     <li>• Deployed AI assessment tools</li>
                     <li>• Integrated existing learning systems</li>
                     <li>• Trained managers on coaching</li>
@@ -351,10 +351,10 @@ const SkillBlueprint = () => {
                 <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-500">
                   <div className="flex items-center mb-4">
                     <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-3">2</div>
-                    <h5 className="text-lg font-bold text-gray-900">Personalization Launch</h5>
+                    <h5 className="text-xl font-bold text-gray-900">Personalization Launch</h5>
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">Months 4-8</p>
-                  <ul className="space-y-2 text-sm text-gray-700">
+                  <p className="text-base text-gray-600 mb-3">Months 4-8</p>
+                  <ul className="space-y-2 text-base text-gray-700">
                     <li>• Rolled out personalized learning paths</li>
                     <li>• Refined algorithms based on feedback</li>
                     <li>• Established peer mentoring networks</li>
@@ -364,10 +364,10 @@ const SkillBlueprint = () => {
                 <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500">
                   <div className="flex items-center mb-4">
                     <div className="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold mr-3">3</div>
-                    <h5 className="text-lg font-bold text-gray-900">Scale & Optimization</h5>
+                    <h5 className="text-xl font-bold text-gray-900">Scale & Optimization</h5>
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">Months 9-12</p>
-                  <ul className="space-y-2 text-sm text-gray-700">
+                  <p className="text-base text-gray-600 mb-3">Months 9-12</p>
+                  <ul className="space-y-2 text-base text-gray-700">
                     <li>• Extended to entire organization</li>
                     <li>• Integrated career planning tools</li>
                     <li>• Implemented predictive analytics</li>
@@ -430,21 +430,21 @@ const SkillBlueprint = () => {
                 <div className="space-y-4">
                   <div>
                     <h5 className="font-semibold text-gray-900 mb-2">Micro-Learning Adaptation</h5>
-                    <p className="text-gray-700 text-sm">The AI system breaks down complex skills into micro-learning modules, allowing busy professionals to learn in 10-15 minute segments that fit their schedules.</p>
+                    <p className="text-gray-700 text-base">The AI system breaks down complex skills into micro-learning modules, allowing busy professionals to learn in 10-15 minute segments that fit their schedules.</p>
                   </div>
                   <div>
                     <h5 className="font-semibold text-gray-900 mb-2">Multi-Modal Learning Integration</h5>
-                    <p className="text-gray-700 text-sm">Recognizing different learning styles, the AI seamlessly blends various formats for visual, kinesthetic, auditory, and reading-focused learners.</p>
+                    <p className="text-gray-700 text-base">Recognizing different learning styles, the AI seamlessly blends various formats for visual, kinesthetic, auditory, and reading-focused learners.</p>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div>
                     <h5 className="font-semibold text-gray-900 mb-2">Real-Time Adjustment</h5>
-                    <p className="text-gray-700 text-sm">The system continuously monitors engagement, comprehension, and application, making real-time adjustments to maintain optimal challenge levels.</p>
+                    <p className="text-gray-700 text-base">The system continuously monitors engagement, comprehension, and application, making real-time adjustments to maintain optimal challenge levels.</p>
                   </div>
                   <div>
                     <h5 className="font-semibold text-gray-900 mb-2">Collaborative Intelligence Networks</h5>
-                    <p className="text-gray-700 text-sm">AI facilitates peer-to-peer learning and knowledge sharing across the organization.</p>
+                    <p className="text-gray-700 text-base">AI facilitates peer-to-peer learning and knowledge sharing across the organization.</p>
                   </div>
                 </div>
               </div>
@@ -458,7 +458,7 @@ const SkillBlueprint = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-6">
+              <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-6">
                 FUTURE TRENDS
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -478,8 +478,8 @@ const SkillBlueprint = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-3">Predictive Skill Forecasting</h4>
-                <ul className="space-y-2 text-sm text-gray-600">
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Predictive Skill Forecasting</h4>
+                <ul className="space-y-2 text-base text-gray-600">
                   <li>• AI systems predict skill demands 2-3 years in advance</li>
                   <li>• Proactive capability development before market pressures</li>
                 </ul>
@@ -493,8 +493,8 @@ const SkillBlueprint = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-3">Immersive Learning Experiences</h4>
-                <ul className="space-y-2 text-sm text-gray-600">
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Immersive Learning Experiences</h4>
+                <ul className="space-y-2 text-base text-gray-600">
                   <li>• VR/AR integration for hands-on skill practice</li>
                   <li>• AI-powered virtual mentors and coaching assistants</li>
                 </ul>
@@ -508,8 +508,8 @@ const SkillBlueprint = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-3">Collaborative Intelligence Networks</h4>
-                <ul className="space-y-2 text-sm text-gray-600">
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Collaborative Intelligence Networks</h4>
+                <ul className="space-y-2 text-base text-gray-600">
                   <li>• AI facilitates peer-to-peer learning</li>
                   <li>• Cross-organizational skill development partnerships</li>
                 </ul>
@@ -523,8 +523,8 @@ const SkillBlueprint = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-3">Emotional Intelligence Integration</h4>
-                <ul className="space-y-2 text-sm text-gray-600">
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Emotional Intelligence Integration</h4>
+                <ul className="space-y-2 text-base text-gray-600">
                   <li>• AI considers emotional and social skills</li>
                   <li>• Develops well-rounded professionals for human-AI collaboration</li>
                 </ul>
@@ -538,10 +538,10 @@ const SkillBlueprint = () => {
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center mb-4">
                     <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold mr-3">1</div>
-                    <h5 className="text-lg font-bold text-gray-900">Assessment & Strategy</h5>
+                    <h5 className="text-xl font-bold text-gray-900">Assessment & Strategy</h5>
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">Months 1-2</p>
-                  <ul className="space-y-2 text-sm text-gray-700">
+                  <p className="text-base text-gray-600 mb-3">Months 1-2</p>
+                  <ul className="space-y-2 text-base text-gray-700">
                     <li>• Evaluate current learning infrastructure</li>
                     <li>• Define strategic learning objectives</li>
                     <li>• Select appropriate AI platforms</li>
@@ -551,10 +551,10 @@ const SkillBlueprint = () => {
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center mb-4">
                     <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-3">2</div>
-                    <h5 className="text-lg font-bold text-gray-900">Pilot & Refinement</h5>
+                    <h5 className="text-xl font-bold text-gray-900">Pilot & Refinement</h5>
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">Months 3-6</p>
-                  <ul className="space-y-2 text-sm text-gray-700">
+                  <p className="text-base text-gray-600 mb-3">Months 3-6</p>
+                  <ul className="space-y-2 text-base text-gray-700">
                     <li>• Launch with select employee groups</li>
                     <li>• Gather feedback and metrics</li>
                     <li>• Refine algorithms and content</li>
@@ -564,10 +564,10 @@ const SkillBlueprint = () => {
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center mb-4">
                     <div className="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold mr-3">3</div>
-                    <h5 className="text-lg font-bold text-gray-900">Scale & Integration</h5>
+                    <h5 className="text-xl font-bold text-gray-900">Scale & Integration</h5>
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">Months 7-12</p>
-                  <ul className="space-y-2 text-sm text-gray-700">
+                  <p className="text-base text-gray-600 mb-3">Months 7-12</p>
+                  <ul className="space-y-2 text-base text-gray-700">
                     <li>• Roll out platform organization-wide</li>
                     <li>• Integrate with existing HR systems</li>
                     <li>• Establish continuous improvement</li>
@@ -577,10 +577,10 @@ const SkillBlueprint = () => {
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center mb-4">
                     <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold mr-3">4</div>
-                    <h5 className="text-lg font-bold text-gray-900">Advanced Optimization</h5>
+                    <h5 className="text-xl font-bold text-gray-900">Advanced Optimization</h5>
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">Year 2+</p>
-                  <ul className="space-y-2 text-sm text-gray-700">
+                  <p className="text-base text-gray-600 mb-3">Year 2+</p>
+                  <ul className="space-y-2 text-base text-gray-700">
                     <li>• Implement predictive capabilities</li>
                     <li>• Explore cross-organizational partnerships</li>
                     <li>• Develop proprietary content</li>
@@ -680,7 +680,7 @@ const SkillBlueprint = () => {
             <div className="text-center mt-16">
               <div className="bg-gradient-to-r from-orange-500 to-red-500 p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold mb-4">Strategic Conclusion</h3>
-                <p className="text-lg text-orange-100">
+                <p className="text-xl text-orange-100">
                   This case study demonstrates how forward-thinking organizations are using AI not just as a technological upgrade, but as a strategic advantage in developing their most valuable asset-their people.
                 </p>
               </div>

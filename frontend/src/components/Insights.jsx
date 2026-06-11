@@ -214,17 +214,17 @@ const Insights = ({ showHero = false, showContent = true }) => {
             width: auto !important;
             height: 32px !important;
             padding: 0 14px !important;
-            font-size: 12px !important;
+            font-size: 14px !important;
             margin-top: 4px !important;
             margin-bottom: 8px !important;
           }
           .insights-card-lg h3 {
-            font-size: 14px !important;
+            font-size: 16px !important;
             line-height: 1.3 !important;
             padding-bottom: 16px !important;
           }
           .insights-card-md h3 {
-            font-size: 14px !important;
+            font-size: 16px !important;
             line-height: 1.25 !important;
             padding-bottom: 10px !important;
           }
@@ -240,15 +240,15 @@ const Insights = ({ showHero = false, showContent = true }) => {
             width: auto !important;
             height: 34px !important;
             padding: 0 16px !important;
-            font-size: 13px !important;
+            font-size: 15px !important;
             margin-bottom: 10px !important;
           }
           .insights-podcast h3 {
-            font-size: 14px !important;
+            font-size: 16px !important;
             line-height: 1.25 !important;
           }
           .insights-podcast p {
-            font-size: 14px !important;
+            font-size: 16px !important;
             line-height: 1.55 !important;
           }
           .insights-podcast .insights-podcast-right img {
@@ -296,7 +296,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
             margin-top: 4px !important;
           }
           .insights-card-lg h3 {
-            font-size: 18px !important;
+            font-size: 20px !important;
             margin-bottom: 16px !important;
           }
           .insights-card-lg > div:last-child {
@@ -316,7 +316,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
             object-position: center center !important;
           }
           .insights-card-md h3 {
-            font-size: 18px !important;
+            font-size: 20px !important;
             margin-bottom: 16px !important;
           }
           .insights-card-md > div:last-child {
@@ -327,7 +327,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
             width: auto !important;
             padding: 0 14px !important;
             height: 32px !important;
-            font-size: 12px !important;
+            font-size: 14px !important;
             margin-bottom: 8px !important;
             margin-top: 4px !important;
           }
@@ -347,7 +347,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
             font-size: 20px !important;
           }
           .insights-podcast p {
-            font-size: 14px !important;
+            font-size: 16px !important;
           }
           .insights-podcast .insights-podcast-right img {
             width: 60px !important;
@@ -426,7 +426,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     border: '1px solid #0F1114',
                     borderRadius: '8px',
                     fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '14px',
+                    fontSize: '16px',
                     fontWeight: 500,
                     color: '#0F1114',
                     cursor: 'pointer',
@@ -491,7 +491,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     <h3
                       style={{
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '14px',
+                        fontSize: '16px',
                         fontWeight: 600,
                         lineHeight: '1.4',
                         color: '#393939',
@@ -513,7 +513,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                         border: '1px solid #0F1114',
                         borderRadius: '8px',
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '13px',
+                        fontSize: '15px',
                         fontWeight: 500,
                         color: '#0F1114',
                         cursor: 'pointer',
@@ -580,7 +580,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                           background: '#E87444',
                           borderRadius: '20px',
                           fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '16px',
+                          fontSize: '18px',
                           fontWeight: 500,
                           color: '#FFFFFF',
                           marginBottom: '10px',
@@ -594,7 +594,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                       <h3
                         style={{
                           fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '14px',
+                          fontSize: '16px',
                           fontWeight: 600,
                           lineHeight: '1.3',
                           color: '#393939',
@@ -615,7 +615,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                           border: '1px solid #0F1114',
                           borderRadius: '8px',
                           fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '13px',
+                          fontSize: '15px',
                           fontWeight: 500,
                           color: '#0F1114',
                           cursor: 'pointer',
@@ -678,7 +678,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                           background: '#D02C2F',
                           borderRadius: '20px',
                           fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '16px',
+                          fontSize: '18px',
                           fontWeight: 500,
                           color: '#FFFFFF',
                           marginBottom: '10px',
@@ -692,7 +692,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                       <h3
                         style={{
                           fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '14px',
+                          fontSize: '16px',
                           fontWeight: 600,
                           lineHeight: '1.3',
                           color: '#393939',
@@ -715,7 +715,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                           border: '1px solid #0F1114',
                           borderRadius: '8px',
                           fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '14px',
+                          fontSize: '16px',
                           fontWeight: 500,
                           color: '#0F1114',
                           cursor: 'pointer',
@@ -765,7 +765,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                         background: '#4A9FD8',
                         borderRadius: '20px',
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '18px',
+                        fontSize: '20px',
                         fontWeight: 500,
                         color: '#FFFFFF',
                         marginBottom: '12px',
@@ -778,7 +778,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     <h3
                       style={{
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: '14px',
+                        fontSize: '16px',
                         fontWeight: 600,
                         lineHeight: '1.3',
                         color: '#393939',
@@ -793,7 +793,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                     <p
                       style={{
                         fontFamily: "'Lato', sans-serif",
-                        fontSize: '16px',
+                        fontSize: '18px',
                         fontWeight: 400,
                         lineHeight: '1.7',
                         color: '#393939',
@@ -823,7 +823,7 @@ const Insights = ({ showHero = false, showContent = true }) => {
                         border: '1px solid #0F1114',
                         borderRadius: '8px',
                         fontFamily: "'DM Sans', sans-serif",
-                          fontSize: '13px',
+                          fontSize: '15px',
                         fontWeight: 500,
                         color: '#0F1114',
                         cursor: 'pointer',

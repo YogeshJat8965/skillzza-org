@@ -16,7 +16,7 @@ const ByteMinds = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-blue-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-blue-500 rounded-full text-base font-semibold text-white mb-6">
               BYTEMINDS SCHOOL
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
@@ -25,7 +25,7 @@ const ByteMinds = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-cyan-300">
               The School of AI & Quantum Intelligence
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
               Dive deep into the future of artificial intelligence and quantum computing. Our comprehensive programs prepare you for the next generation of technological innovation, from foundational AI concepts to cutting-edge quantum algorithms.
             </p>
           </div>
@@ -54,7 +54,7 @@ const ByteMinds = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">AI Mastery Tracks</h3>
-                        <p className="text-lg text-blue-600">From Foundations to Advanced AI, ML, and Generative AI</p>
+                        <p className="text-xl text-blue-600">From Foundations to Advanced AI, ML, and Generative AI</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -65,7 +65,7 @@ const ByteMinds = () => {
                       <li>• <strong>MLOps:</strong> Model Deployment, Monitoring, and Production Systems</li>
                     </ul>
                     <div className="bg-blue-100 p-4 rounded-xl border border-blue-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Duration:</strong> 12-18 months | <strong>Format:</strong> Hybrid Learning | <strong>Certification:</strong> Industry-Recognized
                       </p>
                     </div>
@@ -90,7 +90,7 @@ const ByteMinds = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Quantum Computing Pods</h3>
-                        <p className="text-lg text-purple-600">Hands-on Labs to Explore Quantum Algorithms & Applications</p>
+                        <p className="text-xl text-purple-600">Hands-on Labs to Explore Quantum Algorithms & Applications</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -101,7 +101,7 @@ const ByteMinds = () => {
                       <li>• <strong>Hardware Access:</strong> IBM Quantum, Google Quantum AI, and IonQ</li>
                     </ul>
                     <div className="bg-purple-100 p-4 rounded-xl border border-purple-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Duration:</strong> 6-12 months | <strong>Format:</strong> Lab-Intensive | <strong>Access:</strong> Real Quantum Hardware
                       </p>
                     </div>
@@ -126,7 +126,7 @@ const ByteMinds = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">AI Playground</h3>
-                        <p className="text-lg text-green-600">Real-world Projects, Simulations, and Role-based Internships</p>
+                        <p className="text-xl text-green-600">Real-world Projects, Simulations, and Role-based Internships</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -137,7 +137,7 @@ const ByteMinds = () => {
                       <li>• <strong>Startup Incubation:</strong> Launch your own AI-powered venture</li>
                     </ul>
                     <div className="bg-green-100 p-4 rounded-xl border border-green-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Format:</strong> Project-Based | <strong>Mentorship:</strong> 1:1 Industry Experts | <strong>Outcome:</strong> Portfolio & Network
                       </p>
                     </div>
@@ -162,7 +162,7 @@ const ByteMinds = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Ethical AI Hub</h3>
-                        <p className="text-lg text-orange-600">Building Responsible AI Aligned with Global Governance Frameworks</p>
+                        <p className="text-xl text-orange-600">Building Responsible AI Aligned with Global Governance Frameworks</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -173,7 +173,7 @@ const ByteMinds = () => {
                       <li>• <strong>Policy Dialogue:</strong> Engage with policymakers and thought leaders</li>
                     </ul>
                     <div className="bg-orange-100 p-4 rounded-xl border border-orange-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Focus:</strong> Ethics & Governance | <strong>Partnerships:</strong> UN, IEEE, Partnership on AI | <strong>Certification:</strong> Ethical AI Practitioner
                       </p>
                     </div>
@@ -198,7 +198,7 @@ const ByteMinds = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Future Tech Mentorship</h3>
-                        <p className="text-lg text-indigo-600">Guidance from AI Scientists, Quantum Experts & Industry Leaders</p>
+                        <p className="text-xl text-indigo-600">Guidance from AI Scientists, Quantum Experts & Industry Leaders</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -209,7 +209,7 @@ const ByteMinds = () => {
                       <li>• <strong>Entrepreneur Network:</strong> Successful AI startup founders and investors</li>
                     </ul>
                     <div className="bg-indigo-100 p-4 rounded-xl border border-indigo-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Mentorship:</strong> 1:1 & Group Sessions | <strong>Network:</strong> 500+ Global Experts | <strong>Access:</strong> Lifetime Alumni Network
                       </p>
                     </div>
@@ -258,13 +258,13 @@ const ByteMinds = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-green-600">6 Months</span>
-                  <p className="text-sm text-gray-500">Part-time | Weekend Classes</p>
+                  <p className="text-base text-gray-600">Part-time | Weekend Classes</p>
                 </div>
               </div>
 
               {/* Intermediate Track */}
               <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-blue-300 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-base font-semibold">
                   MOST POPULAR
                 </div>
                 <div className="text-center mb-6">
@@ -283,7 +283,7 @@ const ByteMinds = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-blue-600">12 Months</span>
-                  <p className="text-sm text-gray-500">Full-time | Hybrid Learning</p>
+                  <p className="text-base text-gray-600">Full-time | Hybrid Learning</p>
                 </div>
               </div>
 
@@ -305,7 +305,7 @@ const ByteMinds = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-purple-600">18 Months</span>
-                  <p className="text-sm text-gray-500">Research-focused | Thesis Required</p>
+                  <p className="text-base text-gray-600">Research-focused | Thesis Required</p>
                 </div>
               </div>
             </div>
@@ -329,27 +329,27 @@ const ByteMinds = () => {
                 <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-3xl">👨‍🔬</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Dr. AI Research</h4>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Dr. AI Research</h4>
                 <p className="text-gray-600 mb-2">Former Google AI, MIT Professor</p>
-                <p className="text-sm text-gray-500">Specializes in Deep Learning & Neural Architecture Search</p>
+                <p className="text-base text-gray-600">Specializes in Deep Learning & Neural Architecture Search</p>
               </div>
 
               <div className="text-center">
                 <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-3xl">👩‍💻</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Prof. Quantum Expert</h4>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Prof. Quantum Expert</h4>
                 <p className="text-gray-600 mb-2">IBM Quantum, Stanford University</p>
-                <p className="text-sm text-gray-500">Pioneer in Quantum Machine Learning Algorithms</p>
+                <p className="text-base text-gray-600">Pioneer in Quantum Machine Learning Algorithms</p>
               </div>
 
               <div className="text-center">
                 <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-3xl">👨‍💼</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">CTO Industry Leader</h4>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">CTO Industry Leader</h4>
                 <p className="text-gray-600 mb-2">OpenAI, Former Tesla AI</p>
-                <p className="text-sm text-gray-500">Expert in Production AI Systems & MLOps</p>
+                <p className="text-base text-gray-600">Expert in Production AI Systems & MLOps</p>
               </div>
             </div>
           </div>
@@ -364,7 +364,7 @@ const ByteMinds = () => {
               Ready to Master the Future of Intelligence?
             </h2>
             <p className="text-xl mb-4">Join the next generation of AI and quantum computing pioneers</p>
-            <p className="text-lg mb-8 opacity-90">Limited seats available for our upcoming cohort</p>
+            <p className="text-xl mb-8 opacity-90">Limited seats available for our upcoming cohort</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button className="bg-white text-blue-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
@@ -380,7 +380,7 @@ const ByteMinds = () => {
 
             <div className="mt-8">
               <p className="text-xl font-bold">The future of AI is in your hands.</p>
-              <p className="text-lg">Start building it today at ByteMinds.</p>
+              <p className="text-xl">Start building it today at ByteMinds.</p>
             </div>
           </div>
         </div>

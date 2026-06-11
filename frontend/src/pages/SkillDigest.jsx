@@ -16,13 +16,13 @@ const SkillDigest = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               The Skillzza Digest
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
               Insights That Shape Tomorrow
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
               Stay updated with insights, trends, and game-changers that are shaping the future of skills and workforce development.
             </p>
           </div>
@@ -34,7 +34,7 @@ const SkillDigest = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-6">
+              <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-6">
                 FEATURED ARTICLES
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -53,7 +53,7 @@ const SkillDigest = () => {
                   />
                 </div>
                 <div className="lg:w-1/2">
-                  <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-sm font-semibold text-blue-600 mb-4">
+                  <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-base font-semibold text-blue-600 mb-4">
                     TALENT DISCOVERY
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
@@ -81,19 +81,19 @@ const SkillDigest = () => {
                 <div className="lg:w-1/2">
                   <img
                     src={getAssetPath('/platformslide1.png')}
-                    alt="AI-Powered Experience Platforms"
+                    alt="AI-Powered ETalent Twins"
                     className="w-full h-80 object-cover rounded-2xl shadow-lg"
                   />
                 </div>
                 <div className="lg:w-1/2">
-                  <div className="inline-block px-4 py-2 bg-green-100 rounded-full text-sm font-semibold text-green-600 mb-4">
+                  <div className="inline-block px-4 py-2 bg-green-100 rounded-full text-base font-semibold text-green-600 mb-4">
                     IMMERSIVE LEARNING
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                    Immersive Learning: How AI-Powered Experience Platforms are Shaping Future-Ready Talent
+                    Immersive Learning: How AI-Powered ETalent Twins are Shaping Future-Ready Talent
                   </h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Classroom learning is no longer enough. Today's students and professionals need hands-on, immersive experiences that mirror the challenges of real-world workplaces. This is where AI-powered Xperience Platforms are rewriting the rules of education and talent development.
+                    Classroom learning is no longer enough. Today's students and professionals need hands-on, immersive experiences that mirror the challenges of real-world workplaces. This is where AI-powered Talent Twins are rewriting the rules of education and talent development.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     These platforms go beyond passive learning modules. They incorporate role-play simulations, gamified challenges, and industry-inspired projects, enabling learners to apply theory in dynamic environments. AI acts as a personalized guide-tracking performance, offering instant feedback, and recommending tailored learning journeys.
@@ -102,7 +102,7 @@ const SkillDigest = () => {
                     The biggest advantage? Learners build confidence, resilience, and practical problem-solving skills before entering the workforce. Employers, in turn, gain access to talent that is not just knowledgeable, but job-ready from day one.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    In the coming years, we'll see Xperience Platforms evolve into career laboratories, where learners can experiment, innovate, and showcase their capabilities. This is the future of education-learning by doing, powered by AI.
+                    In the coming years, we'll see Talent Twins evolve into career laboratories, where learners can experiment, innovate, and showcase their capabilities. This is the future of education-learning by doing, powered by AI.
                   </p>
                 </div>
               </div>
@@ -119,14 +119,14 @@ const SkillDigest = () => {
                   />
                 </div>
                 <div className="lg:w-1/2">
-                  <div className="inline-block px-4 py-2 bg-purple-100 rounded-full text-sm font-semibold text-purple-600 mb-4">
+                  <div className="inline-block px-4 py-2 bg-purple-100 rounded-full text-base font-semibold text-purple-600 mb-4">
                     CAMPUS HIRING
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
                     Campus Hiring 2.0: How AI Marketplaces are Matching Job-Ready Talent with Employers
                   </h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Campus recruitment has always been a high-stakes process-for students seeking opportunities and for employers scouting fresh talent. But traditional methods-resume shortlisting, aptitude tests, lengthy interviews-are often inefficient and biased. The rise of AI-powered hiring marketplaces like Talent Twinis changing that.
+                    Campus recruitment has always been a high-stakes process-for students seeking opportunities and for employers scouting fresh talent. But traditional methods-resume shortlisting, aptitude tests, lengthy interviews-are often inefficient and biased. The rise of AI-powered hiring marketplaces like Hire Twinis changing that.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     These platforms don't just collect resumes. They offer pre-assessed, job-ready talent pools, where students are evaluated through AI-driven skill tests, behavioral assessments, and project simulations. Employers can filter candidates based on role-specific requirements, making the process faster, fairer, and more data-driven.
@@ -152,17 +152,17 @@ const SkillDigest = () => {
                   />
                 </div>
                 <div className="lg:w-1/2">
-                  <div className="inline-block px-4 py-2 bg-orange-100 rounded-full text-sm font-semibold text-orange-600 mb-4">
+                  <div className="inline-block px-4 py-2 bg-orange-100 rounded-full text-base font-semibold text-orange-600 mb-4">
                     WORKFORCE TRANSFORMATION
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                    From Workforce to 'Skillforce': How AI is Driving the Next Wave of Talent Transformation
+                    From Workforce to 'Skillforce': How AI is Driving the Next Wave of Talent Intelligence
                   </h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     The workplace of tomorrow will look very different from today's. Automation, AI, and digital transformation are reshaping roles across industries. But instead of replacing humans, these shifts are emphasizing the need for a 'Skillforce'-a workforce built on continuous learning and adaptability.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    AI is at the heart of this transformation. It enables personalized upskilling by identifying skill gaps, recommending targeted learning, and even simulating future job roles. Talent transformation is no longer about one-time training programs; it's about lifelong learning ecosystems where employees evolve alongside technology.
+                    AI is at the heart of this transformation. It enables personalized upskilling by identifying skill gaps, recommending targeted learning, and even simulating future job roles. Talent Intelligence is no longer about one-time training programs; it's about lifelong learning ecosystems where employees evolve alongside technology.
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     Organizations that embrace this model gain a competitive edge-creating future-ready teams that can pivot with changing demands. For individuals, it means greater career resilience and the ability to thrive in multiple roles throughout their professional journey.
@@ -185,7 +185,7 @@ const SkillDigest = () => {
                   />
                 </div>
                 <div className="lg:w-1/2">
-                  <div className="inline-block px-4 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-4">
+                  <div className="inline-block px-4 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-4">
                     INNOVATION LABS
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
@@ -214,7 +214,7 @@ const SkillDigest = () => {
       <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-6 py-2 bg-blue-100 rounded-full text-sm font-semibold text-blue-600 mb-6">
+            <div className="inline-block px-6 py-2 bg-blue-100 rounded-full text-base font-semibold text-blue-600 mb-6">
               STAY UPDATED
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -233,7 +233,7 @@ const SkillDigest = () => {
                 Subscribe
               </button>
             </div>
-            <p className="text-sm text-gray-500 mt-4">
+            <p className="text-base text-gray-600 mt-4">
               Join 10,000+ professionals who trust Skillzza for industry insights
             </p>
           </div>
@@ -289,8 +289,8 @@ const SkillDigest = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">{topic.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed mb-4">{topic.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{topic.title}</h3>
+                    <p className="text-gray-600 text-base leading-relaxed mb-4">{topic.description}</p>
                     <button className={`w-full bg-gradient-to-r ${topic.color} text-white font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity duration-300`}>
                       Explore Articles
                     </button>

@@ -109,7 +109,7 @@ function SkillUnpluggedEpisodePage() {
         <section className="w-full px-4 md:px-8 mt-8">
           <div className="max-w-[980px] mx-auto rounded-2xl border border-[#E2E8F0] bg-white p-8 text-center">
             <h1 className="font-['DM_Sans',sans-serif] text-[30px] font-bold text-[#0F172A] mb-3">Episode not found</h1>
-            <p className="font-['DM_Sans',sans-serif] text-[16px] text-[#475569] mb-6">
+            <p className="font-['DM_Sans',sans-serif] text-[18px] text-[#334155] mb-6">
               This Skill Unplugged episode is unavailable right now.
             </p>
             <button
@@ -130,7 +130,7 @@ function SkillUnpluggedEpisodePage() {
 
       <section className="w-full px-4 md:px-8 mt-6">
         <div className="max-w-[1300px] mx-auto">
-          <div className="mb-4 flex flex-wrap items-center gap-y-1.5 gap-x-2 text-[14px] font-['DM_Sans',sans-serif]">
+          <div className="mb-4 flex flex-wrap items-center gap-y-1.5 gap-x-2 text-[16px] font-['DM_Sans',sans-serif]">
             <button
               onClick={() => navigate('/insights/skill-unplugged-podcast')}
               className="text-[#0070AC] font-bold hover:underline"
@@ -139,7 +139,7 @@ function SkillUnpluggedEpisodePage() {
               Skill Unplugged Podcast
             </button>
             <span className="text-[#94A3B8]" style={{ whiteSpace: 'nowrap' }}>/</span>
-            <span className="text-[#475569]">{episode.title}</span>
+            <span className="text-[#334155]">{episode.title}</span>
           </div>
 
           <div
@@ -151,36 +151,36 @@ function SkillUnpluggedEpisodePage() {
           >
             <div className="absolute right-5 top-5 h-[120px] w-[120px] rounded-full blur-2xl" style={{ backgroundColor: `${accent}22` }} />
 
-            <p className="mt-2 sm:mt-4 font-['DM_Sans',sans-serif] text-[13px] sm:text-[15px] uppercase tracking-[0.1em] font-bold" style={{ color: accent }}>
+            <p className="mt-2 sm:mt-4 font-['DM_Sans',sans-serif] text-[15px] sm:text-[17px] uppercase tracking-[0.1em] font-bold" style={{ color: accent }}>
               {episode.category}
             </p>
             <h1 className="mt-3 sm:mt-4 font-['DM_Sans',sans-serif] text-[clamp(24px,2.8vw,52px)] leading-[1.2] font-bold text-[#0F172A]">
               {episode.title}
             </h1>
-            <h2 className="mt-2 sm:mt-3 font-['DM_Sans',sans-serif] text-[15px] sm:text-[18px] md:text-[22px] leading-[1.4] font-semibold text-[#334155]">
+            <h2 className="mt-2 sm:mt-3 font-['DM_Sans',sans-serif] text-[17px] sm:text-[20px] md:text-[22px] leading-[1.4] font-semibold text-[#334155]">
               {episode.subtitle}
             </h2>
-            <p className="mt-4 sm:mt-6 max-w-[980px] font-['DM_Sans',sans-serif] text-[14px] sm:text-[16px] leading-[1.7] sm:leading-[1.75] text-[#475569]">
+            <p className="mt-4 sm:mt-6 max-w-[980px] font-['DM_Sans',sans-serif] text-[16px] sm:text-[18px] leading-[1.7] sm:leading-[1.75] text-[#334155]">
               {context.whyNow}
             </p>
 
             <div className="mt-5 sm:mt-6 flex flex-wrap gap-2">
               <span
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em]"
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] sm:text-[14px] font-bold uppercase tracking-[0.08em]"
                 style={{ backgroundColor: `${accent}1A`, color: accent }}
               >
                 <Clock3 size={14} />
                 {runtimeFromId(episode.id)}
               </span>
               <span
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em]"
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] sm:text-[14px] font-bold uppercase tracking-[0.08em]"
                 style={{ backgroundColor: `${accent}1A`, color: accent }}
               >
                 <Headphones size={14} />
                 Episode {episode.id}
               </span>
               <span
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em]"
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] sm:text-[14px] font-bold uppercase tracking-[0.08em]"
                 style={{ backgroundColor: `${accent}1A`, color: accent }}
               >
                 <Waves size={14} />
@@ -196,7 +196,7 @@ function SkillUnpluggedEpisodePage() {
                   <span className="hidden md:inline-block h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
                   <h3 className="font-['DM_Sans',sans-serif] text-[21px] sm:text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">Episode Snapshot</h3>
                 </div>
-                <p className="font-['DM_Sans',sans-serif] text-[15px] sm:text-[16px] leading-[1.7] sm:leading-[1.8] text-[#334155]">
+                <p className="font-['DM_Sans',sans-serif] text-[17px] sm:text-[18px] leading-[1.7] sm:leading-[1.8] text-[#334155]">
                   {episode.desc} This episode breaks down the operating realities, mindset shifts, and decision frameworks professionals need to stay relevant in an AI-shaped world.
                 </p>
               </article>
@@ -208,7 +208,7 @@ function SkillUnpluggedEpisodePage() {
                 </div>
                 <ul className="space-y-2.5 sm:space-y-3 pl-0 list-none">
                   {context.takeaways.map((point) => (
-                    <li key={point} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[15px] sm:text-[16px] leading-[1.65] sm:leading-[1.75] text-[#334155]">
+                    <li key={point} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[17px] sm:text-[18px] leading-[1.65] sm:leading-[1.75] text-[#334155]">
                       <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
                       <span>{point}</span>
                     </li>
@@ -223,7 +223,7 @@ function SkillUnpluggedEpisodePage() {
                 </div>
                 <ul className="space-y-2.5 sm:space-y-3 pl-0 list-none">
                   {context.prompts.map((prompt) => (
-                    <li key={prompt} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[15px] sm:text-[16px] leading-[1.65] sm:leading-[1.75] text-[#334155]">
+                    <li key={prompt} className="flex items-start gap-3 font-['DM_Sans',sans-serif] text-[17px] sm:text-[18px] leading-[1.65] sm:leading-[1.75] text-[#334155]">
                       <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: accent }} />
                       <span>{prompt}</span>
                     </li>
@@ -237,9 +237,9 @@ function SkillUnpluggedEpisodePage() {
                 className="rounded-2xl border bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]"
                 style={{ borderColor: `${accent}33` }}
               >
-                <p className="font-['DM_Sans',sans-serif] text-[13px] uppercase tracking-[0.08em] text-[#64748B] font-bold">Series Track</p>
-                <p className="mt-2 font-['DM_Sans',sans-serif] text-[17px] sm:text-[18px] leading-[1.45] font-semibold text-[#0F172A]">{episode.category}</p>
-                <p className="mt-1.5 sm:mt-2 font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] leading-[1.6] sm:leading-[1.65] text-[#475569]">
+                <p className="font-['DM_Sans',sans-serif] text-[15px] uppercase tracking-[0.08em] text-[#334155] font-bold">Series Track</p>
+                <p className="mt-2 font-['DM_Sans',sans-serif] text-[19px] sm:text-[20px] leading-[1.45] font-semibold text-[#0F172A]">{episode.category}</p>
+                <p className="mt-1.5 sm:mt-2 font-['DM_Sans',sans-serif] text-[16px] sm:text-[17px] leading-[1.6] sm:leading-[1.65] text-[#334155]">
                   Episode {episode.id} of {skillUnpluggedEpisodes.length}
                 </p>
 
@@ -258,9 +258,9 @@ function SkillUnpluggedEpisodePage() {
                   className="w-full rounded-2xl border p-5 text-left transition-colors hover:shadow-md"
                   style={{ borderColor: `${accent}33`, backgroundColor: `${accent}11` }}
                 >
-                  <p className="font-['DM_Sans',sans-serif] text-[12px] uppercase tracking-[0.08em] font-bold" style={{ color: accent }}>Next Episode</p>
-                  <p className="mt-2 font-['DM_Sans',sans-serif] text-[17px] sm:text-[18px] leading-[1.4] font-semibold text-[#0F172A]">{nextEpisode.title}</p>
-                  <p className="mt-1.5 sm:mt-2 font-['DM_Sans',sans-serif] text-[13.5px] sm:text-[14px] leading-[1.6] text-[#475569]">{nextEpisode.subtitle}</p>
+                  <p className="font-['DM_Sans',sans-serif] text-[14px] uppercase tracking-[0.08em] font-bold" style={{ color: accent }}>Next Episode</p>
+                  <p className="mt-2 font-['DM_Sans',sans-serif] text-[19px] sm:text-[20px] leading-[1.4] font-semibold text-[#0F172A]">{nextEpisode.title}</p>
+                  <p className="mt-1.5 sm:mt-2 font-['DM_Sans',sans-serif] text-[15.5px] sm:text-[16px] leading-[1.6] text-[#334155]">{nextEpisode.subtitle}</p>
                 </button>
               )}
 

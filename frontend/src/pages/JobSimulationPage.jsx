@@ -909,9 +909,9 @@ function JobSimulationPage() {
         .jsim-description {
           font-family: 'Inter', sans-serif;
           font-weight: 400;
-          font-size: 16.5px;
+          font-size: 18.5px;
           line-height: 1.8;
-          color: #475569;
+          color: #334155;
           text-align: center;
           max-width: 800px;
           margin: 0 0 56px 0;
@@ -972,7 +972,7 @@ function JobSimulationPage() {
         .jsim-stat-label {
           font-family: 'Inter', sans-serif;
           font-weight: 700;
-          font-size: 18px;
+          font-size: 20px;
           line-height: 1;
           color: #2974c9;
           margin: 0 0 12px 0;
@@ -982,7 +982,7 @@ function JobSimulationPage() {
         .jsim-stat-desc {
           font-family: 'Inter', sans-serif;
           font-weight: 600;
-          font-size: 15px;
+          font-size: 17px;
           line-height: 1.6;
           color: #1a1a2e;
           white-space: pre-line;
@@ -1002,9 +1002,9 @@ function JobSimulationPage() {
             margin-bottom: 20px !important;
           }
           .jsim-description {
-            font-size: 15px !important;
+            font-size: 17px !important;
             line-height: 1.7 !important;
-            color: #475569 !important;
+            color: #334155 !important;
             margin-bottom: 40px !important;
             text-align: center !important;
             padding: 0 8px !important;
@@ -1036,11 +1036,11 @@ function JobSimulationPage() {
             margin: 0 0 8px 0 !important;
           }
           .jsim-stat-label {
-            font-size: 14px !important;
+            font-size: 16px !important;
             margin: 0 0 6px 0 !important;
           }
           .jsim-stat-desc {
-            font-size: 13px !important;
+            font-size: 15px !important;
             white-space: normal;
           }
           .jsim-card-accent::after { right: -8px; bottom: -8px; }
@@ -1104,7 +1104,7 @@ function JobSimulationPage() {
         .sol-subtitle {
           font-family: 'Inter', sans-serif;
           font-weight: 500;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 1.6;
           color: #474545;
           margin: 0;
@@ -1149,7 +1149,7 @@ function JobSimulationPage() {
         .sol-card-title {
           font-family: 'Inter', sans-serif;
           font-weight: 700;
-          font-size: 15px;
+          font-size: 17px;
           line-height: 1.4;
           color: #2974c9;
           margin: 0 0 12px 0;
@@ -1159,7 +1159,7 @@ function JobSimulationPage() {
         .sol-card-desc {
           font-family: 'Inter', sans-serif;
           font-weight: 500;
-          font-size: 13px;
+          font-size: 15px;
           line-height: 1.5;
           color: #71717a;
           white-space: pre-line;
@@ -1248,7 +1248,7 @@ function JobSimulationPage() {
             margin-bottom: 40px;
           }
           .sol-title { font-size: 28px; }
-          .sol-subtitle { font-size: 16px; }
+          .sol-subtitle { font-size: 18px; }
           .sol-content {
             flex-direction: column;
             gap: 40px;
@@ -1323,7 +1323,7 @@ function JobSimulationPage() {
         .discover-subtitle-blue {
           font-family: 'Inter', sans-serif;
           font-weight: 400;
-          font-size: 18px;
+          font-size: 20px;
           color: #2974c9;
           margin: 0 0 20px 0;
         }
@@ -1331,7 +1331,7 @@ function JobSimulationPage() {
         .discover-subtitle-body {
           font-family: 'Inter', sans-serif;
           font-weight: 500;
-          font-size: 16px;
+          font-size: 18px;
           color: #555555;
           margin: 0 0 48px 0;
         }
@@ -1355,7 +1355,7 @@ function JobSimulationPage() {
           padding: 14px 20px;
           padding-right: 48px;
           font-family: 'Inter', sans-serif;
-          font-size: 15px;
+          font-size: 17px;
           font-weight: 500;
           color: #4a4a4a;
           width: 250px;
@@ -1406,10 +1406,10 @@ function JobSimulationPage() {
           }
           .discover-title { font-size: 28px; }
           .discover-subtitle-blue {
-            font-size: 16px;
+            font-size: 18px;
           }
           .discover-subtitle-body {
-            font-size: 16px;
+            font-size: 18px;
             margin-bottom: 32px;
           }
           .discover-section {
@@ -1472,7 +1472,7 @@ function JobSimulationPage() {
           border-radius: 8px;
           padding: 12px 32px;
           font-family: 'Inter', sans-serif;
-          font-size: 16px;
+          font-size: 18px;
           font-weight: 600;
           cursor: pointer;
           transition: background-color 0.3s, transform 0.2s;
@@ -1528,7 +1528,7 @@ function JobSimulationPage() {
 
         .sim-card-title {
           font-family: 'Inter', sans-serif;
-          font-size: 16px;
+          font-size: 18px;
           color: #1f2937;
           font-weight: 500;
           line-height: 1.5;
@@ -1553,7 +1553,7 @@ function JobSimulationPage() {
           align-items: center;
           gap: 6px;
           font-family: 'Inter', sans-serif;
-          font-size: 13px;
+          font-size: 15px;
           font-weight: 500;
           color: #3b82f6;
         }
@@ -1578,7 +1578,7 @@ function JobSimulationPage() {
           color: #ffffff;
           padding: 4px 10px;
           border-radius: 4px;
-          font-size: 11px;
+          font-size: 13px;
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 0.5px;
@@ -1591,7 +1591,7 @@ function JobSimulationPage() {
           padding-top: 16px;
           border-top: 1px solid #f3f4f6;
           font-family: 'Inter', sans-serif;
-          font-size: 13px;
+          font-size: 15px;
           color: #4b5563;
           font-weight: 500;
         }
@@ -1747,7 +1747,7 @@ function JobSimulationPage() {
             margin-bottom: 16px !important;
           }
           .jsim-banner-text p {
-            font-size: 15px !important;
+            font-size: 17px !important;
             margin-bottom: 12px !important;
             line-height: 1.5 !important;
           }
@@ -1803,7 +1803,7 @@ function JobSimulationPage() {
 
         .jsim-feature-text p {
           font-family: 'Inter', sans-serif;
-          font-size: 16px;
+          font-size: 18px;
           color: #555555;
           line-height: 1.6;
           margin-bottom: 16px;
@@ -1817,7 +1817,7 @@ function JobSimulationPage() {
 
         .jsim-feature-list li {
           font-family: 'Inter', sans-serif;
-          font-size: 16px;
+          font-size: 18px;
           color: #555555;
           line-height: 1.6;
           margin-bottom: 20px;
@@ -1881,7 +1881,7 @@ function JobSimulationPage() {
           }
           .jsim-feature-text p,
           .jsim-feature-list li {
-            font-size: 16px;
+            font-size: 18px;
           }
         }
 
@@ -1891,7 +1891,7 @@ function JobSimulationPage() {
             padding: 18px 20px 22px;
           }
           .jsim-cta-text {
-            font-size: 16px;
+            font-size: 18px;
           }
           .jsim-cta-btn {
             width: 100%;
@@ -1933,7 +1933,7 @@ function JobSimulationPage() {
           border-radius: 6px;
           padding: 14px 32px;
           font-family: 'Inter', sans-serif;
-          font-size: 16px;
+          font-size: 18px;
           font-weight: 600;
           text-decoration: none;
           cursor: pointer;
@@ -2155,7 +2155,7 @@ function JobSimulationPage() {
                 </a>
               </ScrollReveal>
             )) : (
-              <div style={{ padding: '40px', width: '100%', textAlign: 'center', gridColumn: '1 / -1', color: '#555b6e', fontFamily: 'Inter', fontSize: '18px' }}>
+              <div style={{ padding: '40px', width: '100%', textAlign: 'center', gridColumn: '1 / -1', color: '#555b6e', fontFamily: 'Inter', fontSize: '20px' }}>
                 No simulations found matching your criteria. Let's try adjusting the filters!
               </div>
             )}
@@ -2194,7 +2194,7 @@ function JobSimulationPage() {
           <ScrollReveal className="jsim-feature-row">
             <div className="jsim-feature-text">
               <h2>Showcase your expertise</h2>
-              <p style={{ marginBottom: '20px', fontSize: '18px', fontWeight: '500', color: '#333' }}>Job simulations empower you to</p>
+              <p style={{ marginBottom: '20px', fontSize: '20px', fontWeight: '500', color: '#333' }}>Job simulations empower you to</p>
               <ul className="jsim-feature-list">
                 <li>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

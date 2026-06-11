@@ -238,7 +238,7 @@ const SectionCard = ({ title, children, accent = '#CF2C2E' }) => (
       <span className="hidden md:inline-block h-1.5 w-1.5 rounded-full ring-4 ring-opacity-20" style={{ backgroundColor: accent, '--tw-ring-color': accent }} />
       <h3 className="font-['DM_Sans',sans-serif] text-[21px] sm:text-[26px] md:text-[30px] leading-tight font-bold text-[#0F172A]">{title}</h3>
     </div>
-    <div className="font-['DM_Sans',sans-serif] text-[15px] sm:text-[16px] md:text-[17px] leading-[1.7] sm:leading-[1.85] text-[#334155] space-y-4 sm:space-y-5">
+    <div className="font-['DM_Sans',sans-serif] text-[17px] sm:text-[18px] md:text-[19px] leading-[1.7] sm:leading-[1.85] text-[#334155] space-y-4 sm:space-y-5">
       {children}
     </div>
   </article>
@@ -276,7 +276,7 @@ function InsightCaseStudyPage() {
         <section className="w-full px-4 md:px-8 mt-8">
           <div className="max-w-[1000px] mx-auto rounded-2xl border border-[#E2E8F0] bg-white p-8 text-center">
             <h1 className="font-['DM_Sans',sans-serif] text-[30px] font-bold text-[#0F172A] mb-3">Case study not found</h1>
-            <p className="font-['DM_Sans',sans-serif] text-[16px] text-[#475569] mb-6">
+            <p className="font-['DM_Sans',sans-serif] text-[18px] text-[#334155] mb-6">
               The requested Skill Blueprint article is not available.
             </p>
             <button
@@ -302,7 +302,7 @@ function InsightCaseStudyPage() {
 
       <section className="w-full px-4 md:px-8 mt-6">
         <div className="max-w-[1280px] mx-auto">
-          <div className="mb-4 flex flex-wrap items-center gap-y-1.5 gap-x-2 text-[14px] font-['DM_Sans',sans-serif]">
+          <div className="mb-4 flex flex-wrap items-center gap-y-1.5 gap-x-2 text-[16px] font-['DM_Sans',sans-serif]">
             <button
               onClick={() => navigate('/insights/skill-blueprint')}
               className="text-[#0070AC] font-bold hover:underline"
@@ -311,7 +311,7 @@ function InsightCaseStudyPage() {
               Skill Blueprint
             </button>
             <span className="text-[#94A3B8]" style={{ whiteSpace: 'nowrap' }}>/</span>
-            <span className="text-[#475569]">{data.title}</span>
+            <span className="text-[#334155]">{data.title}</span>
           </div>
 
           <div
@@ -323,27 +323,27 @@ function InsightCaseStudyPage() {
           >
             <div className="absolute right-6 top-6 h-[110px] w-[110px] rounded-full blur-2xl" style={{ backgroundColor: `${accent}22` }} />
 
-            <p className="mt-2 sm:mt-4 font-['DM_Sans',sans-serif] text-[13px] sm:text-[15px] uppercase tracking-[0.1em] font-bold" style={{ color: accent }}>
+            <p className="mt-2 sm:mt-4 font-['DM_Sans',sans-serif] text-[15px] sm:text-[17px] uppercase tracking-[0.1em] font-bold" style={{ color: accent }}>
               {data.category}
             </p>
-            <p className="mt-1 sm:mt-2 font-['DM_Sans',sans-serif] text-[13px] sm:text-[15px] text-[#475569]">
+            <p className="mt-1 sm:mt-2 font-['DM_Sans',sans-serif] text-[15px] sm:text-[17px] text-[#334155]">
               {data.categorySubtitle}
             </p>
             <h1 className="mt-3 sm:mt-4 font-['DM_Sans',sans-serif] text-[clamp(24px,2.8vw,52px)] leading-[1.2] font-bold text-[#0F172A]">
               {data.title}
             </h1>
-            <h2 className="mt-2 sm:mt-3 font-['DM_Sans',sans-serif] text-[15px] sm:text-[18px] md:text-[22px] leading-[1.4] font-semibold text-[#334155]">
+            <h2 className="mt-2 sm:mt-3 font-['DM_Sans',sans-serif] text-[17px] sm:text-[20px] md:text-[22px] leading-[1.4] font-semibold text-[#334155]">
               {data.subtitle}
             </h2>
-            <p className="mt-4 sm:mt-6 max-w-[1000px] font-['DM_Sans',sans-serif] text-[14px] sm:text-[16px] leading-[1.7] sm:leading-[1.75] text-[#475569]">
+            <p className="mt-4 sm:mt-6 max-w-[1000px] font-['DM_Sans',sans-serif] text-[16px] sm:text-[18px] leading-[1.7] sm:leading-[1.75] text-[#334155]">
               {data.intro}
             </p>
 
             <div className="mt-5 sm:mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
               {data.highlights.map((item) => (
                 <div key={item.label} className="rounded-xl border p-2.5 sm:p-3" style={{ borderColor: `${accent}33`, backgroundColor: softAccent }}>
-                  <p className="font-['DM_Sans',sans-serif] text-[16px] sm:text-[20px] font-bold leading-none" style={{ color: accent }}>{item.value}</p>
-                  <p className="font-['DM_Sans',sans-serif] text-[10px] sm:text-[12px] text-[#475569] mt-1 sm:mt-1.5">{item.label}</p>
+                  <p className="font-['DM_Sans',sans-serif] text-[18px] sm:text-[20px] font-bold leading-none" style={{ color: accent }}>{item.value}</p>
+                  <p className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[14px] text-[#334155] mt-1 sm:mt-1.5">{item.label}</p>
                 </div>
               ))}
             </div>
@@ -372,7 +372,7 @@ function InsightCaseStudyPage() {
                   <div className="space-y-5">
                     {data.architecture.map((item) => (
                       <div key={item.title} className="mb-6 last:mb-0">
-                        <h4 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">{item.title}</h4>
+                        <h4 className="font-['DM_Sans',sans-serif] text-[20px] font-bold text-[#0F172A] mb-3">{item.title}</h4>
                         <BulletList items={item.points} dotColor={accent} />
                       </div>
                     ))}
@@ -402,7 +402,7 @@ function InsightCaseStudyPage() {
                     {data.highlights.map((item) => (
                       <div key={item.label}>
                         <p className="font-['DM_Sans',sans-serif] text-[28px] font-bold leading-none mb-2" style={{ color: accent }}>{item.value}</p>
-                        <p className="font-['DM_Sans',sans-serif] text-[14px] font-medium text-[#475569]">{item.label}</p>
+                        <p className="font-['DM_Sans',sans-serif] text-[16px] font-medium text-[#334155]">{item.label}</p>
                       </div>
                     ))}
                   </div>
@@ -422,7 +422,7 @@ function InsightCaseStudyPage() {
                   <div className="space-y-5">
                     {data.personalizationEngine.map((item) => (
                       <div key={item.title} className="mb-6 last:mb-0">
-                        <h4 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-3">{item.title}</h4>
+                        <h4 className="font-['DM_Sans',sans-serif] text-[20px] font-bold text-[#0F172A] mb-3">{item.title}</h4>
                         <BulletList items={item.points} dotColor={accent} />
                       </div>
                     ))}
@@ -433,7 +433,7 @@ function InsightCaseStudyPage() {
                   <div className="space-y-4">
                     {data.implementationJourney.map((phase) => (
                       <div key={phase.phase} className="mb-6 last:mb-0 border-l-2 pl-5" style={{ borderColor: accent }}>
-                        <h4 className="font-['DM_Sans',sans-serif] text-[18px] font-bold mb-3" style={{ color: accent }}>{phase.phase}</h4>
+                        <h4 className="font-['DM_Sans',sans-serif] text-[20px] font-bold mb-3" style={{ color: accent }}>{phase.phase}</h4>
                         <BulletList items={phase.points} dotColor={accent} />
                       </div>
                     ))}
@@ -474,7 +474,7 @@ function InsightCaseStudyPage() {
                   <div className="space-y-4">
                     {data.futureTrends.map((trend) => (
                       <div key={trend.title} className="mb-6 last:mb-0">
-                        <h4 className="font-['DM_Sans',sans-serif] text-[18px] font-bold text-[#0F172A] mb-2">{trend.title}</h4>
+                        <h4 className="font-['DM_Sans',sans-serif] text-[20px] font-bold text-[#0F172A] mb-2">{trend.title}</h4>
                         <p>{trend.description}</p>
                       </div>
                     ))}
@@ -485,7 +485,7 @@ function InsightCaseStudyPage() {
                   <div className="space-y-4">
                     {data.implementationRoadmap.map((phase) => (
                       <div key={phase.phase} className="mb-6 last:mb-0 border-l-2 pl-5" style={{ borderColor: accent }}>
-                        <h4 className="font-['DM_Sans',sans-serif] text-[18px] font-bold mb-3" style={{ color: accent }}>{phase.phase}</h4>
+                        <h4 className="font-['DM_Sans',sans-serif] text-[20px] font-bold mb-3" style={{ color: accent }}>{phase.phase}</h4>
                         <BulletList items={phase.points} dotColor={accent} />
                       </div>
                     ))}
@@ -503,7 +503,7 @@ function InsightCaseStudyPage() {
                     {data.highlights.map((item) => (
                       <div key={item.label}>
                         <p className="font-['DM_Sans',sans-serif] text-[28px] font-bold leading-none mb-2" style={{ color: accent }}>{item.value}</p>
-                        <p className="font-['DM_Sans',sans-serif] text-[14px] font-medium text-[#475569]">{item.label}</p>
+                        <p className="font-['DM_Sans',sans-serif] text-[16px] font-medium text-[#334155]">{item.label}</p>
                       </div>
                     ))}
                   </div>
@@ -512,19 +512,19 @@ function InsightCaseStudyPage() {
             )}
 
             <article className="rounded-2xl border p-5 sm:p-6" style={{ borderColor: `${accent}33`, backgroundColor: softAccent }}>
-              <p className="font-['DM_Sans',sans-serif] text-[13px] uppercase tracking-[0.08em] font-bold" style={{ color: accent }}>AI Readiness Signal</p>
+              <p className="font-['DM_Sans',sans-serif] text-[15px] uppercase tracking-[0.08em] font-bold" style={{ color: accent }}>AI Readiness Signal</p>
               <ul className="mt-3 space-y-3 pl-0 list-none">
                 {strategicSignals.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
                     <span className="mt-1 flex-shrink-0" style={{ color: accent }}><BrainCircuit size={15} /></span>
-                    <span className="font-['DM_Sans',sans-serif] text-[13.5px] sm:text-[14px] leading-[1.5] sm:leading-[1.55] text-[#334155]">{item}</span>
+                    <span className="font-['DM_Sans',sans-serif] text-[15.5px] sm:text-[16px] leading-[1.5] sm:leading-[1.55] text-[#334155]">{item}</span>
                   </li>
                 ))}
               </ul>
             </article>
 
             <article className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 md:p-8 shadow-sm mt-8">
-              <p className="font-['DM_Sans',sans-serif] text-[15px] text-[#475569] mb-4">
+              <p className="font-['DM_Sans',sans-serif] text-[17px] text-[#334155] mb-4">
                 Explore the other Skill Blueprint case study for a complete AI-powered workforce transformation perspective.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center">

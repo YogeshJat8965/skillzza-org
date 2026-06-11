@@ -72,8 +72,8 @@ const SolutionSkillStudio = () => {
             image: getAssetPath('/img/potential_meter_right_img.png'),
         },
         {
-            label: 'Xperience platform',
-            title: 'Xperience Platform',
+            label: 'Talent Twin',
+            title: 'Talent Twin',
             subtitle: 'Real-World Simulations That Bridge the Gap Between Learning and Employment',
             bullets: [
                 'Challenge-based learning journeys mapped to industry roles.',
@@ -84,20 +84,6 @@ const SolutionSkillStudio = () => {
             cta1: 'Start Your Journey',
             cta2: 'Explore Simulations',
             image: xperienceImg,
-        },
-        {
-            label: 'Talent Transformation',
-            title: 'Talent Transformation',
-            subtitle: 'Empowering Organizations to Upskill, Reskill and Future-Proof Their Workforce',
-            bullets: [
-                'Workforce skill mapping & gap analysis.',
-                'Role-specific upskilling programs.',
-                'Succession & talent planning analytics.',
-                'Behavioral matching for team performance.',
-            ],
-            cta1: 'Transform Your Team',
-            cta2: 'View Programs',
-            image: talentImg,
         },
         {
             label: 'AI HackNex',
@@ -114,8 +100,8 @@ const SolutionSkillStudio = () => {
             image: aiHackNexImg,
         },
         {
-            label: 'Talent TwinRecruit',
-            title: 'Talent TwinRecruit',
+            label: 'Hire Twin',
+            title: 'Hire Twin',
             subtitle: 'AI-Powered Talent Marketplace Connecting Verified Skills with the Right Roles',
             bullets: [
                 'AI-matched, skill-verified talent pools.',
@@ -126,6 +112,20 @@ const SolutionSkillStudio = () => {
             cta1: 'Find Talent',
             cta2: 'Post a Role',
             image: getAssetPath('/improvements/futuristic-technology-concept (1).jpg'),
+        },
+        {
+            label: 'Talent Intelligence',
+            title: 'Talent Intelligence',
+            subtitle: 'Empowering Organizations to Upskill, Reskill and Future-Proof Their Workforce',
+            bullets: [
+                'Workforce skill mapping & gap analysis.',
+                'Role-specific upskilling programs.',
+                'Succession & talent planning analytics.',
+                'Behavioral matching for team performance.',
+            ],
+            cta1: 'Transform Your Team',
+            cta2: 'View Programs',
+            image: talentImg,
         },
     ], []);
 
@@ -238,7 +238,7 @@ const SolutionSkillStudio = () => {
                     padding: 10px !important;
                   }
                   .sss-tab-btn {
-                    font-size: 12px !important;
+                    font-size: 14px !important;
                     padding: 8px 6px !important;
                     min-width: 0 !important;
                     width: 100% !important;
@@ -262,14 +262,14 @@ const SolutionSkillStudio = () => {
                     text-align: center !important;
                   }
                   .sss-subtitle {
-                    font-size: 14px !important;
+                    font-size: 16px !important;
                     text-align: center !important;
                   }
                   .sss-bullet {
-                    font-size: 13px !important;
+                    font-size: 15px !important;
                   }
                   .sss-cta {
-                    font-size: 14px !important;
+                    font-size: 16px !important;
                     padding: 12px 20px !important;
                     width: 100% !important;
                     text-align: center !important;
@@ -409,10 +409,10 @@ const SolutionSkillStudio = () => {
                                 className="sss-cta transition-all duration-300 hover:opacity-90" onClick={() => {
                                     if (activeTab === 0) window.location.href = getRoutePath('/product/potential-meter');
                                     if (activeTab === 1) window.location.href = getRoutePath('/product/xperience-platform');
-                                    if (activeTab === 2) window.location.href = getRoutePath('/contact-us');
+                                    if (activeTab === 4) window.location.href = getRoutePath('/contact-us');
                                 }} style={{
                                     fontFamily: "'DM Sans', sans-serif",
-                                    fontSize: '15px',
+                                    fontSize: '17px',
                                     fontWeight: 600,
                                     padding: '12px 28px',
                                     borderRadius: '8px',
@@ -432,7 +432,7 @@ const SolutionSkillStudio = () => {
                                 }}
                                 style={{
                                     fontFamily: "'DM Sans', sans-serif",
-                                    fontSize: '15px',
+                                    fontSize: '17px',
                                     fontWeight: 600,
                                     padding: '12px 28px',
                                     borderRadius: '8px',

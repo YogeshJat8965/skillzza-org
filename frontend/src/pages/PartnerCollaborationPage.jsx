@@ -196,9 +196,9 @@ function PartnerCollaborationPage() {
         .collab-partners__intro {
           max-width: 1060px;
           margin: 0 auto clamp(30px, 4vw, 44px);
-          font-size: 18px;
+          font-size: 20px;
           line-height: 1.55;
-          color: #475569;
+          color: #334155;
           text-align: center;
         }
 
@@ -325,7 +325,7 @@ function PartnerCollaborationPage() {
 
         .section-banner__description {
           margin: 4px 0 0;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 1.65;
           color: #e2e8f0;
           text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
@@ -342,7 +342,7 @@ function PartnerCollaborationPage() {
 
         .section-description-below__text {
           max-width: 900px;
-          font-size: 18px;
+          font-size: 20px;
           line-height: 1.65;
           color: #4a5568;
           margin: 0;
@@ -395,7 +395,7 @@ function PartnerCollaborationPage() {
           margin: 0;
           padding-left: 20px;
           list-style-type: disc;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 1.55;
           color: #334155;
         }
@@ -512,7 +512,7 @@ function PartnerCollaborationPage() {
           border-radius: 50%;
           background: linear-gradient(135deg, #f3ad3a, #e8942d);
           color: #ffffff;
-          font-size: 16px;
+          font-size: 18px;
           font-weight: 700;
           margin-bottom: 14px;
           box-shadow: 0 4px 12px rgba(243, 173, 58, 0.35);
@@ -527,14 +527,14 @@ function PartnerCollaborationPage() {
 
         .cards-section__card-text {
           margin: 0;
-          font-size: 15px;
+          font-size: 17px;
           line-height: 1.55;
-          color: #475569;
+          color: #334155;
         }
 
         .cards-section__cta {
           margin: clamp(30px, 4vw, 48px) auto 0;
-          font-size: 18px;
+          font-size: 20px;
           font-weight: 500;
           color: #1e293b;
           font-style: italic;
@@ -549,7 +549,7 @@ function PartnerCollaborationPage() {
           border-radius: 999px;
           background: linear-gradient(135deg, #8B0404, #BD1723);
           color: #ffffff;
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 700;
           text-decoration: none;
           letter-spacing: 0.2px;
@@ -604,7 +604,7 @@ function PartnerCollaborationPage() {
 
         .collab-cta__text {
           margin: 0;
-          font-size: 18px;
+          font-size: 20px;
           line-height: 1.65;
           color: #cbd5e1;
         }
@@ -680,12 +680,12 @@ function PartnerCollaborationPage() {
           }
 
           .collab-partners__intro, .section-description-below__text, .collab-cta__text {
-            font-size: 15px !important;
+            font-size: 17px !important;
             line-height: 1.6 !important;
           }
 
           .section-banner__subtitle {
-            font-size: 18px !important;
+            font-size: 20px !important;
           }
 
           .collab-partners__grid {
@@ -732,7 +732,7 @@ function PartnerCollaborationPage() {
             grid-template-columns: 1fr !important;
           }
           .collab-partners__card-title {
-            font-size: 18px !important;
+            font-size: 20px !important;
           }
         }
       `}</style>
@@ -797,116 +797,116 @@ function PartnerCollaborationPage() {
         {/* ========================================== */}
 
         {selectedCard === 'corporate' ? (
-        <>
-        <section className="section-banner section-banner--corporate" data-collab-section="corporate">
-          <div className="section-banner__content collab-animate anim-fade-up">
-            <h3 className="section-banner__title">Corporate Partnerships</h3>
-            <h4 className="section-banner__subtitle">Upskill Your Workforce. Empower Innovation.</h4>
-          </div>
-        </section>
-
-        <section className="section-description-below">
-          <p className="section-description-below__text collab-animate anim-fade-up">
-            In today's rapidly evolving business landscape, organizations need agile, skilled talent to stay competitive.
-            Skillzza partners with forward-thinking companies to create future-ready upskilling and reskilling programs that align with your strategic vision.
-          </p>
-        </section>
-
-        {/* Why Choose Skillzza - content left, image right */}
-        <section className="detail-section">
-          <div className="detail-section__inner">
-            <div className="detail-section__content collab-animate anim-slide-left">
-              <h3 className="detail-section__heading">Why Choose Skillzza as Your Learning Partner?</h3>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Tailored Workforce Solutions</h4>
-                <ul className="detail-section__list">
-                  <li>Custom learning ecosystems designed for your industry's specific challenges</li>
-                  <li>Scalable programs that grow with your organization</li>
-                  <li>ROI-focused training that delivers measurable results</li>
-                </ul>
+          <>
+            <section className="section-banner section-banner--corporate" data-collab-section="corporate">
+              <div className="section-banner__content collab-animate anim-fade-up">
+                <h3 className="section-banner__title">Corporate Partnerships</h3>
+                <h4 className="section-banner__subtitle">Upskill Your Workforce. Empower Innovation.</h4>
               </div>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Enhanced Employee Experience</h4>
-                <ul className="detail-section__list">
-                  <li>Cutting-edge skills development that boosts engagement and retention</li>
-                  <li>Career progression pathways that attract top talent</li>
-                  <li>Performance-driven learning that increases productivity</li>
-                </ul>
-              </div>
-            </div>
-            <figure className="detail-section__figure collab-animate anim-slide-right">
-              <img
-                className="detail-section__image"
-                src={getAssetPath('/Company/collaboration/for_corporate_only_img1.jpg')}
-                alt="Corporate leaders collaborating during a learning session"
-              />
-            </figure>
-          </div>
-        </section>
+            </section>
 
-        {/* Future-First Partnerships - image left, content right */}
-        <section className="detail-section">
-          <div className="detail-section__inner detail-section__inner--reverse">
-            <div className="detail-section__content collab-animate anim-slide-right">
-              <h3 className="detail-section__heading">Future-First Partnerships That Deliver Impact</h3>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Future-Focused Curriculum</h4>
-                <ul className="detail-section__list">
-                  <li>AI, emerging technologies, and digital transformation training</li>
-                  <li>Leadership development and soft skills enhancement</li>
-                  <li>Sustainability and green skills for responsible business growth</li>
-                </ul>
-              </div>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Meaningful CSR Impact</h4>
-                <ul className="detail-section__list">
-                  <li>Purpose-driven programs that uplift underserved communities</li>
-                  <li>Skills-based social impact initiatives with measurable outcomes</li>
-                  <li>Employee volunteer opportunities that build team culture</li>
-                </ul>
-              </div>
-            </div>
-            <figure className="detail-section__figure collab-animate anim-slide-left">
-              <img
-                className="detail-section__image"
-                src={getAssetPath('/Company/collaboration/corporate%20partnership%20image%202.jpg')}
-                alt="Professionals collaborating during a corporate partnership workshop"
-              />
-            </figure>
-          </div>
-        </section>
+            <section className="section-description-below">
+              <p className="section-description-below__text collab-animate anim-fade-up">
+                In today's rapidly evolving business landscape, organizations need agile, skilled talent to stay competitive.
+                Skillzza partners with forward-thinking companies to create future-ready upskilling and reskilling programs that align with your strategic vision.
+              </p>
+            </section>
 
-        {/* Partnership Models Cards */}
-        <section className="cards-section">
-          <div className="cards-section__inner">
-            <h3 className="cards-section__heading collab-animate anim-fade-up">Partnership Models We Offer</h3>
-            <div className="cards-section__grid">
-              <article className="cards-section__card collab-animate anim-scale-in anim-delay-1">
-                
-                <h4 className="cards-section__card-title">Custom Learning Academies</h4>
-                <p className="cards-section__card-text">End-to-end skill development programs tailored to your workforce.</p>
-              </article>
-              <article className="cards-section__card collab-animate anim-scale-in anim-delay-2">
-                
-                <h4 className="cards-section__card-title">Innovation Challenges</h4>
-                <p className="cards-section__card-text">Hackathons and bootcamps to discover and nurture internal talent.</p>
-              </article>
-              <article className="cards-section__card collab-animate anim-scale-in anim-delay-3">
-                
-                <h4 className="cards-section__card-title">CSR Skill Initiatives</h4>
-                <p className="cards-section__card-text">Community-focused programs that create social value while engaging employees.</p>
-              </article>
-              <article className="cards-section__card collab-animate anim-scale-in anim-delay-4">
-                
-                <h4 className="cards-section__card-title">Skillzza Xperience Platform</h4>
-                <p className="cards-section__card-text">Immersive virtual simulations for hands-on learning and assessment.</p>
-              </article>
-            </div>
-            <p className="cards-section__cta collab-animate anim-fade-up">Ready to build a workforce that's skilled for today and prepared for tomorrow?</p>
-            <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
-          </div>
-        </section>
-        </>
+            {/* Why Choose Skillzza - content left, image right */}
+            <section className="detail-section">
+              <div className="detail-section__inner">
+                <div className="detail-section__content collab-animate anim-slide-left">
+                  <h3 className="detail-section__heading">Why Choose Skillzza as Your Learning Partner?</h3>
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Tailored Workforce Solutions</h4>
+                    <ul className="detail-section__list">
+                      <li>Custom learning ecosystems designed for your industry's specific challenges</li>
+                      <li>Scalable programs that grow with your organization</li>
+                      <li>ROI-focused training that delivers measurable results</li>
+                    </ul>
+                  </div>
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Enhanced Employee Experience</h4>
+                    <ul className="detail-section__list">
+                      <li>Cutting-edge skills development that boosts engagement and retention</li>
+                      <li>Career progression pathways that attract top talent</li>
+                      <li>Performance-driven learning that increases productivity</li>
+                    </ul>
+                  </div>
+                </div>
+                <figure className="detail-section__figure collab-animate anim-slide-right">
+                  <img
+                    className="detail-section__image"
+                    src={getAssetPath('/Company/collaboration/for_corporate_only_img1.jpg')}
+                    alt="Corporate leaders collaborating during a learning session"
+                  />
+                </figure>
+              </div>
+            </section>
+
+            {/* Future-First Partnerships - image left, content right */}
+            <section className="detail-section">
+              <div className="detail-section__inner detail-section__inner--reverse">
+                <div className="detail-section__content collab-animate anim-slide-right">
+                  <h3 className="detail-section__heading">Future-First Partnerships That Deliver Impact</h3>
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Future-Focused Curriculum</h4>
+                    <ul className="detail-section__list">
+                      <li>AI, emerging technologies, and digital transformation training</li>
+                      <li>Leadership development and soft skills enhancement</li>
+                      <li>Sustainability and green skills for responsible business growth</li>
+                    </ul>
+                  </div>
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Meaningful CSR Impact</h4>
+                    <ul className="detail-section__list">
+                      <li>Purpose-driven programs that uplift underserved communities</li>
+                      <li>Skills-based social impact initiatives with measurable outcomes</li>
+                      <li>Employee volunteer opportunities that build team culture</li>
+                    </ul>
+                  </div>
+                </div>
+                <figure className="detail-section__figure collab-animate anim-slide-left">
+                  <img
+                    className="detail-section__image"
+                    src={getAssetPath('/Company/collaboration/corporate%20partnership%20image%202.jpg')}
+                    alt="Professionals collaborating during a corporate partnership workshop"
+                  />
+                </figure>
+              </div>
+            </section>
+
+            {/* Partnership Models Cards */}
+            <section className="cards-section">
+              <div className="cards-section__inner">
+                <h3 className="cards-section__heading collab-animate anim-fade-up">Partnership Models We Offer</h3>
+                <div className="cards-section__grid">
+                  <article className="cards-section__card collab-animate anim-scale-in anim-delay-1">
+
+                    <h4 className="cards-section__card-title">Custom Learning Academies</h4>
+                    <p className="cards-section__card-text">End-to-end skill development programs tailored to your workforce.</p>
+                  </article>
+                  <article className="cards-section__card collab-animate anim-scale-in anim-delay-2">
+
+                    <h4 className="cards-section__card-title">Innovation Challenges</h4>
+                    <p className="cards-section__card-text">Hackathons and bootcamps to discover and nurture internal talent.</p>
+                  </article>
+                  <article className="cards-section__card collab-animate anim-scale-in anim-delay-3">
+
+                    <h4 className="cards-section__card-title">CSR Skill Initiatives</h4>
+                    <p className="cards-section__card-text">Community-focused programs that create social value while engaging employees.</p>
+                  </article>
+                  <article className="cards-section__card collab-animate anim-scale-in anim-delay-4">
+
+                    <h4 className="cards-section__card-title">Talent Twin</h4>
+                    <p className="cards-section__card-text">Immersive virtual simulations for hands-on learning and assessment.</p>
+                  </article>
+                </div>
+                <p className="cards-section__cta collab-animate anim-fade-up">Ready to build a workforce that's skilled for today and prepared for tomorrow?</p>
+                <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
+              </div>
+            </section>
+          </>
         ) : null}
 
         {/* ========================================== */}
@@ -914,141 +914,141 @@ function PartnerCollaborationPage() {
         {/* ========================================== */}
 
         {selectedCard === 'government' ? (
-        <>
-        <section className="section-banner section-banner--govt" data-collab-section="government">
-          <div className="section-banner__content collab-animate anim-fade-up">
-            <h3 className="section-banner__title">Government Partnerships</h3>
-            <h4 className="section-banner__subtitle">Building a Skilled Nation Together</h4>
-          </div>
-        </section>
-
-        <section className="section-description-below">
-          <p className="section-description-below__text collab-animate anim-fade-up">
-            Skillzza collaborates with government bodies at every level to design scalable, sustainable skill
-            development programs that bridge workforce gaps, accelerate economic growth, and promote social equity
-            across communities.
-          </p>
-        </section>
-
-        {/* How We Empower Governments - content left, image right */}
-        <section className="detail-section">
-          <div className="detail-section__inner">
-            <div className="detail-section__content collab-animate anim-slide-left">
-              <h3 className="detail-section__heading">How We Empower Governments</h3>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Policy-Integrated Programs</h4>
-                <ul className="detail-section__list">
-                  <li>Co-develop initiatives aligned with national development goals and UN SDGs</li>
-                  <li>Evidence-based program design with clear success metrics</li>
-                  <li>Flexible implementation models adapted to local contexts</li>
-                </ul>
+          <>
+            <section className="section-banner section-banner--govt" data-collab-section="government">
+              <div className="section-banner__content collab-animate anim-fade-up">
+                <h3 className="section-banner__title">Government Partnerships</h3>
+                <h4 className="section-banner__subtitle">Building a Skilled Nation Together</h4>
               </div>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Employment-Ready Training</h4>
-                <ul className="detail-section__list">
-                  <li>Industry-specific upskilling in high-demand sectors (AI, EV, renewable energy, healthcare)</li>
-                  <li>Job placement partnerships with leading employers</li>
-                  <li>Entrepreneurship development for economic self-reliance</li>
-                </ul>
-              </div>
-            </div>
-            <figure className="detail-section__figure collab-animate anim-slide-right">
-              <img
-                className="detail-section__image"
-                src={getAssetPath('/Company/collaboration/howWeSupportGovt_image1.jpg')}
-                alt="Government partnership collaboration for skill development"
-              />
-            </figure>
-          </div>
-        </section>
+            </section>
 
-        {/* Public-Private Partnerships - image left, content right */}
-        <section className="detail-section">
-          <div className="detail-section__inner detail-section__inner--reverse">
-            <div className="detail-section__content collab-animate anim-slide-right">
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Public-Private Partnerships</h4>
-                <ul className="detail-section__list">
-                  <li>Collaborative funding and implementation models</li>
-                  <li>Industry expertise combined with public reach</li>
-                  <li>Sustainable programs with long-term impact</li>
-                </ul>
-              </div>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Technology-Enabled Delivery</h4>
-                <ul className="detail-section__list">
-                  <li>Digital-first platforms for accessible, scalable learning</li>
-                  <li>Real-time progress tracking and impact measurement</li>
-                  <li>Mobile-friendly solutions for diverse populations</li>
-                </ul>
-              </div>
-            </div>
-            <figure className="detail-section__figure collab-animate anim-slide-left">
-              <img
-                className="detail-section__image"
-                src={getAssetPath('/Company/collaboration/KeyGovtCollaborationAreas_image2.jpg')}
-                alt="Key government collaboration areas"
-              />
-            </figure>
-          </div>
-        </section>
+            <section className="section-description-below">
+              <p className="section-description-below__text collab-animate anim-fade-up">
+                Skillzza collaborates with government bodies at every level to design scalable, sustainable skill
+                development programs that bridge workforce gaps, accelerate economic growth, and promote social equity
+                across communities.
+              </p>
+            </section>
 
-        {/* Priority Focus Areas - content left, image right */}
-        <section className="detail-section">
-          <div className="detail-section__inner">
-            <div className="detail-section__content collab-animate anim-slide-left">
-              <h3 className="detail-section__heading">Focus Areas</h3>
-              <div className="detail-section__block">
-                <ul className="detail-section__list" style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  <li><span className="detail-section__subheading" style={{ fontSize: '18px' }}>Youth Empowerment</span></li>
-                  <li><span className="detail-section__subheading" style={{ fontSize: '18px' }}>Women's Economic Participation</span></li>
-                  <li><span className="detail-section__subheading" style={{ fontSize: '18px' }}>Rural Development</span></li>
-                  <li><span className="detail-section__subheading" style={{ fontSize: '18px' }}>Green Transition</span></li>
-                  <li><span className="detail-section__subheading" style={{ fontSize: '18px' }}>Digital Inclusion</span></li>
-                </ul>
+            {/* How We Empower Governments - content left, image right */}
+            <section className="detail-section">
+              <div className="detail-section__inner">
+                <div className="detail-section__content collab-animate anim-slide-left">
+                  <h3 className="detail-section__heading">How We Empower Governments</h3>
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Policy-Integrated Programs</h4>
+                    <ul className="detail-section__list">
+                      <li>Co-develop initiatives aligned with national development goals and UN SDGs</li>
+                      <li>Evidence-based program design with clear success metrics</li>
+                      <li>Flexible implementation models adapted to local contexts</li>
+                    </ul>
+                  </div>
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Employment-Ready Training</h4>
+                    <ul className="detail-section__list">
+                      <li>Industry-specific upskilling in high-demand sectors (AI, EV, renewable energy, healthcare)</li>
+                      <li>Job placement partnerships with leading employers</li>
+                      <li>Entrepreneurship development for economic self-reliance</li>
+                    </ul>
+                  </div>
+                </div>
+                <figure className="detail-section__figure collab-animate anim-slide-right">
+                  <img
+                    className="detail-section__image"
+                    src={getAssetPath('/Company/collaboration/howWeSupportGovt_image1.jpg')}
+                    alt="Government partnership collaboration for skill development"
+                  />
+                </figure>
               </div>
-            </div>
-            <figure className="detail-section__figure collab-animate anim-slide-right">
-              <img
-                className="detail-section__image"
-                src={getAssetPath('/Company/collaboration/govImageDiscuss.jpg')}
-                alt="Priority focus areas for government partnerships"
-              />
-            </figure>
-          </div>
-        </section>
+            </section>
 
-        {/* Our Proven Engagement Process Cards */}
-        <section className="cards-section">
-          <div className="cards-section__inner">
-            <h3 className="cards-section__heading collab-animate anim-fade-up">Our Proven Engagement Process</h3>
-            <div className="cards-section__grid">
-              <article className="cards-section__card collab-animate anim-scale-in anim-delay-1">
-                
-                <h4 className="cards-section__card-title">Vision Alignment</h4>
-                <p className="cards-section__card-text">Understanding your development priorities and constraints</p>
-              </article>
-              <article className="cards-section__card collab-animate anim-scale-in anim-delay-2">
-                
-                <h4 className="cards-section__card-title">Strategic Co-Creation</h4>
-                <p className="cards-section__card-text">Designing impactful, evidence-based programs</p>
-              </article>
-              <article className="cards-section__card collab-animate anim-scale-in anim-delay-3">
-                
-                <h4 className="cards-section__card-title">Technology-Enabled Delivery</h4>
-                <p className="cards-section__card-text">Implementing with digital tools for scale and efficiency</p>
-              </article>
-              <article className="cards-section__card collab-animate anim-scale-in anim-delay-4">
-                
-                <h4 className="cards-section__card-title">Impact Measurement</h4>
-                <p className="cards-section__card-text">Continuous monitoring and evaluation for sustainable success</p>
-              </article>
-            </div>
-            <p className="cards-section__cta collab-animate anim-fade-up">Together, let's build a skilled and future-ready nation.</p>
-            <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
-          </div>
-        </section>
-        </>
+            {/* Public-Private Partnerships - image left, content right */}
+            <section className="detail-section">
+              <div className="detail-section__inner detail-section__inner--reverse">
+                <div className="detail-section__content collab-animate anim-slide-right">
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Public-Private Partnerships</h4>
+                    <ul className="detail-section__list">
+                      <li>Collaborative funding and implementation models</li>
+                      <li>Industry expertise combined with public reach</li>
+                      <li>Sustainable programs with long-term impact</li>
+                    </ul>
+                  </div>
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Technology-Enabled Delivery</h4>
+                    <ul className="detail-section__list">
+                      <li>Digital-first platforms for accessible, scalable learning</li>
+                      <li>Real-time progress tracking and impact measurement</li>
+                      <li>Mobile-friendly solutions for diverse populations</li>
+                    </ul>
+                  </div>
+                </div>
+                <figure className="detail-section__figure collab-animate anim-slide-left">
+                  <img
+                    className="detail-section__image"
+                    src={getAssetPath('/Company/collaboration/KeyGovtCollaborationAreas_image2.jpg')}
+                    alt="Key government collaboration areas"
+                  />
+                </figure>
+              </div>
+            </section>
+
+            {/* Priority Focus Areas - content left, image right */}
+            <section className="detail-section">
+              <div className="detail-section__inner">
+                <div className="detail-section__content collab-animate anim-slide-left">
+                  <h3 className="detail-section__heading">Focus Areas</h3>
+                  <div className="detail-section__block">
+                    <ul className="detail-section__list" style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                      <li><span className="detail-section__subheading" style={{ fontSize: '20px' }}>Youth Empowerment</span></li>
+                      <li><span className="detail-section__subheading" style={{ fontSize: '20px' }}>Women's Economic Participation</span></li>
+                      <li><span className="detail-section__subheading" style={{ fontSize: '20px' }}>Rural Development</span></li>
+                      <li><span className="detail-section__subheading" style={{ fontSize: '20px' }}>Green Transition</span></li>
+                      <li><span className="detail-section__subheading" style={{ fontSize: '20px' }}>Digital Inclusion</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <figure className="detail-section__figure collab-animate anim-slide-right">
+                  <img
+                    className="detail-section__image"
+                    src={getAssetPath('/Company/collaboration/govImageDiscuss.jpg')}
+                    alt="Priority focus areas for government partnerships"
+                  />
+                </figure>
+              </div>
+            </section>
+
+            {/* Our Proven Engagement Process Cards */}
+            <section className="cards-section">
+              <div className="cards-section__inner">
+                <h3 className="cards-section__heading collab-animate anim-fade-up">Our Proven Engagement Process</h3>
+                <div className="cards-section__grid">
+                  <article className="cards-section__card collab-animate anim-scale-in anim-delay-1">
+
+                    <h4 className="cards-section__card-title">Vision Alignment</h4>
+                    <p className="cards-section__card-text">Understanding your development priorities and constraints</p>
+                  </article>
+                  <article className="cards-section__card collab-animate anim-scale-in anim-delay-2">
+
+                    <h4 className="cards-section__card-title">Strategic Co-Creation</h4>
+                    <p className="cards-section__card-text">Designing impactful, evidence-based programs</p>
+                  </article>
+                  <article className="cards-section__card collab-animate anim-scale-in anim-delay-3">
+
+                    <h4 className="cards-section__card-title">Technology-Enabled Delivery</h4>
+                    <p className="cards-section__card-text">Implementing with digital tools for scale and efficiency</p>
+                  </article>
+                  <article className="cards-section__card collab-animate anim-scale-in anim-delay-4">
+
+                    <h4 className="cards-section__card-title">Impact Measurement</h4>
+                    <p className="cards-section__card-text">Continuous monitoring and evaluation for sustainable success</p>
+                  </article>
+                </div>
+                <p className="cards-section__cta collab-animate anim-fade-up">Together, let's build a skilled and future-ready nation.</p>
+                <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
+              </div>
+            </section>
+          </>
         ) : null}
 
         {/* ========================================== */}
@@ -1056,152 +1056,152 @@ function PartnerCollaborationPage() {
         {/* ========================================== */}
 
         {selectedCard === 'education' ? (
-        <>
-        <section className="section-banner section-banner--education" data-collab-section="education">
-          <div className="section-banner__content collab-animate anim-fade-up">
-            <h3 className="section-banner__title">Educational Partnerships</h3>
-            <h4 className="section-banner__subtitle">Empowering Students for Tomorrow's World</h4>
-          </div>
-        </section>
+          <>
+            <section className="section-banner section-banner--education" data-collab-section="education">
+              <div className="section-banner__content collab-animate anim-fade-up">
+                <h3 className="section-banner__title">Educational Partnerships</h3>
+                <h4 className="section-banner__subtitle">Empowering Students for Tomorrow's World</h4>
+              </div>
+            </section>
 
-        <section className="section-description-below">
-          <p className="section-description-below__text collab-animate anim-fade-up">
-            Skillzza partners with schools and educational institutions to equip young minds with
-            essential 21st-century skills. Our programs go beyond traditional academics to inspire
-            innovation, creativity, and leadership-preparing students to become tomorrow's
-            changemakers.
-          </p>
-        </section>
+            <section className="section-description-below">
+              <p className="section-description-below__text collab-animate anim-fade-up">
+                Skillzza partners with schools and educational institutions to equip young minds with
+                essential 21st-century skills. Our programs go beyond traditional academics to inspire
+                innovation, creativity, and leadership-preparing students to become tomorrow's
+                changemakers.
+              </p>
+            </section>
 
-        {/* Why Educational Institutions Choose Skillzza - image left, content right */}
-        <section className="detail-section">
-          <div className="detail-section__inner detail-section__inner--reverse">
-            <div className="detail-section__content collab-animate anim-slide-right">
-              <h3 className="detail-section__heading">Why Educational Institutions Choose Skillzza</h3>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Holistic Skill Development</h4>
-                <ul className="detail-section__list">
-                  <li>Critical thinking, communication, collaboration, and creativity</li>
-                  <li>Social-emotional learning integrated with technical skills</li>
-                  <li>Growth mindset and resilience building</li>
-                </ul>
+            {/* Why Educational Institutions Choose Skillzza - image left, content right */}
+            <section className="detail-section">
+              <div className="detail-section__inner detail-section__inner--reverse">
+                <div className="detail-section__content collab-animate anim-slide-right">
+                  <h3 className="detail-section__heading">Why Educational Institutions Choose Skillzza</h3>
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Holistic Skill Development</h4>
+                    <ul className="detail-section__list">
+                      <li>Critical thinking, communication, collaboration, and creativity</li>
+                      <li>Social-emotional learning integrated with technical skills</li>
+                      <li>Growth mindset and resilience building</li>
+                    </ul>
+                  </div>
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Future-Ready Learning</h4>
+                    <ul className="detail-section__list">
+                      <li>Hands-on exposure to AI, robotics, and emerging technologies</li>
+                      <li>Sustainability education and climate action projects</li>
+                      <li>Design thinking and entrepreneurship workshops</li>
+                    </ul>
+                  </div>
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Real-World Application</h4>
+                    <ul className="detail-section__list">
+                      <li>Project-based learning with industry connections</li>
+                      <li>Hackathons and innovation challenges</li>
+                      <li>Community problem-solving initiatives</li>
+                    </ul>
+                  </div>
+                </div>
+                <figure className="detail-section__figure collab-animate anim-slide-left">
+                  <img
+                    className="detail-section__image"
+                    style={{ objectFit: 'contain', maxHeight: 'none' }}
+                    src={getAssetPath('/Company/collaboration/education%20image%203.png')}
+                    alt="Educational partnerships skill development"
+                  />
+                </figure>
               </div>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Future-Ready Learning</h4>
-                <ul className="detail-section__list">
-                  <li>Hands-on exposure to AI, robotics, and emerging technologies</li>
-                  <li>Sustainability education and climate action projects</li>
-                  <li>Design thinking and entrepreneurship workshops</li>
-                </ul>
-              </div>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Real-World Application</h4>
-                <ul className="detail-section__list">
-                  <li>Project-based learning with industry connections</li>
-                  <li>Hackathons and innovation challenges</li>
-                  <li>Community problem-solving initiatives</li>
-                </ul>
-              </div>
-            </div>
-            <figure className="detail-section__figure collab-animate anim-slide-left">
-              <img
-                className="detail-section__image"
-                style={{ objectFit: 'contain', maxHeight: 'none' }}
-                src={getAssetPath('/Company/collaboration/education%20image%203.png')}
-                alt="Educational partnerships skill development"
-              />
-            </figure>
-          </div>
-        </section>
+            </section>
 
-        {/* Career & Educator Excellence - content left, image right */}
-        <section className="detail-section">
-          <div className="detail-section__inner">
-            <div className="detail-section__content collab-animate anim-slide-left">
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Career & College Preparation</h4>
-                <ul className="detail-section__list">
-                  <li>Industry-aligned curriculum development</li>
-                  <li>Higher education pathway guidance</li>
-                  <li>Professional skill development and networking</li>
-                </ul>
+            {/* Career & Educator Excellence - content left, image right */}
+            <section className="detail-section">
+              <div className="detail-section__inner">
+                <div className="detail-section__content collab-animate anim-slide-left">
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Career & College Preparation</h4>
+                    <ul className="detail-section__list">
+                      <li>Industry-aligned curriculum development</li>
+                      <li>Higher education pathway guidance</li>
+                      <li>Professional skill development and networking</li>
+                    </ul>
+                  </div>
+                  <div className="detail-section__block">
+                    <h4 className="detail-section__subheading">Educator Excellence</h4>
+                    <ul className="detail-section__list">
+                      <li>Teacher training in modern pedagogies and digital tools</li>
+                      <li>Professional development workshops</li>
+                      <li>Collaborative curriculum design support</li>
+                    </ul>
+                  </div>
+                </div>
+                <figure className="detail-section__figure collab-animate anim-slide-right">
+                  <img
+                    className="detail-section__image"
+                    src={getAssetPath('/Company/collaboration/education%20image2.jpeg')}
+                    alt="Educator excellence and career preparation"
+                  />
+                </figure>
               </div>
-              <div className="detail-section__block">
-                <h4 className="detail-section__subheading">Educator Excellence</h4>
-                <ul className="detail-section__list">
-                  <li>Teacher training in modern pedagogies and digital tools</li>
-                  <li>Professional development workshops</li>
-                  <li>Collaborative curriculum design support</li>
-                </ul>
-              </div>
-            </div>
-            <figure className="detail-section__figure collab-animate anim-slide-right">
-              <img
-                className="detail-section__image"
-                src={getAssetPath('/Company/collaboration/education%20image2.jpeg')}
-                alt="Educator excellence and career preparation"
-              />
-            </figure>
-          </div>
-        </section>
+            </section>
 
-        {/* Comprehensive Program Offerings - image left, content right */}
-        <section className="detail-section">
-          <div className="detail-section__inner detail-section__inner--reverse">
-            <div className="detail-section__content collab-animate anim-slide-right">
-              <h3 className="detail-section__heading">Comprehensive Program Offerings</h3>
-              <div className="detail-section__block">
-                <ul className="detail-section__list">
-                  <li><strong>Skill Development Bootcamps</strong> Intensive programs in technology, creativity, and leadership</li>
-                  <li><strong>STEM Innovation Labs</strong> Hands-on science, technology, engineering, and math experiences</li>
-                  <li><strong>Sustainability Champions</strong> Environmental leadership and climate action programs</li>
-                  <li><strong>Creative Arts Integration</strong> Design thinking, media, and artistic expression workshops</li>
-                  <li><strong>Career Exploration:</strong> Industry mentorship and professional skill development</li>
-                  <li><strong>Teacher Excellence Programs</strong> Educator training and curriculum enhancement</li>
-                </ul>
+            {/* Comprehensive Program Offerings - image left, content right */}
+            <section className="detail-section">
+              <div className="detail-section__inner detail-section__inner--reverse">
+                <div className="detail-section__content collab-animate anim-slide-right">
+                  <h3 className="detail-section__heading">Comprehensive Program Offerings</h3>
+                  <div className="detail-section__block">
+                    <ul className="detail-section__list">
+                      <li><strong>Skill Development Bootcamps</strong> Intensive programs in technology, creativity, and leadership</li>
+                      <li><strong>STEM Innovation Labs</strong> Hands-on science, technology, engineering, and math experiences</li>
+                      <li><strong>Sustainability Champions</strong> Environmental leadership and climate action programs</li>
+                      <li><strong>Creative Arts Integration</strong> Design thinking, media, and artistic expression workshops</li>
+                      <li><strong>Career Exploration:</strong> Industry mentorship and professional skill development</li>
+                      <li><strong>Teacher Excellence Programs</strong> Educator training and curriculum enhancement</li>
+                    </ul>
+                  </div>
+                </div>
+                <figure className="detail-section__figure collab-animate anim-slide-left">
+                  <img
+                    className="detail-section__image detail-section__image--plain"
+                    src={getAssetPath('/Company/collaboration/education%20Image1.png')}
+                    alt="Comprehensive educational program offerings"
+                  />
+                </figure>
               </div>
-            </div>
-            <figure className="detail-section__figure collab-animate anim-slide-left">
-              <img
-                className="detail-section__image detail-section__image--plain"
-                src={getAssetPath('/Company/collaboration/education%20Image1.png')}
-                alt="Comprehensive educational program offerings"
-              />
-            </figure>
-          </div>
-        </section>
+            </section>
 
-        {/* Our Impact Commitment Cards */}
-        <section className="cards-section">
-          <div className="cards-section__inner">
-            <h3 className="cards-section__heading collab-animate anim-fade-up">Our Impact Commitment</h3>
-            <div className="cards-section__grid">
-              <article className="cards-section__card collab-animate anim-scale-in anim-delay-1">
-                
-                <h4 className="cards-section__card-title">Future Workforce Readiness</h4>
-                <p className="cards-section__card-text">Skills and mindset for tomorrow's job market</p>
-              </article>
-              <article className="cards-section__card collab-animate anim-scale-in anim-delay-2">
-                
-                <h4 className="cards-section__card-title">Inclusive Access</h4>
-                <p className="cards-section__card-text">Reaching underserved and diverse student communities</p>
-              </article>
-              <article className="cards-section__card collab-animate anim-scale-in anim-delay-3">
-                
-                <h4 className="cards-section__card-title">Sustainability Leadership</h4>
-                <p className="cards-section__card-text">Inspiring climate action and environmental stewardship</p>
-              </article>
-              <article className="cards-section__card collab-animate anim-scale-in anim-delay-4">
-                
-                <h4 className="cards-section__card-title">Leadership Development</h4>
-                <p className="cards-section__card-text">Building confidence, resilience, and social responsibility</p>
-              </article>
-            </div>
-            <p className="cards-section__cta collab-animate anim-fade-up">Let's shape the innovators and leaders of tomorrow-together.</p>
-            <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
-          </div>
-        </section>
-        </>
+            {/* Our Impact Commitment Cards */}
+            <section className="cards-section">
+              <div className="cards-section__inner">
+                <h3 className="cards-section__heading collab-animate anim-fade-up">Our Impact Commitment</h3>
+                <div className="cards-section__grid">
+                  <article className="cards-section__card collab-animate anim-scale-in anim-delay-1">
+
+                    <h4 className="cards-section__card-title">Future Workforce Readiness</h4>
+                    <p className="cards-section__card-text">Skills and mindset for tomorrow's job market</p>
+                  </article>
+                  <article className="cards-section__card collab-animate anim-scale-in anim-delay-2">
+
+                    <h4 className="cards-section__card-title">Inclusive Access</h4>
+                    <p className="cards-section__card-text">Reaching underserved and diverse student communities</p>
+                  </article>
+                  <article className="cards-section__card collab-animate anim-scale-in anim-delay-3">
+
+                    <h4 className="cards-section__card-title">Sustainability Leadership</h4>
+                    <p className="cards-section__card-text">Inspiring climate action and environmental stewardship</p>
+                  </article>
+                  <article className="cards-section__card collab-animate anim-scale-in anim-delay-4">
+
+                    <h4 className="cards-section__card-title">Leadership Development</h4>
+                    <p className="cards-section__card-text">Building confidence, resilience, and social responsibility</p>
+                  </article>
+                </div>
+                <p className="cards-section__cta collab-animate anim-fade-up">Let's shape the innovators and leaders of tomorrow-together.</p>
+                <a className="cards-section__cta-btn collab-animate anim-fade-up" href={contactFormLink}>Contact Us</a>
+              </div>
+            </section>
+          </>
         ) : null}
 
         {/* ===== CTA - READY TO PARTNER ===== */}

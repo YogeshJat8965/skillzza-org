@@ -255,7 +255,7 @@ const Challenge = () => {
             line-height: 1.14 !important;
           }
           .challenge-card-desc {
-            font-size: 16px !important;
+            font-size: 18px !important;
             line-height: 1.34 !important;
           }
           .challenge-cards-grid > .challenge-card:nth-child(odd) {
@@ -382,7 +382,7 @@ const Challenge = () => {
             font-size: 24px !important;
           }
           .challenge-desc {
-            font-size: 15px !important;
+            font-size: 17px !important;
           }
           .challenge-image {
             width: 100% !important;
@@ -406,7 +406,7 @@ const Challenge = () => {
             font-size: 20px !important;
           }
           .challenge-card-desc {
-            font-size: 15px !important;
+            font-size: 17px !important;
           }
         }
 
@@ -465,10 +465,10 @@ const Challenge = () => {
               className="max-w-4xl mx-auto challenge-desc"
               style={{
                 fontFamily: "'Lato', sans-serif",
-                fontSize: '18px',
+                fontSize: '20px',
                 fontWeight: 400,
                 lineHeight: '1.6',
-                color: '#71717B',
+                color: '#52525B',
               }}
             >
               As industries rapidly transform, the gap between workforce skills and employer demands continues to widen. This growing disparity limits career progress, restricts opportunities, and creates major obstacles for individuals worldwide leaving many struggling to keep pace with the fast-evolving job market.

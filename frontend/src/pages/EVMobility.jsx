@@ -16,7 +16,7 @@ const EVMobility = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               EV & E-MOBILITY SCHOOL
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
@@ -25,7 +25,7 @@ const EVMobility = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-orange-300">
               Electric Vehicle Innovation & Sustainable Transport
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
               Drive the electric revolution in transportation. Our comprehensive programs cover everything from battery technology and charging infrastructure to sustainable manufacturing and mobility entrepreneurship, preparing you for leadership in the rapidly growing EV industry.
             </p>
           </div>
@@ -54,7 +54,7 @@ const EVMobility = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">EV Technology Labs</h3>
-                        <p className="text-lg text-orange-600">Battery Design, Charging Infrastructure & Power Electronics</p>
+                        <p className="text-xl text-orange-600">Battery Design, Charging Infrastructure & Power Electronics</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -65,7 +65,7 @@ const EVMobility = () => {
                       <li>• <strong>Testing & Validation:</strong> Performance testing and certification processes</li>
                     </ul>
                     <div className="bg-orange-100 p-4 rounded-xl border border-orange-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Duration:</strong> 15 months | <strong>Format:</strong> Lab-Intensive | <strong>Certification:</strong> Industry-Recognized
                       </p>
                     </div>
@@ -90,7 +90,7 @@ const EVMobility = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Mobility Innovation Arena</h3>
-                        <p className="text-lg text-blue-600">Intelligent Transport Systems & Connected Vehicles</p>
+                        <p className="text-xl text-blue-600">Intelligent Transport Systems & Connected Vehicles</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -101,7 +101,7 @@ const EVMobility = () => {
                       <li>• <strong>Fleet Management:</strong> Optimization, tracking, and maintenance systems</li>
                     </ul>
                     <div className="bg-blue-100 p-4 rounded-xl border border-blue-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Focus:</strong> Smart Systems | <strong>Partnerships:</strong> Automotive OEMs | <strong>Outcome:</strong> System Integration Skills
                       </p>
                     </div>
@@ -126,7 +126,7 @@ const EVMobility = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Sustainable Auto Hub</h3>
-                        <p className="text-lg text-green-600">Green Manufacturing & Low-Carbon Transportation Models</p>
+                        <p className="text-xl text-green-600">Green Manufacturing & Low-Carbon Transportation Models</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -137,7 +137,7 @@ const EVMobility = () => {
                       <li>• <strong>Supply Chain Sustainability:</strong> Ethical sourcing and green logistics</li>
                     </ul>
                     <div className="bg-green-100 p-4 rounded-xl border border-green-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Approach:</strong> Sustainability-First | <strong>Standards:</strong> ISO 14001 Certified | <strong>Impact:</strong> Carbon Neutral Operations
                       </p>
                     </div>
@@ -162,7 +162,7 @@ const EVMobility = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">EV Policy & Business Forum</h3>
-                        <p className="text-lg text-purple-600">Linking Tech, Entrepreneurship & Regulations</p>
+                        <p className="text-xl text-purple-600">Linking Tech, Entrepreneurship & Regulations</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -173,7 +173,7 @@ const EVMobility = () => {
                       <li>• <strong>Market Research:</strong> Consumer behavior, trends, and demand forecasting</li>
                     </ul>
                     <div className="bg-purple-100 p-4 rounded-xl border border-purple-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Network:</strong> Industry Leaders | <strong>Format:</strong> Case Studies & Simulations | <strong>Outcome:</strong> Strategic Thinking Skills
                       </p>
                     </div>
@@ -198,7 +198,7 @@ const EVMobility = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Start-up Garage</h3>
-                        <p className="text-lg text-yellow-600">Supporting EV-based Entrepreneurship & New-age Mobility Ventures</p>
+                        <p className="text-xl text-yellow-600">Supporting EV-based Entrepreneurship & New-age Mobility Ventures</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -209,7 +209,7 @@ const EVMobility = () => {
                       <li>• <strong>Technical Resources:</strong> Labs, equipment, and engineering expertise</li>
                     </ul>
                     <div className="bg-yellow-100 p-4 rounded-xl border border-yellow-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Funding:</strong> Up to $100K Seed | <strong>Duration:</strong> 12-18 months | <strong>Success Rate:</strong> 70% Series A Ready
                       </p>
                     </div>
@@ -258,13 +258,13 @@ const EVMobility = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-orange-600">15 Months</span>
-                  <p className="text-sm text-gray-500">Engineering-focused | Lab-intensive</p>
+                  <p className="text-base text-gray-600">Engineering-focused | Lab-intensive</p>
                 </div>
               </div>
 
               {/* Mobility Business Track */}
               <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-blue-300 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-base font-semibold">
                   MOST POPULAR
                 </div>
                 <div className="text-center mb-6">
@@ -283,7 +283,7 @@ const EVMobility = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-blue-600">12 Months</span>
-                  <p className="text-sm text-gray-500">Business-focused | Industry Projects</p>
+                  <p className="text-base text-gray-600">Business-focused | Industry Projects</p>
                 </div>
               </div>
 
@@ -305,7 +305,7 @@ const EVMobility = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-green-600">18 Months</span>
-                  <p className="text-sm text-gray-500">Sustainability-focused | Research Component</p>
+                  <p className="text-base text-gray-600">Sustainability-focused | Research Component</p>
                 </div>
               </div>
             </div>
@@ -329,32 +329,32 @@ const EVMobility = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🚗</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Automotive OEMs</h4>
-                <p className="text-sm text-gray-600">Tesla, BYD, Rivian, Lucid Motors partnerships</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Automotive OEMs</h4>
+                <p className="text-base text-gray-600">Tesla, BYD, Rivian, Lucid Motors partnerships</p>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🔋</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Battery Companies</h4>
-                <p className="text-sm text-gray-600">CATL, Panasonic, LG Energy collaborations</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Battery Companies</h4>
+                <p className="text-base text-gray-600">CATL, Panasonic, LG Energy collaborations</p>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">⚡</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Charging Networks</h4>
-                <p className="text-sm text-gray-600">ChargePoint, EVgo, Electrify America projects</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Charging Networks</h4>
+                <p className="text-base text-gray-600">ChargePoint, EVgo, Electrify America projects</p>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🏛️</span>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Government Agencies</h4>
-                <p className="text-sm text-gray-600">DOE, EPA, state transportation departments</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Government Agencies</h4>
+                <p className="text-base text-gray-600">DOE, EPA, state transportation departments</p>
               </div>
             </div>
           </div>
@@ -369,7 +369,7 @@ const EVMobility = () => {
               Ready to Drive the Electric Revolution?
             </h2>
             <p className="text-xl mb-4">Join the transformation of global transportation</p>
-            <p className="text-lg mb-8 opacity-90">Be part of the sustainable mobility future</p>
+            <p className="text-xl mb-8 opacity-90">Be part of the sustainable mobility future</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
@@ -385,7 +385,7 @@ const EVMobility = () => {
 
             <div className="mt-8">
               <p className="text-xl font-bold">The future is electric. Your career should be too.</p>
-              <p className="text-lg">Accelerate your journey in sustainable mobility.</p>
+              <p className="text-xl">Accelerate your journey in sustainable mobility.</p>
             </div>
           </div>
         </div>

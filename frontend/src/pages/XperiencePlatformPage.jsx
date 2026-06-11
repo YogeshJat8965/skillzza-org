@@ -999,7 +999,7 @@ function XperiencePlatformPage() {
           }
           
           .philosophy-card-title {
-            font-size: 15px !important;
+            font-size: 17px !important;
             line-height: 1.4 !important;
             white-space: normal !important; /* ALLOW text wrapping on mobile so title is NOT clipped! */
             padding-left: 4px !important;
@@ -1279,7 +1279,7 @@ function XperiencePlatformPage() {
           font-weight: 400;
           font-size: clamp(14px, 1.2vw, 20px);
           line-height: 1.6;
-          color: #71717B;
+          color: #52525B;
           margin-bottom: 24px;
         }
         .role-prep-image {
@@ -1298,7 +1298,7 @@ function XperiencePlatformPage() {
         .role-prep-btn {
           min-width: 230px;
           padding: 16px 40px;
-          font-size: 18px;
+          font-size: 20px;
           font-weight: 600;
           border-radius: 8px;
         }
@@ -1320,7 +1320,7 @@ function XperiencePlatformPage() {
           }
           
           .role-prep-subheading {
-            font-size: 15px !important; /* Beautiful smaller text on mobile */
+            font-size: 17px !important; /* Beautiful smaller text on mobile */
             line-height: 1.5 !important;
             margin-bottom: 20px !important;
             text-align: center !important;
@@ -1344,7 +1344,7 @@ function XperiencePlatformPage() {
             max-width: 280px !important;
             min-width: 0 !important;
             padding: 12px 24px !important; /* Tighter padding for mobile buttons */
-            font-size: 15px !important;
+            font-size: 17px !important;
             border-radius: 8px !important;
           }
 
@@ -1382,7 +1382,7 @@ function XperiencePlatformPage() {
           }
           .works-step-title {
             white-space: normal !important;
-            font-size: 16px !important;
+            font-size: 18px !important;
             line-height: 1.3 !important;
             text-align: left !important;
           }
@@ -1423,12 +1423,12 @@ function XperiencePlatformPage() {
           <div className="relative lg:static w-full py-6 md:py-8 lg:py-12 xl:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="mb-6 md:mb-8 lg:mb-4">
-              <div className="flex items-center gap-2 text-xs sm:text-sm lg:text-base" style={{ color: '#71717A' }}>
+              <div className="flex items-center gap-2 text-sm sm:text-base lg:text-lg" style={{ color: '#52525B' }}>
                 <Link to="/" className="hover:opacity-70 transition-opacity">Home</Link>
                 <span>&gt;</span>
                 <Link to="/products" className="hover:opacity-70 transition-opacity">Products</Link>
                 <span>&gt;</span>
-                <span className="font-medium">Xperience Platform</span>
+                <span className="font-medium">Talent Twin</span>
               </div>
             </nav>
 
@@ -1464,7 +1464,7 @@ function XperiencePlatformPage() {
                     fontSize: isMobile ? '16px' : 'clamp(14px, 1.2vw, 20px)',
                     lineHeight: '1.6',
                     letterSpacing: '0px',
-                    color: '#71717B',
+                    color: '#52525B',
                     opacity: 1
                   }}
                 >
@@ -1480,7 +1480,7 @@ function XperiencePlatformPage() {
                 <div className="flex flex-wrap items-center gap-3 md:gap-4 pt-2 md:pt-4 hero-buttons">
                   {/* Start Free Virtual Internship Button */}
                   <button
-                    className="hero-button px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 text-white text-xs sm:text-sm lg:text-base font-semibold rounded-lg shadow-lg whitespace-nowrap"
+                    className="hero-button px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 text-white text-sm sm:text-base lg:text-lg font-semibold rounded-lg shadow-lg whitespace-nowrap"
                     style={{ backgroundColor: '#1F57C7' }}
                   >
                     Start Free Virtual Internship
@@ -1491,8 +1491,8 @@ function XperiencePlatformPage() {
                     href="https://portal.skillzza.com/internships"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hero-button px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 text-xs sm:text-sm lg:text-base font-semibold rounded-lg border-2 whitespace-nowrap"
-                    style={{ borderColor: '#71717A', color: '#71717A', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+                    className="hero-button px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold rounded-lg border-2 whitespace-nowrap"
+                    style={{ borderColor: '#52525B', color: '#52525B', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                   >
                     Explore Simulations
                   </a>
@@ -1500,8 +1500,8 @@ function XperiencePlatformPage() {
                   {/* Book Demo Link */}
                   <button
                     onClick={() => { window.location.href = contactUsPath }}
-                    className="hero-button text-xs sm:text-sm lg:text-base font-semibold underline whitespace-nowrap pt-[2px]"
-                    style={{ color: '#71717A' }}
+                    className="hero-button text-sm sm:text-base lg:text-lg font-semibold underline whitespace-nowrap pt-[2px]"
+                    style={{ color: '#52525B' }}
                   >
                     Book Demo
                   </button>
@@ -1528,7 +1528,7 @@ function XperiencePlatformPage() {
               <div className="w-full lg:w-1/2 px-4 sm:px-6 md:px-8 lg:px-0 slide-in-left">
                 <img
                   src={getAssetPath('/img/Image 408.png')}
-                  alt="Xperience Platform Learning"
+                  alt="Talent Twin Learning"
                   className="w-full h-auto"
                   style={{ maxHeight: '460px', maxWidth: '560px' }}
                 />
@@ -1543,11 +1543,11 @@ function XperiencePlatformPage() {
                     fontSize: isMobile ? '16px' : 'clamp(14px, 1.2vw, 20px)',
                     lineHeight: '1.6',
                     letterSpacing: '0px',
-                    color: '#71717B',
+                    color: '#52525B',
                     textAlign: 'left'
                   }}
                 >
-                  The Xperience Platform is an immersive experiential learning ecosystem designed to prepare individuals for real-world professional roles through high-fidelity, job-aligned simulations.
+                  The Talent Twin is an immersive experiential learning ecosystem designed to prepare individuals for real-world professional roles through high-fidelity, job-aligned simulations.
                 </p>
 
                 <p
@@ -1557,7 +1557,7 @@ function XperiencePlatformPage() {
                     fontSize: isMobile ? '16px' : 'clamp(14px, 1.2vw, 20px)',
                     lineHeight: '1.6',
                     letterSpacing: '0px',
-                    color: '#71717B',
+                    color: '#52525B',
                     textAlign: 'left'
                   }}
                 >
@@ -1592,7 +1592,7 @@ function XperiencePlatformPage() {
                   <button
                     key={tab}
                     onClick={() => handleTabClick(index)}
-                    className={`relative px-6 sm:px-8 md:px-12 lg:px-16 py-3 md:py-4 text-sm md:text-base lg:text-lg font-medium transition-all duration-300 ${activeTab === index
+                    className={`relative px-6 sm:px-8 md:px-12 lg:px-16 py-3 md:py-4 text-base md:text-lg lg:text-xl font-medium transition-all duration-300 ${activeTab === index
                       ? 'bg-white text-black shadow-sm'
                       : 'bg-transparent text-gray-700 hover:text-black'
                       }`}
@@ -1708,7 +1708,7 @@ function XperiencePlatformPage() {
                               fontWeight: '200',
                               fontSize: '46px',
                               lineHeight: '25px',
-                              color: '#71717B'
+                              color: '#52525B'
                             }}
                           >
                             +
@@ -1735,7 +1735,7 @@ function XperiencePlatformPage() {
                         style={{
                           fontFamily: 'Lato, sans-serif',
                           fontWeight: '500',
-                          fontSize: '18px',
+                          fontSize: '20px',
                           lineHeight: '1.6'
                         }}
                       >
@@ -1756,7 +1756,7 @@ function XperiencePlatformPage() {
                               fontWeight: '200',
                               fontSize: '46px',
                               lineHeight: '25px',
-                              color: '#71717B'
+                              color: '#52525B'
                             }}
                           >
                             +
@@ -1798,10 +1798,10 @@ function XperiencePlatformPage() {
                 fontWeight: '400',
                 fontSize: 'clamp(16px, 1.5vw, 20px)',
                 lineHeight: '1.5',
-                color: '#71717A'
+                color: '#52525B'
               }}
             >
-              The Xperience Platform enables individuals and organizations to
+              The Talent Twin enables individuals and organizations to
             </p>
 
             {/* Cards Grid */}
@@ -1867,7 +1867,7 @@ function XperiencePlatformPage() {
                     style={{
                       fontFamily: 'Lato, sans-serif',
                       fontWeight: '400',
-                      fontSize: '15px',
+                      fontSize: '17px',
                       lineHeight: 'clamp(24px, 1.8vw, 28px)',
                       letterSpacing: '-0.3px',
                       color: '#000000'
@@ -1982,10 +1982,10 @@ function XperiencePlatformPage() {
                         style={{
                           fontFamily: 'Lato, sans-serif',
                           fontWeight: '400',
-                          fontSize: '15px',
+                          fontSize: '17px',
                           lineHeight: '40px',
                           letterSpacing: '-0.7px',
-                          color: '#71717B'
+                          color: '#52525B'
                         }}
                       >
                         {item.content}
@@ -2066,9 +2066,9 @@ function XperiencePlatformPage() {
                 style={{
                   fontFamily: 'Lato, sans-serif',
                   fontWeight: '400',
-                  fontSize: '15px',
+                  fontSize: '17px',
                   lineHeight: '1.6',
-                  color: '#71717A'
+                  color: '#52525B'
                 }}
               >
                 Every experience is engineered to reflect the <span style={{ fontWeight: '700' }}>complexity, ambiguity, and performance pressure of real jobs</span>, ensuring relevance and measurable readiness.
@@ -2130,7 +2130,7 @@ function XperiencePlatformPage() {
                 fontWeight: '400',
                 fontSize: 'clamp(16px, 1.5vw, 20px)',
                 lineHeight: '1.5',
-                color: '#71717B'
+                color: '#52525B'
               }}
             >
               Simulation-Led, Outcome-Driven Learning
@@ -2142,7 +2142,7 @@ function XperiencePlatformPage() {
               style={{
                 fontFamily: 'Lato, sans-serif',
                 fontWeight: '400',
-                fontSize: '15px',
+                fontSize: '17px',
                 lineHeight: '1.5',
                 color: '#000000'
               }}
@@ -2229,9 +2229,9 @@ function XperiencePlatformPage() {
                           style={{
                             fontFamily: 'Lato, sans-serif',
                             fontWeight: '400',
-                            fontSize: '15px',
+                            fontSize: '17px',
                             lineHeight: '30px',
-                            color: '#71717B'
+                            color: '#52525B'
                           }}
                         >
                           {step.content}
@@ -2259,7 +2259,7 @@ function XperiencePlatformPage() {
                 href="https://portal.skillzza.com/signup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-button px-8 md:px-10 py-3 md:py-4 text-white text-base md:text-lg font-semibold rounded-lg shadow-lg"
+                className="hero-button px-8 md:px-10 py-3 md:py-4 text-white text-lg md:text-xl font-semibold rounded-lg shadow-lg"
                 style={{ backgroundColor: '#1F57C7', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
               >
                 Register for Free Internship
@@ -2320,7 +2320,7 @@ function XperiencePlatformPage() {
                   style={{
                     fontFamily: 'Lato, sans-serif',
                     fontWeight: '400',
-                    fontSize: '15px',
+                    fontSize: '17px',
                     lineHeight: '1.3',
                     color: '#000000',
                     maxWidth: '250px',
@@ -2340,7 +2340,7 @@ function XperiencePlatformPage() {
                   style={{
                     fontFamily: 'Lato, sans-serif',
                     fontWeight: '400',
-                    fontSize: '15px',
+                    fontSize: '17px',
                     lineHeight: '1.3',
                     color: '#000000',
                     maxWidth: '250px',
@@ -2360,7 +2360,7 @@ function XperiencePlatformPage() {
                   style={{
                     fontFamily: 'Lato, sans-serif',
                     fontWeight: '400',
-                    fontSize: '15px',
+                    fontSize: '17px',
                     lineHeight: '1.3',
                     color: '#000000',
                     maxWidth: '250px',
@@ -2380,7 +2380,7 @@ function XperiencePlatformPage() {
                   style={{
                     fontFamily: 'Lato, sans-serif',
                     fontWeight: '400',
-                    fontSize: '15px',
+                    fontSize: '17px',
                     lineHeight: '1.3',
                     color: '#000000',
                     maxWidth: '250px',
@@ -2447,7 +2447,7 @@ function XperiencePlatformPage() {
                           style={{
                             fontFamily: 'DM Sans, sans-serif',
                             fontWeight: '600',
-                            fontSize: '18px',
+                            fontSize: '20px',
                             lineHeight: '26px',
                             letterSpacing: '-0.5px',
                             color: '#000000',
@@ -2462,10 +2462,10 @@ function XperiencePlatformPage() {
                           style={{
                             fontFamily: 'Lato, sans-serif',
                             fontWeight: '400',
-                            fontSize: '14px',
+                            fontSize: '16px',
                             lineHeight: '20px',
                             letterSpacing: '-0.3px',
-                            color: '#71717B',
+                            color: '#52525B',
                             textAlign: 'left'
                           }}
                         >
@@ -2527,10 +2527,10 @@ function XperiencePlatformPage() {
                           style={{
                             fontFamily: 'Lato, sans-serif',
                             fontWeight: '400',
-                            fontSize: '15px',
+                            fontSize: '17px',
                             lineHeight: 'clamp(24px, 2vw, 28px)',
                             letterSpacing: '-0.3px',
-                            color: '#71717B',
+                            color: '#52525B',
                             textAlign: 'left',
                             marginTop: '2px'
                           }}

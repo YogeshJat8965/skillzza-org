@@ -16,13 +16,13 @@ const JobSimulations = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               IMMERSIVE JOB SIMULATIONS
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
               Transforming Careers Through Simulation
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
               In today’s competitive job market, experience isn’t just an advantage, it's a prerequisite. Yet, gaining meaningful, industry-relevant experience before your first job remains a challenge for many. 
 Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering a transformative journey from classroom learning to real-world application.With our immersive, on-demand job simulations, you don’t just prepare for the workforce, you step directly into it.
             </p>
@@ -47,22 +47,22 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200">
                 <div className="text-4xl font-bold text-orange-600 mb-4">10X</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">More Likely</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">More Likely</h3>
                 <p className="text-gray-600">to land your first job</p>
               </div>
               <div className="text-center bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200">
                 <div className="text-4xl font-bold text-orange-600 mb-4">10M+</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Learners</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Learners</h3>
                 <p className="text-gray-600">projected to achieve career success</p>
               </div>
               <div className="text-center bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200">
                 <div className="text-4xl font-bold text-orange-600 mb-4">70+</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Programs</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Programs</h3>
                 <p className="text-gray-600">spanning high-growth career fields</p>
               </div>
               <div className="text-center bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border border-yellow-200">
                 <div className="text-4xl font-bold text-orange-600 mb-4">115+</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Years</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Years</h3>
                 <p className="text-gray-600">of collective industry leadership & guidance</p>
               </div>
             </div>
@@ -75,7 +75,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-sm font-semibold text-red-600 mb-6">
+              <div className="inline-block px-6 py-2 bg-red-100 rounded-full text-base font-semibold text-red-600 mb-6">
                 THE SOLUTION
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -95,7 +95,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
                   />
-                  <div className="hidden text-gray-500 text-xs">🌍</div>
+                  <div className="hidden text-gray-600 text-sm">🌍</div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Global Readiness</h3>
                 <p className="text-gray-700 text-center leading-relaxed">
@@ -111,7 +111,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
                   />
-                  <div className="hidden text-gray-500 text-xs">🎯</div>
+                  <div className="hidden text-gray-600 text-sm">🎯</div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Career Clarity & Direction</h3>
                 <p className="text-gray-700 text-center leading-relaxed">
@@ -127,7 +127,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
                   />
-                  <div className="hidden text-gray-500 text-xs">⚡</div>
+                  <div className="hidden text-gray-600 text-sm">⚡</div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Flexible & Immersive Learning</h3>
                 <p className="text-gray-700 text-center leading-relaxed">
@@ -143,7 +143,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
                   />
-                  <div className="hidden text-gray-500 text-xs">🧩</div>
+                  <div className="hidden text-gray-600 text-sm">🧩</div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Real-World Problem Solving</h3>
                 <p className="text-gray-700 text-center leading-relaxed">
@@ -159,7 +159,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
                   />
-                  <div className="hidden text-gray-500 text-xs">👥</div>
+                  <div className="hidden text-gray-600 text-sm">👥</div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Mentorship from Industry Experts</h3>
                 <p className="text-gray-700 text-center leading-relaxed">
@@ -175,7 +175,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
                   />
-                  <div className="hidden text-gray-500 text-xs">🏆</div>
+                  <div className="hidden text-gray-600 text-sm">🏆</div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Prestigious Certification</h3>
                 <p className="text-gray-700 text-center leading-relaxed">
@@ -191,7 +191,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
                   />
-                  <div className="hidden text-gray-500 text-xs">👁️</div>
+                  <div className="hidden text-gray-600 text-sm">👁️</div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Visibility to Employers</h3>
                 <p className="text-gray-700 text-center leading-relaxed">
@@ -207,7 +207,7 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
                     className="w-full h-full object-cover"
                     onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}}
                   />
-                  <div className="hidden text-gray-500 text-xs">🎭</div>
+                  <div className="hidden text-gray-600 text-sm">🎭</div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Real-Time Role Play & Situational Dynamics</h3>
                 <p className="text-gray-700 text-center leading-relaxed">
@@ -241,13 +241,13 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
                 </div>
               </div>
               <div className="lg:w-1/2">
-                <div className="inline-block px-6 py-2 bg-orange-100 rounded-full text-sm font-semibold text-orange-600 mb-6">
+                <div className="inline-block px-6 py-2 bg-orange-100 rounded-full text-base font-semibold text-orange-600 mb-6">
                   IMMERSIVE EXPERIENCE
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                   Real-Time Role Play & Situational Dynamics
                 </h2>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                <p className="text-xl text-gray-700 leading-relaxed mb-6">
                   Experience dynamic, role-specific simulations that replicate real job functions, team collaboration, and strategic decision-making delivering high-impact, experiential learning under real-world conditions.
                 </p>
                 <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-6 rounded-xl border border-orange-200">
@@ -298,123 +298,123 @@ Skillzza’s AI-Powered Job Simulation Program eliminates that barrier, offering
                 <table className="w-full">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Company</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Program</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Domain</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Level</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Duration</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Action</th>
+                      <th className="px-6 py-4 text-left text-base font-semibold text-gray-900">Company</th>
+                      <th className="px-6 py-4 text-left text-base font-semibold text-gray-900">Program</th>
+                      <th className="px-6 py-4 text-left text-base font-semibold text-gray-900">Domain</th>
+                      <th className="px-6 py-4 text-left text-base font-semibold text-gray-900">Level</th>
+                      <th className="px-6 py-4 text-left text-base font-semibold text-gray-900">Duration</th>
+                      <th className="px-6 py-4 text-left text-base font-semibold text-gray-900">Action</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">AI LifeBOT</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">ChatBOT Developer</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">Technology</td>
+                      <td className="px-6 py-4 text-base font-medium text-gray-900">AI LifeBOT</td>
+                      <td className="px-6 py-4 text-base text-gray-700">ChatBOT Developer</td>
+                      <td className="px-6 py-4 text-base text-gray-700">Technology</td>
                       <td className="px-6 py-4">
-                        <span className="px-3 py-1 text-xs font-semibold bg-yellow-100 text-yellow-800 rounded-full">Intermediate</span>
+                        <span className="px-3 py-1 text-sm font-semibold bg-yellow-100 text-yellow-800 rounded-full">Intermediate</span>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-700">35–40 hours</td>
+                      <td className="px-6 py-4 text-base text-gray-700">35–40 hours</td>
                       <td className="px-6 py-4">
-                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-orange-600 transition-colors">
+                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-base hover:bg-orange-600 transition-colors">
                           Start Simulation
                         </button>
                       </td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">Suflex Media</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">Social Media Strategy</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">Marketing</td>
+                      <td className="px-6 py-4 text-base font-medium text-gray-900">Suflex Media</td>
+                      <td className="px-6 py-4 text-base text-gray-700">Social Media Strategy</td>
+                      <td className="px-6 py-4 text-base text-gray-700">Marketing</td>
                       <td className="px-6 py-4">
-                        <span className="px-3 py-1 text-xs font-semibold bg-red-100 text-red-800 rounded-full">Advanced</span>
+                        <span className="px-3 py-1 text-sm font-semibold bg-red-100 text-red-800 rounded-full">Advanced</span>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-700">45–50 hours</td>
+                      <td className="px-6 py-4 text-base text-gray-700">45–50 hours</td>
                       <td className="px-6 py-4">
-                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-orange-600 transition-colors">
+                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-base hover:bg-orange-600 transition-colors">
                           Start Simulation
                         </button>
                       </td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">GreenGold Animation</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">2D Animation & VFX</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">Design</td>
+                      <td className="px-6 py-4 text-base font-medium text-gray-900">GreenGold Animation</td>
+                      <td className="px-6 py-4 text-base text-gray-700">2D Animation & VFX</td>
+                      <td className="px-6 py-4 text-base text-gray-700">Design</td>
                       <td className="px-6 py-4">
-                        <span className="px-3 py-1 text-xs font-semibold bg-yellow-100 text-yellow-800 rounded-full">Intermediate</span>
+                        <span className="px-3 py-1 text-sm font-semibold bg-yellow-100 text-yellow-800 rounded-full">Intermediate</span>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-700">40–45 hours</td>
+                      <td className="px-6 py-4 text-base text-gray-700">40–45 hours</td>
                       <td className="px-6 py-4">
-                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-orange-600 transition-colors">
+                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-base hover:bg-orange-600 transition-colors">
                           Start Simulation
                         </button>
                       </td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">Edgespark IT Ventures</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">MVP for Startups</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">Entrepreneurship</td>
+                      <td className="px-6 py-4 text-base font-medium text-gray-900">Edgespark IT Ventures</td>
+                      <td className="px-6 py-4 text-base text-gray-700">MVP for Startups</td>
+                      <td className="px-6 py-4 text-base text-gray-700">Entrepreneurship</td>
                       <td className="px-6 py-4">
-                        <span className="px-3 py-1 text-xs font-semibold bg-green-100 text-green-800 rounded-full">Beginner</span>
+                        <span className="px-3 py-1 text-sm font-semibold bg-green-100 text-green-800 rounded-full">Beginner</span>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-700">12–15 hours</td>
+                      <td className="px-6 py-4 text-base text-gray-700">12–15 hours</td>
                       <td className="px-6 py-4">
-                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-orange-600 transition-colors">
+                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-base hover:bg-orange-600 transition-colors">
                           Start Simulation
                         </button>
                       </td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">Microsoft</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">AI Agents with Copilot Studio</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">Technology</td>
+                      <td className="px-6 py-4 text-base font-medium text-gray-900">Microsoft</td>
+                      <td className="px-6 py-4 text-base text-gray-700">AI Agents with Copilot Studio</td>
+                      <td className="px-6 py-4 text-base text-gray-700">Technology</td>
                       <td className="px-6 py-4">
-                        <span className="px-3 py-1 text-xs font-semibold bg-red-100 text-red-800 rounded-full">Advanced</span>
+                        <span className="px-3 py-1 text-sm font-semibold bg-red-100 text-red-800 rounded-full">Advanced</span>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-700">90–100 hours</td>
+                      <td className="px-6 py-4 text-base text-gray-700">90–100 hours</td>
                       <td className="px-6 py-4">
-                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-orange-600 transition-colors">
+                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-base hover:bg-orange-600 transition-colors">
                           Start Simulation
                         </button>
                       </td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">Appsolutely.ai</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">Data Scientist</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">AI & Data</td>
+                      <td className="px-6 py-4 text-base font-medium text-gray-900">Appsolutely.ai</td>
+                      <td className="px-6 py-4 text-base text-gray-700">Data Scientist</td>
+                      <td className="px-6 py-4 text-base text-gray-700">AI & Data</td>
                       <td className="px-6 py-4">
-                        <span className="px-3 py-1 text-xs font-semibold bg-yellow-100 text-yellow-800 rounded-full">Intermediate</span>
+                        <span className="px-3 py-1 text-sm font-semibold bg-yellow-100 text-yellow-800 rounded-full">Intermediate</span>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-700">60–80 hours</td>
+                      <td className="px-6 py-4 text-base text-gray-700">60–80 hours</td>
                       <td className="px-6 py-4">
-                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-orange-600 transition-colors">
+                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-base hover:bg-orange-600 transition-colors">
                           Start Simulation
                         </button>
                       </td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">Appsolutely.ai</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">Generative AI Engineer</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">Technology</td>
+                      <td className="px-6 py-4 text-base font-medium text-gray-900">Appsolutely.ai</td>
+                      <td className="px-6 py-4 text-base text-gray-700">Generative AI Engineer</td>
+                      <td className="px-6 py-4 text-base text-gray-700">Technology</td>
                       <td className="px-6 py-4">
-                        <span className="px-3 py-1 text-xs font-semibold bg-yellow-100 text-yellow-800 rounded-full">Intermediate</span>
+                        <span className="px-3 py-1 text-sm font-semibold bg-yellow-100 text-yellow-800 rounded-full">Intermediate</span>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-700">60–80 hours</td>
+                      <td className="px-6 py-4 text-base text-gray-700">60–80 hours</td>
                       <td className="px-6 py-4">
-                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-orange-600 transition-colors">
+                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-base hover:bg-orange-600 transition-colors">
                           Start Simulation
                         </button>
                       </td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">Midland Microfinance</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">Microfinance Lending</td>
-                      <td className="px-6 py-4 text-sm text-gray-700">Banking</td>
+                      <td className="px-6 py-4 text-base font-medium text-gray-900">Midland Microfinance</td>
+                      <td className="px-6 py-4 text-base text-gray-700">Microfinance Lending</td>
+                      <td className="px-6 py-4 text-base text-gray-700">Banking</td>
                       <td className="px-6 py-4">
-                        <span className="px-3 py-1 text-xs font-semibold bg-yellow-100 text-yellow-800 rounded-full">Intermediate</span>
+                        <span className="px-3 py-1 text-sm font-semibold bg-yellow-100 text-yellow-800 rounded-full">Intermediate</span>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-700">25–30 hours</td>
+                      <td className="px-6 py-4 text-base text-gray-700">25–30 hours</td>
                       <td className="px-6 py-4">
-                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-orange-600 transition-colors">
+                        <button className="bg-orange-500 text-white px-4 py-2 rounded-lg text-base hover:bg-orange-600 transition-colors">
                           Start Simulation
                         </button>
                       </td>

@@ -7,25 +7,25 @@ const XperiencePlatform = () => {
       {/* Hero Section */}
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-orange-500 to-yellow-600"
-        style={{ 
+        style={{
           backgroundImage: getBackgroundImageUrl('/platformslide1.png'),
           minHeight: '70vh'
         }}
       >
         <div className="absolute inset-0 bg-gray-900/70"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
-              XPERIENCE PLATFORM
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
+              Talent Twin
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
-              Xperience Platform
+              Talent Twin
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-yellow-300">
               Simulate. Solve. Showcase.
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
               Transform your learning through immersive, role-based job simulations that mirror real-world challenges. Build practical skills, create verifiable portfolios, and enhance your workplace readiness through applied learning experiences.
             </p>
           </div>
@@ -39,19 +39,19 @@ const XperiencePlatform = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
               <div className="group">
                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
-                <div className="text-lg opacity-90">Job Simulations</div>
+                <div className="text-xl opacity-90">Job Simulations</div>
               </div>
               <div className="group">
                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">50+</div>
-                <div className="text-lg opacity-90">Industry Roles</div>
+                <div className="text-xl opacity-90">Industry Roles</div>
               </div>
               <div className="group">
                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">100K+</div>
-                <div className="text-lg opacity-90">Learners Engaged</div>
+                <div className="text-xl opacity-90">Learners Engaged</div>
               </div>
               <div className="group">
                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">95%</div>
-                <div className="text-lg opacity-90">Employer Satisfaction</div>
+                <div className="text-xl opacity-90">Employer Satisfaction</div>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@ const XperiencePlatform = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Role-based Job Simulations</h3>
-                        <p className="text-lg text-orange-600">Rooted in Real-world Challenges</p>
+                        <p className="text-xl text-orange-600">Rooted in Real-world Challenges</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -91,22 +91,22 @@ const XperiencePlatform = () => {
                       <li>• <strong>Decision Impact:</strong> See how your choices affect outcomes and learn from results</li>
                     </ul>
                     <div className="bg-orange-100 p-4 rounded-xl border border-orange-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Available Roles:</strong> 50+ industry positions | <strong>Difficulty:</strong> Beginner to Expert | <strong>Duration:</strong> 30 mins to 8 hours
                       </p>
                     </div>
                   </div>
                   <div>
-                    <img 
-                      src={getAssetPath('/jobsimulation_img_bg_hero.png')} 
-                      alt="Job Simulations" 
-                      className="w-full rounded-2xl shadow-lg" 
+                    <img
+                      src={getAssetPath('/jobsimulation_img_bg_hero.png')}
+                      alt="Job Simulations"
+                      className="w-full rounded-2xl shadow-lg"
                       onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.nextSibling.style.display = 'flex';
                       }}
                     />
-                    <div className="w-full h-64 bg-gradient-to-br from-orange-100 to-yellow-100 rounded-2xl shadow-lg flex items-center justify-center" style={{display: 'none'}}>
+                    <div className="w-full h-64 bg-gradient-to-br from-orange-100 to-yellow-100 rounded-2xl shadow-lg flex items-center justify-center" style={{ display: 'none' }}>
                       <span className="text-6xl">🎮</span>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ const XperiencePlatform = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Challenge-based Learning</h3>
-                        <p className="text-lg text-yellow-600">Develop Problem-solving Skills</p>
+                        <p className="text-xl text-yellow-600">Develop Problem-solving Skills</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -134,16 +134,16 @@ const XperiencePlatform = () => {
                       <li>• <strong>Collaboration:</strong> Team-based challenges that mirror workplace dynamics</li>
                     </ul>
                     <div className="bg-yellow-100 p-4 rounded-xl border border-yellow-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Challenge Types:</strong> Individual & Team | <strong>Industries:</strong> Tech, Finance, Healthcare, Marketing | <strong>Feedback:</strong> Instant & Detailed
                       </p>
                     </div>
                   </div>
                   <div className="lg:order-1">
-                    <img 
-                      src={getAssetPath('/engaing_learning.jpg')} 
-                      alt="Challenge-based Learning" 
-                      className="w-full rounded-2xl shadow-lg" 
+                    <img
+                      src={getAssetPath('/engaing_learning.jpg')}
+                      alt="Challenge-based Learning"
+                      className="w-full rounded-2xl shadow-lg"
                     />
                   </div>
                 </div>
@@ -159,7 +159,7 @@ const XperiencePlatform = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Digital, Verifiable Portfolios</h3>
-                        <p className="text-lg text-orange-600">Aligned with Employer Expectations</p>
+                        <p className="text-xl text-orange-600">Aligned with Employer Expectations</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -170,16 +170,16 @@ const XperiencePlatform = () => {
                       <li>• <strong>Continuous Updates:</strong> Portfolio grows with each completed simulation</li>
                     </ul>
                     <div className="bg-orange-100 p-4 rounded-xl border border-orange-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Verification:</strong> Blockchain-secured | <strong>Sharing:</strong> One-click sharing | <strong>Analytics:</strong> Detailed performance insights
                       </p>
                     </div>
                   </div>
                   <div>
-                    <img 
-                      src={getAssetPath('/career_readyness.jpg')} 
-                      alt="Digital Portfolios" 
-                      className="w-full rounded-2xl shadow-lg" 
+                    <img
+                      src={getAssetPath('/career_readyness.jpg')}
+                      alt="Digital Portfolios"
+                      className="w-full rounded-2xl shadow-lg"
                     />
                   </div>
                 </div>
@@ -195,7 +195,7 @@ const XperiencePlatform = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">Workplace Readiness</h3>
-                        <p className="text-lg text-orange-600">Through Applied Learning</p>
+                        <p className="text-xl text-orange-600">Through Applied Learning</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -206,16 +206,16 @@ const XperiencePlatform = () => {
                       <li>• <strong>Performance Feedback:</strong> Continuous improvement through detailed assessments</li>
                     </ul>
                     <div className="bg-orange-100 p-4 rounded-xl border border-orange-200">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-base text-gray-700">
                         <strong>Readiness Score:</strong> Comprehensive evaluation | <strong>Improvement:</strong> Personalized recommendations | <strong>Tracking:</strong> Progress monitoring
                       </p>
                     </div>
                   </div>
                   <div className="lg:order-1">
-                    <img 
-                      src={getAssetPath('/potential_meter.png')} 
-                      alt="Workplace Readiness" 
-                      className="w-full rounded-2xl shadow-lg" 
+                    <img
+                      src={getAssetPath('/potential_meter.png')}
+                      alt="Workplace Readiness"
+                      className="w-full rounded-2xl shadow-lg"
                     />
                   </div>
                 </div>
@@ -246,7 +246,7 @@ const XperiencePlatform = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Technology</h3>
                   <p className="text-gray-600">Software development, data science, and IT operations</p>
                 </div>
-                <ul className="space-y-2 text-gray-700 mb-6 text-sm">
+                <ul className="space-y-2 text-gray-700 mb-6 text-base">
                   <li>• Full-stack Development</li>
                   <li>• Data Analysis & ML</li>
                   <li>• DevOps & Cloud</li>
@@ -255,7 +255,7 @@ const XperiencePlatform = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-orange-600">120+</span>
-                  <p className="text-sm text-gray-500">Simulations Available</p>
+                  <p className="text-base text-gray-600">Simulations Available</p>
                 </div>
               </div>
 
@@ -268,7 +268,7 @@ const XperiencePlatform = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Business & Finance</h3>
                   <p className="text-gray-600">Strategic planning, financial analysis, and operations</p>
                 </div>
-                <ul className="space-y-2 text-gray-700 mb-6 text-sm">
+                <ul className="space-y-2 text-gray-700 mb-6 text-base">
                   <li>• Financial Modeling</li>
                   <li>• Business Strategy</li>
                   <li>• Operations Management</li>
@@ -277,7 +277,7 @@ const XperiencePlatform = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-green-600">85+</span>
-                  <p className="text-sm text-gray-500">Simulations Available</p>
+                  <p className="text-base text-gray-600">Simulations Available</p>
                 </div>
               </div>
 
@@ -290,7 +290,7 @@ const XperiencePlatform = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Marketing & Sales</h3>
                   <p className="text-gray-600">Digital marketing, brand management, and sales strategy</p>
                 </div>
-                <ul className="space-y-2 text-gray-700 mb-6 text-sm">
+                <ul className="space-y-2 text-gray-700 mb-6 text-base">
                   <li>• Digital Marketing Campaigns</li>
                   <li>• Brand Strategy</li>
                   <li>• Sales Process Management</li>
@@ -299,7 +299,7 @@ const XperiencePlatform = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-purple-600">95+</span>
-                  <p className="text-sm text-gray-500">Simulations Available</p>
+                  <p className="text-base text-gray-600">Simulations Available</p>
                 </div>
               </div>
 
@@ -312,7 +312,7 @@ const XperiencePlatform = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Healthcare</h3>
                   <p className="text-gray-600">Clinical decision-making and healthcare administration</p>
                 </div>
-                <ul className="space-y-2 text-gray-700 mb-6 text-sm">
+                <ul className="space-y-2 text-gray-700 mb-6 text-base">
                   <li>• Clinical Diagnostics</li>
                   <li>• Healthcare Analytics</li>
                   <li>• Patient Management</li>
@@ -321,7 +321,7 @@ const XperiencePlatform = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-red-600">60+</span>
-                  <p className="text-sm text-gray-500">Simulations Available</p>
+                  <p className="text-base text-gray-600">Simulations Available</p>
                 </div>
               </div>
 
@@ -334,7 +334,7 @@ const XperiencePlatform = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Engineering</h3>
                   <p className="text-gray-600">Design, manufacturing, and systems engineering</p>
                 </div>
-                <ul className="space-y-2 text-gray-700 mb-6 text-sm">
+                <ul className="space-y-2 text-gray-700 mb-6 text-base">
                   <li>• Product Design</li>
                   <li>• Systems Engineering</li>
                   <li>• Quality Assurance</li>
@@ -343,7 +343,7 @@ const XperiencePlatform = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-orange-600">75+</span>
-                  <p className="text-sm text-gray-500">Simulations Available</p>
+                  <p className="text-base text-gray-600">Simulations Available</p>
                 </div>
               </div>
 
@@ -356,7 +356,7 @@ const XperiencePlatform = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Consulting</h3>
                   <p className="text-gray-600">Problem-solving, analysis, and strategic recommendations</p>
                 </div>
-                <ul className="space-y-2 text-gray-700 mb-6 text-sm">
+                <ul className="space-y-2 text-gray-700 mb-6 text-base">
                   <li>• Case Study Analysis</li>
                   <li>• Strategic Consulting</li>
                   <li>• Process Improvement</li>
@@ -365,7 +365,7 @@ const XperiencePlatform = () => {
                 </ul>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-indigo-600">65+</span>
-                  <p className="text-sm text-gray-500">Simulations Available</p>
+                  <p className="text-base text-gray-600">Simulations Available</p>
                 </div>
               </div>
             </div>
@@ -390,15 +390,15 @@ const XperiencePlatform = () => {
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 italic">
-                  "The Xperience Platform helped me transition from marketing to data science. The simulations gave me real experience that employers valued."
+                  "The Talent Twin helped me transition from marketing to data science. The simulations gave me real experience that employers valued."
                 </p>
-                <div className="text-sm">
+                <div className="text-base">
                   <p className="font-semibold text-gray-900">Sarah Chen</p>
                   <p className="text-gray-600">Data Scientist at Google</p>
                 </div>
@@ -409,7 +409,7 @@ const XperiencePlatform = () => {
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
@@ -417,7 +417,7 @@ const XperiencePlatform = () => {
                 <p className="text-gray-700 mb-4 italic">
                   "Completing 15 consulting simulations gave me the confidence and portfolio I needed to land my dream job at McKinsey."
                 </p>
-                <div className="text-sm">
+                <div className="text-base">
                   <p className="font-semibold text-gray-900">Michael Rodriguez</p>
                   <p className="text-gray-600">Consultant at McKinsey & Company</p>
                 </div>
@@ -428,7 +428,7 @@ const XperiencePlatform = () => {
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
@@ -436,7 +436,7 @@ const XperiencePlatform = () => {
                 <p className="text-gray-700 mb-4 italic">
                   "The healthcare simulations prepared me for real clinical scenarios. I felt confident from day one in my new role."
                 </p>
-                <div className="text-sm">
+                <div className="text-base">
                   <p className="font-semibold text-gray-900">Dr. Priya Patel</p>
                   <p className="text-gray-600">Clinical Data Analyst at Mayo Clinic</p>
                 </div>
@@ -454,8 +454,8 @@ const XperiencePlatform = () => {
               Ready to Transform Your Learning Experience?
             </h2>
             <p className="text-xl mb-4">Join thousands of learners building real-world skills through immersive simulations</p>
-            <p className="text-lg mb-8 opacity-90">Start your simulation journey today and build a portfolio that stands out</p>
-            
+            <p className="text-xl mb-8 opacity-90">Start your simulation journey today and build a portfolio that stands out</p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                 Start Your Simulation Journey
@@ -470,7 +470,7 @@ const XperiencePlatform = () => {
 
             <div className="mt-8">
               <p className="text-xl font-bold">Experience the future of learning.</p>
-              <p className="text-lg">Simulate. Solve. Showcase your potential.</p>
+              <p className="text-xl">Simulate. Solve. Showcase your potential.</p>
             </div>
           </div>
         </div>

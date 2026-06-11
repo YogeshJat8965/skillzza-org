@@ -16,39 +16,39 @@ const ProductCatalog = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-white">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               PRODUCT CATALOG
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
               Transform Careers with Our Complete Product Suite
             </h1>
-            <p className="text-base md:text-lg text-gray-300 max-w-3xl leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
               Explore our comprehensive ecosystem of AI-powered products designed to transform talent development, workforce readiness, and career acceleration across the entire professional lifecycle.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Xperience Platform */}
+      {/* Talent Twin */}
       <section className="bg-gradient-to-br from-orange-50 to-white py-16">
         <div className="container mx-auto px-6">
           {/* Image and Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-center">
             {/* Image - Left */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src={getAssetPath('/transformskill_futureset.png')} alt="Xperience Platform" className="w-full h-full object-cover" />
+              <img src={getAssetPath('/transformskill_futureset.png')} alt="Talent Twin" className="w-full h-full object-cover" />
             </div>
 
             {/* Content - Right */}
             <div className="space-y-4">
-              <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-4">
-                XPERIENCE PLATFORM
+              <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-4">
+                Talent Twin
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Experience the Real World Before You Enter It</h2>
-              <p className="text-lg text-gray-700">
-                The Xperience Platform brings immersive, job-aligned simulations to life-empowering learners with actionable experience that mirrors the intensity, ambiguity, and precision of actual industry roles. It transcends theoretical instruction to foster real-time decision-making and execution confidence.
+              <p className="text-xl text-gray-700">
+                The Talent Twin brings immersive, job-aligned simulations to life-empowering learners with actionable experience that mirrors the intensity, ambiguity, and precision of actual industry roles. It transcends theoretical instruction to foster real-time decision-making and execution confidence.
               </p>
-              <p className="text-base text-gray-700">
+              <p className="text-lg text-gray-700">
                 At Skillzza, we champion experiential competence as the cornerstone of future employability. Through challenge-based, domain-specific learning modules, individuals gain both the technical and human-centric capabilities demanded in the modern workplace.
               </p>
             </div>
@@ -67,7 +67,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Real-world Job Simulations</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Real-world Job Simulations</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-blue-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -77,7 +77,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Workplace Readiness</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Workplace Readiness</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-purple-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -87,7 +87,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Domain-Specific Challenges</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Domain-Specific Challenges</h4>
                   </div>
                 </div>
               </div>
@@ -96,7 +96,7 @@ const ProductCatalog = () => {
             {/* Approach - Right */}
             <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-orange-500">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Approach</h3>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 We operationalize experiential intelligence by embedding learners into high-fidelity simulations that replicate the nuance, pressure, and complexity of real-world job functions. This immersion cultivates agile problem-solving, adaptive execution, and domain-specific fluency-essential for thriving in dynamic professional environments.
               </p>
             </div>
@@ -107,20 +107,20 @@ const ProductCatalog = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Key Features</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-orange-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Scenario-Calibrated Simulations</h4>
-                <p className="text-gray-600 text-sm">Each module is modeled on real-time workflows, job pressures, and decision checkpoints reflective of industry-standard functions.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Scenario-Calibrated Simulations</h4>
+                <p className="text-gray-600 text-base">Each module is modeled on real-time workflows, job pressures, and decision checkpoints reflective of industry-standard functions.</p>
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Validated, Role-Mapped Portfolios</h4>
-                <p className="text-gray-600 text-sm">Learners graduate with a tangible, evidence-based portfolio mapped directly to employer expectations and job-level KPIs.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Validated, Role-Mapped Portfolios</h4>
+                <p className="text-gray-600 text-base">Learners graduate with a tangible, evidence-based portfolio mapped directly to employer expectations and job-level KPIs.</p>
               </div>
               <div className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-purple-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Competency Acceleration Framework</h4>
-                <p className="text-gray-600 text-sm">Builds multi-dimensional fluency-technical acumen, critical thinking, and communication-in synchronized, measurable pathways.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Competency Acceleration Framework</h4>
+                <p className="text-gray-600 text-base">Builds multi-dimensional fluency-technical acumen, critical thinking, and communication-in synchronized, measurable pathways.</p>
               </div>
               <div className="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-green-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Real-Time Adaptive Feedback</h4>
-                <p className="text-gray-600 text-sm">Dynamic learner inputs trigger adaptive responses, mirroring actual consequences of workplace decision-making.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Real-Time Adaptive Feedback</h4>
+                <p className="text-gray-600 text-base">Dynamic learner inputs trigger adaptive responses, mirroring actual consequences of workplace decision-making.</p>
               </div>
             </div>
           </div>
@@ -134,14 +134,14 @@ const ProductCatalog = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-center">
             {/* Content - Left */}
             <div className="space-y-4">
-              <div className="inline-block px-6 py-2 bg-blue-500 rounded-full text-sm font-semibold text-white mb-4">
+              <div className="inline-block px-6 py-2 bg-blue-500 rounded-full text-base font-semibold text-white mb-4">
                 POTENTIAL METER
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Unlock Your Hidden Potential</h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-xl text-gray-700">
                 Potential Meter is Skillzza's precision diagnostic tool that decodes individual strengths, aspirations, and readiness across cognitive, emotional, and technical dimensions.
               </p>
-              <p className="text-base text-gray-700">
+              <p className="text-lg text-gray-700">
                 More than an assessment-it's a strategic compass for personalized learning design, career direction, and growth optimization.
               </p>
             </div>
@@ -165,7 +165,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">AI-Based Skill Assessment</h4>
+                    <h4 className="text-lg font-bold text-gray-900">AI-Based Skill Assessment</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-indigo-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -175,7 +175,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Career Guidance and Mapping</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Career Guidance and Mapping</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-purple-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -185,7 +185,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Behavioral & Soft Skills Analysis</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Behavioral & Soft Skills Analysis</h4>
                   </div>
                 </div>
               </div>
@@ -194,7 +194,7 @@ const ProductCatalog = () => {
             {/* Approach - Right */}
             <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-blue-500">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Approach</h3>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 We deploy AI-augmented diagnostics to distill granular insights across technical acumen, cognitive agility, and behavioral alignment. By mapping individual capability to role archetypes, we deliver precision-driven pathways for accelerated career navigation, personalized mentoring, and strategic upskilling.
               </p>
             </div>
@@ -205,20 +205,20 @@ const ProductCatalog = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Key Features</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Multilayered Competency Analytics</h4>
-                <p className="text-gray-600 text-sm">Simultaneous assessment of IQ, EQ, technical depth, adaptability, and communication within contextual simulations.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Multilayered Competency Analytics</h4>
+                <p className="text-gray-600 text-base">Simultaneous assessment of IQ, EQ, technical depth, adaptability, and communication within contextual simulations.</p>
               </div>
               <div className="bg-gradient-to-br from-indigo-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-indigo-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Personalized Career Blueprints</h4>
-                <p className="text-gray-600 text-sm">Role-fit mapping driven by user data, aligned to global career pathways, skill market trends, and future-of-work models.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Personalized Career Blueprints</h4>
+                <p className="text-gray-600 text-base">Role-fit mapping driven by user data, aligned to global career pathways, skill market trends, and future-of-work models.</p>
               </div>
               <div className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-purple-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">4M Career Readiness Index</h4>
-                <p className="text-gray-600 text-sm">Proprietary model (Mirroring, Mentoring, Mapping, March Past) for continuous improvement and outcome orientation.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">4M Career Readiness Index</h4>
+                <p className="text-gray-600 text-base">Proprietary model (Mirroring, Mentoring, Mapping, March Past) for continuous improvement and outcome orientation.</p>
               </div>
               <div className="bg-gradient-to-br from-pink-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-pink-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Mentor-Activated Insights</h4>
-                <p className="text-gray-600 text-sm">Actionable reporting linked directly to mentoring tools, peer reviews, and feedback loops to support iterative growth.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Mentor-Activated Insights</h4>
+                <p className="text-gray-600 text-base">Actionable reporting linked directly to mentoring tools, peer reviews, and feedback loops to support iterative growth.</p>
               </div>
             </div>
           </div>
@@ -237,14 +237,14 @@ const ProductCatalog = () => {
 
             {/* Content - Right */}
             <div className="space-y-4">
-              <div className="inline-block px-6 py-2 bg-purple-500 rounded-full text-sm font-semibold text-white mb-4">
+              <div className="inline-block px-6 py-2 bg-purple-500 rounded-full text-base font-semibold text-white mb-4">
                 TALENT INTELLIGENCE SUITE (TIS)
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Transform Data into Talent Decisions</h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-xl text-gray-700">
                 The Talent Intelligence Suite (TIS) is an integrated analytics engine that constructs deep, behavioral-talent graphs, enabling hyper-personalized role matching, future-readiness scoring, and predictive performance mapping.
               </p>
-              <p className="text-base text-gray-700">
+              <p className="text-lg text-gray-700">
                 TIS is not just a profiling system-it's an intelligent decision accelerator for individuals, organizations, and institutions navigating high-stakes workforce planning.
               </p>
             </div>
@@ -263,7 +263,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Behavioral and Technical Profiling</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Behavioral and Technical Profiling</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-pink-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -273,7 +273,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Predictive Talent Mapping</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Predictive Talent Mapping</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-indigo-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -283,7 +283,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Smart Workforce Planning</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Smart Workforce Planning</h4>
                   </div>
                 </div>
               </div>
@@ -292,7 +292,7 @@ const ProductCatalog = () => {
             {/* Approach - Right */}
             <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-purple-500">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Approach</h3>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 We synthesize behavioral analytics, performance data, and AI-driven inference to construct multidimensional talent profiles. This intelligence framework enables organizations and individuals to optimize role-fit, forecast potential, and drive informed workforce decisions at scale-with surgical accuracy.
               </p>
             </div>
@@ -303,48 +303,48 @@ const ProductCatalog = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Key Features</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-purple-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">360-Degree Talent Graphs</h4>
-                <p className="text-gray-600 text-sm">Combines hard and soft skills, aptitude analytics, domain alignment, and attitude quotients into a unified profile.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">360-Degree Talent Graphs</h4>
+                <p className="text-gray-600 text-base">Combines hard and soft skills, aptitude analytics, domain alignment, and attitude quotients into a unified profile.</p>
               </div>
               <div className="bg-gradient-to-br from-pink-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-pink-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">AI-Driven Match Intelligence</h4>
-                <p className="text-gray-600 text-sm">Automated skill-to-role predictions calibrated using live performance data, job taxonomy, and career lifecycle models.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">AI-Driven Match Intelligence</h4>
+                <p className="text-gray-600 text-base">Automated skill-to-role predictions calibrated using live performance data, job taxonomy, and career lifecycle models.</p>
               </div>
               <div className="bg-gradient-to-br from-indigo-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-indigo-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Actionable Intelligence Dashboards</h4>
-                <p className="text-gray-600 text-sm">Visual insights for recruiters, mentors, and L&D leaders to track talent readiness and trajectory.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Actionable Intelligence Dashboards</h4>
+                <p className="text-gray-600 text-base">Visual insights for recruiters, mentors, and L&D leaders to track talent readiness and trajectory.</p>
               </div>
               <div className="bg-gradient-to-br from-violet-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-violet-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Integrated Career/HR Decision Support</h4>
-                <p className="text-gray-600 text-sm">TIS links seamlessly with HCM and LMS tools, empowering organizations to reduce bias and increase hiring precision.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Integrated Career/HR Decision Support</h4>
+                <p className="text-gray-600 text-base">TIS links seamlessly with HCM and LMS tools, empowering organizations to reduce bias and increase hiring precision.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Talent Twin*/}
+      {/* Hire Twin*/}
       <section className="bg-gradient-to-br from-green-50 to-white py-16">
         <div className="container mx-auto px-6">
           {/* Content and Image Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-center">
             {/* Content - Left */}
             <div className="space-y-4">
-              <div className="inline-block px-6 py-2 bg-green-500 rounded-full text-sm font-semibold text-white mb-4">
-                Talent Twin
+              <div className="inline-block px-6 py-2 bg-green-500 rounded-full text-base font-semibold text-white mb-4">
+                Hire Twin
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Hire Smarter, Faster, and Better</h2>
-              <p className="text-lg text-gray-700">
-                Talent Twinis Skillzza's precision hiring ecosystem, built to bridge the delta between high-potential candidates and opportunity pipelines through real-time, data-backed insights.
+              <p className="text-xl text-gray-700">
+                Hire Twinis Skillzza's precision hiring ecosystem, built to bridge the delta between high-potential candidates and opportunity pipelines through real-time, data-backed insights.
               </p>
-              <p className="text-base text-gray-700">
+              <p className="text-lg text-gray-700">
                 It facilitates strategic campus and early-career recruitment by delivering validated learner profiles equipped with performance benchmarks and project portfolios-making intelligent hiring truly scalable.
               </p>
             </div>
 
             {/* Image - Right */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src={getAssetPath('/career_mentoring_img.jpg')} alt="Talent Twin" className="w-full h-96 object-cover" />
+              <img src={getAssetPath('/career_mentoring_img.jpg')} alt="Hire Twin" className="w-full h-96 object-cover" />
             </div>
           </div>
 
@@ -361,7 +361,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-1">Pre-Assessed Student Talent</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-1">Pre-Assessed Student Talent</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-teal-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -371,7 +371,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-1">Campus Recruitment</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-1">Campus Recruitment</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-cyan-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -381,7 +381,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-1">Smart Talent Discovery</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-1">Smart Talent Discovery</h4>
                   </div>
                 </div>
               </div>
@@ -390,7 +390,7 @@ const ProductCatalog = () => {
             {/* Approach - Right */}
             <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-green-500">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Approach</h3>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 We re-engineer hiring workflows through algorithmic talent curation and validated skill visibility. By enabling on-demand access to pre-assessed, portfolio-backed candidates, we compress time-to-hire, elevate talent precision, and eliminate inefficiencies in early-career recruitment.
               </p>
             </div>
@@ -401,20 +401,20 @@ const ProductCatalog = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Key Features</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-green-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Live Talent Intelligence Feed</h4>
-                <p className="text-gray-600 text-sm">Real-time updates on learner skill validation, challenge outcomes, and project completions.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Live Talent Intelligence Feed</h4>
+                <p className="text-gray-600 text-base">Real-time updates on learner skill validation, challenge outcomes, and project completions.</p>
               </div>
               <div className="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-teal-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">One-Click Profile Access</h4>
-                <p className="text-gray-600 text-sm">Hiring managers get a 360° view of candidate readiness-skills, simulations, soft skills, and project delivery.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">One-Click Profile Access</h4>
+                <p className="text-gray-600 text-base">Hiring managers get a 360° view of candidate readiness-skills, simulations, soft skills, and project delivery.</p>
               </div>
               <div className="bg-gradient-to-br from-cyan-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-cyan-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Attrition Mitigation Engine</h4>
-                <p className="text-gray-600 text-sm">Predictive insights into candidate-job alignment reduce onboarding failure and early exits.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Attrition Mitigation Engine</h4>
+                <p className="text-gray-600 text-base">Predictive insights into candidate-job alignment reduce onboarding failure and early exits.</p>
               </div>
               <div className="bg-gradient-to-br from-emerald-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-emerald-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Seamless ATS & CRM Integration</h4>
-                <p className="text-gray-600 text-sm">Enterprise-ready APIs for syncing with existing recruitment pipelines and CRMs.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Seamless ATS & CRM Integration</h4>
+                <p className="text-gray-600 text-base">Enterprise-ready APIs for syncing with existing recruitment pipelines and CRMs.</p>
               </div>
             </div>
           </div>
@@ -433,14 +433,14 @@ const ProductCatalog = () => {
 
             {/* Content - Right */}
             <div className="space-y-4">
-              <div className="inline-block px-6 py-2 bg-red-500 rounded-full text-sm font-semibold text-white mb-4">
+              <div className="inline-block px-6 py-2 bg-red-500 rounded-full text-base font-semibold text-white mb-4">
                 AI HACKNEX
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Code. Compete. Conquer.</h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-xl text-gray-700">
                 AI HackNex is an elite coding and innovation battleground where emerging AI professionals test their mettle through high-stakes, real-world challenges. It is where AI acumen meets public visibility, peer benchmarking, and industry validation.
               </p>
-              <p className="text-base text-gray-700">
+              <p className="text-lg text-gray-700">
                 Designed to spotlight emerging talent and spark transformative innovation, AI HackNex accelerates capability through competitive intensity.
               </p>
             </div>
@@ -459,7 +459,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">AI Innovation Challenges</h4>
+                    <h4 className="text-lg font-bold text-gray-900">AI Innovation Challenges</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-orange-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -469,7 +469,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Public Problem-Solving</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Public Problem-Solving</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-yellow-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -479,7 +479,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Skill Visibility & Recognition</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Skill Visibility & Recognition</h4>
                   </div>
                 </div>
               </div>
@@ -488,7 +488,7 @@ const ProductCatalog = () => {
             {/* Approach - Right */}
             <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-red-500">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Approach</h3>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 We architect high-stakes AI arenas where innovation, code fluency, and real-world relevance converge. Participants engage with mission-critical problem statements under competitive constraints-advancing not just technical depth but also innovation readiness, peer benchmarking, and public validation.
               </p>
             </div>
@@ -499,20 +499,20 @@ const ProductCatalog = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Key Features</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-red-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-red-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Enterprise-Calibrated AI Problems</h4>
-                <p className="text-gray-600 text-sm">Real challenges sourced from Fortune 500 and impact-driven ecosystems.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Enterprise-Calibrated AI Problems</h4>
+                <p className="text-gray-600 text-base">Real challenges sourced from Fortune 500 and impact-driven ecosystems.</p>
               </div>
               <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-orange-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Multi-Tiered Recognition System</h4>
-                <p className="text-gray-600 text-sm">Awards, hiring spotlights, and media features amplify visibility.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Multi-Tiered Recognition System</h4>
+                <p className="text-gray-600 text-base">Awards, hiring spotlights, and media features amplify visibility.</p>
               </div>
               <div className="bg-gradient-to-br from-yellow-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-yellow-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Peer & Institutional Benchmarking</h4>
-                <p className="text-gray-600 text-sm">Comparative dashboards track performance across cohorts, institutions, and national averages.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Peer & Institutional Benchmarking</h4>
+                <p className="text-gray-600 text-base">Comparative dashboards track performance across cohorts, institutions, and national averages.</p>
               </div>
               <div className="bg-gradient-to-br from-amber-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-amber-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">End-to-End Showcase Suite</h4>
-                <p className="text-gray-600 text-sm">Personal branding tools, portfolio display, and public profiles for recruiters and collaborators.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">End-to-End Showcase Suite</h4>
+                <p className="text-gray-600 text-base">Personal branding tools, portfolio display, and public profiles for recruiters and collaborators.</p>
               </div>
             </div>
           </div>
@@ -526,14 +526,14 @@ const ProductCatalog = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-center">
             {/* Content - Left */}
             <div className="space-y-4">
-              <div className="inline-block px-6 py-2 bg-indigo-500 rounded-full text-sm font-semibold text-white mb-4">
+              <div className="inline-block px-6 py-2 bg-indigo-500 rounded-full text-base font-semibold text-white mb-4">
                 POC HUB
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Innovation & Capstone Studio</h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-xl text-gray-700">
                 The POC Hub empowers learners and researchers to transform innovative ideas into validated, functional prototypes-bridging academic exploration with enterprise-grade product thinking.
               </p>
-              <p className="text-base text-gray-700">
+              <p className="text-lg text-gray-700">
                 It serves as a crucible for interdisciplinary collaboration, real-world problem solving, and rapid innovation within controlled, outcome-driven cycles.
               </p>
             </div>
@@ -557,7 +557,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Applied Innovation</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Applied Innovation</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-violet-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -567,7 +567,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Industry-Academia Collaboration</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Industry-Academia Collaboration</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-fuchsia-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -577,7 +577,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Capstone Projects</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Capstone Projects</h4>
                   </div>
                 </div>
               </div>
@@ -586,7 +586,7 @@ const ProductCatalog = () => {
             {/* Approach - Right */}
             <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-indigo-500">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Approach</h3>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 We facilitate structured ideation-to-prototype pipelines by fusing academic intellect with enterprise problem statements. Through rapid co-creation cycles and expert-guided sprints, we cultivate a product-oriented mindset that translates conceptual innovation into tangible, deployable outputs.
               </p>
             </div>
@@ -597,20 +597,20 @@ const ProductCatalog = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Key Features</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-indigo-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-indigo-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Live Industry Brief Repositories</h4>
-                <p className="text-gray-600 text-sm">Curated list of real-world challenges across sectors for ideation and execution.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Live Industry Brief Repositories</h4>
+                <p className="text-gray-600 text-base">Curated list of real-world challenges across sectors for ideation and execution.</p>
               </div>
               <div className="bg-gradient-to-br from-violet-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-violet-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Agile Co-Creation Frameworks</h4>
-                <p className="text-gray-600 text-sm">Guided innovation sprints involving faculty, mentors, and industry sponsors.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Agile Co-Creation Frameworks</h4>
+                <p className="text-gray-600 text-base">Guided innovation sprints involving faculty, mentors, and industry sponsors.</p>
               </div>
               <div className="bg-gradient-to-br from-fuchsia-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-fuchsia-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Capstone Showcases & Market Trials</h4>
-                <p className="text-gray-600 text-sm">Public demos, investor exposure, and test launches build external traction.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Capstone Showcases & Market Trials</h4>
+                <p className="text-gray-600 text-base">Public demos, investor exposure, and test launches build external traction.</p>
               </div>
               <div className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-purple-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">IP and Prototype Support Systems</h4>
-                <p className="text-gray-600 text-sm">Resources for IP filing, tech validation, and incubation transitions.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">IP and Prototype Support Systems</h4>
+                <p className="text-gray-600 text-base">Resources for IP filing, tech validation, and incubation transitions.</p>
               </div>
             </div>
           </div>
@@ -629,14 +629,14 @@ const ProductCatalog = () => {
 
             {/* Content - Right */}
             <div className="space-y-4">
-              <div className="inline-block px-6 py-2 bg-cyan-500 rounded-full text-sm font-semibold text-white mb-4">
+              <div className="inline-block px-6 py-2 bg-cyan-500 rounded-full text-base font-semibold text-white mb-4">
                 DEEPTECH STUDIO
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Virtual Incubation Center</h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-xl text-gray-700">
                 DeepTech Studio is Skillzza's borderless incubation hub designed to empower early-stage entrepreneurs with a digital-first model that accelerates idea validation, product-market fit, and fundraising potential-without physical limitations.
               </p>
-              <p className="text-base text-gray-700">
+              <p className="text-lg text-gray-700">
                 It is tailored for founders in emerging tech domains seeking structure, guidance, and visibility from seed to scale.
               </p>
             </div>
@@ -655,7 +655,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Digital Incubation</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Digital Incubation</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-sky-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -665,7 +665,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Remote Startup Growth</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Remote Startup Growth</h4>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-blue-50 to-transparent rounded-lg hover:shadow-lg transition-shadow">
@@ -675,7 +675,7 @@ const ProductCatalog = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-gray-900">Early-Stage Innovation</h4>
+                    <h4 className="text-lg font-bold text-gray-900">Early-Stage Innovation</h4>
                   </div>
                 </div>
               </div>
@@ -684,7 +684,7 @@ const ProductCatalog = () => {
             {/* Approach - Right */}
             <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-cyan-500">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Approach</h3>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 We deliver a digitally-native incubation architecture that empowers entrepreneurs to scale from zero to validation with strategic velocity. Leveraging modular playbooks, asynchronous mentorship, and milestone-based acceleration, we de-risk early-stage innovation and foster investible outcomes.
               </p>
             </div>
@@ -695,20 +695,20 @@ const ProductCatalog = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Key Features</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-cyan-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-cyan-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Structured Startup Playbooks</h4>
-                <p className="text-gray-600 text-sm">Curated workflows across validation, GTM, user growth, and investment readiness.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Structured Startup Playbooks</h4>
+                <p className="text-gray-600 text-base">Curated workflows across validation, GTM, user growth, and investment readiness.</p>
               </div>
               <div className="bg-gradient-to-br from-sky-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-sky-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Founder-Led Remote Sprints</h4>
-                <p className="text-gray-600 text-sm">On-demand mentor matching and expert-led business design sessions.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Founder-Led Remote Sprints</h4>
+                <p className="text-gray-600 text-base">On-demand mentor matching and expert-led business design sessions.</p>
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Demo Day Infrastructure</h4>
-                <p className="text-gray-600 text-sm">Pitch-stage exposure to VCs, accelerators, and innovation councils.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Demo Day Infrastructure</h4>
+                <p className="text-gray-600 text-base">Pitch-stage exposure to VCs, accelerators, and innovation councils.</p>
               </div>
               <div className="bg-gradient-to-br from-indigo-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-indigo-500">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">MVP Engineering Support</h4>
-                <p className="text-gray-600 text-sm">Guidance on architecture, tech stacks, and beta launch execution.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">MVP Engineering Support</h4>
+                <p className="text-gray-600 text-base">Guidance on architecture, tech stacks, and beta launch execution.</p>
               </div>
             </div>
           </div>

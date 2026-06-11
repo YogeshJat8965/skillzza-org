@@ -17,7 +17,7 @@ const Academy = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-sm font-semibold text-white mb-6">
+            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
               SKILLZZA LEARNING ACADEMY
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
@@ -26,11 +26,11 @@ const Academy = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-yellow-300">
               Shaping Tomorrow's Innovators Through Specialized Excellence
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
               Discover five cutting-edge schools designed to prepare you for the future of work. From AI and quantum computing to sustainability and aerial intelligence, our academy offers immersive learning experiences that bridge theory with real-world application.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-300">
+            <div className="flex flex-wrap justify-center gap-8 text-base text-gray-300">
               <div className="flex items-center space-x-2">
                 <span className="w-2 h-2 bg-green-400 rounded-full"></span>
                 <span>Industry-Aligned Curriculum</span>
@@ -55,19 +55,19 @@ const Academy = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
               <div className="group">
                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">5</div>
-                <div className="text-lg opacity-90">Specialized Schools</div>
+                <div className="text-xl opacity-90">Specialized Schools</div>
               </div>
               <div className="group">
                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">50+</div>
-                <div className="text-lg opacity-90">Industry Programs</div>
+                <div className="text-xl opacity-90">Industry Programs</div>
               </div>
               <div className="group">
                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">100+</div>
-                <div className="text-lg opacity-90">Expert Mentors</div>
+                <div className="text-xl opacity-90">Expert Mentors</div>
               </div>
               <div className="group">
                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">10K+</div>
-                <div className="text-lg opacity-90">Students Trained</div>
+                <div className="text-xl opacity-90">Students Trained</div>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@ const Academy = () => {
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold text-gray-900">1️⃣ ByteMinds</h3>
-                          <p className="text-lg text-blue-600 italic">The School of AI & Quantum Intelligence</p>
+                          <p className="text-xl text-blue-600 italic">The School of AI & Quantum Intelligence</p>
                         </div>
                       </div>
                       <ul className="space-y-3 text-gray-700 mb-6">
@@ -135,7 +135,7 @@ const Academy = () => {
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold text-gray-900">2️⃣ Global School of Sustainability</h3>
-                          <p className="text-lg text-green-600 italic">Climate Action & Environmental Innovation</p>
+                          <p className="text-xl text-green-600 italic">Climate Action & Environmental Innovation</p>
                         </div>
                       </div>
                       <ul className="space-y-3 text-gray-700 mb-6">
@@ -171,7 +171,7 @@ const Academy = () => {
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold text-gray-900">3️⃣ Centre of Digital & Design Excellence</h3>
-                          <p className="text-lg text-purple-600 italic">Innovation Through Design & Technology</p>
+                          <p className="text-xl text-purple-600 italic">Innovation Through Design & Technology</p>
                         </div>
                       </div>
                       <ul className="space-y-3 text-gray-700 mb-6">
@@ -207,7 +207,7 @@ const Academy = () => {
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold text-gray-900">4️⃣ School of EV & E-Mobility</h3>
-                          <p className="text-lg text-orange-600 italic">Electric Vehicle Innovation & Sustainable Transport</p>
+                          <p className="text-xl text-orange-600 italic">Electric Vehicle Innovation & Sustainable Transport</p>
                         </div>
                       </div>
                       <ul className="space-y-3 text-gray-700 mb-6">
@@ -243,7 +243,7 @@ const Academy = () => {
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold text-gray-900">5️⃣ Udan</h3>
-                          <p className="text-lg text-indigo-600 italic">Aerial Intelligence School</p>
+                          <p className="text-xl text-indigo-600 italic">Aerial Intelligence School</p>
                         </div>
                       </div>
                       <ul className="space-y-3 text-gray-700 mb-6">
@@ -348,7 +348,7 @@ const Academy = () => {
               Ready to Shape Your Future?
             </h2>
             <p className="text-xl mb-4">Join thousands of students building tomorrow's world today</p>
-            <p className="text-lg mb-8 opacity-90">Explore our schools and find your path to innovation</p>
+            <p className="text-xl mb-8 opacity-90">Explore our schools and find your path to innovation</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
@@ -364,7 +364,7 @@ const Academy = () => {
 
             <div className="mt-8">
               <p className="text-xl font-bold">The future belongs to those who prepare for it today.</p>
-              <p className="text-lg">Start your journey with Skillzza Academy.</p>
+              <p className="text-xl">Start your journey with Skillzza Academy.</p>
             </div>
           </div>
         </div>
