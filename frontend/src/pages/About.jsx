@@ -34,7 +34,7 @@ const AboutUs = () => {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">
                 Witness the emergence of an organisation that will handhold you to unleash the true potential and achieve your career goals!
               </h2>
-            </div>
+            </div>  
             <div>
               <p className="text-xl text-gray-600 mb-6">
                 In an era defined by rapid technological disruption and evolving workforce requirements, Skillzza represents a paradigm shift in professional development. Our comprehensive Talent Intelligence platform leverages cutting-edge artificial intelligence, experiential learning methodologies, and industry-specific simulations to address the critical skills gap between traditional education and contemporary market demands.

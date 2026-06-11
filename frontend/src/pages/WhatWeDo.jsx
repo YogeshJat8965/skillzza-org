@@ -250,14 +250,14 @@ const WhatWeDo = () => {
       }}>
         <h1 style={{
           fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', fontWeight: '700', color: '#0f172a',
-          lineHeight: '1.2', margin: '0 auto 18px', maxWidth: '760px',
+          lineHeight: '1.2', margin: '0 auto 18px', maxWidth: '1100px',
           letterSpacing: '-0.3px',
         }} className="wwd-reveal wwd-fade-up wwd-hero-title">
-          Bridging Education and Employment with <br className="hidden md:inline" /> Role-Ready Skills
-        </h1>
+          Bridging Education & <br /> Employment with Role-Ready Skills
+        </h1> 
 
         <p style={{
-          fontSize: '17px', color: '#475569', lineHeight: '1.75',
+          fontSize: '20px', color: '#475569', lineHeight: '1.75',
           maxWidth: '580px', margin: '0 auto 52px',
         }} className="wwd-reveal wwd-fade-up wwd-delay-1 wwd-hero-desc">
           Bridging the gap between education and employment, Skillzza empowers professionals,

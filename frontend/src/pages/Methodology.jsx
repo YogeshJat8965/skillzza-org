@@ -488,7 +488,7 @@ const LearnFramework = () => {
       <div className="lf-wrap">
         {/* Bordered title box */}
         <div ref={titleRef} className="lf-title-box meth-reveal meth-fade-up">
-          <h2 className="lf-title">The LEARN Framework<br />How We Builds Real-World Skills</h2>
+          <h2 className="lf-title">The Framework<br />How We Builds Real-World Skills</h2>
         </div>
 
         <div className="lf-body">
@@ -683,8 +683,8 @@ const OurMethodology = () => {
         <style>{`
           .method-core-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 48px;
@@ -695,16 +695,26 @@ const OurMethodology = () => {
           .method-core-card {
             background-color: #F5F5F5;
             border-radius: 8px;
-            padding: 36px 20px 28px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             text-align: center;
+            min-height: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          .method-core-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
           }
 
           @media (max-width: 1024px) {
             .method-core-grid {
               padding: 0 24px;
+              grid-template-columns: 1fr 1fr;
+              gap: 20px;
             }
 
             .method-core-shape {
@@ -776,32 +786,32 @@ const OurMethodology = () => {
 
           {/* Card 1 – Competency-Based Progression */}
           <div className="method-core-card">
-            <img src={getAssetPath('/badge.svg')} alt="Competency-Based Progression" style={{ width: '52px', height: '52px' }} />
-            <p style={{ marginTop: '14px', fontSize: '15.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
+            <img src={getAssetPath('/badge.svg')} alt="Competency-Based Progression" style={{ width: '64px', height: '64px' }} />
+            <p style={{ marginTop: '20px', fontSize: '18px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
               Competency-Based<br />Progression
             </p>
           </div>
 
           {/* Card 2 – Industry-Academic Convergence */}
           <div className="method-core-card">
-            <img src={getAssetPath('/bag.svg')} alt="Industry-Academic Convergence" style={{ width: '52px', height: '52px' }} />
-            <p style={{ marginTop: '14px', fontSize: '15.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
+            <img src={getAssetPath('/bag.svg')} alt="Industry-Academic Convergence" style={{ width: '64px', height: '64px' }} />
+            <p style={{ marginTop: '20px', fontSize: '18px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
               Industry-Academic<br />Convergence
             </p>
           </div>
 
           {/* Card 3 – Cognitive Load Optimization */}
           <div className="method-core-card">
-            <img src={getAssetPath('/brain.svg')} alt="Cognitive Load Optimization" style={{ width: '52px', height: '52px' }} />
-            <p style={{ marginTop: '14px', fontSize: '15.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
+            <img src={getAssetPath('/brain.svg')} alt="Cognitive Load Optimization" style={{ width: '64px', height: '64px' }} />
+            <p style={{ marginTop: '20px', fontSize: '18px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
               Cognitive Load<br />Optimization
             </p>
           </div>
 
           {/* Card 4 – Cultural and Contextual Relevance */}
           <div className="method-core-card">
-            <img src={getAssetPath('/world.svg')} alt="Cultural and Contextual Relevance" style={{ width: '52px', height: '52px' }} />
-            <p style={{ marginTop: '14px', fontSize: '15.5px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
+            <img src={getAssetPath('/world.svg')} alt="Cultural and Contextual Relevance" style={{ width: '64px', height: '64px' }} />
+            <p style={{ marginTop: '20px', fontSize: '18px', fontWeight: '600', color: '#1a1a1a', lineHeight: '1.5' }}>
               Cultural and Contextual<br />Relevance
             </p>
           </div>

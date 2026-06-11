@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getAssetPath } from '../utils/assets';
 import adaptiveAiImg from '../assets/skill persona/image.png';
+import { GraduationCap, Briefcase, Landmark, Building2 } from 'lucide-react';
 const SkillzzaPersona = () => {
   const heroRef = useRef(null);
   const [activeHowTab, setActiveHowTab] = useState(0);
@@ -341,11 +342,13 @@ const SkillzzaPersona = () => {
               <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6', marginBottom: '24px' }}>
                 Technical skills may open doors, but careers are shaped by how people think, communicate, influence, and respond under pressure.
               </p>
-              <img
-                src={getAssetPath('/corporate_model_img.jpg')}
-                alt="Professional businessman"
-                className="w-full object-cover rounded-lg shadow-lg"
-              />
+              <div className="mt-4 lg:mt-8">
+                <img
+                  src={getAssetPath('/corporate_model_img.jpg')}
+                  alt="Professional businessman"
+                  className="w-full object-cover rounded-lg shadow-lg transform scale-105 lg:scale-125 origin-top-left"
+                />
+              </div>
             </div> {/* end right column */}
 
           </div> {/* end flex row */}
@@ -357,13 +360,13 @@ const SkillzzaPersona = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-px" style={{ border: '1px solid #E5E7EB', borderRadius: '12px', overflow: 'hidden' }}>
               {[
-                { title: 'Students & Graduates', desc: 'entering the professional world', icon: '🎓' },
-                { title: 'Professionals', desc: 'preparing for leadership or role transitions', icon: '👔' },
-                { title: 'Institutions', desc: 'focused on employability and career outcomes', icon: '🏛️' },
-                { title: 'Employers', desc: 'seeking behaviorally ready, workplace-fit talent', icon: '🏢' },
+                { title: 'Students & Graduates', desc: 'entering the professional world', icon: <GraduationCap size={32} /> },
+                { title: 'Professionals', desc: 'preparing for leadership or role transitions', icon: <Briefcase size={32} /> },
+                { title: 'Institutions', desc: 'focused on employability and career outcomes', icon: <Landmark size={32} /> },
+                { title: 'Employers', desc: 'seeking behaviorally ready, workplace-fit talent', icon: <Building2 size={32} /> },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 bg-white p-6" style={{ borderBottom: i < 2 ? '1px solid #E5E7EB' : 'none', borderRight: i % 2 === 0 ? '1px solid #E5E7EB' : 'none' }}>
-                  <span className="text-3xl" style={{ color: '#1F57C7' }}>{item.icon}</span>
+                  <span style={{ color: '#1F57C7' }}>{item.icon}</span>
                   <div>
                     <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '17px', color: '#0F1114' }}>{item.title}</p>
                     <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6' }}>{item.desc}</p>
@@ -415,12 +418,12 @@ const SkillzzaPersona = () => {
               <img
                 src={getAssetPath('/Group 41611.jpg')}
                 alt="Team of professionals"
-                className="w-full h-80 object-cover rounded-lg shadow-lg relative z-0"
+                className="w-full h-80 object-cover rounded-lg shadow-lg relative z-0 transform scale-105 lg:scale-125 origin-center"
               />
             </div>
 
             {/* Right: Content */}
-            <div className="lg:w-7/12">
+            <div className="lg:w-7/12 lg:pl-12 xl:pl-16 relative z-10">
               <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2', color: '#0F1114', marginBottom: '16px' }}>
                 Career Moments You Can Practice Today
               </h2>
@@ -565,15 +568,17 @@ const SkillzzaPersona = () => {
         backgroundColor: '#ffffff',
       }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
-          <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2', color: '#0F1114', marginBottom: '20px' }}>
-            The Impact: Proven Results Across Learners and Institutions
-          </h2>
+          <div className="flex flex-col items-center w-full">
+            <h2 className="text-center whitespace-nowrap" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2', color: '#0F1114', marginBottom: '20px' }}>
+              The Impact <br /> Proven Results Across Learners and Institutions
+            </h2>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: '2.8X', label: 'improvement in professional confidence' },
-              { number: '65%', label: 'faster readiness for leadership and client-facing roles' },
-              { number: '50%', label: 'reduction in early-career performance gaps' },
-              { number: '70%', label: 'higher employer confidence in behavioral preparedness' },
+              { number: '2.8X', label: 'Improvement in professional confidence' },
+              { number: '65%', label: 'Faster readiness for leadership and client-facing roles' },
+              { number: '50%', label: 'Reduction in early-career performance gaps' },
+              { number: '70%', label: 'Higher employer confidence in behavioral preparedness' },
             ].map((stat, i) => (
               <div key={i}>
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '42px', color: '#1F57C7', marginBottom: '8px' }}>{stat.number}</p>

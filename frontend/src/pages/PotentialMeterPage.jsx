@@ -119,7 +119,7 @@ const AnimatedNumber = ({ end, duration = 2000, suffix = '' }) => {
 
   useEffect(() => {
     let animationFrameId;
-    
+
     if (isIntersecting) {
       let startTime = null;
       const animate = (time) => {
@@ -214,7 +214,7 @@ export default function PotentialMeterPage() {
         />
 
         {/* Content */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -224,10 +224,10 @@ export default function PotentialMeterPage() {
           {/* Breadcrumb */}
           <div className="w-full max-w-[1400px] mb-3 text-left">
             <span className="font-['DM_Sans',sans-serif] text-[15px] text-[#52525B] flex items-center gap-2">
-              <Link to="/" className="hover:text-[#2563eb] transition-colors">Home</Link> 
-              <span className="text-[12px]">/</span> 
-              <span>Products</span> 
-              <span className="text-[12px]">/</span> 
+              <Link to="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
+              <span className="text-[12px]">/</span>
+              <span>Products</span>
+              <span className="text-[12px]">/</span>
               <span className="font-medium text-[#0F1114]">Potential Meter AI</span>
             </span>
           </div>
@@ -243,8 +243,26 @@ export default function PotentialMeterPage() {
           </h1>
 
           {/* Sub Heading */}
+
+          {/* Hero Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full max-w-[1400px] mx-auto"
+          >
+            <img
+              ref={imgRef}
+              src={heroImg}
+              alt="Potential Meter AI - Assess, Analyze, Readiness, Roadmap"
+              className="w-full h-auto object-contain"
+              onLoad={() => {
+                if (imgRef.current) setImgHeight(imgRef.current.offsetHeight);
+              }}
+            />
+          </motion.div>
           <p
-            className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] max-w-[1050px] text-[18px] leading-[24px] md:text-[19px] md:leading-[27px] lg:text-[21px] lg:leading-[29px] tracking-[-0.6px] mb-3"
+            className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] max-w-[1100px] mx-auto text-[18px] leading-[24px] md:text-[19px] md:leading-[27px] lg:text-[21px] lg:leading-[29px] tracking-[-0.6px] mb-3"
           >
             The AI-powered platform that transforms career uncertainty into data-backed decisions in minutes.
             <br />
@@ -253,7 +271,7 @@ export default function PotentialMeterPage() {
 
           {/* Content Paragraph */}
           <p
-            className="font-['Lato',sans-serif] font-medium text-[#52525B] max-w-[800px] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-5"
+            className="font-['Lato',sans-serif] font-medium text-[#52525B] max-w-[950px] mx-auto text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-5"
           >
             The Potential Meter AI combines artificial intelligence, behavioral science, and
             role-based analytics to deliver precision insights into skills, cognitive agility, and
@@ -271,32 +289,15 @@ export default function PotentialMeterPage() {
             </Link>
           </div>
 
-          {/* Hero Image */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full max-w-[1400px] mx-auto"
-          >
-            <img
-              ref={imgRef}
-              src={heroImg}
-              alt="Potential Meter AI - Assess, Analyze, Readiness, Roadmap"
-              className="w-full h-auto object-contain"
-              onLoad={() => {
-                if (imgRef.current) setImgHeight(imgRef.current.offsetHeight);
-              }}
-            />
-          </motion.div>
 
         </motion.div>
       </section>
 
       {/* ── Statistics Section ── */}
-      <section 
+      <section
         className="w-full flex-shrink-0 flex items-center justify-center bg-[#1F57C7] px-4 py-8 md:py-12"
       >
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -317,37 +318,37 @@ export default function PotentialMeterPage() {
                 <AnimatedNumber end={87} suffix="%" />
               </div>
               <p className="font-['Lato',sans-serif] font-normal text-white text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
-                Improvement in career<br/>clarity
+                Improvement in career<br />clarity
               </p>
             </div>
-            
+
             {/* Stat 2 */}
             <div className="flex flex-col items-center px-4">
               <div className="font-['DM_Sans',sans-serif] font-semibold text-white text-[48px] md:text-[56px] leading-[1] mb-4">
                 <AnimatedNumber end={2.5} suffix="X" />
               </div>
               <p className="font-['Lato',sans-serif] font-normal text-white text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
-                faster career and learning<br/>decision-making
+                faster career and learning<br />decision-making
               </p>
             </div>
-            
+
             {/* Stat 3 */}
             <div className="flex flex-col items-center px-4">
               <div className="font-['DM_Sans',sans-serif] font-semibold text-white text-[48px] md:text-[56px] leading-[1] mb-4">
                 <AnimatedNumber end={60} suffix="%" />
               </div>
               <p className="font-['Lato',sans-serif] font-normal text-white text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] max-w-[250px]">
-                higher role-fit accuracy<br/>for institutions and<br/>employers
+                higher role-fit accuracy<br />for institutions and<br />employers
               </p>
             </div>
-            
+
             {/* Stat 4 */}
             <div className="flex flex-col items-center px-4">
               <div className="font-['DM_Sans',sans-serif] font-semibold text-white text-[48px] md:text-[56px] leading-[1] mb-4">
                 <AnimatedNumber end={40} suffix="%" />
               </div>
               <p className="font-['Lato',sans-serif] font-normal text-white text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] max-w-[220px]">
-                reduction in early-career<br/>misalignment
+                reduction in early-career<br />misalignment
               </p>
             </div>
           </div>
@@ -356,27 +357,27 @@ export default function PotentialMeterPage() {
 
       {/* ── Problem We Solve Section ── */}
       <section className="w-full bg-white flex justify-center px-4 py-2 md:py-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
           className="max-w-[1120px] w-full flex flex-col items-center"
         >
-          
+
           <div className="text-center mb-6 max-w-[800px]">
             <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] mb-4" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
               The Problem We Solve
             </h2>
             <p className="font-['Lato',sans-serif] font-medium text-[#334155] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
-              Career decisions today are based on assumptions<br className="hidden md:block"/> - not real performance data.
+              Career decisions today are based on assumptions<br className="hidden md:block" /> - not real performance data.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
-            
+
             {/* Card 1: Students */}
-            <div className="bg-[#FAFBFD] p-6 md:p-7 rounded-2xl border border-transparent hover:bg-white hover:border-gray-100 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
+            <div className="bg-[#FAFBFD] p-6 md:p-7 rounded-2xl border border-gray-500 hover:bg-white hover:border-gray-800 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] mb-3 group-hover:text-[#2563eb] transition-colors">
                 Students
               </h3>
@@ -386,7 +387,7 @@ export default function PotentialMeterPage() {
             </div>
 
             {/* Card 2: Professionals */}
-            <div className="bg-[#FAFBFD] p-6 md:p-7 rounded-2xl border border-transparent hover:bg-white hover:border-gray-100 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
+            <div className="bg-[#FAFBFD] p-6 md:p-7 rounded-2xl border border-gray-500 hover:bg-white hover:border-gray-600 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] mb-3 group-hover:text-[#2563eb] transition-colors">
                 Professionals
               </h3>
@@ -396,7 +397,7 @@ export default function PotentialMeterPage() {
             </div>
 
             {/* Card 3: Institutions */}
-            <div className="bg-[#FAFBFD] p-6 md:p-7 rounded-2xl border border-transparent hover:bg-white hover:border-gray-100 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
+            <div className="bg-[#FAFBFD] p-6 md:p-7 rounded-2xl border border-gray-500 hover:bg-white hover:border-gray-400 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] mb-3 group-hover:text-[#2563eb] transition-colors">
                 Institutions
               </h3>
@@ -406,7 +407,7 @@ export default function PotentialMeterPage() {
             </div>
 
             {/* Card 4: Employers */}
-            <div className="bg-[#FAFBFD] p-6 md:p-7 rounded-2xl border border-transparent hover:bg-white hover:border-gray-100 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
+            <div className="bg-[#FAFBFD] p-6 md:p-7 rounded-2xl border border-gray-500 hover:bg-white hover:border-gray-400 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-300 group cursor-default">
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] mb-3 group-hover:text-[#2563eb] transition-colors">
                 Employers
               </h3>
@@ -421,7 +422,7 @@ export default function PotentialMeterPage() {
 
       {/* ── What We Measure Section ── */}
       <section className="relative w-full pt-2 md:pt-3 pb-0 md:pb-1 bg-white overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -433,7 +434,7 @@ export default function PotentialMeterPage() {
           </h2>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -442,53 +443,53 @@ export default function PotentialMeterPage() {
         >
           {/* Background Image Container sticking to the right edge */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[62%] max-w-[980px] h-[560px] hidden md:flex justify-end opacity-20 md:opacity-100">
-             <img 
-               src={measureImg} 
-               alt="What we measure at Skillzza" 
-               className="w-full h-full object-cover md:object-contain object-right" 
-             />
+            <img
+              src={measureImg}
+              alt="What we measure at Skillzza"
+              className="w-full h-full object-cover md:object-contain object-right"
+            />
           </div>
 
           <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 w-full lg:w-[58%]">
-              
+
               {/* Card 1 */}
               <div className="pm-measure-card bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
                 <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[20px] md:text-[20px] mb-2">
                   AI-Based Skill Assessment
                 </h3>
                 <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[17px] md:text-[clamp(14px,1.2vw,18px)] leading-[1.55]">
-                  Applied, task-level technical<br className="hidden lg:block"/>competence
+                  Applied, task-level technical<br className="hidden lg:block" />competence
                 </p>
               </div>
 
               {/* Card 2 */}
               <div className="pm-measure-card bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
                 <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[20px] md:text-[20px] mb-2">
-                  Cognitive & Behavioral<br/>Intelligence
+                  Cognitive & Behavioral<br />Intelligence
                 </h3>
                 <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[17px] md:text-[clamp(14px,1.2vw,18px)] leading-[1.55]">
-                  Problem-solving, adaptability,<br className="hidden lg:block"/>communication
+                  Problem-solving, adaptability,<br className="hidden lg:block" />communication
                 </p>
               </div>
 
-               {/* Card 3 */}
+              {/* Card 3 */}
               <div className="pm-measure-card bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
                 <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[20px] md:text-[20px] mb-2">
                   Career Readiness & Role Fit
                 </h3>
                 <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[17px] md:text-[clamp(14px,1.2vw,18px)] leading-[1.55]">
-                  Alignment with real-world job<br className="hidden lg:block"/>requirements
+                  Alignment with real-world job<br className="hidden lg:block" />requirements
                 </p>
               </div>
 
-               {/* Card 4 */}
+              {/* Card 4 */}
               <div className="pm-measure-card bg-[#FC962A] p-5 md:p-6 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-transform duration-300">
                 <h3 className="font-['DM_Sans',sans-serif] font-semibold text-white text-[20px] md:text-[20px] mb-2">
-                  Soft Skills &<br/>Professional Maturity
+                  Soft Skills &<br />Professional Maturity
                 </h3>
                 <p className="font-['Lato',sans-serif] font-medium text-white/90 text-[17px] md:text-[clamp(14px,1.2vw,18px)] leading-[1.55]">
-                  Workplace effectiveness and<br className="hidden lg:block"/>growth readiness
+                  Workplace effectiveness and<br className="hidden lg:block" />growth readiness
                 </p>
               </div>
 
@@ -499,25 +500,25 @@ export default function PotentialMeterPage() {
 
       {/* ── How The Platform Works Section ── */}
       <section className="w-full bg-white py-2 md:py-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
           className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8"
         >
-          
+
           <h2 className="font-['DM_Sans',sans-serif] font-bold text-center text-[#0F1114] mb-4 md:mb-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
             How The Platform Works
           </h2>
 
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
-            
+
             {/* Left Side - Timeline */}
             <div className="w-full lg:w-[45%] relative">
               {/* Vertical Line */}
-              <div 
-                className="absolute left-[39px] top-12 bottom-12 w-[2px] bg-[#2563eb]/20 hidden md:block" 
+              <div
+                className="absolute left-[39px] top-12 bottom-12 w-[2px] bg-[#2563eb]/20 hidden md:block"
               />
 
               <div className="space-y-6 relative z-10 w-full pl-0">
@@ -545,14 +546,14 @@ export default function PotentialMeterPage() {
                       {/* Inactive State - just a dot bordered by wide padding to mask the line */}
                       <div className="w-14 h-14 bg-white flex items-center justify-center absolute transition-opacity duration-300 group-hover:opacity-0">
                         <div className="w-4 h-4 rounded-full bg-[#2563eb]/20 flex items-center justify-center">
-                           <div className="w-2 h-2 rounded-full bg-[#2563eb]" />
+                          <div className="w-2 h-2 rounded-full bg-[#2563eb]" />
                         </div>
                       </div>
 
                       {/* Active / Hover State - large soft blue background glowing */}
                       <div className="w-16 h-16 rounded-full bg-[#eef2ff] flex items-center justify-center absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                         <div className="w-6 h-6 rounded-full bg-white border-[2.5px] border-[#2563eb] flex items-center justify-center shadow-lg">
-                           <div className="w-2.5 h-2.5 rounded-full bg-[#2563eb]" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#2563eb]" />
                         </div>
                       </div>
                     </div>
@@ -567,7 +568,7 @@ export default function PotentialMeterPage() {
                       >
                         {step.title}
                       </h3>
-                      
+
                       {/* Hidden content that expands on hover */}
                       <div className="transition-all duration-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[160px] group-hover:mt-3">
                         <p className="font-['Lato',sans-serif] font-medium text-[#475569] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
@@ -581,8 +582,8 @@ export default function PotentialMeterPage() {
 
               {/* Demo Video CTA */}
               <div className="mt-8 md:mt-10 md:pl-[112px] w-full">
-                <Link 
-                  to="/contact-us" 
+                <Link
+                  to="/contact-us"
                   className="w-full inline-block text-center bg-[#1e4dbc] hover:bg-[#163a8f] transition-all duration-300 text-white font-['DM_Sans',sans-serif] font-semibold text-[18px] py-4 rounded-md shadow-[0_8px_20px_rgba(30,77,188,0.2)] no-underline"
                 >
                   Take Demo
@@ -606,14 +607,14 @@ export default function PotentialMeterPage() {
 
       {/* ── What You Get with Potential Meter Section ── */}
       <section className="relative w-full pt-6 md:pt-8 pb-2 md:pb-4 bg-white overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5 }}
           className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-4"
         >
-          
+
           <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] mb-4" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
             What You Get with Potential Meter
           </h2>
@@ -632,8 +633,8 @@ export default function PotentialMeterPage() {
                 key={tab.id}
                 onClick={() => setActiveGetTab(tab.id)}
                 className={`flex-1 py-3 px-6 rounded-md font-['DM_Sans',sans-serif] font-semibold text-[17px] transition-all duration-300
-                  ${activeGetTab === tab.id 
-                    ? 'bg-white shadow-[0_4px_15px_rgba(0,0,0,0.05)] text-[#0F1114]' 
+                  ${activeGetTab === tab.id
+                    ? 'bg-white shadow-[0_4px_15px_rgba(0,0,0,0.05)] text-[#0F1114]'
                     : 'bg-[#f4f4f5] text-[#52525B] hover:bg-[#eaeaea]'}`}
               >
                 {tab.label}
@@ -643,25 +644,25 @@ export default function PotentialMeterPage() {
         </motion.div>
 
         {/* Tab Content Container */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative w-full mx-auto flex flex-col lg:flex-row items-center border border-gray-100/0 pm-get-container" style={{ minHeight: '700px' }}
         >
-          
+
           {/* Active Content (Left Side) */}
           <div className="pm-get-content w-full lg:w-[55%] xl:w-[50%] pl-4 sm:pl-8 lg:pl-[6%] xl:pl-[12%] pr-4 sm:pr-8 lg:pr-8 pb-16 lg:pb-0 relative z-10">
             <div className="max-w-[750px] animate-fadeIn transition-opacity duration-500">
               <span className="font-['DM_Sans',sans-serif] font-bold text-[#2563eb] text-[15px] tracking-[1px] uppercase mb-4 block">
                 {tabData[activeGetTab].preHeading}
               </span>
-              
+
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] text-[20px] leading-tight tracking-[-1px] mb-4">
                 {tabData[activeGetTab].heading}
               </h3>
-              
+
               <p className="font-['Lato',sans-serif] font-medium text-[#52525B] text-[18px] leading-[1.6] mb-8 whitespace-pre-line">
                 {tabData[activeGetTab].intro}
               </p>
@@ -733,20 +734,60 @@ export default function PotentialMeterPage() {
 
           {/* Graphic Container (Right Side) */}
           <div className="pm-get-graphic w-full lg:w-[50%] xl:w-[50%] lg:absolute right-0 top-1/2 lg:-translate-y-1/2 flex justify-end h-[400px] lg:h-[700px] mt-8 lg:mt-0">
-             <div 
-               className="pm-get-graphic-inner w-full h-full"
-               style={{ 
-                 background: `url(${whatsGetImg}) right center / contain no-repeat` 
-               }}
-             />
+            <div
+              className="pm-get-graphic-inner w-full h-full"
+              style={{
+                background: `url(${whatsGetImg}) right center / contain no-repeat`
+              }}
+            />
           </div>
 
         </motion.div>
       </section>
 
+      <section className="w-full bg-[#FBA93E] py-8 md:py-10 px-4 flex flex-col items-center justify-center text-center mt-auto overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="w-full flex flex-col items-center justify-center"
+        >
+          <h2
+            className="pm-cta-heading font-['DM_Sans',sans-serif] font-bold text-[#0F1114] mb-4 md:mb-5"
+            style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}
+          >
+            Upskill Smarter. Learn Faster.<br />Lead Confidently.
+          </h2>
+          {/* <p className="font-['Lato',sans-serif] font-medium text-[#0F1114] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-7 md:mb-9">
+            Skillzza Academy doesn't just teach skills<br />we build careers, capability, and confidence for the next decade.
+          </p> */}
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 md:mb-8 w-full">
+            <Link
+              to="/login"
+              className="flex items-center justify-center bg-[#2563eb] hover:bg-[#1d4ed8] transition-colors text-white font-['DM_Sans',sans-serif] font-semibold text-[17px] md:text-[18px] w-full sm:w-[260px] md:w-[320px] py-4 rounded-md shadow-sm"
+            >
+              Apply Now
+            </Link>
+            <button
+              className="flex items-center justify-center bg-[#2563eb] hover:bg-[#1d4ed8] transition-colors text-white font-['DM_Sans',sans-serif] font-semibold text-[17px] md:text-[18px] w-full sm:w-[260px] md:w-[320px] py-4 rounded-md shadow-sm"
+            >
+              Download Brochure
+            </button>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 font-['DM_Sans',sans-serif] font-bold text-[15px] md:text-[17px] text-[#0F1114]">
+            {/* <span className="cursor-pointer hover:opacity-70 transition-opacity">Talk to an Academic Advisor</span> */}
+            {/* <span className="hidden sm:inline text-[18px] md:text-[20px] font-medium opacity-80"></span> */}
+            {/* <span className="cursor-pointer hover:opacity-70 transition-opacity">Download Academy Brochure</span> */}
+          </div>
+        </motion.div>
+      </section>
+
       {/* ── FAQ Section ── */}
       <section className="w-full bg-white py-2 md:py-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -754,7 +795,7 @@ export default function PotentialMeterPage() {
           className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8"
         >
           <div className="flex flex-col md:flex-row gap-12 md:gap-20">
-            
+
             {/* Left side: Heading */}
             <div className="w-full md:w-[35%] lg:w-[30%]">
               <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] md:sticky top-24" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
@@ -766,7 +807,7 @@ export default function PotentialMeterPage() {
             <div className="w-full md:w-[65%] lg:w-[70%]">
               {faqData.map((faq, index) => (
                 <div key={index} className="border-b border-gray-100 last:border-0 py-6 pr-4">
-                  <button 
+                  <button
                     className="w-full flex justify-between items-center text-left focus:outline-none group"
                     onClick={() => setActiveFaq(activeFaq === index ? null : index)}
                   >
@@ -799,38 +840,7 @@ export default function PotentialMeterPage() {
       </section>
 
       {/* ── Call To Action Section ── */}
-      <section className="w-full bg-[#FBA93E] py-8 md:py-10 px-4 flex flex-col items-center justify-center text-center mt-auto overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="w-full flex flex-col items-center justify-center"
-        >
-          <h2
-            className="pm-cta-heading font-['DM_Sans',sans-serif] font-bold text-[#0F1114] mb-4 md:mb-5"
-            style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}
-          >
-            Upskill Smarter. Learn Faster.<br />Lead Confidently.
-          </h2>
-          <p className="font-['Lato',sans-serif] font-medium text-[#0F1114] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-7 md:mb-9">
-            Skillzza Academy doesn't just teach skills<br />we build careers, capability, and confidence for the next decade.
-          </p>
 
-          <Link 
-            to="/login"
-            className="flex items-center justify-center bg-[#2563eb] hover:bg-[#1d4ed8] transition-colors text-white font-['DM_Sans',sans-serif] font-semibold text-[17px] md:text-[18px] w-[260px] md:w-[320px] py-4 rounded-md mb-6 md:mb-8"
-          >
-            Apply Now
-          </Link>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 font-['DM_Sans',sans-serif] font-bold text-[15px] md:text-[17px] text-[#0F1114]">
-            <span className="cursor-pointer hover:opacity-70 transition-opacity">Talk to an Academic Advisor</span>
-            <span className="hidden sm:inline text-[18px] md:text-[20px] font-medium opacity-80">|</span>
-            <span className="cursor-pointer hover:opacity-70 transition-opacity">Download Academy Brochure</span>
-          </div>
-        </motion.div>
-      </section>
 
     </div>
   );

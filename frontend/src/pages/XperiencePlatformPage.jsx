@@ -1477,34 +1477,34 @@ function XperiencePlatformPage() {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex flex-wrap items-center gap-3 md:gap-4 pt-2 md:pt-4 hero-buttons">
-                  {/* Start Free Virtual Internship Button */}
-                  <button
-                    className="hero-button px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 text-white text-sm sm:text-base lg:text-lg font-semibold rounded-lg shadow-lg whitespace-nowrap"
-                    style={{ backgroundColor: '#1F57C7' }}
-                  >
-                    Start Free Virtual Internship
-                  </button>
-
+                <div className="flex flex-row flex-nowrap items-center gap-2 md:gap-4 pt-2 md:pt-4 hero-buttons">
                   {/* Explore Simulations Button */}
                   <a
                     href="https://portal.skillzza.com/internships"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hero-button px-5 md:px-6 lg:px-8 py-2.5 md:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold rounded-lg border-2 whitespace-nowrap"
+                    className="hero-button px-3 sm:px-5 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 text-xs sm:text-sm md:text-base lg:text-lg font-semibold rounded-lg border-2 whitespace-nowrap flex-1 text-center"
                     style={{ borderColor: '#52525B', color: '#52525B', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                   >
                     Explore Simulations
                   </a>
 
-                  {/* Book Demo Link */}
+                  {/* Start Free Virtual Internship Button */}
                   <button
+                    className="hero-button px-3 sm:px-5 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 text-white text-xs sm:text-sm md:text-base lg:text-lg font-semibold rounded-lg shadow-lg whitespace-nowrap flex-1 text-center"
+                    style={{ backgroundColor: '#1F57C7' }}
+                  >
+                    Start Free Virtual Internship
+                  </button>
+
+                  {/* Book Demo Link */}
+                  {/* <button
                     onClick={() => { window.location.href = contactUsPath }}
                     className="hero-button text-sm sm:text-base lg:text-lg font-semibold underline whitespace-nowrap pt-[2px]"
                     style={{ color: '#52525B' }}
                   >
                     Book Demo
-                  </button>
+                  </button> */}
                 </div>
               </div>
 
@@ -1787,7 +1787,7 @@ function XperiencePlatformPage() {
                 letterSpacing: '0px'
               }}
             >
-              How It Helps: From Learning To<br className="hidden sm:block" /> Professional Readiness
+              How It Helps <br /> From Learning To Professional Readiness
             </h2>
 
             {/* Subheading */}
@@ -1830,7 +1830,7 @@ function XperiencePlatformPage() {
               ].map((card, index) => (
                 <div
                   key={index}
-                  className="bg-[#F4F4F5] rounded-lg p-5 md:p-6 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] help-card"
+                  className="bg-[#F4F4F5] rounded-lg p-5 md:p-6 flex flex-col items-center text-center transition-all duration-300 border border-gray-300 hover:border-gray-400 hover:-translate-y-2 hover:shadow-xl hover:bg-white help-card"
                   style={{
                     minHeight: '220px',
                     width: '100%'
@@ -1908,7 +1908,7 @@ function XperiencePlatformPage() {
                   src={getAssetPath('/img/Group 41361.png')}
                   alt="Platform Dashboard"
                   className="w-full h-auto"
-                  style={{ maxWidth: '520px', margin: '0 auto' }}
+                  style={{ maxWidth: '650px', margin: '0 auto' }}
                 />
               </div>
 
@@ -1934,30 +1934,23 @@ function XperiencePlatformPage() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="bg-[#F4F4F5] rounded-lg transition-all duration-300 capability-accordion"
+                    className="bg-[#C9DBFF] rounded-lg transition-all duration-300 capability-accordion"
                     style={{ minHeight: '96px' }}
                   >
                     {/* Question Header */}
                     <button
                       onClick={() => toggleAccordion(index)}
-                      className="w-full p-5 flex justify-between items-center text-left hover:bg-[#EDEDEE] transition-colors rounded-lg"
+                      className="w-full p-5 flex justify-between items-center text-left hover:bg-[#B8CDFF] transition-colors rounded-lg"
                     >
                       <h3
-                        style={{
-                          fontFamily: 'DM Sans, sans-serif',
-                          fontWeight: '600',
-                          fontSize: 'clamp(18px, 1.6vw, 24px)',
-                          lineHeight: '40px',
-                          letterSpacing: '-0.7px',
-                          color: '#000000'
-                        }}
+                        className="font-['DM_Sans',sans-serif] font-medium text-[#0F1114] text-[18px] md:text-[clamp(18px,1.6vw,24px)] leading-tight tracking-[-0.7px]"
                       >
                         {item.title}
                       </h3>
 
                       {/* Chevron Icon */}
                       <svg
-                        className={`w-6 h-6 transition-transform duration-300 flex-shrink-0 ml-4 ${expandedAccordion === index ? 'rotate-180' : ''
+                        className={`w-6 h-6 transition-transform duration-300 flex-shrink-0 ml-4 text-[#0F1114] ${expandedAccordion === index ? 'rotate-180' : ''
                           }`}
                         fill="none"
                         stroke="currentColor"
@@ -1978,15 +1971,7 @@ function XperiencePlatformPage() {
                         }`}
                     >
                       <p
-                        className="px-6 pb-6"
-                        style={{
-                          fontFamily: 'Lato, sans-serif',
-                          fontWeight: '400',
-                          fontSize: '17px',
-                          lineHeight: '40px',
-                          letterSpacing: '-0.7px',
-                          color: '#52525B'
-                        }}
+                        className="px-5 pb-5 font-['Lato',sans-serif] font-medium text-[#52525B] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]"
                       >
                         {item.content}
                       </p>
@@ -2033,7 +2018,7 @@ function XperiencePlatformPage() {
                       className="philosophy-card flex-shrink-0"
                     >
                       <div
-                        className="rounded-lg flex items-center justify-center p-6 md:p-8 philosophy-card-inner"
+                        className="rounded-lg flex items-center justify-center p-6 md:p-8 philosophy-card-inner border border-gray-300"
                         style={{
                           backgroundColor: card.bgColor,
                           opacity: 0.73
@@ -2397,10 +2382,13 @@ function XperiencePlatformPage() {
         {/* Technology Stack Section */}
         <section ref={techStackRef} className="py-2 md:py-4 lg:py-4 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-            {/* Title */}
-            <h2 className="tech-heading text-center mb-6 md:mb-8">
-              Our Technology Stack: Built on Scalable,<br className="hidden md:block" /> Secure, Intelligence-Driven Architecture
-            </h2>
+            <div className="flex flex-col items-center text-center mb-6 md:mb-8">
+              <h2 className="tech-heading mb-2 whitespace-nowrap">
+                Our Technology Stack <br />
+                Built on Scalable, Secure, Intelligence-Driven Architecture
+              </h2>
+        
+            </div>
 
             {/* Cards Container */}
             <div className="relative overflow-hidden mb-4">
@@ -2420,7 +2408,7 @@ function XperiencePlatformPage() {
                       style={{ boxSizing: 'border-box' }}
                     >
                       <div
-                        className="tech-card p-6 rounded-lg"
+                        className="tech-card p-6 rounded-lg border border-gray-300 transition-colors duration-300 hover:border-gray-400"
                         style={{
                           background: '#F4F4F5',
                           minHeight: '220px',
@@ -2485,7 +2473,7 @@ function XperiencePlatformPage() {
                     return (
                       <div
                         key={`${techStackIndex}-${offset}`}
-                        className="tech-card p-6 rounded-lg"
+                        className="tech-card p-6 rounded-lg border border-gray-300 transition-colors duration-300 hover:border-gray-400"
                         style={{
                           background: '#F4F4F5',
                           minHeight: '300px'

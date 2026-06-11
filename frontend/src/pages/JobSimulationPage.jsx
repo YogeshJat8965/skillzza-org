@@ -1810,8 +1810,8 @@ function JobSimulationPage() {
         }
 
         .jsim-feature-list {
-          list-style: none;
-          padding: 0;
+          list-style: disc;
+          padding-left: 24px;
           margin: 0;
         }
 
@@ -1821,14 +1821,6 @@ function JobSimulationPage() {
           color: #555555;
           line-height: 1.6;
           margin-bottom: 20px;
-          display: flex;
-          align-items: flex-start;
-          gap: 12px;
-        }
-
-        .jsim-feature-list li svg {
-          flex-shrink: 0;
-          margin-top: 4px; /* Align top of SVG with top of text */
         }
 
         .jsim-feature-image {
@@ -2197,27 +2189,15 @@ function JobSimulationPage() {
               <p style={{ marginBottom: '20px', fontSize: '20px', fontWeight: '500', color: '#333' }}>Job simulations empower you to</p>
               <ul className="jsim-feature-list">
                 <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                   <span>Execute real industry tasks in a risk-free environment</span>
                 </li>
                 <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                   <span>Develop practical, transferable skills that employers demand</span>
                 </li>
                 <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                   <span>Earn industry-recognized certifications aligned with global standards</span>
                 </li>
                 <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                   <span>Add weight to your resume and professional portfolio</span>
                 </li>
               </ul>
@@ -2233,27 +2213,15 @@ function JobSimulationPage() {
               <h2>What Makes Skillzza Stand Out</h2>
               <ul className="jsim-feature-list">
                 <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                   <span>Engage with insightful video briefings and deep-dive resources curated by industry veterans</span>
                 </li>
                 <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                   <span>Learn directly from seasoned professionals through step-by-step guidance</span>
                 </li>
                 <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                   <span>Earn certifications that validate your proficiency and prepare you for global opportunities</span>
                 </li>
                 <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                   <span>Join a talent network of future-focused learners and employers looking for next-gen professionals</span>
                 </li>
               </ul>

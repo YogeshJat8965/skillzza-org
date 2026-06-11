@@ -1559,8 +1559,8 @@ function OurPathwayPage() {
                 alt="SDG icon"
                 style={{
                   position: 'absolute',
-                  width: '52px',
-                  height: '52px',
+                  width: '64px',
+                  height: '64px',
                   objectFit: 'contain',
                   borderRadius: '10px',
                   filter: 'drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.18))',

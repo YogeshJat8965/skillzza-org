@@ -56,6 +56,7 @@ import ProductComingSoon from './pages/ProductComingSoon'
 import CookiePolicy from './pages/CookiePolicy'
 import Disclaimer from './pages/Disclaimer'
 import TermsAndConditions from './pages/TermsAndConditions'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 function ScrollToTopOnRouteChange() {
   const { pathname, hash } = useLocation()
 
@@ -152,6 +153,7 @@ export default function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/register" element={<SignUp />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/terms" element={<TermsAndConditions />} />
       </Routes>
