@@ -13,7 +13,7 @@ import iconDevelopers from '../assets/AI Hacknex/change_17930856.svg'
 import iconCommunity from '../assets/AI Hacknex/initial-public-offering_15749347.svg'
 
 // How AI Hacknex Helps section
-import helpsImg from '../assets/AI Hacknex/Group 41601.png'
+import helpsImg from '../assets/AI Hacknex/Group 41601@2x.png'
 import iconMindset from '../assets/AI Hacknex/mindset_17621247.svg'
 import iconImprovement from '../assets/AI Hacknex/improvement_11726520.svg'
 import iconPopulation from '../assets/AI Hacknex/population_18615181.svg'
@@ -25,7 +25,10 @@ import tabIconChallenge from '../assets/AI Hacknex/effective_7959214.svg'
 import tabIconEvaluation from '../assets/AI Hacknex/evaluation_7651302.svg'
 import tabIconRecognition from '../assets/AI Hacknex/ribbon_7107704.svg'
 import tabIconBenchmark from '../assets/AI Hacknex/improvement_11726520.svg'
-import capabilitiesImg from '../assets/AI Hacknex/Mask Group 123.png'
+import capabilitiesImg1 from '../assets/AI Hacknex/Mask Group 123.png'
+import capabilitiesImg2 from '../assets/AI Hacknex/image.png'
+import capabilitiesImg3 from '../assets/AI Hacknex/image copy.png'
+import capabilitiesImg4 from '../assets/AI Hacknex/image copy 2.png'
 
 function AIHackNexPage() {
   const heroSectionRef = useRef(null)
@@ -318,6 +321,7 @@ function AIHackNexPage() {
           ],
         },
       ],
+      image: capabilitiesImg1,
     },
     {
       title: 'Evaluation Framework',
@@ -339,6 +343,7 @@ function AIHackNexPage() {
           ],
         },
       ],
+      image: capabilitiesImg2,
     },
     {
       title: 'Recognition & Visibility',
@@ -360,6 +365,7 @@ function AIHackNexPage() {
           ],
         },
       ],
+      image: capabilitiesImg3,
     },
     {
       title: 'Benchmarking & Analytics',
@@ -381,6 +387,7 @@ function AIHackNexPage() {
           ],
         },
       ],
+      image: capabilitiesImg4,
     },
   ]
 
@@ -625,7 +632,7 @@ function AIHackNexPage() {
         .hacknex-cap-tab-btn {
           transition: all 0.3s ease;
           cursor: pointer;
-          border: 2px solid transparent;
+          border: 1.5px solid #E4E4E7;
         }
         .hacknex-cap-tab-btn:hover {
           background-color: #F3E8FF;
@@ -655,125 +662,94 @@ function AIHackNexPage() {
       <section
         ref={heroSectionRef}
         className="relative w-full overflow-hidden"
-        style={{ minHeight: 'clamp(480px, 60vw, 854px)' }}
+        style={{ background: '#FFFFFF' }}
       >
-        {/* Background gradient (Rectangle 11564) */}
-        <div className="absolute inset-0 w-full h-full hacknex-hero-background">
-          <img
-            src={heroBgSvg}
-            alt=""
-            className="w-full h-full object-cover"
-            aria-hidden="true"
-          />
-        </div>
+        {/* Breadcrumb - tight to top */}
+        <nav className="hacknex-breadcrumb pt-3 pb-2 md:pt-4 md:pb-3 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 max-w-[1360px] mx-auto">
+          <div
+            className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium"
+            style={{ color: '#71717A', fontFamily: "'Lato', sans-serif" }}
+          >
+            <Link to="/" className="hover:opacity-70 transition-opacity">Home</Link>
+            <span>&gt;</span>
+            <span>Products</span>
+            <span>&gt;</span>
+            <span style={{ color: '#18181B' }}>AI HackNex</span>
+          </div>
+        </nav>
 
-        {/* Content wrapper */}
-        <div className="relative w-full h-full py-6 md:py-10 lg:py-14 xl:py-16">
-          {/* Breadcrumb */}
-          <nav className="hacknex-breadcrumb mb-6 md:mb-8 lg:mb-10 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32 max-w-[1920px] mx-auto">
-            <div
-              className="flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base lg:text-lg font-semibold"
-              style={{ color: '#52525B', opacity: 0.76, fontFamily: 'Lato, sans-serif' }}
+        {/* Main Content - overlapping layout */}
+        <div className="relative max-w-[1360px] mx-auto">
+          {/* Left Column: Text + Buttons - positioned with z-index above image */}
+          <div className="relative z-20 w-full lg:w-[48%] xl:w-[45%] px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 py-3 md:py-4 lg:py-6 xl:py-8">
+            {/* Heading */}
+            <h1
+              className="hacknex-hero-heading mb-5 md:mb-6"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: '700',
+                fontSize: 'clamp(28px, 3.2vw, 52px)',
+                lineHeight: '1.18',
+                letterSpacing: '-1px',
+                color: '#18181B',
+                maxWidth: '550px',
+              }}
             >
-              <Link to="/" className="hover:opacity-70 transition-opacity">Home</Link>
-              <span>&gt;</span>
-              <Link to="/products" className="hover:opacity-70 transition-opacity">Products</Link>
-              <span>&gt;</span>
-              <span>AI HackNex</span>
-            </div>
-          </nav>
+              Connect, create, and conquer challenges together!
+            </h1>
 
-          {/* Main Content - two-column layout */}
-          <div className="flex flex-col lg:flex-row items-center lg:items-center gap-8 md:gap-10 lg:gap-4 xl:gap-0 max-w-[1920px] mx-auto">
-            {/* ── Left Column: Text + Buttons ── */}
-            <div className="w-full lg:w-[50%] xl:w-[45%] space-y-5 md:space-y-6 lg:space-y-7 z-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-32">
-              {/* Heading */}
-              <h1
-                className="hacknex-hero-heading"
-                style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontWeight: '500',
-                  fontSize: 'clamp(30px, 4.2vw, 72px)',
-                  lineHeight: 'clamp(36px, 5vw, 82px)',
-                  letterSpacing: 'clamp(-1px, -0.12vw, -1.8px)',
-                  color: '#0F1114',
-                }}
+            {/* Description paragraph */}
+            <div
+              className="hacknex-hero-subheading mb-6 md:mb-8"
+              style={{
+                maxWidth: '520px',
+                fontFamily: "'Lato', sans-serif",
+                fontWeight: '400',
+                fontSize: 'clamp(14px, 1.05vw, 17px)',
+                lineHeight: '1.65',
+                color: '#71717A',
+              }}
+            >
+              <p>
+                AI HackNex is an AI hackathon and innovation challenge platform
+                designed to validate real-world AI capability, accelerate innovation, and
+                surface credible talent across corporate enterprises and community
+                ecosystems. Operating as both a competitive platform and managed
+                service, AI HackNex bridges the gap between declared skills and
+                demonstrated execution in an AI-first economy.
+              </p>
+            </div>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap items-center gap-4 md:gap-5 hacknex-hero-buttons">
+              <button
+                className="hacknex-register-btn px-7 md:px-9 py-3 md:py-3.5 text-white text-sm md:text-base font-semibold rounded-lg whitespace-nowrap cursor-pointer border-none"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                Connect, create, and{' '}
-                <br className="hidden sm:block" />
-                conquer challenges{' '}
-                <br className="hidden sm:block" />
-                together!
-              </h1>
-
-              {/* Description paragraph */}
-              <div
-                className="hacknex-hero-subheading"
-                style={{
-                  maxWidth: '540px',
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontWeight: '400',
-                  fontSize: 'clamp(14px, 1.3vw, 18px)',
-                  lineHeight: 'clamp(22px, 2vw, 30px)',
-                  letterSpacing: '0px',
-                  color: '#3F3F46',
-                  opacity: 1,
-                }}
+                Register Now
+              </button>
+              <button
+                className="hacknex-explore-link flex items-center gap-1.5 text-sm md:text-base font-semibold bg-transparent border-none cursor-pointer whitespace-nowrap"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                <p>
-                  AI HackNex is an AI hackathon and innovation challenge platform
-                  designed to validate real-world AI capability, accelerate innovation, and
-                  surface credible talent across corporate enterprises and community
-                  ecosystems. Operating as both a competitive platform and managed
-                  service, AI HackNex bridges the gap between declared skills and
-                  demonstrated execution in an AI-first economy.
-                </p>
-              </div>
-
-              {/* Buttons */}
-              <div className="flex flex-wrap items-center gap-4 md:gap-5 pt-1 md:pt-3 hacknex-hero-buttons">
-                {/* Register Now button */}
-                <button
-                  className="hacknex-register-btn px-6 md:px-8 lg:px-9 py-3 md:py-3.5 lg:py-4 text-white text-base sm:text-[17px] lg:text-lg font-semibold rounded-lg shadow-lg whitespace-nowrap cursor-pointer border-none"
-                  style={{ fontFamily: 'DM Sans, sans-serif' }}
-                >
-                  Register Now
-                </button>
-
-                {/* Explore Challenges link */}
-                <button
-                  className="hacknex-explore-link flex items-center gap-1.5 text-base sm:text-[17px] lg:text-lg font-semibold bg-transparent border-none cursor-pointer whitespace-nowrap"
-                  style={{ fontFamily: 'DM Sans, sans-serif' }}
-                >
-                  <span className="underline decoration-1 underline-offset-4">Explore Challenges</span>
-                  <svg
-                    className="hacknex-arrow"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M9 18l6-6-6-6" />
-                  </svg>
-                </button>
-              </div>
+                <span className="underline decoration-1 underline-offset-4">Explore Challenges</span>
+                <svg className="hacknex-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
             </div>
+          </div>
 
-            {/* ── Right Column: Laptop Image ── */}
-            <div className="w-full lg:w-[50%] xl:w-[55%] relative z-10 flex justify-center lg:justify-end hacknex-hero-image">
-              <div className="hacknex-laptop-float w-[85%] sm:w-[75%] md:w-[70%] lg:w-[95%] xl:w-[90%]">
-                <img
-                  src={heroLaptopImg}
-                  alt="AI HackNex Platform Dashboard"
-                  className="w-full h-auto"
-                  style={{ mixBlendMode: 'multiply' }}
-                />
-              </div>
-            </div>
+          {/* Right Column: Laptop Image - absolutely positioned, bleeding right */}
+          <div
+            className="relative lg:absolute lg:right-0 lg:top-0 w-full lg:w-[58%] xl:w-[60%] z-10 flex justify-center lg:justify-end lg:items-start hacknex-hero-image"
+          >
+            <img
+              src={heroLaptopImg}
+              alt="AI HackNex Platform Dashboard"
+              className="w-full h-auto"
+              style={{ maxWidth: '820px' }}
+            />
           </div>
         </div>
       </section>
@@ -783,16 +759,16 @@ function AIHackNexPage() {
         ref={whySectionRef}
         className="w-full bg-white py-16 md:py-20 lg:py-24 xl:py-28"
       >
-        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
           <div className="flex flex-col lg:flex-row gap-10 md:gap-12 lg:gap-20 xl:gap-28">
             {/* Left – heading + subtitle */}
             <div className="hacknex-why-left lg:w-[38%] xl:w-[35%] flex-shrink-0">
               <h2
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: "'DM Sans', sans-serif",
                   fontWeight: '700',
-                  fontSize: 'clamp(28px, 3.5vw, 48px)',
-                  lineHeight: 'clamp(34px, 4vw, 56px)',
+                  fontSize: 'clamp(24px, 2.8vw, 52px)',
+                  lineHeight: '1.2',
                   color: '#0F1114',
                 }}
               >
@@ -800,10 +776,10 @@ function AIHackNexPage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: "'DM Sans', sans-serif",
                   fontWeight: '700',
-                  fontSize: 'clamp(14px, 1.2vw, 18px)',
-                  lineHeight: 'clamp(20px, 1.8vw, 28px)',
+                  fontSize: '28px',
+                  lineHeight: '1.4',
                   color: '#0F1114',
                   marginTop: '8px',
                 }}
@@ -816,11 +792,11 @@ function AIHackNexPage() {
             <div className="hacknex-why-right lg:w-[62%] xl:w-[65%]">
               <p
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: "'Lato', sans-serif",
                   fontWeight: '400',
-                  fontSize: 'clamp(14px, 1.15vw, 17px)',
-                  lineHeight: 'clamp(24px, 2vw, 30px)',
-                  color: '#3F3F46',
+                  fontSize: '20px',
+                  lineHeight: '1.6',
+                  color: '#52525B',
                 }}
               >
                 Resumes list skills. Certifications signal intent. AI HackNex validates execution.
@@ -835,17 +811,17 @@ function AIHackNexPage() {
       {/* ── Built For Section ── */}
       <section
         ref={builtForSectionRef}
-        className="w-full bg-white pb-16 md:pb-20 lg:pb-24 xl:pb-28"
+        className="w-full bg-white pb-10 md:pb-12 lg:pb-14 xl:pb-16"
       >
-        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
           {/* Section heading */}
           <h2
             className="hacknex-builtfor-heading mb-10 md:mb-12 lg:mb-14"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: '700',
-              fontSize: 'clamp(28px, 3.5vw, 48px)',
-              lineHeight: 'clamp(34px, 4vw, 56px)',
+              fontSize: 'clamp(24px, 2.8vw, 52px)',
+              lineHeight: '1.2',
               color: '#0F1114',
             }}
           >
@@ -886,9 +862,8 @@ function AIHackNexPage() {
             ].map((card, idx) => (
               <div
                 key={idx}
-                className="hacknex-builtfor-card rounded-lg p-6 md:p-7 lg:p-8 flex flex-col"
+                className="hacknex-builtfor-card group rounded-xl p-6 md:p-7 lg:p-8 flex flex-col items-center text-center border border-[#E4E4E7] bg-[#F4F4F5] hover:bg-white hover:border-[#D4D4D8] hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-500 ease-out cursor-default"
                 style={{
-                  backgroundColor: '#F4F4F5',
                   minHeight: '280px',
                 }}
               >
@@ -908,7 +883,7 @@ function AIHackNexPage() {
                 </h3>
 
                 {/* Icon */}
-                <div className="mb-6 mt-auto">
+                <div className="mb-6 mt-auto flex justify-center w-full transform group-hover:scale-[1.08] transition-transform duration-500 ease-out">
                   <img
                     src={card.icon}
                     alt={card.title}
@@ -937,124 +912,75 @@ function AIHackNexPage() {
       {/* ── How AI Hacknex Helps Section ── */}
       <section
         ref={helpsSectionRef}
-        className="w-full bg-white py-16 md:py-20 lg:py-24 xl:py-28 overflow-hidden"
+        className="w-full bg-white py-10 md:py-12 lg:py-14 xl:py-16 relative"
+        style={{ overflowX: 'clip' }}
       >
-        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32">
-          {/* Section heading - centered */}
+        {/* Heading area */}
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
           <div className="text-center mb-3 md:mb-4">
             <h2
               className="hacknex-helps-heading"
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: "'DM Sans', sans-serif",
                 fontWeight: '700',
                 fontSize: 'clamp(28px, 3.5vw, 48px)',
-                lineHeight: 'clamp(34px, 4vw, 56px)',
+                lineHeight: '1.2',
                 color: '#0F1114',
               }}
             >
               How AI Hacknex Helps
             </h2>
           </div>
-          {/* Subtitle - centered */}
           <p
             className="hacknex-helps-subtitle text-center mb-10 md:mb-14 lg:mb-16"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: "'Lato', sans-serif",
               fontWeight: '400',
-              fontSize: 'clamp(14px, 1.2vw, 18px)',
-              lineHeight: 'clamp(20px, 1.8vw, 28px)',
+              fontSize: '18px',
+              lineHeight: '1.6',
               color: '#52525B',
             }}
           >
             From Skill Development to Industry &amp; Community Recognition
           </p>
+        </div>
 
-          {/* Content: Cards left + Image right */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 xl:gap-12 items-stretch">
-            {/* Left - 5 benefit cards in 2-col grid */}
-            <div className="w-full lg:w-[48%] xl:w-[45%] grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 auto-rows-min">
-              {[
-                {
-                  icon: iconMindset,
-                  iconW: 67,
-                  iconH: 64,
-                  text: 'Validate AI skills through real-world, domain-specific challenges',
-                },
-                {
-                  icon: iconImprovement,
-                  iconW: 58,
-                  iconH: 64,
-                  text: 'Benchmark performance across peers, institutions, and regions',
-                },
-                {
-                  icon: iconPopulation,
-                  iconW: 73,
-                  iconH: 64,
-                  text: 'Gain public, merit-based visibility with industry and ecosystem partners',
-                },
-                {
-                  icon: iconPortfolio,
-                  iconW: 58,
-                  iconH: 64,
-                  text: 'Build execution-backed AI portfolios trusted by recruiters and sponsors',
-                },
-                {
-                  icon: iconIdeas,
-                  iconW: 64,
-                  iconH: 64,
-                  text: 'Channel AI innovation toward business outcomes and societal impact',
-                },
-              ].map((card, idx) => (
-                <div
-                  key={idx}
-                  className="hacknex-helps-card rounded-lg p-5 md:p-6 flex flex-col gap-4"
-                  style={{ backgroundColor: '#F4F4F5' }}
-                >
-                  <img
-                    src={card.icon}
-                    alt=""
-                    style={{ width: card.iconW, height: card.iconH }}
-                  />
-                  <p
-                    style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      fontWeight: '400',
-                      fontSize: 'clamp(13px, 1vw, 16px)',
-                      lineHeight: 'clamp(20px, 1.5vw, 26px)',
-                      color: '#3F3F46',
-                    }}
-                  >
-                    {card.text}
-                  </p>
+        {/* Content area */}
+        <div className="relative max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
+          {/* Cards grid - wider to overlap image */}
+          <div className="w-full lg:w-[60%] xl:w-[58%] grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 auto-rows-min relative z-20">
+            {[
+              { icon: iconMindset, iconW: 67, iconH: 64, text: 'Validate AI skills through real-world, domain-specific challenges' },
+              { icon: iconImprovement, iconW: 58, iconH: 64, text: 'Benchmark performance across peers, institutions, and regions' },
+              { icon: iconPopulation, iconW: 73, iconH: 64, text: 'Gain public, merit-based visibility with industry and ecosystem partners' },
+              { icon: iconPortfolio, iconW: 58, iconH: 64, text: 'Build execution-backed AI portfolios trusted by recruiters and sponsors' },
+              { icon: iconIdeas, iconW: 64, iconH: 64, text: 'Channel AI innovation toward business outcomes and societal impact' },
+            ].map((card, idx) => (
+              <div
+                key={idx}
+                className="hacknex-helps-card group rounded-xl p-4 md:p-5 flex flex-col gap-3 border border-[#E4E4E7] bg-[#F4F4F5] hover:bg-white hover:border-[#D4D4D8] hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-500 ease-out cursor-default"
+              >
+                <div className="transform group-hover:scale-[1.08] transition-transform duration-500 ease-out origin-left">
+                  <img src={card.icon} alt="" style={{ width: Math.round(card.iconW * 0.8), height: Math.round(card.iconH * 0.8) }} />
                 </div>
-              ))}
-            </div>
+                <p style={{ fontFamily: "'Lato', sans-serif", fontWeight: '400', fontSize: '16px', lineHeight: '1.6', color: '#52525B' }}>
+                  {card.text}
+                </p>
+              </div>
+            ))}
+          </div>
 
-            {/* Right - Image with decorative accents */}
-            <div className="w-full lg:w-[52%] xl:w-[55%] relative hacknex-helps-image">
-              {/* Red accent top-right */}
-              <div
-                className="absolute top-0 right-0 w-[140px] md:w-[180px] lg:w-[200px] h-[140px] md:h-[180px] lg:h-[200px] rounded-bl-[80px] z-0"
-                style={{ backgroundColor: '#C01421' }}
-              />
-              {/* Orange accent right side */}
-              <div
-                className="absolute top-[30%] right-0 w-[30px] md:w-[40px] lg:w-[50px] z-0"
-                style={{ backgroundColor: '#FBA93E', height: '45%' }}
-              />
-              {/* Red accent bottom */}
-              <div
-                className="absolute bottom-0 right-[10%] h-[28px] md:h-[36px] z-0"
-                style={{ backgroundColor: '#C01421', width: '55%' }}
-              />
-              {/* Main image */}
-              <img
-                src={helpsImg}
-                alt="Team collaborating on AI challenges"
-                className="relative z-10 w-full h-full object-cover rounded-lg"
-                style={{ maxHeight: '705px' }}
-              />
-            </div>
+          {/* Image - absolutely positioned, bleeding to viewport right */}
+          <div
+            className="hidden lg:block absolute top-0 z-10 hacknex-helps-image"
+            style={{ right: 'calc(-50vw + 50%)', width: 'calc(45% + 50vw - 50%)', height: '100%' }}
+          >
+            <img src={helpsImg} alt="Team collaborating on AI challenges" className="relative z-10 w-full h-full object-cover object-right rounded-l-lg" />
+          </div>
+
+          {/* Mobile image fallback */}
+          <div className="lg:hidden mt-8 relative">
+            <img src={helpsImg} alt="Team collaborating on AI challenges" className="w-full h-auto object-cover rounded-lg" style={{ maxHeight: '400px' }} />
           </div>
         </div>
       </section>
@@ -1062,7 +988,7 @@ function AIHackNexPage() {
       {/* ── Key Platform Capabilities Section ── */}
       <section
         ref={capabilitiesSectionRef}
-        className="w-full bg-[#F9FAFB] py-16 md:py-20 lg:py-24 xl:py-28 relative overflow-hidden"
+        className="w-full bg-[#F9FAFB] py-12 md:py-16 lg:py-20 xl:py-24 relative overflow-hidden"
       >
         {/* Decorative circle bottom-left */}
         <div
@@ -1070,15 +996,15 @@ function AIHackNexPage() {
           style={{ backgroundColor: '#703593' }}
         />
 
-        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
           {/* Heading */}
           <h2
             className="hacknex-cap-heading text-center mb-8 md:mb-12"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: "'DM Sans', sans-serif",
               fontWeight: '700',
-              fontSize: 'clamp(28px, 3.5vw, 48px)',
-              lineHeight: 'clamp(34px, 4vw, 56px)',
+              fontSize: 'clamp(24px, 2.8vw, 52px)',
+              lineHeight: '1.2',
               color: '#0F1114',
             }}
           >
@@ -1086,11 +1012,11 @@ function AIHackNexPage() {
           </h2>
 
           {/* Tab navigation */}
-          <div className="hacknex-cap-tabs flex flex-wrap justify-center items-center gap-2 md:gap-3 mb-12 md:mb-16">
+          <div className="hacknex-cap-tabs flex flex-wrap justify-center items-stretch gap-2 md:gap-3 mb-12 md:mb-16">
             {capabilityTabs.map((tab, idx) => (
               <React.Fragment key={idx}>
                 <button
-                  className={`hacknex-cap-tab-btn flex items-center gap-2 md:gap-3 px-4 md:px-5 lg:px-6 py-3 md:py-4 rounded-lg bg-white shadow-sm border-none ${activeCapTab === idx ? 'active-tab' : ''
+                  className={`hacknex-cap-tab-btn flex-1 min-w-[200px] max-w-[260px] flex items-center justify-center gap-2 md:gap-3 px-4 md:px-5 lg:px-6 py-3 md:py-4 rounded-lg bg-white shadow-sm ${activeCapTab === idx ? 'active-tab' : ''
                     }`}
                   onClick={() => setActiveCapTab(idx)}
                   style={{ fontFamily: 'DM Sans, sans-serif' }}
@@ -1099,6 +1025,9 @@ function AIHackNexPage() {
                     src={tab.icon}
                     alt=""
                     className="w-8 h-8 md:w-10 md:h-10 lg:w-11 lg:h-11"
+                    style={{
+                      filter: 'invert(16%) sepia(87%) saturate(5831%) hue-rotate(345deg) brightness(97%) contrast(106%)'
+                    }}
                   />
                   <span
                     className="text-sm md:text-base lg:text-[17px] font-semibold text-left whitespace-pre-line"
@@ -1118,7 +1047,7 @@ function AIHackNexPage() {
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="hidden sm:block flex-shrink-0"
+                    className="hidden sm:block flex-shrink-0 self-center"
                   >
                     <path d="M9 18l6-6-6-6" />
                   </svg>
@@ -1185,9 +1114,10 @@ function AIHackNexPage() {
               {/* Right - image */}
               <div className="w-full lg:w-[50%] xl:w-[52%] flex items-center justify-center">
                 <img
-                  src={capabilitiesImg}
+                  src={capabilityContent[activeCapTab].image}
                   alt="Platform capabilities diagram"
-                  className="w-full max-w-[794px] h-auto"
+                  className="w-full max-w-[794px] aspect-[16/10] object-cover object-top rounded-lg shadow-sm"
+                  style={{ transition: 'opacity 0.3s ease-in-out' }}
                 />
               </div>
             </div>
@@ -1198,7 +1128,7 @@ function AIHackNexPage() {
       {/* ── Impact Across Corporate & Community Deployments Section ── */}
       <section
         ref={impactSectionRef}
-        className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
+        className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-white"
         style={{
           backgroundImage: getBackgroundImageUrl('/img/Mask Group 138.png'),
           backgroundSize: 'cover',
@@ -1207,23 +1137,11 @@ function AIHackNexPage() {
           opacity: 1,
         }}
       >
-        {/* Overlay for opacity control */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: getBackgroundImageUrl('/img/Mask Group 138.png'),
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            opacity: 0.58,
-            zIndex: 0,
-          }}
-        />
 
         <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12 max-w-[1400px]">
           {/* Title */}
           <h2
-            className="text-center mb-16 md:mb-20 lg:mb-24"
+            className="text-center mb-10 md:mb-14 lg:mb-16"
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: '700',
@@ -1359,10 +1277,10 @@ function AIHackNexPage() {
 
       {/* ── CTA Section ── */}
       <section
-        className="w-full py-20 md:py-28 lg:py-32 xl:py-36"
+        className="w-full py-12 md:py-16 lg:py-20 xl:py-24"
         style={{ backgroundColor: '#FBA93E' }}
       >
-        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32 text-center">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 text-center">
           {/* Heading */}
           <h2
             style={{
@@ -1371,7 +1289,7 @@ function AIHackNexPage() {
               fontSize: 'clamp(32px, 4.5vw, 64px)',
               lineHeight: '1.15',
               color: '#0F1114',
-              marginBottom: 'clamp(32px, 4vw, 56px)',
+              marginBottom: 'clamp(24px, 3vw, 40px)',
             }}
           >
             Compete. Innovate.<br />Create Impact.

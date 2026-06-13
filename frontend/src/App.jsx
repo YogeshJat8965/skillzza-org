@@ -135,7 +135,7 @@ export default function App() {
         <Route path="/product/potential-meter" element={<PotentialMeterPage />} />
         <Route path="/product/xperience-platform" element={<XperiencePlatformPage />} />
         <Route path="/product/talent-intelligence" element={<ProductComingSoon />} />
-        <Route path="/product/ai-hacknex" element={<ProductComingSoon />} />
+        <Route path="/product/ai-hacknex" element={<AIHackNexPage />} />
         <Route path="/academy" element={<Academy />} />
         <Route path="/academy/byteminds" element={<ByteMinds />} />
         <Route path="/academy/sustainability" element={<Sustainability />} />

@@ -17,10 +17,10 @@ import platformImg3 from '../assets/card grid/image 3.png';
 import platformImg4 from '../assets/card grid/image 4.png';
 import platformImg5 from '../assets/card grid/image 5.png';
 import platformImg6 from '../assets/card grid/image 6.png';
-import sot1Img from '../assets/card grid/School of Technology/1.png';
-import sot2Img from '../assets/card grid/School of Technology/2.png';
-import sot3Img from '../assets/card grid/School of Technology/3.png';
-import sot4Img from '../assets/card grid/School of Technology/4.png';
+import sot1Img from '../assets/card grid/School of Technology/sot1.png';
+import sot2Img from '../assets/card grid/School of Technology/sot2.png';
+import sot3Img from '../assets/card grid/School of Technology/sot3.png';
+import sot4Img from '../assets/card grid/School of Technology/sot4.png';
 
 
 // K-12 Dropdown images
@@ -212,7 +212,7 @@ const navItems = [
   {
     name: 'School of Technology',
     layout: 'image-card-grid',
-    width: 820,
+    width: 960,
     dotColor: '#BD1723',
     accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
     items: [
@@ -850,27 +850,31 @@ const ListRowItem = ({ item, index, onComingSoon }) => {
 ═══════════════════════════════════════════════════════════════ */
 
 const ImageCardGridDropdown = ({ navItem, onComingSoon }) => (
-  <div>
-    {navItem.eyebrow ? (
-      <Eyebrow text={navItem.eyebrow} dotColor={navItem.dotColor} gradient={navItem.accentGradient} />
-    ) : null}
+  <div style={{ padding: '8px 24px 24px' }}>
+    <div style={{ textAlign: 'center', marginBottom: 28 }}>
+      {/* <div style={{ color: '#4543D9', fontSize: 11, fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 8, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+        SCHOOL OF TECHNOLOGY
+      </div> */}
+      <h3 style={{ color: '#0F1114', fontSize: 26, fontWeight: 800, marginBottom: 8, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+        Where Technology Meets Purpose
+      </h3>
+      <p style={{ color: '#4B5563', fontSize: 13, fontFamily: "'DM Sans', sans-serif", fontWeight: 500 }}>
+        Four transformative schools. One mission – shaping a smarter, sustainable & innovative tomorrow.
+      </p>
+    </div>
     <style>{`
       @keyframes szCardRise {
         0% { opacity: 0; transform: translateY(12px) scale(0.98); }
         100% { opacity: 1; transform: translateY(0) scale(1); }
       }
-      @keyframes szInfoReveal {
-        0% { opacity: 0; transform: translateY(14px); }
-        100% { opacity: 1; transform: translateY(0); }
-      }
     `}</style>
     <div
       style={{
-        width: '90%',
+        width: '100%',
         margin: '0 auto',
         display: 'grid',
         gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-        gap: 16,
+        gap: 20,
       }}
     >
       {navItem.items.map((item, i) => (
@@ -885,19 +889,15 @@ const ImageCardItem = ({ item, index, onComingSoon }) => {
   const isExternal = item.link?.startsWith('http');
   const titleStr = item.titleLines?.join(' ') || 'School of Technology';
 
-  let bg, color, svg;
+  let num, title, desc, linkColor, blankSide;
   if (titleStr.includes('AI & Quantum')) {
-    bg = '#f3e8ff'; color = '#8947B3';
-    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line><text x="12" y="16" fontSize="9" fontWeight="800" textAnchor="middle" fill="currentColor" stroke="none">AI</text></svg>;
+    num = '01'; title = 'School of AI &\nQuantum Intelligence'; desc = 'Exploring the frontiers of AI and quantum computing to solve complex global challenges and shape the future.'; linkColor = '#6366f1'; blankSide = 'left';
   } else if (titleStr.includes('Sustainability')) {
-    bg = '#dcfce7'; color = '#16a34a';
-    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" /><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" /></svg>;
+    num = '02'; title = 'Global School of\nSustainability &\nClimate Action'; desc = 'Empowering changemakers and innovators to build a sustainable planet for future generations.'; linkColor = '#22c55e'; blankSide = 'right';
   } else if (titleStr.includes('Digital & Design')) {
-    bg = '#e0e7ff'; color = '#2563eb';
-    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="3" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /><path d="m10 14 2.5-2.5a1.41 1.41 0 0 1 2 2L12 16" /></svg>;
+    num = '03'; title = 'Centre of Digital &\nDesign Excellence'; desc = 'Nurturing creativity and digital innovation through design thinking, future skills and immersive learning.'; linkColor = '#f97316'; blankSide = 'right';
   } else {
-    bg = '#f3e8ff'; color = '#8947B3';
-    svg = <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" /><path d="M12 14v4" /><path d="M12 18h4" /><path d="M12 18H8" /><circle cx="6" cy="6" r="2" /><circle cx="18" cy="6" r="2" /><circle cx="6" cy="18" r="2" /><circle cx="18" cy="18" r="2" /><path d="m8 8 3.5 3.5" /><path d="m12.5 12.5 3.5 3.5" /><path d="m16 8-3.5 3.5" /><path d="m11.5 12.5-3.5 3.5" /></svg>;
+    num = '04'; title = 'Institute of\nAerial Intelligence'; desc = 'Advancing the future of drones, robotics and autonomous systems through research and real-world experiential learning.'; linkColor = '#3b82f6'; blankSide = 'right';
   }
 
   return (
@@ -913,103 +913,48 @@ const ImageCardItem = ({ item, index, onComingSoon }) => {
       onMouseLeave={() => setHovered(false)}
       style={{
         position: 'relative',
-        borderRadius: 18,
-        overflow: 'hidden',
+        display: 'block',
         cursor: item.link ? 'pointer' : 'default',
         textDecoration: 'none',
-        background: '#ffffff',
-        transition: 'all 0.32s cubic-bezier(0.34,1.2,0.64,1)',
-        transform: hovered ? 'translateY(-6px) scale(1.01)' : 'translateY(0) scale(1)',
-        boxShadow: hovered
-          ? '0 18px 32px rgba(15, 23, 42, 0.18)'
-          : '0 10px 24px rgba(15, 23, 42, 0.12)',
+        transition: 'all 0.35s ease',
+        overflow: 'hidden',
         animation: 'szCardRise 520ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
         animationDelay: `${index * 80}ms`,
         opacity: 0,
-        border: '1px solid rgba(15, 23, 42, 0.06)',
       }}
     >
-      <div
+      <img
+        src={item.image}
+        alt={titleStr}
         style={{
-          position: 'relative',
-          height: 155,
-          overflow: 'hidden',
+          width: '100%',
+          height: 'auto',
+          display: 'block',
+          transition: 'transform 0.5s ease',
+          transform: hovered ? 'scale(1.03)' : 'scale(1)',
         }}
-      >
-        <img
-          src={item.image}
-          alt={titleStr}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: '50% 35%',
-            transform: hovered ? 'scale(1.03)' : 'scale(1)',
-            transition: 'transform 520ms cubic-bezier(0.22, 1, 0.36, 1)',
-          }}
-        />
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          gap: 12,
-          padding: '10px 14px',
-          background: '#ffffff',
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0, flex: 1 }}>
-          <div
-            style={{
-              width: 34,
-              height: 34,
-              borderRadius: 8,
-              background: bg,
-              color: color,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexShrink: 0,
-            }}
-          >
-            {svg}
-          </div>
-          <div
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 15.5,
-              fontWeight: 700,
-              color: '#0f172a',
-              lineHeight: 1.3,
-              letterSpacing: 0,
-              whiteSpace: 'nowrap',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-            }}
-          >
-            {titleStr}
+      />
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        [blankSide]: 0,
+        width: '52%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        padding: blankSide === 'left' ? '10px 32px 10px 24px' : (titleStr.includes('Sustainability') || titleStr.includes('Aerial') ? '10px 12px 10px 60px' : '10px 24px 10px 48px'),
+        textAlign: 'left',
+      }}>
+        <div style={{ fontSize: 22, fontWeight: 800, color: linkColor, marginBottom: 4, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{num}</div>
+        <div style={{ fontSize: 17, fontWeight: 800, color: '#0F1114', marginBottom: 6, lineHeight: 1.15, whiteSpace: 'pre-wrap', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{title}</div>
+        <div style={{ fontSize: 11, color: '#374151', marginBottom: 10, lineHeight: 1.4, fontFamily: "'DM Sans', sans-serif", fontWeight: 600 }}>{desc}</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: linkColor, fontSize: 11, fontWeight: 800, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+          EXPLORE SCHOOL
+          <div style={{ width: 22, height: 22, borderRadius: '50%', backgroundColor: linkColor, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.3s cubic-bezier(0.34,1.2,0.64,1)', transform: hovered ? 'translateX(4px)' : 'translateX(0)' }}>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7-7 7 7-7 7" /></svg>
           </div>
         </div>
-        <span
-          style={{
-            width: 28,
-            height: 28,
-            borderRadius: '50%',
-            background: bg,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: color,
-            fontSize: 16,
-            fontWeight: 800,
-            flexShrink: 0,
-            transition: 'all 280ms ease',
-            transform: hovered ? 'translateX(2px)' : 'translateX(0)',
-          }}
-        >
-          ➜
-        </span>
       </div>
     </a>
   );
