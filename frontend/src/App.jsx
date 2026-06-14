@@ -37,6 +37,7 @@ import ProductCatalog from './pages/ProductCatalog'
 
 // ── Yogesh's pages ──
 import OurPathwayPage from './pages/OurPathwayPage'
+import TalentIntelligencePage from './pages/TalentIntelligencePage'
 import AboutPage from './pages/AboutPage'
 import PartnerCollaborationPage from './pages/PartnerCollaborationPage'
 import InsightsPage from './pages/InsightsPage'
@@ -134,7 +135,7 @@ export default function App() {
         <Route path="/product/hire-twin" element={<TalentTwin />} />
         <Route path="/product/potential-meter" element={<PotentialMeterPage />} />
         <Route path="/product/talent-twin" element={<XperiencePlatformPage />} />
-        <Route path="/product/talent-intelligence" element={<ProductComingSoon />} />
+        <Route path="/product/talent-intelligence" element={<TalentIntelligencePage />} />
         <Route path="/product/ai-hacknex" element={<AIHackNexPage />} />
         <Route path="/academy" element={<Academy />} />
         <Route path="/academy/byteminds" element={<ByteMinds />} />
