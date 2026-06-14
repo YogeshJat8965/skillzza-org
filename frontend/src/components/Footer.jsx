@@ -14,9 +14,9 @@ const footerSections = [
     title: 'Platforms',
     links: [
       { name: 'The Potential Meter', href: '/product/potential-meter' },
-      { name: 'Talent Twin', href: '/product/xperience-platform' },
+      { name: 'Talent Twin', href: '/product/talent-twin' },
       { name: 'AI Hacknex', href: '/product/ai-hacknex', disabled: true },
-      { name: 'Hire Twin', href: '/product/talent-twin', disabled: true },
+      { name: 'Hire Twin', href: '/product/hire-twin', disabled: true },
       { name: 'Skill Persona', href: '/explore/skillzza-persona' },
       { name: 'Talent Intelligence', href: '/product/talent-intelligence', disabled: true },
     ],

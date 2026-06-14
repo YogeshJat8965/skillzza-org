@@ -81,7 +81,7 @@ const navItems = [
       {
         name: 'Talent Twin',
         subtitle: 'Job simulations',
-        link: '/product/xperience-platform',
+        link: '/product/talent-twin',
         icon: <Briefcase size={22} strokeWidth={2} />,
         heading: 'Practice real roles.',
         headingHighlight: 'Build real confidence.',
@@ -117,7 +117,7 @@ const navItems = [
       {
         name: 'Hire Twin',
         subtitle: 'Campus hiring marketplace',
-        link: '/product/talent-twin',
+        link: '/product/hire-twin',
         icon: <Users size={22} strokeWidth={2} />,
         heading: 'Connecting talent.',
         headingHighlight: 'Creating opportunities.',

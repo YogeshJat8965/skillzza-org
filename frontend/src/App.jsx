@@ -21,7 +21,7 @@ import StudentsUseCase from './pages/StudentsUseCase'
 import InstitutionsUseCase from './pages/InstitutionsUseCase'
 import EnterprisesUseCase from './pages/EnterprisesUseCase'
 import GovernmentUseCase from './pages/GovernmentUseCase'
-import TalentTwin from './pages/Hirenest'
+import TalentTwin from './pages/HireTwinPage'
 import PotentialMeter from './pages/PotentialMeter'
 import XperiencePlatform from './pages/XperiencePlatform'
 import TalentIntelligence from './pages/TalentIntelligence'
@@ -131,9 +131,9 @@ export default function App() {
         <Route path="/use-case/enterprises" element={<EnterprisesUseCase />} />
         <Route path="/use-case/government" element={<GovernmentUseCase />} />
 
-        <Route path="/product/talent-twin" element={<TalentTwin />} />
+        <Route path="/product/hire-twin" element={<TalentTwin />} />
         <Route path="/product/potential-meter" element={<PotentialMeterPage />} />
-        <Route path="/product/xperience-platform" element={<XperiencePlatformPage />} />
+        <Route path="/product/talent-twin" element={<XperiencePlatformPage />} />
         <Route path="/product/talent-intelligence" element={<ProductComingSoon />} />
         <Route path="/product/ai-hacknex" element={<AIHackNexPage />} />
         <Route path="/academy" element={<Academy />} />

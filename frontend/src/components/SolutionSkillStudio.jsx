@@ -408,7 +408,7 @@ const SolutionSkillStudio = () => {
                             <button
                                 className="sss-cta transition-all duration-300 hover:opacity-90" onClick={() => {
                                     if (activeTab === 0) window.location.href = getRoutePath('/product/potential-meter');
-                                    if (activeTab === 1) window.location.href = getRoutePath('/product/xperience-platform');
+                                    if (activeTab === 1) window.location.href = getRoutePath('/product/talent-twin');
                                     if (activeTab === 4) window.location.href = getRoutePath('/contact-us');
                                 }} style={{
                                     fontFamily: "'DM Sans', sans-serif",
