@@ -1,376 +1,557 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react'
+import { getAssetPath } from '../utils/assets'
 
-import { getAssetPath, getBackgroundImageUrl } from '../utils/assets';
-const Academy = () => {
+// Import Feature Icons
+import iconIndustry from '../assets/Academy/computer_3598191.svg'
+import iconFlexible from '../assets/Academy/call-split_566037.svg'
+import iconApplied from '../assets/Academy/tools_1077198.svg'
+import iconPractitioner from '../assets/Academy/celebrity_1169330.svg'
+import iconStackable from '../assets/Academy/quality_6294011.svg'
+
+// Import Images
+import pathwaysImg from '../assets/Academy/Group 41602.png'
+
+function AnimatedCounter({ valueStr }) {
+  const [countStr, setCountStr] = useState(valueStr.replace(/[0-9]/g, '0'))
+  const ref = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+        setCountStr(valueStr.replace(/[0-9]/g, '0'))
+      }
+    }, { threshold: 0.1 })
+
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [valueStr])
+
+  useEffect(() => {
+    if (!isVisible) return
+
+    const parts = valueStr.split(/(\d+)/)
+    const duration = 2000 // 2 seconds
+    const startTime = performance.now()
+
+    const update = (currentTime) => {
+      const elapsed = currentTime - startTime
+      const progress = Math.min(elapsed / duration, 1)
+      const easeOut = 1 - Math.pow(1 - progress, 3)
+
+      const currentString = parts.map(part => {
+        if (/^\d+$/.test(part)) {
+          const target = parseInt(part, 10)
+          return Math.floor(target * easeOut).toString()
+        }
+        return part
+      }).join('')
+
+      setCountStr(currentString)
+
+      if (progress < 1) {
+        requestAnimationFrame(update)
+      } else {
+        setCountStr(valueStr)
+      }
+    }
+    requestAnimationFrame(update)
+  }, [isVisible, valueStr])
+
+  return <span ref={ref}>{countStr}</span>
+}
+
+export default function Academy() {
+  const heroSectionRef = useRef(null)
+
+  useEffect(() => {
+    // 3D Scroll Animation Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          } else {
+            entry.target.classList.remove('visible')
+          }
+        })
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      }
+    )
+
+    const elements = document.querySelectorAll('.scroll-3d')
+    elements.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <>
-      {/* Hero Section */}
-      <section
-        className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-blue-600 to-purple-700"
-        style={{ 
-          backgroundImage: getBackgroundImageUrl('/for_universities_banner.jpeg'),
-          minHeight: '70vh'
-        }}
-      >
-        <div className="absolute inset-0 bg-gray-900/70"></div>
+      <style>{`
+        /* ── Modern 3D Scroll Animations ── */
+        .scroll-3d {
+          opacity: 0;
+          transform: perspective(1000px) rotateX(4deg) translateY(30px) scale(0.98);
+          transition: all 0.8s cubic-bezier(0.25, 1, 0.2, 1);
+          will-change: opacity, transform;
+        }
         
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl text-white text-center mx-auto">
-            <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
-              SKILLZZA LEARNING ACADEMY
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
-              Skillzza Learning Academy
-            </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-yellow-300">
-              Shaping Tomorrow's Innovators Through Specialized Excellence
+        .scroll-3d.visible {
+          opacity: 1;
+          transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* ── Academy Hero Gradient ── */
+        .academy-hero-bg {
+          background: transparent linear-gradient(255deg, #D5EFFF 0%, #E8F5FD 33%, #F2F8FC 51%, #D5EFFF 100%) 0% 0% no-repeat padding-box;
+        }
+        
+        .academy-btn {
+          background-color: #2974c9;
+          transition: all 0.3s ease;
+        }
+        .academy-btn:hover {
+          background-color: #1a5ea8;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(41, 116, 201, 0.25);
+        }
+
+        /* ── H1 line blocks — force 2 exact lines on desktop ── */
+        .academy-h1-line {
+          display: block;
+          white-space: nowrap;
+        }
+        @media (max-width: 767px) {
+          .academy-h1-line { white-space: normal !important; }
+        }
+      `}</style>
+
+      {/* ════════════════════════════════════════════════════════════════
+          SECTION 1 — HERO
+      ════════════════════════════════════════════════════════════════ */}
+      <section
+        ref={heroSectionRef}
+        className="w-full academy-hero-bg flex items-center justify-center relative overflow-hidden py-24"
+        style={{ minHeight: '80vh', border: 'none' }}
+      >
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 w-full relative z-10 flex flex-col items-center justify-center text-center">
+
+          {/* Main Title */}
+          <h1
+            className="scroll-3d"
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 700,
+              fontSize: 'clamp(40px, 4.5vw, 64px)',
+              lineHeight: '1.15',
+              letterSpacing: '-0.5px',
+              color: '#0F1114',
+              marginBottom: '20px',
+              maxWidth: '900px'
+            }}
+          >
+            <span className="academy-h1-line">An Integrated Multi-</span>
+            <span className="academy-h1-line">Disciplinary Learning Platform</span>
+          </h1>
+
+          {/* Subtitle */}
+          <h2
+            className="scroll-3d delay-100"
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 600,
+              fontSize: 'clamp(24px, 3.5vw, 34px)',
+              color: '#0F1114',
+              lineHeight: '1.3',
+              marginBottom: '32px'
+            }}
+          >
+            Learn Deep. Learn Wide. Learn Future-First.
+          </h2>
+
+          {/* Paragraph description */}
+          <p
+            className="scroll-3d delay-200"
+            style={{
+              fontFamily: "'Lato', sans-serif",
+              fontWeight: 400,
+              fontSize: 'clamp(20px, 2.5vw, 24px)',
+              lineHeight: '1.7',
+              color: '#515158',
+              maxWidth: '950px',
+              marginBottom: '40px'
+            }}
+          >
+            Skillzza Academy operates as a unified ecosystem of specialized schools, enabling learners to either develop deep domain expertise or build cross-disciplinary capabilities. This structure supports career adaptability and sustained professional relevance in rapidly evolving industries.
+          </p>
+
+          {/* Call to action button */}
+          <button
+            className="academy-btn scroll-3d delay-300 text-white font-semibold rounded-lg"
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: '20px',
+              padding: '16px 32px'
+            }}
+          >
+            Explore All Academies
+          </button>
+
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════════
+          SECTION 2 — THE IMPACT
+      ════════════════════════════════════════════════════════════════ */}
+      <section className="relative py-10 lg:py-16 overflow-hidden" style={{
+        backgroundImage: `url(${getAssetPath('/abstract-technical-wave-graphic-white-background.jpg')})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#ffffff',
+      }}>
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 relative z-10 scroll-3d delay-100">
+          <div className="flex flex-col items-center w-full mb-6">
+            <h2 className="text-center whitespace-nowrap mb-2" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(32px, 3vw, 48px)', lineHeight: '1.2', color: '#0F1114' }}>
+              <span className="academy-h1-line">Impact by the Numbers</span>
             </h2>
-            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
-              Discover five cutting-edge schools designed to prepare you for the future of work. From AI and quantum computing to sustainability and aerial intelligence, our academy offers immersive learning experiences that bridge theory with real-world application.
+            <h3 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: 'clamp(20px, 1.8vw, 24px)', color: '#0F1114' }}>
+              Proven Outcomes. Real Transformation.
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center mt-12">
+            {[
+              { number: '100,000+', label: 'Learners empowered' },
+              { number: '200+', label: 'Industry mentors & experts' },
+              { number: '50+', label: 'Enterprise & institutional partners' },
+              { number: '90%+', label: 'Learner satisfaction & completion' },
+            ].map((stat, i) => (
+              <div key={i} className="flex flex-col items-center">
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(42px, 4vw, 56px)', color: '#6A2A94', marginBottom: '12px' }}>
+                  <AnimatedCounter valueStr={stat.number} />
+                </p>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '20px', color: '#0F1114', lineHeight: '1.4', maxWidth: '240px' }}>{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════════
+        SECTION 3 — OUR ACADEMY DOMAINS
+    ════════════════════════════════════════════════════════════════ */}
+      <section className="w-full py-10 lg:py-16" style={{ background: '#F4F9FC 0% 0% no-repeat padding-box' }}>
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
+
+          {/* Headings */}
+          <div className="text-center mb-10 scroll-3d">
+            <h2
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: 'clamp(36px, 4vw, 56px)',
+                color: '#0F1114',
+                marginBottom: '16px'
+              }}
+            >
+              Our Academy Domains
+            </h2>
+            <p
+              style={{
+                fontFamily: "'Lato', sans-serif",
+                fontSize: 'clamp(20px, 2.5vw, 24px)',
+                color: '#71717A',
+                fontWeight: 500
+              }}
+            >
+              Learn Deep. Learn Wide. Learn Future-First.
             </p>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 scroll-3d delay-100">
+            {[
+              {
+                title: <>Future Skills Academy</>,
+                cta: 'Explore More'
+              },
+              {
+                title: <>School of AI &<br />Quantum Intelligence</>,
+                cta: 'Discover New AI'
+              },
+              {
+                title: <>Global School of Sustainability<br />& Climate Action</>,
+                cta: 'Join the Sustainability Movement'
+              },
+              {
+                title: <>Centre of Digital &<br />Design Excellence</>,
+                cta: 'Lets Design'
+              },
+              {
+                title: <>School of EV &<br />E-Mobility</>,
+                cta: 'Power the Future'
+              },
+              {
+                title: <>Institute of Aerial<br />Intelligence</>,
+                cta: 'Enter Aerial Intelligence'
+              },
+            ].map((domain, idx) => (
+              <div
+                key={idx}
+                className="group bg-white rounded-xl p-6 lg:p-8 flex flex-col justify-between border border-transparent shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_-10px_rgba(31,87,199,0.15)] hover:-translate-y-1.5 hover:scale-[1.02] hover:border-[#1F57C7]/10 transition-all duration-500 ease-out min-h-[140px] lg:min-h-[160px] cursor-pointer"
+              >
+                {/* Card Title */}
+                <h4
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 700,
+                    fontSize: '24px',
+                    color: '#1F57C7',
+                    lineHeight: '1.3'
+                  }}
+                >
+                  {domain.title}
+                </h4>
+
+                {/* Card CTA */}
+                <div className="flex justify-end mt-auto">
+                  <a
+                    href="#"
+                    className="flex items-center gap-2 text-[#71717A] group-hover:text-[#1F57C7] transition-colors duration-300"
+                    style={{
+                      fontFamily: "'Lato', sans-serif",
+                      fontSize: '20px',
+                      textDecoration: 'underline',
+                      textUnderlineOffset: '6px',
+                      textDecorationThickness: '1px'
+                    }}
+                  >
+                    <span>{domain.cta}</span>
+                    {/* SVG arrow alignment class: Use translate-y-[px] to move it up or down */}
+                    <svg
+                      width="24" height="24" viewBox="0 0 24 24"
+                      fill="none" stroke="currentColor" strokeWidth="3.5"
+                      strokeLinecap="round" strokeLinejoin="round"
+                      className="group-hover:translate-x-1.5 transition-transform duration-300 translate-y-[1px]"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════════
+          SECTION 4 — THE SKILLZZA APPROACH
+      ════════════════════════════════════════════════════════════════ */}
+      <section className="w-full py-10 lg:py-16 bg-white relative">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 text-center">
+          
+          <h2 className="scroll-3d" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(32px, 4vw, 44px)', color: '#0F1114', marginBottom: '8px' }}>
+            The Skillzza Approach
+          </h2>
+          
+          <h3 className="scroll-3d delay-100" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: 'clamp(18px, 2vw, 22px)', color: '#0F1114', marginBottom: '20px' }}>
+            Outcome-Driven Learning for a Dynamic Economy
+          </h3>
+
+          <div className="max-w-[900px] mx-auto scroll-3d delay-200" style={{ fontFamily: "'Lato', sans-serif", fontSize: '18px', lineHeight: '1.8', color: '#515158', marginBottom: '24px' }}>
+            <p className="mb-6">
+              Traditional educational models often lag behind industry requirements, following fixed curricula that don't reflect current workplace realities. Skillzza Academy delivers modular, application-focused learning designed around demonstrable outcomes rather than content completion.
+            </p>
+            <p>
+              We prioritize career transformation through applied learning experiences that produce verifiable professional capabilities.
+            </p>
+          </div>
+
+          <div className="w-full mx-auto h-[1px] bg-[#E4E4E7] my-8 scroll-3d delay-300" style={{ maxWidth: '85%' }}></div>
+
+          <h3 className="scroll-3d" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: 'clamp(20px, 2.5vw, 24px)', color: '#0F1114' }}>
+            What Sets US Apart
+          </h3>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 text-left scroll-3d delay-100">
+            {[
+              {
+                icon: iconIndustry,
+                title: 'Industry-Validated Curriculum',
+                desc: 'Programs co-developed with practitioners and subject matter experts across AI, sustainability, mobility, and emerging technology sectors.'
+              },
+              {
+                icon: iconFlexible,
+                title: 'Flexible Learning Architecture',
+                desc: 'Select from certifications, simulation-based training, virtual internships, and executive programs structured around your professional objectives and constraints.'
+              },
+              {
+                icon: iconApplied,
+                title: 'Applied Learning Methodology',
+                desc: 'Engage with realistic projects, industry simulations, and authentic professional challenges that build credible portfolio evidence.'
+              },
+              {
+                icon: iconPractitioner,
+                title: 'Practitioner-Led Instruction',
+                desc: 'Access to professionals actively working in innovation, strategy, and technical implementation roles across target industries.'
+              },
+              {
+                icon: iconStackable,
+                title: 'Stackable Credential System',
+                desc: 'Accumulate micro-credentials that aggregate into recognized certifications, with assessment frameworks that validate specific competencies employers value.'
+              }
+            ].map((feature, idx) => (
+              <div
+                key={idx}
+                className="rounded-xl p-6 md:p-8 flex items-start gap-5 shadow-[0_2px_12px_rgba(0,0,0,0.02)] transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
+                style={{ backgroundColor: '#F4F9FC' }}
+              >
+                {/* Icon Box */}
+                <div className="shrink-0 mt-1">
+                  <img src={feature.icon} alt={feature.title} className="w-12 h-12 object-contain" />
+                </div>
+                {/* Text Content */}
+                <div>
+                  <h4
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontWeight: 700,
+                      fontSize: '18px',
+                      color: '#0F1114',
+                      marginBottom: '8px'
+                    }}
+                  >
+                    {feature.title}
+                  </h4>
+                  <p
+                    style={{
+                      fontFamily: "'Lato', sans-serif",
+                      fontSize: '15px',
+                      lineHeight: '1.6',
+                      color: '#515158'
+                    }}
+                  >
+                    {feature.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════════
+          SECTION 5 — OUR PROGRESSIVE LEARNING PATHWAYS
+      ════════════════════════════════════════════════════════════════ */}
+      <section className="w-full py-10 lg:py-16 bg-white relative overflow-hidden">
+        
+        {/* Headings */}
+        <div className="text-center mb-10 relative z-10 scroll-3d">
+          <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(36px, 4vw, 48px)', color: '#333333', marginBottom: '16px' }}>
+            Our Progressive Learning Pathways
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(18px, 2vw, 22px)', color: '#71717A', fontWeight: 500 }}>
+            Choose How You Learn. Build What Matters.
+          </p>
+        </div>
+
+        {/* Right Image Background (Attached to full-width section to guarantee 0 gap on right) */}
+        <div className="absolute right-0 top-[55%] -translate-y-1/2 z-0 hidden lg:block" style={{ width: '850px' }}>
+           <img src={pathwaysImg} alt="Pathways Background" className="w-full h-auto object-contain object-right scroll-3d delay-100" />
+        </div>
+
+        {/* Content Container */}
+        <div className="max-w-[1360px] mx-auto relative min-h-[600px] px-4 sm:px-6 md:px-10 lg:px-12 flex items-center justify-start scroll-3d delay-200">
+
+          {/* Cards Grid */}
+          <div className="relative z-10 flex flex-col md:flex-row gap-6 w-full lg:w-auto">
             
-            <div className="flex flex-wrap justify-center gap-8 text-base text-gray-300">
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                <span>Industry-Aligned Curriculum</span>
+            {/* Column 1 */}
+            <div className="flex flex-col gap-6 w-full max-w-[300px]">
+              {/* Card 1 */}
+              <div className="w-full min-h-[150px] bg-[#F4F4F5] rounded-lg p-6 flex flex-col justify-center border border-[#E4E4E7] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:border-[#2563EB]/20 hover:shadow-[0_20px_40px_-10px_rgba(37,99,235,0.12)] cursor-pointer">
+                <h4 style={{ fontFamily: "'DM Sans', sans-serif" }} className="text-[#2563EB] text-[20px] font-bold mb-3 leading-tight">Bootcamps</h4>
+                <p style={{ fontFamily: "'Lato', sans-serif" }} className="text-[#0F1114] text-[16px] leading-snug whitespace-pre-line">Immersive, Outcome-Focused{'\n'}Skill Acceleration</p>
               </div>
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                <span>Hands-On Learning Labs</span>
+              
+              {/* Card 3 */}
+              <div className="w-full min-h-[150px] bg-[#F4F4F5] rounded-lg p-6 flex flex-col justify-center border border-[#E4E4E7] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:border-[#2563EB]/20 hover:shadow-[0_20px_40px_-10px_rgba(37,99,235,0.12)] cursor-pointer">
+                <h4 style={{ fontFamily: "'DM Sans', sans-serif" }} className="text-[#2563EB] text-[20px] font-bold mb-3 leading-tight">Masterclasses</h4>
+                <p style={{ fontFamily: "'Lato', sans-serif" }} className="text-[#0F1114] text-[16px] leading-snug whitespace-pre-line">Expert-Led Insights on Emerging{'\n'}Technologies & Strategy</p>
               </div>
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                <span>Global Expert Mentorship</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-yellow-500 py-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
-              <div className="group">
-                <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">5</div>
-                <div className="text-xl opacity-90">Specialized Schools</div>
-              </div>
-              <div className="group">
-                <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">50+</div>
-                <div className="text-xl opacity-90">Industry Programs</div>
-              </div>
-              <div className="group">
-                <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">100+</div>
-                <div className="text-xl opacity-90">Expert Mentors</div>
-              </div>
-              <div className="group">
-                <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">10K+</div>
-                <div className="text-xl opacity-90">Students Trained</div>
+              
+              {/* Card 5 */}
+              <div className="w-full min-h-[150px] bg-[#F4F4F5] rounded-lg p-6 flex flex-col justify-center border border-[#E4E4E7] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:border-[#2563EB]/20 hover:shadow-[0_20px_40px_-10px_rgba(37,99,235,0.12)] cursor-pointer">
+                <h4 style={{ fontFamily: "'DM Sans', sans-serif" }} className="text-[#2563EB] text-[20px] font-bold mb-3 leading-tight">Institutional & Enterprise{'\n'}Programs</h4>
+                <p style={{ fontFamily: "'Lato', sans-serif" }} className="text-[#0F1114] text-[16px] leading-snug whitespace-pre-line">Scalable Learning & Workforce{'\n'}Transformation Solutions</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Schools Section */}
-      <section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Five Schools of Excellence
-              </h2>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                Each school is designed to provide deep expertise in emerging technologies and critical global challenges, preparing students for leadership roles in tomorrow's economy.
-              </p>
-            </div>
-
-            <div className="space-y-8">
-              {/* ByteMinds */}
-              <Link to="/academy/byteminds" className="block group">
-                <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div>
-                      <div className="flex items-center mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                          <span className="text-white text-2xl">🧠</span>
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-gray-900">1️⃣ ByteMinds</h3>
-                          <p className="text-xl text-blue-600 italic">The School of AI & Quantum Intelligence</p>
-                        </div>
-                      </div>
-                      <ul className="space-y-3 text-gray-700 mb-6">
-                        <li>• AI Mastery Tracks – From foundations to advanced AI, ML, and generative AI</li>
-                        <li>• Quantum Computing Pods – Hands-on labs for quantum algorithms & applications</li>
-                        <li>• AI Playground – Real-world projects, simulations, and role-based internships</li>
-                        <li>• Ethical AI Hub – Building responsible AI with global governance frameworks</li>
-                        <li>• Future Tech Mentorship – Guidance from AI scientists & quantum experts</li>
-                      </ul>
-                      <div className="inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
-                        Explore ByteMinds →
-                      </div>
-                    </div>
-                    <div>
-                      <img 
-                        src={getAssetPath('/data_ai.jpg')} 
-                        alt="ByteMinds AI School" 
-                        className="w-full rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300" 
-                      />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Sustainability School */}
-              <Link to="/academy/sustainability" className="block group">
-                <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div className="lg:order-2">
-                      <div className="flex items-center mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                          <span className="text-white text-2xl">🌱</span>
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-gray-900">2️⃣ Global School of Sustainability</h3>
-                          <p className="text-xl text-green-600 italic">Climate Action & Environmental Innovation</p>
-                        </div>
-                      </div>
-                      <ul className="space-y-3 text-gray-700 mb-6">
-                        <li>• Green Skills Curriculum – Renewable energy, circular economy & climate finance</li>
-                        <li>• Sustainability by Design Labs – Waste management & ESG solutions</li>
-                        <li>• Climate Action Incubator – Student-driven initiatives for global impact</li>
-                        <li>• Policy & Impact Forum – Dialogue with policymakers & NGOs</li>
-                        <li>• Carbon Innovation Hub – Net-zero, carbon capture & green tech</li>
-                      </ul>
-                      <div className="inline-flex items-center text-green-600 font-semibold group-hover:text-green-700 transition-colors">
-                        Explore Sustainability School →
-                      </div>
-                    </div>
-                    <div className="lg:order-1">
-                      <img 
-                        src={getAssetPath('/future_proofing_img.jpg')} 
-                        alt="Sustainability School" 
-                        className="w-full rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300" 
-                      />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Digital & Design Excellence */}
-              <Link to="/academy/digital-design" className="block group">
-                <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div>
-                      <div className="flex items-center mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                          <span className="text-white text-2xl">🎨</span>
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-gray-900">3️⃣ Centre of Digital & Design Excellence</h3>
-                          <p className="text-xl text-purple-600 italic">Innovation Through Design & Technology</p>
-                        </div>
-                      </div>
-                      <ul className="space-y-3 text-gray-700 mb-6">
-                        <li>• Digital Fluency Tracks – Web 3.0, metaverse, blockchain & cloud systems</li>
-                        <li>• Design Innovation Lab – UI/UX, product design & creative workshops</li>
-                        <li>• Smart Industry Pods – Industry 4.0 simulations with robotics</li>
-                        <li>• Human-Centered Design Hub – Design thinking for social impact</li>
-                        <li>• Digital Storytelling Studio – Creative tech & media communication</li>
-                      </ul>
-                      <div className="inline-flex items-center text-purple-600 font-semibold group-hover:text-purple-700 transition-colors">
-                        Explore Digital & Design →
-                      </div>
-                    </div>
-                    <div>
-                      <img 
-                        src={getAssetPath('/platformslide1.png')} 
-                        alt="Digital Design School" 
-                        className="w-full rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300" 
-                      />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* EV & E-Mobility */}
-              <Link to="/academy/ev-mobility" className="block group">
-                <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div className="lg:order-2">
-                      <div className="flex items-center mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                          <span className="text-white text-2xl">⚡</span>
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-gray-900">4️⃣ School of EV & E-Mobility</h3>
-                          <p className="text-xl text-orange-600 italic">Electric Vehicle Innovation & Sustainable Transport</p>
-                        </div>
-                      </div>
-                      <ul className="space-y-3 text-gray-700 mb-6">
-                        <li>• EV Technology Labs – Battery design, charging infra & power electronics</li>
-                        <li>• Mobility Innovation Arena – Intelligent transport & connected vehicles</li>
-                        <li>• Sustainable Auto Hub – Green manufacturing & low-carbon models</li>
-                        <li>• EV Policy & Business Forum – Tech, entrepreneurship & regulations</li>
-                        <li>• Start-up Garage – EV-based entrepreneurship & mobility ventures</li>
-                      </ul>
-                      <div className="inline-flex items-center text-orange-600 font-semibold group-hover:text-orange-700 transition-colors">
-                        Explore EV & E-Mobility →
-                      </div>
-                    </div>
-                    <div className="lg:order-1">
-                      <img 
-                        src={getAssetPath('/future_workspace.jpg')} 
-                        alt="EV Mobility School" 
-                        className="w-full rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300" 
-                      />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Udan - Aerial Intelligence */}
-              <Link to="/academy/udan" className="block group">
-                <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div>
-                      <div className="flex items-center mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                          <span className="text-white text-2xl">🚁</span>
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-gray-900">5️⃣ Udan</h3>
-                          <p className="text-xl text-indigo-600 italic">Aerial Intelligence School</p>
-                        </div>
-                      </div>
-                      <ul className="space-y-3 text-gray-700 mb-6">
-                        <li>• Drone Innovation Labs – UAV design, simulation, and piloting skills</li>
-                        <li>• Aerial Data Intelligence Hub – AI-driven mapping & geospatial analytics</li>
-                        <li>• Defense & Disaster Response Pods – National security & crisis management</li>
-                        <li>• Aerial Commerce Arena – Drone delivery, logistics & commercial deployment</li>
-                        <li>• Aviation & Aerospace Connect – Global aerospace innovation networks</li>
-                      </ul>
-                      <div className="inline-flex items-center text-indigo-600 font-semibold group-hover:text-indigo-700 transition-colors">
-                        Explore Udan →
-                      </div>
-                    </div>
-                    <div>
-                      <img 
-                        src={getAssetPath('/global_imgs.png')} 
-                        alt="Udan Aerial Intelligence" 
-                        className="w-full rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300" 
-                      />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Skillzza Academy */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Skillzza Academy
-              </h2>
-              <p className="text-xl text-gray-600">The Future of Learning is Here</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-200 text-center">
-                <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Industry-Aligned Curriculum</h3>
-                <p className="text-gray-700">Programs designed with industry leaders to meet current and future market demands.</p>
-              </div>
-
-              <div className="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl border border-green-200 text-center">
-                <div className="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Hands-On Learning Labs</h3>
-                <p className="text-gray-700">State-of-the-art facilities with real-world projects and cutting-edge technology.</p>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-200 text-center">
-                <div className="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Global Expert Mentorship</h3>
-                <p className="text-gray-700">Learn from industry leaders, researchers, and innovators from around the world.</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-2xl border border-orange-200 text-center">
-                <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Innovation-Driven</h3>
-                <p className="text-gray-700">Focus on emerging technologies and future-ready skills that drive innovation.</p>
-              </div>
-
-              <div className="bg-gradient-to-br from-red-50 to-pink-50 p-8 rounded-2xl border border-red-200 text-center">
-                <div className="w-16 h-16 bg-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Global Network</h3>
-                <p className="text-gray-700">Connect with peers, mentors, and opportunities across the global innovation ecosystem.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="bg-gradient-to-r from-orange-400 to-yellow-500 py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Shape Your Future?
-            </h2>
-            <p className="text-xl mb-4">Join thousands of students building tomorrow's world today</p>
-            <p className="text-xl mb-8 opacity-90">Explore our schools and find your path to innovation</p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <button className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                Apply Now
-              </button>
-              <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
-                Schedule Campus Visit
-              </button>
-              <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300">
-                Download Brochure
-              </button>
+            {/* Column 2 */}
+            <div className="flex flex-col gap-6 w-full max-w-[300px]">
+              {/* Card 2 */}
+              <div className="w-full min-h-[150px] bg-[#F4F4F5] rounded-lg p-6 flex flex-col justify-center border border-[#E4E4E7] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:border-[#2563EB]/20 hover:shadow-[0_20px_40px_-10px_rgba(37,99,235,0.12)] cursor-pointer">
+                <h4 style={{ fontFamily: "'DM Sans', sans-serif" }} className="text-[#2563EB] text-[20px] font-bold mb-3 leading-tight">Certification Programs</h4>
+                <p style={{ fontFamily: "'Lato', sans-serif" }} className="text-[#0F1114] text-[16px] leading-snug whitespace-pre-line">Industry-Recognised Credentials{'\n'}for Career Advancement</p>
+              </div>
+              
+              {/* Card 4 */}
+              <div className="w-full min-h-[150px] bg-[#F4F4F5] rounded-lg p-6 flex flex-col justify-center border border-[#E4E4E7] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:border-[#2563EB]/20 hover:shadow-[0_20px_40px_-10px_rgba(37,99,235,0.12)] cursor-pointer">
+                <h4 style={{ fontFamily: "'DM Sans', sans-serif" }} className="text-[#2563EB] text-[20px] font-bold mb-3 leading-tight">Executive & CXO{'\n'}Learning Labs</h4>
+                <p style={{ fontFamily: "'Lato', sans-serif" }} className="text-[#0F1114] text-[16px] leading-snug whitespace-pre-line">Strategic, Peer-Driven Learning{'\n'}for Senior Leadership</p>
+              </div>
             </div>
-
-            <div className="mt-8">
-              <p className="text-xl font-bold">The future belongs to those who prepare for it today.</p>
-              <p className="text-xl">Start your journey with Skillzza Academy.</p>
-            </div>
+            
           </div>
+          
         </div>
       </section>
+
+      {/* ════════════════════════════════════════════════════════════════
+          SECTION 6 — CTA (READY TO BUILD YOUR FUTURE)
+      ════════════════════════════════════════════════════════════════ */}
+      <section className="w-full py-8 md:py-10" style={{ backgroundColor: '#FBA93E' }}>
+        <div className="max-w-[900px] mx-auto px-4 sm:px-6 text-center">
+          
+          <h2 className="scroll-3d" style={{ fontFamily: "'DM Sans', sans-serif" }} className="text-[#0F1114] text-[36px] md:text-[48px] lg:text-[56px] font-bold mb-3 tracking-tight">
+            Ready to Build Your Future?
+          </h2>
+          
+          <p className="scroll-3d delay-100" style={{ fontFamily: "'Lato', sans-serif" }} className="text-[#0F1114] text-[20px] md:text-[24px] mb-4 font-medium">
+            Upskill Smarter. Learn Faster. Lead Confidently.
+          </p>
+          
+          <p className="scroll-3d delay-200" style={{ fontFamily: "'Lato', sans-serif" }} className="text-[#0F1114] text-[18px] md:text-[22px] mb-6 leading-relaxed">
+            Skillzza Academy doesn't just teach skills<br className="hidden md:block" />
+            we build careers, capability, and confidence for the next decade.
+          </p>
+
+          <button className="scroll-3d delay-300 bg-[#2563EB] hover:bg-[#1d4ed8] text-white font-medium text-[16px] md:text-[18px] py-4 px-16 rounded-lg transition-all hover:-translate-y-1 shadow-[0_4px_14px_rgba(37,99,235,0.39)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.23)] mb-6" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            Apply Now
+          </button>
+
+          <div className="scroll-3d delay-400 text-[#0F1114] text-[14px] md:text-[16px] font-bold flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            <a href="#advisor" className="hover:underline hover:opacity-80 transition-opacity cursor-pointer">Talk to an Academic Advisor</a>
+            <span className="hidden sm:block">|</span>
+            <a href="#brochure" className="hover:underline hover:opacity-80 transition-opacity cursor-pointer">Download Academy Brochure</a>
+          </div>
+          
+        </div>
+      </section>
+
     </>
-  );
-};
-
-export default Academy;
+  )
+}

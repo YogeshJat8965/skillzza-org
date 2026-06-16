@@ -58,7 +58,7 @@ const SolutionSkillStudio = () => {
 
     const tabs = useMemo(() => [
         {
-            label: 'The potential Meter',
+            label: 'The Potential Meter',
             title: 'The Potential Meter',
             subtitle: 'From Learning to Hiring – One Seamless Journey of Skill Discovery, Simulation & Transformation',
             bullets: [

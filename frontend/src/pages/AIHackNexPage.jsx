@@ -664,17 +664,17 @@ function AIHackNexPage() {
         className="relative w-full overflow-hidden"
         style={{ background: '#FFFFFF' }}
       >
-        {/* Breadcrumb - tight to top */}
-        <nav className="hacknex-breadcrumb pt-3 pb-2 md:pt-4 md:pb-3 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 max-w-[1360px] mx-auto">
+        {/* ── Breadcrumb ── */}
+        <nav
+          className="relative z-20 pt-3 pb-2 md:pt-4 md:pb-3 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 max-w-[1360px] mx-auto w-full text-left"
+        >
           <div
-            className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium"
+            className="flex items-center justify-start gap-1.5 sm:gap-2 text-[16px] md:text-[20px] font-medium w-full"
             style={{ color: '#71717A', fontFamily: "'Lato', sans-serif" }}
           >
-            <Link to="/" className="hover:opacity-70 transition-opacity">Home</Link>
+            <Link to="/" className="hover:opacity-70 transition-opacity" style={{ color: '#71717A' }}>Home</Link>
             <span>&gt;</span>
-            <span>Products</span>
-            <span>&gt;</span>
-            <span style={{ color: '#18181B' }}>AI HackNex</span>
+            <span style={{ color: '#18181B', fontWeight: 500 }}>AI HackNex</span>
           </div>
         </nav>
 
@@ -695,7 +695,7 @@ function AIHackNexPage() {
                 maxWidth: '550px',
               }}
             >
-              Connect, create, and conquer challenges together!
+              Connect, Create, & Conquer Challenges Together!
             </h1>
 
             {/* Description paragraph */}
@@ -958,7 +958,9 @@ function AIHackNexPage() {
             ].map((card, idx) => (
               <div
                 key={idx}
-                className="hacknex-helps-card group rounded-xl p-4 md:p-5 flex flex-col gap-3 border border-[#E4E4E7] bg-[#F4F4F5] hover:bg-white hover:border-[#D4D4D8] hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-500 ease-out cursor-default"
+                className={`hacknex-helps-card group rounded-xl p-4 md:p-5 flex flex-col gap-3 border border-[#E4E4E7] bg-[#F4F4F5] hover:bg-white hover:border-[#D4D4D8] hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-500 ease-out cursor-default ${
+                  idx === 4 ? 'sm:col-span-2 sm:w-[calc(50%-0.375rem)] md:w-[calc(50%-0.5rem)] mx-auto w-full' : 'w-full'
+                }`}
               >
                 <div className="transform group-hover:scale-[1.08] transition-transform duration-500 ease-out origin-left">
                   <img src={card.icon} alt="" style={{ width: Math.round(card.iconW * 0.8), height: Math.round(card.iconH * 0.8) }} />
@@ -1140,7 +1142,7 @@ function AIHackNexPage() {
 
         <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12 max-w-[1400px]">
           {/* Title */}
-          <h2
+          {/* <h2
             className="text-center mb-10 md:mb-14 lg:mb-16"
             style={{
               fontFamily: 'DM Sans, sans-serif',
@@ -1152,7 +1154,7 @@ function AIHackNexPage() {
             }}
           >
             Impact Across Corporate &<br />Community Deployments
-          </h2>
+          </h2> */}
 
           {/* Statistics Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 lg:gap-20">
@@ -1292,7 +1294,7 @@ function AIHackNexPage() {
               marginBottom: 'clamp(24px, 3vw, 40px)',
             }}
           >
-            Compete. Innovate.<br />Create Impact.
+            Compete. Innovate.. Impact...
           </h2>
 
           {/* Join the Challenge button */}

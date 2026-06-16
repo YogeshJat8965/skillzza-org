@@ -132,13 +132,13 @@ const navItems = [
         illustrationId: 'Hire Twin',
       },
       {
-        name: 'Skillzza Persona',
+        name: 'Skill Persona',
         subtitle: 'AI roleplay simulator',
         link: '/explore/skillzza-persona',
         icon: <MessageSquare size={22} strokeWidth={2} />,
         heading: 'Practice like real.',
         headingHighlight: 'Prepare for your AI interview.',
-        description: 'Skillzza Persona is your AI agent that simulates real interviews, provides smart feedback, and helps you improve with every practice.',
+        description: 'Skill Persona is your AI agent that simulates real interviews, provides smart feedback, and helps you improve with every practice.',
         bullets: [
           'AI agent that conducts real interview simulations',
           'Instant, personalized feedback and improvement tips',
@@ -164,6 +164,23 @@ const navItems = [
         ctaText: 'Explore Insights',
         ctaLink: null,
         illustrationId: 'talent-intelligence',
+      },
+      {
+        name: 'Academy',
+        subtitle: 'Multi-disciplinary learning',
+        link: '/academy',
+        icon: <GraduationCap size={22} strokeWidth={2} />,
+        heading: 'An Integrated',
+        headingHighlight: 'Multi-Disciplinary Platform.',
+        description: 'Skillzza Academy operates as a unified ecosystem of specialized schools for career adaptability.',
+        bullets: [
+          'Develop deep domain expertise',
+          'Build cross-disciplinary capabilities',
+          'Sustained professional relevance',
+        ],
+        ctaText: 'Explore Academy',
+        ctaLink: null,
+        illustrationId: 'potential-meter', // Just reusing potential-meter for the platform preview until a new image is provided
       },
     ],
   },
@@ -206,7 +223,7 @@ const navItems = [
       { name: 'AI Playground', link: 'https://cognifyai.skillzza.com/#', desc: 'An interactive innovation hub for exploring AI tools, creativity, and emerging technologies.', imagePos: 'left' },
       { name: 'Vedya AI', link: 'https://cognifyai.skillzza.com/', desc: 'AI Co-Pilot built exclusively for K-12 learning ecosystems.', imagePos: 'left' },
       { name: 'Immersive Learning for Teachers', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Empowering educators with practical AI skills and modern digital pedagogy.', imagePos: 'left' },
-      { name: 'Cognitive Computing for Maturity Models', link: 'https://cognifyai.skillzza.com/for-school.html', desc: 'A strategic framework to assess and accelerate AI readiness in schools.', imagePos: 'left' },
+      { name: 'Cognitive Computing  Maturity Models', link: 'https://cognifyai.skillzza.com/for-school.html', desc: 'A strategic framework to assess and accelerate AI readiness in schools.', imagePos: 'left' },
     ],
   },
   {
@@ -859,7 +876,7 @@ const ImageCardGridDropdown = ({ navItem, onComingSoon }) => (
         Where Technology Meets Purpose
       </h3>
       <p style={{ color: '#4B5563', fontSize: 13, fontFamily: "'DM Sans', sans-serif", fontWeight: 500 }}>
-        Four transformative schools. One mission – shaping a smarter, sustainable & innovative tomorrow.
+        Four transformative Schools. One Mission.. Shaping a Smarter, Sustainable & Innovative Tomorrow.
       </p>
     </div>
     <style>{`
@@ -1678,7 +1695,7 @@ const tabAnimations = [
   'szImgFlipIn',        // Talent Intelligence: 3D flip in
   'szImgBounceScale',   // AI HackNex: bounce scale
   'szImgSwingIn',       // Hire Twin: swing from top
-  'szImgElasticPop',    // Skillzza Persona: elastic pop
+  'szImgElasticPop',    // Skill Persona: elastic pop
 ];
 
 /* ── Per-tab accent colors for circle animations ── */

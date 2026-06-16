@@ -3,6 +3,50 @@ import { Link } from 'react-router-dom';
 import { getAssetPath } from '../utils/assets';
 import adaptiveAiImg from '../assets/skill persona/image.png';
 import { GraduationCap, Briefcase, Landmark, Building2 } from 'lucide-react';
+
+const AnimatedNumber = ({ value, suffix = '', prefix = '', isFloat = false }) => {
+  const [count, setCount] = useState(0);
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          let startTimestamp = null;
+          const duration = 2000;
+          const target = parseFloat(value);
+
+          const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            
+            // easeOutQuart
+            const easeProgress = 1 - Math.pow(1 - progress, 4);
+            
+            setCount(easeProgress * target);
+            
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            } else {
+              setCount(target);
+            }
+          };
+          window.requestAnimationFrame(step);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) observer.observe(elementRef.current);
+
+    return () => observer.disconnect();
+  }, [value]);
+
+  const displayValue = isFloat ? count.toFixed(1) : Math.round(count);
+  return <span ref={elementRef}>{prefix}{displayValue}{suffix}</span>;
+};
+
 const SkillzzaPersona = () => {
   const heroRef = useRef(null);
   const [activeHowTab, setActiveHowTab] = useState(0);
@@ -122,7 +166,7 @@ const SkillzzaPersona = () => {
           }
         }
 
-        /* ── Final CTA Section Responsive Layout (Skillzza Persona Page) ── */
+        /* ── Final CTA Section Responsive Layout (Skill Persona Page) ── */
         .persona-final-cta {
           padding-top: 80px;
           padding-bottom: 80px;
@@ -217,16 +261,14 @@ const SkillzzaPersona = () => {
         {/* Content layer */}
         <div className="relative z-10 w-full h-full persona-hero-content">
           {/* Breadcrumb */}
-          <nav
-            className="absolute persona-animate delay-1 persona-hero-breadcrumb"
-            style={{ top: '13.4%', left: '11.67%' }}
-          >
-            <div className="flex items-center gap-2" style={{ color: '#52525B', fontSize: 'clamp(11px, 0.73vw, 14px)' }}>
-              <Link to="/" className="hover:opacity-70 transition-opacity">Home</Link>
+          <nav className="persona-animate delay-1 persona-hero-breadcrumb relative z-20 pt-3 pb-2 md:pt-4 md:pb-3 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 max-w-[1360px] mx-auto w-full text-left">
+            <div
+              className="flex items-center justify-start gap-1.5 sm:gap-2 text-[16px] md:text-[20px] font-medium w-full"
+              style={{ color: '#71717A', fontFamily: "'Lato', sans-serif" }}
+            >
+              <Link to="/" className="hover:opacity-70 transition-opacity" style={{ color: '#71717A' }}>Home</Link>
               <span>&gt;</span>
-              <span className="hover:opacity-70 transition-opacity">Products</span>
-              <span>&gt;</span>
-              <span className="font-medium" style={{ color: '#4B5563' }}>Skillzza Persona</span>
+              <span style={{ color: '#18181B', fontWeight: 500 }}>Skill Persona</span>
             </div>
           </nav>
 
@@ -330,7 +372,7 @@ const SkillzzaPersona = () => {
                 <li>Navigate complex human and organizational dynamics</li>
               </ul>
               <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6', marginBottom: '24px' }}>
-                Yet most professionals enter these moments unprepared, learning through costly trial and error rather than deliberate practice. Skillzza Persona™ changes that.
+                Yet most professionals enter these moments unprepared, learning through costly trial and error rather than deliberate practice. Skill Persona™ changes that.
               </p>
               <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6' }}>
                 We don't teach you about workplace behavior. We let you experience it, stepping into real roles, navigating real scenarios, and performing under real pressure, before the career moment actually arrives.
@@ -379,11 +421,11 @@ const SkillzzaPersona = () => {
         </div> {/* end max-w container */}
       </section>
 
-      {/* ── Section 2: What Skillzza Persona Develops ── */}
+      {/* ── Section 2: What Skill Persona Develops ── */}
       <section style={{ backgroundColor: '#F9FAFB', paddingTop: '16px', paddingBottom: '16px' }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <h2 className="text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2', color: '#0F1114', marginBottom: '20px' }}>
-            What Skillzza Person Develops
+            What Skillzza Persona Develops
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             {[
@@ -391,7 +433,7 @@ const SkillzzaPersona = () => {
               'Leadership & Influence Without Authority',
               'Emotional & Social Intelligence',
             ].map((skill, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center justify-center text-center h-full">
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '18px', color: '#1F57C7' }}>{skill}</p>
               </div>
             ))}
@@ -401,7 +443,7 @@ const SkillzzaPersona = () => {
               'Decision-Making Under Pressure',
               'Workplace Adaptability & Resilience',
             ].map((skill, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center justify-center text-center h-full">
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '18px', color: '#1F57C7' }}>{skill}</p>
               </div>
             ))}
@@ -570,18 +612,20 @@ const SkillzzaPersona = () => {
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center w-full">
             <h2 className="text-center whitespace-nowrap" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2', color: '#0F1114', marginBottom: '20px' }}>
-              The Impact <br /> Proven Results Across Learners and Institutions
+              The Impact
             </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: '2.8X', label: 'Improvement in professional confidence' },
-              { number: '65%', label: 'Faster readiness for leadership and client-facing roles' },
-              { number: '50%', label: 'Reduction in early-career performance gaps' },
-              { number: '70%', label: 'Higher employer confidence in behavioral preparedness' },
+              { value: 2.8, suffix: 'X', isFloat: true, label: 'Improvement in professional confidence' },
+              { value: 65, suffix: '%', isFloat: false, label: 'Faster readiness for leadership and client-facing roles' },
+              { value: 50, suffix: '%', isFloat: false, label: 'Reduction in early-career performance gaps' },
+              { value: 70, suffix: '%', isFloat: false, label: 'Higher employer confidence in behavioral preparedness' },
             ].map((stat, i) => (
               <div key={i}>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '42px', color: '#1F57C7', marginBottom: '8px' }}>{stat.number}</p>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '42px', color: '#1F57C7', marginBottom: '8px' }}>
+                  <AnimatedNumber value={stat.value} suffix={stat.suffix} isFloat={stat.isFloat} />
+                </p>
                 <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(14px, 1.2vw, 20px)', color: '#4B5563', lineHeight: '1.6' }}>{stat.label}</p>
               </div>
             ))}

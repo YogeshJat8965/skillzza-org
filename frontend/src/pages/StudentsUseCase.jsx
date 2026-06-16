@@ -58,12 +58,12 @@ const StudentsUseCase = () => {
           <div className="max-w-6xl mx-auto">
             <div className="space-y-16">
 
-              {/* Skillzza Persona */}
+              {/* Skill Persona */}
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="flex flex-col lg:flex-row">
                   <div className="lg:w-1/2 p-8 lg:p-12">
                     <div className="flex items-center mb-6">
-                      <h3 className="text-2xl font-bold text-gray-900">Skillzza Persona™</h3>
+                      <h3 className="text-2xl font-bold text-gray-900">Skill Persona™</h3>
                     </div>
                     <h4 className="text-xl font-semibold text-orange-600 mb-4">AI-Powered Professional Role Immersion</h4>
                     <ul className="space-y-3 text-gray-700 mb-6">
@@ -91,7 +91,7 @@ const StudentsUseCase = () => {
                   <div className="lg:w-1/2">
                     <img
                       src={getAssetPath('/ai_hacknex_tile_img.png')}
-                      alt="Skillzza Persona"
+                      alt="Skill Persona"
                       className="w-full h-full object-cover min-h-96"
                     />
                   </div>

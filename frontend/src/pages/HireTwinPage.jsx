@@ -279,17 +279,15 @@ export default function HireTwinPage() {
           }}
         />
 
-        {/* ── Breadcrumb — same max-w-[1360px] & padding as site-wide ── */}
-        <nav className="ht-breadcrumb relative z-10 pt-3 pb-2 md:pt-4 md:pb-3 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 max-w-[1360px] mx-auto">
+        {/* ── Breadcrumb ── */}
+        <nav className="ht-breadcrumb relative z-20 pt-3 pb-2 md:pt-4 md:pb-3 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 max-w-[1360px] mx-auto w-full text-left">
           <div
-            className="flex items-center gap-1.5 sm:gap-2 text-[20px] font-medium"
+            className="flex items-center justify-start gap-1.5 sm:gap-2 text-[16px] md:text-[20px] font-medium w-full"
             style={{ color: '#71717A', fontFamily: "'Lato', sans-serif" }}
           >
             <Link to="/" className="hover:opacity-70 transition-opacity" style={{ color: '#71717A' }}>
               Home
             </Link>
-            <span>&gt;</span>
-            <span>Products</span>
             <span>&gt;</span>
             <span style={{ color: '#18181B', fontWeight: 500 }}>Hirenest</span>
           </div>
@@ -971,7 +969,7 @@ export default function HireTwinPage() {
                 marginBottom: '40px',
               }}
             >
-              The Impact <br /> Proven Results Across Learners and Institutions
+              The Impact 
             </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center scroll-3d delay-200">

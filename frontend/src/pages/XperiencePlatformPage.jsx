@@ -1422,13 +1422,14 @@ function XperiencePlatformPage() {
 
           <div className="relative lg:static w-full py-6 md:py-8 lg:py-12 xl:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
-            <nav className="mb-6 md:mb-8 lg:mb-4">
-              <div className="flex items-center gap-2 text-sm sm:text-base lg:text-lg" style={{ color: '#52525B' }}>
-                <Link to="/" className="hover:opacity-70 transition-opacity">Home</Link>
+            <nav className="relative z-20 pt-3 pb-2 md:pt-4 md:pb-3 px-0 max-w-[1360px] mx-auto w-full text-left mb-4">
+              <div
+                className="flex items-center justify-start gap-1.5 sm:gap-2 text-[16px] md:text-[20px] font-medium w-full"
+                style={{ color: '#71717A', fontFamily: "'Lato', sans-serif" }}
+              >
+                <Link to="/" className="hover:opacity-70 transition-opacity" style={{ color: '#71717A' }}>Home</Link>
                 <span>&gt;</span>
-                <Link to="/products" className="hover:opacity-70 transition-opacity">Products</Link>
-                <span>&gt;</span>
-                <span className="font-medium">Talent Twin</span>
+                <span style={{ color: '#18181B', fontWeight: 500 }}>Talent Twin</span>
               </div>
             </nav>
 
@@ -1943,7 +1944,8 @@ function XperiencePlatformPage() {
                       className="w-full p-5 flex justify-between items-center text-left hover:bg-[#B8CDFF] transition-colors rounded-lg"
                     >
                       <h3
-                        className="font-['DM_Sans',sans-serif] font-medium text-[#0F1114] text-[18px] md:text-[clamp(18px,1.6vw,24px)] leading-tight tracking-[-0.7px]"
+                        className="font-medium text-[#0F1114] text-[18px] md:text-[clamp(18px,1.6vw,24px)] leading-tight tracking-[-0.7px]"
+                        style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
                         {item.title}
                       </h3>
@@ -1971,7 +1973,8 @@ function XperiencePlatformPage() {
                         }`}
                     >
                       <p
-                        className="px-5 pb-5 font-['Lato',sans-serif] font-medium text-[#52525B] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]"
+                        className="px-5 pb-5 font-medium text-[#52525B] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]"
+                        style={{ fontFamily: "'Lato', sans-serif" }}
                       >
                         {item.content}
                       </p>
@@ -2387,7 +2390,7 @@ function XperiencePlatformPage() {
                 Our Technology Stack <br />
                 Built on Scalable, Secure, Intelligence-Driven Architecture
               </h2>
-        
+
             </div>
 
             {/* Cards Container */}

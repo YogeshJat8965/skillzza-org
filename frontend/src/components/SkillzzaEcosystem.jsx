@@ -94,7 +94,7 @@ const SkillzzaEcosystem = () => {
                 color: '#0F1114',
               }}
             >
-              Skill Ecosystem
+              The Skill Ecosystem
             </h2>
             <p
               style={{

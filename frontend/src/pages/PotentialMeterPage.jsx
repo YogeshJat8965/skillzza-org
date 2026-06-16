@@ -20,7 +20,7 @@ const tabData = {
     ],
     resultsHeading: '',
     results: [],
-    pricing: '₹999 / assessment\\n₹4,999 / year (unlimited + coaching)',
+    // pricing: '₹999 / assessment\\n₹4,999 / year (unlimited + coaching)',
     buttons: [
       { text: 'Try Sample Assessment Free', outline: true }
     ]
@@ -43,7 +43,7 @@ const tabData = {
       '2.3x faster employer hiring decisions',
       '87% student satisfaction with career clarity'
     ],
-    pricing: 'Custom institutional licensing | Typical: ₹50-150 per student assessment',
+    // pricing: 'Custom institutional licensing | Typical: ₹50-150 per student assessment',
     buttons: [
       { text: 'Schedule Institution Demo', outline: true },
       { text: 'Download Case Study', outline: false }
@@ -66,7 +66,7 @@ const tabData = {
       '50% faster time-to-productivity for new hires',
       '70% lower cost-per-quality-hire vs. traditional methods'
     ],
-    pricing: 'Pay-per-assessment or enterprise licensing | Starting ₹500/assessment',
+    // pricing: 'Pay-per-assessment or enterprise licensing | Starting ₹500/assessment',
     buttons: [
       { text: 'Start Employer Trial', outline: true },
       { text: 'API Documentation', outline: false }
@@ -222,15 +222,16 @@ export default function PotentialMeterPage() {
         >
 
           {/* Breadcrumb */}
-          <div className="w-full max-w-[1400px] mb-3 text-left">
-            <span className="font-['DM_Sans',sans-serif] text-[15px] text-[#52525B] flex items-center gap-2">
-              <Link to="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
-              <span className="text-[12px]">/</span>
-              <span>Products</span>
-              <span className="text-[12px]">/</span>
-              <span className="font-medium text-[#0F1114]">Potential Meter AI</span>
-            </span>
-          </div>
+          <nav className="relative z-20 pt-3 pb-2 md:pt-4 md:pb-3 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 max-w-[1360px] mx-auto w-full text-left">
+            <div
+              className="flex items-center justify-start gap-1.5 sm:gap-2 text-[16px] md:text-[20px] font-medium w-full"
+              style={{ color: '#71717A', fontFamily: "'Lato', sans-serif" }}
+            >
+              <Link to="/" className="hover:opacity-70 transition-opacity" style={{ color: '#71717A' }}>Home</Link>
+              <span>&gt;</span>
+              <span style={{ color: '#18181B', fontWeight: 500 }}>Potential Meter AI</span>
+            </div>
+          </nav>
 
           {/* Main Heading */}
           <h1
@@ -264,9 +265,9 @@ export default function PotentialMeterPage() {
           <p
             className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] max-w-[1100px] mx-auto text-[18px] leading-[24px] md:text-[19px] md:leading-[27px] lg:text-[21px] lg:leading-[29px] tracking-[-0.6px] mb-3"
           >
-            The AI-powered platform that transforms career uncertainty into data-backed decisions in minutes.
+            {/* The AI-powered platform that transforms career uncertainty into data-backed decisions in minutes. */}
             <br />
-            Traditional assessments measure knowledge.&nbsp; We measure real-world performance capability.
+            {/* Traditional assessments measure knowledge.&nbsp; We measure real-world performance capability. */}
           </p>
 
           {/* Content Paragraph */}
@@ -307,9 +308,9 @@ export default function PotentialMeterPage() {
           <h2 className="product-heading font-semibold text-white mb-3" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
             Real Outcomes. Measurable Impact.
           </h2>
-          <p className="font-['Lato',sans-serif] font-normal text-white/90 text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-8 max-w-[800px]">
-            What users and institutions achieve after using the Potential Meter
-          </p>
+          {/* <p className="font-['Lato',sans-serif] font-normal text-white/90 text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-8 max-w-[800px]">
+            What users and institutions achieve after using The Potential Meter
+          </p> */}
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
             {/* Stat 1 */}
@@ -369,9 +370,9 @@ export default function PotentialMeterPage() {
             <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] mb-4" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
               The Problem We Solve
             </h2>
-            <p className="font-['Lato',sans-serif] font-medium text-[#334155] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
+            {/* <p className="font-['Lato',sans-serif] font-medium text-[#334155] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
               Career decisions today are based on assumptions<br className="hidden md:block" /> - not real performance data.
-            </p>
+            </p> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
@@ -708,7 +709,7 @@ export default function PotentialMeterPage() {
               {/* Pricing */}
               <div className="mb-8">
                 <h4 className="font-['DM_Sans',sans-serif] font-bold text-[#2563eb] text-[16px] uppercase tracking-wide mb-2 block">
-                  PRICING:
+                  {/* PRICING: */}
                 </h4>
                 <p className="font-['Lato',sans-serif] font-medium text-[#52525B] text-[18px] leading-[1.6] whitespace-pre-line">
                   {tabData[activeGetTab].pricing}

@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 // Note: Ensure the image is in this path or adjust accordingly. 
-// "Group 41606.png" is assumed to be the woman + cards composite image based on directory contents.
-import heroImg from '../assets/talent-intelligence/Group 41606.png'
+import heroImg from '../assets/talent-intelligence/ChatGPT Image Jun 15, 2026, 12_53_32 AM.png'
 import image416 from '../assets/talent-intelligence/Image 416.png'
 
 // Designed For Icons
@@ -64,12 +63,12 @@ export default function TalentIntelligencePage() {
   return (
     <>
       <style>{`
-        /* ── Section Gradient: lavender→white matching design spec ── */
+        /* ── Section Background ── */
         .ti-section {
           position: relative;
           width: 100%;
           overflow: hidden;
-          background: transparent linear-gradient(110deg, #E6DDF2 0%, #F5F1FA 40%, #F7F5FC 70%, #E8E0F4 100%) 0% 0% no-repeat padding-box;
+          background: #FFFFFF;
         }
 
         /* ── Modern 3D Scroll Animations ── */
@@ -136,6 +135,13 @@ export default function TalentIntelligencePage() {
             top: auto !important;
             width: 100% !important;
             max-width: 100% !important;
+            display: flex;
+            justify-content: center;
+            padding: 16px 16px 40px;
+          }
+          .ti-hero-img img {
+            max-width: 600px !important;
+            width: 100% !important;
           }
         }
       `}</style>
@@ -144,14 +150,12 @@ export default function TalentIntelligencePage() {
       <section ref={heroSectionRef} className="ti-section relative w-full overflow-hidden">
 
         {/* ── Breadcrumb ── */}
-        <nav className="ti-breadcrumb relative z-10 pt-3 pb-2 md:pt-4 md:pb-3 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 max-w-[1360px] mx-auto">
+        <nav className="ti-breadcrumb relative z-20 pt-3 pb-2 md:pt-4 md:pb-3 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 max-w-[1360px] mx-auto w-full text-left">
           <div
-            className="flex items-center gap-1.5 sm:gap-2 text-[20px] font-medium"
+            className="flex items-center justify-start gap-1.5 sm:gap-2 text-[16px] md:text-[20px] font-medium w-full"
             style={{ color: '#71717A', fontFamily: "'Lato', sans-serif" }}
           >
             <Link to="/" className="hover:opacity-70 transition-opacity" style={{ color: '#71717A' }}>Home</Link>
-            <span>&gt;</span>
-            <span>Products</span>
             <span>&gt;</span>
             <span style={{ color: '#18181B', fontWeight: 500 }}>Talent Transformation</span>
           </div>
@@ -175,9 +179,12 @@ export default function TalentIntelligencePage() {
               }}
             >
               <span className="ti-h1-line">
-                <span className="ti-h1-purple">Redesign</span> <span className="ti-h1-dark">Work.</span> <span className="ti-h1-purple">Activate</span>
+                <span className="ti-h1-purple">Redesign</span> <span className="ti-h1-dark">Work.</span> <br /> 
               </span>
               <span className="ti-h1-line">
+                <span className="ti-h1-purple">Talent</span> <span className="ti-h1-dark">Activate.</span> <br /> 
+              </span>
+              <span className="ti-h1-line"> 
                 <span className="ti-h1-dark">Talent.</span> <span className="ti-h1-purple">Future-Proof the</span>
               </span>
               <span className="ti-h1-line">
@@ -223,13 +230,22 @@ export default function TalentIntelligencePage() {
             </p>
           </div>
 
-          {/* ════ RIGHT column: Blank space (image coming soon) ════ */}
+          {/* ════ RIGHT column: Hero image ════ */}
           <div
-            className="ti-hero-img lg:absolute lg:right-0 lg:top-0 w-full lg:w-[57%] xl:w-[58%] flex justify-end items-start"
+            className="ti-hero-img lg:absolute lg:right-0 lg:-top-8 xl:-top-12 w-full lg:w-[52%] xl:w-[54%] flex justify-end items-start"
             style={{ paddingRight: 0 }}
           >
-            {/* Image placeholder — blank space kept intentionally */}
-            <div style={{ width: '100%', minHeight: '620px' }} />
+            <img
+              src={heroImg}
+              alt="Talent Intelligence Dashboard"
+              style={{
+                width: '100%',
+                maxWidth: '750px',
+                height: 'auto',
+                display: 'block',
+                marginLeft: 'auto',
+              }}
+            />
           </div>
 
         </div>
@@ -318,7 +334,7 @@ export default function TalentIntelligencePage() {
       {/* ════════════════════════════════════════════════════════════════
           SECTION 7 — Outcomes
       ════════════════════════════════════════════════════════════════ */}
-      <OutcomesSection />
+
 
       {/* ════════════════════════════════════════════════════════════════
           SECTION 8 — Final CTA
@@ -636,15 +652,15 @@ function IntegrationSection() {
   return (
     <section className="w-full bg-white py-4 md:py-6 lg:py-8" style={{ border: 'none' }}>
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 scroll-3d delay-100">
-        
+
         {/* Main FBF9FB Container */}
-        <div 
+        <div
           className="w-full rounded-3xl py-6 md:py-8 lg:py-10 px-6 md:px-10 flex items-center justify-center"
           style={{ background: '#FBF9FB' }}
         >
           {/* Central Image (Contains all text & headings) */}
           <div className="w-full max-w-[1100px] mx-auto relative flex justify-center">
-            <img 
+            <img
               src={image416}
               alt="How the 3 Phases Work Together Diagram"
               className="w-full h-auto object-contain"
@@ -662,10 +678,10 @@ function WhyTalentTransformationSection() {
     <section className="w-full bg-white py-4 md:py-6 lg:py-8" style={{ border: 'none' }}>
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 scroll-3d delay-100">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 xl:gap-24 items-start">
-          
+
           {/* Left Column - Heading */}
           <div className="w-full lg:w-[40%]">
-            <h2 
+            <h2
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 700,
@@ -680,7 +696,7 @@ function WhyTalentTransformationSection() {
 
           {/* Right Column - Content */}
           <div className="w-full lg:w-[60%] flex flex-col gap-6">
-            <p 
+            <p
               style={{
                 fontFamily: "'Lato', sans-serif",
                 fontWeight: 400,
@@ -689,12 +705,12 @@ function WhyTalentTransformationSection() {
                 color: '#515158'
               }}
             >
-              Traditional workforce models are no longer sufficient. <br className="hidden lg:block"/>
+              Traditional workforce models are no longer sufficient. <br className="hidden lg:block" />
               Jobs are static. Skills are hidden. AI investments lack clarity.
             </p>
 
             <div>
-              <p 
+              <p
                 className="mb-4"
                 style={{
                   fontFamily: "'Lato', sans-serif",
@@ -714,7 +730,7 @@ function WhyTalentTransformationSection() {
                   "Enabling continuous reskilling and internal mobility",
                   "Aligning people growth with enterprise priorities"
                 ].map((item, index) => (
-                  <li 
+                  <li
                     key={index}
                     style={{
                       fontFamily: "'Lato', sans-serif",
@@ -730,7 +746,7 @@ function WhyTalentTransformationSection() {
               </ul>
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>
@@ -765,16 +781,16 @@ function DesignedForSection() {
   return (
     <section className="w-full bg-white py-4 md:py-6 lg:py-8">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 scroll-3d delay-200">
-        
+
         {/* Grid layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          
+
           {/* Card 1 - Title Card */}
-          <div 
+          <div
             className="w-full aspect-[4/3] md:aspect-auto md:min-h-[250px] lg:min-h-[280px] rounded-lg flex items-center justify-center p-8 transition-transform hover:-translate-y-1 duration-300"
             style={{ backgroundColor: '#865CA4' }} // adjusted purple for accuracy
           >
-            <h2 
+            <h2
               className="text-white text-center"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
@@ -788,12 +804,12 @@ function DesignedForSection() {
 
           {/* Other Cards */}
           {cards.map((card, index) => (
-            <div 
+            <div
               key={index}
               className="group w-full aspect-[4/3] md:aspect-auto md:min-h-[250px] lg:min-h-[280px] rounded-lg p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#865CA4]/10 cursor-pointer border border-transparent hover:border-[#865CA4]/20"
               style={{ backgroundColor: '#F8F6F9' }}
             >
-              <h3 
+              <h3
                 className="transition-colors duration-300 group-hover:text-[#865CA4]"
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
@@ -806,8 +822,8 @@ function DesignedForSection() {
                 {card.title}
               </h3>
               <div className="mt-8 flex justify-start">
-                <img 
-                  src={card.icon} 
+                <img
+                  src={card.icon}
                   alt={card.title}
                   className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain transition-transform duration-500 group-hover:scale-110"
                 />
@@ -821,145 +837,7 @@ function DesignedForSection() {
   )
 }
 
-/* ── Custom Animated Counter for any formatted string (e.g. "20-30%", "Up To 35%") ── */
-function AnimatedCounter({ valueStr }) {
-  const [countStr, setCountStr] = React.useState(valueStr.replace(/[0-9]/g, '0'))
-  const ref = React.useRef(null)
-  const [isVisible, setIsVisible] = React.useState(false)
 
-  React.useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        setIsVisible(true)
-      } else {
-        // Reset when it leaves the viewport so it runs again
-        setIsVisible(false)
-        setCountStr(valueStr.replace(/[0-9]/g, '0'))
-      }
-    }, { threshold: 0.1 })
-
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [valueStr])
-
-  React.useEffect(() => {
-    if (!isVisible) return
-
-    const parts = valueStr.split(/(\d+)/)
-    const duration = 2000 // 2 seconds animation
-    const startTime = performance.now()
-
-    const update = (currentTime) => {
-      const elapsed = currentTime - startTime
-      const progress = Math.min(elapsed / duration, 1)
-      const easeOut = 1 - Math.pow(1 - progress, 3)
-
-      const currentString = parts.map(part => {
-        if (/^\d+$/.test(part)) {
-          const target = parseInt(part, 10)
-          return Math.floor(target * easeOut).toString()
-        }
-        return part
-      }).join('')
-
-      setCountStr(currentString)
-
-      if (progress < 1) {
-        requestAnimationFrame(update)
-      } else {
-        setCountStr(valueStr) // Ensure exact final string
-      }
-    }
-    requestAnimationFrame(update)
-  }, [isVisible, valueStr])
-
-  return <span ref={ref}>{countStr}</span>
-}
-
-/* ── Outcomes Section ── */
-function OutcomesSection() {
-  const stats = [
-    {
-      value: "20–30%",
-      label: "improvement in workforce productivity"
-    },
-    {
-      value: "25–40%",
-      label: "in role mismatch and mis-hiring"
-    },
-    {
-      value: "30%",
-      label: "faster deployment of critical skills"
-    },
-    {
-      value: "Up To 35%",
-      label: "reduction in external hiring dependency"
-    }
-  ]
-
-  return (
-    <section className="w-full py-10 md:py-14" style={{ backgroundColor: '#865CA4' }}>
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 text-center text-white scroll-3d delay-300">
-        
-        {/* Headings */}
-        <h2 
-          className="mb-4"
-          style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontWeight: 700,
-            fontSize: 'clamp(32px, 4vw, 48px)'
-          }}
-        >
-          Real Outcomes. Measurable Impact.
-        </h2>
-        <p 
-          className="mb-8 md:mb-10 mx-auto"
-          style={{
-            fontFamily: "'Lato', sans-serif",
-            fontWeight: 400,
-            fontSize: 'clamp(16px, 2vw, 20px)',
-            opacity: 0.9,
-            maxWidth: '600px'
-          }}
-        >
-          What users and institutions achieve after using the Potential Meter
-        </p>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
-          {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <h3 
-                className="mb-3"
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 700,
-                  fontSize: 'clamp(40px, 4vw, 56px)',
-                  lineHeight: '1.2'
-                }}
-              >
-                <AnimatedCounter valueStr={stat.value} />
-              </h3>
-              <p 
-                style={{
-                  fontFamily: "'Lato', sans-serif",
-                  fontWeight: 400,
-                  fontSize: 'clamp(16px, 1.5vw, 18px)',
-                  lineHeight: '1.5',
-                  opacity: 0.9,
-                  maxWidth: '240px'
-                }}
-              >
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </section>
-  )
-}
 
 /* ── Final CTA Section (from Hire Twin) ── */
 function FinalCtaSection() {
@@ -1029,11 +907,11 @@ function FinalCtaSection() {
       <section
         className="persona-final-cta"
         style={{
-          backgroundImage:    `url(${getAssetPath('Group%2041612.png')})`,
-          backgroundSize:     'cover',
+          backgroundImage: `url(${getAssetPath('Group%2041612.png')})`,
+          backgroundSize: 'cover',
           backgroundPosition: 'center center',
-          backgroundRepeat:   'no-repeat',
-          backgroundColor:    '#F59E0B',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#F59E0B',
         }}
       >
         <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">

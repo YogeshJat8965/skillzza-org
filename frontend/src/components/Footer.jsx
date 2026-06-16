@@ -27,7 +27,7 @@ const footerSections = [
       { name: 'Vedya AI', href: 'https://cognifyai.skillzza.com/' },
       { name: 'Skill Studio', href: 'https://skillzza-club.vercel.app/' },
       { name: 'Immersive Learning for Teachers', href: 'https://cognifyai.skillzza.com/for-tutor.html' },
-      { name: 'Cognitive Computing for Maturity Models', href: 'https://cognifyai.skillzza.com/for-school.html' },
+      { name: 'Cognitive Computing  Maturity Models', href: 'https://cognifyai.skillzza.com/for-school.html' },
       { name: 'Campus Connect - K12', href: 'https://cognifyai.skillzza.com/#' },
       { name: 'Future Founders Track', href: 'https://cognifyai.skillzza.com/#' },
     ],
@@ -58,7 +58,7 @@ const footerSections = [
       // { name: 'Playground', href: '#', disabled: true },
       // { name: 'Explore Domains', href: '/explore/domains' },
       // { name: 'Career Trajectory', href: '/explore/career-trajectory' },
-      // { name: 'Skillzza Persona', href: '/explore/skillzza-persona' },
+      // { name: 'Skill Persona', href: '/explore/skillzza-persona' },
     ],
   },
   {

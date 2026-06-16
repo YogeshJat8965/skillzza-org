@@ -7,13 +7,13 @@ const GovernmentUseCase = () => {
       {/* Hero Section */}
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-teal-400 to-green-500"
-        style={{ 
+        style={{
           backgroundImage: getBackgroundImageUrl('/government_banner_img.jpeg'),
           minHeight: '70vh'
         }}
       >
         <div className="absolute inset-0 bg-gray-900/70"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
             <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
@@ -57,7 +57,7 @@ const GovernmentUseCase = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="space-y-16">
-              
+
               {/* National Skill Development Programs */}
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="flex flex-col lg:flex-row">
@@ -89,10 +89,10 @@ const GovernmentUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/global_imgs.png')} 
-                      alt="National Skill Development Programs" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/global_imgs.png')}
+                      alt="National Skill Development Programs"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -129,10 +129,10 @@ const GovernmentUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/industry_innovation_infra_img.jpg')} 
-                      alt="Regional Economic Development" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/industry_innovation_infra_img.jpg')}
+                      alt="Regional Economic Development"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -169,10 +169,10 @@ const GovernmentUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/potential_meter_banner_img.png')} 
-                      alt="Population-Scale Assessment" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/potential_meter_banner_img.png')}
+                      alt="Population-Scale Assessment"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -209,10 +209,10 @@ const GovernmentUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/explore_project.jpg')} 
-                      alt="Innovation & Entrepreneurship Ecosystem" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/explore_project.jpg')}
+                      alt="Innovation & Entrepreneurship Ecosystem"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -249,10 +249,10 @@ const GovernmentUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/partnerships_for_the_goals_img.jpg')} 
-                      alt="Public-Private Collaboration Framework" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/partnerships_for_the_goals_img.jpg')}
+                      alt="Public-Private Collaboration Framework"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -289,10 +289,10 @@ const GovernmentUseCase = () => {
                     </div>
                   </div>
                   <div className="lg:w-1/2">
-                    <img 
-                      src={getAssetPath('/datadriveninsights_ico.png')} 
-                      alt="National Skill Intelligence" 
-                      className="w-full h-full object-cover min-h-96" 
+                    <img
+                      src={getAssetPath('/datadriveninsights_ico.png')}
+                      alt="National Skill Intelligence"
+                      className="w-full h-full object-cover min-h-96"
                     />
                   </div>
                 </div>
@@ -353,50 +353,50 @@ const GovernmentUseCase = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
               <div className="text-center">
-                <img 
-                  src={getAssetPath('/E_SDG_Icons-04.jpg')} 
-                  alt="Quality Education" 
-                  className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
+                <img
+                  src={getAssetPath('/E_SDG_Icons-04.jpg')}
+                  alt="Quality Education"
+                  className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg"
                 />
                 <p className="text-base font-semibold text-gray-700">Quality Education</p>
               </div>
               <div className="text-center">
-                <img 
-                  src={getAssetPath('/E_SDG_Icons-08.jpg')} 
-                  alt="Decent Work" 
-                  className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
+                <img
+                  src={getAssetPath('/E_SDG_Icons-08.jpg')}
+                  alt="Decent Work"
+                  className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg"
                 />
                 <p className="text-base font-semibold text-gray-700">Decent Work & Economic Growth</p>
               </div>
               <div className="text-center">
-                <img 
-                  src={getAssetPath('/E_SDG_Icons-09.jpg')} 
-                  alt="Industry Innovation" 
-                  className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
+                <img
+                  src={getAssetPath('/E_SDG_Icons-09.jpg')}
+                  alt="Industry Innovation"
+                  className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg"
                 />
                 <p className="text-base font-semibold text-gray-700">Industry, Innovation & Infrastructure</p>
               </div>
               <div className="text-center">
-                <img 
-                  src={getAssetPath('/E_SDG_Icons-10.jpg')} 
-                  alt="Reduced Inequalities" 
-                  className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
+                <img
+                  src={getAssetPath('/E_SDG_Icons-10.jpg')}
+                  alt="Reduced Inequalities"
+                  className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg"
                 />
                 <p className="text-base font-semibold text-gray-700">Reduced Inequalities</p>
               </div>
               <div className="text-center">
-                <img 
-                  src={getAssetPath('/E_SDG_Icons-13.jpg')} 
-                  alt="Climate Action" 
-                  className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
+                <img
+                  src={getAssetPath('/E_SDG_Icons-13.jpg')}
+                  alt="Climate Action"
+                  className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg"
                 />
                 <p className="text-base font-semibold text-gray-700">Climate Action</p>
               </div>
               <div className="text-center">
-                <img 
-                  src={getAssetPath('/E_SDG_Icons-17.jpg')} 
-                  alt="Partnerships" 
-                  className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg" 
+                <img
+                  src={getAssetPath('/E_SDG_Icons-17.jpg')}
+                  alt="Partnerships"
+                  className="w-20 h-20 mx-auto mb-4 rounded-lg shadow-lg"
                 />
                 <p className="text-base font-semibold text-gray-700">Partnerships for the Goals</p>
               </div>
@@ -426,7 +426,7 @@ const GovernmentUseCase = () => {
                 <p className="text-gray-600 text-base">Proven ability to deliver results from individual learners to million-citizen national programs.</p>
               </div>
 
-              <div className="text-center bg-white p-6 rounded-2xl shadow-lg">      
+              <div className="text-center bg-white p-6 rounded-2xl shadow-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation & Evidence</h3>
                 <p className="text-gray-600 text-base">Cutting-edge AI technology combined with rigorous measurement of outcomes and continuous improvement.</p>
               </div>

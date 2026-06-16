@@ -1081,50 +1081,50 @@ function OurPathwayPage() {
                 title: 'Persons with Disabilities',
               },
             ].map((segment, index) => (
-                <div
-                  key={index}
-                  className="pathway-serve-card"
+              <div
+                key={index}
+                className="pathway-serve-card"
+                style={{
+                  width: '350px',
+                  maxWidth: '100%',
+                  height: '280px',
+                  borderRadius: '20px',
+                  overflow: 'hidden',
+                  position: 'relative',
+                  boxShadow: '0px 20px 35px rgba(0, 0, 0, 0.18)',
+                  opacity: 0.9,
+                }}
+              >
+                <img
+                  src={segment.image}
+                  alt={segment.title}
                   style={{
-                    width: '350px',
-                    maxWidth: '100%',
-                    height: '280px',
-                    borderRadius: '20px',
-                    overflow: 'hidden',
-                    position: 'relative',
-                    boxShadow: '0px 20px 35px rgba(0, 0, 0, 0.18)',
-                    opacity: 0.9,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block',
+                  }}
+                />
+                <div
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background:
+                      'linear-gradient(180deg, rgba(9, 11, 19, 0.1) 15%, rgba(9, 11, 19, 0.78) 90%)',
+                  }}
+                />
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: '34px',
+                    left: '28px',
+                    right: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '12px',
                   }}
                 >
-                  <img
-                    src={segment.image}
-                    alt={segment.title}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      display: 'block',
-                    }}
-                  />
-                  <div
-                    style={{
-                      position: 'absolute',
-                      inset: 0,
-                      background:
-                        'linear-gradient(180deg, rgba(9, 11, 19, 0.1) 15%, rgba(9, 11, 19, 0.78) 90%)',
-                    }}
-                  />
-                  <div
-                    style={{
-                      position: 'absolute',
-                      bottom: '34px',
-                      left: '28px',
-                      right: '28px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '12px',
-                    }}
-                  >
-                    {/* <div
+                  {/* <div
                       style={{
                         width: '64px',
                         height: '64px',
@@ -1143,19 +1143,19 @@ function OurPathwayPage() {
                         style={{ width: '32px', height: '32px', objectFit: 'contain' }}
                       />
                     </div> */}
-                    <div
-                      style={{
-                          color: '#FFFFFF',
-                        fontFamily: "'Inter', 'Segoe UI', sans-serif",
-                        fontWeight: 700,
-                        fontSize: '20px',
-                        lineHeight: '1.2',
-                        textShadow: '0px 4px 12px rgba(0, 0, 0, 0.45)',
-                      }}
-                    >
-                      {segment.title}
-                    </div>
+                  <div
+                    style={{
+                      color: '#FFFFFF',
+                      fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                      fontWeight: 700,
+                      fontSize: '20px',
+                      lineHeight: '1.2',
+                      textShadow: '0px 4px 12px rgba(0, 0, 0, 0.45)',
+                    }}
+                  >
+                    {segment.title}
                   </div>
+                </div>
               </div>
             ))}
           </div>
@@ -1253,7 +1253,7 @@ function OurPathwayPage() {
       </section>
 
       {/* ── Journey of Launching Your Career Section ── */}
-     
+
 
       <section
         ref={getStartedRef}
@@ -1494,7 +1494,7 @@ function OurPathwayPage() {
             >
               {[
                 { label: "Apply Now", to: '/signup' },
-                { label: 'Schedule Call', to: '/contact-us' },
+                { label: 'Schedule a Call', to: '/contact-us' },
               ].map((item) => (
                 <Link
                   key={item.label}

@@ -9,17 +9,17 @@ const PotentialMeter = () => {
       {/* Hero Section */}
       <section
         className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat bg-gradient-to-br from-purple-400 to-blue-500"
-        style={{ 
+        style={{
           backgroundImage: getBackgroundImageUrl('/potential_meter_banner_img.png'),
           minHeight: '70vh'
         }}
       >
         <div className="absolute inset-0 bg-gray-900/70"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl text-white text-center mx-auto">
             <div className="inline-block px-6 py-2 bg-orange-500 rounded-full text-base font-semibold text-white mb-6">
-              THE POTENTIAL METER
+              The Potential Meter
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
               Unlock Your True Potential
@@ -27,65 +27,65 @@ const PotentialMeter = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-yellow-300">
               Beyond Traditional Testing: Discover What You're Truly Capable Of
             </h2>
-             <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
-               The Potential Meter is a next-generation talent and capability assessment framework designed to unlock true human potential. It goes beyond conventional evaluations by combining advanced analytics, behavioral insights, and adaptive simulations to provide a holistic view of an individual's skills, aspirations, and growth trajectory.
-             </p>
-             
-             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-               <button className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-bold py-4 px-10 rounded-full hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
-                 🚀 Start Your Assessment - Only 15 Minutes
-               </button>
-               <button onClick={() => { window.location.href = contactUsPath; }} className="border-2 border-white text-white font-semibold py-4 px-10 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300 backdrop-blur-sm bg-white/10">
-                 📅 Book Demo
-               </button>
-             </div>
-             
-             <div className="flex flex-wrap justify-center gap-8 text-base text-gray-300">
-               <div className="flex items-center space-x-2">
-                 <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                 <span>No registration required</span>
-               </div>
-               <div className="flex items-center space-x-2">
-                 <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                 <span>Instant results</span>
-               </div>
-               <div className="flex items-center space-x-2">
-                 <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                 <span>Money-back guarantee</span>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
+            <p className="text-xl md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12">
+              The Potential Meter is a next-generation talent and capability assessment framework designed to unlock true human potential. It goes beyond conventional evaluations by combining advanced analytics, behavioral insights, and adaptive simulations to provide a holistic view of an individual's skills, aspirations, and growth trajectory.
+            </p>
 
-       {/* Statistics Section */}
-       <section className="bg-gradient-to-r from-orange-500 to-yellow-500 py-16">
-         <div className="container mx-auto px-6">
-           <div className="max-w-6xl mx-auto">
-             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
-               <div className="group">
-                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">2M+</div>
-                 <div className="text-xl opacity-90">Professionals Assessed</div>
-               </div>
-               <div className="group">
-                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">95%</div>
-                 <div className="text-xl opacity-90">Accuracy Rate</div>
-               </div>
-               <div className="group">
-                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">50M+</div>
-                 <div className="text-xl opacity-90">Global Benchmarks</div>
-               </div>
-               <div className="group">
-                 <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
-                 <div className="text-xl opacity-90">Fortune 1000 Companies</div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+              <button className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-bold py-4 px-10 rounded-full hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+                🚀 Start Your Assessment - Only 15 Minutes
+              </button>
+              <button onClick={() => { window.location.href = contactUsPath; }} className="border-2 border-white text-white font-semibold py-4 px-10 rounded-full hover:bg-white hover:text-orange-500 transition-all duration-300 backdrop-blur-sm bg-white/10">
+                📅 Book Demo
+              </button>
+            </div>
 
-       {/* The Challenge We Solve */}
-       <section className="bg-gray-50 py-20">
+            <div className="flex flex-wrap justify-center gap-8 text-base text-gray-300">
+              <div className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                <span>No registration required</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                <span>Instant results</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                <span>Money-back guarantee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="bg-gradient-to-r from-orange-500 to-yellow-500 py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
+              <div className="group">
+                <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">2M+</div>
+                <div className="text-xl opacity-90">Professionals Assessed</div>
+              </div>
+              <div className="group">
+                <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">95%</div>
+                <div className="text-xl opacity-90">Accuracy Rate</div>
+              </div>
+              <div className="group">
+                <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">50M+</div>
+                <div className="text-xl opacity-90">Global Benchmarks</div>
+              </div>
+              <div className="group">
+                <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
+                <div className="text-xl opacity-90">Fortune 1000 Companies</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Challenge We Solve */}
+      <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -129,7 +129,7 @@ const PotentialMeter = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="mt-8 p-6 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl border border-orange-200">
                     <p className="text-xl font-semibold text-gray-900 mb-2">The Reality Check:</p>
                     <p className="text-gray-700">
@@ -137,12 +137,12 @@ const PotentialMeter = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="text-center">
-                  <img 
-                    src={getAssetPath('/confused_person_banner.png')} 
-                    alt="Traditional vs Future Assessment" 
-                    className="w-full max-w-md mx-auto rounded-2xl shadow-lg" 
+                  <img
+                    src={getAssetPath('/confused_person_banner.png')}
+                    alt="Traditional vs Future Assessment"
+                    className="w-full max-w-md mx-auto rounded-2xl shadow-lg"
                   />
                   <div className="mt-6 p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl border border-green-200">
                     <h4 className="text-xl font-bold text-gray-900 mb-2">The Potential Meter changes everything.</h4>
@@ -487,10 +487,10 @@ const PotentialMeter = () => {
                     </div>
                   </div>
                   <div>
-                    <img 
-                      src={getAssetPath('/forstudentuse.jpg')} 
-                      alt="Students Success" 
-                      className="w-full rounded-2xl shadow-lg" 
+                    <img
+                      src={getAssetPath('/forstudentuse.jpg')}
+                      alt="Students Success"
+                      className="w-full rounded-2xl shadow-lg"
                     />
                   </div>
                 </div>
@@ -522,10 +522,10 @@ const PotentialMeter = () => {
                     </div>
                   </div>
                   <div className="lg:order-1">
-                    <img 
-                      src={getAssetPath('/career_readyness.jpg')} 
-                      alt="Young Professionals Success" 
-                      className="w-full rounded-2xl shadow-lg" 
+                    <img
+                      src={getAssetPath('/career_readyness.jpg')}
+                      alt="Young Professionals Success"
+                      className="w-full rounded-2xl shadow-lg"
                     />
                   </div>
                 </div>
@@ -557,10 +557,10 @@ const PotentialMeter = () => {
                     </div>
                   </div>
                   <div>
-                    <img 
-                      src={getAssetPath('/for_corporate_only_img.jpg')} 
-                      alt="Organizations Success" 
-                      className="w-full rounded-2xl shadow-lg" 
+                    <img
+                      src={getAssetPath('/for_corporate_only_img.jpg')}
+                      alt="Organizations Success"
+                      className="w-full rounded-2xl shadow-lg"
                     />
                   </div>
                 </div>
@@ -587,10 +587,10 @@ const PotentialMeter = () => {
                     </ul>
                   </div>
                   <div className="lg:order-1">
-                    <img 
-                      src={getAssetPath('/future_workspace.jpg')} 
-                      alt="Career Changers Success" 
-                      className="w-full rounded-2xl shadow-lg" 
+                    <img
+                      src={getAssetPath('/future_workspace.jpg')}
+                      alt="Career Changers Success"
+                      className="w-full rounded-2xl shadow-lg"
                     />
                   </div>
                 </div>
@@ -675,61 +675,61 @@ const PotentialMeter = () => {
               <p className="text-xl text-gray-600">Beyond Assessment – Your Career Intelligence Partner</p>
             </div>
 
-             {/* First Row - 3 Cards */}
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
-                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-                   </svg>
-                 </div>
-                 <h3 className="text-xl font-bold text-gray-900 mb-4">Scientifically Rigorous</h3>
-                 <p className="text-gray-600">Traditional assessments measure past performance. We predict future potential using cutting-edge behavioral science and AI.</p>
-               </div>
- 
-               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
-                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                   </svg>
-                 </div>
-                 <h3 className="text-xl font-bold text-gray-900 mb-4">Globally Validated</h3>
-                 <p className="text-gray-600">Our algorithms are trained on diverse, global talent data ensuring accuracy across cultures, industries, and career stages.</p>
-               </div>
- 
-               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
-                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-                   </svg>
-                 </div>
-                 <h3 className="text-xl font-bold text-gray-900 mb-4">Continuously Evolving</h3>
-                 <p className="text-gray-600">Your potential isn't static – neither is our assessment. We update your profile as you grow and industries evolve.</p>
-               </div>
-             </div>
+            {/* First Row - 3 Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Scientifically Rigorous</h3>
+                <p className="text-gray-600">Traditional assessments measure past performance. We predict future potential using cutting-edge behavioral science and AI.</p>
+              </div>
 
-             {/* Second Row - 2 Cards Centered */}
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
-                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                   </svg>
-                 </div>
-                 <h3 className="text-xl font-bold text-gray-900 mb-4">Action-Oriented</h3>
-                 <p className="text-gray-600">We don't just tell you what you're good at – we show you exactly how to leverage it for maximum career impact.</p>
-               </div>
- 
-               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
-                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                   </svg>
-                 </div>
-                 <h3 className="text-xl font-bold text-gray-900 mb-4">Privacy-First</h3>
-                 <p className="text-gray-600">Your data is encrypted, anonymized, and never shared. You control who sees your potential profile.</p>
-               </div>
-             </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Globally Validated</h3>
+                <p className="text-gray-600">Our algorithms are trained on diverse, global talent data ensuring accuracy across cultures, industries, and career stages.</p>
+              </div>
+
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Continuously Evolving</h3>
+                <p className="text-gray-600">Your potential isn't static – neither is our assessment. We update your profile as you grow and industries evolve.</p>
+              </div>
+            </div>
+
+            {/* Second Row - 2 Cards Centered */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Action-Oriented</h3>
+                <p className="text-gray-600">We don't just tell you what you're good at – we show you exactly how to leverage it for maximum career impact.</p>
+              </div>
+
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Privacy-First</h3>
+                <p className="text-gray-600">Your data is encrypted, anonymized, and never shared. You control who sees your potential profile.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -818,7 +818,7 @@ const PotentialMeter = () => {
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
@@ -837,7 +837,7 @@ const PotentialMeter = () => {
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
@@ -856,7 +856,7 @@ const PotentialMeter = () => {
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
@@ -941,7 +941,7 @@ const PotentialMeter = () => {
             </h2>
             <p className="text-xl mb-4">Join 2M+ professionals who've unlocked their potential</p>
             <p className="text-xl mb-8 opacity-90">No registration required. Instant results. Money-back guarantee.</p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button className="bg-white text-orange-500 font-semibold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                 Start Your Assessment - Only 15 Minutes

@@ -260,9 +260,7 @@ const WhatWeDo = () => {
           fontSize: '20px', color: '#475569', lineHeight: '1.75',
           maxWidth: '580px', margin: '0 auto 52px',
         }} className="wwd-reveal wwd-fade-up wwd-delay-1 wwd-hero-desc">
-          Bridging the gap between education and employment, Skillzza empowers professionals,
-          institutions, and enterprises with real-world capabilities. We combine AI-driven intelligence,
-          immersive learning, and role-based simulations to create a future-ready workforce.
+          We combine AI-driven intelligence,immersive learning, and role-based simulations to create a future-ready workforce.
         </p>
 
         <div style={{ maxWidth: '1020px', margin: '0 auto' }} className="wwd-reveal wwd-scale-up wwd-delay-2">
