@@ -69,7 +69,7 @@ const tabData = {
     // pricing: 'Pay-per-assessment or enterprise licensing | Starting ₹500/assessment',
     buttons: [
       { text: 'Start Employer Trial', outline: true },
-      { text: 'API Documentation', outline: false }
+      // { text: 'API Documentation', outline: false }
     ]
   }
 };
@@ -366,8 +366,8 @@ export default function PotentialMeterPage() {
           className="max-w-[1120px] w-full flex flex-col items-center"
         >
 
-          <div className="text-center mb-6 max-w-[800px]">
-            <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] mb-4" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
+          <div className="text-center mb-8 mt-10 max-w-[800px]">
+            <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] mb-6" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
               The Problem We Solve
             </h2>
             {/* <p className="font-['Lato',sans-serif] font-medium text-[#334155] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6]">
@@ -430,7 +430,7 @@ export default function PotentialMeterPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-6 md:mb-0 relative z-20"
         >
-          <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#3C3C3C]" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
+          <h2 className="font-['DM_Sans',sans-serif] mt-8 font-bold text-[#3C3C3C]" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
             What We Measure
           </h2>
         </motion.div>
@@ -617,11 +617,11 @@ export default function PotentialMeterPage() {
         >
 
           <h2 className="font-['DM_Sans',sans-serif] font-bold text-[#0F1114] mb-4" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}>
-            What You Get with Potential Meter
+            What You achieve with Potential Meter
           </h2>
-          <p className="font-['Lato',sans-serif] font-normal text-[#52525B] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] max-w-2xl mx-auto mb-10">
+          {/* <p className="font-['Lato',sans-serif] font-normal text-[#52525B] text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] max-w-2xl mx-auto mb-10">
             Tailored intelligence for individuals, institutions, and employers - designed to drive real-world outcomes.
-          </p>
+          </p> */}
 
           {/* Toggle Tabs */}
           <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 max-w-[600px] mx-auto mb-6 px-4">

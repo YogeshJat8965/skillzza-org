@@ -1449,12 +1449,11 @@ function XperiencePlatformPage() {
                     color: '#0F1114'
                   }}
                 >
-                  Experience the <br />
-                  <span style={{ fontWeight: '700' }}>Real World</span>-Before <br />
-                  You Enter It
-                </h1>
+                  Experience the Real World<br /> 
+                  <span style={{ fontWeight: '700' }}>Before you enter it . . </span>
+                </h1> 
 
-                {/* Subheading */}
+                {/* Subheading */} 
                 <div
                   className="hero-subheading"
                   style={{
@@ -1574,7 +1573,7 @@ function XperiencePlatformPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Heading */}
             <h2
-              className="section-heading text-center mb-4 md:mb-6 lg:mb-8"
+              className="section-heading text-center mt-8 mb-4 md:mb-6 lg:mb-8"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',
@@ -1583,37 +1582,10 @@ function XperiencePlatformPage() {
                 color: '#0F1114'
               }}
             >
-              Built for every stakeholder in<br className="sm:hidden" /> workforce readiness
+              Built for every Stakeholder 
             </h2>
 
-            {/* Tabs */}
-            <div className="flex justify-center mb-4 md:mb-6 lg:mb-8">
-              <div className="flex flex-wrap justify-center gap-0 bg-[#F3F4F6] rounded-lg p-1">
-                {['Learners', 'Universities', 'Enterprises', 'Programs'].map((tab, index) => (
-                  <button
-                    key={tab}
-                    onClick={() => handleTabClick(index)}
-                    className={`relative px-6 sm:px-8 md:px-12 lg:px-16 py-3 md:py-4 text-base md:text-lg lg:text-xl font-medium transition-all duration-300 ${activeTab === index
-                      ? 'bg-white text-black shadow-sm'
-                      : 'bg-transparent text-gray-700 hover:text-black'
-                      }`}
-                    style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      borderRadius: '6px',
-                      fontWeight: activeTab === index ? '600' : '500'
-                    }}
-                  >
-                    {tab}
-                    {activeTab === index && (
-                      <div
-                        className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#1F57C7]"
-                        style={{ borderRadius: '0 0 6px 6px' }}
-                      />
-                    )}
-                  </button>
-                ))}
-              </div>
-            </div>
+
 
             {/* Cards Flex Accordion */}
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-4 md:gap-6 lg:gap-4 lg:h-[480px]">
@@ -1777,18 +1749,18 @@ function XperiencePlatformPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Main Heading */}
             <h2
-              className="section-heading text-center mb-4 md:mb-6"
+              className="section-heading text-center mb-4 mt-10 md:mb-6"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',
                 fontSize: 'clamp(24px, 2.8vw, 52px)',
                 lineHeight: '1.2',
                 color: '#0F1114',
-                textTransform: 'capitalize',
+                textTransform: 'capitalize', 
                 letterSpacing: '0px'
               }}
             >
-              How It Helps <br /> From Learning To Professional Readiness
+              From Learning To Professional Readiness
             </h2>
 
             {/* Subheading */}
@@ -1887,7 +1859,7 @@ function XperiencePlatformPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Heading - Full Width */}
             <h2
-              className="mb-4 md:mb-5 lg:mb-6 capabilities-heading"
+              className="mb-4 md:mb-5 lg:mb-6 mt-10 capabilities-heading lg:ml-8 xl:ml-10"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',
@@ -1991,7 +1963,7 @@ function XperiencePlatformPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Main Heading */}
             <h2
-              className="philosophy-heading text-center mb-6 md:mb-8"
+              className="philosophy-heading text-center mt-10 mb-6 md:mb-8"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',
@@ -2125,7 +2097,7 @@ function XperiencePlatformPage() {
             </p>
 
             {/* Steps Description */}
-            <p
+            {/* <p
               className="works-description mb-6 md:mb-8 ml-8 md:ml-12 lg:ml-16"
               style={{
                 fontFamily: 'Lato, sans-serif',
@@ -2135,8 +2107,8 @@ function XperiencePlatformPage() {
                 color: '#000000'
               }}
             >
-              4 steps to real-world readiness with Skillzaa:
-            </p>
+              :4 steps to real-world readiness 
+            </p> */}
 
             {/* Timeline and Image Container */}
             <div className="flex flex-col lg:flex-row items-start gap-7 lg:gap-10">
@@ -2242,7 +2214,7 @@ function XperiencePlatformPage() {
             </div>
 
             {/* CTA Button */}
-            <div className="works-cta flex justify-center mt-12 md:mt-16">
+            {/* <div className="works-cta flex justify-center mt-12 md:mt-16">
               <a
                 href="https://portal.skillzza.com/signup"
                 target="_blank"
@@ -2252,7 +2224,7 @@ function XperiencePlatformPage() {
               >
                 Register for Free Internship
               </a>
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -2284,7 +2256,7 @@ function XperiencePlatformPage() {
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             {/* Title */}
             <h2
-              className="text-center mb-6 md:mb-8 lg:mb-10"
+              className="text-center mt-10 mb-6 md:mb-8 lg:mb-10"
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: '700',

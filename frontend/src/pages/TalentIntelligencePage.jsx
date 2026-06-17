@@ -2,8 +2,13 @@ import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 // Note: Ensure the image is in this path or adjust accordingly. 
-import heroImg from '../assets/talent-intelligence/ChatGPT Image Jun 15, 2026, 12_53_32 AM.png'
+import heroImg from '../assets/talent-intelligence/image.png'
 import image416 from '../assets/talent-intelligence/Image 416.png'
+import phase1Img from '../assets/talent-intelligence/1image copy.png'
+import phase2Img from '../assets/talent-intelligence/2image copy.png'
+import introFrameworkImg from '../assets/talent-intelligence/Group 41606.png'
+import chatGptImg from '../assets/talent-intelligence/ChatGPT Image Jun 15, 2026, 12_53_32 AM.png'
+import phase3Img from '../assets/talent-intelligence/3image copy.png'
 
 // Designed For Icons
 import govIcon from '../assets/talent-intelligence/goverment_17213502.svg'
@@ -71,6 +76,11 @@ export default function TalentIntelligencePage() {
           background: #FFFFFF;
         }
 
+        /* ── HERO gradient background ── */
+        .ti-hero-gradient {
+          background: linear-gradient(120deg, #4A2C6E 0%, #6B3FA0 30%, #A0527A 65%, #C0625A 100%);
+        }
+
         /* ── Modern 3D Scroll Animations ── */
         .scroll-3d,
         .ti-breadcrumb,
@@ -100,214 +110,198 @@ export default function TalentIntelligencePage() {
         .ti-heading  { transition-delay: 150ms; }
         .ti-para1    { transition-delay: 300ms; }
         .ti-para2    { transition-delay: 450ms; }
-        .ti-hero-img { transition-delay: 400ms; transform: translateX(60px) scale(0.96); }
+        .ti-hero-img { transition-delay: 350ms; transform: translateX(60px) scale(0.96); }
         .ti-hero-img.active-3d { transform: translateX(0) scale(1) !important; }
 
-        /* ── Heading colours ── */
-        .ti-h1-dark   { color: #0F1114; }
-        .ti-h1-purple { color: #79529A; }
-
-        /* ── H1 line blocks — force 3 exact lines on desktop ── */
-        .ti-h1-line {
-          display: block;
+        /* ── Hero CTA Buttons ── */
+        .ti-btn-primary {
+          background: #FFFFFF;
+          color: #4A2C6E;
+          border: 2px solid #FFFFFF;
+          font-family: 'DM Sans', sans-serif;
+          font-weight: 600;
+          font-size: clamp(20px, 1.2vw, 24px);
+          padding: 11px 26px;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
           white-space: nowrap;
         }
-        @media (max-width: 767px) {
-          .ti-h1-line { white-space: normal !important; }
+        .ti-btn-primary:hover {
+          background: rgba(255,255,255,0.12);
+          color: #FFFFFF;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+        }
+        .ti-btn-secondary {
+          background: transparent;
+          color: #FFFFFF;
+          border: 2px solid rgba(255,255,255,0.8);
+          font-family: 'DM Sans', sans-serif;
+          font-weight: 600;
+          font-size: clamp(20px, 1.2vw, 24px);
+          padding: 11px 26px;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+          white-space: nowrap;
+        }
+        .ti-btn-secondary:hover {
+          background: rgba(255,255,255,0.15);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(0,0,0,0.18);
         }
 
-        /* ── CTA Button ── */
-        .ti-cta-btn {
-          background: linear-gradient(90deg, #79529A 0%, #9B6FC2 100%);
-          transition: transform 0.25s ease, box-shadow 0.25s ease;
+        /* ── Hero image card ── */
+        .ti-hero-img-card {
+          border-radius: 14px;
+          overflow: hidden;
+          box-shadow: 0 20px 60px rgba(0,0,0,0.28), 0 6px 20px rgba(0,0,0,0.18);
         }
-        .ti-cta-btn:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(121, 82, 154, 0.35);
-        }
-        .ti-cta-btn:active { transform: translateY(0); }
 
         /* ── Mobile: image below text ── */
         @media (max-width: 1023px) {
           .ti-hero-img {
-            position: relative !important;
-            right: auto !important;
-            top: auto !important;
             width: 100% !important;
             max-width: 100% !important;
             display: flex;
             justify-content: center;
-            padding: 16px 16px 40px;
+            padding: 0 0 40px;
           }
           .ti-hero-img img {
-            max-width: 600px !important;
+            max-width: 560px !important;
             width: 100% !important;
           }
         }
       `}</style>
 
       {/* ════════════════════════ HERO SECTION ════════════════════════ */}
-      <section ref={heroSectionRef} className="ti-section relative w-full overflow-hidden">
+      <section ref={heroSectionRef} className="ti-section ti-hero-gradient relative w-full overflow-hidden">
 
         {/* ── Breadcrumb ── */}
         <nav className="ti-breadcrumb relative z-20 pt-3 pb-2 md:pt-4 md:pb-3 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 max-w-[1360px] mx-auto w-full text-left">
           <div
-            className="flex items-center justify-start gap-1.5 sm:gap-2 text-[16px] md:text-[20px] font-medium w-full"
-            style={{ color: '#71717A', fontFamily: "'Lato', sans-serif" }}
+            className="flex items-center justify-start gap-1.5 sm:gap-2 text-[20px] md:text-[20px] font-medium w-full"
+            style={{ color: 'rgba(255,255,255,0.65)', fontFamily: "'Lato', sans-serif" }}
           >
-            <Link to="/" className="hover:opacity-70 transition-opacity" style={{ color: '#71717A' }}>Home</Link>
+            <Link to="/" className="hover:opacity-80 transition-opacity" style={{ color: 'rgba(255,255,255,0.65)' }}>Home</Link>
             <span>&gt;</span>
-            <span style={{ color: '#18181B', fontWeight: 500 }}>Talent Transformation</span>
+            <span style={{ color: 'rgba(255,255,255,0.9)', fontWeight: 500 }}>Talent Transformation</span>
           </div>
         </nav>
 
         {/* ── Main content container ── */}
-        <div className="relative max-w-[1360px] mx-auto z-10">
+        <div className="relative max-w-[1360px] mx-auto z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-4 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 py-16 md:py-20 lg:py-28 xl:py-32">
 
           {/* ════ LEFT column: Text ════ */}
-          <div className="relative z-20 w-full lg:w-[48%] xl:w-[45%] px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 py-4 md:py-6 lg:py-8 xl:py-10">
+          <div className="relative z-20 w-full lg:w-[50%] xl:w-[48%]">
 
-            {/* H1 — DM Sans 700, clamp(24px, 2.8vw, 52px) — same as HireTwinPage */}
+            {/* H1 — DM Sans 700 — Bold white heading, exactly 3 lines */}
             <h1
-              className="ti-heading mb-5 md:mb-6"
+              className="ti-heading mb-6 md:mb-8"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: 'clamp(24px, 2.8vw, 52px)',
-                fontWeight: 700,
-                lineHeight: '1.16',
+                fontSize: 'clamp(28px, 3.2vw, 56px)',
+                fontWeight: 800,
+                lineHeight: '1.15',
                 letterSpacing: '-0.5px',
+                color: '#FFFFFF',
               }}
             >
-              <span className="ti-h1-line">
-                <span className="ti-h1-purple">Redesign</span> <span className="ti-h1-dark">Work.</span> <br /> 
-              </span>
-              <span className="ti-h1-line">
-                <span className="ti-h1-purple">Talent</span> <span className="ti-h1-dark">Activate.</span> <br /> 
-              </span>
-              <span className="ti-h1-line"> 
-                <span className="ti-h1-dark">Talent.</span> <span className="ti-h1-purple">Future-Proof the</span>
-              </span>
-              <span className="ti-h1-line">
-                <span className="ti-h1-purple">Workforce.</span>
-              </span>
+              <span style={{ display: 'block' }}>Redesign Work.</span>
+              <span style={{ display: 'block' }}>Activate Talent.</span>
+              <span style={{ display: 'block' }}>Future-Proof the Workforce.</span>
             </h1>
 
-            {/* Para 1 — Lato, clamp(20px, 1.2vw, 24px) */}
+            {/* Description — white, semi-transparent */}
             <p
-              className="ti-para1 mb-4 md:mb-5"
+              className="ti-para1"
               style={{
                 fontFamily: "'Lato', sans-serif",
                 fontSize: 'clamp(20px, 1.2vw, 24px)',
                 fontWeight: 400,
-                lineHeight: '1.6',
-                color: '#515158',
-                maxWidth: '510px',
+                lineHeight: '1.7',
+                color: 'rgba(255,255,255,0.85)',
+                maxWidth: '500px',
               }}
             >
               Talent Transformation is an AI-powered enterprise framework that
               enables organizations to redesign work, activate skills, and sustain
               workforce readiness in an era of rapid AI-led change.
             </p>
-
-            {/* Para 2 */}
-            <p
-              className="ti-para2 mb-8 md:mb-10 lg:mb-12"
-              style={{
-                fontFamily: "'Lato', sans-serif",
-                fontSize: 'clamp(20px, 1.2vw, 24px)',
-                fontWeight: 400,
-                lineHeight: '1.6',
-                color: '#71717A',
-                maxWidth: '510px',
-              }}
-            >
-              Built on three integrated capability phases—Infera, Nexis, and Avanta—
-              the framework helps enterprises move beyond static job structures to
-              adaptive, skills-driven operating models. By combining work
-              intelligence, skills orchestration, and continuous capability
-              development, Talent Transformation delivers measurable productivity,
-              agility, and workforce resilience—without operational complexity.
-            </p>
           </div>
 
           {/* ════ RIGHT column: Hero image ════ */}
           <div
-            className="ti-hero-img lg:absolute lg:right-0 lg:-top-8 xl:-top-12 w-full lg:w-[52%] xl:w-[54%] flex justify-end items-start"
-            style={{ paddingRight: 0 }}
+            className="ti-hero-img w-full lg:w-[50%] xl:w-[52%] flex justify-center lg:justify-end items-center"
           >
-            <img
-              src={heroImg}
-              alt="Talent Intelligence Dashboard"
-              style={{
-                width: '100%',
-                maxWidth: '750px',
-                height: 'auto',
-                display: 'block',
-                marginLeft: 'auto',
-              }}
-            />
+            <div className="ti-hero-img-card w-full" style={{ maxWidth: '640px' }}>
+              <img
+                src={heroImg}
+                alt="Talent Transformation Dashboard"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                }}
+              />
+            </div>
           </div>
 
         </div>
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
+          NEW SECTION — Intro Framework
+      ════════════════════════════════════════════════════════════════ */}
+      <IntroFrameworkSection />
+
+      {/* ════════════════════════════════════════════════════════════════
           SECTION 2 — Talent Transformation Roadmap
       ════════════════════════════════════════════════════════════════ */}
-      <section className="w-full bg-white py-4 md:py-6 lg:py-8">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
-          <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-20 xl:gap-28">
+      <section className="w-full bg-white py-12 md:py-16 lg:py-20 text-center">
+        <div className="max-w-[960px] mx-auto px-4 sm:px-6 md:px-10 flex flex-col items-center">
 
-            {/* Left — heading */}
-            <div className="w-full lg:w-[38%] xl:w-[35%] flex-shrink-0 scroll-3d">
-              <h2
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 700,
-                  fontSize: 'clamp(24px, 2.8vw, 52px)',
-                  lineHeight: '1.2',
-                  letterSpacing: '-0.5px',
-                  color: '#0F1114',
-                }}
-              >
-                Talent Transformation Roadmap
-              </h2>
-            </div>
-
-            {/* Right — subtitle + body */}
-            <div className="w-full lg:flex-1 scroll-3d delay-200">
-              <p
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 600,
-                  fontSize: 'clamp(20px, 1.2vw, 24px)',
-                  color: '#0F1114',
-                  lineHeight: '1.5',
-                  marginBottom: '20px',
-                }}
-              >
-                A Structured, AI-Led Journey from Work Redesign to Workforce Readiness
-              </p>
-              <p
-                style={{
-                  fontFamily: "'Lato', sans-serif",
-                  fontSize: 'clamp(20px, 1.2vw, 24px)',
-                  fontWeight: 400,
-                  lineHeight: '1.7',
-                  color: '#515158',
-                  maxWidth: '620px',
-                }}
-              >
-                The Talent Transformation Roadmap defines how enterprises
-                systematically evolve from fragmented workforce models to a
-                continuously adaptive, skills-driven organization.
-                Rather than isolated initiatives, the roadmap follows a
-                progressive, closed-loop journey that aligns work, skills, and
-                capability at every stage.
-              </p>
-            </div>
-
+          <div className="w-full scroll-3d">
+            <h2
+              style={{
+                fontFamily: "'DM Sans', sans-serif", fontWeight: 700,
+                fontSize: 'clamp(32px, 3.5vw, 56px)', lineHeight: '1.2',
+                letterSpacing: '-0.5px', color: '#0F1114',
+                marginBottom: '16px'
+              }}
+            >
+              Talent Transformation Roadmap
+            </h2>
           </div>
+
+          <div className="w-full scroll-3d delay-100">
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif", fontWeight: 600,
+                fontSize: 'clamp(20px, 1.4vw, 26px)', color: '#79529A',
+                lineHeight: '1.5', marginBottom: '24px'
+              }}
+            >
+              A Structured, AI-Led Journey from Work Redesign to Workforce Readiness
+            </p>
+            <p
+              style={{
+                fontFamily: "'Lato', sans-serif", fontSize: 'clamp(20px, 1.2vw, 24px)',
+                fontWeight: 400, lineHeight: '1.7', color: '#515158',
+                maxWidth: '840px', margin: '0 auto'
+              }}
+            >
+              The Talent Transformation Roadmap defines how enterprises
+              systematically evolve from fragmented workforce models to a
+              continuously adaptive, skills-driven organization.
+              Rather than isolated initiatives, the roadmap follows a
+              progressive, closed-loop journey that aligns work, skills, and
+              capability at every stage.<br /><br />
+              This roadmap unfolds across three integrated phases, each building on the previous and reinforcing long-term transformation.
+            </p>
+          </div>
+
         </div>
       </section>
 
@@ -332,8 +326,9 @@ export default function TalentIntelligencePage() {
       <DesignedForSection />
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 7 — Outcomes
+          SECTION 7 — What You Gain
       ════════════════════════════════════════════════════════════════ */}
+      <WhatYouGainSection />
 
 
       {/* ════════════════════════════════════════════════════════════════
@@ -344,310 +339,286 @@ export default function TalentIntelligencePage() {
   )
 }
 
-/* ── Phase Roadmap — directly lifted from XperiencePlatformPage "How it Works" ── */
+/* ── Phase Roadmap — Sticky Buttons + Normal Scroll ── */
 function PhaseRoadmapSection() {
   const [activePhase, setActivePhase] = React.useState(0)
+  const phaseRefs = [React.useRef(null), React.useRef(null), React.useRef(null)]
 
-  const phases = [
+  /* IntersectionObserver to detect which phase is in view */
+  React.useEffect(() => {
+    const observers = phaseRefs.map((ref, idx) => {
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActivePhase(idx)
+        },
+        { threshold: 0.3, rootMargin: '-10% 0px -40% 0px' }
+      )
+      if (ref.current) obs.observe(ref.current)
+      return obs
+    })
+    return () => observers.forEach((obs, i) => {
+      if (phaseRefs[i].current) obs.unobserve(phaseRefs[i].current)
+    })
+  }, [])
+
+  const scrollToPhase = (idx) => {
+    phaseRefs[idx].current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  const PHASES = [
     {
-      number: '1',
-      title: 'Phase 1: Infera',
-      subtitle: 'Understand, Redesign, and Optimize Work',
-      label: 'PHASE 1: INFERA',
-      detail: {
-        strategicObjective:
-          'Establish a clear, data-driven understanding of how work is performed today and how it should evolve in an AI-enabled enterprise.\nInfera is the diagnostic and intelligence foundation of the roadmap. It replaces assumption-based workforce planning with task-level, AI-driven insight, enabling leaders to redesign work with confidence and precision.',
-        keyFocusAreas: [
-          'Mapping how work is structured across roles, functions, and processes',
-          'Identifying effort, cost, risk, and value embedded in current work models',
-          'Determining where AI can automate, augment, or support work meaningfully',
-          'Understanding future work patterns driven by technology and business change',
-        ],
-        whatHappens: [
-          'Work and task intelligence is analyzed across the organization',
-          'High-impact opportunities for efficiency and value creation are identified',
-          'Roles are deconstructed into skills and activities rather than job titles',
-          'AI investments are aligned to business priorities and measurable outcomes',
-        ],
-        outputsLabel: 'Outputs of Phase 1',
-        outputs: [
-          'Clear visibility into current and future work structures',
-          'Prioritized AI and workforce optimization opportunities',
-          'Data-backed guidance for work redesign and role evolution',
-        ],
-        outcome:
-          'Leaders gain clarity on what work should change, why it should change, and where AI creates real value—forming the foundation for all subsequent phases.',
-      },
+      tab: 'Infera', label: 'INFERA', fullLabel: 'Phase 1', img: phase1Img,
+      tagline: 'Understand, Redesign, and Optimize Work',
+      objective: 'Establish a clear, data-driven understanding of how work is performed today and how it should evolve in an AI-enabled enterprise.',
+      objectiveDetail: 'Infera is the diagnostic and intelligence foundation of the roadmap. It replaces assumption-based workforce planning with task-level, AI-driven insight, enabling leaders to redesign work with confidence and precision.',
+      focusAreas: ['Mapping how work is structured across roles, functions, and processes', 'Identifying effort, cost, risk, and value embedded in current work models', 'Determining where AI can automate, augment, or support work meaningfully', 'Understanding future work patterns driven by technology and business change'],
+      whatHappens: ['Work and task intelligence is analyzed across the organization', 'High-impact opportunities for efficiency and value creation are identified', 'Roles are deconstructed into skills and activities rather than job titles', 'AI investments are aligned to business priorities and measurable outcomes'],
+      outputs: ['Clear visibility into current and future work structures', 'Prioritized AI and workforce optimization opportunities', 'Data-backed guidance for work redesign and role evolution'],
+      outcome: 'Leaders gain clarity on what work should change, why it should change, and where AI creates real value\u2014forming the foundation for all subsequent phases.',
     },
     {
-      number: '2',
-      title: 'Phase 2: Nexis',
-      subtitle: 'Activate Skills and Orchestrate Work Dynamically',
-      label: 'PHASE 2: NEXIS',
-      detail: {
-        strategicObjective:
-          'Ensure that redesigned work flows to the most relevant skills at the right time, maximizing talent utilization and execution speed.\nNexis operationalizes the intelligence generated in Phase 1. It shifts the organization from static, role-based execution to a skills-first, fluid operating model, enabling faster delivery without structural friction.',
-        keyFocusAreas: [
-          'Skills-based matching of work, projects, and initiatives',
-          'Dynamic deployment of internal talent across functions',
-          'Breaking down silos that restrict collaboration and agility',
-          'Reducing reliance on external hiring by unlocking internal capability',
-        ],
-        whatHappens: [
-          'Work is routed based on skills rather than job titles',
-          'Internal talent becomes visible, accessible, and deployable',
-          'Cross-functional collaboration becomes easier and faster',
-          'Bottlenecks caused by rigid structures are reduced',
-        ],
-        outputsLabel: 'Outputs of Phase 2',
-        outputs: [
-          'Improved utilization of existing workforce capability',
-          'Faster execution of critical initiatives',
-          'Reduced talent waste and hiring dependency',
-        ],
-        outcome:
-          'The enterprise moves from knowing where skills exist to actively deploying them, turning insight into execution and productivity gains.',
-      },
+      tab: 'Nexis', label: 'NEXIS', fullLabel: 'Phase 2', img: phase2Img,
+      tagline: 'Activate Skills and Orchestrate Work Dynamically',
+      objective: 'Ensure that redesigned work flows to the most relevant skills at the right time, maximizing talent utilization and execution speed.',
+      objectiveDetail: 'Nexis operationalizes the intelligence generated in Phase 1. It shifts the organization from static, role-based execution to a skills-first, fluid operating model, enabling faster delivery without structural friction.',
+      focusAreas: ['Skills-based matching of work, projects, and initiatives', 'Dynamic deployment of internal talent across functions', 'Breaking down silos that restrict collaboration and agility', 'Reducing reliance on external hiring by unlocking internal capability'],
+      whatHappens: ['Work is routed based on skills rather than job titles', 'Internal talent becomes visible, accessible, and deployable', 'Cross-functional collaboration becomes easier and faster', 'Bottlenecks caused by rigid structures are reduced'],
+      outputs: ['Improved utilization of existing workforce capability', 'Faster execution of critical initiatives', 'Reduced talent waste and hiring dependency'],
+      outcome: 'The enterprise moves from knowing where skills exist to actively deploying them, turning insight into execution and productivity gains.',
     },
     {
-      number: '3',
-      title: 'Phase 3: Avanta',
-      subtitle: 'Prepare, Grow, and Sustain Future Capability',
-      label: 'PHASE 3: AVANTA',
-      detail: {
-        strategicObjective:
-          'Ensure long-term workforce readiness by continuously aligning people growth with evolving business and role requirements.\nAvanta sustains transformation by focusing on capability continuity. It ensures that as work and skill demand evolve, the workforce evolves alongside—without disruption or reactive reskilling.',
-        keyFocusAreas: [
-          'Future role and capability readiness',
-          'Continuous reskilling aligned to emerging demand',
-          'Internal mobility and career progression',
-          'Workforce engagement and retention',
-        ],
-        whatHappens: [
-          'Skill gaps are anticipated before they become business risks',
-          'Employees are guided toward future-critical roles',
-          'Internal talent pipelines are strengthened',
-          'Learning and growth are directly linked to enterprise priorities',
-        ],
-        outputsLabel: 'Outputs of Phase 3',
-        outputs: [
-          'Strong internal mobility and succession pipelines',
-          'Reduced long-term talent risk',
-          'Higher engagement through meaningful career pathways',
-        ],
-        outcome:
-          'The organization becomes future-ready by design, with a workforce that continuously adapts as strategy, technology, and markets evolve.',
-      },
+      tab: 'Avanta', label: 'AVANTA', fullLabel: 'Phase 3', img: phase3Img,
+      tagline: 'Prepare, Grow, and Sustain Future Capability',
+      objective: 'Ensure long-term workforce readiness by continuously aligning people growth with evolving business and role requirements.',
+      objectiveDetail: 'Avanta sustains transformation by focusing on capability continuity. It ensures that as work and skill demand evolve, the workforce evolves alongside\u2014without disruption or reactive reskilling.',
+      focusAreas: ['Future role and capability readiness', 'Continuous reskilling aligned to emerging demand', 'Internal mobility and career progression', 'Workforce engagement and retention'],
+      whatHappens: ['Skill gaps are anticipated before they become business risks', 'Employees are guided toward future-critical roles', 'Internal talent pipelines are strengthened', 'Learning and growth are directly linked to enterprise priorities'],
+      outputs: ['Strong internal mobility and succession pipelines', 'Reduced long-term talent risk', 'Higher engagement through meaningful career pathways'],
+      outcome: 'The organization becomes future-ready by design, with a workforce that continuously adapts as strategy, technology, and markets evolve.',
     },
   ]
 
-  const active = phases[activePhase]
+    /* ── Render a single phase block text (No image) ── */
+  const PhaseBlockText = ({ phase, index }) => (
+    <div
+      ref={phaseRefs[index]}
+      style={{ paddingTop: index === 0 ? '64px' : '80px', paddingBottom: '80px' }}
+    >
+      {/* Divider line between phases (not on first) */}
+      {index > 0 && (
+        <div style={{
+          width: '60px', height: '3px', borderRadius: '3px',
+          background: 'linear-gradient(90deg, #79529A, #C9A8E8)',
+          marginBottom: '40px',
+        }} />
+      )}
+
+      {/* Phase label */}
+      <p style={{
+        fontFamily: "'DM Sans', sans-serif", fontWeight: 700,
+        fontSize: '20px', color: '#79529A', letterSpacing: '2px',
+        textTransform: 'uppercase', marginBottom: '10px',
+      }}>{phase.label}</p>
+
+      {/* Title */}
+      <h3 style={{
+        fontFamily: "'DM Sans', sans-serif", fontWeight: 800,
+        fontSize: 'clamp(24px, 2.4vw, 40px)', color: '#0F1114',
+        lineHeight: 1.12, marginBottom: '22px',
+      }}>{phase.tagline}</h3>
+
+      {/* Objective */}
+      <p style={{
+        fontFamily: "'Lato', sans-serif", fontSize: 'clamp(20px, 1.2vw, 24px)',
+        color: '#3A3A42', lineHeight: 1.7, marginBottom: '10px',
+      }}>{phase.objective}</p>
+      <p style={{
+        fontFamily: "'Lato', sans-serif", fontSize: 'clamp(20px, 1.2vw, 24px)',
+        color: '#515158', lineHeight: 1.7, marginBottom: '30px',
+      }}>{phase.objectiveDetail}</p>
+
+      {/* Key Focus Areas */}
+      <SectionLabel>Key Focus Areas</SectionLabel>
+      <BulletGroup items={phase.focusAreas} />
+
+      {/* What Happens */}
+      <SectionLabel>What Happens in This Phase</SectionLabel>
+      <BulletGroup items={phase.whatHappens} />
+
+      {/* Outputs */}
+      <SectionLabel>Outputs of {phase.fullLabel}</SectionLabel>
+      <BulletGroup items={phase.outputs} />
+
+      {/* Outcome */}
+      <SectionLabel>Outcome</SectionLabel>
+      <div style={{
+        background: '#F8F3FD', borderRadius: '12px',
+        padding: '16px 20px', borderLeft: '4px solid #79529A',
+      }}>
+        <p style={{
+          fontFamily: "'Lato', sans-serif",
+          fontSize: 'clamp(20px, 1.2vw, 24px)',
+          color: '#3D1F5C', lineHeight: 1.7,
+          margin: 0, fontStyle: 'italic',
+        }}>{phase.outcome}</p>
+      </div>
+
+      {/* Mobile only image */}
+      <div className="block lg:hidden mt-12 mb-8">
+        <div style={{
+          width: '100%',
+          borderRadius: '20px', overflow: 'hidden',
+          boxShadow: '0 16px 56px rgba(121,82,154,0.14), 0 4px 16px rgba(0,0,0,0.05)',
+        }}>
+          <img src={phase.img} alt={phase.tab} style={{ width: '100%', height: 'auto', display: 'block' }} />
+        </div>
+      </div>
+    </div>
+  )
 
   return (
-    <section className="w-full bg-white py-4 md:py-6 lg:py-8">
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 scroll-3d">
+    <>
+      <style>{`
+        .ph-pill-btn {
+          width: 54px;
+          padding: 20px 0;
+          border-radius: 14px;
+          display: flex; align-items: center; justify-content: center;
+          cursor: pointer;
+          transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+        }
+        .ph-pill-btn.active {
+          background: #79529A;
+          box-shadow: 0 4px 20px rgba(121,82,154,0.35);
+        }
+        .ph-pill-btn:not(.active) {
+          background: #F0EAF5;
+        }
+        .ph-pill-btn:not(.active):hover {
+          background: #E4D9F0;
+          transform: scale(1.05);
+        }
+        .ph-pill-btn span {
+          writing-mode: vertical-rl;
+          transform: rotate(180deg);
+          font-family: 'DM Sans', sans-serif;
+          font-weight: 700;
+          font-size: 13px;
+          letter-spacing: 1.5px;
+          white-space: nowrap;
+          transition: color 0.35s ease;
+        }
+        .ph-pill-btn.active span { color: #fff; }
+        .ph-pill-btn:not(.active) span { color: #79529A; }
+      `}</style>
 
-        {/* Timeline and Detail Container */}
-        <div className="flex flex-col lg:flex-row items-stretch gap-7 lg:gap-0">
+            <section className="w-full bg-white relative" style={{ padding: '40px 0 0' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-[80px_1fr_45%] gap-8 lg:gap-12 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
 
-          {/* ── LEFT Side — Timeline ── */}
-          <div className="w-full lg:w-[40%] relative lg:pr-[40px] xl:pr-[50px] z-20">
+          {/* ═══ LEFT: Grid Column for sticky buttons (Desktop only) ═══ */}
+          <div className="hidden lg:flex" style={{ 
+            position: 'sticky', 
+            top: '120px', 
+            alignSelf: 'start', 
+            zIndex: 50,
+            paddingTop: '64px', // align perfectly with the first phase
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '16px',
+          }}>
+            {PHASES.map((p, i) => (
+              <div
+                key={i}
+                className={`ph-pill-btn ${i === activePhase ? 'active' : ''}`}
+                onClick={() => scrollToPhase(i)}
+              >
+                <span>{p.tab}</span>
+              </div>
+            ))}
+          </div>
 
-            {/* Steps */}
-            <div className="space-y-6 md:space-y-10">
-              {phases.map((phase, index) => {
-                const isActive = index === activePhase
-                return (
-                  <div
-                    key={index}
-                    className="works-step flex items-start gap-4 md:gap-6 relative group"
-                    onMouseEnter={() => setActivePhase(index)}
-                    style={{ cursor: 'pointer' }}
-                  >
-                    {/* Line segment connecting to next step (hidden for last step) */}
-                    {index !== phases.length - 1 && (
-                      <div
-                        className="absolute left-[31px] md:left-[39px] lg:left-[47px] top-[32px] md:top-[40px] lg:top-[48px] -bottom-[56px] md:-bottom-[80px] lg:-bottom-[88px] w-[2px] bg-[#D8D8DF] hidden md:block z-0"
-                      />
-                    )}
+          {/* ═══ MIDDLE: Phase Content Text (scrolls naturally) ═══ */}
+          <div>
+            {PHASES.map((phase, i) => (
+              <PhaseBlockText key={i} phase={phase} index={i} />
+            ))}
+          </div>
 
-                    {/* Circle Indicator */}
-                    <div className="relative flex-shrink-0 z-10 bg-white rounded-full">
-                      {/* Default state */}
-                      <img
-                        src={`${import.meta.env.BASE_URL || '/'}img/Group 41598.svg`}
-                        alt={`Step ${phase.number}`}
-                        className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 transition-opacity duration-300"
-                        style={{ opacity: isActive ? 0 : 1 }}
-                      />
-                      {/* Active state */}
-                      <img
-                        src={`${import.meta.env.BASE_URL || '/'}img/Group 41597.svg`}
-                        alt={`Step ${phase.number} Active`}
-                        className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 absolute top-0 left-0 transition-opacity duration-300"
-                        style={{ opacity: isActive ? 1 : 0 }}
-                      />
-                    </div>
-
-                    {/* Card container */}
-                    <div className="flex-1 relative">
-                      <div
-                        className={`w-full rounded-lg transition-all duration-300 flex flex-col relative z-20 ${isActive ? 'bg-[#F8F6F9] justify-start shadow-sm' : 'bg-[#F2E9F5] justify-center'
-                          }`}
-                        style={{
-                          maxWidth: '600px',
-                          minHeight: '80px',
-                          borderRadius: '8px',
-                          padding: '14px 20px',
-                        }}
-                      >
-                        {/* Title - Always Visible */}
-                        <h3
-                          className={`transition-all duration-300 ${isActive ? 'text-left underline underline-offset-4 decoration-[1.5px]' : 'text-center'}`}
-                          style={{
-                            fontFamily: 'DM Sans, sans-serif',
-                            fontWeight: '600',
-                            fontSize: 'clamp(16px, 1.4vw, 19px)',
-                            lineHeight: '28px',
-                            color: '#212529',
-                          }}
-                        >
-                          {phase.title}
-                        </h3>
-
-                        {/* Subtitle — visible on active */}
-                        <p
-                          className="mt-2 transition-all duration-300"
-                          style={{
-                            fontFamily: 'Lato, sans-serif',
-                            fontWeight: '500',
-                            fontSize: '20px',
-                            lineHeight: '28px',
-                            color: '#79529A',
-                            opacity: isActive ? 1 : 0,
-                            maxHeight: isActive ? '60px' : 0,
-                            overflow: 'hidden',
-                          }}
-                        >
-                          {phase.subtitle}
-                        </p>
-                      </div>
-
-                      {/* Connecting Arrow for Active Card (Mathematically aligned using clip-path) */}
-                      {isActive && (
-                        <div
-                          className="absolute top-1/2 hidden lg:block z-10 transition-all duration-300 w-[40px] xl:w-[50px] h-[52px] xl:h-[64px] -right-[40px] xl:-right-[50px]"
-                          style={{
-                            background: '#F8F6F9',
-                            clipPath: 'polygon(0 0, 100% 50%, 0 100%)',
-                            transform: 'translateY(-50%)'
-                          }}
-                        />
-                      )}
-                    </div>
-                  </div>
-                )
-              })}
+          {/* ═══ RIGHT: Sticky Image (Desktop only) ═══ */}
+          <div className="hidden lg:flex" style={{
+            position: 'sticky', 
+            top: '120px', 
+            alignSelf: 'start', 
+            paddingTop: '80px', // align with content title
+            justifyContent: 'center',
+            width: '100%',
+          }}>
+            <div style={{
+              width: '100%', maxWidth: '600px',
+              aspectRatio: '4/3',
+              borderRadius: '20px', overflow: 'hidden',
+              boxShadow: '0 16px 56px rgba(121,82,154,0.14), 0 4px 16px rgba(0,0,0,0.05)',
+              position: 'relative'
+            }}>
+               {PHASES.map((p, i) => (
+                 <img
+                   key={i}
+                   src={p.img}
+                   alt={p.tab}
+                   style={{ 
+                     position: 'absolute', top: 0, left: 0,
+                     width: '100%', height: '100%', objectFit: 'cover',
+                     opacity: i === activePhase ? 1 : 0,
+                     transform: i === activePhase ? 'scale(1)' : 'scale(1.05)',
+                     transition: 'opacity 0.6s ease-in-out, transform 0.6s ease-in-out',
+                     zIndex: i === activePhase ? 10 : 1
+                   }}
+                 />
+               ))}
             </div>
           </div>
 
-          {/* ── RIGHT Side — Detail Panel ── */}
-          <div
-            className="w-full lg:flex-1 rounded-xl p-7 md:p-9 z-10 relative"
-            style={{
-              background: '#F8F6F9',
-              minHeight: '420px',
-            }}
-          >
-            {/* Phase label */}
-            <p
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '20px',
-                fontWeight: 700,
-                color: '#79529A',
-                letterSpacing: '1px',
-                textTransform: 'uppercase',
-                marginBottom: '6px',
-              }}
-            >
-              {active.label}
-            </p>
-
-            {/* Title */}
-            <h3
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 'clamp(24px, 2.8vw, 36px)',
-                fontWeight: 700,
-                color: '#0F1114',
-                lineHeight: '1.2',
-                marginBottom: '24px',
-              }}
-            >
-              {active.subtitle}
-            </h3>
-
-            {/* Strategic Objective */}
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '20px', color: '#0F1114', marginBottom: '6px' }}>
-              Strategic Objective
-            </p>
-            <p style={{ fontFamily: "'Lato', sans-serif", fontSize: '20px', color: '#515158', lineHeight: '1.7', marginBottom: '20px', whiteSpace: 'pre-line' }}>
-              {active.detail.strategicObjective}
-            </p>
-
-            {/* Key Focus Areas */}
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '20px', color: '#0F1114', marginBottom: '10px' }}>
-              Key Focus Areas
-            </p>
-            <ul style={{ marginBottom: '20px', paddingLeft: '20px' }}>
-              {active.detail.keyFocusAreas.map((item, i) => (
-                <li key={i} style={{ fontFamily: "'Lato', sans-serif", fontSize: '20px', color: '#515158', lineHeight: '1.6', marginBottom: '4px' }}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            {/* What Happens in This Phase */}
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '20px', color: '#0F1114', marginBottom: '10px' }}>
-              What Happens in This Phase
-            </p>
-            <ul style={{ marginBottom: '20px', paddingLeft: '20px' }}>
-              {active.detail.whatHappens.map((item, i) => (
-                <li key={i} style={{ fontFamily: "'Lato', sans-serif", fontSize: '20px', color: '#515158', lineHeight: '1.6', marginBottom: '4px' }}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            {/* Outputs */}
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '20px', color: '#0F1114', marginBottom: '10px' }}>
-              {active.detail.outputsLabel}
-            </p>
-            <ul style={{ marginBottom: '20px', paddingLeft: '20px' }}>
-              {active.detail.outputs.map((item, i) => (
-                <li key={i} style={{ fontFamily: "'Lato', sans-serif", fontSize: '20px', color: '#515158', lineHeight: '1.6', marginBottom: '4px' }}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            {/* Outcome */}
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '20px', color: '#0F1114', marginBottom: '6px' }}>
-              Outcome
-            </p>
-            <p style={{ fontFamily: "'Lato', sans-serif", fontSize: '20px', color: '#515158', lineHeight: '1.7' }}>
-              {active.detail.outcome}
-            </p>
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
 
-/* ── Integration Section ── */
+/* ── Helper components ── */
+function SectionLabel({ children }) {
+  return (
+    <p style={{
+      fontFamily: "'DM Sans', sans-serif", fontWeight: 700,
+      fontSize: 'clamp(20px, 1.2vw, 24px)', color: '#79529A',
+      marginBottom: '10px', marginTop: '4px',
+    }}>{children}</p>
+  )
+}
+
+function BulletGroup({ items }) {
+  return (
+    <div style={{ marginBottom: '24px' }}>
+      {items.map((item, i) => (
+        <div key={i} style={{
+          display: 'flex', alignItems: 'baseline', gap: '12px',
+          marginBottom: '8px',
+        }}>
+          <span style={{
+            width: '6px', height: '6px', borderRadius: '50%',
+            background: '#79529A', flexShrink: 0, marginTop: '4px',
+          }} />
+          <span style={{
+            fontFamily: "'Lato', sans-serif",
+            fontSize: 'clamp(20px, 1.2vw, 24px)',
+            color: '#515158', lineHeight: 1.65,
+          }}>{item}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+
 function IntegrationSection() {
   return (
     <section className="w-full bg-white py-4 md:py-6 lg:py-8" style={{ border: 'none' }}>
@@ -655,6 +626,7 @@ function IntegrationSection() {
 
         {/* Main FBF9FB Container */}
         <div
+
           className="w-full rounded-3xl py-6 md:py-8 lg:py-10 px-6 md:px-10 flex items-center justify-center"
           style={{ background: '#FBF9FB' }}
         >
@@ -674,13 +646,21 @@ function IntegrationSection() {
 
 /* ── Why Talent Transformation ── */
 function WhyTalentTransformationSection() {
-  return (
-    <section className="w-full bg-white py-4 md:py-6 lg:py-8" style={{ border: 'none' }}>
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 scroll-3d delay-100">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 xl:gap-24 items-start">
+  const points = [
+    "Shifting from job-based to skills-based workforce models",
+    "Turning AI adoption into a measurable business strategy",
+    "Redesigning work instead of reducing headcount",
+    "Enabling continuous reskilling and internal mobility",
+    "Aligning people growth with enterprise priorities"
+  ];
 
-          {/* Left Column - Heading */}
-          <div className="w-full lg:w-[40%]">
+  return (
+    <section className="w-full bg-[#FFFFFF] py-16 md:py-24 lg:py-32">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 scroll-3d delay-100">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+
+          {/* Left Column - Heading & Image */}
+          <div className="w-full lg:w-[45%] flex flex-col gap-8">
             <h2
               style={{
                 fontFamily: "'DM Sans', sans-serif",
@@ -690,60 +670,95 @@ function WhyTalentTransformationSection() {
                 color: '#0F1114'
               }}
             >
-              Why Talent<br className="hidden md:block" /> Transformation
+              Why Talent Transformation
             </h2>
+            <img
+              src={chatGptImg}
+              alt="Talent Transformation Context"
+              style={{
+                width: '100%',
+                maxHeight: '700px',
+                borderRadius: '16px',
+                objectFit: 'cover',
+                boxShadow: '0 20px 60px rgba(0,0,0,0.08)'
+              }}
+            />
           </div>
 
-          {/* Right Column - Content */}
-          <div className="w-full lg:w-[60%] flex flex-col gap-6">
-            <p
-              style={{
-                fontFamily: "'Lato', sans-serif",
-                fontWeight: 400,
-                fontSize: 'clamp(18px, 2vw, 22px)',
-                lineHeight: '1.6',
-                color: '#515158'
-              }}
-            >
-              Traditional workforce models are no longer sufficient. <br className="hidden lg:block" />
-              Jobs are static. Skills are hidden. AI investments lack clarity.
-            </p>
-
+          {/* Right Column - Content & Cards */}
+          <div className="w-full lg:w-[55%] flex flex-col gap-8 lg:pt-4">
             <div>
               <p
-                className="mb-4"
+                style={{
+                  fontFamily: "'Lato', sans-serif",
+                  fontWeight: 400,
+                  fontSize: 'clamp(20px, 1.2vw, 24px)',
+                  lineHeight: '1.6',
+                  color: '#515158',
+                  marginBottom: '24px'
+                }}
+              >
+                Traditional workforce models are no longer sufficient. <br className="hidden xl:block" />
+                Jobs are static. Skills are hidden. AI investments lack clarity.
+              </p>
+
+              <p
                 style={{
                   fontFamily: "'Lato', sans-serif",
                   fontWeight: 700,
-                  fontSize: 'clamp(18px, 2vw, 22px)',
+                  fontSize: 'clamp(20px, 1.2vw, 24px)',
                   lineHeight: '1.6',
-                  color: '#333333'
+                  color: '#333333',
+                  marginBottom: '16px'
                 }}
               >
                 Talent Transformation solves this by:
               </p>
-              <ul className="list-disc pl-6 space-y-2" style={{ color: '#515158' }}>
-                {[
-                  "Shifting from job-based to skills-based workforce models",
-                  "Turning AI adoption into a measurable business strategy",
-                  "Redesigning work instead of reducing headcount",
-                  "Enabling continuous reskilling and internal mobility",
-                  "Aligning people growth with enterprise priorities"
-                ].map((item, index) => (
-                  <li
-                    key={index}
-                    style={{
-                      fontFamily: "'Lato', sans-serif",
-                      fontWeight: 400,
-                      fontSize: 'clamp(18px, 2vw, 22px)',
-                      lineHeight: '1.6',
-                      color: '#515158'
-                    }}
-                  >
+            </div>
+
+            <div className="flex flex-col gap-4">
+              {points.map((item, index) => (
+                <div
+                  key={index}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '20px',
+                    padding: '24px 28px',
+                    background: '#FFFFFF',
+                    border: '1px solid #E8E8E8',
+                    borderRadius: '12px',
+                    boxShadow: '0 4px 16px rgba(0,0,0,0.03)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'default'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = '0 12px 32px rgba(121,82,154,0.12)';
+                    e.currentTarget.style.borderColor = '#79529A';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.03)';
+                    e.currentTarget.style.borderColor = '#E8E8E8';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  <div style={{
+                    width: '8px', height: '8px',
+                    background: '#79529A',
+                    transform: 'rotate(45deg)',
+                    flexShrink: 0
+                  }} />
+                  <span style={{
+                    fontFamily: "'Lato', sans-serif",
+                    fontWeight: 500,
+                    fontSize: 'clamp(20px, 1.1vw, 22px)',
+                    color: '#3D1F5C'
+                  }}>
                     {item}
-                  </li>
-                ))}
-              </ul>
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -774,69 +789,156 @@ function DesignedForSection() {
     },
     {
       title: "Organizations undergoing AI-led transformation",
-      icon: offeringIcon1 // Using the second version of the icon as there are two in the directory
+      icon: offeringIcon1
     }
   ]
 
   return (
-    <section className="w-full bg-white py-4 md:py-6 lg:py-8">
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 scroll-3d delay-200">
+    <section className="w-full bg-white pt-8 pb-16 md:pt-12 md:pb-24">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 scroll-3d delay-200">
 
-        {/* Grid layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <h2 className="text-center mb-8 md:mb-12" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(32px, 3.5vw, 48px)', color: '#0F1114', letterSpacing: '-0.5px' }}>
+          Designed For
+        </h2>
 
-          {/* Card 1 - Title Card */}
-          <div
-            className="w-full aspect-[4/3] md:aspect-auto md:min-h-[250px] lg:min-h-[280px] rounded-lg flex items-center justify-center p-8 transition-transform hover:-translate-y-1 duration-300"
-            style={{ backgroundColor: '#865CA4' }} // adjusted purple for accuracy
-          >
-            <h2
-              className="text-white text-center"
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 700,
-                fontSize: 'clamp(28px, 3vw, 40px)'
-              }}
-            >
-              Designed For
-            </h2>
-          </div>
-
-          {/* Other Cards */}
+        {/* 5-Column Seamless Row Container (overflow-hidden removed to allow hover pop-out) */}
+        <div className="flex flex-col lg:flex-row w-full rounded-[24px]">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="group w-full aspect-[4/3] md:aspect-auto md:min-h-[250px] lg:min-h-[280px] rounded-lg p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#865CA4]/10 cursor-pointer border border-transparent hover:border-[#865CA4]/20"
-              style={{ backgroundColor: '#F8F6F9' }}
+              className={`group relative flex-1 p-8 lg:p-10 flex flex-col items-start lg:items-center lg:text-center border-b lg:border-b-0 lg:border-r border-gray-200 last:border-0 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${index === 0 ? 'rounded-t-[24px] lg:rounded-tr-none lg:rounded-l-[24px]' : ''
+                } ${index === cards.length - 1 ? 'rounded-b-[24px] lg:rounded-bl-none lg:rounded-r-[24px]' : ''
+                }`}
+              style={{ backgroundColor: '#F0EAF5' }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#79529A';
+                e.currentTarget.style.transform = 'translateY(-12px) scale(1.03)';
+                e.currentTarget.style.zIndex = '10';
+                e.currentTarget.style.boxShadow = '0 32px 64px rgba(121,82,154,0.35)';
+                e.currentTarget.style.borderRadius = '24px';
+                e.currentTarget.querySelector('h3').style.color = '#FFFFFF';
+                e.currentTarget.querySelector('img').style.filter = 'brightness(0) invert(1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#F0EAF5';
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.zIndex = '1';
+                e.currentTarget.style.boxShadow = 'none';
+
+                // Restore original border radius based on position
+                if (index === 0) {
+                  e.currentTarget.style.borderRadius = window.innerWidth >= 1024 ? '24px 0 0 24px' : '24px 24px 0 0';
+                } else if (index === cards.length - 1) {
+                  e.currentTarget.style.borderRadius = window.innerWidth >= 1024 ? '0 24px 24px 0' : '0 0 24px 24px';
+                } else {
+                  e.currentTarget.style.borderRadius = '0px';
+                }
+
+                e.currentTarget.querySelector('h3').style.color = '#0F1114';
+                e.currentTarget.querySelector('img').style.filter = 'none';
+              }}
             >
+              <div className="mb-8 w-20 h-20 md:w-24 md:h-24 transition-transform duration-500 group-hover:scale-110 flex items-center justify-center">
+                <img
+                  src={card.icon}
+                  alt={card.title}
+                  className="w-full h-full object-contain transition-all duration-500"
+                />
+              </div>
               <h3
-                className="transition-colors duration-300 group-hover:text-[#865CA4]"
+                className="transition-colors duration-500"
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 600,
-                  fontSize: 'clamp(18px, 1.5vw, 22px)',
+                  fontWeight: 700,
+                  fontSize: 'clamp(20px, 1.2vw, 24px)',
                   color: '#0F1114',
                   lineHeight: '1.4'
                 }}
               >
                 {card.title}
               </h3>
-              <div className="mt-8 flex justify-start">
-                <img
-                  src={card.icon}
-                  alt={card.title}
-                  className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
             </div>
           ))}
-
         </div>
+
       </div>
     </section>
   )
 }
 
+
+
+/* ── What You Gain Section ── */
+function WhatYouGainSection() {
+  const gains = [
+    { title: "Clear visibility into AI and workforce impact", img: phase1Img },
+    { title: "Faster, smarter execution of critical work", img: phase2Img },
+    { title: "A future-ready, continuously skilled workforce", img: phase3Img },
+    { title: "Higher engagement, retention, and agility", img: image416 },
+    { title: "Data-backed confidence in talent decisions", img: chatGptImg },
+  ];
+
+  return (
+    <section className="w-full py-16 md:py-24" style={{ backgroundColor: '#0A0D36' }}>
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 scroll-3d delay-200">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+          {/* Heading Block */}
+          <div className="flex flex-col justify-start md:justify-center p-4 md:p-8">
+            <h2
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: 'clamp(40px, 4vw, 56px)',
+                color: '#FFFFFF',
+                lineHeight: '1.2',
+                marginBottom: '16px'
+              }}
+            >
+              What You Gain
+            </h2>
+          </div>
+
+          {/* Cards */}
+          {gains.map((gain, index) => (
+            <div
+              key={index}
+              className="flex flex-col border border-white transition-all duration-300 hover:-translate-y-2 group cursor-pointer"
+            >
+              {/* Image Box */}
+              <div className="w-full h-[240px] md:h-[280px] overflow-hidden bg-[#1E225A]">
+                <img
+                  src={gain.img}
+                  alt={gain.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                />
+              </div>
+
+              {/* White Text Box */}
+              <div className="bg-white p-6 md:p-8 flex-1 flex items-start">
+                <div className="w-[3px] h-[28px] mr-4 flex-shrink-0 mt-1" style={{ backgroundColor: '#0A0D36' }} />
+                <h3
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 700,
+                    fontSize: 'clamp(20px, 1.2vw, 24px)',
+                    color: '#0A0D36',
+                    lineHeight: '1.4'
+                  }}
+                >
+                  {gain.title}
+                </h3>
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+    </section>
+  )
+}
 
 
 /* ── Final CTA Section (from Hire Twin) ── */
@@ -922,7 +1024,7 @@ function FinalCtaSection() {
             <Link
               to="/contact-us"
               className="persona-cta-btn text-white transition-all hover:shadow-xl hover:-translate-y-0.5"
-              style={{ backgroundColor: '#0F1114' }}
+              style={{ backgroundColor: '#2563EB' }}
             >
               Book a Demo
             </Link>
@@ -940,3 +1042,38 @@ function FinalCtaSection() {
   )
 }
 
+
+/* ── Intro Framework Section ── */
+function IntroFrameworkSection() {
+  return (
+    <section className="w-full bg-[#FBF9FB] py-16 md:py-20 lg:py-28">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+
+          <div className="w-full lg:w-[50%] scroll-3d">
+
+            <p style={{
+              fontFamily: "'Lato', sans-serif", fontWeight: 400,
+              fontSize: 'clamp(20px, 1.2vw, 24px)', lineHeight: 1.7,
+              color: '#515158', marginBottom: '24px'
+            }}>
+              Built on three integrated capability phases—Infera, Nexis, and Avanta—the framework helps enterprises move beyond static job structures to adaptive, skills-driven operating models.
+            </p>
+            <p style={{
+              fontFamily: "'Lato', sans-serif", fontWeight: 400,
+              fontSize: 'clamp(20px, 1.2vw, 24px)', lineHeight: 1.7,
+              color: '#515158'
+            }}>
+              By combining work intelligence, skills orchestration, and continuous capability development, Talent Transformation delivers measurable productivity, agility, and workforce resilience—without operational complexity.
+            </p>
+          </div>
+
+          <div className="w-full lg:w-[50%] flex justify-center lg:justify-end scroll-3d delay-100">
+            <img src={introFrameworkImg} alt="Talent Transformation Phases" style={{ width: '100%', maxWidth: '600px', height: 'auto', borderRadius: '20px', boxShadow: '0 20px 60px rgba(0,0,0,0.08)' }} />
+          </div>
+
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -928,10 +928,10 @@ function AIHackNexPage() {
                 color: '#0F1114',
               }}
             >
-              How AI Hacknex Helps
+              From Skill Development to Industry &amp; Community Recognition
             </h2>
           </div>
-          <p
+          {/* <p
             className="hacknex-helps-subtitle text-center mb-10 md:mb-14 lg:mb-16"
             style={{
               fontFamily: "'Lato', sans-serif",
@@ -941,8 +941,8 @@ function AIHackNexPage() {
               color: '#52525B',
             }}
           >
-            From Skill Development to Industry &amp; Community Recognition
-          </p>
+            
+          </p> */}
         </div>
 
         {/* Content area */}
@@ -1165,7 +1165,7 @@ function AIHackNexPage() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: '600',
-                  fontSize: 'clamp(56px, 7vw, 100px)',
+                  fontSize: 'clamp(42px, 4vw, 76px)',
                   lineHeight: '1',
                   color: '#682D99',
                 }}
@@ -1194,7 +1194,7 @@ function AIHackNexPage() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: '600',
-                  fontSize: 'clamp(56px, 7vw, 100px)',
+                  fontSize: 'clamp(42px, 4vw, 76px)',
                   lineHeight: '1',
                   color: '#682D99',
                 }}
@@ -1223,7 +1223,7 @@ function AIHackNexPage() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: '600',
-                  fontSize: 'clamp(56px, 7vw, 100px)',
+                  fontSize: 'clamp(42px, 4vw, 76px)',
                   lineHeight: '1',
                   color: '#682D99',
                 }}
@@ -1252,7 +1252,7 @@ function AIHackNexPage() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: '600',
-                  fontSize: 'clamp(56px, 7vw, 100px)',
+                  fontSize: 'clamp(42px, 4vw, 76px)',
                   lineHeight: '1',
                   color: '#682D99',
                 }}
@@ -1279,7 +1279,7 @@ function AIHackNexPage() {
 
       {/* ── CTA Section ── */}
       <section
-        className="w-full py-12 md:py-16 lg:py-20 xl:py-24"
+        className="w-full py-6 md:py-10 lg:py-12 xl:py-14"
         style={{ backgroundColor: '#FBA93E' }}
       >
         <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 text-center">
@@ -1297,25 +1297,48 @@ function AIHackNexPage() {
             Compete. Innovate.. Impact...
           </h2>
 
-          {/* Join the Challenge button */}
-          <button
-            className="px-8 md:px-10 lg:px-12 py-3.5 md:py-4 text-white text-base md:text-lg lg:text-xl font-semibold rounded-lg border-none cursor-pointer shadow-lg"
-            style={{
-              backgroundColor: '#1F57C7',
-              fontFamily: 'DM Sans, sans-serif',
-              transition: 'all 0.3s ease',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-2px)'
-              e.currentTarget.style.boxShadow = '0 12px 30px rgba(31, 87, 199, 0.4)'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
-            }}
-          >
-            Join the Challenge
-          </button>
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
+            {/* Join the Challenge button */}
+            <button
+              className="px-8 md:px-10 lg:px-12 py-3.5 md:py-4 text-white text-base md:text-lg lg:text-xl font-semibold rounded-lg border-none cursor-pointer shadow-lg"
+              style={{
+                backgroundColor: '#1F57C7',
+                fontFamily: 'DM Sans, sans-serif',
+                transition: 'all 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)'
+                e.currentTarget.style.boxShadow = '0 12px 30px rgba(31, 87, 199, 0.4)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
+              }}
+            >
+              Join the Challenge
+            </button>
+
+            {/* Partner as a Sponsor button */}
+            <button
+              className="px-8 md:px-10 lg:px-12 py-3.5 md:py-4 text-white text-base md:text-lg lg:text-xl font-semibold rounded-lg border-none cursor-pointer shadow-lg"
+              style={{
+                backgroundColor: '#1F57C7',
+                fontFamily: 'DM Sans, sans-serif',
+                transition: 'all 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)'
+                e.currentTarget.style.boxShadow = '0 12px 30px rgba(31, 87, 199, 0.4)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
+              }}
+            >
+              Partner as a Sponsor
+            </button>
+          </div>
 
           {/* Sub-links */}
           <div
@@ -1327,13 +1350,9 @@ function AIHackNexPage() {
               color: '#0F1114',
             }}
           >
-            <a href="#" className="hover:opacity-70 transition-opacity" style={{ color: '#0F1114', textDecoration: 'none' }}>
-              Partner as a Sponsor
-            </a>
-            <span style={{ color: '#0F1114' }}>|</span>
-            <a href="#" className="hover:opacity-70 transition-opacity" style={{ color: '#0F1114', textDecoration: 'none' }}>
+            {/* <a href="#" className="hover:opacity-70 transition-opacity" style={{ color: '#0F1114', textDecoration: 'none' }}>
               Explore More
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

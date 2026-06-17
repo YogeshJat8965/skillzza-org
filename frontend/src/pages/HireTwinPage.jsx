@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getAssetPath } from '../utils/assets'
 
-import heroBg  from '../assets/Hire Twin/abstract-technical-wave-graphic-white-background.png'
+import heroBg from '../assets/Hire Twin/abstract-technical-wave-graphic-white-background.png'
 import heroImg from '../assets/Hire Twin/Mask Group 131.png'
 
 // Key Capabilities icons
@@ -34,7 +34,7 @@ const AnimatedNumber = ({ value, suffix = '' }) => {
           let start = 0
           const end = parseFloat(value)
           if (isNaN(end)) return
-          
+
           const duration = 2000 // 2 seconds animation
           const stepTime = 16
           const steps = duration / stepTime
@@ -74,7 +74,7 @@ const AnimatedNumber = ({ value, suffix = '' }) => {
 export default function HireTwinPage() {
   const heroSectionRef = useRef(null)
 
-    /* ── Entrance & Scroll animations ── */
+  /* ── Entrance & Scroll animations ── */
   useEffect(() => {
     // Original Hero animations
     const heroObserver = new IntersectionObserver(
@@ -110,7 +110,7 @@ export default function HireTwinPage() {
       },
       { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     )
-    
+
     const elements = document.querySelectorAll('.scroll-3d')
     elements.forEach(el => scrollObserver.observe(el))
 
@@ -263,19 +263,19 @@ export default function HireTwinPage() {
         <div
           aria-hidden="true"
           style={{
-            position:            'absolute',
-            top:                 0,
-            left:                0,
-            width:               '100%',
-            height:              '100%',
-            backgroundImage:     `url(${heroBg})`,
-            backgroundSize:      'cover',
-            backgroundPosition:  'top left',
-            backgroundRepeat:    'no-repeat',
-            mixBlendMode:        'soft-light',
-            opacity:             0.59,
-            pointerEvents:       'none',
-            zIndex:              0,
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundImage: `url(${heroBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'top left',
+            backgroundRepeat: 'no-repeat',
+            mixBlendMode: 'soft-light',
+            opacity: 0.59,
+            pointerEvents: 'none',
+            zIndex: 0,
           }}
         />
 
@@ -289,7 +289,7 @@ export default function HireTwinPage() {
               Home
             </Link>
             <span>&gt;</span>
-            <span style={{ color: '#18181B', fontWeight: 500 }}>Hirenest</span>
+            <span style={{ color: '#18181B', fontWeight: 500 }}>Hire Twin</span>
           </div>
         </nav>
 
@@ -304,12 +304,12 @@ export default function HireTwinPage() {
             <h1
               className="ht-heading mb-5 md:mb-6"
               style={{
-                fontFamily:    "'DM Sans', sans-serif",
-                fontSize:      'clamp(24px, 2.8vw, 52px)',
-                fontWeight:    700,
-                lineHeight:    '1.16',
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                fontWeight: 700,
+                lineHeight: '1.16',
                 letterSpacing: '-0.5px',
-                color:         '#0F1114',
+                color: '#0F1114',
               }}
             >
               <span className="ht-h1-line">Hire Smarter. Hire Faster.</span>
@@ -321,14 +321,14 @@ export default function HireTwinPage() {
               className="ht-para1 mb-4 md:mb-5"
               style={{
                 fontFamily: "'Lato', sans-serif",
-                fontSize:   'clamp(20px, 1.2vw, 24px)',
+                fontSize: 'clamp(20px, 1.2vw, 24px)',
                 fontWeight: 400,
                 lineHeight: '1.6',
-                color:      '#515158',
-                maxWidth:   '510px',
+                color: '#515158',
+                maxWidth: '510px',
               }}
             >
-              Hirenest is AI-powered talent discovery and precision hiring platform built
+              Hire Twin is AI-powered talent discovery and precision hiring platform built
               to connect validated, job-ready talent with real hiring needs.
             </p>
 
@@ -337,11 +337,11 @@ export default function HireTwinPage() {
               className="ht-para2 mb-8 md:mb-10 lg:mb-12"
               style={{
                 fontFamily: "'Lato', sans-serif",
-                fontSize:   'clamp(20px, 1.2vw, 24px)',
+                fontSize: 'clamp(20px, 1.2vw, 24px)',
                 fontWeight: 400,
                 lineHeight: '1.6',
-                color:      '#71717A',
-                maxWidth:   '510px',
+                color: '#71717A',
+                maxWidth: '510px',
               }}
             >
               By integrating skill intelligence, behavioral analytics, and simulation-based
@@ -369,12 +369,12 @@ export default function HireTwinPage() {
           >
             <img
               src={heroImg}
-              alt="Hirenest AI Platform Dashboard"
+              alt="Hire Twin AI Platform Dashboard"
               style={{
-                width:      '100%',
-                maxWidth:   '900px',
-                height:     'auto',
-                display:    'block',
+                width: '100%',
+                maxWidth: '900px',
+                height: 'auto',
+                display: 'block',
                 marginLeft: 'auto',
               }}
             />
@@ -394,12 +394,12 @@ export default function HireTwinPage() {
             <div className="w-full lg:w-[38%] xl:w-[35%] flex-shrink-0">
               <h2
                 style={{
-                  fontFamily:    "'DM Sans', sans-serif",
-                  fontWeight:    700,
-                  fontSize:      'clamp(24px, 2.8vw, 52px)',
-                  lineHeight:    '1.18',
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 700,
+                  fontSize: 'clamp(24px, 2.8vw, 52px)',
+                  lineHeight: '1.18',
                   letterSpacing: '-0.3px',
-                  color:         '#0F1114',
+                  color: '#0F1114',
                 }}
               >
                 From Resume Screening To Readiness Validation
@@ -410,12 +410,12 @@ export default function HireTwinPage() {
             <div className="w-full lg:w-[62%] xl:w-[65%]">
               <ul
                 style={{
-                  listStyle:  'none',
-                  margin:     0,
-                  padding:    0,
-                  display:    'flex',
+                  listStyle: 'none',
+                  margin: 0,
+                  padding: 0,
+                  display: 'flex',
                   flexDirection: 'column',
-                  gap:        '18px',
+                  gap: '18px',
                 }}
               >
                 {[
@@ -427,25 +427,25 @@ export default function HireTwinPage() {
                   <li
                     key={i}
                     style={{
-                      display:    'flex',
+                      display: 'flex',
                       alignItems: 'flex-start',
-                      gap:        '12px',
+                      gap: '12px',
                       fontFamily: "'Lato', sans-serif",
                       fontWeight: 400,
-                      fontSize:   'clamp(20px, 1.2vw, 24px)',
+                      fontSize: 'clamp(20px, 1.2vw, 24px)',
                       lineHeight: '1.6',
-                      color:      '#515158',
+                      color: '#515158',
                     }}
                   >
                     {/* Bullet dot */}
                     <span
                       style={{
-                        marginTop:   '9px',
-                        width:       '6px',
-                        height:      '6px',
+                        marginTop: '9px',
+                        width: '6px',
+                        height: '6px',
                         borderRadius: '50%',
-                        background:  '#0F1114',
-                        flexShrink:  0,
+                        background: '#0F1114',
+                        flexShrink: 0,
                       }}
                     />
                     {point}
@@ -468,13 +468,13 @@ export default function HireTwinPage() {
           <div className="text-center mb-10 md:mb-14">
             <h2
               style={{
-                fontFamily:    "'DM Sans', sans-serif",
-                fontWeight:    700,
-                fontSize:      'clamp(22px, 2.8vw, 42px)',
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: 'clamp(22px, 2.8vw, 42px)',
                 letterSpacing: '2px',
                 textTransform: 'uppercase',
-                color:         '#0F1114',
-                marginBottom:  '12px',
+                color: '#0F1114',
+                marginBottom: '12px',
               }}
             >
               Key Capabilities
@@ -483,8 +483,8 @@ export default function HireTwinPage() {
               style={{
                 fontFamily: "'Lato', sans-serif",
                 fontWeight: 600,
-                fontSize:   '20px',
-                color:      '#515158',
+                fontSize: '20px',
+                color: '#515158',
                 lineHeight: '1.5',
               }}
             >
@@ -495,37 +495,37 @@ export default function HireTwinPage() {
           {/* Cards grid — 2 columns, last card left-aligned */}
           <div
             style={{
-              display:             'grid',
+              display: 'grid',
               gridTemplateColumns: 'repeat(2, 1fr)',
-              gap:                 '20px',
+              gap: '20px',
             }}
             className="grid-cols-1 sm:grid-cols-2 scroll-3d delay-200"
           >
             {[
               {
-                icon:  icon1,
+                icon: icon1,
                 title: 'Live Talent Intelligence Feed',
-                desc:  'Real-time updates on candidate skill validation, simulation performance, task readiness, and project outcomes\u2014not static resumes.',
+                desc: 'Real-time updates on candidate skill validation, simulation performance, task readiness, and project outcomes\u2014not static resumes.',
               },
               {
-                icon:  icon2,
+                icon: icon2,
                 title: 'One-Click 360\u00b0 Candidate Profiles',
-                desc:  'Unified, recruiter-ready visibility into skills, behavior, simulations, task-level readiness, and execution confidence.',
+                desc: 'Unified, recruiter-ready visibility into skills, behavior, simulations, task-level readiness, and execution confidence.',
               },
               {
-                icon:  icon3,
+                icon: icon3,
                 title: 'Role Execution Readiness Index',
-                desc:  'Clear, interpretable scores that indicate how quickly and effectively a candidate will perform in a specific role.',
+                desc: 'Clear, interpretable scores that indicate how quickly and effectively a candidate will perform in a specific role.',
               },
               {
-                icon:  icon4,
+                icon: icon4,
                 title: 'Attrition Risk Intelligence',
-                desc:  'Predictive indicators highlighting candidate-role alignment, growth potential, and retention probability.',
+                desc: 'Predictive indicators highlighting candidate-role alignment, growth potential, and retention probability.',
               },
               {
-                icon:  icon5,
+                icon: icon5,
                 title: 'ATS & CRM Integration',
-                desc:  'Enterprise-ready APIs enabling seamless integration with existing recruitment workflows.',
+                desc: 'Enterprise-ready APIs enabling seamless integration with existing recruitment workflows.',
               },
             ].map((card, i) => (
               <div
@@ -533,16 +533,16 @@ export default function HireTwinPage() {
                 className="group relative transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-transparent hover:border-blue-100"
                 style={{
                   /* Exact card background from design spec */
-                  background:   '#F3F5FF',
+                  background: '#F3F5FF',
                   borderRadius: '8px',
                   /* Reference size: 737×215px — fluid approach */
-                  minHeight:    '215px',
-                  padding:      '32px 28px',
-                  display:      'flex',
-                  alignItems:   'flex-start',
-                  gap:          '20px',
+                  minHeight: '215px',
+                  padding: '32px 28px',
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '20px',
                   /* 5th card stays in left col — grid auto handles it */
-                  gridColumn:   i === 4 ? '1' : 'auto',
+                  gridColumn: i === 4 ? '1' : 'auto',
                 }}
               >
                 {/* Icon — 72×78px as per design spec */}
@@ -552,10 +552,10 @@ export default function HireTwinPage() {
                     alt={card.title}
                     className="transition-transform duration-300 group-hover:scale-110"
                     style={{
-                      width:     '72px',
-                      height:    '78px',
+                      width: '72px',
+                      height: '78px',
                       objectFit: 'contain',
-                      display:   'block',
+                      display: 'block',
                     }}
                   />
                 </div>
@@ -564,11 +564,11 @@ export default function HireTwinPage() {
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <h3
                     style={{
-                      fontFamily:   "'DM Sans', sans-serif",
-                      fontWeight:   700,
-                      fontSize:     '20px',
-                      lineHeight:   '1.3',
-                      color:        '#0F1114',
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontWeight: 700,
+                      fontSize: '20px',
+                      lineHeight: '1.3',
+                      color: '#0F1114',
                       marginBottom: '10px',
                     }}
                   >
@@ -578,10 +578,10 @@ export default function HireTwinPage() {
                     style={{
                       fontFamily: "'Lato', sans-serif",
                       fontWeight: 400,
-                      fontSize:   '20px',
+                      fontSize: '20px',
                       lineHeight: '1.65',
-                      color:      '#515158',
-                      margin:     0,
+                      color: '#515158',
+                      margin: 0,
                     }}
                   >
                     {card.desc}
@@ -595,7 +595,7 @@ export default function HireTwinPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 4 — Why Hirenest
+          SECTION 4 — Why Hire Twin
       ════════════════════════════════════════════════════════════════ */}
       <section
         className="w-full relative overflow-hidden"
@@ -609,24 +609,24 @@ export default function HireTwinPage() {
 
             <h2
               style={{
-                fontFamily:   "'DM Sans', sans-serif",
-                fontWeight:   700,
-                fontSize:     'clamp(24px, 2.8vw, 52px)',
-                lineHeight:   '1.16',
-                color:        '#0F1114',
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: '1.16',
+                color: '#0F1114',
                 marginBottom: '12px',
               }}
             >
-              Why Hirenest
+              Why Hire Twin
             </h2>
 
             <p
               style={{
-                fontFamily:   "'DM Sans', sans-serif",
-                fontWeight:   600,
-                fontSize:     '20px',
-                lineHeight:   '1.4',
-                color:        '#0F1114',
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 600,
+                fontSize: '20px',
+                lineHeight: '1.4',
+                color: '#0F1114',
                 marginBottom: '20px',
               }}
             >
@@ -635,13 +635,13 @@ export default function HireTwinPage() {
 
             <p
               style={{
-                fontFamily:   "'Lato', sans-serif",
-                fontWeight:   400,
-                fontSize:     '20px',
-                lineHeight:   '1.65',
-                color:        '#515158',
+                fontFamily: "'Lato', sans-serif",
+                fontWeight: 400,
+                fontSize: '20px',
+                lineHeight: '1.65',
+                color: '#515158',
                 marginBottom: '20px',
-                maxWidth:     '480px',
+                maxWidth: '480px',
               }}
             >
               Traditional hiring methods obscure critical information: resumes
@@ -655,13 +655,13 @@ export default function HireTwinPage() {
               style={{
                 fontFamily: "'Lato', sans-serif",
                 fontWeight: 400,
-                fontSize:   '20px',
+                fontSize: '20px',
                 lineHeight: '1.65',
-                color:      '#515158',
-                maxWidth:   '480px',
+                color: '#515158',
+                maxWidth: '480px',
               }}
             >
-              Hirenest replaces guesswork with data-driven certainty through
+              Hire Twin replaces guesswork with data-driven certainty through
               capability validation, execution readiness, and alignment
               insights.
             </p>
@@ -679,17 +679,17 @@ export default function HireTwinPage() {
             <div
               className="hidden lg:block"
               style={{
-                width:              '100%',
-                height:             '100%',
-                background:         `transparent url('${whyImg}') 0% 0% no-repeat padding-box`,
-                backgroundSize:     'cover',
+                width: '100%',
+                height: '100%',
+                background: `transparent url('${whyImg}') 0% 0% no-repeat padding-box`,
+                backgroundSize: 'cover',
                 backgroundPosition: 'center center',
               }}
             />
             {/* Mobile fallback — img tag */}
             <img
               src={whyImg}
-              alt="Why Hirenest"
+              alt="Why Hire Twin"
               className="block lg:hidden w-full h-auto"
               style={{ objectFit: 'cover' }}
             />
@@ -731,10 +731,10 @@ export default function HireTwinPage() {
           {/* Section heading — black, 24px, bold */}
           <h3
             style={{
-              fontFamily:   "'DM Sans', sans-serif",
-              fontWeight:   700,
-              fontSize:     '24px',
-              color:        '#0F1114',
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 700,
+              fontSize: '24px',
+              color: '#0F1114',
               marginBottom: '28px',
               letterSpacing: '-0.2px',
             }}
@@ -746,9 +746,9 @@ export default function HireTwinPage() {
           <div
             className="b2b-grid"
             style={{
-              display:             'grid',
+              display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
-              gap:                 '20px',
+              gap: '20px',
             }}
           >
             {[
@@ -765,10 +765,10 @@ export default function HireTwinPage() {
                   src={item.icon}
                   alt={item.label}
                   style={{
-                    width:     '56px',
-                    height:    '56px',
+                    width: '56px',
+                    height: '56px',
                     objectFit: 'contain',
-                    display:   'block',
+                    display: 'block',
                   }}
                 />
 
@@ -777,9 +777,9 @@ export default function HireTwinPage() {
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontWeight: 700,
-                    fontSize:   '20px',
+                    fontSize: '20px',
                     lineHeight: '1.3',
-                    color:      '#0F1114',
+                    color: '#0F1114',
                   }}
                 >
                   {item.label}
@@ -803,19 +803,19 @@ export default function HireTwinPage() {
             className="scroll-3d font-bold text-center text-[#0F1114] mb-3"
             style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize:   'clamp(24px, 2.8vw, 52px)',
+              fontSize: 'clamp(24px, 2.8vw, 52px)',
               lineHeight: '1.2',
             }}
           >
-            How Hirenest Works
+            How Hire Twin Works
           </h2>
           <p
             className="text-center mb-8 md:mb-10"
             style={{
               fontFamily: "'Lato', sans-serif",
               fontWeight: 400,
-              fontSize:   '20px',
-              color:      '#515158',
+              fontSize: '20px',
+              color: '#515158',
               lineHeight: '1.5',
             }}
           >
@@ -828,16 +828,16 @@ export default function HireTwinPage() {
             <div className="w-full lg:w-[45%] relative">
 
               {/* Sub-label */}
-              <p
+              {/* <p
                 className="mb-6 font-semibold"
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize:   '20px',
-                  color:      '#0F1114',
+                  fontSize: '20px',
+                  color: '#0F1114',
                 }}
               >
                 4 steps to real-world readiness with Skillzaa:
-              </p>
+              </p> */}
 
               {/* Vertical line */}
               <div className="absolute left-[39px] top-[calc(3rem+5rem)] bottom-12 w-[2px] bg-[#2563eb]/20 hidden md:block" />
@@ -845,24 +845,24 @@ export default function HireTwinPage() {
               <div className="space-y-5 relative z-10 w-full">
                 {[
                   {
-                    title:   'Step 1: Pre-Assessed Talent Onboarding',
+                    title: 'Step 1: Pre-Assessed Talent Onboarding',
                     content: 'Candidates complete AI-driven assessments, simulations, and behavioral analysis before entering your hiring pipeline.',
-                    open:    false,
+                    open: false,
                   },
                   {
-                    title:   'Step 2: AI-Driven Talent Intelligence',
-                    content: 'Hirenest generates comprehensive 360° profiles combining technical skills, soft skills, adaptability, and task-level execution capability.',
-                    open:    false,
+                    title: 'Step 2: AI-Driven Talent Intelligence',
+                    content: 'Hire Twin generates comprehensive 360° profiles combining technical skills, soft skills, adaptability, and task-level execution capability.',
+                    open: false,
                   },
                   {
-                    title:   'Step 3: Role-Fit Matching & Predictive Insights',
+                    title: 'Step 3: Role-Fit Matching & Predictive Insights',
                     content: 'AI maps candidate readiness to specific roles using live benchmarks, performance indicators, and time-to-productivity signals.',
-                    open:    false,
+                    open: false,
                   },
                   {
-                    title:   'Step 4: Instant Recruiter Access',
+                    title: 'Step 4: Instant Recruiter Access',
                     content: 'Hiring teams access validated profiles, readiness scores, and performance portfolios for faster, evidence-based decisions.',
-                    open:    false,
+                    open: false,
                   },
                 ].map((step, index) => (
                   <div
@@ -900,11 +900,10 @@ export default function HireTwinPage() {
                       </h3>
                       {/* Step 1 content always visible; rest expand on hover */}
                       <div
-                        className={`transition-all duration-300 ${
-                          step.open
+                        className={`transition-all duration-300 ${step.open
                             ? 'opacity-100 max-h-[160px] mt-3'
                             : 'opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[160px] group-hover:mt-3'
-                        }`}
+                          }`}
                       >
                         <p
                           className="font-medium text-[#475569] leading-[1.6]"
@@ -934,7 +933,7 @@ export default function HireTwinPage() {
             <div className="w-full lg:w-[55%] flex justify-center lg:justify-end xl:pl-4">
               <img
                 src={dashImg}
-                alt="Hirenest Platform Dashboard"
+                alt="Hire Twin Platform Dashboard"
                 className="w-full h-auto object-contain max-w-[850px] shadow-[0_20px_60px_rgba(0,0,0,0.08)] rounded-xl scroll-3d delay-200"
               />
             </div>
@@ -961,23 +960,23 @@ export default function HireTwinPage() {
             <h2
               className="scroll-3d text-center"
               style={{
-                fontFamily:   "'DM Sans', sans-serif",
-                fontWeight:   700,
-                fontSize:     'clamp(24px, 2.8vw, 52px)',
-                lineHeight:   '1.2',
-                color:        '#0F1114',
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: 'clamp(24px, 2.8vw, 52px)',
+                lineHeight: '1.2',
+                color: '#0F1114',
                 marginBottom: '40px',
               }}
             >
-              The Impact 
+              The Impact
             </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center scroll-3d delay-200">
             {[
               { number: '2.8', suffix: 'X', label: 'Improvement in professional confidence' },
-              { number: '65',  suffix: '%', label: 'Faster readiness for leadership and client-facing roles' },
-              { number: '50',  suffix: '%', label: 'Reduction in early-career performance gaps' },
-              { number: '70',  suffix: '%', label: 'Higher employer confidence in behavioral preparedness' },
+              { number: '65', suffix: '%', label: 'Faster readiness for leadership and client-facing roles' },
+              { number: '50', suffix: '%', label: 'Reduction in early-career performance gaps' },
+              { number: '70', suffix: '%', label: 'Higher employer confidence in behavioral preparedness' },
             ].map((stat, i) => (
               <div key={i}>
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '42px', color: '#1F57C7', marginBottom: '8px' }}>
@@ -1056,11 +1055,11 @@ export default function HireTwinPage() {
       <section
         className="persona-final-cta"
         style={{
-          backgroundImage:    `url(${getAssetPath('/Group%2041612.png')})`,
-          backgroundSize:     'cover',
+          backgroundImage: `url(${getAssetPath('/Group%2041612.png')})`,
+          backgroundSize: 'cover',
           backgroundPosition: 'center center',
-          backgroundRepeat:   'no-repeat',
-          backgroundColor:    '#F59E0B',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#F59E0B',
         }}
       >
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
