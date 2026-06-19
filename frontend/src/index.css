@@ -25,11 +25,11 @@ html.lenis {
 
 html {
   scroll-behavior: auto;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -395,7 +395,7 @@ object {
 
   /* Ensure all direct children of body can't cause overflow */
   #root>div {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   /* Studio tabs should wrap so no option stays hidden */
@@ -436,7 +436,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -518,7 +518,7 @@ div {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 @layer components {

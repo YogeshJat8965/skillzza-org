@@ -4,12 +4,17 @@ import { Link } from 'react-router-dom'
 // Note: Ensure the image is in this path or adjust accordingly. 
 import heroImg from '../assets/talent-intelligence/image.png'
 import image416 from '../assets/talent-intelligence/Image 416.png'
-import phase1Img from '../assets/talent-intelligence/1image copy.png'
-import phase2Img from '../assets/talent-intelligence/2image copy.png'
-import introFrameworkImg from '../assets/talent-intelligence/Group 41606.png'
+import introFrameworkImg from '../assets/talent-intelligence/built on.png'
 import chatGptImg from '../assets/talent-intelligence/ChatGPT Image Jun 15, 2026, 12_53_32 AM.png'
-import phase3Img from '../assets/talent-intelligence/3image copy.png'
-
+import whyTalentImg from '../assets/talent-intelligence/Why Talent Transformation.png'
+import phase1Img from '../assets/talent-intelligence/phase1.png'
+import phase2Img from '../assets/talent-intelligence/phase2.png'
+import phase3Img from '../assets/talent-intelligence/phase3.png'
+import gain1Img from '../assets/talent-intelligence/Clear visibility.png'
+import gain2Img from '../assets/talent-intelligence/Faster.png'
+import gain3Img from '../assets/talent-intelligence/A future-ready.png'
+import gain4Img from '../assets/talent-intelligence/Higher engagement.png'
+import gain5Img from '../assets/talent-intelligence/Data-backed.png'
 // Designed For Icons
 import govIcon from '../assets/talent-intelligence/goverment_17213502.svg'
 import changeIcon from '../assets/talent-intelligence/change_17930856.svg'
@@ -275,38 +280,50 @@ export default function TalentIntelligencePage() {
             </h2>
           </div>
 
-          <div className="w-full scroll-3d delay-100">
+          <div className="w-full scroll-3d delay-100 flex flex-col gap-6">
             <p
               style={{
                 fontFamily: "'DM Sans', sans-serif", fontWeight: 600,
                 fontSize: 'clamp(20px, 1.4vw, 26px)', color: '#79529A',
-                lineHeight: '1.5', marginBottom: '24px'
+                lineHeight: '1.5', margin: '0 auto', maxWidth: '800px'
               }}
             >
               A Structured, AI-Led Journey from Work Redesign to Workforce Readiness
             </p>
-            <p
-              style={{
-                fontFamily: "'Lato', sans-serif", fontSize: 'clamp(20px, 1.2vw, 24px)',
-                fontWeight: 400, lineHeight: '1.7', color: '#515158',
-                maxWidth: '840px', margin: '0 auto'
-              }}
-            >
-              The Talent Transformation Roadmap defines how enterprises
-              systematically evolve from fragmented workforce models to a
-              continuously adaptive, skills-driven organization.
-              Rather than isolated initiatives, the roadmap follows a
-              progressive, closed-loop journey that aligns work, skills, and
-              capability at every stage.<br /><br />
-              This roadmap unfolds across three integrated phases, each building on the previous and reinforcing long-term transformation.
-            </p>
+            
+            <div className="flex flex-col gap-5 mx-auto max-w-[900px]">
+              <p
+                style={{
+                  fontFamily: "'Lato', sans-serif", fontSize: 'clamp(20px, 1.25vw, 24px)',
+                  fontWeight: 400, lineHeight: '1.8', color: '#3A3A42',
+                  margin: '0'
+                }}
+              >
+                The Talent Transformation Roadmap defines how enterprises
+                systematically evolve from fragmented workforce models to a
+                continuously adaptive, skills-driven organization.
+                Rather than isolated initiatives, the roadmap follows a
+                progressive, closed-loop journey that aligns work, skills, and
+                capability at every stage.
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Lato', sans-serif", fontSize: 'clamp(20px, 1.25vw, 24px)',
+                  fontWeight: 400, lineHeight: '1.8', color: '#3A3A42',
+                  margin: '0'
+                }}
+              >
+                This roadmap unfolds across three integrated phases, each building on the previous and reinforcing long-term transformation.
+              </p>
+            </div>
           </div>
 
         </div>
       </section>
 
+
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 3 — Phase Roadmap (exact talent-twin "How it Works" pattern)
+          SECTION 3 — Phase Roadmap
       ════════════════════════════════════════════════════════════════ */}
       <PhaseRoadmapSection />
 
@@ -339,140 +356,113 @@ export default function TalentIntelligencePage() {
   )
 }
 
-/* ── Phase Roadmap — Sticky Buttons + Normal Scroll ── */
+/* ══════════════════════════════════════════════════════════════════
+   Phase Roadmap — Left Sticky Buttons | Middle Scroll | Right Sticky Image
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Phase data — defined OUTSIDE component so it's stable across renders */
+const PHASE_DATA = [
+  {
+    tab: 'Infera', label: 'INFERA', fullLabel: 'Phase 1', img: phase1Img,
+    tagline: 'Understand, Redesign, and Optimize Work',
+    objective: 'Establish a clear, data-driven understanding of how work is performed today and how it should evolve in an AI-enabled enterprise.',
+    objectiveDetail: 'Infera is the diagnostic and intelligence foundation of the roadmap. It replaces assumption-based workforce planning with task-level, AI-driven insight, enabling leaders to redesign work with confidence and precision.',
+    focusAreas: ['Mapping how work is structured across roles, functions, and processes', 'Identifying effort, cost, risk, and value embedded in current work models', 'Determining where AI can automate, augment, or support work meaningfully', 'Understanding future work patterns driven by technology and business change'],
+    whatHappens: ['Work and task intelligence is analyzed across the organization', 'High-impact opportunities for efficiency and value creation are identified', 'Roles are deconstructed into skills and activities rather than job titles', 'AI investments are aligned to business priorities and measurable outcomes'],
+    outputs: ['Clear visibility into current and future work structures', 'Prioritized AI and workforce optimization opportunities', 'Data-backed guidance for work redesign and role evolution'],
+    outcome: 'Leaders gain clarity on what work should change, why it should change, and where AI creates real value\u2014forming the foundation for all subsequent phases.',
+  },
+  {
+    tab: 'Nexis', label: 'NEXIS', fullLabel: 'Phase 2', img: phase2Img,
+    tagline: 'Activate Skills and Orchestrate Work Dynamically',
+    objective: 'Ensure that redesigned work flows to the most relevant skills at the right time, maximizing talent utilization and execution speed.',
+    objectiveDetail: 'Nexis operationalizes the intelligence generated in Phase 1. It shifts the organization from static, role-based execution to a skills-first, fluid operating model, enabling faster delivery without structural friction.',
+    focusAreas: ['Skills-based matching of work, projects, and initiatives', 'Dynamic deployment of internal talent across functions', 'Breaking down silos that restrict collaboration and agility', 'Reducing reliance on external hiring by unlocking internal capability'],
+    whatHappens: ['Work is routed based on skills rather than job titles', 'Internal talent becomes visible, accessible, and deployable', 'Cross-functional collaboration becomes easier and faster', 'Bottlenecks caused by rigid structures are reduced'],
+    outputs: ['Improved utilization of existing workforce capability', 'Faster execution of critical initiatives', 'Reduced talent waste and hiring dependency'],
+    outcome: 'The enterprise moves from knowing where skills exist to actively deploying them, turning insight into execution and productivity gains.',
+  },
+  {
+    tab: 'Avanta', label: 'AVANTA', fullLabel: 'Phase 3', img: phase3Img,
+    tagline: 'Prepare, Grow, and Sustain Future Capability',
+    objective: 'Ensure long-term workforce readiness by continuously aligning people growth with evolving business and role requirements.',
+    objectiveDetail: 'Avanta sustains transformation by focusing on capability continuity. It ensures that as work and skill demand evolve, the workforce evolves alongside\u2014without disruption or reactive reskilling.',
+    focusAreas: ['Future role and capability readiness', 'Continuous reskilling aligned to emerging demand', 'Internal mobility and career progression', 'Workforce engagement and retention'],
+    whatHappens: ['Skill gaps are anticipated before they become business risks', 'Employees are guided toward future-critical roles', 'Internal talent pipelines are strengthened', 'Learning and growth are directly linked to enterprise priorities'],
+    outputs: ['Strong internal mobility and succession pipelines', 'Reduced long-term talent risk', 'Higher engagement through meaningful career pathways'],
+    outcome: 'The organization becomes future-ready by design, with a workforce that continuously adapts as strategy, technology, and markets evolve.',
+  },
+]
+
+/* Sub-label style — stable reference */
+const PH_SUB_LABEL = {
+  fontFamily: "'DM Sans', sans-serif", fontWeight: 700,
+  fontSize: 'clamp(20px, 1.2vw, 24px)', color: '#79529A',
+  marginBottom: '10px', marginTop: '4px',
+}
+
 function PhaseRoadmapSection() {
   const [activePhase, setActivePhase] = React.useState(0)
-  const phaseRefs = [React.useRef(null), React.useRef(null), React.useRef(null)]
+  const prevPhaseRef = React.useRef(0)
 
-  /* IntersectionObserver to detect which phase is in view */
+  // Separate refs for desktop and mobile because React overwrites refs if used on multiple elements
+  const desktopRefs = React.useRef([])
+  const mobileRefs = React.useRef([])
+
+  /* Scroll-spy: detect which phase is in view */
   React.useEffect(() => {
-    const observers = phaseRefs.map((ref, idx) => {
-      const obs = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) setActivePhase(idx)
-        },
-        { threshold: 0.3, rootMargin: '-10% 0px -40% 0px' }
-      )
-      if (ref.current) obs.observe(ref.current)
-      return obs
-    })
-    return () => observers.forEach((obs, i) => {
-      if (phaseRefs[i].current) obs.unobserve(phaseRefs[i].current)
-    })
+    const detect = () => {
+      const trigger = window.innerHeight * 0.35
+      let cur = 0
+      // lg breakpoint is usually 1024px in Tailwind
+      const isMobile = window.innerWidth < 1024
+      const activeRefs = isMobile ? mobileRefs.current : desktopRefs.current
+
+      for (let i = 0; i < 3; i++) {
+        const el = activeRefs[i]
+        if (el) {
+          const rect = el.getBoundingClientRect()
+          // Check height to ensure we don't trigger on display:none elements
+          if (rect.height > 0 && rect.top <= trigger) {
+            cur = i
+          }
+        }
+      }
+      
+      setActivePhase(prev => {
+        if (prev !== cur) prevPhaseRef.current = prev
+        return cur
+      })
+    }
+    window.addEventListener('scroll', detect, { passive: true })
+    window.addEventListener('resize', detect, { passive: true })
+    detect()
+    return () => {
+      window.removeEventListener('scroll', detect)
+      window.removeEventListener('resize', detect)
+    }
   }, [])
 
-  const scrollToPhase = (idx) => {
-    phaseRefs[idx].current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  const scrollTo = (i) => {
+    const isMobile = window.innerWidth < 1024
+    const activeRefs = isMobile ? mobileRefs.current : desktopRefs.current
+    activeRefs[i]?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
-  const PHASES = [
-    {
-      tab: 'Infera', label: 'INFERA', fullLabel: 'Phase 1', img: phase1Img,
-      tagline: 'Understand, Redesign, and Optimize Work',
-      objective: 'Establish a clear, data-driven understanding of how work is performed today and how it should evolve in an AI-enabled enterprise.',
-      objectiveDetail: 'Infera is the diagnostic and intelligence foundation of the roadmap. It replaces assumption-based workforce planning with task-level, AI-driven insight, enabling leaders to redesign work with confidence and precision.',
-      focusAreas: ['Mapping how work is structured across roles, functions, and processes', 'Identifying effort, cost, risk, and value embedded in current work models', 'Determining where AI can automate, augment, or support work meaningfully', 'Understanding future work patterns driven by technology and business change'],
-      whatHappens: ['Work and task intelligence is analyzed across the organization', 'High-impact opportunities for efficiency and value creation are identified', 'Roles are deconstructed into skills and activities rather than job titles', 'AI investments are aligned to business priorities and measurable outcomes'],
-      outputs: ['Clear visibility into current and future work structures', 'Prioritized AI and workforce optimization opportunities', 'Data-backed guidance for work redesign and role evolution'],
-      outcome: 'Leaders gain clarity on what work should change, why it should change, and where AI creates real value\u2014forming the foundation for all subsequent phases.',
-    },
-    {
-      tab: 'Nexis', label: 'NEXIS', fullLabel: 'Phase 2', img: phase2Img,
-      tagline: 'Activate Skills and Orchestrate Work Dynamically',
-      objective: 'Ensure that redesigned work flows to the most relevant skills at the right time, maximizing talent utilization and execution speed.',
-      objectiveDetail: 'Nexis operationalizes the intelligence generated in Phase 1. It shifts the organization from static, role-based execution to a skills-first, fluid operating model, enabling faster delivery without structural friction.',
-      focusAreas: ['Skills-based matching of work, projects, and initiatives', 'Dynamic deployment of internal talent across functions', 'Breaking down silos that restrict collaboration and agility', 'Reducing reliance on external hiring by unlocking internal capability'],
-      whatHappens: ['Work is routed based on skills rather than job titles', 'Internal talent becomes visible, accessible, and deployable', 'Cross-functional collaboration becomes easier and faster', 'Bottlenecks caused by rigid structures are reduced'],
-      outputs: ['Improved utilization of existing workforce capability', 'Faster execution of critical initiatives', 'Reduced talent waste and hiring dependency'],
-      outcome: 'The enterprise moves from knowing where skills exist to actively deploying them, turning insight into execution and productivity gains.',
-    },
-    {
-      tab: 'Avanta', label: 'AVANTA', fullLabel: 'Phase 3', img: phase3Img,
-      tagline: 'Prepare, Grow, and Sustain Future Capability',
-      objective: 'Ensure long-term workforce readiness by continuously aligning people growth with evolving business and role requirements.',
-      objectiveDetail: 'Avanta sustains transformation by focusing on capability continuity. It ensures that as work and skill demand evolve, the workforce evolves alongside\u2014without disruption or reactive reskilling.',
-      focusAreas: ['Future role and capability readiness', 'Continuous reskilling aligned to emerging demand', 'Internal mobility and career progression', 'Workforce engagement and retention'],
-      whatHappens: ['Skill gaps are anticipated before they become business risks', 'Employees are guided toward future-critical roles', 'Internal talent pipelines are strengthened', 'Learning and growth are directly linked to enterprise priorities'],
-      outputs: ['Strong internal mobility and succession pipelines', 'Reduced long-term talent risk', 'Higher engagement through meaningful career pathways'],
-      outcome: 'The organization becomes future-ready by design, with a workforce that continuously adapts as strategy, technology, and markets evolve.',
-    },
-  ]
+  const imgClass = (i) =>
+    i === activePhase ? 'phase-img-item img-active' :
+    i === prevPhaseRef.current ? 'phase-img-item img-leaving' :
+    'phase-img-item img-hidden'
 
-    /* ── Render a single phase block text (No image) ── */
-  const PhaseBlockText = ({ phase, index }) => (
-    <div
-      ref={phaseRefs[index]}
-      style={{ paddingTop: index === 0 ? '64px' : '80px', paddingBottom: '80px' }}
-    >
-      {/* Divider line between phases (not on first) */}
-      {index > 0 && (
-        <div style={{
-          width: '60px', height: '3px', borderRadius: '3px',
-          background: 'linear-gradient(90deg, #79529A, #C9A8E8)',
-          marginBottom: '40px',
-        }} />
-      )}
-
-      {/* Phase label */}
-      <p style={{
-        fontFamily: "'DM Sans', sans-serif", fontWeight: 700,
-        fontSize: '20px', color: '#79529A', letterSpacing: '2px',
-        textTransform: 'uppercase', marginBottom: '10px',
-      }}>{phase.label}</p>
-
-      {/* Title */}
-      <h3 style={{
-        fontFamily: "'DM Sans', sans-serif", fontWeight: 800,
-        fontSize: 'clamp(24px, 2.4vw, 40px)', color: '#0F1114',
-        lineHeight: 1.12, marginBottom: '22px',
-      }}>{phase.tagline}</h3>
-
-      {/* Objective */}
-      <p style={{
-        fontFamily: "'Lato', sans-serif", fontSize: 'clamp(20px, 1.2vw, 24px)',
-        color: '#3A3A42', lineHeight: 1.7, marginBottom: '10px',
-      }}>{phase.objective}</p>
-      <p style={{
-        fontFamily: "'Lato', sans-serif", fontSize: 'clamp(20px, 1.2vw, 24px)',
-        color: '#515158', lineHeight: 1.7, marginBottom: '30px',
-      }}>{phase.objectiveDetail}</p>
-
-      {/* Key Focus Areas */}
-      <SectionLabel>Key Focus Areas</SectionLabel>
-      <BulletGroup items={phase.focusAreas} />
-
-      {/* What Happens */}
-      <SectionLabel>What Happens in This Phase</SectionLabel>
-      <BulletGroup items={phase.whatHappens} />
-
-      {/* Outputs */}
-      <SectionLabel>Outputs of {phase.fullLabel}</SectionLabel>
-      <BulletGroup items={phase.outputs} />
-
-      {/* Outcome */}
-      <SectionLabel>Outcome</SectionLabel>
-      <div style={{
-        background: '#F8F3FD', borderRadius: '12px',
-        padding: '16px 20px', borderLeft: '4px solid #79529A',
-      }}>
-        <p style={{
-          fontFamily: "'Lato', sans-serif",
-          fontSize: 'clamp(20px, 1.2vw, 24px)',
-          color: '#3D1F5C', lineHeight: 1.7,
-          margin: 0, fontStyle: 'italic',
-        }}>{phase.outcome}</p>
-      </div>
-
-      {/* Mobile only image */}
-      <div className="block lg:hidden mt-12 mb-8">
-        <div style={{
-          width: '100%',
-          borderRadius: '20px', overflow: 'hidden',
-          boxShadow: '0 16px 56px rgba(121,82,154,0.14), 0 4px 16px rgba(0,0,0,0.05)',
-        }}>
-          <img src={phase.img} alt={phase.tab} style={{ width: '100%', height: 'auto', display: 'block' }} />
+  /* Render a bullet list inline (plain function, NOT a component) */
+  const bullets = (items) => (
+    <div style={{ marginBottom: '24px' }}>
+      {items.map((t, j) => (
+        <div key={j} style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '8px' }}>
+          <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#79529A', flexShrink: 0, marginTop: 4 }} />
+          <span style={{ fontFamily: "'Lato', sans-serif", fontSize: 'clamp(20px, 1.2vw, 24px)', color: '#515158', lineHeight: 1.65 }}>{t}</span>
         </div>
-      </div>
+      ))}
     </div>
   )
 
@@ -480,102 +470,152 @@ function PhaseRoadmapSection() {
     <>
       <style>{`
         .ph-pill-btn {
-          width: 54px;
-          padding: 20px 0;
-          border-radius: 14px;
+          width: 56px; padding: 22px 0; border-radius: 14px;
           display: flex; align-items: center; justify-content: center;
-          cursor: pointer;
-          transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+          cursor: pointer; transition: all 0.5s cubic-bezier(0.22,1,0.36,1);
+          border: 2px solid transparent; position: relative; overflow: hidden;
+        }
+        .ph-pill-btn::before {
+          content: ''; position: absolute; inset: 0; border-radius: 14px;
+          background: radial-gradient(circle, rgba(121,82,154,0.3) 0%, transparent 70%);
+          opacity: 0; transition: opacity 0.4s ease;
         }
         .ph-pill-btn.active {
-          background: #79529A;
-          box-shadow: 0 4px 20px rgba(121,82,154,0.35);
+          background: linear-gradient(135deg, #79529A 0%, #9B6FC0 100%);
+          box-shadow: 0 6px 28px rgba(121,82,154,0.5), 0 0 0 3px rgba(121,82,154,0.15);
+          border-color: transparent;
+          animation: phBtnPop 0.6s cubic-bezier(0.34,1.56,0.64,1) forwards;
         }
-        .ph-pill-btn:not(.active) {
-          background: #F0EAF5;
-        }
+        .ph-pill-btn.active::before { opacity: 1; animation: phGlow 2s ease-in-out infinite; }
+        .ph-pill-btn:not(.active) { background: #F0EAF5; border-color: #E4D9F0; }
         .ph-pill-btn:not(.active):hover {
-          background: #E4D9F0;
-          transform: scale(1.05);
+          background: #E4D9F0; transform: scale(1.08);
+          border-color: #C9A8E8; box-shadow: 0 4px 16px rgba(121,82,154,0.2);
         }
         .ph-pill-btn span {
-          writing-mode: vertical-rl;
-          transform: rotate(180deg);
-          font-family: 'DM Sans', sans-serif;
-          font-weight: 700;
-          font-size: 13px;
-          letter-spacing: 1.5px;
-          white-space: nowrap;
-          transition: color 0.35s ease;
+          writing-mode: vertical-rl; transform: rotate(180deg);
+          font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 13px;
+          letter-spacing: 1.5px; white-space: nowrap;
+          transition: color 0.4s ease, text-shadow 0.4s ease;
+          position: relative; z-index: 2;
         }
-        .ph-pill-btn.active span { color: #fff; }
+        .ph-pill-btn.active span { color: #fff; text-shadow: 0 1px 8px rgba(255,255,255,0.3); }
         .ph-pill-btn:not(.active) span { color: #79529A; }
+        @keyframes phBtnPop { 0%{transform:scale(.92)} 40%{transform:scale(1.12)} 70%{transform:scale(.97)} 100%{transform:scale(1)} }
+        @keyframes phGlow { 0%,100%{opacity:.4;transform:scale(.8)} 50%{opacity:.8;transform:scale(1.1)} }
+
+        .phase-img-wrap {
+          position: relative; width: 100%; max-width: 560px; aspect-ratio: 4/3;
+          border-radius: 20px; overflow: hidden;
+          box-shadow: 0 20px 60px rgba(121,82,154,0.16), 0 6px 20px rgba(0,0,0,0.06);
+        }
+        .phase-img-item {
+          position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;
+          backface-visibility: hidden; will-change: opacity, transform, filter;
+        }
+        .phase-img-item.img-active {
+          opacity: 1; transform: scale(1) translateX(0); filter: blur(0); z-index: 10;
+          animation: phImgIn 0.7s cubic-bezier(0.25,1,0.3,1) forwards;
+        }
+        .phase-img-item.img-leaving {
+          opacity: 0; transform: scale(.94) translateX(-30px); filter: blur(6px); z-index: 5;
+          transition: opacity .5s ease-out, transform .5s ease-out, filter .5s ease-out;
+        }
+        .phase-img-item.img-hidden {
+          opacity: 0; transform: scale(1.08) translateX(40px); filter: blur(10px); z-index: 1;
+        }
+        @keyframes phImgIn {
+          0% { opacity:0; transform:scale(1.06) translateX(50px); filter:blur(12px); }
+          50% { opacity:.8; filter:blur(3px); }
+          100% { opacity:1; transform:scale(1) translateX(0); filter:blur(0); }
+        }
+        .ph-btn-line { width: 2px; height: 12px; border-radius: 2px; background: linear-gradient(180deg, #C9A8E8, #E4D9F0); }
       `}</style>
 
-            <section className="w-full bg-white relative" style={{ padding: '40px 0 0' }}>
-        <div className="grid grid-cols-1 lg:grid-cols-[80px_1fr_45%] gap-8 lg:gap-12 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
+      <section className="w-full bg-white relative">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
 
-          {/* ═══ LEFT: Grid Column for sticky buttons (Desktop only) ═══ */}
-          <div className="hidden lg:flex" style={{ 
-            position: 'sticky', 
-            top: '120px', 
-            alignSelf: 'start', 
-            zIndex: 50,
-            paddingTop: '64px', // align perfectly with the first phase
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '16px',
-          }}>
-            {PHASES.map((p, i) => (
-              <div
-                key={i}
-                className={`ph-pill-btn ${i === activePhase ? 'active' : ''}`}
-                onClick={() => scrollToPhase(i)}
-              >
-                <span>{p.tab}</span>
+          {/* ── Desktop 3-col ── */}
+          <div className="hidden lg:grid" style={{ gridTemplateColumns: '80px 1fr 42%', gap: '40px' }}>
+
+            {/* LEFT: Sticky buttons */}
+            <div style={{ position:'sticky', top:0, height:'100vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', zIndex:50 }}>
+              {PHASE_DATA.map((p, i) => (
+                <React.Fragment key={p.tab}>
+                  <div className={`ph-pill-btn ${i === activePhase ? 'active' : ''}`} onClick={() => scrollTo(i)}>
+                    <span>{p.tab}</span>
+                  </div>
+                  {i < 2 && <div className="ph-btn-line" />}
+                </React.Fragment>
+              ))}
+            </div>
+
+            {/* MIDDLE: Scrolling content — ALL INLINE, no sub-components */}
+            <div>
+              {PHASE_DATA.map((ph, idx) => (
+                <div key={idx} ref={el => desktopRefs.current[idx] = el} style={{ paddingTop: idx === 0 ? '64px' : '100px', paddingBottom: '80px' }}>
+                  {idx > 0 && <div style={{ width:60, height:3, borderRadius:3, background:'linear-gradient(90deg,#79529A,#C9A8E8)', marginBottom:40 }} />}
+                  <p style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:20, color:'#79529A', letterSpacing:2, textTransform:'uppercase', marginBottom:10 }}>{ph.label}</p>
+                  <h3 style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:800, fontSize:'clamp(24px,2.4vw,40px)', color:'#0F1114', lineHeight:1.12, marginBottom:22 }}>{ph.tagline}</h3>
+                  <p style={PH_SUB_LABEL}>Strategic Objective</p>
+                  <p style={{ fontFamily:"'Lato',sans-serif", fontSize:'clamp(20px,1.2vw,24px)', color:'#3A3A42', lineHeight:1.7, marginBottom:10 }}>{ph.objective}</p>
+                  <p style={{ fontFamily:"'Lato',sans-serif", fontSize:'clamp(20px,1.2vw,24px)', color:'#515158', lineHeight:1.7, marginBottom:30 }}>{ph.objectiveDetail}</p>
+                  <p style={PH_SUB_LABEL}>Key Focus Areas</p>
+                  {bullets(ph.focusAreas)}
+                  <p style={PH_SUB_LABEL}>What Happens in This Phase</p>
+                  {bullets(ph.whatHappens)}
+                  <p style={PH_SUB_LABEL}>Outputs of {ph.fullLabel}</p>
+                  {bullets(ph.outputs)}
+                  <p style={PH_SUB_LABEL}>Outcome</p>
+                  <div style={{ background:'#F8F3FD', borderRadius:12, padding:'16px 20px', borderLeft:'4px solid #79529A' }}>
+                    <p style={{ fontFamily:"'Lato',sans-serif", fontSize:'clamp(20px,1.2vw,24px)', color:'#3D1F5C', lineHeight:1.7, margin:0, fontStyle:'italic' }}>{ph.outcome}</p>
+                  </div>
+                  <div className="block lg:hidden mt-12 mb-8">
+                    <div style={{ width:'100%', borderRadius:20, overflow:'hidden', boxShadow:'0 16px 56px rgba(121,82,154,0.14), 0 4px 16px rgba(0,0,0,0.05)' }}>
+                      <img src={ph.img} alt={ph.tab} style={{ width:'100%', height:'auto', display:'block' }} />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* RIGHT: Sticky image */}
+            <div style={{ position:'sticky', top:0, height:'100vh', display:'flex', alignItems:'center', justifyContent:'center' }}>
+              <div className="phase-img-wrap">
+                {PHASE_DATA.map((p, i) => (
+                  <img key={p.tab} src={p.img} alt={p.tab} className={imgClass(i)} />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ── Mobile stacked ── */}
+          <div className="block lg:hidden">
+            {PHASE_DATA.map((ph, idx) => (
+              <div key={idx} ref={el => mobileRefs.current[idx] = el} style={{ paddingTop: idx === 0 ? '64px' : '100px', paddingBottom: '80px' }}>
+                {idx > 0 && <div style={{ width:60, height:3, borderRadius:3, background:'linear-gradient(90deg,#79529A,#C9A8E8)', marginBottom:40 }} />}
+                <p style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:20, color:'#79529A', letterSpacing:2, textTransform:'uppercase', marginBottom:10 }}>{ph.label}</p>
+                <h3 style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:800, fontSize:'clamp(24px,2.4vw,40px)', color:'#0F1114', lineHeight:1.12, marginBottom:22 }}>{ph.tagline}</h3>
+                <p style={PH_SUB_LABEL}>Strategic Objective</p>
+                <p style={{ fontFamily:"'Lato',sans-serif", fontSize:'clamp(20px,1.2vw,24px)', color:'#3A3A42', lineHeight:1.7, marginBottom:10 }}>{ph.objective}</p>
+                <p style={{ fontFamily:"'Lato',sans-serif", fontSize:'clamp(20px,1.2vw,24px)', color:'#515158', lineHeight:1.7, marginBottom:30 }}>{ph.objectiveDetail}</p>
+                <p style={PH_SUB_LABEL}>Key Focus Areas</p>
+                {bullets(ph.focusAreas)}
+                <p style={PH_SUB_LABEL}>What Happens in This Phase</p>
+                {bullets(ph.whatHappens)}
+                <p style={PH_SUB_LABEL}>Outputs of {ph.fullLabel}</p>
+                {bullets(ph.outputs)}
+                <p style={PH_SUB_LABEL}>Outcome</p>
+                <div style={{ background:'#F8F3FD', borderRadius:12, padding:'16px 20px', borderLeft:'4px solid #79529A' }}>
+                  <p style={{ fontFamily:"'Lato',sans-serif", fontSize:'clamp(20px,1.2vw,24px)', color:'#3D1F5C', lineHeight:1.7, margin:0, fontStyle:'italic' }}>{ph.outcome}</p>
+                </div>
+                <div className="mt-12 mb-8">
+                  <div style={{ width:'100%', borderRadius:20, overflow:'hidden', boxShadow:'0 16px 56px rgba(121,82,154,0.14), 0 4px 16px rgba(0,0,0,0.05)' }}>
+                    <img src={ph.img} alt={ph.tab} style={{ width:'100%', height:'auto', display:'block' }} />
+                  </div>
+                </div>
               </div>
             ))}
-          </div>
-
-          {/* ═══ MIDDLE: Phase Content Text (scrolls naturally) ═══ */}
-          <div>
-            {PHASES.map((phase, i) => (
-              <PhaseBlockText key={i} phase={phase} index={i} />
-            ))}
-          </div>
-
-          {/* ═══ RIGHT: Sticky Image (Desktop only) ═══ */}
-          <div className="hidden lg:flex" style={{
-            position: 'sticky', 
-            top: '120px', 
-            alignSelf: 'start', 
-            paddingTop: '80px', // align with content title
-            justifyContent: 'center',
-            width: '100%',
-          }}>
-            <div style={{
-              width: '100%', maxWidth: '600px',
-              aspectRatio: '4/3',
-              borderRadius: '20px', overflow: 'hidden',
-              boxShadow: '0 16px 56px rgba(121,82,154,0.14), 0 4px 16px rgba(0,0,0,0.05)',
-              position: 'relative'
-            }}>
-               {PHASES.map((p, i) => (
-                 <img
-                   key={i}
-                   src={p.img}
-                   alt={p.tab}
-                   style={{ 
-                     position: 'absolute', top: 0, left: 0,
-                     width: '100%', height: '100%', objectFit: 'cover',
-                     opacity: i === activePhase ? 1 : 0,
-                     transform: i === activePhase ? 'scale(1)' : 'scale(1.05)',
-                     transition: 'opacity 0.6s ease-in-out, transform 0.6s ease-in-out',
-                     zIndex: i === activePhase ? 10 : 1
-                   }}
-                 />
-               ))}
-            </div>
           </div>
 
         </div>
@@ -584,51 +624,14 @@ function PhaseRoadmapSection() {
   )
 }
 
-/* ── Helper components ── */
-function SectionLabel({ children }) {
-  return (
-    <p style={{
-      fontFamily: "'DM Sans', sans-serif", fontWeight: 700,
-      fontSize: 'clamp(20px, 1.2vw, 24px)', color: '#79529A',
-      marginBottom: '10px', marginTop: '4px',
-    }}>{children}</p>
-  )
-}
-
-function BulletGroup({ items }) {
-  return (
-    <div style={{ marginBottom: '24px' }}>
-      {items.map((item, i) => (
-        <div key={i} style={{
-          display: 'flex', alignItems: 'baseline', gap: '12px',
-          marginBottom: '8px',
-        }}>
-          <span style={{
-            width: '6px', height: '6px', borderRadius: '50%',
-            background: '#79529A', flexShrink: 0, marginTop: '4px',
-          }} />
-          <span style={{
-            fontFamily: "'Lato', sans-serif",
-            fontSize: 'clamp(20px, 1.2vw, 24px)',
-            color: '#515158', lineHeight: 1.65,
-          }}>{item}</span>
-        </div>
-      ))}
-    </div>
-  )
-}
-
-
 function IntegrationSection() {
   return (
-    <section className="w-full bg-white py-4 md:py-6 lg:py-8" style={{ border: 'none' }}>
+    <section className="w-full bg-[#FBF9FB] py-12 md:py-16 lg:py-20" style={{ border: 'none' }}>
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 scroll-3d delay-100">
 
-        {/* Main FBF9FB Container */}
+        {/* Main Gray Container */}
         <div
-
           className="w-full rounded-3xl py-6 md:py-8 lg:py-10 px-6 md:px-10 flex items-center justify-center"
-          style={{ background: '#FBF9FB' }}
         >
           {/* Central Image (Contains all text & headings) */}
           <div className="w-full max-w-[1100px] mx-auto relative flex justify-center">
@@ -655,38 +658,36 @@ function WhyTalentTransformationSection() {
   ];
 
   return (
-    <section className="w-full bg-[#FFFFFF] py-16 md:py-24 lg:py-32">
+    <section className="w-full bg-[#F4F9FF] py-16 md:py-24 lg:py-32">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 scroll-3d delay-100">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+        {/* Centered Heading */}
+        <div className="w-full text-center mb-12 lg:mb-16">
+          <h2
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 700,
+              fontSize: 'clamp(32px, 4vw, 48px)',
+              lineHeight: '1.2',
+              color: '#0F1114'
+            }}
+          >
+            Why Talent Transformation
+          </h2>
+        </div>
 
-          {/* Left Column - Heading & Image */}
-          <div className="w-full lg:w-[45%] flex flex-col gap-8">
-            <h2
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 700,
-                fontSize: 'clamp(32px, 4vw, 48px)',
-                lineHeight: '1.2',
-                color: '#0F1114'
-              }}
-            >
-              Why Talent Transformation
-            </h2>
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 items-stretch">
+
+          {/* Left Column - Image Only */}
+          <div className="w-full lg:w-[40%] flex justify-center items-center">
             <img
-              src={chatGptImg}
+              src={whyTalentImg}
               alt="Talent Transformation Context"
-              style={{
-                width: '100%',
-                maxHeight: '700px',
-                borderRadius: '16px',
-                objectFit: 'cover',
-                boxShadow: '0 20px 60px rgba(0,0,0,0.08)'
-              }}
+              className="w-full max-w-[420px] h-auto max-h-[520px] object-contain"
             />
           </div>
 
           {/* Right Column - Content & Cards */}
-          <div className="w-full lg:w-[55%] flex flex-col gap-8 lg:pt-4">
+          <div className="w-full lg:w-[60%] flex flex-col justify-between gap-6 lg:pt-2">
             <div>
               <p
                 style={{
@@ -695,7 +696,7 @@ function WhyTalentTransformationSection() {
                   fontSize: 'clamp(20px, 1.2vw, 24px)',
                   lineHeight: '1.6',
                   color: '#515158',
-                  marginBottom: '24px'
+                  marginBottom: '16px'
                 }}
               >
                 Traditional workforce models are no longer sufficient. <br className="hidden xl:block" />
@@ -709,14 +710,14 @@ function WhyTalentTransformationSection() {
                   fontSize: 'clamp(20px, 1.2vw, 24px)',
                   lineHeight: '1.6',
                   color: '#333333',
-                  marginBottom: '16px'
+                  marginBottom: '8px'
                 }}
               >
                 Talent Transformation solves this by:
               </p>
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col justify-between flex-1 gap-3">
               {points.map((item, index) => (
                 <div
                   key={index}
@@ -724,7 +725,7 @@ function WhyTalentTransformationSection() {
                     display: 'flex',
                     alignItems: 'center',
                     gap: '20px',
-                    padding: '24px 28px',
+                    padding: '18px 24px',
                     background: '#FFFFFF',
                     border: '1px solid #E8E8E8',
                     borderRadius: '12px',
@@ -871,11 +872,11 @@ function DesignedForSection() {
 /* ── What You Gain Section ── */
 function WhatYouGainSection() {
   const gains = [
-    { title: "Clear visibility into AI and workforce impact", img: phase1Img },
-    { title: "Faster, smarter execution of critical work", img: phase2Img },
-    { title: "A future-ready, continuously skilled workforce", img: phase3Img },
-    { title: "Higher engagement, retention, and agility", img: image416 },
-    { title: "Data-backed confidence in talent decisions", img: chatGptImg },
+    { title: "Clear visibility into AI and workforce impact", img: gain1Img },
+    { title: "Faster, smarter execution of critical work", img: gain2Img },
+    { title: "A future-ready, continuously skilled workforce", img: gain3Img },
+    { title: "Higher engagement, retention, and agility", img: gain4Img },
+    { title: "Data-backed confidence in talent decisions", img: gain5Img },
   ];
 
   return (
@@ -1048,10 +1049,10 @@ function IntroFrameworkSection() {
   return (
     <section className="w-full bg-[#FBF9FB] py-16 md:py-20 lg:py-28">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-12 lg:gap-16">
 
-          <div className="w-full lg:w-[50%] scroll-3d">
-
+          {/* Left Text Column */}
+          <div className="w-full lg:w-[50%] scroll-3d flex flex-col justify-center py-4 lg:py-8">
             <p style={{
               fontFamily: "'Lato', sans-serif", fontWeight: 400,
               fontSize: 'clamp(20px, 1.2vw, 24px)', lineHeight: 1.7,
@@ -1068,8 +1069,14 @@ function IntroFrameworkSection() {
             </p>
           </div>
 
-          <div className="w-full lg:w-[50%] flex justify-center lg:justify-end scroll-3d delay-100">
-            <img src={introFrameworkImg} alt="Talent Transformation Phases" style={{ width: '100%', maxWidth: '600px', height: 'auto', borderRadius: '20px', boxShadow: '0 20px 60px rgba(0,0,0,0.08)' }} />
+          {/* Right Image Column */}
+          <div className="w-full lg:w-[50%] relative scroll-3d delay-100 min-h-[300px] lg:min-h-0">
+            <img 
+              src={introFrameworkImg} 
+              alt="Talent Transformation Phases" 
+              className="lg:absolute lg:inset-0 w-full h-full object-cover rounded-[20px]"
+              style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.08)' }}
+            />
           </div>
 
         </div>
