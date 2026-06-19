@@ -21,6 +21,7 @@ import changeIcon from '../assets/talent-intelligence/change_17930856.svg'
 import officeIcon from '../assets/talent-intelligence/office-building_11342251.svg'
 import offeringIcon from '../assets/talent-intelligence/initial-public-offering_15749347.svg'
 import offeringIcon1 from '../assets/talent-intelligence/initial-public-offering_15749347-1.svg'
+import maskGroupImg from '../assets/Xperience Platform – 1/Mask Group 138.png'
 
 export default function TalentIntelligencePage() {
   const heroSectionRef = useRef(null)
@@ -264,8 +265,8 @@ export default function TalentIntelligencePage() {
       {/* ════════════════════════════════════════════════════════════════
           SECTION 2 — Talent Transformation Roadmap
       ════════════════════════════════════════════════════════════════ */}
-      <section className="w-full bg-white py-12 md:py-16 lg:py-20 text-center">
-        <div className="max-w-[960px] mx-auto px-4 sm:px-6 md:px-10 flex flex-col items-center">
+      <section className="w-full bg-white pt-8 pb-12 md:pt-10 md:pb-16 lg:pt-12 lg:pb-20 text-center">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-10 flex flex-col items-center">
 
           <div className="w-full scroll-3d">
             <h2
@@ -276,22 +277,14 @@ export default function TalentIntelligencePage() {
                 marginBottom: '16px'
               }}
             >
-              Talent Transformation Roadmap
+              A Structured, AI-Led Journey from Work Redesign to Workforce Readiness
             </h2>
           </div>
 
           <div className="w-full scroll-3d delay-100 flex flex-col gap-6">
-            <p
-              style={{
-                fontFamily: "'DM Sans', sans-serif", fontWeight: 600,
-                fontSize: 'clamp(20px, 1.4vw, 26px)', color: '#79529A',
-                lineHeight: '1.5', margin: '0 auto', maxWidth: '800px'
-              }}
-            >
-              A Structured, AI-Led Journey from Work Redesign to Workforce Readiness
-            </p>
             
-            <div className="flex flex-col gap-5 mx-auto max-w-[900px]">
+            
+            <div className="flex flex-col gap-5 mx-auto max-w-[1100px]">
               <p
                 style={{
                   fontFamily: "'Lato', sans-serif", fontSize: 'clamp(20px, 1.25vw, 24px)',
@@ -553,7 +546,7 @@ function PhaseRoadmapSection() {
             {/* MIDDLE: Scrolling content — ALL INLINE, no sub-components */}
             <div>
               {PHASE_DATA.map((ph, idx) => (
-                <div key={idx} ref={el => desktopRefs.current[idx] = el} style={{ paddingTop: idx === 0 ? '64px' : '100px', paddingBottom: '80px' }}>
+                <div key={idx} ref={el => desktopRefs.current[idx] = el} style={{ paddingTop: idx === 0 ? '24px' : '80px', paddingBottom: '80px' }}>
                   {idx > 0 && <div style={{ width:60, height:3, borderRadius:3, background:'linear-gradient(90deg,#79529A,#C9A8E8)', marginBottom:40 }} />}
                   <p style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:20, color:'#79529A', letterSpacing:2, textTransform:'uppercase', marginBottom:10 }}>{ph.label}</p>
                   <h3 style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:800, fontSize:'clamp(24px,2.4vw,40px)', color:'#0F1114', lineHeight:1.12, marginBottom:22 }}>{ph.tagline}</h3>
@@ -592,7 +585,7 @@ function PhaseRoadmapSection() {
           {/* ── Mobile stacked ── */}
           <div className="block lg:hidden">
             {PHASE_DATA.map((ph, idx) => (
-              <div key={idx} ref={el => mobileRefs.current[idx] = el} style={{ paddingTop: idx === 0 ? '64px' : '100px', paddingBottom: '80px' }}>
+              <div key={idx} ref={el => mobileRefs.current[idx] = el} style={{ paddingTop: idx === 0 ? '24px' : '80px', paddingBottom: '80px' }}>
                 {idx > 0 && <div style={{ width:60, height:3, borderRadius:3, background:'linear-gradient(90deg,#79529A,#C9A8E8)', marginBottom:40 }} />}
                 <p style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:20, color:'#79529A', letterSpacing:2, textTransform:'uppercase', marginBottom:10 }}>{ph.label}</p>
                 <h3 style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:800, fontSize:'clamp(24px,2.4vw,40px)', color:'#0F1114', lineHeight:1.12, marginBottom:22 }}>{ph.tagline}</h3>
@@ -626,7 +619,7 @@ function PhaseRoadmapSection() {
 
 function IntegrationSection() {
   return (
-    <section className="w-full bg-[#FBF9FB] py-12 md:py-16 lg:py-20" style={{ border: 'none' }}>
+    <section className="w-full bg-[#FBF9FB] pt-8 pb-12 md:pt-10 md:pb-16 lg:pt-12 lg:pb-20" style={{ border: 'none' }}>
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 scroll-3d delay-100">
 
         {/* Main Gray Container */}
@@ -634,11 +627,11 @@ function IntegrationSection() {
           className="w-full rounded-3xl py-6 md:py-8 lg:py-10 px-6 md:px-10 flex items-center justify-center"
         >
           {/* Central Image (Contains all text & headings) */}
-          <div className="w-full max-w-[1100px] mx-auto relative flex justify-center">
+          <div className="w-full max-w-[1280px] mx-auto relative flex justify-center">
             <img
               src={image416}
               alt="How the 3 Phases Work Together Diagram"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain scale-[1.15] transform origin-center"
             />
           </div>
         </div>
@@ -658,7 +651,7 @@ function WhyTalentTransformationSection() {
   ];
 
   return (
-    <section className="w-full bg-[#F4F9FF] py-16 md:py-24 lg:py-32">
+    <section className="w-full bg-[#F4F9FF] pt-10 pb-16 md:pt-12 md:pb-24 lg:pt-16 lg:pb-32 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${maskGroupImg})` }}>
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 scroll-3d delay-100">
         {/* Centered Heading */}
         <div className="w-full text-center mb-12 lg:mb-16">
@@ -795,7 +788,7 @@ function DesignedForSection() {
   ]
 
   return (
-    <section className="w-full bg-white pt-8 pb-16 md:pt-12 md:pb-24">
+    <section className="w-full bg-white pt-6 pb-16 md:pt-8 md:pb-24 lg:pt-10 lg:pb-32">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 scroll-3d delay-200">
 
         <h2 className="text-center mb-8 md:mb-12" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 'clamp(32px, 3.5vw, 48px)', color: '#0F1114', letterSpacing: '-0.5px' }}>
@@ -880,7 +873,7 @@ function WhatYouGainSection() {
   ];
 
   return (
-    <section className="w-full py-16 md:py-24" style={{ backgroundColor: '#0A0D36' }}>
+    <section className="w-full pt-10 pb-16 md:pt-12 md:pb-24 lg:pt-16 lg:pb-32" style={{ backgroundColor: '#0A0D36' }}>
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 scroll-3d delay-200">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -1047,7 +1040,7 @@ function FinalCtaSection() {
 /* ── Intro Framework Section ── */
 function IntroFrameworkSection() {
   return (
-    <section className="w-full bg-[#FBF9FB] py-16 md:py-20 lg:py-28">
+    <section className="w-full bg-[#FBF9FB] pt-10 pb-16 md:pt-12 md:pb-20 lg:pt-16 lg:pb-28">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
         <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-12 lg:gap-16">
 

@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import heroImg from '../assets/potentiometer/Mask Group 129.png';
-import measureImg from '../assets/potentiometer/Group 41603.png';
-import dashImg from '../assets/Gemini_Generated_Image_mq3oqmmq3oqmmq3o.png';
+import measureImg from '../assets/potentiometer/ChatGPT_Image_Jun_20__2026__12_20_25_AM-removebg-preview.png';
+import dashImg from '../assets/potentiometer/image.png';
 import whatsGetImg from '../assets/potentiometer/Group 41604.png';
+import pmImg from '../assets/potentiometer/PM.png';
+
 
 const tabData = {
   individuals: {
@@ -197,101 +199,96 @@ export default function PotentialMeterPage() {
             background-position: center center !important;
           }
         }
+        @keyframes shimmer {
+          100% { transform: translateX(100%); }
+        }
       `}</style>
 
-      {/* ── Hero Section ── */}
-      <section className="relative w-full pt-[20px]">
+      {/* ── Modern Premium Hero Section ── */}
+      <section className="relative w-full flex flex-col overflow-hidden bg-[#F4F9FF]">
 
-        {/* Gradient bg - covers from top to halfway through the image */}
-        <div
-          className="absolute top-0 left-0 w-full pointer-events-none"
-          style={{
-            /* bottom edge = total section height minus half the image height */
-            height: imgHeight > 0 ? `calc(100% - ${imgHeight / 2}px)` : '70%',
-            background:
-              'linear-gradient(253deg, rgba(221,232,255,0.45) 0%, rgba(255,255,255,0.45) 33%, rgba(250,252,255,0.45) 51%, rgba(239,244,255,0.45) 100%)',
-          }}
-        />
+        {/* Animated Background Gradients & Grid */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 bg-white/50 backdrop-blur-[100px]"></div>
 
-        {/* Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 flex flex-col items-center text-center px-4 md:px-8"
-        >
-
-          {/* Breadcrumb */}
-          <nav className="relative z-20 pt-3 pb-2 md:pt-4 md:pb-3 px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 max-w-[1360px] mx-auto w-full text-left">
-            <div
-              className="flex items-center justify-start gap-1.5 sm:gap-2 text-[16px] md:text-[20px] font-medium w-full"
-              style={{ color: '#71717A', fontFamily: "'Lato', sans-serif" }}
-            >
-              <Link to="/" className="hover:opacity-70 transition-opacity" style={{ color: '#71717A' }}>Home</Link>
-              <span>&gt;</span>
-              <span style={{ color: '#18181B', fontWeight: 500 }}>Potential Meter AI</span>
-            </div>
-          </nav>
-
-          {/* Main Heading */}
-          <h1
-            className="pm-hero-heading font-['DM_Sans',sans-serif] font-bold text-[#0F1114] max-w-[1118px] mb-3"
-            style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(24px, 2.8vw, 52px)', lineHeight: '1.2' }}
-          >
-            Stop Guessing <span className="text-[#2563eb]">Career Potential.</span>
-            <br />
-            Start <span className="text-[#2563eb]">Measuring</span> It.
-          </h1>
-
-          {/* Sub Heading */}
-
-          {/* Hero Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full max-w-[1400px] mx-auto"
-          >
-            <img
-              ref={imgRef}
-              src={heroImg}
-              alt="Potential Meter AI - Assess, Analyze, Readiness, Roadmap"
-              className="w-full h-auto object-contain"
-              onLoad={() => {
-                if (imgRef.current) setImgHeight(imgRef.current.offsetHeight);
-              }}
-            />
-          </motion.div>
-          <p
-            className="font-['DM_Sans',sans-serif] font-semibold text-[#0F1114] max-w-[1100px] mx-auto text-[18px] leading-[24px] md:text-[19px] md:leading-[27px] lg:text-[21px] lg:leading-[29px] tracking-[-0.6px] mb-3"
-          >
-            {/* The AI-powered platform that transforms career uncertainty into data-backed decisions in minutes. */}
-            <br />
-            {/* Traditional assessments measure knowledge.&nbsp; We measure real-world performance capability. */}
-          </p>
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.6, 0.8, 0.6],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] rounded-full bg-[#bfdbfe] blur-[120px] mix-blend-multiply"
+          />
+          <motion.div
+            animate={{
+              scale: [1, 1.3, 1],
+              opacity: [0.5, 0.7, 0.5],
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-[#e9d5ff] blur-[120px] mix-blend-multiply"
+          />
 
-          {/* Content Paragraph */}
-          <p
-            className="font-['Lato',sans-serif] font-medium text-[#52525B] max-w-[950px] mx-auto text-[18px] md:text-[clamp(14px,1.2vw,20px)] leading-[1.6] mb-5"
-          >
-            The Potential Meter AI combines artificial intelligence, behavioral science, and
-            role-based analytics to deliver precision insights into skills, cognitive agility, and
-            career readiness helping individuals find their best-fit career path and
-            organizations make confident talent decisions.
-          </p>
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#0000000a_1px,transparent_1px),linear-gradient(to_bottom,#0000000a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+        </div>
 
-          {/* CTA Buttons */}
-          <div className="pm-hero-cta flex flex-wrap items-center gap-4 mb-6">
-            <button className="bg-[#245CE2] hover:bg-[#1E4DBC] transition-colors text-white font-['DM_Sans',sans-serif] font-medium text-[17px] px-7 py-3 rounded">
-              Start Free Skill Assessment
-            </button>
-            <Link to="/contact-us" className="bg-white border border-[#E4E4E7] hover:bg-gray-50 transition-colors text-[#0F1114] font-['DM_Sans',sans-serif] font-medium text-[17px] px-7 py-3 rounded">
-              Book Demo
-            </Link>
+        {/* Breadcrumb */}
+        <nav className="relative z-20 pt-4 pb-2 md:pt-6 md:pb-4 px-4 sm:px-6 md:px-10 lg:px-12 max-w-[1400px] mx-auto w-full text-left">
+          <div className="flex items-center justify-start gap-1.5 sm:gap-2 font-medium w-full" style={{ fontSize: '20px', color: '#71717A', fontFamily: "'Lato', sans-serif" }}>
+            <Link to="/" className="hover:text-[#0F1114] transition-colors">Home</Link>
+            <span>&gt;</span>
+            <span className="text-[#18181B] font-medium">Potential Meter AI</span>
           </div>
+        </nav>
 
+        {/* Content Wrapper */}
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 flex flex-col items-center justify-center text-center pt-2 md:pt-4 lg:pt-6 pb-10 md:pb-16 lg:pb-20">
 
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex flex-col items-center text-center w-full"
+          >
+            <div className="max-w-[950px] flex flex-col items-center w-full">
+              <h1 className="font-['DM_Sans',sans-serif] mb-4 md:mb-5" style={{ fontSize: 'clamp(32px, 4vw, 64px)', fontWeight: 700, lineHeight: '1.2', letterSpacing: '-0.5px', color: '#0F1114' }}>
+                <span>Stop Guessing <span className="text-[#2563eb]">Career Potential.</span></span><br className="hidden md:block" />
+                <span>Start <span className="text-[#2563eb]">Measuring</span> It.</span>
+              </h1>
+
+              <div className="font-['Lato',sans-serif] mb-6 md:mb-8 w-full flex flex-col gap-3 md:gap-4 items-center text-center" style={{ fontSize: 'clamp(18px, 1.2vw, 22px)', lineHeight: '1.65' }}>
+                <p className="max-w-[850px] text-[#0F1114] font-medium" style={{ fontSize: 'clamp(20px, 1.5vw, 24px)' }}>
+                  The AI-powered platform that transforms career uncertainty into data-backed decisions in minutes.
+                  Traditional assessments measure knowledge. We measure real-world performance capability.
+                </p>
+                <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+              className="w-full mt-6 md:mt-8 flex justify-center px-4"
+            >
+              <img src={pmImg} alt="Potential Meter Workflow" className="w-full max-w-[1000px] h-auto object-contain" />
+            </motion.div>
+                <p className="max-w-[780px] text-[#52525B] font-normal" style={{ fontSize: 'clamp(16px, 1.1vw, 20px)' }}>
+                  The Potential Meter AI combines artificial intelligence, behavioral science, and role-based analytics to deliver precision insights into skills, cognitive agility, and career readiness helping individuals find their best-fit career path and organizations make confident talent decisions.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full">
+                <button className="w-full sm:w-auto relative group overflow-hidden bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-['DM_Sans',sans-serif] font-medium text-[16px] px-8 py-3.5 rounded-lg transition-all duration-300 shadow-[0_4px_14px_rgba(37,99,235,0.3)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5">
+                  <span className="relative z-10">Start Free Skill Assessment</span>
+                  <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                </button>
+                <Link to="/contact-us" className="w-full sm:w-auto text-center bg-white hover:bg-gray-50 border border-gray-200 text-[#0F1114] font-['DM_Sans',sans-serif] font-medium text-[16px] px-8 py-3.5 rounded-lg transition-all duration-300 backdrop-blur-md hover:-translate-y-0.5 shadow-sm hover:shadow-md">
+                  Book Demo
+                </Link>
+              </div>
+            </div>
+
+            {/* PM Image added below content */}
+            
+          </motion.div>
+
+        </div>
       </section>
 
       {/* ── Statistics Section ── */}
@@ -422,7 +419,7 @@ export default function PotentialMeterPage() {
       </section>
 
       {/* ── What We Measure Section ── */}
-      <section className="relative w-full pt-2 md:pt-3 pb-0 md:pb-1 bg-white overflow-hidden">
+      <section className="relative w-full pt-2 md:pt-3 pb-0 md:pb-1 bg-[#F7F7F7] overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -443,11 +440,11 @@ export default function PotentialMeterPage() {
           className="relative w-full flex items-center pm-measure-container" style={{ minHeight: '620px' }}
         >
           {/* Background Image Container sticking to the right edge */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[62%] max-w-[980px] h-[560px] hidden md:flex justify-end opacity-20 md:opacity-100">
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[50%] max-w-[750px] h-[500px] hidden md:flex justify-end opacity-20 md:opacity-100 pr-0">
             <img
               src={measureImg}
               alt="What we measure at Skillzza"
-              className="w-full h-full object-cover md:object-contain object-right"
+              className="w-full h-full object-cover md:object-contain object-right scale-110 lg:scale-125 origin-right"
             />
           </div>
 

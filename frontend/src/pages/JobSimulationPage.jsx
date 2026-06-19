@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { getAssetPath } from '../utils/assets'
+import womanImage from '../assets/job simulations/women-removebg-preview.png'
 
 const AnimatedCounter = ({ value }) => {
   const [count, setCount] = useState(0);
@@ -1065,7 +1066,7 @@ function JobSimulationPage() {
 
         .sol-map-bg {
           position: absolute;
-          top: 0;
+          top: 15%;
           right: -10%; /* Shift right so there's no gap and naturally bleeds off edge */
           width: 70%;
           height: auto;
@@ -1237,6 +1238,7 @@ function JobSimulationPage() {
           width: 100%;
           height: auto;
           display: block;
+          mix-blend-mode: multiply;
         }
 
         /* ── Mobile for Solution Section ── */
@@ -2016,15 +2018,10 @@ function JobSimulationPage() {
             {/* Right: Woman Image & Decorations */}
             <div className="sol-image-col">
               <ScrollReveal delay={300} className="sol-image-wrapper">
-                {/* Decorative Elements */}
-                <div className="sol-decor-tl"></div>
-                <div className="sol-decor-dots-l"></div>
-                <div className="sol-decor-dots-r"></div>
-                <div className="sol-decor-br"></div>
                 
                 {/* Main Image */}
                 <img 
-                  src={getAssetPath('/simulation/women.avif')} 
+                  src={womanImage} 
                   alt="Woman with laptop" 
                   className="sol-woman-img" 
                 />
