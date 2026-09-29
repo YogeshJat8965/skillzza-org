@@ -210,23 +210,6 @@ const navItems = [
   },
   */
   {
-    name: 'K-12',
-    layout: 'k12-Vedhya',
-    width: 1120,
-    eyebrow: 'SkillzzaK-12',
-    studioLink: 'https://cognifyai.skillzza.com/',
-    dotColor: '#BD1723',
-    accentGradient: 'linear-gradient(135deg, #BD1723, #8947B3)',
-    items: [
-      { name: 'Skill Studio', link: 'https://skillzza-club.vercel.app/', desc: 'Immersive future skills programs focused on AI, creativity, coding, and innovation.', imagePos: 'left' },
-      { name: 'Virtual Internship', link: 'https://cognifyai.skillzza.com/', desc: 'Real-world AI coding and deeptech internship simulations designed for school students aged 13-18.', imagePos: 'left' },
-      { name: 'AI Playground', link: 'https://cognifyai.skillzza.com/#', desc: 'An interactive innovation hub for exploring AI tools, creativity, and emerging technologies.', imagePos: 'left' },
-      { name: 'Vedya AI', link: 'https://cognifyai.skillzza.com/', desc: 'AI Co-Pilot built exclusively for K-12 learning ecosystems.', imagePos: 'left' },
-      { name: 'Immersive Learning for Teachers', link: 'https://cognifyai.skillzza.com/for-tutor.html', desc: 'Empowering educators with practical AI skills and modern digital pedagogy.', imagePos: 'left' },
-      { name: 'Cognitive Computing  Maturity Models', link: 'https://cognifyai.skillzza.com/for-school.html', desc: 'A strategic framework to assess and accelerate AI readiness in schools.', imagePos: 'left' },
-    ],
-  },
-  {
     name: 'School of Technology',
     layout: 'image-card-grid',
     width: 960,

@@ -37,15 +37,35 @@ const Topbar = () => {
           ))}
         </div>
 
-        {/* Right - Log in */}
-        <div className="sz-topbar-login" style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
-          <a href={getRoutePath('/login')} style={{ color: "#fff", textDecoration: "none", fontSize: 14.5, fontWeight: 500, opacity: 0.9, whiteSpace: "nowrap" }}>
-            Log in
+        {/* Right - Scholarship CTA + Log in */}
+        <div className="sz-topbar-login" style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <a
+            href="https://scholarship.skillzza.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              background: "linear-gradient(135deg, #BD1723 0%, #8947B3 100%)",
+              color: "#fff",
+              textDecoration: "none",
+              fontSize: 13.5,
+              fontWeight: 700,
+              padding: "6px 14px",
+              borderRadius: 20,
+              whiteSpace: "nowrap",
+              boxShadow: "0 2px 8px rgba(189,23,35,0.35)",
+            }}
+          >
+            Apply for Scholarship
           </a>
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <a href={getRoutePath('/login')} style={{ color: "#fff", textDecoration: "none", fontSize: 14.5, fontWeight: 500, opacity: 0.9, whiteSpace: "nowrap" }}>
+              Log in
+            </a>
+          </div>
         </div>
 
       </nav>

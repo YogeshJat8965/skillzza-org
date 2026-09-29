@@ -309,7 +309,7 @@ function ContactUs() {
           margin: 0 0 20px;
           text-align: center;
           color: #f8fafc;
-          font-size: clamp(34px, 4.8vw, 52px);
+          font-size: clamp(32px, 4.8vw, 50px);
           font-weight: 800;
           letter-spacing: -0.02em;
           animation: cuFadeUp 0.65s ease both;
@@ -804,7 +804,7 @@ function ContactUs() {
             max-width: 100% !important;
           }
           .cu-flow-title {
-            font-size: clamp(24px, 5.5vw, 34px) !important;
+            font-size: clamp(22px, 5.5vw, 32px) !important;
           }
           .cu-phone-row {
             grid-template-columns: 1fr !important;
